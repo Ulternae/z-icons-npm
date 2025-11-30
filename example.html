@@ -1,172 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Z-Icon Component Example</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Z-Icons Demo</title>
+
   <style>
     body {
-      font-family: system-ui, -apple-system, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
+      font-family: sans-serif;
       padding: 2rem;
     }
-    .example {
-      margin: 2rem 0;
-      padding: 1rem;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-    }
-    .icon-row {
+    .row {
       display: flex;
-      gap: 1rem;
       align-items: center;
-      margin: 1rem 0;
+      gap: 1rem;
+      margin-bottom: 1rem;
     }
-    code {
-      background: #f5f5f5;
-      padding: 0.2rem 0.4rem;
-      border-radius: 4px;
-      font-size: 0.9em;
+    .label {
+      font-size: 0.85rem;
+      opacity: 0.6;
     }
+
   </style>
 </head>
 <body>
-  <h1>Z-Icon Web Component Examples</h1>
-  
-  <div class="example">
-    <h2>Available Icons</h2>
-    <div class="icon-row">
-      <z-icon name="sun" type="core" size="32"></z-icon>
-      <z-icon name="moon" type="core" size="32"></z-icon>
-      <code>sun, moon</code>
-    </div>
+
+  <h1>z-icons — Demo</h1>
+
+  <!-- 1. OBLIGATORIO: cargar el Web Component -->
+  <script type="module" src="./src/Icon.js"></script>
+
+  <!-- 2. Los íconos comienzan a renderizar -->
+
+  <h2>Iconos core</h2>
+  <div class="row">
+    <z-icon name="sun" type="core" size="32"></z-icon>
+    <z-icon name="moon" type="core" size="32"></z-icon>
+    <span class="label">core: sun, moon</span>
   </div>
 
-  <div class="example">
-    <h2>Different Sizes</h2>
-    <div class="icon-row">
-      <z-icon name="sun" type="core" size="16"></z-icon>
-      <z-icon name="sun" type="core" size="24"></z-icon>
-      <z-icon name="sun" type="core" size="32"></z-icon>
-      <z-icon name="sun" type="core" size="48"></z-icon>
-      <code>size="16|24|32|48"</code>
-    </div>
+  <h2>Diferentes tamaños</h2>
+  <div class="row">
+    <z-icon name="sun" type="core" size="16" class="text-red"></z-icon>
+    <z-icon name="sun" type="core" size="24"></z-icon>
+    <z-icon name="sun" type="core" size="32"></z-icon>
+    <z-icon name="sun" type="core" size="48"></z-icon>
   </div>
 
-  <div class="example">
-    <h2>Different Types (core vs neo)</h2>
-    <div class="icon-row">
-      <z-icon name="moon" type="core" size="32"></z-icon>
-      <code>type="core"</code>
-    </div>
-    <div class="icon-row">
-      <z-icon name="moon" type="neo" size="32"></z-icon>
-      <code>type="neo"</code>
-    </div>
+  <h2>Colores personalizados</h2>
+  <div class="row">
+    <z-icon name="sun" type="core" color="orange" size="32"></z-icon>
+    <z-icon name="sun" type="core" color="red" size="32"></z-icon>
+    <z-icon name="moon" type="core" color="blue" size="32"></z-icon>
+    <z-icon name="moon" type="core" color="#6366f1" size="32"></z-icon>
   </div>
 
-  <div class="example">
-    <h2>Custom Colors</h2>
-    <div class="icon-row">
-      <z-icon name="sun" type="core" size="32" color="orange"></z-icon>
-      <z-icon name="sun" type="core" size="32" color="red"></z-icon>
-      <z-icon name="moon" type="core" size="32" color="blue"></z-icon>
-      <z-icon name="moon" type="core" size="32" color="#6366f1"></z-icon>
-      <code>color="orange|red|blue|#6366f1"</code>
-    </div>
-  </div>
+  <h2>Uso dentro de un botón</h2>
+  <button style="padding: 8px 16px; border-radius: 8px; display:flex; gap:8px; align-items:center;">
+    <z-icon name="sun" type="core" size="20"></z-icon>
+    Cambiar tema
+  </button>
 
-  <div class="example">
-    <h2>Theme Toggle Example</h2>
-    <div class="icon-row">
-      <button id="theme-toggle" style="padding: 0.5rem 1rem; cursor: pointer; border: 1px solid #ccc; border-radius: 4px; background: white;">
-        <z-icon name="sun" type="core" size="20"></z-icon>
-        Toggle Theme
-      </button>
-    </div>
-  </div>
-
-  <!-- Load the component -->
-  <script>
-    /**
-     * Z-Icon Web Component
-     */
-    class ZIcon extends HTMLElement {
-      static get observedAttributes() {
-        return ["name", "type", "size", "class", "color"];
-      }
-
-      constructor() {
-        super();
-        this.attachShadow({ mode: "open" });
-      }
-
-      connectedCallback() {
-        this.render();
-      }
-
-      attributeChangedCallback() {
-        this.render();
-      }
-
-      render() {
-        const name = this.getAttribute("name");
-        const type = this.getAttribute("type") || "core";
-        const size = this.getAttribute("size") || "24";
-        const className = this.getAttribute("class") || "";
-        const color = this.getAttribute("color") || "currentColor";
-
-        if (!name) {
-          console.warn("z-icon: 'name' attribute is required");
-          return;
-        }
-
-        // Validate type
-        if (type !== "core" && type !== "neo") {
-          console.warn(`z-icon: 'type' must be 'core' or 'neo', got '${type}'`);
-          return;
-        }
-
-        const href = `./dist/${type}-sprite.svg#${name}`;
-
-        this.shadowRoot.innerHTML = `
-          <style>
-            :host {
-              display: inline-flex;
-              align-items: center;
-              justify-content: center;
-            }
-            svg {
-              fill: ${color};
-              width: ${size}px;
-              height: ${size}px;
-            }
-          </style>
-          <svg
-            width="${size}"
-            height="${size}"
-            class="${className}"
-            part="svg"
-            aria-hidden="true"
-          >
-            <use href="${href}"></use>
-          </svg>
-        `;
-      }
-    }
-
-    // Register the custom element
-    if (!customElements.get("z-icon")) {
-      customElements.define("z-icon", ZIcon);
-    }
-
-    // Theme toggle example
-    document.getElementById('theme-toggle')?.addEventListener('click', function() {
-      const icon = this.querySelector('z-icon');
-      const currentIcon = icon.getAttribute('name');
-      icon.setAttribute('name', currentIcon === 'sun' ? 'moon' : 'sun');
-    });
-  </script>
 </body>
 </html>
