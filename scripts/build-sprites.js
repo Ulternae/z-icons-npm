@@ -60,6 +60,26 @@ function processSvgContent(svgContent, iconName) {
 }
 
 /**
+ * Genera el archivo de tipos de iconos
+ */
+function generateTypesFile(icons, spriteName) {
+  const iconIds = icons.map(icon => `  | '${icon.id}'`).join('\n');
+  
+  return `/**
+ * Tipos de Iconos - Generado automáticamente
+ * No editar manualmente - usar build-sprites.js
+ */
+
+export type ${spriteName}IconName =
+${iconIds};
+
+export const ${spriteName}Icons = [
+${icons.map(icon => `  '${icon.id}'`).join(',\n')}
+] as const;
+`;
+}
+
+/**
  * Genera el contenido del sprite TypeScript con formato <symbol>
  */
 function generateSpriteFile(icons, spriteName) {
@@ -201,7 +221,13 @@ function buildSprite(pack) {
 
   fs.writeFileSync(pack.outputFile, spriteContent, 'utf8');
   
+  // Generar archivo de tipos
+  const typesContent = generateTypesFile(icons, pack.spriteName);
+  const typesFile = pack.outputFile.replace('.ts', '-types.ts');
+  fs.writeFileSync(typesFile, typesContent, 'utf8');
+  
   console.log(`   ✅ Sprite generado: ${pack.outputFile}`);
+  console.log(`   ✅ Tipos generados: ${typesFile}`);
   console.log(`   📊 Total: ${icons.length} iconos`);
 
   if (errors.length > 0) {
@@ -211,7 +237,8 @@ function buildSprite(pack) {
   return { 
     success: true, 
     count: icons.length, 
-    errors: errors.length 
+    errors: errors.length,
+    icons: icons.map(i => i.id)
   };
 }
 
