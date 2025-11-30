@@ -10,7 +10,7 @@ const ICON_PACKS = [
   },
   { 
     dir: 'src/neo/icons', 
-    outputFile: 'src/neo/core-sprite.ts',
+    outputFile: 'src/neo/neo-sprite.ts',
     spriteName: 'neoSprite'
   },
 ];
