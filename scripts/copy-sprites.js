@@ -5,12 +5,12 @@ const path = require('path');
 const SPRITE_FILES = [
     {
     source: 'src/core/core-sprite.ts',
-    dest: 'dist/core-sprite.svg',
+    dest: 'dist/core/core-sprite.svg',
     varName: 'coreSprite'
   },
   {
     source: 'src/neo/neo-sprite.ts',
-    dest: 'dist/neo-sprite.svg',
+    dest: 'dist/neo/neo-sprite.svg',
     varName: 'neoSprite'
   }
 ];
