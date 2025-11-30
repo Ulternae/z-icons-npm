@@ -1,6 +1,7 @@
+// src/Icon.js
 const SPRITES = {
-  core: "./core-sprite.svg",
-  neo: "./neo-sprite.svg",
+  core: "./dist/core-sprite.svg",
+  neo: "./dist/neo-sprite.svg",
 };
 
 class ZIcon extends HTMLElement {
