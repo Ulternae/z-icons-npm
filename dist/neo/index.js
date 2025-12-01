@@ -1,1 +1,1 @@
-export const neoIcons = ["moon","sun"];
+export const neoIcons = ["address-card","alarm-clock","anchor","moon","sun"];

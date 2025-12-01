@@ -1,1 +1,1 @@
-export const coreIcons = ["moon","sun"];
+export const coreIcons = ["address-card","alarm-clock","anchor","moon","sun"];
