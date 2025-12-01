@@ -1,4 +1,4 @@
-module.exports = {
+const svgoConfig = {
   multipass: true,
   plugins: [
     {
@@ -79,3 +79,5 @@ module.exports = {
     'cleanupListOfValues',
   ],
 };
+
+export { svgoConfig };

@@ -1,7 +1,7 @@
-const fs = require('fs');
-const path = require('path');
-const svgoConfig = require('./svgo.config');
-const { optimize } = require('svgo');
+import fs from 'fs'
+import path from 'path'
+import { optimize } from 'svgo'
+import { svgoConfig } from './svgo.config.js'
 
 const CONFIG = {
   srcDir: 'src',
