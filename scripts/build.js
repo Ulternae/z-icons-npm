@@ -37,8 +37,6 @@ function processPack(packName) {
   const symbols = [];
   const iconIds = [];
 
-  console.log(`   Found ${files.length} icons - ${packName}`);
-
   files.forEach((file) => {
     const filePath = path.join(srcPath, file)
     const content = fs.readFileSync(filePath, 'utf8');
@@ -70,12 +68,13 @@ function processPack(packName) {
   const spriteContent = `<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">\n${symbols.join('\n')}\n</svg>`;
   fs.writeFileSync(path.join(distPath, `${packName}-sprite.svg`), spriteContent);
 
-  const typeContent = `export type ${capitalize(packName)}IconName = \n${iconIds.map(id => `  | '${id}'`).join('\n')};\n\nexport const ${packName}Icons = [\n${iconIds.map(id => `  '${id}'`).join(',\n')}\n] as const;`;
+  const typeContent = `export type ${capitalize(packName)}IconName = \n${iconIds.map(id => `  | '${id}'`).join('\n')};\n\nexport const ${packName}Icons: readonly [\n${iconIds.map(id => `  '${id}'`).join(',\n')}\n];`;
   fs.writeFileSync(path.join(distPath, 'index.d.ts'), typeContent);
 
   const jsContent = `export const ${packName}Icons = ${JSON.stringify(iconIds)};`;
   fs.writeFileSync(path.join(distPath, 'index.js'), jsContent);
 
+  console.log(`   ✅ Pack processed: | ${capitalize(packName).padStart(5, " ")}  |  ${files.length} icons`);
 }
 
 function capitalize(s) {
@@ -83,8 +82,9 @@ function capitalize(s) {
 }
 
 function main() {
-  console.log('🚀 Starting build process...');
+  console.log('\n🚀 Starting build process... \n');
   CONFIG.packs.forEach(pack => processPack(pack));
+  console.log('\n🎉 Build process completed.\n');
 }
 
 main();

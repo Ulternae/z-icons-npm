@@ -2,7 +2,7 @@ export type CoreIconName =
   | 'moon'
   | 'sun';
 
-export const coreIcons = [
+export const coreIcons: readonly [
   'moon',
   'sun'
-] as const;
+];
