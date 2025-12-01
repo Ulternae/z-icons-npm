@@ -81,9 +81,68 @@ function capitalize(s) {
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
+function types() {
+  const importStatements = CONFIG.packs.map(pack => `import type { ${capitalize(pack)}IconName } from '../${pack}';`).join('\n')
+  const name = CONFIG.packs.map(pack => capitalize(pack) + 'IconName').join(' | ')
+  const type = CONFIG.packs.map(pack => `'${pack}'`).join(' | ')
+
+  const typeGeneral = `
+    ${importStatements}
+
+    export default class ZIcon extends HTMLElement {
+      /**
+       * Observed attributes that trigger re-rendering
+       */
+      static get observedAttributes(): string[];
+
+      /**
+       * Called when an observed attribute changes
+       */
+      attributeChangedCallback(): void;
+
+      /**
+       * Called when the element is inserted into the DOM
+       */
+      connectedCallback(): void;
+
+      /**
+       * Renders the icon based on current attributes
+       */
+      render(): void;
+    }
+
+    declare global {
+      interface HTMLElementTagNameMap {
+        'z-icon': ZIcon;
+      }
+
+      namespace JSX {
+        interface IntrinsicElements {
+          'z-icon': {
+            name?: ${name};
+            type?: ${type};
+            size?: string | number;
+            color?: string;
+            class?: string;
+          };
+        }
+      }
+    }
+
+    
+  `;
+
+  const pathTypes = path.join(CONFIG.distDir, 'types');
+  ensureDir(pathTypes);
+
+  fs.writeFileSync(path.join(pathTypes, 'icon.d.ts'), typeGeneral, 'utf8');
+  console.log('   ✅ General types');
+}
+
 function main() {
   console.log('\n🚀 Starting build process... \n');
   CONFIG.packs.forEach(pack => processPack(pack));
+  types();
   console.log('\n🎉 Build process completed.\n');
 }
 
