@@ -1,5 +1,5 @@
 {
-  "name": "z-icons",
+  "name": "@zcorvus/z-icons",
   "version": "0.0.1",
   "description": "Icon library (core & neo) as SVG sprites + Web Component <z-icon>",
   "author": "Ulqernesh Karvenae",
@@ -12,7 +12,7 @@
   ],
   "private": false,
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   },
   "exports": {
     ".": {
