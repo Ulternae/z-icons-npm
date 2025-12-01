@@ -1,4 +1,3 @@
-
 module.exports = {
   multipass: true,
   plugins: [
@@ -6,6 +5,7 @@ module.exports = {
       name: 'preset-default',
       params: {
         overrides: {
+          removeViewBox: false,
           cleanupIds: {
             minify: false,
             preserve: [],
@@ -17,7 +17,6 @@ module.exports = {
             keepAriaAttrs: true,
             keepRoleAttr: true,
           },
-          removeUselessStrokeAndFill: false,
         },
       },
     },
