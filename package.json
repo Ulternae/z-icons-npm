@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Icon library (core & neo) as SVG sprites + Web Component <z-icon>",
   "author": "Ulqernesh Karvenae",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "type": "commonjs",
   "main": "dist/icon.js",
   "types": "dist/types/icon.d.ts",
