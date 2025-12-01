@@ -3,7 +3,12 @@ import { defineConfig } from "tsup";
 export default defineConfig({
   entry: ["src/icon.ts"],
   format: ["esm"],
-  dts: false,
+  dts: {
+    compilerOptions: {
+      module: "esnext",
+      target: "es2020"
+    }
+  },
   minify: true,
   splitting: false,
   sourcemap: false,
