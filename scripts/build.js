@@ -82,55 +82,60 @@ function capitalize(s) {
 }
 
 function types() {
-  const importStatements = CONFIG.packs.map(pack => `import type { ${capitalize(pack)}IconName } from '../${pack}';`).join('\n')
-  const name = CONFIG.packs.map(pack => capitalize(pack) + 'IconName').join(' | ')
-  const type = CONFIG.packs.map(pack => `'${pack}'`).join(' | ')
+
+  const importStatements = CONFIG.packs.map((pack) => `import type { ${capitalize(pack)}IconName } from '../${pack}';`).join('\n');
+  const iconNameUnion = CONFIG.packs.map((pack) => `${capitalize(pack)}IconName`).join(' | ');
+  const iconPackUnion = CONFIG.packs.map((pack) => `'${pack}'`).join(' | ');
 
   const typeGeneral = `
-    ${importStatements}
+${importStatements}
 
-    export default class ZIcon extends HTMLElement {
-      /**
-       * Observed attributes that trigger re-rendering
-       */
-      static get observedAttributes(): string[];
+export type IconPack = ${iconPackUnion};
+export type IconName = ${iconNameUnion};
 
-      /**
-       * Called when an observed attribute changes
-       */
-      attributeChangedCallback(): void;
+export default class ZIcon extends HTMLElement {
+  /**
+   * Observed attributes that trigger re-rendering
+   */
+  static get observedAttributes(): string[];
 
-      /**
-       * Called when the element is inserted into the DOM
-       */
-      connectedCallback(): void;
+  /**
+   * Called when an observed attribute changes
+   */
+  attributeChangedCallback(
+    name: string,
+    oldValue: string | null,
+    newValue: string | null
+  ): void;
 
-      /**
-       * Renders the icon based on current attributes
-       */
-      render(): void;
+  /**
+   * Called when the element is inserted into the DOM
+   */
+  connectedCallback(): void;
+
+  /**
+   * Renders the icon based on current attributes
+   */
+  render(): void;
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'z-icon': ZIcon;
+  }
+
+  namespace JSX {
+    interface IntrinsicElements {
+      'z-icon': {
+        name?: IconName;
+        type?: IconPack;
+        size?: string | number;
+        color?: string;
+        class?: string;
+      };
     }
-
-    declare global {
-      interface HTMLElementTagNameMap {
-        'z-icon': ZIcon;
-      }
-
-      namespace JSX {
-        interface IntrinsicElements {
-          'z-icon': {
-            name?: ${name};
-            type?: ${type};
-            size?: string | number;
-            color?: string;
-            class?: string;
-          };
-        }
-      }
-    }
-
-    
-  `;
+  }
+}`
 
   const pathTypes = path.join(CONFIG.distDir, 'types');
   ensureDir(pathTypes);
