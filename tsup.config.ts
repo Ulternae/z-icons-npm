@@ -2,12 +2,12 @@ import { defineConfig } from "tsup";
 
 export default defineConfig({
   entry: ["src/icon.ts"],
-  format: ["esm", "cjs", "iife"],
-  dts: false, // NO queremos que tsup genere dts porque tú ya tienes uno personalizado
+  format: ["esm"],
+  dts: false,
   minify: true,
-  splitting: false, // Web Components no deben dividirse
+  splitting: false,
   sourcemap: false,
-  clean: true,
+  clean: false,
   target: "es2020",
   globalName: "ZIconComponent"
 });

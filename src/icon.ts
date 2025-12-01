@@ -1,7 +1,6 @@
-// src/Icon.js
 const SPRITES = {
-  core: "./dist/core/core-sprite.svg",
-  neo: "./dist/neo/neo-sprite.svg",
+  core: new URL("./core/core-sprite.svg", import.meta.url).href,
+  neo: new URL("./neo/neo-sprite.svg", import.meta.url).href,
 };
 
 class ZIcon extends HTMLElement {
@@ -19,7 +18,7 @@ class ZIcon extends HTMLElement {
 
   render() {
     const name = this.getAttribute("name");
-    const type = this.getAttribute("type") || "core";
+    const type = (this.getAttribute("type") || "core") as keyof typeof SPRITES;
     const size = this.getAttribute("size") || "24";
     const color = this.getAttribute("color") || "currentColor";
     const className = this.getAttribute("class") || "";
@@ -42,4 +41,5 @@ class ZIcon extends HTMLElement {
 }
 
 customElements.define("z-icon", ZIcon);
+
 export default ZIcon;
