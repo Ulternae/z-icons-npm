@@ -52,7 +52,7 @@ function processPack(packName) {
       return;
     }
 
-    // fs.writeFileSync(filePath, result.data, 'utf8');
+    fs.writeFileSync(filePath, result.data, 'utf8');
     const svgContent = result.data;
     const viewBoxMatch = svgContent.match(/viewBox=["']([^"']+)["']/);
     const viewBox = viewBoxMatch ? viewBoxMatch[1] : '0 0 24 24';
