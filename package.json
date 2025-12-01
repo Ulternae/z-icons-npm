@@ -1,0 +1,37 @@
+{
+  "name": "z-icons",
+  "version": "0.0.1",
+  "description": "Icon library (core & neo) as SVG sprites + Web Component <z-icon>",
+  "author": "Ulqernesh Karvenae",
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "dist/icon.js",
+  "types": "dist/types/icon.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/icon.js",
+      "types": "./dist/types/icon.d.ts"
+    },
+    "./core": {
+      "import": "./dist/core/index.js",
+      "types": "./dist/core/index.d.ts"
+    },
+    "./neo": {
+      "import": "./dist/neo/index.js",
+      "types": "./dist/neo/index.d.ts"
+    }
+  },
+  "scripts": {
+    "sprites": "node scripts/build.js",
+    "bundle": "tsup",
+    "build": "npm run sprites && npm run bundle",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "svgo": "^3.0.0",
+    "tsup": "^8.5.1"
+  }
+}
