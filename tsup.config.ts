@@ -9,5 +9,5 @@ export default defineConfig({
   sourcemap: false,
   clean: false,
   target: "es2020",
-  globalName: "ZIconComponent"
+  globalName: "ZIcon"
 });
