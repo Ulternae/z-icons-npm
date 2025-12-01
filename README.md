@@ -1,258 +1,213 @@
-# Z-Icons - Icon Component
+# z-icons
 
-Componente de iconos agnóstico a la tecnología basado en Web Components.
+![Version](https://img.shields.io/badge/version-0.0.1-blue.svg)
+![License](https://img.shields.io/badge/license-UNLICENSED-red.svg)
 
-## 🚀 Instalación
+> Icon library (core & neo) as SVG sprites + Web Component `<z-icon>`
+
+A lightweight and performant icon system using SVG sprites and a custom Web Component. No dependencies in production, optimized SVGs, and simple integration.
+
+## Features
+
+- 🎯 **Two Icon Packs**: `core` and `neo` collections
+- 🚀 **Web Component**: Native `<z-icon>` custom element
+- 📦 **SVG Sprites**: Optimized with SVGO for minimal bundle size
+- 🎨 **Fully Customizable**: Size, color, and class support
+- 🌙 **Theme Ready**: Works seamlessly with light/dark modes
+- ⚡ **Zero Dependencies**: No runtime dependencies
+- 📝 **TypeScript**: Type definitions included
+
+## Installation
 
 ```bash
 npm install z-icons
+# or
+pnpm add z-icons
+# or
+yarn add z-icons
 ```
 
-## 📦 Generar Sprites
+## Usage
 
-Antes de usar los iconos, genera los sprites SVG:
-
-```bash
-node scripts/build-svg-sprites.js
-```
-
-Esto generará:
-- `dist/core/core-sprite.svg`
-- `dist/neo/neo-sprite.svg`
-
-## 🎯 Uso
-
-### En HTML (Vanilla JS)
+### Basic Usage
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Mi App</title>
-</head>
-<body>
-  <!-- Usar el componente -->
-  <z-icon name="sun" type="core" size="24"></z-icon>
-  <z-icon name="moon" type="neo" size="32" color="blue"></z-icon>
+<!-- Import the Web Component -->
+<script type="module">
+  import 'z-icons';
+</script>
 
-  <!-- Cargar el componente -->
-  <script>
-    class ZIcon extends HTMLElement {
-      static get observedAttributes() {
-        return ["name", "type", "size", "class", "color"];
-      }
-
-      constructor() {
-        super();
-        this.attachShadow({ mode: "open" });
-      }
-
-      connectedCallback() {
-        this.render();
-      }
-
-      attributeChangedCallback() {
-        this.render();
-      }
-
-      render() {
-        const name = this.getAttribute("name");
-        const type = this.getAttribute("type") || "core";
-        const size = this.getAttribute("size") || "24";
-        const className = this.getAttribute("class") || "";
-        const color = this.getAttribute("color") || "currentColor";
-
-        if (!name) {
-          console.warn("z-icon: 'name' attribute is required");
-          return;
-        }
-
-        if (type !== "core" && type !== "neo") {
-          console.warn(`z-icon: 'type' must be 'core' or 'neo', got '${type}'`);
-          return;
-        }
-
-        const href = `./dist/${type}/${type}-sprite.svg#${name}`;
-
-        this.shadowRoot.innerHTML = `
-          <style>
-            :host {
-              display: inline-flex;
-              align-items: center;
-              justify-content: center;
-            }
-            svg {
-              fill: ${color};
-              width: ${size}px;
-              height: ${size}px;
-            }
-          </style>
-          <svg
-            width="${size}"
-            height="${size}"
-            class="${className}"
-            part="svg"
-            aria-hidden="true"
-          >
-            <use href="${href}"></use>
-          </svg>
-        `;
-      }
-    }
-
-    if (!customElements.get("z-icon")) {
-      customElements.define("z-icon", ZIcon);
-    }
-  </script>
-</body>
-</html>
+<!-- Use the icon -->
+<z-icon name="sun" type="core"></z-icon>
 ```
 
-### En React
+### With Attributes
+
+```html
+<!-- Custom size -->
+<z-icon name="moon" type="core" size="32"></z-icon>
+
+<!-- Custom color -->
+<z-icon name="alarm-clock" type="neo" color="#ff5733"></z-icon>
+
+<!-- With CSS class -->
+<z-icon name="anchor" type="core" class="my-icon"></z-icon>
+
+<!-- All together -->
+<z-icon 
+  name="address-card" 
+  type="neo" 
+  size="48" 
+  color="currentColor"
+  class="icon-large"
+></z-icon>
+```
+
+### In JavaScript/TypeScript
+
+```javascript
+import 'z-icons';
+
+// Create icon programmatically
+const icon = document.createElement('z-icon');
+icon.setAttribute('name', 'sun');
+icon.setAttribute('type', 'core');
+icon.setAttribute('size', '24');
+icon.setAttribute('color', '#fbbf24');
+document.body.appendChild(icon);
+```
+
+### React Example
 
 ```jsx
-import { useEffect } from 'react';
+import 'z-icons';
 
-// Importar el componente una vez en tu app
-useEffect(() => {
-  if (!customElements.get('z-icon')) {
-    class ZIcon extends HTMLElement {
-      // ... mismo código del componente
-    }
-    customElements.define('z-icon', ZIcon);
-  }
-}, []);
-
-// Usar en JSX
 function App() {
   return (
     <div>
-      <z-icon name="sun" type="core" size="24"></z-icon>
-      <z-icon name="moon" type="neo" size="32"></z-icon>
+      <z-icon name="sun" type="core" size="24" color="currentColor" />
     </div>
   );
 }
 ```
 
-### En Vue
+### Vue Example
 
 ```vue
 <template>
-  <div>
-    <z-icon name="sun" type="core" size="24"></z-icon>
-    <z-icon name="moon" type="neo" size="32"></z-icon>
-  </div>
+  <z-icon name="moon" type="neo" size="32" color="currentColor" />
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
-
-onMounted(() => {
-  if (!customElements.get('z-icon')) {
-    class ZIcon extends HTMLElement {
-      // ... mismo código del componente
-    }
-    customElements.define('z-icon', ZIcon);
-  }
-});
+import 'z-icons';
 </script>
 ```
 
-### En Angular
+## API
 
-```typescript
-// app.component.ts
-import { Component, OnInit } from '@angular/core';
+### Attributes
 
-@Component({
-  selector: 'app-root',
-  template: `
-    <z-icon name="sun" type="core" size="24"></z-icon>
-    <z-icon name="moon" type="neo" size="32"></z-icon>
-  `
-})
-export class AppComponent implements OnInit {
-  ngOnInit() {
-    if (!customElements.get('z-icon')) {
-      class ZIcon extends HTMLElement {
-        // ... mismo código del componente
-      }
-      customElements.define('z-icon', ZIcon);
-    }
-  }
-}
+| Attribute | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `name` | `string` | - | **Required.** Icon name (e.g., "sun", "moon") |
+| `type` | `"core" \| "neo"` | `"core"` | Icon pack to use |
+| `size` | `string \| number` | `"24"` | Icon size in pixels |
+| `color` | `string` | `"currentColor"` | Icon color (CSS color value) |
+| `class` | `string` | `""` | Additional CSS classes |
+
+## Icon Packs
+
+### Core Icons
+- `address-card`
+- `alarm-clock`
+- `anchor`
+- `moon`
+- `sun`
+
+### Neo Icons
+- `address-card`
+- `alarm-clock`
+- `anchor`
+- `moon`
+- `sun`
+
+## Development
+
+### Project Structure
+
+```
+z-icons-npm/
+├── src/
+│   ├── icon.ts              # Web Component implementation
+│   ├── core/
+│   │   └── icons/           # Core icon SVGs
+│   └── neo/
+│       └── icons/           # Neo icon SVGs
+├── scripts/
+│   ├── build.js             # Build script for sprites
+│   └── svgo.config.js       # SVGO optimization config
+├── dist/                    # Built files (generated)
+│   ├── icon.js              # Bundled Web Component
+│   ├── core/
+│   │   └── core-sprite.svg  # Core sprite
+│   └── neo/
+│       └── neo-sprite.svg   # Neo sprite
+└── example.html             # Demo page
 ```
 
-## 🎨 Propiedades (Atributos)
+### Build Process
 
-| Atributo | Tipo | Default | Descripción |
-|----------|------|---------|-------------|
-| `name` | `string` | **requerido** | Nombre del icono (sun, moon) |
-| `type` | `'core' \| 'neo'` | `'core'` | Tipo de sprite a usar |
-| `size` | `string \| number` | `'24'` | Tamaño en píxeles |
-| `color` | `string` | `'currentColor'` | Color del icono (CSS color) |
-| `class` | `string` | `''` | Clases CSS adicionales |
+1. **Generate Sprites**: Combines individual SVG icons into optimized sprite files
+2. **Bundle Component**: Compiles TypeScript Web Component with tsup
+3. **Optimize**: Minifies and optimizes for production
 
-## 📋 Iconos Disponibles
+### Scripts
 
-### Core
-- `sun` - Icono de sol
-- `moon` - Icono de luna
+```bash
+# Build sprites from SVG icons
+npm run sprites
 
-### Neo
-- `sun` - Icono de sol (estilo neo)
-- `moon` - Icono de luna (estilo neo)
+# Bundle the Web Component
+npm run bundle
 
-## 🎯 Ejemplos
+# Full build (sprites + bundle)
+npm run build
 
-### Básico
-```html
-<z-icon name="sun" type="core"></z-icon>
+# Prepare for publishing (runs build automatically)
+npm run prepublishOnly
 ```
 
-### Con tamaño personalizado
-```html
-<z-icon name="moon" type="neo" size="48"></z-icon>
-```
+### Adding New Icons
 
-### Con color personalizado
-```html
-<z-icon name="sun" type="core" size="32" color="orange"></z-icon>
-```
+1. Add your SVG file to `src/core/icons/` or `src/neo/icons/`
+2. Run `npm run build` to regenerate sprites
+3. Use the icon with `<z-icon name="your-icon-name" type="core|neo" />`
 
-### Toggle de tema
-```html
-<button id="theme-toggle">
-  <z-icon name="sun" type="core" size="20"></z-icon>
-  Toggle Theme
-</button>
+## How It Works
 
-<script>
-  document.getElementById('theme-toggle').addEventListener('click', function() {
-    const icon = this.querySelector('z-icon');
-    const current = icon.getAttribute('name');
-    icon.setAttribute('name', current === 'sun' ? 'moon' : 'sun');
-  });
-</script>
-```
+The library uses SVG sprites for optimal performance:
 
-## 🛠️ Desarrollo
+1. **Build Time**: Individual SVG icons are combined into sprite files
+2. **Runtime**: The Web Component loads sprites and references icons using `<use>` tags
+3. **Result**: Only two sprite files are loaded regardless of how many icons you use
 
-### Agregar nuevos iconos
+This approach provides:
+- ⚡ Better performance than individual SVG imports
+- 📦 Smaller bundle sizes
+- 🎯 Efficient caching
+- 🔄 Dynamic icon switching without reloads
 
-1. Coloca archivos SVG en `src/core/icons/` o `src/neo/icons/`
-2. Ejecuta el script de build:
-   ```bash
-   node scripts/build-svg-sprites.js
-   ```
-3. Los sprites se actualizarán automáticamente
+## Browser Support
 
-### Ver ejemplo
-Abre `example.html` en tu navegador para ver todos los ejemplos funcionando.
+- ✅ Chrome/Edge (Chromium)
+- ✅ Firefox
+- ✅ Safari
+- ✅ All modern browsers with Web Components support
 
-## 📝 Notas
+## License
 
-- El componente usa Shadow DOM para encapsulación de estilos
-- Compatible con todos los navegadores modernos que soportan Web Components
-- No requiere transpilación ni build para uso básico
-- Funciona con cualquier framework o vanilla JavaScript
+UNLICENSED
+
+## Author
+
+Ulqernesh Karvenae
