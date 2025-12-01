@@ -1,47 +1,36 @@
-/**
- * Configuración de SVGO para optimización de iconos
- * Puedes personalizar estas opciones según tus necesidades
- */
+
 module.exports = {
-  multipass: true, // Ejecutar optimizaciones múltiples veces
+  multipass: true,
   plugins: [
     {
       name: 'preset-default',
       params: {
         overrides: {
-          // Mantener viewBox para escalado correcto
-          removeViewBox: false,
-          // Configuración de IDs
           cleanupIds: {
             minify: false,
             preserve: [],
             preservePrefixes: [],
             remove: true,
           },
-          // Mantener algunos atributos útiles
           removeUnknownsAndDefaults: {
             keepDataAttrs: true,
             keepAriaAttrs: true,
             keepRoleAttr: true,
           },
+          removeUselessStrokeAndFill: false,
         },
       },
     },
-    // Remover xmlns para iconos inline (opcional)
-    'removeXMLNS',
-    
-    // Plugins adicionales personalizados
+    "removeXMLNS",
     {
       name: 'removeAttrs',
       params: {
         attrs: [
           'data-name',
-          'fill-rule', // Opcional: remover si no es necesario
+          'fill-rule',
         ],
       },
     },
-    
-    // Convertir colores a formato corto
     {
       name: 'convertColors',
       params: {
@@ -52,19 +41,13 @@ module.exports = {
         shortname: true,
       },
     },
-    
-    // Precisión numérica
     {
       name: 'cleanupNumericValues',
       params: {
         floatPrecision: 3,
       },
     },
-    
-    // Optimizar transformaciones
     'convertTransform',
-    
-    // Combinar paths cuando sea posible
     {
       name: 'mergePaths',
       params: {
@@ -72,27 +55,20 @@ module.exports = {
         noSpaceAfterFlags: true,
       },
     },
-    
-    // Remover elementos vacíos
-    'removeEmptyContainers',
-    'removeEmptyAttrs',
-    
-    // Ordenar atributos
     {
       name: 'sortAttrs',
       params: {
         xmlnsOrder: 'alphabetical',
       },
     },
-    
-    // Remover metadata innecesaria
+
+    'removeEmptyContainers',
+    'removeEmptyAttrs',
     'removeMetadata',
     'removeComments',
     'removeDesc',
     'removeTitle',
     'removeEditorsNSData',
-    
-    // Optimizaciones adicionales
     'collapseGroups',
     'convertShapeToPath',
     'convertEllipseToCircle',

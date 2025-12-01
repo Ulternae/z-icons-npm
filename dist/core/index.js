@@ -1,0 +1,1 @@
+export const coreIcons = ["moon","sun"];
