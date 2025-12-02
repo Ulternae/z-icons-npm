@@ -1,4 +1,4 @@
-declare class ZIcon extends HTMLElement {
+declare class ZIconElement extends HTMLElement {
     private shadow;
     private lastRenderedKey;
     constructor();
@@ -8,4 +8,4 @@ declare class ZIcon extends HTMLElement {
     render(): void;
 }
 
-export { ZIcon as default };
+export { ZIconElement as default };

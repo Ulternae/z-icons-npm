@@ -6,7 +6,7 @@ const ICON_PACKS = {
   neo: neoIcons,
 };
 
-class ZIcon extends HTMLElement {
+class ZIconElement extends HTMLElement {
   private shadow: ShadowRoot;
   private lastRenderedKey: string = '';
 
@@ -54,7 +54,7 @@ class ZIcon extends HTMLElement {
 
 // SSR-safe registration (Next.js compatibility)
 if (typeof window !== 'undefined' && !customElements.get('z-icon')) {
-  customElements.define("z-icon", ZIcon);
+  customElements.define("z-icon", ZIconElement);
 }
 
-export default ZIcon;
+export default ZIconElement;

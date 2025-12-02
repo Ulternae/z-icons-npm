@@ -4,7 +4,7 @@ import type { NeoIconName } from './neo/types';
 export type IconPack = 'core' | 'neo';
 export type IconName = CoreIconName | NeoIconName;
 
-export default class ZIcon extends HTMLElement {
+export default class ZIconElement extends HTMLElement {
   /**
    * Observed attributes that trigger re-rendering
    */
@@ -32,7 +32,7 @@ export default class ZIcon extends HTMLElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'z-icon': ZIcon;
+    'z-icon': ZIconElement;
   }
 
   namespace JSX {
