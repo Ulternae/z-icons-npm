@@ -1,8 +1,11 @@
 import { defineConfig } from "tsup";
 
 export default defineConfig({
-  entry: ["src/index.ts"],
+  entry: {
+    icon: "src/index.ts",
+  },
   format: ["esm"],
+  outDir: "dist",
   globalName: "ZIcon",
   clean: false,
   splitting: false,
@@ -13,8 +16,9 @@ export default defineConfig({
   esbuildOptions(options) {
     options.loader = {
       ...options.loader,
-      ".svg": "file",
+      ".svg": "text",
     };
   },
   external: [],
+  publicDir: false,
 });

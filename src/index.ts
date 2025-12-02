@@ -1,6 +1,17 @@
+// Get the base path from where this script is loaded
+const getBasePath = () => {
+  const scripts = document.querySelectorAll('script[src*="icon.js"]');
+  if (scripts.length > 0) {
+    const scriptSrc = (scripts[0] as HTMLScriptElement).src;
+    return scriptSrc.substring(0, scriptSrc.lastIndexOf('/'));
+  }
+  return './dist';
+};
+
+// Sprite paths - will be resolved relative to the script location
 const SPRITES = {
-  core: new URL("./core/core-sprite.svg", import.meta.url).toString(),
-  neo: new URL("./neo/neo-sprite.svg", import.meta.url).toString(),
+  core: `${getBasePath()}/core/core-sprite.svg`,
+  neo: `${getBasePath()}/neo/neo-sprite.svg`,
 };
 
 class ZIcon extends HTMLElement {

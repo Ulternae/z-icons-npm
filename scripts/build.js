@@ -71,7 +71,7 @@ function processPack(packName) {
   const typeContent = `export type ${capitalize(packName)}IconName = \n${iconIds.map(id => `  | '${id}'`).join('\n')};\n\nexport const ${packName}Icons: readonly [\n${iconIds.map(id => `  '${id}'`).join(',\n')}\n];`;
   fs.writeFileSync(path.join(distPath, 'index.d.ts'), typeContent);
 
-  const jsContent = `export const ${packName}Icons = ${JSON.stringify(iconIds)};`;
+  const jsContent = `const ${packName}Sprite = "./${packName}-sprite.svg";\nconst ${packName}Icons = ${JSON.stringify(iconIds)};\nexport { ${packName}Icons, ${packName}Sprite };`;
   fs.writeFileSync(path.join(distPath, 'index.js'), jsContent);
 
   console.log(`   ✅ Pack processed: | ${capitalize(packName).padStart(5, " ")}  |  ${files.length} icons`);
