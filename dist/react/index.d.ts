@@ -4,7 +4,6 @@ type CoreIconName = 'address-card' | 'alarm-clock' | 'anchor' | 'moon' | 'sun';
 
 type NeoIconName = 'address-card' | 'alarm-clock' | 'anchor' | 'moon' | 'sun';
 
-type IconType = 'core' | 'neo';
 interface BaseIconProps {
     size?: string | number;
     color?: string;
@@ -21,19 +20,6 @@ interface NeoIconProps extends BaseIconProps {
 }
 type ZIconProps = CoreIconProps | NeoIconProps;
 
-declare global {
-    namespace JSX {
-        interface IntrinsicElements {
-            'z-icon': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
-                name?: string;
-                type?: IconType;
-                size?: string | number;
-                color?: string;
-                class?: string;
-            };
-        }
-    }
-}
 /**
  * ZIcon - React wrapper for the z-icon Web Component
  *

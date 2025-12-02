@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 // Auto-register the Web Component
 import ZIconWebComponent from '../index';
 // Import generated types
@@ -29,23 +29,6 @@ export type ZIconProps = CoreIconProps | NeoIconProps;
 // Re-export types for convenience
 export type { CoreIconName, NeoIconName };
 
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'z-icon': React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLElement>,
-        HTMLElement
-      > & {
-        name?: string;
-        type?: IconType;
-        size?: string | number;
-        color?: string;
-        class?: string;
-      };
-    }
-  }
-}
-
 /**
  * ZIcon - React wrapper for the z-icon Web Component
  * 
@@ -66,16 +49,36 @@ export const ZIcon: React.FC<ZIconProps> = ({
   className,
   style,
 }) => {
-  return (
-    <z-icon
-      name={name}
-      type={type}
-      size={String(size)}
-      color={color}
-      class={className}
-      style={style}
-    />
-  );
+  const containerRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    // Create the Web Component element
+    const iconElement = document.createElement('z-icon');
+    iconElement.setAttribute('name', name);
+    iconElement.setAttribute('type', type);
+    iconElement.setAttribute('size', String(size));
+    iconElement.setAttribute('color', color);
+    if (className) iconElement.setAttribute('class', className);
+    if (style) {
+      Object.assign(iconElement.style, style);
+    }
+
+    // Clear and append
+    containerRef.current.innerHTML = '';
+    containerRef.current.appendChild(iconElement);
+
+    // Cleanup
+    return () => {
+      if (containerRef.current) {
+        containerRef.current.innerHTML = '';
+      }
+    };
+  }, [name, type, size, color, className, style]);
+
+  // Return a span container for SSR compatibility
+  return <span ref={containerRef} style={{ display: 'inline-block', lineHeight: 0 }} />;
 };
 
 export default ZIcon;
