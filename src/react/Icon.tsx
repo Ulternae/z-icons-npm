@@ -1,19 +1,9 @@
-import React, { useRef } from 'react';
-
-// Type definitions for icon names
-export type CoreIconName = 
-  | 'address-card'
-  | 'alarm-clock'
-  | 'anchor'
-  | 'moon'
-  | 'sun';
-
-export type NeoIconName = 
-  | 'address-card'
-  | 'alarm-clock'
-  | 'anchor'
-  | 'moon'
-  | 'sun';
+import React from 'react';
+// Auto-register the Web Component
+import ZIconWebComponent from '../index';
+// Import generated types
+import type { CoreIconName } from '../core/types';
+import type { NeoIconName } from '../neo/types';
 
 type IconType = 'core' | 'neo';
 
@@ -34,7 +24,10 @@ interface NeoIconProps extends BaseIconProps {
   type: 'neo';
 }
 
-export type IconProps = CoreIconProps | NeoIconProps;
+export type ZIconProps = CoreIconProps | NeoIconProps;
+
+// Re-export types for convenience
+export type { CoreIconName, NeoIconName };
 
 declare global {
   namespace JSX {
@@ -47,12 +40,25 @@ declare global {
         type?: IconType;
         size?: string | number;
         color?: string;
+        class?: string;
       };
     }
   }
 }
 
-export const Icon: React.FC<IconProps> = ({
+/**
+ * ZIcon - React wrapper for the z-icon Web Component
+ * 
+ * @example
+ * ```tsx
+ * import { ZIcon } from '@zcorvus/z-icons/react';
+ * 
+ * function App() {
+ *   return <ZIcon name="moon" type="core" size={32} color="blue" />;
+ * }
+ * ```
+ */
+export const ZIcon: React.FC<ZIconProps> = ({
   name,
   type = 'core',
   size = '24',
@@ -60,19 +66,17 @@ export const Icon: React.FC<IconProps> = ({
   className,
   style,
 }) => {
-  const iconRef = useRef<HTMLElement>(null);
-
   return (
     <z-icon
-      ref={iconRef as any}
       name={name}
       type={type}
       size={String(size)}
       color={color}
-      className={className}
+      class={className}
       style={style}
     />
   );
 };
 
-export default Icon;
+export default ZIcon;
+

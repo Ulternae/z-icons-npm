@@ -5,7 +5,7 @@ export type CoreIconName =
   | 'moon'
   | 'sun';
 
-export const coreIcons: readonly [
+export const coreIcons: readonly string[] = [
   'address-card',
   'alarm-clock',
   'anchor',

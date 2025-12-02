@@ -1,1 +1,10 @@
-var a={core:new URL("./core/core-sprite.svg",import.meta.url).toString(),neo:new URL("./neo/neo-sprite.svg",import.meta.url).toString()},e=class extends HTMLElement{static get observedAttributes(){return["name","type","size","color","class"]}attributeChangedCallback(){this.render()}connectedCallback(){this.render()}render(){let s=this.getAttribute("name"),o=this.getAttribute("type")||"core",r=this.getAttribute("size")||"24",c=this.getAttribute("color")||"currentColor",l=this.getAttribute("class")||"",i=a[o];if(!i||!s)return;let t=document.createElementNS("http://www.w3.org/2000/svg","svg");t.setAttribute("width",r),t.setAttribute("height",r),t.setAttribute("fill","none"),t.setAttribute("color",c),t.setAttribute("class",l);let n=document.createElementNS("http://www.w3.org/2000/svg","use");n.setAttribute("href",`${i}#${s}`),t.appendChild(n),this.innerHTML="",this.appendChild(t)}};customElements.define("z-icon",e);var g=e;export{g as default};
+var a={core:new URL("./core/core-sprite.svg",import.meta.url).toString(),neo:new URL("./neo/neo-sprite.svg",import.meta.url).toString()},e=class extends HTMLElement{constructor(){super();this.lastRenderedKey="";this.shadow=this.attachShadow({mode:"open"})}static get observedAttributes(){return["name","type","size","color"]}attributeChangedCallback(){this.render()}connectedCallback(){this.render()}render(){let t=this.getAttribute("name"),s=this.getAttribute("type")||"core",r=this.getAttribute("size")||"24",o=this.getAttribute("color")||"currentColor",n=`${t}-${s}-${r}-${o}`;if(n===this.lastRenderedKey)return;this.lastRenderedKey=n;let i=a[s];if(!i||!t){this.shadow.innerHTML="";return}this.shadow.innerHTML=`
+      <svg 
+        width="${r}" 
+        height="${r}" 
+        fill="none" 
+        style="color: ${o}; display: block;"
+      >
+        <use href="${i}#${t}"></use>
+      </svg>
+    `}};typeof window<"u"&&!customElements.get("z-icon")&&customElements.define("z-icon",e);var l=e;export{l as default};

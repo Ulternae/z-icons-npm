@@ -4,8 +4,16 @@ const SPRITES = {
 };
 
 class ZIcon extends HTMLElement {
+  private shadow: ShadowRoot;
+  private lastRenderedKey: string = '';
+
+  constructor() {
+    super();
+    this.shadow = this.attachShadow({ mode: 'open' });
+  }
+
   static get observedAttributes() {
-    return ["name", "type", "size", "color", "class"];
+    return ["name", "type", "size", "color"];
   }
 
   attributeChangedCallback() {
@@ -19,30 +27,38 @@ class ZIcon extends HTMLElement {
   render() {
     const name = this.getAttribute("name");
     const type = (this.getAttribute("type") || "core") as keyof typeof SPRITES;
-
     const size = this.getAttribute("size") || "24";
     const color = this.getAttribute("color") || "currentColor";
-    const className = this.getAttribute("class") || "";
+
+    // Optimization: skip re-render if nothing changed
+    const renderKey = `${name}-${type}-${size}-${color}`;
+    if (renderKey === this.lastRenderedKey) return;
+    this.lastRenderedKey = renderKey;
 
     const spriteUrl = SPRITES[type];
-    if (!spriteUrl || !name) return;
+    if (!spriteUrl || !name) {
+      this.shadow.innerHTML = '';
+      return;
+    }
 
-    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    svg.setAttribute("width", size);
-    svg.setAttribute("height", size);
-    svg.setAttribute("fill", "none");
-    svg.setAttribute("color", color);
-    svg.setAttribute("class", className);
-
-    const use = document.createElementNS("http://www.w3.org/2000/svg", "use");
-    use.setAttribute("href", `${spriteUrl}#${name}`);
-
-    svg.appendChild(use);
-    this.innerHTML = "";
-    this.appendChild(svg);
+    // Use Shadow DOM for better encapsulation and performance
+    this.shadow.innerHTML = `
+      <svg 
+        width="${size}" 
+        height="${size}" 
+        fill="none" 
+        style="color: ${color}; display: block;"
+      >
+        <use href="${spriteUrl}#${name}"></use>
+      </svg>
+    `;
   }
 }
 
-customElements.define("z-icon", ZIcon);
+// SSR-safe registration (Next.js compatibility)
+if (typeof window !== 'undefined' && !customElements.get('z-icon')) {
+  customElements.define("z-icon", ZIcon);
+}
 
 export default ZIcon;
+

@@ -1,2 +1,2 @@
-export { Icon } from './Icon';
-export type { IconProps, CoreIconName, NeoIconName } from './Icon';
+export { ZIcon } from './Icon';
+export type { ZIconProps, CoreIconName, NeoIconName } from './Icon';

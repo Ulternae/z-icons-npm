@@ -1,7 +1,9 @@
 import React from 'react';
 
 type CoreIconName = 'address-card' | 'alarm-clock' | 'anchor' | 'moon' | 'sun';
+
 type NeoIconName = 'address-card' | 'alarm-clock' | 'anchor' | 'moon' | 'sun';
+
 type IconType = 'core' | 'neo';
 interface BaseIconProps {
     size?: string | number;
@@ -17,7 +19,8 @@ interface NeoIconProps extends BaseIconProps {
     name: NeoIconName;
     type: 'neo';
 }
-type IconProps = CoreIconProps | NeoIconProps;
+type ZIconProps = CoreIconProps | NeoIconProps;
+
 declare global {
     namespace JSX {
         interface IntrinsicElements {
@@ -26,10 +29,23 @@ declare global {
                 type?: IconType;
                 size?: string | number;
                 color?: string;
+                class?: string;
             };
         }
     }
 }
-declare const Icon: React.FC<IconProps>;
+/**
+ * ZIcon - React wrapper for the z-icon Web Component
+ *
+ * @example
+ * ```tsx
+ * import { ZIcon } from '@zcorvus/z-icons/react';
+ *
+ * function App() {
+ *   return <ZIcon name="moon" type="core" size={32} color="blue" />;
+ * }
+ * ```
+ */
+declare const ZIcon: React.FC<ZIconProps>;
 
-export { type CoreIconName, Icon, type IconProps, type NeoIconName };
+export { type CoreIconName, type NeoIconName, ZIcon, type ZIconProps };
