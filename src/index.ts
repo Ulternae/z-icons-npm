@@ -1,6 +1,6 @@
 const SPRITES = {
-  core: new URL("./core/core-sprite.svg", import.meta.url).href,
-  neo: new URL("./neo/neo-sprite.svg", import.meta.url).href,
+  core: new URL("./core/core-sprite.svg", import.meta.url).toString(),
+  neo: new URL("./neo/neo-sprite.svg", import.meta.url).toString(),
 };
 
 class ZIcon extends HTMLElement {
@@ -19,6 +19,7 @@ class ZIcon extends HTMLElement {
   render() {
     const name = this.getAttribute("name");
     const type = (this.getAttribute("type") || "core") as keyof typeof SPRITES;
+
     const size = this.getAttribute("size") || "24";
     const color = this.getAttribute("color") || "currentColor";
     const className = this.getAttribute("class") || "";
@@ -26,17 +27,19 @@ class ZIcon extends HTMLElement {
     const spriteUrl = SPRITES[type];
     if (!spriteUrl || !name) return;
 
-    this.innerHTML = `
-      <svg
-        width="${size}"
-        height="${size}"
-        fill="none"
-        color="${color}"
-        class="${className}"
-      >
-        <use href="${spriteUrl}#${name}"></use>
-      </svg>
-    `;
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("width", size);
+    svg.setAttribute("height", size);
+    svg.setAttribute("fill", "none");
+    svg.setAttribute("color", color);
+    svg.setAttribute("class", className);
+
+    const use = document.createElementNS("http://www.w3.org/2000/svg", "use");
+    use.setAttribute("href", `${spriteUrl}#${name}`);
+
+    svg.appendChild(use);
+    this.innerHTML = "";
+    this.appendChild(svg);
   }
 }
 

@@ -83,12 +83,11 @@ function capitalize(s) {
 
 function types() {
 
-  const importStatements = CONFIG.packs.map((pack) => `import type { ${capitalize(pack)}IconName } from '../${pack}';`).join('\n');
+  const importStatements = CONFIG.packs.map((pack) => `import type { ${capitalize(pack)}IconName } from './${pack}';`).join('\n');
   const iconNameUnion = CONFIG.packs.map((pack) => `${capitalize(pack)}IconName`).join(' | ');
   const iconPackUnion = CONFIG.packs.map((pack) => `'${pack}'`).join(' | ');
 
-  const typeGeneral = `
-${importStatements}
+  const typeGeneral = `${importStatements}
 
 export type IconPack = ${iconPackUnion};
 export type IconName = ${iconNameUnion};
@@ -135,12 +134,10 @@ declare global {
       };
     }
   }
-}`
+}
+`;
 
-  const pathTypes = path.join(CONFIG.distDir, 'types');
-  ensureDir(pathTypes);
-
-  fs.writeFileSync(path.join(pathTypes, 'icon.d.ts'), typeGeneral, 'utf8');
+  fs.writeFileSync(path.join(CONFIG.distDir, 'index.d.ts'), typeGeneral, 'utf8');
   console.log('   ✅ General types');
 }
 

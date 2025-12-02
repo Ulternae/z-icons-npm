@@ -1,12 +1,12 @@
 {
   "name": "@zcorvus/z-icons",
-  "version": "0.0.31",
+  "version": "0.0.38",
   "description": "Icon library (core & neo) as SVG sprites + Web Component <z-icon>",
   "author": "Ulqernesh Karvenae",
   "license": "UNLICENSED",
   "type": "module",
   "main": "dist/icon.js",
-  "types": "dist/types/icon.d.ts",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -17,7 +17,7 @@
   "exports": {
     ".": {
       "import": "./dist/icon.js",
-      "types": "./dist/types/icon.d.ts"
+      "types": "./dist/index.d.ts"
     },
     "./core": {
       "import": "./dist/core/index.js",
