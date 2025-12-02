@@ -1,5 +1,5 @@
-import { coreIcons } from '../dist/core/icons';
-import { neoIcons } from '../dist/neo/icons';
+import { coreIcons } from './core/icons';
+import { neoIcons } from './neo/icons';
 
 const ICON_PACKS = {
   core: coreIcons,
