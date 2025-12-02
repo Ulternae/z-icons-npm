@@ -4,6 +4,10 @@ export default defineConfig({
   entry: {
     icon: "src/index.ts",
     "react/index": "src/react/index.ts",
+    "core/icons": "src/core/icons.js",
+    "core/react": "src/core/react.js",
+    "neo/icons": "src/neo/icons.js",
+    "neo/react": "src/neo/react.js",
   },
   format: ["esm"],
   outDir: "dist",

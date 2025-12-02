@@ -1,5 +1,5 @@
-import type { CoreIconName } from './core';
-import type { NeoIconName } from './neo';
+import type { CoreIconName } from './core/types';
+import type { NeoIconName } from './neo/types';
 
 export type IconPack = 'core' | 'neo';
 export type IconName = CoreIconName | NeoIconName;

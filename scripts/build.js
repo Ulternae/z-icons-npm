@@ -19,6 +19,60 @@ function ensureDir(dir) {
   }
 }
 
+function capitalize(s) {
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+/**
+ * Convert SVG string to React.createElement calls
+ */
+function svgToReactElement(svgContent, iconId) {
+  // Extract viewBox
+  const viewBoxMatch = svgContent.match(/viewBox=["']([^"']+)["']/);
+  const viewBox = viewBoxMatch ? viewBoxMatch[1] : '0 0 24 24';
+
+  // Extract inner content (paths, circles, etc.)
+  const innerMatch = svgContent.match(/<svg[^>]*>(.*?)<\/svg>/s);
+  const innerContent = innerMatch ? innerMatch[1] : '';
+
+  // Parse inner elements to React.createElement calls
+  const elements = [];
+  const elementRegex = /<(\w+)([^>]*)\/>/g;
+  let match;
+
+  while ((match = elementRegex.exec(innerContent)) !== null) {
+    const tagName = match[1];
+    const attrs = match[2];
+
+    // Parse attributes
+    const attrObj = {};
+    const attrRegex = /(\w+(?:-\w+)*)=["']([^"']*)["']/g;
+    let attrMatch;
+
+    while ((attrMatch = attrRegex.exec(attrs)) !== null) {
+      let key = attrMatch[1];
+      const value = attrMatch[2];
+
+      // Convert kebab-case to camelCase for React
+      if (key.includes('-')) {
+        key = key.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+      }
+
+      attrObj[key] = value;
+    }
+
+    elements.push({ tagName, attrs: attrObj });
+  }
+
+  // Generate React.createElement code
+  const elementsCode = elements.map(el => {
+    const attrsStr = JSON.stringify(el.attrs);
+    return `React.createElement('${el.tagName}', ${attrsStr})`;
+  }).join(',\n    ');
+
+  return `export const ${capitalize(iconId).replace(/-([a-z])/g, (g) => g[1].toUpperCase())} = (props) => React.createElement('svg', { viewBox: '${viewBox}', fill: 'none', ...props }, ${elementsCode});`;
+}
+
 /**
  * Process a single icon pack
  */
@@ -26,16 +80,21 @@ function processPack(packName) {
   const srcPath = path.join(CONFIG.srcDir, packName, 'icons');
   const distPath = path.join(CONFIG.distDir, packName);
 
+  // Output path for generated source files (dictionaries)
+  const srcGenPath = path.join(CONFIG.srcDir, packName);
+
   if (!fs.existsSync(srcPath)) {
     console.warn(`   ⚠️  Source directory not found: ${srcPath}`);
     return;
   }
 
   ensureDir(distPath);
+  ensureDir(srcGenPath);
 
   const files = fs.readdirSync(srcPath).filter((file) => file.endsWith('.svg'));
-  const symbols = [];
   const iconIds = [];
+  const svgStrings = {};
+  const reactComponents = [];
 
   files.forEach((file) => {
     const filePath = path.join(srcPath, file)
@@ -54,27 +113,87 @@ function processPack(packName) {
 
     fs.writeFileSync(filePath, result.data, 'utf8');
     const svgContent = result.data;
+
+    iconIds.push(id);
+    svgStrings[id] = svgContent;
+
+    // Generate React component
+    const reactComponent = svgToReactElement(svgContent, id);
+    reactComponents.push(reactComponent);
+
+    // Write individual string export to dist (for direct usage if needed)
+    const individualStringContent = `export const ${id.replace(/-([a-z])/g, (g) => g[1].toUpperCase())} = '${svgContent.replace(/'/g, "\\'")}';`;
+    fs.writeFileSync(path.join(distPath, `${id}.js`), individualStringContent);
+    fs.writeFileSync(path.join(distPath, `${id}.d.ts`), `export declare const ${id.replace(/-([a-z])/g, (g) => g[1].toUpperCase())}: string;`);
+  })
+
+  // 1. Generate string dictionary (for Web Components) in src/
+  const stringDictContent = `export const ${packName}Icons = ${JSON.stringify(svgStrings, null, 2)};`;
+  fs.writeFileSync(path.join(srcGenPath, 'icons.js'), stringDictContent);
+
+  const stringDictTypes = `export declare const ${packName}Icons: Record<string, string>;`;
+  fs.writeFileSync(path.join(srcGenPath, 'icons.d.ts'), stringDictTypes);
+
+  // 2. Generate React component dictionary in src/ with named exports
+  const reactDictContent = `import React from 'react';\n\n${iconIds.map(id => {
+    const componentName = id.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+    const componentNameCap = componentName.charAt(0).toUpperCase() + componentName.slice(1);
+    const svgContent = svgStrings[id];
     const viewBoxMatch = svgContent.match(/viewBox=["']([^"']+)["']/);
     const viewBox = viewBoxMatch ? viewBoxMatch[1] : '0 0 24 24';
 
-    const innerContent = svgContent
-      .replace(/<svg[^>]*>/, '')
-      .replace(/<\/svg>/, '');
+    // Extract paths and other elements
+    const innerMatch = svgContent.match(/<svg[^>]*>(.*?)<\/svg>/s);
+    const innerContent = innerMatch ? innerMatch[1].trim() : '';
 
-    symbols.push(`<symbol id="${id}" viewBox="${viewBox}">${innerContent}</symbol>`);
-    iconIds.push(id);
-  })
+    // Simple approach: convert inner SVG to React elements
+    const elements = [];
+    const elementRegex = /<(\w+)([^>]*)\/>/g;
+    let match;
 
-  const spriteContent = `<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">\n${symbols.join('\n')}\n</svg>`;
-  fs.writeFileSync(path.join(distPath, `${packName}-sprite.svg`), spriteContent);
+    while ((match = elementRegex.exec(innerContent)) !== null) {
+      const tagName = match[1];
+      const attrs = match[2].trim();
+      elements.push({ tagName, attrs });
+    }
 
-  const typeContent = `export type ${capitalize(packName)}IconName = \n${iconIds.map(id => `  | '${id}'`).join('\n')};\n\nexport const ${packName}Icons: readonly string[] = [\n${iconIds.map(id => `  '${id}'`).join(',\n')}\n];`;
-  fs.writeFileSync(path.join(distPath, 'index.d.ts'), typeContent);
+    const elementsCode = elements.map(el => {
+      const attrsObj = {};
+      const attrRegex = /(\w+(?:-\w+)*)=["']([^"']*)["']/g;
+      let attrMatch;
 
-  const jsContent = `const ${packName}Sprite = "./${packName}-sprite.svg";\nconst ${packName}Icons = ${JSON.stringify(iconIds)};\nexport { ${packName}Icons, ${packName}Sprite };`;
-  fs.writeFileSync(path.join(distPath, 'index.js'), jsContent);
+      while ((attrMatch = attrRegex.exec(el.attrs)) !== null) {
+        let key = attrMatch[1];
+        const value = attrMatch[2];
 
-  // Generate types in src/ for development-time imports
+        // Convert to camelCase
+        if (key.includes('-')) {
+          key = key.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+        }
+
+        attrsObj[key] = value;
+      }
+
+      return `React.createElement('${el.tagName}', ${JSON.stringify(attrsObj)})`;
+    }).join(', ');
+
+    return `export const ${componentNameCap} = (props) => React.createElement('svg', { viewBox: '${viewBox}', fill: 'none', ...props }, ${elementsCode});`;
+  }).join('\n\n')}\n\nexport const ${capitalize(packName)}Icons = {\n${iconIds.map(id => {
+    const componentName = id.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+    const componentNameCap = componentName.charAt(0).toUpperCase() + componentName.slice(1);
+    return `  '${id}': ${componentNameCap}`;
+  }).join(',\n')}\n};`;
+
+  fs.writeFileSync(path.join(srcGenPath, 'react.js'), reactDictContent);
+
+  const reactDictTypes = `import React from 'react';\n\n${iconIds.map(id => {
+    const componentName = id.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+    const componentNameCap = componentName.charAt(0).toUpperCase() + componentName.slice(1);
+    return `export declare const ${componentNameCap}: React.FC<React.SVGProps<SVGSVGElement>>;`;
+  }).join('\n')}\n\nexport declare const ${capitalize(packName)}Icons: Record<string, React.FC<React.SVGProps<SVGSVGElement>>>;`;
+  fs.writeFileSync(path.join(srcGenPath, 'react.d.ts'), reactDictTypes);
+
+  // 3. Generate types for icon names
   const srcTypesPath = path.join(CONFIG.srcDir, packName);
   ensureDir(srcTypesPath);
   const srcTypeContent = `// Auto-generated types - DO NOT EDIT MANUALLY\n// This file is generated by scripts/build.js\n\nexport type ${capitalize(packName)}IconName = \n${iconIds.map(id => `  | '${id}'`).join('\n')};\n\nexport const ${packName}Icons: readonly string[] = [\n${iconIds.map(id => `  '${id}'`).join(',\n')}\n];`;
@@ -83,13 +202,8 @@ function processPack(packName) {
   console.log(`   ✅ Pack processed: | ${capitalize(packName).padStart(5, " ")}  |  ${files.length} icons`);
 }
 
-function capitalize(s) {
-  return s.charAt(0).toUpperCase() + s.slice(1);
-}
-
 function types() {
-
-  const importStatements = CONFIG.packs.map((pack) => `import type { ${capitalize(pack)}IconName } from './${pack}';`).join('\n');
+  const importStatements = CONFIG.packs.map((pack) => `import type { ${capitalize(pack)}IconName } from './${pack}/types';`).join('\n');
   const iconNameUnion = CONFIG.packs.map((pack) => `${capitalize(pack)}IconName`).join(' | ');
   const iconPackUnion = CONFIG.packs.map((pack) => `'${pack}'`).join(' | ');
 

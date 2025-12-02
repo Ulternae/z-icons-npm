@@ -1,6 +1,9 @@
-const SPRITES = {
-  core: new URL("./core/core-sprite.svg", import.meta.url).toString(),
-  neo: new URL("./neo/neo-sprite.svg", import.meta.url).toString(),
+import { coreIcons } from '../dist/core/icons';
+import { neoIcons } from '../dist/neo/icons';
+
+const ICON_PACKS = {
+  core: coreIcons,
+  neo: neoIcons,
 };
 
 class ZIcon extends HTMLElement {
@@ -25,8 +28,8 @@ class ZIcon extends HTMLElement {
   }
 
   render() {
-    const name = this.getAttribute("name");
-    const type = (this.getAttribute("type") || "core") as keyof typeof SPRITES;
+    const name = this.getAttribute("name") || ""
+    const type = (this.getAttribute("type") || "core") as keyof typeof ICON_PACKS;
     const size = this.getAttribute("size") || "24";
     const color = this.getAttribute("color") || "currentColor";
 
@@ -35,23 +38,17 @@ class ZIcon extends HTMLElement {
     if (renderKey === this.lastRenderedKey) return;
     this.lastRenderedKey = renderKey;
 
-    const spriteUrl = SPRITES[type];
-    if (!spriteUrl || !name) {
+    const iconPack = ICON_PACKS[type];
+    const svgContent = iconPack?.[name] || ""
+
+    if (!svgContent) {
       this.shadow.innerHTML = '';
       return;
     }
 
-    // Use Shadow DOM for better encapsulation and performance
-    this.shadow.innerHTML = `
-      <svg 
-        width="${size}" 
-        height="${size}" 
-        fill="none" 
-        style="color: ${color}; display: block;"
-      >
-        <use href="${spriteUrl}#${name}"></use>
-      </svg>
-    `;
+    // Inject size and color into SVG
+    this.shadow.innerHTML = svgContent
+      .replace('<svg', `<svg width="${size}" height="${size}" style="color: ${color}; display: block;"`);
   }
 }
 
@@ -61,4 +58,3 @@ if (typeof window !== 'undefined' && !customElements.get('z-icon')) {
 }
 
 export default ZIcon;
-

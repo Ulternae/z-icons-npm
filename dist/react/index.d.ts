@@ -21,7 +21,7 @@ interface NeoIconProps extends BaseIconProps {
 type ZIconProps = CoreIconProps | NeoIconProps;
 
 /**
- * ZIcon - React wrapper for the z-icon Web Component
+ * ZIcon - React icon component with full type safety
  *
  * @example
  * ```tsx

@@ -1,0 +1,1 @@
+export declare const neoIcons: Record<string, string>;

@@ -1,0 +1,1 @@
+export const moon = '<svg width="50" height="50" fill="none" viewBox="0 0 50 50"><path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M19.299 5.574a18.7 18.7 0 0 0-4.033 3.076A18.74 18.74 0 0 0 37.14 38.521a18.74 18.74 0 0 0 6.675-5.794c-.186 2.918-1.514 7.985-7.121 10.878A20.935 20.935 0 1 1 19.299 5.574"/></svg>';

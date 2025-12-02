@@ -1,0 +1,1 @@
+export const anchor = '<svg width="50" height="50" fill="none" viewBox="0 0 50 50"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M25 16.684A6.237 6.237 0 1 0 25 4.21a6.237 6.237 0 0 0 0 12.474m0 0V45.79m0 0A20.79 20.79 0 0 1 4.21 25h6.237M25 45.79A20.79 20.79 0 0 0 45.79 25h-6.237"/></svg>';

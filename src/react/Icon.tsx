@@ -1,11 +1,13 @@
-import React, { useEffect, useRef } from 'react';
-// Auto-register the Web Component
-import ZIconWebComponent from '../index';
-// Import generated types
+import React from 'react';
+import { CoreIcons } from '../core/react';
+import { NeoIcons } from '../neo/react';
 import type { CoreIconName } from '../core/types';
 import type { NeoIconName } from '../neo/types';
 
-type IconType = 'core' | 'neo';
+const ICON_COMPONENTS = {
+  core: CoreIcons,
+  neo: NeoIcons,
+};
 
 interface BaseIconProps {
   size?: string | number;
@@ -30,7 +32,7 @@ export type ZIconProps = CoreIconProps | NeoIconProps;
 export type { CoreIconName, NeoIconName };
 
 /**
- * ZIcon - React wrapper for the z-icon Web Component
+ * ZIcon - React icon component with full type safety
  * 
  * @example
  * ```tsx
@@ -44,42 +46,30 @@ export type { CoreIconName, NeoIconName };
 export const ZIcon: React.FC<ZIconProps> = ({
   name,
   type = 'core',
-  size = '24',
+  size = 24,
   color = 'currentColor',
   className,
   style,
 }) => {
-  const containerRef = useRef<HTMLSpanElement>(null);
+  const IconComponent = ICON_COMPONENTS[type]?.[name];
 
-  useEffect(() => {
-    if (!containerRef.current) return;
+  if (!IconComponent) {
+    return null;
+  }
 
-    // Create the Web Component element
-    const iconElement = document.createElement('z-icon');
-    iconElement.setAttribute('name', name);
-    iconElement.setAttribute('type', type);
-    iconElement.setAttribute('size', String(size));
-    iconElement.setAttribute('color', color);
-    if (className) iconElement.setAttribute('class', className);
-    if (style) {
-      Object.assign(iconElement.style, style);
-    }
-
-    // Clear and append
-    containerRef.current.innerHTML = '';
-    containerRef.current.appendChild(iconElement);
-
-    // Cleanup
-    return () => {
-      if (containerRef.current) {
-        containerRef.current.innerHTML = '';
-      }
-    };
-  }, [name, type, size, color, className, style]);
-
-  // Return a span container for SSR compatibility
-  return <span ref={containerRef} style={{ display: 'inline-block', lineHeight: 0 }} />;
+  return (
+    <IconComponent
+      width={size}
+      height={size}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      style={{ color, ...style }}
+      className={className}
+    />
+  );
 };
 
 export default ZIcon;
-
