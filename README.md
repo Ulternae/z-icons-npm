@@ -5,27 +5,38 @@
 
 > Icon library (core & neo) as SVG sprites + Web Component `<z-icon>`
 
-A lightweight and performant icon system using SVG sprites and a custom Web Component. No dependencies in production, optimized SVGs, and simple integration.
+A lightweight and performant icon system using SVG sprites and a custom Web Component. Includes a fully typed React component for React/Next.js projects with autocomplete support.
+
+## 📚 Documentation
+
+- **[React/Next.js Quick Start](./README_REACT.md)** - Get started quickly with React
+- [React/TypeScript Usage Examples](./examples/react-usage.tsx) - Advanced patterns and examples
+- [TypeScript Guide](./TYPESCRIPT.md) - Full TypeScript documentation
+- [Vite Configuration Example](./vite.config.example.js) - Required for Vite projects
+- [Changelog](./CHANGELOG.md) - Version history and changes
 
 ## Features
 
 - 🎯 **Two Icon Packs**: `core` and `neo` collections
 - 🚀 **Web Component**: Native `<z-icon>` custom element
+- ⚛️ **React Component**: Fully typed React/Next.js component
 - 📦 **SVG Sprites**: Optimized with SVGO for minimal bundle size
 - 🎨 **Fully Customizable**: Size, color, and class support
 - 🌙 **Theme Ready**: Works seamlessly with light/dark modes
-- ⚡ **Zero Dependencies**: No runtime dependencies
-- 📝 **TypeScript**: Type definitions included
+- ⚡ **Zero Dependencies**: No runtime dependencies (React as peer dependency for React component)
+- 📝 **TypeScript**: Full type definitions with autocomplete for icon names
 
 ## Installation
 
 ```bash
-npm install z-icons
+npm install @zcorvus/z-icons
 # or
-pnpm add z-icons
+pnpm add @zcorvus/z-icons
 # or
-yarn add z-icons
+yarn add @zcorvus/z-icons
 ```
+
+**For React/Next.js projects**, the package includes a typed React component with full TypeScript support.
 
 ## Usage
 
@@ -77,10 +88,103 @@ icon.setAttribute('color', '#fbbf24');
 document.body.appendChild(icon);
 ```
 
-### React Example
+### React / Next.js Example
 
-```jsx
-import 'z-icons';
+#### Using the React Component (Recommended)
+
+**Step 1:** Import the web component once in your app (e.g., in `_app.tsx`, `layout.tsx`, or `main.tsx`)
+
+```tsx
+// In your app root or layout
+import '@zcorvus/z-icons';
+```
+
+**Step 2:** Use the React component with full TypeScript support
+
+```tsx
+import { Icon } from '@zcorvus/z-icons/react';
+import type { CoreIconName } from '@zcorvus/z-icons/react';
+
+function App() {
+  return (
+    <div>
+      {/* Basic usage - type defaults to 'core' */}
+      <Icon name="sun" />
+      
+      {/* With custom props */}
+      <Icon name="moon" type="core" size={32} color="#fbbf24" />
+      
+      {/* Neo icons */}
+      <Icon name="alarm-clock" type="neo" size="24" className="my-icon" />
+      
+      {/* With inline styles */}
+      <Icon 
+        name="anchor" 
+        size={48} 
+        style={{ cursor: 'pointer' }}
+      />
+    </div>
+  );
+}
+```
+
+#### Next.js App Router
+
+```tsx
+// app/layout.tsx
+import '@zcorvus/z-icons';
+import './globals.css';
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}
+```
+
+```tsx
+// app/page.tsx or any component
+'use client'; // Only if using interactivity
+
+import { Icon } from '@zcorvus/z-icons/react';
+
+export default function Page() {
+  return (
+    <div>
+      <Icon name="sun" size={24} />
+      <Icon name="moon" type="core" color="currentColor" />
+    </div>
+  );
+}
+```
+
+#### Next.js Pages Router
+
+```tsx
+// pages/_app.tsx
+import '@zcorvus/z-icons';
+import type { AppProps } from 'next/app';
+
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+}
+```
+
+```tsx
+// pages/index.tsx or any page
+import { Icon } from '@zcorvus/z-icons/react';
+
+export default function Home() {
+  return <Icon name="sun" size={24} />;
+}
+```
+
+#### Using Web Component Directly
+
+```tsx
+import '@zcorvus/z-icons';
 
 function App() {
   return (
@@ -99,7 +203,7 @@ function App() {
 </template>
 
 <script setup>
-import 'z-icons';
+import '@zcorvus/z-icons';
 </script>
 ```
 
@@ -136,7 +240,20 @@ By excluding the library from optimization, Vite preserves the original module s
 
 ## API
 
-### Attributes
+### React Component Props
+
+```typescript
+interface IconProps {
+  name: CoreIconName | NeoIconName;  // Icon name (autocompleted)
+  type?: 'core' | 'neo';              // Icon pack (default: 'core')
+  size?: string | number;             // Size in pixels (default: '24')
+  color?: string;                     // CSS color (default: 'currentColor')
+  className?: string;                 // Additional CSS classes
+  style?: React.CSSProperties;        // Inline styles
+}
+```
+
+### Web Component Attributes
 
 | Attribute | Type | Default | Description |
 |-----------|------|---------|-------------|

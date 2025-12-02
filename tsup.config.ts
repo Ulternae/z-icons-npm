@@ -3,6 +3,7 @@ import { defineConfig } from "tsup";
 export default defineConfig({
   entry: {
     icon: "src/index.ts",
+    "react/index": "src/react/index.ts",
   },
   format: ["esm"],
   outDir: "dist",
@@ -11,7 +12,7 @@ export default defineConfig({
   splitting: false,
   minify: true,
   sourcemap: false,
-  dts: false,
+  dts: true,
   target: "es2020",
   esbuildOptions(options) {
     options.loader = {
@@ -19,6 +20,6 @@ export default defineConfig({
       ".svg": "text",
     };
   },
-  external: [],
+  external: ["react", "react-dom"],
   publicDir: false,
 });

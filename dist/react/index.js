@@ -1,0 +1,1 @@
+import a,{useRef as p}from"react";var m=({name:e,type:o="core",size:r="24",color:n="currentColor",className:c,style:t})=>{let s=p(null);return a.createElement("z-icon",{ref:s,name:e,type:o,size:String(r),color:n,className:c,style:t})};export{m as Icon};
