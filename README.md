@@ -103,6 +103,37 @@ import 'z-icons';
 </script>
 ```
 
+### ⚠️ Vite Configuration (Important!)
+
+If you're using **Vite**, you **must** exclude this library from dependency optimization:
+
+```javascript
+// vite.config.js (or vite.config.ts)
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  optimizeDeps: {
+    exclude: ['@zcorvus/z-icons']
+  }
+});
+```
+
+See `vite.config.example.js` in this repository for a complete example.
+
+**Why is this needed?**
+
+The library uses `import.meta.url` to dynamically resolve SVG sprite paths at runtime. When Vite optimizes dependencies (pre-bundling), it:
+1. Rewrites module imports and paths
+2. Breaks the `import.meta.url` context
+3. Causes 404 errors when loading sprite files
+
+By excluding the library from optimization, Vite preserves the original module structure and allows proper asset resolution.
+
+**Symptoms of missing this configuration:**
+- Icons don't render
+- Console errors about missing SVG files
+- 404 errors for `core-sprite.svg` or `neo-sprite.svg`
+
 ## API
 
 ### Attributes
