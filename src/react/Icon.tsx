@@ -9,26 +9,20 @@ const ICON_COMPONENTS = {
   neo: NeoIcons,
 };
 
-interface BaseIconProps {
+// Dado que core y neo tienen los mismos nombres de iconos, usamos un solo tipo
+export type IconName = CoreIconName;
+export type IconType = 'core' | 'neo';
+
+export interface ZIconProps {
+  name: IconName;
+  type?: IconType;
   size?: string | number;
   color?: string;
   className?: string;
   style?: React.CSSProperties;
 }
 
-interface CoreIconProps extends BaseIconProps {
-  name: CoreIconName;
-  type?: 'core';
-}
-
-interface NeoIconProps extends BaseIconProps {
-  name: NeoIconName;
-  type: 'neo';
-}
-
-export type ZIconProps = CoreIconProps | NeoIconProps;
-
-// Re-export types for convenience
+// Re-export para compatibilidad
 export type { CoreIconName, NeoIconName };
 
 /**

@@ -4,21 +4,16 @@ type CoreIconName = 'address-card' | 'alarm-clock' | 'anchor' | 'language' | 'mo
 
 type NeoIconName = 'address-card' | 'alarm-clock' | 'anchor' | 'language' | 'moon' | 'sun';
 
-interface BaseIconProps {
+type IconName = CoreIconName;
+type IconType = 'core' | 'neo';
+interface ZIconProps {
+    name: IconName;
+    type?: IconType;
     size?: string | number;
     color?: string;
     className?: string;
     style?: React.CSSProperties;
 }
-interface CoreIconProps extends BaseIconProps {
-    name: CoreIconName;
-    type?: 'core';
-}
-interface NeoIconProps extends BaseIconProps {
-    name: NeoIconName;
-    type: 'neo';
-}
-type ZIconProps = CoreIconProps | NeoIconProps;
 
 /**
  * ZIcon - React icon component with full type safety
