@@ -5,6 +5,7 @@ export type NeoIconName =
   | 'address-card'
   | 'alarm-clock'
   | 'anchor'
+  | 'language'
   | 'moon'
   | 'sun';
 
@@ -12,6 +13,7 @@ export const neoIcons: readonly string[] = [
   'address-card',
   'alarm-clock',
   'anchor',
+  'language',
   'moon',
   'sun'
 ];

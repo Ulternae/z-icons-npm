@@ -5,6 +5,7 @@ export type CoreIconName =
   | 'address-card'
   | 'alarm-clock'
   | 'anchor'
+  | 'language'
   | 'moon'
   | 'sun';
 
@@ -12,6 +13,7 @@ export const coreIcons: readonly string[] = [
   'address-card',
   'alarm-clock',
   'anchor',
+  'language',
   'moon',
   'sun'
 ];

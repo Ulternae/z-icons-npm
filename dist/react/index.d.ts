@@ -1,8 +1,8 @@
 import React from 'react';
 
-type CoreIconName = 'address-card' | 'alarm-clock' | 'anchor' | 'moon' | 'sun';
+type CoreIconName = 'address-card' | 'alarm-clock' | 'anchor' | 'language' | 'moon' | 'sun';
 
-type NeoIconName = 'address-card' | 'alarm-clock' | 'anchor' | 'moon' | 'sun';
+type NeoIconName = 'address-card' | 'alarm-clock' | 'anchor' | 'language' | 'moon' | 'sun';
 
 interface BaseIconProps {
     size?: string | number;
