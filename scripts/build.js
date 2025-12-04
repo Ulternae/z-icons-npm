@@ -6,7 +6,7 @@ import { svgoConfig } from './svgo.config.js'
 const CONFIG = {
   srcDir: 'src',
   distDir: 'dist',
-  packs: ['core', 'neo'],
+  packs: ['core', 'neo', "mina"],
   svgoConfig: svgoConfig,
 }
 

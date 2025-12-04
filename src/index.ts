@@ -1,9 +1,12 @@
 import { coreIcons } from './core/icons';
 import { neoIcons } from './neo/icons';
+import { minaIcons } from './mina/icons';
+
 
 const ICON_PACKS = {
   core: coreIcons,
   neo: neoIcons,
+  mina: minaIcons,
 };
 
 class ZIconElement extends HTMLElement {

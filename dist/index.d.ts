@@ -1,8 +1,9 @@
 import type { CoreIconName } from './core/types';
 import type { NeoIconName } from './neo/types';
+import type { MinaIconName } from './mina/types';
 
-export type IconPack = 'core' | 'neo';
-export type IconName = CoreIconName | NeoIconName;
+export type IconPack = 'core' | 'neo' | 'mina';
+export type IconName = CoreIconName | NeoIconName | MinaIconName;
 
 export default class ZIconElement extends HTMLElement {
   /**

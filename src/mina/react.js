@@ -1,0 +1,22 @@
+import React from 'react';
+
+export const AddressCard = (props) => React.createElement('svg', { viewBox: '0 0 24 24', fill: 'none', ...props }, React.createElement('path', {"d":"M16 10h2m-2 4h2M6.17 15a3 3 0 0 1 5.66 0"}), React.createElement('circle', {"cx":"9","cy":"11","r":"2"}), React.createElement('rect', {"width":"20","height":"14","x":"2","y":"5","rx":"2"}));
+
+export const AlarmClock = (props) => React.createElement('svg', { viewBox: '0 0 24 24', fill: 'none', ...props }, React.createElement('path', {"d":"M3 5.231 6.15 3M21 5.231 17.85 3M20 13a8 8 0 1 1-16 0 8 8 0 0 1 16 0"}), React.createElement('path', {"d":"M12 8.5v5l3 2"}));
+
+export const Anchor = (props) => React.createElement('svg', { viewBox: '0 0 24 24', fill: 'none', ...props }, React.createElement('path', {"fill":"none","stroke":"currentColor","strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":"1.5","d":"M5 12H3a9 9 0 1 0 18 0h-2m-7-5v14m0-14a2 2 0 1 0 0-4 2 2 0 0 0 0 4"}));
+
+export const Language = (props) => React.createElement('svg', { viewBox: '0 0 24 24', fill: 'none', ...props }, React.createElement('path', {"d":"m5 8 6 6m-7 0 6-6 2-3M2 5h12M7 2h1m14 20-5-10-5 10m2-4h6"}));
+
+export const Moon = (props) => React.createElement('svg', { viewBox: '0 0 24 24', fill: 'none', ...props }, React.createElement('path', {"fill":"none","stroke":"currentColor","strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":"1.5","d":"M21 12.808c-.5 5.347-5.849 9.14-11.107 7.983C-.078 18.6 1.15 3.909 11.11 3 6.395 9.296 14.619 17.462 21 12.808"}));
+
+export const Sun = (props) => React.createElement('svg', { viewBox: '0 0 24 24', fill: 'none', ...props }, React.createElement('path', {"fill":"none","stroke":"currentColor","strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":"1.5","d":"M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0m-4-9v2m0 14.004v2M5 12H3m18 0h-2m0-7-2 2M5 5l2 2m0 10-2 2m14 0-2-2"}));
+
+export const MinaIcons = {
+  'address-card': AddressCard,
+  'alarm-clock': AlarmClock,
+  'anchor': Anchor,
+  'language': Language,
+  'moon': Moon,
+  'sun': Sun
+};
