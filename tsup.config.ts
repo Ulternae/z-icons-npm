@@ -8,6 +8,8 @@ export default defineConfig({
     "core/react": "src/core/react.js",
     "neo/icons": "src/neo/icons.js",
     "neo/react": "src/neo/react.js",
+    "mina/icons": "src/mina/icons.js",
+    "mina/react": "src/mina/react.js",
   },
   format: ["esm"],
   outDir: "dist",
