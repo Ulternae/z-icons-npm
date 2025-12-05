@@ -1,0 +1,1 @@
+export declare const CenterFocus: string;

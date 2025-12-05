@@ -1,0 +1,1 @@
+export declare const SquareKanban: string;

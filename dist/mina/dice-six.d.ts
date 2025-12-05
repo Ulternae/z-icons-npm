@@ -1,0 +1,1 @@
+export declare const DiceSix: string;

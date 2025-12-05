@@ -1,1 +1,1 @@
-export declare const alarmClock: string;
+export declare const AlarmClock: string;

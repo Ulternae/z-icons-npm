@@ -1,1 +1,1 @@
-export declare const sun: string;
+export declare const Sun: string;

@@ -1,0 +1,1 @@
+export declare const PauseDiamond: string;

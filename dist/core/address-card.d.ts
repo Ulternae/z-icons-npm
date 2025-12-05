@@ -1,1 +1,1 @@
-export declare const addressCard: string;
+export declare const AddressCard: string;

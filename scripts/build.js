@@ -24,6 +24,17 @@ function capitalize(s) {
 }
 
 /**
+ * Convert kebab-case to PascalCase (handles numbers)
+ * Examples: flower-2 -> Flower2, clock-ten -> ClockTen
+ */
+function toPascalCase(str) {
+  return str
+    .split('-')
+    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+    .join('');
+}
+
+/**
  * Convert SVG string to React.createElement calls
  */
 function svgToReactElement(svgContent, iconId) {
@@ -70,7 +81,7 @@ function svgToReactElement(svgContent, iconId) {
     return `React.createElement('${el.tagName}', ${attrsStr})`;
   }).join(',\n    ');
 
-  return `export const ${capitalize(iconId).replace(/-([a-z])/g, (g) => g[1].toUpperCase())} = (props) => React.createElement('svg', { viewBox: '${viewBox}', fill: 'none', ...props }, ${elementsCode});`;
+  return `export const ${toPascalCase(iconId)} = (props) => React.createElement('svg', { viewBox: '${viewBox}', fill: 'none', ...props }, ${elementsCode});`;
 }
 
 /**
@@ -122,9 +133,9 @@ function processPack(packName) {
     reactComponents.push(reactComponent);
 
     // Write individual string export to dist (for direct usage if needed)
-    const individualStringContent = `export const ${id.replace(/-([a-z])/g, (g) => g[1].toUpperCase())} = '${svgContent.replace(/'/g, "\\'")}';`;
+    const individualStringContent = `export const ${toPascalCase(id)} = '${svgContent.replace(/'/g, "\\'")}'`;
     fs.writeFileSync(path.join(distPath, `${id}.js`), individualStringContent);
-    fs.writeFileSync(path.join(distPath, `${id}.d.ts`), `export declare const ${id.replace(/-([a-z])/g, (g) => g[1].toUpperCase())}: string;`);
+    fs.writeFileSync(path.join(distPath, `${id}.d.ts`), `export declare const ${toPascalCase(id)}: string;`);
   })
 
   // 1. Generate string dictionary (for Web Components) in src/
@@ -136,8 +147,7 @@ function processPack(packName) {
 
   // 2. Generate React component dictionary in src/ with named exports
   const reactDictContent = `import React from 'react';\n\n${iconIds.map(id => {
-    const componentName = id.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
-    const componentNameCap = componentName.charAt(0).toUpperCase() + componentName.slice(1);
+    const componentNameCap = toPascalCase(id);
     const svgContent = svgStrings[id];
     const viewBoxMatch = svgContent.match(/viewBox=["']([^"']+)["']/);
     const viewBox = viewBoxMatch ? viewBoxMatch[1] : '0 0 24 24';
@@ -179,16 +189,14 @@ function processPack(packName) {
 
     return `export const ${componentNameCap} = (props) => React.createElement('svg', { viewBox: '${viewBox}', fill: 'none', ...props }, ${elementsCode});`;
   }).join('\n\n')}\n\nexport const ${capitalize(packName)}Icons = {\n${iconIds.map(id => {
-    const componentName = id.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
-    const componentNameCap = componentName.charAt(0).toUpperCase() + componentName.slice(1);
+    const componentNameCap = toPascalCase(id);
     return `  '${id}': ${componentNameCap}`;
   }).join(',\n')}\n};`;
 
   fs.writeFileSync(path.join(srcGenPath, 'react.js'), reactDictContent);
 
   const reactDictTypes = `import React from 'react';\n\n${iconIds.map(id => {
-    const componentName = id.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
-    const componentNameCap = componentName.charAt(0).toUpperCase() + componentName.slice(1);
+    const componentNameCap = toPascalCase(id);
     return `export declare const ${componentNameCap}: React.FC<React.SVGProps<SVGSVGElement>>;`;
   }).join('\n')}\n\nexport declare const ${capitalize(packName)}Icons: Record<string, React.FC<React.SVGProps<SVGSVGElement>>>;`;
   fs.writeFileSync(path.join(srcGenPath, 'react.d.ts'), reactDictTypes);

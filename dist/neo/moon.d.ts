@@ -1,1 +1,1 @@
-export declare const moon: string;
+export declare const Moon: string;

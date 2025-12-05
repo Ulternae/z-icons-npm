@@ -1,1 +1,1 @@
-export declare const anchor: string;
+export declare const Anchor: string;
