@@ -272,7 +272,13 @@ export type { CoreIconName } from '../core/types.ts';
 export type { NeoIconName } from '../neo/types.ts';
 export type { MinaIconName } from '../mina/types.ts';
 
+// Import types to use them locally
+import type { CoreIconName } from '../core/types.ts';
+import type { NeoIconName } from '../neo/types.ts';
+import type { MinaIconName } from '../mina/types.ts';
+
 // Combined icon pack type
+export type AllIconNames = CoreIconName | NeoIconName | MinaIconName;
 export type IconPack = 'core' | 'neo' | 'mina';
 `;
 
