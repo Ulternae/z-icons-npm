@@ -3,6 +3,7 @@ import { defineConfig } from "tsup";
 export default defineConfig({
   entry: {
     icon: "src/index.ts",
+    "icons/index": "src/icons/index.ts",
     "react/index": "src/react/index.ts",
     "core/icons": "src/core/icons.js",
     "core/react": "src/core/react.js",
