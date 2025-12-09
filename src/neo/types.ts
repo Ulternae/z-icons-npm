@@ -9,7 +9,7 @@ export type NeoIconName =
   | 'moon'
   | 'sun';
 
-export const neoIcons: readonly string[] = [
+export const neoIconNames: readonly string[] = [
   'address-card',
   'alarm-clock',
   'anchor',

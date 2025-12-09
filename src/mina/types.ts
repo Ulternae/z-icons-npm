@@ -1281,7 +1281,7 @@ export type MinaIconName =
   | 'zero-waves'
   | 'zero';
 
-export const minaIcons: readonly string[] = [
+export const minaIconNames: readonly string[] = [
   'a-arrow-down',
   'a-arrow-up',
   'academic-hat',

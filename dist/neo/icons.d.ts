@@ -1,3 +1,4 @@
 declare const neoIcons: Record<string, string>;
+declare const neoIconNames: readonly string[];
 
-export { neoIcons };
+export { neoIconNames, neoIcons };

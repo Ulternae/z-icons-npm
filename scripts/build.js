@@ -10,9 +10,7 @@ const CONFIG = {
   svgoConfig: svgoConfig,
 }
 
-/**
- * Ensure directory exists
- */
+//Ensure directory exists
 function ensureDir(dir) {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
@@ -23,10 +21,9 @@ function capitalize(s) {
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
-/**
- * Convert kebab-case to PascalCase (handles numbers)
- * Examples: flower-2 -> Flower2, clock-ten -> ClockTen
- */
+//Convert kebab-case to PascalCase (handles numbers)
+//Examples: flower-2 -> Flower2, clock-ten -> ClockTen
+
 function toPascalCase(str) {
   return str
     .split('-')
@@ -34,9 +31,7 @@ function toPascalCase(str) {
     .join('');
 }
 
-/**
- * Convert SVG string to React.createElement calls
- */
+//Convert SVG string to React.createElement calls
 function svgToReactElement(svgContent, iconId) {
   // Extract viewBox
   const viewBoxMatch = svgContent.match(/viewBox=["']([^"']+)["']/);
@@ -135,14 +130,13 @@ function processPack(packName) {
     // Write individual string export to dist (for direct usage if needed)
     const individualStringContent = `export const ${toPascalCase(id)} = '${svgContent.replace(/'/g, "\\'")}'`;
     fs.writeFileSync(path.join(distPath, `${id}.js`), individualStringContent);
-    fs.writeFileSync(path.join(distPath, `${id}.d.ts`), `export declare const ${toPascalCase(id)}: string;`);
-  })
+   })
 
   // 1. Generate string dictionary (for Web Components) in src/
-  const stringDictContent = `export const ${packName}Icons = ${JSON.stringify(svgStrings, null, 2)};`;
+  const stringDictContent = `export const ${packName}Icons = ${JSON.stringify(svgStrings, null, 2)};\n\nexport const ${packName}IconNames = [\n${iconIds.map(id => `  '${id}'`).join(',\n')}\n];`;
   fs.writeFileSync(path.join(srcGenPath, 'icons.js'), stringDictContent);
 
-  const stringDictTypes = `export declare const ${packName}Icons: Record<string, string>;`;
+  const stringDictTypes = `export declare const ${packName}Icons: Record<string, string>;\nexport declare const ${packName}IconNames: readonly string[];`;
   fs.writeFileSync(path.join(srcGenPath, 'icons.d.ts'), stringDictTypes);
 
   // 2. Generate React component dictionary in src/ with named exports
