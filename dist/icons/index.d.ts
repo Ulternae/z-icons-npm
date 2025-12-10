@@ -1,4 +1,4 @@
-export { C as CoreIconName, M as MinaIconName, N as NeoIconName } from '../types-trFXAMOM.js';
+import { C as CoreIconName, N as NeoIconName, M as MinaIconName } from '../types-trFXAMOM.js';
 
 declare const coreIcons: Record<string, string>;
 declare const coreIconNames: readonly string[];
@@ -9,6 +9,7 @@ declare const neoIconNames: readonly string[];
 declare const minaIcons: Record<string, string>;
 declare const minaIconNames: readonly string[];
 
+type AllIconNames = CoreIconName | NeoIconName | MinaIconName;
 type IconPack = 'core' | 'neo' | 'mina';
 
-export { type IconPack, coreIconNames, coreIcons, minaIconNames, minaIcons, neoIconNames, neoIcons };
+export { type AllIconNames, CoreIconName, type IconPack, MinaIconName, NeoIconName, coreIconNames, coreIcons, minaIconNames, minaIcons, neoIconNames, neoIcons };

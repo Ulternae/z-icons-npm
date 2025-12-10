@@ -56,7 +56,7 @@ export const ZIcon: React.FC<ZIconProps> = ({
   name,
   type = 'core',
   size = 24,
-  color = 'currentColor',
+  color,
   className,
   style,
 }) => {
@@ -65,6 +65,8 @@ export const ZIcon: React.FC<ZIconProps> = ({
   if (!IconComponent) {
     return null;
   }
+
+  const colorStyle = color ? { color } : {};
 
   return (
     <IconComponent
@@ -75,7 +77,7 @@ export const ZIcon: React.FC<ZIconProps> = ({
       strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
-      style={{ color, ...style }}
+      style={{ ...colorStyle, ...style }}
       className={className}
     />
   );
