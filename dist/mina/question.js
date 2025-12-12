@@ -1,1 +1,0 @@
-export const Question = '<svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 21v-.5m0-3c0-5.1 5-3.825 5-8.924 0-6.768-10-6.768-10 0"/></svg>'

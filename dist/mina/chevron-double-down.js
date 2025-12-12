@@ -1,1 +1,0 @@
-export const ChevronDoubleDown = '<svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"><path d="m6 6 6 6 6-6M6 12l6 6 6-6"/></svg>'

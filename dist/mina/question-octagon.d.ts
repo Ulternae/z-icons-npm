@@ -1,1 +1,0 @@
-export declare const QuestionOctagon: string;

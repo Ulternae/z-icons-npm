@@ -1,1 +1,0 @@
-export declare const OneOctagon: string;

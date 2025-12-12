@@ -1,1 +1,0 @@
-export const LetterK = '<svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 7v5m0 0v5m0-5h.625m0 0 5.625 5m-5.625-5 5.625-5"/></svg>'

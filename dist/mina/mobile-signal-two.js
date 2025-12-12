@@ -1,1 +1,0 @@
-export const MobileSignalTwo = '<svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 21v-1m4.5 1v-5"/></svg>'
