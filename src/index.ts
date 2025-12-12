@@ -19,7 +19,7 @@ class ZIconElement extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["name", "type", "size", "color"];
+    return ["name", "type", "size", "color", "variant"];
   }
 
   attributeChangedCallback() {
@@ -33,16 +33,18 @@ class ZIconElement extends HTMLElement {
   render() {
     const name = this.getAttribute("name") || ""
     const type = (this.getAttribute("type") || "core") as keyof typeof ICON_PACKS;
+    const variant = this.getAttribute("variant") || "light";
     const size = this.getAttribute("size") || "24";
     const color = this.getAttribute("color") || "currentColor";
 
     // Optimization: skip re-render if nothing changed
-    const renderKey = `${name}-${type}-${size}-${color}`;
+    const renderKey = `${name}-${type}-${variant}-${size}-${color}`;
     if (renderKey === this.lastRenderedKey) return;
     this.lastRenderedKey = renderKey;
 
     const iconPack = ICON_PACKS[type];
-    const svgContent = iconPack?.[name] || ""
+    const variantPack = (iconPack?.[variant] as unknown) as Record<string, string> | undefined;
+    const svgContent = variantPack?.[name] || ""
 
     if (!svgContent) {
       this.shadow.innerHTML = '';

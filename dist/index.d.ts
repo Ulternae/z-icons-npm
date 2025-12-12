@@ -4,6 +4,7 @@ import type { MinaIconName } from './mina/types';
 
 export type IconPack = 'core' | 'neo' | 'mina';
 export type IconName = CoreIconName | NeoIconName | MinaIconName;
+export type IconVariant = 'light' | 'solid' | 'regular' | 'thin';
 
 export default class ZIconElement extends HTMLElement {
   /**
@@ -41,6 +42,7 @@ declare global {
       'z-icon': {
         name?: IconName;
         type?: IconPack;
+        variant?: IconVariant;
         size?: string | number;
         color?: string;
         class?: string;

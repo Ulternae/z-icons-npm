@@ -60,7 +60,8 @@ export const ZIcon: React.FC<ZIconProps> = ({
   className,
   style,
 }) => {
-  const IconComponent = ICON_COMPONENTS[type]?.[name];
+  const iconSet = ICON_COMPONENTS[type];
+  const IconComponent = iconSet?.['light']?.[name] as React.FC<React.SVGProps<SVGSVGElement>> | undefined;
 
   if (!IconComponent) {
     return null;

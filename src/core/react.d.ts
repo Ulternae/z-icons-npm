@@ -1,10 +1,10 @@
 import React from 'react';
 
-export declare const AddressCard: React.FC<React.SVGProps<SVGSVGElement>>;
-export declare const AlarmClock: React.FC<React.SVGProps<SVGSVGElement>>;
-export declare const Anchor: React.FC<React.SVGProps<SVGSVGElement>>;
-export declare const Language: React.FC<React.SVGProps<SVGSVGElement>>;
-export declare const Moon: React.FC<React.SVGProps<SVGSVGElement>>;
-export declare const Sun: React.FC<React.SVGProps<SVGSVGElement>>;
+export declare const AddressCardLight: React.FC<React.SVGProps<SVGSVGElement>>;
+export declare const AlarmClockLight: React.FC<React.SVGProps<SVGSVGElement>>;
+export declare const AnchorLight: React.FC<React.SVGProps<SVGSVGElement>>;
+export declare const LanguageLight: React.FC<React.SVGProps<SVGSVGElement>>;
+export declare const MoonLight: React.FC<React.SVGProps<SVGSVGElement>>;
+export declare const SunLight: React.FC<React.SVGProps<SVGSVGElement>>;
 
-export declare const CoreIcons: Record<string, React.FC<React.SVGProps<SVGSVGElement>>>;
+export declare const CoreIcons: Record<string, Record<string, React.FC<React.SVGProps<SVGSVGElement>>>>;

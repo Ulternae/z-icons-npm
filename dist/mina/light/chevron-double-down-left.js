@@ -1,0 +1,1 @@
+export const ChevronDoubleDownLeft = '<svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6.257 9.257v8.486h8.486"/><path d="M10.257 5.257v8.486h8.486"/></svg>'

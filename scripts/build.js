@@ -80,7 +80,7 @@ function svgToReactElement(svgContent, iconId) {
 }
 
 /**
- * Process a single icon pack
+ * Process a single icon pack with variant support
  */
 function processPack(packName) {
   const srcPath = path.join(CONFIG.srcDir, packName, 'icons');
@@ -97,111 +97,161 @@ function processPack(packName) {
   ensureDir(distPath);
   ensureDir(srcGenPath);
 
-  const files = fs.readdirSync(srcPath).filter((file) => file.endsWith('.svg'));
-  const iconIds = [];
-  const svgStrings = {};
-  const reactComponents = [];
+  // Scan for variant subdirectories (light, solid, regular, thin)
+  const variants = ['light', 'solid', 'regular', 'thin'];
+  const variantData = {};
+  const allIconIds = new Set();
+  let totalIconCount = 0;
 
-  files.forEach((file) => {
-    const filePath = path.join(srcPath, file)
-    const content = fs.readFileSync(filePath, 'utf8');
-    const id = path.basename(file, '.svg').toLowerCase().replace(/[_\s]+/g, '-');
+  variants.forEach(variant => {
+    const variantPath = path.join(srcPath, variant);
 
-    const result = optimize(content, {
-      path: filePath,
-      ...CONFIG.svgoConfig,
-    });
-
-    if (result.error) {
-      console.error(`   ❌ Error optimizing ${file}:`, result.error);
+    if (!fs.existsSync(variantPath)) {
+      // Variant doesn't exist, skip it
       return;
     }
 
-    fs.writeFileSync(filePath, result.data, 'utf8');
-    const svgContent = result.data;
+    const files = fs.readdirSync(variantPath).filter((file) => file.endsWith('.svg'));
+    if (files.length === 0) return;
 
-    iconIds.push(id);
-    svgStrings[id] = svgContent;
+    const svgStrings = {};
+    const reactComponents = [];
 
-    // Generate React component
-    const reactComponent = svgToReactElement(svgContent, id);
-    reactComponents.push(reactComponent);
+    files.forEach((file) => {
+      const filePath = path.join(variantPath, file);
+      const content = fs.readFileSync(filePath, 'utf8');
+      const id = path.basename(file, '.svg').toLowerCase().replace(/[_\s]+/g, '-');
 
-    // Write individual string export to dist (for direct usage if needed)
-    const individualStringContent = `export const ${toPascalCase(id)} = '${svgContent.replace(/'/g, "\\'")}'`;
-    fs.writeFileSync(path.join(distPath, `${id}.js`), individualStringContent);
-   })
+      const result = optimize(content, {
+        path: filePath,
+        ...CONFIG.svgoConfig,
+      });
 
-  // 1. Generate string dictionary (for Web Components) in src/
-  const stringDictContent = `export const ${packName}Icons = ${JSON.stringify(svgStrings, null, 2)};\n\nexport const ${packName}IconNames = [\n${iconIds.map(id => `  '${id}'`).join(',\n')}\n];`;
-  fs.writeFileSync(path.join(srcGenPath, 'icons.js'), stringDictContent);
-
-  const stringDictTypes = `export declare const ${packName}Icons: Record<string, string>;\nexport declare const ${packName}IconNames: readonly string[];`;
-  fs.writeFileSync(path.join(srcGenPath, 'icons.d.ts'), stringDictTypes);
-
-  // 2. Generate React component dictionary in src/ with named exports
-  const reactDictContent = `import React from 'react';\n\n${iconIds.map(id => {
-    const componentNameCap = toPascalCase(id);
-    const svgContent = svgStrings[id];
-    const viewBoxMatch = svgContent.match(/viewBox=["']([^"']+)["']/);
-    const viewBox = viewBoxMatch ? viewBoxMatch[1] : '0 0 24 24';
-
-    // Extract paths and other elements
-    const innerMatch = svgContent.match(/<svg[^>]*>(.*?)<\/svg>/s);
-    const innerContent = innerMatch ? innerMatch[1].trim() : '';
-
-    // Simple approach: convert inner SVG to React elements
-    const elements = [];
-    const elementRegex = /<(\w+)([^>]*)\/>/g;
-    let match;
-
-    while ((match = elementRegex.exec(innerContent)) !== null) {
-      const tagName = match[1];
-      const attrs = match[2].trim();
-      elements.push({ tagName, attrs });
-    }
-
-    const elementsCode = elements.map(el => {
-      const attrsObj = {};
-      const attrRegex = /(\w+(?:-\w+)*)=["']([^"']*)["']/g;
-      let attrMatch;
-
-      while ((attrMatch = attrRegex.exec(el.attrs)) !== null) {
-        let key = attrMatch[1];
-        const value = attrMatch[2];
-
-        // Convert to camelCase
-        if (key.includes('-')) {
-          key = key.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
-        }
-
-        attrsObj[key] = value;
+      if (result.error) {
+        console.error(`   ❌ Error optimizing ${file}:`, result.error);
+        return;
       }
 
-      return `React.createElement('${el.tagName}', ${JSON.stringify(attrsObj)})`;
-    }).join(', ');
+      fs.writeFileSync(filePath, result.data, 'utf8');
+      const svgContent = result.data;
 
-    return `export const ${componentNameCap} = (props) => React.createElement('svg', { viewBox: '${viewBox}', fill: 'none', ...props }, ${elementsCode});`;
-  }).join('\n\n')}\n\nexport const ${capitalize(packName)}Icons = {\n${iconIds.map(id => {
-    const componentNameCap = toPascalCase(id);
-    return `  '${id}': ${componentNameCap}`; 
+      allIconIds.add(id);
+      svgStrings[id] = svgContent;
+
+      // Generate React component
+      const reactComponent = svgToReactElement(svgContent, id);
+      reactComponents.push(reactComponent);
+
+      // Write individual string export to dist (for direct usage if needed)
+      const individualStringContent = `export const ${toPascalCase(id)} = '${svgContent.replace(/'/g, "\\'")}'`;
+      const variantDistPath = path.join(distPath, variant);
+      ensureDir(variantDistPath);
+      fs.writeFileSync(path.join(variantDistPath, `${id}.js`), individualStringContent);
+    });
+
+    variantData[variant] = {
+      svgStrings,
+      reactComponents,
+      iconIds: Object.keys(svgStrings)
+    };
+
+    totalIconCount += files.length;
+  });
+
+  // 1. Generate string dictionary (for Web Components) in src/ with variant structure
+  const stringDictContent = `export const ${packName}Icons = ${JSON.stringify(
+    Object.fromEntries(
+      Object.entries(variantData).map(([variant, data]) => [variant, data.svgStrings])
+    ),
+    null,
+    2
+  )};\n\nexport const ${packName}IconNames = [\n${Array.from(allIconIds).map(id => `  '${id}'`).join(',\n')}\n];`;
+  fs.writeFileSync(path.join(srcGenPath, 'icons.js'), stringDictContent);
+
+  const stringDictTypes = `export declare const ${packName}Icons: Record<string, Record<string, string>>;\nexport declare const ${packName}IconNames: readonly string[];`;
+  fs.writeFileSync(path.join(srcGenPath, 'icons.d.ts'), stringDictTypes);
+
+  // 2. Generate React component dictionary in src/ with named exports and variant structure
+  const allReactExports = [];
+  const variantReactObjects = {};
+
+  Object.entries(variantData).forEach(([variant, data]) => {
+    const { svgStrings, iconIds } = data;
+
+    iconIds.forEach(id => {
+      const componentNameCap = toPascalCase(id);
+      const variantSuffix = capitalize(variant);
+      const componentName = `${componentNameCap}${variantSuffix}`;
+      const svgContent = svgStrings[id];
+      const viewBoxMatch = svgContent.match(/viewBox=["']([^"']+)["']/);
+      const viewBox = viewBoxMatch ? viewBoxMatch[1] : '0 0 24 24';
+
+      // Extract paths and other elements
+      const innerMatch = svgContent.match(/<svg[^>]*>(.*?)<\/svg>/s);
+      const innerContent = innerMatch ? innerMatch[1].trim() : '';
+
+      // Simple approach: convert inner SVG to React elements
+      const elements = [];
+      const elementRegex = /<(\w+)([^>]*)\/>/g;
+      let match;
+
+      while ((match = elementRegex.exec(innerContent)) !== null) {
+        const tagName = match[1];
+        const attrs = match[2].trim();
+        elements.push({ tagName, attrs });
+      }
+
+      const elementsCode = elements.map(el => {
+        const attrsObj = {};
+        const attrRegex = /(\w+(?:-\w+)*)=["']([^"']*)["']/g;
+        let attrMatch;
+
+        while ((attrMatch = attrRegex.exec(el.attrs)) !== null) {
+          let key = attrMatch[1];
+          const value = attrMatch[2];
+
+          // Convert to camelCase
+          if (key.includes('-')) {
+            key = key.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+          }
+
+          attrsObj[key] = value;
+        }
+
+        return `React.createElement('${el.tagName}', ${JSON.stringify(attrsObj)})`;
+      }).join(', ');
+
+      allReactExports.push(`export const ${componentName} = (props) => React.createElement('svg', { viewBox: '${viewBox}', fill: 'none', ...props }, ${elementsCode});`);
+
+      if (!variantReactObjects[variant]) {
+        variantReactObjects[variant] = [];
+      }
+      variantReactObjects[variant].push({ id, componentName });
+    });
+  });
+
+  const reactDictContent = `import React from 'react';\n\n${allReactExports.join('\n\n')}\n\nexport const ${capitalize(packName)}Icons = {\n${Object.entries(variantReactObjects).map(([variant, icons]) => {
+    return `  ${variant}: {\n${icons.map(({ id, componentName }) => `    '${id}': ${componentName}`).join(',\n')}\n  }`;
   }).join(',\n')}\n};`;
 
   fs.writeFileSync(path.join(srcGenPath, 'react.js'), reactDictContent);
 
-  const reactDictTypes = `import React from 'react';\n\n${iconIds.map(id => {
-    const componentNameCap = toPascalCase(id);
-    return `export declare const ${componentNameCap}: React.FC<React.SVGProps<SVGSVGElement>>;`;
-  }).join('\n')}\n\nexport declare const ${capitalize(packName)}Icons: Record<string, React.FC<React.SVGProps<SVGSVGElement>>>;`;
+  const reactDictTypes = `import React from 'react';\n\n${allReactExports.map(exp => {
+    const match = exp.match(/export const (\w+)/);
+    if (match) {
+      return `export declare const ${match[1]}: React.FC<React.SVGProps<SVGSVGElement>>;`;
+    }
+    return '';
+  }).join('\n')}\n\nexport declare const ${capitalize(packName)}Icons: Record<string, Record<string, React.FC<React.SVGProps<SVGSVGElement>>>>;`;
   fs.writeFileSync(path.join(srcGenPath, 'react.d.ts'), reactDictTypes);
 
   // 3. Generate types for icon names
   const srcTypesPath = path.join(CONFIG.srcDir, packName);
   ensureDir(srcTypesPath);
-  const srcTypeContent = `// Auto-generated types - DO NOT EDIT MANUALLY\n// This file is generated by scripts/build.js\n\nexport type ${capitalize(packName)}IconName = \n${iconIds.map(id => `  | '${id}'`).join('\n')};\n`;
+  const srcTypeContent = `// Auto-generated types - DO NOT EDIT MANUALLY\n// This file is generated by scripts/build.js\n\nexport type ${capitalize(packName)}IconName = \n${Array.from(allIconIds).map(id => `  | '${id}'`).join('\n')};\n`;
   fs.writeFileSync(path.join(srcTypesPath, 'types.ts'), srcTypeContent);
 
-  console.log(`   ✅ Pack processed: | ${capitalize(packName).padStart(5, " ")}  |  ${files.length} icons`);
+  console.log(`   ✅ Pack processed: | ${capitalize(packName).padStart(5, " ")}  |  ${totalIconCount} icons across ${Object.keys(variantData).length} variant(s)`);
 }
 
 function types() {
@@ -213,6 +263,7 @@ function types() {
 
 export type IconPack = ${iconPackUnion};
 export type IconName = ${iconNameUnion};
+export type IconVariant = 'light' | 'solid' | 'regular' | 'thin';
 
 export default class ZIconElement extends HTMLElement {
   /**
@@ -250,6 +301,7 @@ declare global {
       'z-icon': {
         name?: IconName;
         type?: IconPack;
+        variant?: IconVariant;
         size?: string | number;
         color?: string;
         class?: string;
@@ -260,7 +312,7 @@ declare global {
 `;
 
   fs.writeFileSync(path.join(CONFIG.distDir, 'index.d.ts'), typeGeneral, 'utf8');
-  
+
   const iconsIndexContent = `// Auto-generated file - Central export point for all icons
 // Re-export all icon dictionaries and names from all packs
 export { coreIcons, coreIconNames } from '../core/icons.js';
@@ -285,7 +337,7 @@ export type IconPack = 'core' | 'neo' | 'mina';
   const iconsDir = path.join(CONFIG.srcDir, 'icons');
   ensureDir(iconsDir);
   fs.writeFileSync(path.join(iconsDir, 'index.ts'), iconsIndexContent, 'utf8');
-  
+
   console.log('   ✅ General types');
   console.log('   ✅ Central icons index');
 }
