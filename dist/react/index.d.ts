@@ -4,6 +4,7 @@ import { C as CoreIconName, N as NeoIconName, M as MinaIconName } from '../types
 interface BaseIconProps {
     size?: string | number;
     color?: string;
+    variant?: 'light' | 'solid' | 'regular' | 'thin' | string;
     className?: string;
     style?: React.CSSProperties;
 }

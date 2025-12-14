@@ -17,6 +17,7 @@ const ICON_COMPONENTS = {
 interface BaseIconProps {
   size?: string | number;
   color?: string;
+  variant?: 'light' | 'solid' | 'regular' | 'thin' | string;
   className?: string;
   style?: React.CSSProperties;
 }
@@ -55,13 +56,14 @@ export type { CoreIconName, NeoIconName, MinaIconName };
 export const ZIcon: React.FC<ZIconProps> = ({
   name,
   type = 'core',
+  variant = 'light',
   size = 24,
   color,
   className,
   style,
 }) => {
   const iconSet = ICON_COMPONENTS[type];
-  const IconComponent = iconSet?.['light']?.[name] as React.FC<React.SVGProps<SVGSVGElement>> | undefined;
+  const IconComponent = iconSet?.[variant]?.[name] as React.FC<React.SVGProps<SVGSVGElement>> | undefined;
 
   if (!IconComponent) {
     return null;
@@ -69,15 +71,22 @@ export const ZIcon: React.FC<ZIconProps> = ({
 
   const colorStyle = color ? { color } : {};
 
+  const params =
+    variant === 'solid'
+      ? { fill: 'currentColor' as const }
+      : {
+        fill: 'none' as const,
+        stroke: 'currentColor' as const,
+        strokeWidth: 2,
+        strokeLinecap: 'round' as const,
+        strokeLinejoin: 'round' as const,
+      };
+
   return (
     <IconComponent
       width={size}
       height={size}
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      {...params}
       style={{ ...colorStyle, ...style }}
       className={className}
     />
