@@ -34,7 +34,6 @@ export type MinaIconName =
   | 'ampersand-square'
   | 'ampersand'
   | 'ampersands'
-  | 'anchor-copy'
   | 'anchor'
   | 'angry-circle'
   | 'angry-ghost'
