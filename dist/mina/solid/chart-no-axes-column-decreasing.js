@@ -1,1 +1,1 @@
-export const ChartNoAxesColumnDecreasing = '<svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M6 21V3a1 1 0 0 1 2 0v18a1 1 0 1 1-2 0m5 0V9a1 1 0 1 1 2 0v12a1 1 0 1 1-2 0m5 0v-5a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0"/></svg>'
+export const ChartNoAxesColumnDecreasing = '<svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 21V3a1 1 0 0 1 2 0v18a1 1 0 1 1-2 0m5 0V9a1 1 0 1 1 2 0v12a1 1 0 1 1-2 0m5 0v-5a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0"/></svg>'

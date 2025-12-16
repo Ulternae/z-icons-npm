@@ -1,1 +1,1 @@
-export const ArrowLongDown = '<svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"><path d="m8 18 4 4m0 0 4-4m-4 4V2"/></svg>'
+export const ArrowLongDown = '<svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m8 18 4 4m0 0 4-4m-4 4V2"/></svg>'

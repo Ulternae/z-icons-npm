@@ -1,1 +1,1 @@
-export const Seven = '<svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"><path d="M10.5 17c0-3.75 5-10 5-10s-3.75.625-6.25 0"/></svg>'
+export const Seven = '<svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10.5 17c0-3.75 5-10 5-10s-3.75.625-6.25 0"/></svg>'

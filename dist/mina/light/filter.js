@@ -1,1 +1,1 @@
-export const Filter = '<svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4.5 7h15M7 12h10m-7 5h4"/></svg>'
+export const Filter = '<svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 7h15M7 12h10m-7 5h4"/></svg>'

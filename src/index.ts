@@ -53,7 +53,7 @@ class ZIconElement extends HTMLElement {
 
     // Inject size and color into SVG
     this.shadow.innerHTML = svgContent
-      .replace('<svg', `<svg width="${size}" height="${size}" style="color: ${color}; display: block;"`);
+      .replace('<svg', `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" style="color: ${color}; display: block;"`);
   }
 }
 

@@ -20,7 +20,6 @@ const svgoConfig = {
         },
       },
     },
-    "removeXMLNS",
     {
       name: 'removeAttrs',
       params: {

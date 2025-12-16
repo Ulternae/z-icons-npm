@@ -1,1 +1,1 @@
-export const LetterH = '<svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 7v5m0 0v5m0-5h6.25m0-5v5m0 0v5"/></svg>'
+export const LetterH = '<svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 7v5m0 0v5m0-5h6.25m0-5v5m0 0v5"/></svg>'
