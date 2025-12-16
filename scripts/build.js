@@ -168,7 +168,7 @@ function processPack(packName) {
   )};\n\nexport const ${packName}IconNames = [\n${Array.from(allIconIds).map(id => `  '${id}'`).join(',\n')}\n];`;
   fs.writeFileSync(path.join(srcGenPath, 'icons.js'), stringDictContent);
 
-  const stringDictTypes = `export declare const ${packName}Icons: Record<string, Record<string, string>>;\nexport declare const ${packName}IconNames: readonly string[];`;
+  const stringDictTypes = `export declare const ${packName}Icons: Record<string, Record<string, string>>;\nexport declare const ${packName}IconNames: string[];`;
   fs.writeFileSync(path.join(srcGenPath, 'icons.d.ts'), stringDictTypes);
 
   // 2. Generate React component dictionary in src/ with named exports and variant structure
