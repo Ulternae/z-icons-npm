@@ -1,4 +1,4 @@
-import { C as CoreIconName, N as NeoIconName, M as MinaIconName } from '../types-Hclbz-Cy.js';
+import { C as CoreIconName, N as NeoIconName, M as MinaIconName } from '../types-DiU1xFkz.js';
 
 declare const coreIcons: Record<string, Record<string, string>>;
 declare const coreIconNames: string[];

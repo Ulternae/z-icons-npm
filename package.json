@@ -1,6 +1,6 @@
 {
   "name": "@zcorvus/z-icons",
-  "version": "0.0.74",
+  "version": "0.0.76",
   "description": "Icon library (core & neo) as SVG sprites + Web Component <z-icon> - Requires Vite optimizeDeps exclusion",
   "author": "Ulqernesh Karvenae",
   "license": "UNLICENSED",

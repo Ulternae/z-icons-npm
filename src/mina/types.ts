@@ -184,6 +184,8 @@ export type MinaIconName =
   | 'brand-twitter'
   | 'brand-x'
   | 'brand-youtube'
+  | 'brand-apple'
+  | 'brand-google-play'
   | 'briefcase-conveyor-belt'
   | 'briefcase'
   | 'brightness-high'

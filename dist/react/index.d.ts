@@ -1,5 +1,5 @@
 import React from 'react';
-import { C as CoreIconName, N as NeoIconName, M as MinaIconName } from '../types-Hclbz-Cy.js';
+import { C as CoreIconName, N as NeoIconName, M as MinaIconName } from '../types-DiU1xFkz.js';
 
 interface BaseIconProps {
     size?: string | number;
