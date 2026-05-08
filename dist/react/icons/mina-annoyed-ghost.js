@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const MinaAnnoyedGhost = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 24 24',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"d":"M3 18.562v-6.518C3 7.05 7.03 3 12 3s9 4.05 9 9.044v6.517c0 1.162-.967 2.519-2 2-.835-.42-2.223-.52-3 0-.874.585-2.126.585-3 0-.885-.593-1.649-.57-2.5 0-.874.585-2.126.585-3 0-.777-.52-1.665-.42-2.5 0-1.033.519-2-.838-2-2M9 15.5h6m-5-5.25H9m6 0h-1"})
+);
+
+export default MinaAnnoyedGhost;

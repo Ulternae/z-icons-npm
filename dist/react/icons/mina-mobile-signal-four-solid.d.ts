@@ -1,0 +1,8 @@
+import React from 'react';
+
+export interface MinaMobileSignalFourSolidProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+  size?: string | number;
+}
+
+export declare const MinaMobileSignalFourSolid: React.FC<MinaMobileSignalFourSolidProps>;
+export default MinaMobileSignalFourSolid;

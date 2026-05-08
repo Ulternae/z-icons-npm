@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const MinaBookmarkMinus = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 24 24',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"d":"M7.527 20.841C6.861 21.274 6 20.772 6 19.952V3.942c0-.52.336-.942.75-.942h10.5c.414 0 .75.422.75.942v16.01c0 .82-.861 1.322-1.527.89l-3.946-2.562a.96.96 0 0 0-1.054 0zM9.5 9.5h5"})
+);
+
+export default MinaBookmarkMinus;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const MinaArrowLongUpLeftSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 24 24',
+    width: size,
+    height: size,
+    fill: 'currentColor',
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"d":"M19.53 19.53a.75.75 0 0 0 0-1.06L8.905 7.845 11.75 5a.75.75 0 0 0-.75-.75H5a.75.75 0 0 0-.75.75v6c0 .414.336.75.75.75l2.845-2.845L18.47 19.53a.75.75 0 0 0 1.06 0"})
+);
+
+export default MinaArrowLongUpLeftSolid;

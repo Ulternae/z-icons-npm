@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const MinaTagPlusSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 24 24',
+    width: size,
+    height: size,
+    fill: 'currentColor',
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"d":"M2.61 5.269a3.65 3.65 0 0 1 1.862-.519H14.77c.717 0 1.406.28 1.92.781l5.35 5.216a1.75 1.75 0 0 1 0 2.506l-5.35 5.216a2.75 2.75 0 0 1-1.92.781H4.472a3.65 3.65 0 0 1-1.862-.519c-.58-.359-1.11-.974-1.11-1.856v-9.75c0-.882.53-1.498 1.11-1.856M9.25 9.5a.75.75 0 0 0-1.5 0v1.75H6a.75.75 0 0 0 0 1.5h1.75v1.75a.75.75 0 0 0 1.5 0v-1.75H11a.75.75 0 0 0 0-1.5H9.25z"})
+);
+
+export default MinaTagPlusSolid;

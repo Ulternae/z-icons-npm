@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const MinaAnchorSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 24 24',
+    width: size,
+    height: size,
+    fill: 'currentColor',
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M12 2.25a2.75 2.75 0 0 0-.75 5.396v12.57a8.25 8.25 0 0 1-7.466-7.466H5a.75.75 0 0 0 0-1.5H3a.75.75 0 0 0-.75.75c0 5.385 4.365 9.75 9.75 9.75s9.75-4.365 9.75-9.75a.75.75 0 0 0-.75-.75h-2a.75.75 0 0 0 0 1.5h1.216a8.25 8.25 0 0 1-7.466 7.466V7.646A2.751 2.751 0 0 0 12 2.25"})
+);
+
+export default MinaAnchorSolid;

@@ -2,7 +2,31 @@
 
 Framework-agnostic SVG icon package with optional React wrappers and a browser-only Web Component registration entry.
 
+Browse all available icons at [icons.zcorvus.com](https://icons.zcorvus.com/).
+
 ## React
+
+Use prefixed icon components when you want the smallest React imports and clear editor autocomplete:
+
+```tsx
+import { MinaSearch, MinaSearchSolid } from '@zcorvus/z-icons/react/icons';
+
+export function SearchActions() {
+  return (
+    <>
+      <MinaSearch />
+      <MinaSearchSolid />
+    </>
+  );
+}
+```
+
+The component name format is `{Pack}{IconName}` or `{Pack}{IconName}{Variant}`:
+
+- `MinaSearch`
+- `MinaSearchSolid`
+- `NeoSun`
+- `CoreSun`
 
 Use the general component when the pack is dynamic:
 
@@ -32,6 +56,7 @@ export function SearchActions() {
 
 Available optimized React entries:
 
+- `@zcorvus/z-icons/react/icons` -> prefixed icon components such as `MinaSearch`
 - `@zcorvus/z-icons/react/core` -> `ZCore`
 - `@zcorvus/z-icons/react/neo` -> `ZNeo`
 - `@zcorvus/z-icons/react/mina` -> `ZMina`

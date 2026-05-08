@@ -8,6 +8,12 @@ const CONFIG = {
   distDir: 'dist',
   packs: ['core', 'neo', "mina"],
   variants: ['light', 'solid', 'regular', 'thin'],
+  publicVariantSuffixes: {
+    light: '',
+    solid: 'Solid',
+    regular: 'Regular',
+    thin: 'Thin',
+  },
   svgoConfig: svgoConfig,
 }
 
@@ -34,6 +40,10 @@ function capitalize(s) {
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
+function getPublicVariantSuffix(variant) {
+  return CONFIG.publicVariantSuffixes[variant] ?? capitalize(variant);
+}
+
 //Convert kebab-case to PascalCase (handles numbers)
 //Examples: flower-2 -> Flower2, clock-ten -> ClockTen
 
@@ -42,6 +52,14 @@ function toPascalCase(str) {
     .split('-')
     .map(part => part.charAt(0).toUpperCase() + part.slice(1))
     .join('');
+}
+
+function toKebabCase(str) {
+  return str
+    .replace(/([A-Z])([A-Z][a-z])/g, '$1-$2')
+    .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
+    .replace(/[\s_]+/g, '-')
+    .toLowerCase();
 }
 
 //Convert SVG string to React.createElement calls
@@ -92,6 +110,71 @@ function svgToReactElement(svgContent, iconId) {
   return `export const ${toPascalCase(iconId)} = (props) => React.createElement('svg', { viewBox: '${viewBox}', fill: 'none', ...props }, ${elementsCode});`;
 }
 
+function svgToPrefixedReactComponent(svgContent, componentName, variant) {
+  const viewBoxMatch = svgContent.match(/viewBox=["']([^"']+)["']/);
+  const viewBox = viewBoxMatch ? viewBoxMatch[1] : '0 0 24 24';
+  const innerMatch = svgContent.match(/<svg[^>]*>(.*?)<\/svg>/s);
+  const innerContent = innerMatch ? innerMatch[1].trim() : '';
+  const elements = [];
+  const elementRegex = /<(\w+)([^>]*)\/>/g;
+  let match;
+
+  while ((match = elementRegex.exec(innerContent)) !== null) {
+    const tagName = match[1];
+    const attrs = match[2].trim();
+    const attrsObj = {};
+    const attrRegex = /(\w+(?:-\w+)*)=["']([^"']*)["']/g;
+    let attrMatch;
+
+    while ((attrMatch = attrRegex.exec(attrs)) !== null) {
+      let key = attrMatch[1];
+      const value = attrMatch[2];
+
+      if (key.includes('-')) {
+        key = key.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+      }
+
+      attrsObj[key] = value;
+    }
+
+    elements.push(`React.createElement('${tagName}', ${JSON.stringify(attrsObj)})`);
+  }
+
+  const children = elements.length > 0 ? `, ${elements.join(', ')}` : '';
+  const variantProps = variant === 'solid'
+    ? "fill: 'currentColor'"
+    : "fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2";
+
+  return `import React from 'react';
+
+export const ${componentName} = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '${viewBox}',
+    width: size,
+    height: size,
+    ${variantProps},
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }${children}
+);
+
+export default ${componentName};
+`;
+}
+
+function createPrefixedIconTypes(componentName) {
+  return `import React from 'react';
+
+export interface ${componentName}Props extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+  size?: string | number;
+}
+
+export declare const ${componentName}: React.FC<${componentName}Props>;
+export default ${componentName};
+`;
+}
+
 /**
  * Process a single icon pack with variant support
  */
@@ -112,6 +195,7 @@ function processPack(packName) {
 
   const variantData = {};
   const allIconIds = new Set();
+  const prefixedReactExports = [];
   let totalIconCount = 0;
 
   CONFIG.variants.forEach(variant => {
@@ -158,6 +242,22 @@ function processPack(packName) {
       const variantDistPath = path.join(distPath, variant);
       ensureDir(variantDistPath);
       fs.writeFileSync(path.join(variantDistPath, `${id}.js`), individualStringContent);
+
+      const componentName = `${capitalize(packName)}${toPascalCase(id)}${getPublicVariantSuffix(variant)}`;
+      const publicIconId = toKebabCase(componentName);
+      const reactIconsDistPath = path.join(CONFIG.distDir, 'react', 'icons');
+      ensureDir(reactIconsDistPath);
+      fs.writeFileSync(
+        path.join(reactIconsDistPath, `${publicIconId}.js`),
+        svgToPrefixedReactComponent(svgContent, componentName, variant),
+        'utf8'
+      );
+      fs.writeFileSync(
+        path.join(reactIconsDistPath, `${publicIconId}.d.ts`),
+        createPrefixedIconTypes(componentName),
+        'utf8'
+      );
+      prefixedReactExports.push({ componentName, publicIconId });
     });
 
     variantData[variant] = {
@@ -278,8 +378,25 @@ function processPack(packName) {
 
   const packIndexContent = `export { ${packName}IconNames, ${packName}Icons } from './icons';\nexport type { ${capitalize(packName)}IconName } from './types';\n`;
   fs.writeFileSync(path.join(srcGenPath, 'index.ts'), packIndexContent);
+  appendPrefixedReactExports(prefixedReactExports);
 
   console.log(`   ✅ Pack processed: | ${capitalize(packName).padStart(5, " ")}  |  ${totalIconCount} icons across ${Object.keys(variantData).length} variant(s)`);
+}
+
+function appendPrefixedReactExports(exports) {
+  if (exports.length === 0) return;
+
+  const reactIconsIndexPath = path.join(CONFIG.distDir, 'react', 'icons', 'index.js');
+  const reactIconsIndexTypesPath = path.join(CONFIG.distDir, 'react', 'icons', 'index.d.ts');
+  const jsExports = exports
+    .map(({ componentName, publicIconId }) => `export { ${componentName} } from './${publicIconId}.js';`)
+    .join('\n');
+  const typeExports = exports
+    .map(({ componentName, publicIconId }) => `export { ${componentName} } from './${publicIconId}.js';\nexport type { ${componentName}Props } from './${publicIconId}.js';`)
+    .join('\n');
+
+  fs.appendFileSync(reactIconsIndexPath, `${jsExports}\n`, 'utf8');
+  fs.appendFileSync(reactIconsIndexTypesPath, `${typeExports}\n`, 'utf8');
 }
 
 function types() {

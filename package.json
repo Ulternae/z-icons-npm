@@ -10,6 +10,9 @@
   "files": [
     "dist"
   ],
+  "sideEffects": [
+    "./dist/register.js"
+  ],
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -42,6 +45,14 @@
     "./react": {
       "import": "./dist/react/index.js",
       "types": "./dist/react/index.d.ts"
+    },
+    "./react/icons": {
+      "import": "./dist/react/icons/index.js",
+      "types": "./dist/react/icons/index.d.ts"
+    },
+    "./react/icons/*": {
+      "import": "./dist/react/icons/*.js",
+      "types": "./dist/react/icons/*.d.ts"
     },
     "./react/core": {
       "import": "./dist/react/core.js",

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const MinaGitDiff = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 24 24',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"d":"M18 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6m0-6V7.5a2 2 0 0 0-2-2h-2.5"}), React.createElement('path', {"d":"M14.5 8 12 5.5 14.5 3M6 3a3 3 0 1 0 0 6 3 3 0 0 0 0-6m0 6v7.5a2 2 0 0 0 2 2h2.5"}), React.createElement('path', {"d":"m9.5 16 2.5 2.5L9.5 21"})
+);
+
+export default MinaGitDiff;
