@@ -1,12 +1,12 @@
 {
   "name": "@zcorvus/z-icons",
   "version": "0.0.76",
-  "description": "Icon library (core & neo) as SVG sprites + Web Component <z-icon> - Requires Vite optimizeDeps exclusion",
+  "description": "Framework-agnostic SVG icon library with React wrappers and an optional Web Component.",
   "author": "Ulqernesh Karvenae",
   "license": "UNLICENSED",
   "type": "module",
   "main": "dist/icon.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/icon.d.ts",
   "files": [
     "dist"
   ],
@@ -17,7 +17,11 @@
   "exports": {
     ".": {
       "import": "./dist/icon.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/icon.d.ts"
+    },
+    "./register": {
+      "import": "./dist/register.js",
+      "types": "./dist/register.d.ts"
     },
     "./icons": {
       "import": "./dist/icons/index.js",
@@ -38,6 +42,22 @@
     "./react": {
       "import": "./dist/react/index.js",
       "types": "./dist/react/index.d.ts"
+    },
+    "./react/core": {
+      "import": "./dist/react/core.js",
+      "types": "./dist/react/core.d.ts"
+    },
+    "./react/neo": {
+      "import": "./dist/react/neo.js",
+      "types": "./dist/react/neo.d.ts"
+    },
+    "./react/mina": {
+      "import": "./dist/react/mina.js",
+      "types": "./dist/react/mina.d.ts"
+    },
+    "./react/mina-solid": {
+      "import": "./dist/react/mina-solid.js",
+      "types": "./dist/react/mina-solid.d.ts"
     }
   },
   "scripts": {

@@ -5,15 +5,16 @@ export { neoIcons, neoIconNames } from '../neo/icons.js';
 export { minaIcons, minaIconNames } from '../mina/icons.js';
 
 // Export types
-export type { CoreIconName } from '../core/types.ts';
-export type { NeoIconName } from '../neo/types.ts';
-export type { MinaIconName } from '../mina/types.ts';
+export type { CoreIconName } from '../core/types';
+export type { NeoIconName } from '../neo/types';
+export type { MinaIconName } from '../mina/types';
 
 // Import types to use them locally
-import type { CoreIconName } from '../core/types.ts';
-import type { NeoIconName } from '../neo/types.ts';
-import type { MinaIconName } from '../mina/types.ts';
+import type { CoreIconName } from '../core/types';
+import type { NeoIconName } from '../neo/types';
+import type { MinaIconName } from '../mina/types';
 
 // Combined icon pack type
 export type AllIconNames = CoreIconName | NeoIconName | MinaIconName;
 export type IconPack = 'core' | 'neo' | 'mina';
+export type IconVariant = 'light' | 'solid' | 'regular' | 'thin';

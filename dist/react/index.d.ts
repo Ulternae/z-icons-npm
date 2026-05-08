@@ -1,12 +1,14 @@
-import React from 'react';
-import { C as CoreIconName, N as NeoIconName, M as MinaIconName } from '../types-DiU1xFkz.js';
+import React__default from 'react';
+import { C as CoreIconName } from '../types-BFL-wEQu.js';
+import { N as NeoIconName } from '../types-BcsLnsRh.js';
+import { M as MinaIconName } from '../types-CTzkKYgQ.js';
 
 interface BaseIconProps {
     size?: string | number;
     color?: string;
     variant?: 'light' | 'solid' | 'regular' | 'thin' | string;
     className?: string;
-    style?: React.CSSProperties;
+    style?: React__default.CSSProperties;
 }
 interface CoreIconProps extends BaseIconProps {
     name: CoreIconName;
@@ -34,6 +36,6 @@ type ZIconProps = CoreIconProps | NeoIconProps | MinaIconProps;
  * }
  * ```
  */
-declare const ZIcon: React.FC<ZIconProps>;
+declare const ZIcon: React__default.FC<ZIconProps>;
 
 export { CoreIconName, MinaIconName, NeoIconName, ZIcon, type ZIconProps };

@@ -1,12 +1,12 @@
 /**
  * Example usage of z-icons in React/Next.js
  * 
- * Remember to import the web component once in your app:
- * import '@zcorvus/z-icons';
+ * If you use the Web Component, register it once in browser code:
+ * import '@zcorvus/z-icons/register';
  */
 
 import React, { useState } from 'react';
-import { Icon } from '@zcorvus/z-icons/react';
+import { ZIcon } from '@zcorvus/z-icons/react';
 import type { CoreIconName, NeoIconName } from '@zcorvus/z-icons/react';
 
 // ============================================
@@ -17,9 +17,9 @@ export function BasicExample() {
   return (
     <div>
       {/* Default: core icons with size 24 */}
-      <Icon name="sun" />
-      <Icon name="moon" type="core" />
-      <Icon name="alarm-clock" type="neo" />
+      <ZIcon name="sun" />
+      <ZIcon name="moon" type="core" />
+      <ZIcon name="alarm-clock" type="neo" />
     </div>
   );
 }
@@ -27,13 +27,13 @@ export function BasicExample() {
 export function CustomPropsExample() {
   return (
     <div>
-      <Icon 
+      <ZIcon 
         name="sun" 
         size={32} 
         color="#fbbf24" 
         className="icon-sun" 
       />
-      <Icon 
+      <ZIcon 
         name="moon" 
         type="core"
         size="48" 
@@ -66,7 +66,7 @@ export function ThemeToggle() {
         cursor: 'pointer'
       }}
     >
-      <Icon 
+      <ZIcon 
         name={theme === 'light' ? 'sun' : 'moon'} 
         size={24}
         color={theme === 'light' ? '#fbbf24' : '#60a5fa'}
@@ -96,7 +96,7 @@ export function IconButton({ iconName, onClick }: {
         transition: 'all 0.2s'
       }}
     >
-      <Icon 
+      <ZIcon 
         name={iconName} 
         size={20}
         color={isHovered ? '#6366f1' : '#64748b'}
@@ -113,7 +113,7 @@ export function TypeSafeExample() {
   // TypeScript will autocomplete and validate icon names
   const iconName: CoreIconName = 'sun';
   
-  return <Icon name={iconName} />;
+  return <ZIcon name={iconName} />;
 }
 
 export function IconListExample() {
@@ -137,7 +137,7 @@ export function IconListExample() {
             gap: '0.5rem'
           }}
         >
-          <Icon name={iconName} size={32} color="#6366f1" />
+          <ZIcon name={iconName} size={32} color="#6366f1" />
           <span style={{ fontSize: '0.75rem', color: '#64748b' }}>
             {iconName}
           </span>
@@ -153,10 +153,10 @@ export function IconListExample() {
 
 export function ConditionalExample({ useNeoStyle }: { useNeoStyle: boolean }) {
   if (useNeoStyle) {
-    return <Icon name="sun" type="neo" />;
+    return <ZIcon name="sun" type="neo" />;
   }
   
-  return <Icon name="sun" type="core" />;
+  return <ZIcon name="sun" type="core" />;
 }
 
 // Status indicator with icon
@@ -178,7 +178,7 @@ export function StatusIndicator({ status }: {
   
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-      <Icon name={config.name} size={16} color={config.color} />
+      <ZIcon name={config.name} size={16} color={config.color} />
       <span style={{ textTransform: 'capitalize' }}>{status}</span>
     </div>
   );
@@ -196,7 +196,7 @@ export function NextJsClientComponent() {
   
   return (
     <button onClick={() => setCount(count + 1)}>
-      <Icon name="anchor" size={20} />
+      <ZIcon name="anchor" size={20} />
       <span>Clicked {count} times</span>
     </button>
   );
@@ -206,7 +206,7 @@ export function NextJsClientComponent() {
 export function NextJsServerComponent() {
   return (
     <div>
-      <Icon name="sun" size={24} color="currentColor" />
+      <ZIcon name="sun" size={24} color="currentColor" />
       <h1>This is a server component</h1>
     </div>
   );
@@ -235,7 +235,7 @@ export function AnimatedIcon() {
         cursor: 'pointer'
       }}
     >
-      <Icon 
+      <ZIcon 
         name="sun" 
         size={32}
         color="#fbbf24"
@@ -264,7 +264,7 @@ export function IconWithTooltip({
       onMouseEnter={() => setShowTooltip(true)}
       onMouseLeave={() => setShowTooltip(false)}
     >
-      <Icon name={iconName} size={24} />
+      <ZIcon name={iconName} size={24} />
       {showTooltip && (
         <div style={{
           position: 'absolute',

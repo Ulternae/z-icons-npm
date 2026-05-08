@@ -1,11 +1,11 @@
-declare class ZIconElement extends HTMLElement {
-    private shadow;
-    private lastRenderedKey;
-    constructor();
-    static get observedAttributes(): string[];
-    attributeChangedCallback(): void;
-    connectedCallback(): void;
-    render(): void;
-}
+export { AllIconNames as IconName, IconPack } from './icons/index.js';
+import './core/index.js';
+import './types-BFL-wEQu.js';
+import './neo/index.js';
+import './types-BcsLnsRh.js';
+import './mina/index.js';
+import './types-CTzkKYgQ.js';
 
-export { ZIconElement as default };
+type IconVariant = 'light' | 'solid' | 'regular' | 'thin';
+
+export type { IconVariant };

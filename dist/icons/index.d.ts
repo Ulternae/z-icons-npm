@@ -1,15 +1,12 @@
-import { C as CoreIconName, N as NeoIconName, M as MinaIconName } from '../types-DiU1xFkz.js';
-
-declare const coreIcons: Record<string, Record<string, string>>;
-declare const coreIconNames: string[];
-
-declare const neoIcons: Record<string, Record<string, string>>;
-declare const neoIconNames: string[];
-
-declare const minaIcons: Record<string, Record<string, string>>;
-declare const minaIconNames: string[];
+export { coreIconNames, coreIcons } from '../core/index.js';
+export { neoIconNames, neoIcons } from '../neo/index.js';
+export { minaIconNames, minaIcons } from '../mina/index.js';
+import { C as CoreIconName } from '../types-BFL-wEQu.js';
+import { N as NeoIconName } from '../types-BcsLnsRh.js';
+import { M as MinaIconName } from '../types-CTzkKYgQ.js';
 
 type AllIconNames = CoreIconName | NeoIconName | MinaIconName;
 type IconPack = 'core' | 'neo' | 'mina';
+type IconVariant = 'light' | 'solid' | 'regular' | 'thin';
 
-export { type AllIconNames, CoreIconName, type IconPack, MinaIconName, NeoIconName, coreIconNames, coreIcons, minaIconNames, minaIcons, neoIconNames, neoIcons };
+export { type AllIconNames, CoreIconName, type IconPack, type IconVariant, MinaIconName, NeoIconName };
