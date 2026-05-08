@@ -1,6 +1,6 @@
 {
   "name": "@zcorvus/z-icons",
-  "version": "0.0.77",
+  "version": "0.1.0",
   "description": "Framework-agnostic SVG icon library with React wrappers and an optional Web Component.",
   "author": "Ulqernesh Karvenae",
   "license": "UNLICENSED",
