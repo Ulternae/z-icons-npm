@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const NeoLanguage = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 50 50',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M25.518 13.168H5.606l18.676 1.854z"}), React.createElement('path', {"fill":"currentColor","d":"m22.365 23.125 7.251-9.945-.116-.012h-3.982l-1.236 1.854-2.746 4.12-4.216 4.215-.762.763 2.407 2.406.773-.773z"}), React.createElement('path', {"fill":"currentColor","d":"m18.965 26.526-2.407-2.406-6.97 6.968.175 4.64zm0 0 4.561 4.562-3.788-5.335zm-7.385-7.384 4.978 4.978.762-.763z"}), React.createElement('path', {"stroke":"currentColor","strokeLinecap":"round","strokeLinejoin":"round","d":"m18.257 26.526-8.037 8.038-.123-3.277 6.46-6.46zm1.422.008-.008-.008.002-.001zm8.963-12.866-6.66 9.133-2.598 2.599-.42.419-1.7-1.7 4.625-4.623a.5.5 0 0 0 .062-.077l2.747-4.12 1.087-1.63zm-4.059 0-.55.825-8.325-.825z"}), React.createElement('path', {"fill":"currentColor","d":"M14.27 8.487h4.575Zm0 0h4.575l1.767-2.638z"}), React.createElement('path', {"fill":"currentColor","stroke":"currentColor","strokeLinecap":"round","strokeLinejoin":"round","d":"M43.658 43.652h-.677l-.796-1.595-8.915-17.828 1.51-3.026zM28.28 36.686l-.029.093-2.18 6.871h-2.5l1.383-2.766.015-.023 1.725-3.459.247-.493.112-.223zm6.923-.74-5.776.431.013-.04.3-.943.185-.587zM29.11 34.07l-.324 1.02-.188.596h-1.045l2.858-5.717z"})
+);
+
+export default NeoLanguage;

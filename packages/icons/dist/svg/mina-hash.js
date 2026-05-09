@@ -1,0 +1,2 @@
+export const MinaHash = '<svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.697 4 6.678 21M17.054 4l-3.019 17M21 8.781H3m18 7.438H3"/></svg>';
+export default MinaHash;

@@ -1,0 +1,2 @@
+export const MinaLetterB = '<svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 12V7h4.589c2.74 0 3.124 4.072.57 5M9 12v5h4.589c2.74 0 3.124-4.072.57-5M9 12h5.158"/></svg>';
+export default MinaLetterB;

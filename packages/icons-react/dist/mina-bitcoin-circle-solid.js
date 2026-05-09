@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const MinaBitcoinCircleSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 24 24',
+    width: size,
+    height: size,
+    fill: 'currentColor',
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"d":"M9.75 11.25v-2.5H13a1.25 1.25 0 1 1 0 2.5zm0 4v-2.5H14a1.25 1.25 0 1 1 0 2.5z"}), React.createElement('path', {"d":"M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12m10.5-6a.75.75 0 0 0-1.5 0v1.25H9a.75.75 0 0 0-.75.75v8c0 .414.336.75.75.75h2.25V18a.75.75 0 0 0 1.5 0v-1.25H14a2.75 2.75 0 0 0 1.266-5.192A2.75 2.75 0 0 0 13 7.25h-.25z"})
+);
+
+export default MinaBitcoinCircleSolid;

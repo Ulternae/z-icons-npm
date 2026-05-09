@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const MinaUserMinusSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 24 24',
+    width: size,
+    height: size,
+    fill: 'currentColor',
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"d":"M8.25 7.5a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0m11.999 12.962a.75.75 0 0 1-.71.787c-2.08.106-11.713.171-15.077 0a.75.75 0 0 1-.711-.787C4.013 15.314 8.058 12.75 12 12.75s7.987 2.563 8.249 7.712M10 16.75a.75.75 0 0 0 0 1.5h4a.75.75 0 0 0 0-1.5z"})
+);
+
+export default MinaUserMinusSolid;

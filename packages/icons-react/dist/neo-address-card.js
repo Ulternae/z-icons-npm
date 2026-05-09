@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const NeoAddressCard = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 50 50',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M27.818 19.261h10.41a.4.4 0 0 1 0 .802h-10.41a.401.401 0 0 1 0-.802m0 4.026h10.41a.401.401 0 1 1 0 .802h-10.41a.401.401 0 1 1 0-.802m0 4.118h10.41a.401.401 0 1 1 0 .802h-10.41a.401.401 0 1 1 0-.802m-6.808-2.517c-.189 2.412-2.701 5.902-6.145 5.633-2.227-.173-4.55-2.896-5.556-4.213 1.71.72 9.091 1.639 11.7-1.42m-3.034-3.985a3.11 3.11 0 1 1-6.22 0 3.11 3.11 0 0 1 6.22 0"}), React.createElement('path', {"stroke":"currentColor","d":"M43.868 9.321H6.132a3.114 3.114 0 0 0-3.114 3.114v22.598a3.114 3.114 0 0 0 3.114 3.114h37.736a3.114 3.114 0 0 0 3.113-3.114V12.435a3.114 3.114 0 0 0-3.113-3.114Z"}), React.createElement('path', {"stroke":"currentColor","d":"M27.818 19.261h10.41a.4.4 0 0 1 0 .802h-10.41a.401.401 0 0 1 0-.802Zm0 4.026h10.41a.401.401 0 1 1 0 .802h-10.41a.401.401 0 1 1 0-.802Zm0 4.118h10.41a.401.401 0 1 1 0 .802h-10.41a.401.401 0 1 1 0-.802Zm-6.808-2.517c-.189 2.412-2.701 5.902-6.145 5.633-2.227-.173-4.55-2.896-5.556-4.213 1.71.72 9.091 1.639 11.7-1.42Zm-3.035-3.985a3.11 3.11 0 1 1-6.22 0 3.11 3.11 0 0 1 6.22 0Z"})
+);
+
+export default NeoAddressCard;

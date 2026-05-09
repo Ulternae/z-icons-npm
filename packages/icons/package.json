@@ -1,0 +1,56 @@
+{
+  "name": "@zcorvus/icons",
+  "version": "0.1.0",
+  "description": "Framework-agnostic SVG icon library for ZCorvus.",
+  "author": "Ulqernesh Karvenae",
+  "license": "UNLICENSED",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./svg": {
+      "types": "./dist/svg/index.d.ts",
+      "import": "./dist/svg/index.js"
+    },
+    "./svg/*": {
+      "types": "./dist/svg/*.d.ts",
+      "import": "./dist/svg/*.js"
+    },
+    "./names": {
+      "types": "./dist/names/index.d.ts",
+      "import": "./dist/names/index.js"
+    },
+    "./types": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/types/index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "svg": [
+        "dist/svg/index.d.ts"
+      ],
+      "svg/*": [
+        "dist/svg/*.d.ts"
+      ],
+      "names": [
+        "dist/names/index.d.ts"
+      ],
+      "types": [
+        "dist/types/index.d.ts"
+      ]
+    }
+  }
+}

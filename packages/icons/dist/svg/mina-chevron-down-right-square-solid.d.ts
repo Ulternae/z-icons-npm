@@ -1,0 +1,2 @@
+export declare const MinaChevronDownRightSquareSolid: string;
+export default MinaChevronDownRightSquareSolid;
