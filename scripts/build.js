@@ -1,12 +1,12 @@
-import fs from 'fs'
-import path from 'path'
-import { optimize } from 'svgo'
-import { svgoConfig } from './svgo.config.js'
+import fs from 'fs';
+import path from 'path';
+import { optimize } from 'svgo';
+import { svgoConfig } from './svgo.config.js';
 
 const CONFIG = {
-  srcDir: 'src',
-  distDir: 'dist',
-  packs: ['core', 'neo', "mina"],
+  sourceDir: 'icons',
+  packagesDir: 'packages',
+  packs: ['core', 'neo', 'mina'],
   variants: ['light', 'solid', 'regular', 'thin'],
   publicVariantSuffixes: {
     light: '',
@@ -14,103 +14,67 @@ const CONFIG = {
     regular: 'Regular',
     thin: 'Thin',
   },
-  svgoConfig: svgoConfig,
-}
+  svgoConfig,
+};
 
-//Ensure directory exists
 function ensureDir(dir) {
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
+  fs.mkdirSync(dir, { recursive: true });
 }
 
-function cleanDist() {
-  const resolvedDist = path.resolve(CONFIG.distDir);
+function cleanDir(dir) {
+  const resolvedDir = path.resolve(dir);
   const resolvedCwd = process.cwd();
 
-  if (resolvedDist === resolvedCwd || !resolvedDist.startsWith(resolvedCwd)) {
-    throw new Error(`Refusing to clean unsafe dist path: ${resolvedDist}`);
+  if (resolvedDir === resolvedCwd || !resolvedDir.startsWith(resolvedCwd)) {
+    throw new Error(`Refusing to clean unsafe path: ${resolvedDir}`);
   }
 
-  fs.rmSync(resolvedDist, { recursive: true, force: true });
-  ensureDir(resolvedDist);
+  fs.rmSync(resolvedDir, { recursive: true, force: true });
+  ensureDir(resolvedDir);
 }
 
-function capitalize(s) {
-  return s.charAt(0).toUpperCase() + s.slice(1);
+function writeFile(filePath, content) {
+  ensureDir(path.dirname(filePath));
+  fs.writeFileSync(filePath, content, 'utf8');
 }
 
-function getPublicVariantSuffix(variant) {
-  return CONFIG.publicVariantSuffixes[variant] ?? capitalize(variant);
+function capitalize(value) {
+  return value.charAt(0).toUpperCase() + value.slice(1);
 }
 
-//Convert kebab-case to PascalCase (handles numbers)
-//Examples: flower-2 -> Flower2, clock-ten -> ClockTen
-
-function toPascalCase(str) {
-  return str
+function toPascalCase(value) {
+  return value
     .split('-')
-    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
     .join('');
 }
 
-function toKebabCase(str) {
-  return str
+function toKebabCase(value) {
+  return value
     .replace(/([A-Z])([A-Z][a-z])/g, '$1-$2')
     .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
     .replace(/[\s_]+/g, '-')
     .toLowerCase();
 }
 
-//Convert SVG string to React.createElement calls
-function svgToReactElement(svgContent, iconId) {
-  // Extract viewBox
-  const viewBoxMatch = svgContent.match(/viewBox=["']([^"']+)["']/);
-  const viewBox = viewBoxMatch ? viewBoxMatch[1] : '0 0 24 24';
-
-  // Extract inner content (paths, circles, etc.)
-  const innerMatch = svgContent.match(/<svg[^>]*>(.*?)<\/svg>/s);
-  const innerContent = innerMatch ? innerMatch[1] : '';
-
-  // Parse inner elements to React.createElement calls
-  const elements = [];
-  const elementRegex = /<(\w+)([^>]*)\/>/g;
-  let match;
-
-  while ((match = elementRegex.exec(innerContent)) !== null) {
-    const tagName = match[1];
-    const attrs = match[2];
-
-    // Parse attributes
-    const attrObj = {};
-    const attrRegex = /(\w+(?:-\w+)*)=["']([^"']*)["']/g;
-    let attrMatch;
-
-    while ((attrMatch = attrRegex.exec(attrs)) !== null) {
-      let key = attrMatch[1];
-      const value = attrMatch[2];
-
-      // Convert kebab-case to camelCase for React
-      if (key.includes('-')) {
-        key = key.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
-      }
-
-      attrObj[key] = value;
-    }
-
-    elements.push({ tagName, attrs: attrObj });
-  }
-
-  // Generate React.createElement code
-  const elementsCode = elements.map(el => {
-    const attrsStr = JSON.stringify(el.attrs);
-    return `React.createElement('${el.tagName}', ${attrsStr})`;
-  }).join(',\n    ');
-
-  return `export const ${toPascalCase(iconId)} = (props) => React.createElement('svg', { viewBox: '${viewBox}', fill: 'none', ...props }, ${elementsCode});`;
+function getPublicVariantSuffix(variant) {
+  return CONFIG.publicVariantSuffixes[variant] ?? capitalize(variant);
 }
 
-function svgToPrefixedReactComponent(svgContent, componentName, variant) {
+function getPublicIconName(pack, iconName, variant) {
+  return `${capitalize(pack)}${toPascalCase(iconName)}${getPublicVariantSuffix(variant)}`;
+}
+
+function getPublicFileName(pack, iconName, variant) {
+  return toKebabCase(getPublicIconName(pack, iconName, variant));
+}
+
+function escapeJsString(value) {
+  return value.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+}
+
+function parseSvg(svgContent) {
   const viewBoxMatch = svgContent.match(/viewBox=["']([^"']+)["']/);
   const viewBox = viewBoxMatch ? viewBoxMatch[1] : '0 0 24 24';
   const innerMatch = svgContent.match(/<svg[^>]*>(.*?)<\/svg>/s);
@@ -131,7 +95,7 @@ function svgToPrefixedReactComponent(svgContent, componentName, variant) {
       const value = attrMatch[2];
 
       if (key.includes('-')) {
-        key = key.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+        key = key.replace(/-([a-z])/g, (_, char) => char.toUpperCase());
       }
 
       attrsObj[key] = value;
@@ -140,7 +104,12 @@ function svgToPrefixedReactComponent(svgContent, componentName, variant) {
     elements.push(`React.createElement('${tagName}', ${JSON.stringify(attrsObj)})`);
   }
 
-  const children = elements.length > 0 ? `, ${elements.join(', ')}` : '';
+  return { viewBox, children: elements };
+}
+
+function createReactComponent(svgContent, componentName, variant) {
+  const { viewBox, children } = parseSvg(svgContent);
+  const childrenCode = children.length > 0 ? `, ${children.join(', ')}` : '';
   const variantProps = variant === 'solid'
     ? "fill: 'currentColor'"
     : "fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2";
@@ -156,14 +125,14 @@ export const ${componentName} = ({ size = 24, color, style, ...props }) => React
     ${variantProps},
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }${children}
+  }${childrenCode}
 );
 
 export default ${componentName};
 `;
 }
 
-function createPrefixedIconTypes(componentName) {
+function createReactComponentTypes(componentName) {
   return `import React from 'react';
 
 export interface ${componentName}Props extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
@@ -175,267 +144,316 @@ export default ${componentName};
 `;
 }
 
-/**
- * Process a single icon pack with variant support
- */
-function processPack(packName) {
-  const srcPath = path.join(CONFIG.srcDir, packName, 'icons');
-  const distPath = path.join(CONFIG.distDir, packName);
+function getIconFiles() {
+  const icons = [];
+  const packData = {};
 
-  // Output path for generated source files (dictionaries)
-  const srcGenPath = path.join(CONFIG.srcDir, packName);
+  for (const pack of CONFIG.packs) {
+    packData[pack] = {};
 
-  if (!fs.existsSync(srcPath)) {
-    console.warn(`   ⚠️  Source directory not found: ${srcPath}`);
-    return;
-  }
+    for (const variant of CONFIG.variants) {
+      const variantDir = path.join(CONFIG.sourceDir, pack, variant);
+      if (!fs.existsSync(variantDir)) continue;
 
-  ensureDir(distPath);
-  ensureDir(srcGenPath);
+      const files = fs
+        .readdirSync(variantDir)
+        .filter((file) => file.endsWith('.svg'))
+        .sort((a, b) => a.localeCompare(b));
 
-  const variantData = {};
-  const allIconIds = new Set();
-  const prefixedReactExports = [];
-  let totalIconCount = 0;
+      if (files.length === 0) continue;
 
-  CONFIG.variants.forEach(variant => {
-    const variantPath = path.join(srcPath, variant);
+      packData[pack][variant] = [];
 
-    if (!fs.existsSync(variantPath)) {
-      // Variant doesn't exist, skip it
-      return;
-    }
+      for (const file of files) {
+        const filePath = path.join(variantDir, file);
+        const source = fs.readFileSync(filePath, 'utf8');
+        const result = optimize(source, {
+          path: filePath,
+          ...CONFIG.svgoConfig,
+        });
 
-    const files = fs.readdirSync(variantPath).filter((file) => file.endsWith('.svg'));
-    if (files.length === 0) return;
-
-    const svgStrings = {};
-    const reactComponents = [];
-
-    files.forEach((file) => {
-      const filePath = path.join(variantPath, file);
-      const content = fs.readFileSync(filePath, 'utf8');
-      const id = path.basename(file, '.svg').toLowerCase().replace(/[_\s]+/g, '-');
-
-      const result = optimize(content, {
-        path: filePath,
-        ...CONFIG.svgoConfig,
-      });
-
-      if (result.error) {
-        console.error(`   ❌ Error optimizing ${file}:`, result.error);
-        return;
-      }
-
-      fs.writeFileSync(filePath, result.data, 'utf8');
-      const svgContent = result.data;
-
-      allIconIds.add(id);
-      svgStrings[id] = svgContent;
-
-      // Generate React component
-      const reactComponent = svgToReactElement(svgContent, id);
-      reactComponents.push(reactComponent);
-
-      // Write individual string export to dist (for direct usage if needed)
-      const individualStringContent = `export const ${toPascalCase(id)} = '${svgContent.replace(/'/g, "\\'")}'`;
-      const variantDistPath = path.join(distPath, variant);
-      ensureDir(variantDistPath);
-      fs.writeFileSync(path.join(variantDistPath, `${id}.js`), individualStringContent);
-
-      const componentName = `${capitalize(packName)}${toPascalCase(id)}${getPublicVariantSuffix(variant)}`;
-      const publicIconId = toKebabCase(componentName);
-      const reactIconsDistPath = path.join(CONFIG.distDir, 'react', 'icons');
-      ensureDir(reactIconsDistPath);
-      fs.writeFileSync(
-        path.join(reactIconsDistPath, `${publicIconId}.js`),
-        svgToPrefixedReactComponent(svgContent, componentName, variant),
-        'utf8'
-      );
-      fs.writeFileSync(
-        path.join(reactIconsDistPath, `${publicIconId}.d.ts`),
-        createPrefixedIconTypes(componentName),
-        'utf8'
-      );
-      prefixedReactExports.push({ componentName, publicIconId });
-    });
-
-    variantData[variant] = {
-      svgStrings,
-      reactComponents,
-      iconIds: Object.keys(svgStrings)
-    };
-
-    totalIconCount += files.length;
-  });
-
-  // 1. Generate string dictionary (for Web Components) in src/ with variant structure
-  const stringDictContent = `export const ${packName}Icons = ${JSON.stringify(
-    Object.fromEntries(
-      Object.entries(variantData).map(([variant, data]) => [variant, data.svgStrings])
-    ),
-    null,
-    2
-  )};\n\nexport const ${packName}IconNames = [\n${Array.from(allIconIds).map(id => `  '${id}'`).join(',\n')}\n];`;
-  fs.writeFileSync(path.join(srcGenPath, 'icons.js'), stringDictContent);
-
-  const stringDictTypes = `export declare const ${packName}Icons: Record<string, Record<string, string>>;\nexport declare const ${packName}IconNames: string[];`;
-  fs.writeFileSync(path.join(srcGenPath, 'icons.d.ts'), stringDictTypes);
-
-  // 2. Generate React component dictionary in src/ with named exports and variant structure
-  const allReactExports = [];
-  const variantReactObjects = {};
-
-  Object.entries(variantData).forEach(([variant, data]) => {
-    const { svgStrings, iconIds } = data;
-
-    iconIds.forEach(id => {
-      const componentNameCap = toPascalCase(id);
-      const variantSuffix = capitalize(variant);
-      const componentName = `${componentNameCap}${variantSuffix}`;
-      const svgContent = svgStrings[id];
-      const viewBoxMatch = svgContent.match(/viewBox=["']([^"']+)["']/);
-      const viewBox = viewBoxMatch ? viewBoxMatch[1] : '0 0 24 24';
-
-      // Extract paths and other elements
-      const innerMatch = svgContent.match(/<svg[^>]*>(.*?)<\/svg>/s);
-      const innerContent = innerMatch ? innerMatch[1].trim() : '';
-
-      // Simple approach: convert inner SVG to React elements
-      const elements = [];
-      const elementRegex = /<(\w+)([^>]*)\/>/g;
-      let match;
-
-      while ((match = elementRegex.exec(innerContent)) !== null) {
-        const tagName = match[1];
-        const attrs = match[2].trim();
-        elements.push({ tagName, attrs });
-      }
-
-      const elementsCode = elements.map(el => {
-        const attrsObj = {};
-        const attrRegex = /(\w+(?:-\w+)*)=["']([^"']*)["']/g;
-        let attrMatch;
-
-        while ((attrMatch = attrRegex.exec(el.attrs)) !== null) {
-          let key = attrMatch[1];
-          const value = attrMatch[2];
-
-          // Convert to camelCase
-          if (key.includes('-')) {
-            key = key.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
-          }
-
-          attrsObj[key] = value;
+        if (result.error) {
+          throw new Error(`Error optimizing ${filePath}: ${result.error}`);
         }
 
-        return `React.createElement('${el.tagName}', ${JSON.stringify(attrsObj)})`;
-      }).join(', ');
+        fs.writeFileSync(filePath, result.data, 'utf8');
 
-      allReactExports.push(`export const ${componentName} = (props) => React.createElement('svg', { viewBox: '${viewBox}', fill: 'none', ...props }, ${elementsCode});`);
+        const name = path.basename(file, '.svg').toLowerCase().replace(/[_\s]+/g, '-');
+        const componentName = getPublicIconName(pack, name, variant);
+        const publicFileName = getPublicFileName(pack, name, variant);
+        const icon = {
+          pack,
+          variant,
+          name,
+          componentName,
+          publicFileName,
+          svg: result.data,
+        };
 
-      if (!variantReactObjects[variant]) {
-        variantReactObjects[variant] = [];
+        icons.push(icon);
+        packData[pack][variant].push(icon);
       }
-      variantReactObjects[variant].push({ id, componentName });
-    });
-  });
-
-  const reactDictContent = `import React from 'react';\n\n${allReactExports.join('\n\n')}\n\nexport const ${capitalize(packName)}Icons = {\n${Object.entries(variantReactObjects).map(([variant, icons]) => {
-    return `  ${variant}: {\n${icons.map(({ id, componentName }) => `    '${id}': ${componentName}`).join(',\n')}\n  }`;
-  }).join(',\n')}\n};`;
-
-  fs.writeFileSync(path.join(srcGenPath, 'react.js'), reactDictContent);
-
-  const reactDictTypes = `import React from 'react';\n\n${allReactExports.map(exp => {
-    const match = exp.match(/export const (\w+)/);
-    if (match) {
-      return `export declare const ${match[1]}: React.FC<React.SVGProps<SVGSVGElement>>;`;
     }
-    return '';
-  }).join('\n')}\n\nexport declare const ${capitalize(packName)}Icons: Record<string, Record<string, React.FC<React.SVGProps<SVGSVGElement>>>>;`;
-  fs.writeFileSync(path.join(srcGenPath, 'react.d.ts'), reactDictTypes);
+  }
 
-  Object.entries(variantReactObjects).forEach(([variant, icons]) => {
-    const variantSuffix = capitalize(variant);
-    const variantExports = allReactExports.filter((exp) => {
-      const match = exp.match(/export const (\w+)/);
-      return match ? icons.some(({ componentName }) => componentName === match[1]) : false;
-    });
-
-    const variantReactContent = `import React from 'react';\n\n${variantExports.join('\n\n')}\n\nexport const ${capitalize(packName)}${variantSuffix}Icons = {\n${icons.map(({ id, componentName }) => `  '${id}': ${componentName}`).join(',\n')}\n};`;
-    fs.writeFileSync(path.join(srcGenPath, `react-${variant}.js`), variantReactContent);
-
-    const variantReactTypes = `import React from 'react';\n\n${icons.map(({ componentName }) => `export declare const ${componentName}: React.FC<React.SVGProps<SVGSVGElement>>;`).join('\n')}\n\nexport declare const ${capitalize(packName)}${variantSuffix}Icons: Record<string, React.FC<React.SVGProps<SVGSVGElement>>>;`;
-    fs.writeFileSync(path.join(srcGenPath, `react-${variant}.d.ts`), variantReactTypes);
-  });
-
-  // 3. Generate types for icon names
-  const srcTypesPath = path.join(CONFIG.srcDir, packName);
-  ensureDir(srcTypesPath);
-  const srcTypeContent = `// Auto-generated types - DO NOT EDIT MANUALLY\n// This file is generated by scripts/build.js\n\nexport type ${capitalize(packName)}IconName = \n${Array.from(allIconIds).map(id => `  | '${id}'`).join('\n')};\n`;
-  fs.writeFileSync(path.join(srcTypesPath, 'types.ts'), srcTypeContent);
-
-  const packIndexContent = `export { ${packName}IconNames, ${packName}Icons } from './icons';\nexport type { ${capitalize(packName)}IconName } from './types';\n`;
-  fs.writeFileSync(path.join(srcGenPath, 'index.ts'), packIndexContent);
-  appendPrefixedReactExports(prefixedReactExports);
-
-  console.log(`   ✅ Pack processed: | ${capitalize(packName).padStart(5, " ")}  |  ${totalIconCount} icons across ${Object.keys(variantData).length} variant(s)`);
+  return { icons, packData };
 }
 
-function appendPrefixedReactExports(exports) {
-  if (exports.length === 0) return;
+function createTypeUnion(typeName, values) {
+  if (values.length === 0) {
+    return `export type ${typeName} = never;`;
+  }
 
-  const reactIconsIndexPath = path.join(CONFIG.distDir, 'react', 'icons', 'index.js');
-  const reactIconsIndexTypesPath = path.join(CONFIG.distDir, 'react', 'icons', 'index.d.ts');
-  const jsExports = exports
-    .map(({ componentName, publicIconId }) => `export { ${componentName} } from './${publicIconId}.js';`)
-    .join('\n');
-  const typeExports = exports
-    .map(({ componentName, publicIconId }) => `export { ${componentName} } from './${publicIconId}.js';\nexport type { ${componentName}Props } from './${publicIconId}.js';`)
-    .join('\n');
-
-  fs.appendFileSync(reactIconsIndexPath, `${jsExports}\n`, 'utf8');
-  fs.appendFileSync(reactIconsIndexTypesPath, `${typeExports}\n`, 'utf8');
+  return `export type ${typeName} =\n${values.map((value) => `  | '${value}'`).join('\n')};`;
 }
 
-function types() {
-  const iconsIndexContent = `// Auto-generated file - Central export point for all icons
-// Re-export all icon dictionaries and names from all packs
-export { coreIcons, coreIconNames } from '../core/icons.js';
-export { neoIcons, neoIconNames } from '../neo/icons.js';
-export { minaIcons, minaIconNames } from '../mina/icons.js';
+function buildCorePackage(icons, packData) {
+  const distDir = path.join(CONFIG.packagesDir, 'icons', 'dist');
+  cleanDir(distDir);
 
-// Export types
-export type { CoreIconName } from '../core/types';
-export type { NeoIconName } from '../neo/types';
-export type { MinaIconName } from '../mina/types';
+  const svgExports = [];
+  const svgTypes = [];
+  const packDictionaryExports = [];
+  const packDictionaryTypes = [];
+  const nameExports = [];
+  const nameTypes = [];
+  const typeUnions = [];
+  const packNames = {};
+  const availableVariants = new Set();
 
-// Import types to use them locally
-import type { CoreIconName } from '../core/types';
-import type { NeoIconName } from '../neo/types';
-import type { MinaIconName } from '../mina/types';
+  for (const icon of icons) {
+    writeFile(
+      path.join(distDir, 'svg', `${icon.publicFileName}.js`),
+      `export const ${icon.componentName} = '${escapeJsString(icon.svg)}';\nexport default ${icon.componentName};\n`
+    );
+    writeFile(
+      path.join(distDir, 'svg', `${icon.publicFileName}.d.ts`),
+      `export declare const ${icon.componentName}: string;\nexport default ${icon.componentName};\n`
+    );
 
-// Combined icon pack type
-export type AllIconNames = CoreIconName | NeoIconName | MinaIconName;
-export type IconPack = 'core' | 'neo' | 'mina';
-export type IconVariant = 'light' | 'solid' | 'regular' | 'thin';
+    svgExports.push(`export { ${icon.componentName}, default as ${icon.componentName}Svg } from './${icon.publicFileName}.js';`);
+    svgTypes.push(`export { ${icon.componentName}, default as ${icon.componentName}Svg } from './${icon.publicFileName}.js';`);
+    availableVariants.add(icon.variant);
+
+    if (!packNames[icon.pack]) {
+      packNames[icon.pack] = new Set();
+    }
+    packNames[icon.pack].add(icon.name);
+  }
+
+  for (const pack of CONFIG.packs) {
+    const variants = packData[pack] ?? {};
+    const packImports = [];
+    const variantObjects = [];
+
+    for (const [variant, variantIcons] of Object.entries(variants)) {
+      packImports.push(...variantIcons.map((icon) => `import { ${icon.componentName} } from './${icon.publicFileName}.js';`));
+      variantObjects.push(`  ${variant}: {\n${variantIcons.map((icon) => `    '${icon.name}': ${icon.componentName}`).join(',\n')}\n  }`);
+    }
+
+    const packConst = `${pack}Icons`;
+    writeFile(
+      path.join(distDir, 'svg', `${pack}.js`),
+      `${packImports.join('\n')}\n\nexport const ${packConst} = {\n${variantObjects.join(',\n')}\n};\n`
+    );
+    writeFile(
+      path.join(distDir, 'svg', `${pack}.d.ts`),
+      `export declare const ${packConst}: Record<string, Record<string, string>>;\n`
+    );
+
+    packDictionaryExports.push(`export { ${packConst} } from './${pack}.js';`);
+    packDictionaryTypes.push(`export { ${packConst} } from './${pack}.js';`);
+
+    const iconNames = Array.from(packNames[pack] ?? []).sort((a, b) => a.localeCompare(b));
+    const namesConst = `${pack}IconNames`;
+    writeFile(
+      path.join(distDir, 'names', `${pack}.js`),
+      `export const ${namesConst} = [\n${iconNames.map((name) => `  '${name}'`).join(',\n')}\n];\n`
+    );
+    writeFile(
+      path.join(distDir, 'names', `${pack}.d.ts`),
+      `import type { ${capitalize(pack)}IconName } from '../types/index.js';\n\nexport declare const ${namesConst}: readonly ${capitalize(pack)}IconName[];\n`
+    );
+
+    nameExports.push(`export { ${namesConst} } from './${pack}.js';`);
+    nameTypes.push(`export { ${namesConst} } from './${pack}.js';`);
+    typeUnions.push(createTypeUnion(`${capitalize(pack)}IconName`, iconNames));
+  }
+
+  writeFile(
+    path.join(distDir, 'svg', 'index.js'),
+    `${svgExports.join('\n')}\n${packDictionaryExports.join('\n')}\n`
+  );
+  writeFile(
+    path.join(distDir, 'svg', 'index.d.ts'),
+    `${svgTypes.join('\n')}\n${packDictionaryTypes.join('\n')}\n`
+  );
+
+  writeFile(
+    path.join(distDir, 'names', 'index.js'),
+    `${nameExports.join('\n')}\n`
+  );
+  writeFile(
+    path.join(distDir, 'names', 'index.d.ts'),
+    `${nameTypes.join('\n')}\n`
+  );
+
+  const variantUnion = createTypeUnion('IconVariant', CONFIG.variants);
+  const typeContent = `${typeUnions.join('\n\n')}\n\nexport type AllIconNames = ${CONFIG.packs.map((pack) => `${capitalize(pack)}IconName`).join(' | ')};\nexport type IconPack = ${CONFIG.packs.map((pack) => `'${pack}'`).join(' | ')};\n${variantUnion}\n`;
+
+  writeFile(path.join(distDir, 'types', 'index.js'), 'export {};\n');
+  writeFile(path.join(distDir, 'types', 'index.d.ts'), typeContent);
+
+  const rootImports = CONFIG.packs.map((pack) => `import { ${pack}Icons } from './svg/${pack}.js';`).join('\n');
+  const rootExports = CONFIG.packs.map((pack) => `export { ${pack}Icons } from './svg/${pack}.js';`).join('\n');
+  const rootNames = CONFIG.packs.map((pack) => `export { ${pack}IconNames } from './names/${pack}.js';`).join('\n');
+  const rootIconMap = CONFIG.packs.map((pack) => `  ${pack}: ${pack}Icons`).join(',\n');
+
+  writeFile(
+    path.join(distDir, 'index.js'),
+    `${rootImports}\n\nconst iconCollections = {\n${rootIconMap}\n};\n\nexport function getIconSvg(pack, name, variant = 'light') {\n  return iconCollections[pack]?.[variant]?.[name];\n}\n\n${rootExports}\n${rootNames}\n`
+  );
+  writeFile(
+    path.join(distDir, 'index.d.ts'),
+    `import type { AllIconNames, IconPack, IconVariant } from './types/index.js';\nexport type { AllIconNames, CoreIconName, IconPack, IconVariant, MinaIconName, NeoIconName } from './types/index.js';\nexport { coreIconNames, minaIconNames, neoIconNames } from './names/index.js';\nexport { coreIcons, minaIcons, neoIcons } from './svg/index.js';\nexport declare function getIconSvg(pack: IconPack, name: AllIconNames, variant?: IconVariant): string | undefined;\n`
+  );
+}
+
+function createPackIconRuntime() {
+  return `import React from 'react';
+
+export function createPackIcon(iconMap, defaultVariant = 'light') {
+  return function ZPackIcon({ name, variant = defaultVariant, size = 24, color, style, ...props }) {
+    const Icon = iconMap[variant]?.[name];
+
+    if (!Icon) {
+      return null;
+    }
+
+    return React.createElement(Icon, { size, color, style, ...props });
+  };
+}
 `;
+}
 
-  const iconsDir = path.join(CONFIG.srcDir, 'icons');
-  ensureDir(iconsDir);
-  fs.writeFileSync(path.join(iconsDir, 'index.ts'), iconsIndexContent, 'utf8');
+function createPackIconRuntimeTypes() {
+  return `import React from 'react';
+import type { IconVariant } from '@zcorvus/icons/types';
 
-  console.log('   ✅ General types');
-  console.log('   ✅ Central icons index');
+export interface PackIconProps<TName extends string> extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+  name: TName;
+  variant?: IconVariant;
+  size?: string | number;
+}
+
+export declare function createPackIcon<TName extends string>(
+  iconMap: Record<string, Record<string, React.FC<Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> & { size?: string | number }>>>,
+  defaultVariant?: IconVariant
+): React.FC<PackIconProps<TName>>;
+`;
+}
+
+function buildReactPackage(icons, packData) {
+  const distDir = path.join(CONFIG.packagesDir, 'icons-react', 'dist');
+  cleanDir(distDir);
+
+  const rootExports = [`export { ZIcon } from './z-icon.js';`];
+  const rootTypes = [`export { ZIcon } from './z-icon.js';`, `export type { ZIconProps } from './z-icon.js';`];
+  const allPackImports = [];
+  const zIconMaps = [];
+  const packIndexExports = [];
+  const packIndexTypes = [];
+
+  for (const icon of icons) {
+    writeFile(
+      path.join(distDir, `${icon.publicFileName}.js`),
+      createReactComponent(icon.svg, icon.componentName, icon.variant)
+    );
+    writeFile(
+      path.join(distDir, `${icon.publicFileName}.d.ts`),
+      createReactComponentTypes(icon.componentName)
+    );
+
+    rootExports.push(`export { ${icon.componentName} } from './${icon.publicFileName}.js';`);
+    rootTypes.push(`export { ${icon.componentName} } from './${icon.publicFileName}.js';`);
+    rootTypes.push(`export type { ${icon.componentName}Props } from './${icon.publicFileName}.js';`);
+  }
+
+  writeFile(path.join(distDir, 'packs', 'create-pack-icon.js'), createPackIconRuntime());
+  writeFile(path.join(distDir, 'packs', 'create-pack-icon.d.ts'), createPackIconRuntimeTypes());
+
+  for (const pack of CONFIG.packs) {
+    const variants = packData[pack] ?? {};
+
+    for (const [variant, variantIcons] of Object.entries(variants)) {
+      const wrapperName = `Z${capitalize(pack)}${getPublicVariantSuffix(variant)}`;
+      const mapName = `${pack}${getPublicVariantSuffix(variant) || 'Light'}IconMap`;
+      const fileName = `${pack}${variant === 'light' ? '' : `-${variant}`}`;
+      const imports = variantIcons.map((icon) => `import { ${icon.componentName} } from '../${icon.publicFileName}.js';`);
+      const iconMap = `export const ${mapName} = {\n  ${variant}: {\n${variantIcons.map((icon) => `    '${icon.name}': ${icon.componentName}`).join(',\n')}\n  }\n};`;
+
+      writeFile(
+        path.join(distDir, 'packs', `${fileName}.js`),
+        `import { createPackIcon } from './create-pack-icon.js';\n${imports.join('\n')}\n\n${iconMap}\n\nexport const ${wrapperName} = createPackIcon(${mapName}, '${variant}');\nexport default ${wrapperName};\n`
+      );
+      writeFile(
+        path.join(distDir, 'packs', `${fileName}.d.ts`),
+        `import React from 'react';\nimport type { ${capitalize(pack)}IconName } from '@zcorvus/icons/types';\nimport type { PackIconProps } from './create-pack-icon.js';\n\nexport declare const ${mapName}: Record<string, Record<string, React.FC<React.SVGProps<SVGSVGElement>>>>;\nexport type ${wrapperName}Props = PackIconProps<${capitalize(pack)}IconName>;\nexport declare const ${wrapperName}: React.FC<${wrapperName}Props>;\nexport default ${wrapperName};\n`
+      );
+
+      packIndexExports.push(`export { ${wrapperName} } from './${fileName}.js';`);
+      packIndexTypes.push(`export { ${wrapperName} } from './${fileName}.js';`);
+      packIndexTypes.push(`export type { ${wrapperName}Props } from './${fileName}.js';`);
+      allPackImports.push(`import { ${mapName} } from './packs/${fileName}.js';`);
+      zIconMaps.push({ pack, variant, mapName });
+    }
+  }
+
+  writeFile(
+    path.join(distDir, 'packs', 'index.js'),
+    `${packIndexExports.join('\n')}\n`
+  );
+  writeFile(
+    path.join(distDir, 'packs', 'index.d.ts'),
+    `${packIndexTypes.join('\n')}\n`
+  );
+
+  const zIconCollection = CONFIG.packs.map((pack) => {
+    const entries = zIconMaps
+      .filter((map) => map.pack === pack)
+      .map((map) => `    ${map.variant}: ${map.mapName}.${map.variant}`)
+      .join(',\n');
+
+    return `  ${pack}: {\n${entries}\n  }`;
+  }).join(',\n');
+
+  writeFile(
+    path.join(distDir, 'z-icon.js'),
+    `import React from 'react';\n${allPackImports.join('\n')}\n\nconst iconCollections = {\n${zIconCollection}\n};\n\nexport function ZIcon({ type, name, variant = 'light', size = 24, color, style, ...props }) {\n  const Icon = iconCollections[type]?.[variant]?.[name];\n\n  if (!Icon) {\n    return null;\n  }\n\n  return React.createElement(Icon, { size, color, style, ...props });\n}\n`
+  );
+  writeFile(
+    path.join(distDir, 'z-icon.d.ts'),
+    `import React from 'react';\nimport type { AllIconNames, IconPack, IconVariant } from '@zcorvus/icons/types';\n\nexport interface ZIconProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {\n  type: IconPack;\n  name: AllIconNames;\n  variant?: IconVariant;\n  size?: string | number;\n}\n\nexport declare function ZIcon(props: ZIconProps): React.ReactElement | null;\n`
+  );
+
+  writeFile(path.join(distDir, 'index.js'), `${rootExports.join('\n')}\n`);
+  writeFile(path.join(distDir, 'index.d.ts'), `${rootTypes.join('\n')}\n`);
 }
 
 function main() {
-  console.log('\n🚀 Starting build process... \n');
-  cleanDist();
-  CONFIG.packs.forEach(pack => processPack(pack));
-  types();
-  console.log('\n🎉 Build process completed.\n');
+  console.log('\nStarting ZCorvus icons build...\n');
+  const { icons, packData } = getIconFiles();
+
+  buildCorePackage(icons, packData);
+  buildReactPackage(icons, packData);
+
+  for (const pack of CONFIG.packs) {
+    const total = Object.values(packData[pack] ?? {}).reduce((sum, variantIcons) => sum + variantIcons.length, 0);
+    const variants = Object.keys(packData[pack] ?? {}).length;
+    console.log(`Pack processed: ${pack} | ${total} icons across ${variants} variant(s)`);
+  }
+
+  console.log('\nBuild completed.\n');
 }
 
 main();

@@ -1,1 +1,0 @@
-export const Percentage = '<svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 5 5 19m12.5 1c1.667 0 2.5-.857 2.5-3s-.833-3-2.5-3-2.5.857-2.5 3 .833 3 2.5 3m-11-10C8.167 10 9 9.143 9 7s-.833-3-2.5-3S4 4.857 4 7s.833 3 2.5 3"/></svg>'

@@ -1,79 +1,85 @@
-# Z Icons
+# ZCorvus Icons
 
-Framework-agnostic SVG icon package with optional React wrappers and a browser-only Web Component registration entry.
+Framework-agnostic SVG icons with a dedicated React adapter.
 
 Browse all available icons at [icons.zcorvus.com](https://icons.zcorvus.com/).
 
-## React
+## Packages
 
-Use prefixed icon components when you want the smallest React imports and clear editor autocomplete:
+```bash
+pnpm add @zcorvus/icons
+pnpm add @zcorvus/icons-react
+```
+
+Use `@zcorvus/icons` when you need raw SVG strings, icon names, types, or framework-agnostic helpers.
+
+```ts
+import { MinaCheck } from '@zcorvus/icons/svg';
+import MinaCheckSvg from '@zcorvus/icons/svg/mina-check';
+import { minaIconNames } from '@zcorvus/icons/names';
+import { getIconSvg } from '@zcorvus/icons';
+import type { MinaIconName, AllIconNames } from '@zcorvus/icons/types';
+```
+
+Use `@zcorvus/icons-react` for React components.
 
 ```tsx
-import { MinaSearch, MinaSearchSolid } from '@zcorvus/z-icons/react/icons';
+import { MinaCheck, MinaCheckSolid } from '@zcorvus/icons-react';
 
-export function SearchActions() {
+export function StatusIcon() {
   return (
     <>
-      <MinaSearch />
-      <MinaSearchSolid />
+      <MinaCheck className="size-4" />
+      <MinaCheckSolid size={16} />
     </>
   );
 }
 ```
 
-The component name format is `{Pack}{IconName}` or `{Pack}{IconName}{Variant}`:
-
-- `MinaSearch`
-- `MinaSearchSolid`
-- `NeoSun`
-- `CoreSun`
-
-Use the general component when the pack is dynamic:
+The component format is `{Pack}{IconName}` for the default `light` variant and `{Pack}{IconName}{Variant}` for other variants.
 
 ```tsx
-import { ZIcon } from '@zcorvus/z-icons/react';
-
-export function SearchIcon() {
-  return <ZIcon type="mina" name="search" />;
-}
+import { MinaSearch, MinaSearchSolid, CoreSun, NeoSun } from '@zcorvus/icons-react';
 ```
 
-Use pack-specific components when you know the pack and variant. These keep the same `name` ergonomics while avoiding imports for unrelated packs:
+## React Pack Wrappers
+
+Use pack wrappers when the icon name is dynamic and you want to avoid loading unrelated packs.
 
 ```tsx
-import { ZMina } from '@zcorvus/z-icons/react/mina';
-import { ZMinaSolid } from '@zcorvus/z-icons/react/mina-solid';
+import { ZMina, ZMinaSolid, ZCore, ZNeo } from '@zcorvus/icons-react/packs';
 
 export function SearchActions() {
   return (
     <>
       <ZMina name="search" />
       <ZMinaSolid name="search" />
+      <ZCore name="sun" />
+      <ZNeo name="sun" />
     </>
   );
 }
 ```
 
-Available optimized React entries:
+Use `ZIcon` only when both the pack and icon name are dynamic. This entry prioritizes ergonomics and can include all supported packs.
 
-- `@zcorvus/z-icons/react/icons` -> prefixed icon components such as `MinaSearch`
-- `@zcorvus/z-icons/react/core` -> `ZCore`
-- `@zcorvus/z-icons/react/neo` -> `ZNeo`
-- `@zcorvus/z-icons/react/mina` -> `ZMina`
-- `@zcorvus/z-icons/react/mina-solid` -> `ZMinaSolid`
+```tsx
+import { ZIcon } from '@zcorvus/icons-react';
 
-## Web Component
-
-Import the registration entry only in browser code:
-
-```ts
-import '@zcorvus/z-icons/register';
+export function DynamicIcon() {
+  return <ZIcon type="mina" name="search" variant="solid" />;
+}
 ```
 
-Then use the element:
+## Migration
 
-```html
-<z-icon type="mina" name="search" variant="solid" size="24"></z-icon>
-```
+This version intentionally replaces the previous `@zcorvus/z-icons` API.
 
-The root package import is SSR-safe and does not register the Web Component by itself.
+| Old import | New import |
+| --- | --- |
+| `@zcorvus/z-icons/react/icons` | `@zcorvus/icons-react` |
+| `@zcorvus/z-icons/react/icons/mina-check` | `@zcorvus/icons-react/mina-check` |
+| `@zcorvus/z-icons/react/mina` | `@zcorvus/icons-react/packs` |
+| `@zcorvus/z-icons/icons` | `@zcorvus/icons/svg`, `@zcorvus/icons/names`, `@zcorvus/icons/types` |
+
+Vue, Astro, and Web Component adapters are planned as separate future packages.

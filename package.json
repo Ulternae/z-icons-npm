@@ -1,99 +1,21 @@
 {
-  "name": "@zcorvus/z-icons",
+  "name": "zcorvus-icons-workspace",
   "version": "0.1.0",
-  "description": "Framework-agnostic SVG icon library with React wrappers and an optional Web Component.",
-  "author": "Ulqernesh Karvenae",
-  "license": "UNLICENSED",
+  "private": true,
   "type": "module",
-  "main": "dist/icon.js",
-  "types": "dist/icon.d.ts",
-  "files": [
-    "dist"
-  ],
-  "sideEffects": [
-    "./dist/register.js"
-  ],
-  "private": false,
-  "publishConfig": {
-    "access": "public"
-  },
-  "exports": {
-    ".": {
-      "import": "./dist/icon.js",
-      "types": "./dist/icon.d.ts"
-    },
-    "./register": {
-      "import": "./dist/register.js",
-      "types": "./dist/register.d.ts"
-    },
-    "./icons": {
-      "import": "./dist/icons/index.js",
-      "types": "./dist/icons/index.d.ts"
-    },
-    "./core": {
-      "import": "./dist/core/index.js",
-      "types": "./dist/core/index.d.ts"
-    },
-    "./neo": {
-      "import": "./dist/neo/index.js",
-      "types": "./dist/neo/index.d.ts"
-    },
-    "./mina": {
-      "import": "./dist/mina/index.js",
-      "types": "./dist/mina/index.d.ts"
-    },
-    "./react": {
-      "import": "./dist/react/index.js",
-      "types": "./dist/react/index.d.ts"
-    },
-    "./react/icons": {
-      "import": "./dist/react/icons/index.js",
-      "types": "./dist/react/icons/index.d.ts"
-    },
-    "./react/icons/*": {
-      "import": "./dist/react/icons/*.js",
-      "types": "./dist/react/icons/*.d.ts"
-    },
-    "./react/core": {
-      "import": "./dist/react/core.js",
-      "types": "./dist/react/core.d.ts"
-    },
-    "./react/neo": {
-      "import": "./dist/react/neo.js",
-      "types": "./dist/react/neo.d.ts"
-    },
-    "./react/mina": {
-      "import": "./dist/react/mina.js",
-      "types": "./dist/react/mina.d.ts"
-    },
-    "./react/mina-solid": {
-      "import": "./dist/react/mina-solid.js",
-      "types": "./dist/react/mina-solid.d.ts"
-    }
-  },
   "scripts": {
+    "build": "node scripts/build.js",
     "sprites": "node scripts/build.js",
-    "bundle": "tsup",
-    "build": "npm run sprites && npm run bundle",
-    "prepublishOnly": "npm run build"
-  },
-  "peerDependencies": {
-    "react": "^18.0.0 || ^19.0.0",
-    "react-dom": "^18.0.0 || ^19.0.0"
-  },
-  "peerDependenciesMeta": {
-    "react": {
-      "optional": true
-    },
-    "react-dom": {
-      "optional": true
-    }
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
+    "@zcorvus/icons": "workspace:*",
+    "@zcorvus/icons-react": "workspace:*",
     "@types/react": "^18.3.27",
     "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "svgo": "^3.0.0",
-    "tsup": "^8.5.1",
     "typescript": "^5.9.3"
   }
 }
