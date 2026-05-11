@@ -76,6 +76,80 @@ export function DynamicIcon() {
 
 `ZIcon` prioritizes ergonomics and can include all supported packs. Prefer individual components or pack wrappers when bundle size is critical.
 
+## Custom Dynamic Icons
+
+Use `createZIcon` when the icon name or pack is dynamic, but you only want to include a controlled subset of icons.
+
+```tsx
+import { createZIcon } from '@zcorvus/icons-react/create';
+import {
+  CoreAnchor,
+  CoreLanguage,
+  MinaAnchor,
+  MinaAnchorSolid,
+  MinaLanguage,
+} from '@zcorvus/icons-react';
+
+const AppIcon = createZIcon({
+  core: {
+    light: {
+      anchor: CoreAnchor,
+      language: CoreLanguage,
+    },
+  },
+  mina: {
+    light: {
+      anchor: MinaAnchor,
+      language: MinaLanguage,
+    },
+    solid: {
+      anchor: MinaAnchorSolid,
+    },
+  },
+});
+
+export function Example() {
+  return <AppIcon type="mina" name="anchor" variant="solid" className="size-4" />;
+}
+```
+
+For convenience, generated pack data is available:
+
+```tsx
+import { createZIcon } from '@zcorvus/icons-react/create';
+import {
+  coreIcons,
+  minaIcons,
+  minaIconsSolid,
+} from '@zcorvus/icons-react/packs-data';
+
+const AppIcon = createZIcon({
+  core: {
+    light: coreIcons,
+  },
+  mina: {
+    light: minaIcons,
+    solid: minaIconsSolid,
+  },
+});
+```
+
+The exports without a suffix represent the default `light` variant. Non-default variants add a suffix, matching component names like `MinaSearch` and `MinaSearchSolid`.
+
+`createZIcon` supports controlled fallback behavior:
+
+```tsx
+const AppIcon = createZIcon(registry, {
+  defaultVariant: 'light',
+  fallbackVariant: 'light',
+  fallbackPack: 'core',
+  fallbackIcon: CoreAnchor,
+  missing: 'warn',
+});
+```
+
+`missing` can be `null`, `warn`, or `error`. By default it is `null`.
+
 ## Core Types
 
 Icon name types live in the framework-agnostic core package:

@@ -1,6 +1,6 @@
 {
   "name": "@zcorvus/icons-react",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "React components for ZCorvus icons.",
   "author": "Ulqernesh Karvenae",
   "license": "UNLICENSED",
@@ -8,7 +8,8 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "sideEffects": false,
   "private": false,
@@ -24,6 +25,14 @@
       "types": "./dist/packs/index.d.ts",
       "import": "./dist/packs/index.js"
     },
+    "./create": {
+      "types": "./dist/create.d.ts",
+      "import": "./dist/create.js"
+    },
+    "./packs-data": {
+      "types": "./dist/packs-data/index.d.ts",
+      "import": "./dist/packs-data/index.js"
+    },
     "./*": {
       "types": "./dist/*.d.ts",
       "import": "./dist/*.js"
@@ -36,6 +45,12 @@
       ],
       "packs": [
         "dist/packs/index.d.ts"
+      ],
+      "create": [
+        "dist/create.d.ts"
+      ],
+      "packs-data": [
+        "dist/packs-data/index.d.ts"
       ]
     }
   },

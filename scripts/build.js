@@ -353,6 +353,171 @@ export declare function createPackIcon<TName extends string>(
 `;
 }
 
+function createZIconRuntime() {
+  return `import React from 'react';
+
+const DEFAULT_OPTIONS = {
+  defaultVariant: 'light',
+  fallbackVariant: undefined,
+  fallbackPack: undefined,
+  fallbackIcon: undefined,
+  inputVariant: undefined,
+  missing: 'null',
+};
+
+function isReactComponent(value) {
+  return typeof value === 'function' || (typeof value === 'object' && value !== null && '$$typeof' in value);
+}
+
+function normalizeRegistry(registry, inputVariant) {
+  if (!inputVariant) {
+    return registry;
+  }
+
+  return Object.fromEntries(
+    Object.entries(registry).map(([pack, packIcons]) => [
+      pack,
+      {
+        [inputVariant]: packIcons,
+      },
+    ])
+  );
+}
+
+function resolveIcon(registry, type, name, variant, fallbackVariant, fallbackPack) {
+  const candidates = [
+    [type, variant],
+    fallbackVariant ? [type, fallbackVariant] : undefined,
+    fallbackPack ? [fallbackPack, variant] : undefined,
+    fallbackPack && fallbackVariant ? [fallbackPack, fallbackVariant] : undefined,
+  ].filter(Boolean);
+
+  for (const [pack, currentVariant] of candidates) {
+    const Icon = registry[pack]?.[currentVariant]?.[name];
+
+    if (isReactComponent(Icon)) {
+      return Icon;
+    }
+  }
+
+  return undefined;
+}
+
+function handleMissingIcon({ type, name, variant, missing }) {
+  const message = \`[z-icons] Missing icon: type="\${type}", name="\${name}", variant="\${variant}".\`;
+
+  if (missing === 'error') {
+    throw new Error(message);
+  }
+
+  const isProduction = typeof process !== 'undefined' && process.env?.NODE_ENV === 'production';
+
+  if (missing === 'warn' && !isProduction) {
+    console.warn(message);
+  }
+
+  return null;
+}
+
+export function createZIcon(registry, options = {}) {
+  const config = { ...DEFAULT_OPTIONS, ...options };
+  const normalizedRegistry = normalizeRegistry(registry, config.inputVariant);
+
+  return function CreatedZIcon({
+    type,
+    name,
+    variant = config.defaultVariant,
+    size = 24,
+    color,
+    style,
+    ...props
+  }) {
+    const Icon = resolveIcon(
+      normalizedRegistry,
+      type,
+      name,
+      variant,
+      config.fallbackVariant,
+      config.fallbackPack
+    );
+
+    if (Icon) {
+      return React.createElement(Icon, { size, color, style, ...props });
+    }
+
+    if (config.fallbackIcon) {
+      return React.createElement(config.fallbackIcon, { size, color, style, ...props });
+    }
+
+    return handleMissingIcon({ type, name, variant, missing: config.missing });
+  };
+}
+`;
+}
+
+function createZIconRuntimeTypes() {
+  return `import React from 'react';
+import type { IconPack, IconVariant } from '@zcorvus/icons/types';
+
+export type IconComponent = React.FC<Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> & {
+  size?: string | number;
+}>;
+
+export type IconVariantMap = Record<string, IconComponent>;
+export type IconPackMap = Record<string, IconVariantMap>;
+export type IconRegistry = Record<string, IconPackMap>;
+export type FlatIconRegistry = Record<string, IconVariantMap>;
+export type MissingIconBehavior = 'null' | 'warn' | 'error';
+
+type RegistryPackName<TRegistry> = Extract<keyof TRegistry, string>;
+type RegistryVariantName<TRegistry> = TRegistry extends Record<string, infer TPack>
+  ? Extract<keyof TPack, string>
+  : string;
+type RegistryIconName<TRegistry> = TRegistry extends Record<string, infer TPack>
+  ? TPack extends Record<string, infer TVariant>
+    ? Extract<keyof TVariant, string>
+    : string
+  : string;
+type FlatPackName<TRegistry> = Extract<keyof TRegistry, string>;
+type FlatIconName<TRegistry> = TRegistry extends Record<string, infer TPack>
+  ? Extract<keyof TPack, string>
+  : string;
+
+export interface CreateZIconOptions {
+  defaultVariant?: IconVariant | string;
+  fallbackVariant?: IconVariant | string;
+  fallbackPack?: IconPack | string;
+  fallbackIcon?: IconComponent;
+  inputVariant?: IconVariant | string;
+  missing?: MissingIconBehavior;
+}
+
+export type CreatedZIconProps<TRegistry> = Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> & {
+  type: RegistryPackName<TRegistry>;
+  name: RegistryIconName<TRegistry>;
+  variant?: RegistryVariantName<TRegistry> | IconVariant | string;
+  size?: string | number;
+};
+
+export type CreatedFlatZIconProps<TRegistry> = Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> & {
+  type: FlatPackName<TRegistry>;
+  name: FlatIconName<TRegistry>;
+  variant?: IconVariant | string;
+  size?: string | number;
+};
+
+export declare function createZIcon<const TRegistry extends IconRegistry>(
+  registry: TRegistry,
+  options?: CreateZIconOptions
+): React.FC<CreatedZIconProps<TRegistry>>;
+
+export declare function createZIcon<const TRegistry extends FlatIconRegistry>(
+  registry: TRegistry,
+  options: CreateZIconOptions & { inputVariant: IconVariant | string }
+): React.FC<CreatedFlatZIconProps<TRegistry>>;
+`;
+}
+
 function buildReactPackage(icons, packData) {
   const distDir = path.join(CONFIG.packagesDir, 'icons-react', 'dist');
   cleanDir(distDir);
@@ -363,6 +528,8 @@ function buildReactPackage(icons, packData) {
   const zIconMaps = [];
   const packIndexExports = [];
   const packIndexTypes = [];
+  const packsDataExports = [];
+  const packsDataTypes = [];
 
   for (const icon of icons) {
     writeFile(
@@ -409,6 +576,30 @@ function buildReactPackage(icons, packData) {
     }
   }
 
+  for (const pack of CONFIG.packs) {
+    const variants = packData[pack] ?? {};
+
+    for (const [variant, variantIcons] of Object.entries(variants)) {
+      const suffix = getPublicVariantSuffix(variant);
+      const dataName = `${pack}Icons${suffix}`;
+      const fileName = `${pack}${variant === 'light' ? '' : `-${variant}`}`;
+      const imports = variantIcons.map((icon) => `import { ${icon.componentName} } from '../${icon.publicFileName}.js';`);
+      const iconMap = `export const ${dataName} = {\n${variantIcons.map((icon) => `  '${icon.name}': ${icon.componentName}`).join(',\n')}\n};`;
+
+      writeFile(
+        path.join(distDir, 'packs-data', `${fileName}.js`),
+        `${imports.join('\n')}\n\n${iconMap};\n`
+      );
+      writeFile(
+        path.join(distDir, 'packs-data', `${fileName}.d.ts`),
+        `import type { IconComponent } from '../create.js';\n\nexport declare const ${dataName}: {\n${variantIcons.map((icon) => `  readonly '${icon.name}': IconComponent;`).join('\n')}\n};\n`
+      );
+
+      packsDataExports.push(`export { ${dataName} } from './${fileName}.js';`);
+      packsDataTypes.push(`export { ${dataName} } from './${fileName}.js';`);
+    }
+  }
+
   writeFile(
     path.join(distDir, 'packs', 'index.js'),
     `${packIndexExports.join('\n')}\n`
@@ -417,6 +608,16 @@ function buildReactPackage(icons, packData) {
     path.join(distDir, 'packs', 'index.d.ts'),
     `${packIndexTypes.join('\n')}\n`
   );
+  writeFile(
+    path.join(distDir, 'packs-data', 'index.js'),
+    `${packsDataExports.join('\n')}\n`
+  );
+  writeFile(
+    path.join(distDir, 'packs-data', 'index.d.ts'),
+    `${packsDataTypes.join('\n')}\n`
+  );
+  writeFile(path.join(distDir, 'create.js'), createZIconRuntime());
+  writeFile(path.join(distDir, 'create.d.ts'), createZIconRuntimeTypes());
 
   const zIconCollection = CONFIG.packs.map((pack) => {
     const entries = zIconMaps
