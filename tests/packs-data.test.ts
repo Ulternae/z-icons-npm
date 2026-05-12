@@ -1,0 +1,25 @@
+import { describe, expect, it } from 'vitest';
+import {
+  coreIcons,
+  minaIcons,
+  minaIconsSolid,
+  neoIcons,
+} from '@zcorvus/icons-react/packs-data';
+import {
+  CoreSun,
+  MinaCheck,
+  MinaCheckSolid,
+  NeoSun,
+} from '@zcorvus/icons-react';
+
+describe('packs-data', () => {
+  it('exports default light variant maps without a suffix', () => {
+    expect(coreIcons.sun).toBe(CoreSun);
+    expect(neoIcons.sun).toBe(NeoSun);
+    expect(minaIcons.check).toBe(MinaCheck);
+  });
+
+  it('exports non-default variant maps with a variant suffix', () => {
+    expect(minaIconsSolid.check).toBe(MinaCheckSolid);
+  });
+});
