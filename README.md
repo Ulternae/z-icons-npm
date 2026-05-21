@@ -9,6 +9,7 @@ Browse all available icons at [icons.zcorvus.com](https://icons.zcorvus.com/).
 ```bash
 pnpm add @zcorvus/icons
 pnpm add @zcorvus/icons-react
+pnpm add @zcorvus/icons-web
 ```
 
 Use `@zcorvus/icons` when you need raw SVG strings, icon names, types, or framework-agnostic helpers.
@@ -71,6 +72,54 @@ export function DynamicIcon() {
 }
 ```
 
+## Web Components
+
+Use `@zcorvus/icons-web` when you need framework-agnostic custom elements.
+
+```html
+<script type="module" src="https://cdn.jsdelivr.net/npm/@zcorvus/icons-web/register"></script>
+
+<z-icon type="mina" name="search"></z-icon>
+<z-icon type="mina" name="search" variant="solid"></z-icon>
+```
+
+Use pack entries when you want to avoid loading unrelated packs.
+
+```html
+<script type="module" src="https://cdn.jsdelivr.net/npm/@zcorvus/icons-web/register-mina"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@zcorvus/icons-web/register-mina-solid"></script>
+
+<z-mina name="search"></z-mina>
+<z-mina-solid name="search"></z-mina-solid>
+```
+
+For the smallest dynamic registry, create your own element.
+
+```ts
+import { createZIconElement } from '@zcorvus/icons-web/create';
+import { MinaSearch, CoreSun } from '@zcorvus/icons/svg';
+
+customElements.define(
+  'app-icon',
+  createZIconElement({
+    mina: {
+      light: {
+        search: MinaSearch,
+      },
+    },
+    core: {
+      light: {
+        sun: CoreSun,
+      },
+    },
+  })
+);
+```
+
+```html
+<app-icon type="mina" name="search"></app-icon>
+```
+
 ## Migration
 
 This version intentionally replaces the previous `@zcorvus/z-icons` API.
@@ -81,5 +130,6 @@ This version intentionally replaces the previous `@zcorvus/z-icons` API.
 | `@zcorvus/z-icons/react/icons/mina-check` | `@zcorvus/icons-react/mina-check` |
 | `@zcorvus/z-icons/react/mina` | `@zcorvus/icons-react/packs` |
 | `@zcorvus/z-icons/icons` | `@zcorvus/icons/svg`, `@zcorvus/icons/names`, `@zcorvus/icons/types` |
+| `<z-icon>` from `@zcorvus/z-icons` | `@zcorvus/icons-web/register` |
 
-Vue, Astro, and Web Component adapters are planned as separate future packages.
+Vue and Astro adapters are planned as separate future packages.

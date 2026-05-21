@@ -50,4 +50,24 @@ describe('public package imports', () => {
 
     expect(output).toBe('ok');
   }, 70000);
+
+  it('loads web package entrypoints with Node ESM resolution', () => {
+    const output = runNodeImport(`
+      const root = await import('@zcorvus/icons-web');
+      const create = await import('@zcorvus/icons-web/create');
+      const register = await import('@zcorvus/icons-web/register');
+      const registerCore = await import('@zcorvus/icons-web/register-core');
+      const registerNeo = await import('@zcorvus/icons-web/register-neo');
+
+      if (typeof root.createZIconElement !== 'function') throw new Error('missing createZIconElement root export');
+      if (typeof create.defineZIconElement !== 'function') throw new Error('missing defineZIconElement');
+      if (!register.zIconRegistry) throw new Error('missing zIconRegistry');
+      if (!registerCore.coreIcons?.sun) throw new Error('missing coreIcons web registry');
+      if (!registerNeo.neoIcons?.sun) throw new Error('missing neoIcons web registry');
+
+      console.log('ok');
+    `);
+
+    expect(output).toBe('ok');
+  }, 70000);
 });

@@ -17,6 +17,7 @@
     "@types/react": "^18.3.27",
     "@zcorvus/icons": "workspace:*",
     "@zcorvus/icons-react": "workspace:*",
+    "@zcorvus/icons-web": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "svgo": "^3.0.0",

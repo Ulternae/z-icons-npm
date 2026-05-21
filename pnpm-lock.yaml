@@ -20,6 +20,9 @@ importers:
       '@zcorvus/icons-react':
         specifier: workspace:*
         version: link:packages/icons-react
+      '@zcorvus/icons-web':
+        specifier: workspace:*
+        version: link:packages/icons-web
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -49,6 +52,12 @@ importers:
       react-dom:
         specifier: ^18.0.0 || ^19.0.0
         version: 18.3.1(react@18.3.1)
+
+  packages/icons-web:
+    dependencies:
+      '@zcorvus/icons':
+        specifier: ^0.1.0
+        version: 0.1.2
 
 packages:
 
