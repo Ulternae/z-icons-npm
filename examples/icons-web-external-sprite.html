@@ -46,21 +46,30 @@
         color: #d4d4d8;
         font-size: 0.82rem;
       }
+
+      p {
+        margin: 0;
+        color: #a1a1aa;
+      }
     </style>
   </head>
   <body>
     <main>
       <h1>External Sprite</h1>
+      <p>
+        External SVG sprites must be served from the same origin as this page.
+        When this example is served from the repository root, these paths resolve locally.
+      </p>
       <section class="grid">
         <article class="card">
           <svg class="icon" aria-hidden="true">
-            <use href="https://cdn.jsdelivr.net/npm/@zcorvus/icons@0.1.3/dist/sprites/mina.svg#mina-search"></use>
+            <use href="/packages/icons/dist/sprites/mina.svg#mina-search"></use>
           </svg>
           <code>mina.svg#mina-search</code>
         </article>
         <article class="card">
           <svg class="icon" aria-hidden="true">
-            <use href="https://cdn.jsdelivr.net/npm/@zcorvus/icons@0.1.3/dist/sprites/mina-solid.svg#mina-search-solid"></use>
+            <use href="/packages/icons/dist/sprites/mina-solid.svg#mina-search-solid"></use>
           </svg>
           <code>mina-solid.svg#mina-search-solid</code>
         </article>
