@@ -57,6 +57,10 @@ function handleMissingIcon({ type, name, variant, missing }) {
   return '';
 }
 
+function getSpriteSymbolId(type, name, variant) {
+  return `${type}-${variant === 'light' ? name : `${name}-${variant}`}`;
+}
+
 function toCssSize(value) {
   if (value === null || value === undefined || value === '') {
     return undefined;
@@ -84,11 +88,58 @@ function applyPresentation(svg, host) {
   });
 }
 
+function buildUseSvg(symbolId, host) {
+  const size = toCssSize(host.getAttribute('size'));
+  const color = host.getAttribute('color');
+  const className = host.getAttribute('svg-class');
+  const attrs = [
+    'viewBox="0 0 24 24"',
+    size ? `width="${size}" height="${size}"` : '',
+    color ? `style="color: ${color};"` : '',
+    className ? `class="${className}"` : '',
+    host.hasAttribute('aria-hidden') ? 'aria-hidden="true"' : '',
+    host.getAttribute('aria-label') ? `aria-label="${host.getAttribute('aria-label')}"` : '',
+    host.getAttribute('role') ? `role="${host.getAttribute('role')}"` : '',
+  ].filter(Boolean).join(' ');
+
+  return `<svg ${attrs}><use href="#${symbolId}"></use></svg>`;
+}
+
+export function injectZIconSprite(spriteId, sprite) {
+  if (typeof document === 'undefined') {
+    return undefined;
+  }
+
+  const existing = document.querySelector(`svg[data-zcorvus-sprite="${spriteId}"]`);
+
+  if (existing) {
+    return existing;
+  }
+
+  const template = document.createElement('template');
+  template.innerHTML = sprite.trim();
+  const element = template.content.firstElementChild;
+
+  if (!element) {
+    return undefined;
+  }
+
+  element.setAttribute('aria-hidden', 'true');
+  element.setAttribute('data-zcorvus-sprite', spriteId);
+  element.setAttribute('style', 'position:absolute;width:0;height:0;overflow:hidden');
+  document.body.prepend(element);
+
+  return element;
+}
+
 export function createZIconElement(registry, options = {}) {
   const config = { ...DEFAULT_OPTIONS, ...options };
   const normalizedRegistry = normalizeRegistry(registry, config.inputVariant);
   const fixedType = config.type;
   const fixedVariant = config.variant;
+  const spriteMode = config.mode === 'sprite';
+  const spriteId = config.spriteId;
+  const sprite = config.sprite;
 
   return class ZIconElement extends HTMLElement {
     static observedAttributes = [
@@ -104,6 +155,10 @@ export function createZIconElement(registry, options = {}) {
     ];
 
     connectedCallback() {
+      if (spriteMode && spriteId && sprite) {
+        injectZIconSprite(spriteId, sprite);
+      }
+
       this.render();
     }
 
@@ -131,6 +186,11 @@ export function createZIconElement(registry, options = {}) {
       );
 
       if (svg) {
+        if (spriteMode) {
+          this.innerHTML = buildUseSvg(getSpriteSymbolId(type, name, variant), this);
+          return;
+        }
+
         this.innerHTML = applyPresentation(svg, this);
         return;
       }

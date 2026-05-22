@@ -14,6 +14,9 @@ export interface CreateZIconElementOptions {
   fallbackIcon?: string;
   inputVariant?: IconVariant | string;
   missing?: MissingIconBehavior;
+  mode?: 'inline' | 'sprite';
+  sprite?: string;
+  spriteId?: string;
   type?: IconPack | string;
   variant?: IconVariant | string;
 }
@@ -28,3 +31,5 @@ export declare function defineZIconElement(
   registry: SvgRegistry | FlatSvgRegistry,
   options?: CreateZIconElementOptions
 ): CustomElementConstructor | undefined;
+
+export declare function injectZIconSprite(spriteId: string, sprite: string): Element | undefined;

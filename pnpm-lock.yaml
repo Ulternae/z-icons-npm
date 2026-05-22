@@ -56,8 +56,8 @@ importers:
   packages/icons-web:
     dependencies:
       '@zcorvus/icons':
-        specifier: ^0.1.0
-        version: 0.1.2
+        specifier: workspace:^
+        version: link:../icons
 
 packages:
 

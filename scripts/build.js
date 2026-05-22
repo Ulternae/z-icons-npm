@@ -71,7 +71,11 @@ function getPublicFileName(pack, iconName, variant) {
 }
 
 function escapeJsString(value) {
-  return value.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+  return value
+    .replace(/\\/g, '\\\\')
+    .replace(/'/g, "\\'")
+    .replace(/\r/g, '\\r')
+    .replace(/\n/g, '\\n');
 }
 
 function parseSvg(svgContent) {
@@ -105,6 +109,50 @@ function parseSvg(svgContent) {
   }
 
   return { viewBox, children: elements };
+}
+
+function getSvgInnerContent(svgContent) {
+  const innerMatch = svgContent.match(/<svg[^>]*>(.*?)<\/svg>/s);
+
+  return innerMatch ? innerMatch[1].trim() : '';
+}
+
+function getSvgPresentationAttributes(svgContent) {
+  const svgMatch = svgContent.match(/<svg\b([^>]*)>/s);
+  const attrs = svgMatch ? svgMatch[1] : '';
+  const allowedAttributes = [
+    'fill',
+    'stroke',
+    'stroke-width',
+    'stroke-linecap',
+    'stroke-linejoin',
+    'stroke-miterlimit',
+    'stroke-dasharray',
+    'stroke-dashoffset',
+    'fill-rule',
+    'clip-rule',
+  ];
+
+  return allowedAttributes
+    .map((attribute) => {
+      const match = attrs.match(new RegExp(`${attribute}=["']([^"']+)["']`));
+      return match ? `${attribute}="${match[1]}"` : undefined;
+    })
+    .filter(Boolean)
+    .join(' ');
+}
+
+function createSvgSprite(pack, variant, variantIcons) {
+  const symbols = variantIcons.map((icon) => {
+    const { viewBox } = parseSvg(icon.svg);
+    const body = getSvgInnerContent(icon.svg);
+    const presentationAttrs = getSvgPresentationAttributes(icon.svg);
+    const id = `${pack}-${variant === 'light' ? icon.name : `${icon.name}-${variant}`}`;
+
+    return `  <symbol id="${id}" viewBox="${viewBox}"${presentationAttrs ? ` ${presentationAttrs}` : ''}>\n    ${body}\n  </symbol>`;
+  });
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" style="display:none">\n${symbols.join('\n')}\n</svg>\n`;
 }
 
 function createReactComponent(svgContent, componentName, variant) {
@@ -217,6 +265,7 @@ function buildCorePackage(icons, packData) {
   const packDictionaryTypes = [];
   const nameExports = [];
   const nameTypes = [];
+  const spriteExports = [];
   const typeUnions = [];
   const packNames = {};
   const availableVariants = new Set();
@@ -280,6 +329,29 @@ function buildCorePackage(icons, packData) {
     typeUnions.push(createTypeUnion(`${capitalize(pack)}IconName`, iconNames));
   }
 
+  for (const pack of CONFIG.packs) {
+    const variants = packData[pack] ?? {};
+
+    for (const [variant, variantIcons] of Object.entries(variants)) {
+      const suffix = getPublicVariantSuffix(variant);
+      const spriteName = `${pack}Sprite${suffix}`;
+      const fileName = `${pack}${variant === 'light' ? '' : `-${variant}`}`;
+      const sprite = createSvgSprite(pack, variant, variantIcons);
+
+      writeFile(path.join(distDir, 'sprites', `${fileName}.svg`), sprite);
+      writeFile(
+        path.join(distDir, 'sprites', `${fileName}.js`),
+        `export const ${spriteName} = '${escapeJsString(sprite)}';\nexport default ${spriteName};\n`
+      );
+      writeFile(
+        path.join(distDir, 'sprites', `${fileName}.d.ts`),
+        `export declare const ${spriteName}: string;\nexport default ${spriteName};\n`
+      );
+
+      spriteExports.push(`export { ${spriteName}, default as ${spriteName}Svg } from './${fileName}.js';`);
+    }
+  }
+
   writeFile(
     path.join(distDir, 'svg', 'index.js'),
     `${svgExports.join('\n')}\n${packDictionaryExports.join('\n')}\n`
@@ -296,6 +368,14 @@ function buildCorePackage(icons, packData) {
   writeFile(
     path.join(distDir, 'names', 'index.d.ts'),
     `${nameTypes.join('\n')}\n`
+  );
+  writeFile(
+    path.join(distDir, 'sprites', 'index.js'),
+    `${spriteExports.join('\n')}\n`
+  );
+  writeFile(
+    path.join(distDir, 'sprites', 'index.d.ts'),
+    `${spriteExports.join('\n')}\n`
   );
 
   const variantUnion = createTypeUnion('IconVariant', CONFIG.variants);
@@ -701,6 +781,10 @@ function handleMissingIcon({ type, name, variant, missing }) {
   return '';
 }
 
+function getSpriteSymbolId(type, name, variant) {
+  return \`\${type}-\${variant === 'light' ? name : \`\${name}-\${variant}\`}\`;
+}
+
 function toCssSize(value) {
   if (value === null || value === undefined || value === '') {
     return undefined;
@@ -728,11 +812,58 @@ function applyPresentation(svg, host) {
   });
 }
 
+function buildUseSvg(symbolId, host) {
+  const size = toCssSize(host.getAttribute('size'));
+  const color = host.getAttribute('color');
+  const className = host.getAttribute('svg-class');
+  const attrs = [
+    'viewBox="0 0 24 24"',
+    size ? \`width="\${size}" height="\${size}"\` : '',
+    color ? \`style="color: \${color};"\` : '',
+    className ? \`class="\${className}"\` : '',
+    host.hasAttribute('aria-hidden') ? 'aria-hidden="true"' : '',
+    host.getAttribute('aria-label') ? \`aria-label="\${host.getAttribute('aria-label')}"\` : '',
+    host.getAttribute('role') ? \`role="\${host.getAttribute('role')}"\` : '',
+  ].filter(Boolean).join(' ');
+
+  return \`<svg \${attrs}><use href="#\${symbolId}"></use></svg>\`;
+}
+
+export function injectZIconSprite(spriteId, sprite) {
+  if (typeof document === 'undefined') {
+    return undefined;
+  }
+
+  const existing = document.querySelector(\`svg[data-zcorvus-sprite="\${spriteId}"]\`);
+
+  if (existing) {
+    return existing;
+  }
+
+  const template = document.createElement('template');
+  template.innerHTML = sprite.trim();
+  const element = template.content.firstElementChild;
+
+  if (!element) {
+    return undefined;
+  }
+
+  element.setAttribute('aria-hidden', 'true');
+  element.setAttribute('data-zcorvus-sprite', spriteId);
+  element.setAttribute('style', 'position:absolute;width:0;height:0;overflow:hidden');
+  document.body.prepend(element);
+
+  return element;
+}
+
 export function createZIconElement(registry, options = {}) {
   const config = { ...DEFAULT_OPTIONS, ...options };
   const normalizedRegistry = normalizeRegistry(registry, config.inputVariant);
   const fixedType = config.type;
   const fixedVariant = config.variant;
+  const spriteMode = config.mode === 'sprite';
+  const spriteId = config.spriteId;
+  const sprite = config.sprite;
 
   return class ZIconElement extends HTMLElement {
     static observedAttributes = [
@@ -748,6 +879,10 @@ export function createZIconElement(registry, options = {}) {
     ];
 
     connectedCallback() {
+      if (spriteMode && spriteId && sprite) {
+        injectZIconSprite(spriteId, sprite);
+      }
+
       this.render();
     }
 
@@ -775,6 +910,11 @@ export function createZIconElement(registry, options = {}) {
       );
 
       if (svg) {
+        if (spriteMode) {
+          this.innerHTML = buildUseSvg(getSpriteSymbolId(type, name, variant), this);
+          return;
+        }
+
         this.innerHTML = applyPresentation(svg, this);
         return;
       }
@@ -825,6 +965,9 @@ export interface CreateZIconElementOptions {
   fallbackIcon?: string;
   inputVariant?: IconVariant | string;
   missing?: MissingIconBehavior;
+  mode?: 'inline' | 'sprite';
+  sprite?: string;
+  spriteId?: string;
   type?: IconPack | string;
   variant?: IconVariant | string;
 }
@@ -839,6 +982,8 @@ export declare function defineZIconElement(
   registry: SvgRegistry | FlatSvgRegistry,
   options?: CreateZIconElementOptions
 ): CustomElementConstructor | undefined;
+
+export declare function injectZIconSprite(spriteId: string, sprite: string): Element | undefined;
 `;
 }
 
@@ -885,6 +1030,23 @@ function buildWebPackage(icons, packData) {
       writeFile(
         path.join(distDir, `${fileName}.d.ts`),
         `export declare const ${registryName}: {\n${variantIcons.map((icon) => `  readonly '${icon.name}': string;`).join('\n')}\n};\nexport declare const ${elementName}: CustomElementConstructor | undefined;\n`
+      );
+
+      const spriteFileName = `register-${pack}${variant === 'light' ? '' : `-${variant}`}-sprite`;
+      const spriteTagName = `z-${pack}${variant === 'light' ? '' : `-${variant}`}-sprite`;
+      const spriteName = `${pack}Sprite${suffix}`;
+      const spriteAssetFileName = `${pack}${variant === 'light' ? '' : `-${variant}`}`;
+      const spriteElementName = `Z${capitalize(pack)}${suffix}SpriteElement`;
+      const spriteImports = variantIcons.map((icon) => `import { ${icon.componentName} } from '@zcorvus/icons/svg/${icon.publicFileName}';`);
+      const spriteMap = `export const ${registryName} = {\n${variantIcons.map((icon) => `  '${icon.name}': ${icon.componentName}`).join(',\n')}\n};`;
+
+      writeFile(
+        path.join(distDir, `${spriteFileName}.js`),
+        `import { defineZIconElement } from './create.js';\nimport { ${spriteName} } from '@zcorvus/icons/sprites/${spriteAssetFileName}.js';\n${spriteImports.join('\n')}\n\n${spriteMap};\n\nexport { ${spriteName} } from '@zcorvus/icons/sprites/${spriteAssetFileName}.js';\nexport const ${spriteElementName} = defineZIconElement('${spriteTagName}', { ${pack}: { ${variant}: ${registryName} } }, { type: '${pack}', variant: '${variant}', defaultVariant: '${variant}', mode: 'sprite', spriteId: '${pack}-${variant}', sprite: ${spriteName} });\n`
+      );
+      writeFile(
+        path.join(distDir, `${spriteFileName}.d.ts`),
+        `export declare const ${registryName}: {\n${variantIcons.map((icon) => `  readonly '${icon.name}': string;`).join('\n')}\n};\nexport { ${spriteName} } from '@zcorvus/icons/sprites/${spriteAssetFileName}.js';\nexport declare const ${spriteElementName}: CustomElementConstructor | undefined;\n`
       );
     }
   }
