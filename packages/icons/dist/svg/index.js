@@ -901,7 +901,6 @@ export { MinaMobileSignalOne, default as MinaMobileSignalOneSvg } from './mina-m
 export { MinaMobileSignalThree, default as MinaMobileSignalThreeSvg } from './mina-mobile-signal-three.js';
 export { MinaMobileSignalTwo, default as MinaMobileSignalTwoSvg } from './mina-mobile-signal-two.js';
 export { MinaMobile, default as MinaMobileSvg } from './mina-mobile.js';
-export { MinaMoonCopy, default as MinaMoonCopySvg } from './mina-moon-copy.js';
 export { MinaMoonStar, default as MinaMoonStarSvg } from './mina-moon-star.js';
 export { MinaMoon, default as MinaMoonSvg } from './mina-moon.js';
 export { MinaMountainSnow, default as MinaMountainSnowSvg } from './mina-mountain-snow.js';
@@ -1139,7 +1138,6 @@ export { MinaStopWaves, default as MinaStopWavesSvg } from './mina-stop-waves.js
 export { MinaStop, default as MinaStopSvg } from './mina-stop.js';
 export { MinaStore, default as MinaStoreSvg } from './mina-store.js';
 export { MinaSubtract, default as MinaSubtractSvg } from './mina-subtract.js';
-export { MinaSunCopy, default as MinaSunCopySvg } from './mina-sun-copy.js';
 export { MinaSunDim, default as MinaSunDimSvg } from './mina-sun-dim.js';
 export { MinaSunMedium, default as MinaSunMediumSvg } from './mina-sun-medium.js';
 export { MinaSunSnow, default as MinaSunSnowSvg } from './mina-sun-snow.js';

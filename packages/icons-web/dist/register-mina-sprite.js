@@ -891,7 +891,6 @@ import { MinaMobileSignalOne } from '@zcorvus/icons/svg/mina-mobile-signal-one';
 import { MinaMobileSignalThree } from '@zcorvus/icons/svg/mina-mobile-signal-three';
 import { MinaMobileSignalTwo } from '@zcorvus/icons/svg/mina-mobile-signal-two';
 import { MinaMobile } from '@zcorvus/icons/svg/mina-mobile';
-import { MinaMoonCopy } from '@zcorvus/icons/svg/mina-moon-copy';
 import { MinaMoonStar } from '@zcorvus/icons/svg/mina-moon-star';
 import { MinaMoon } from '@zcorvus/icons/svg/mina-moon';
 import { MinaMountainSnow } from '@zcorvus/icons/svg/mina-mountain-snow';
@@ -1129,7 +1128,6 @@ import { MinaStopWaves } from '@zcorvus/icons/svg/mina-stop-waves';
 import { MinaStop } from '@zcorvus/icons/svg/mina-stop';
 import { MinaStore } from '@zcorvus/icons/svg/mina-store';
 import { MinaSubtract } from '@zcorvus/icons/svg/mina-subtract';
-import { MinaSunCopy } from '@zcorvus/icons/svg/mina-sun-copy';
 import { MinaSunDim } from '@zcorvus/icons/svg/mina-sun-dim';
 import { MinaSunMedium } from '@zcorvus/icons/svg/mina-sun-medium';
 import { MinaSunSnow } from '@zcorvus/icons/svg/mina-sun-snow';
@@ -2172,7 +2170,6 @@ export const minaIcons = {
   'mobile-signal-three': MinaMobileSignalThree,
   'mobile-signal-two': MinaMobileSignalTwo,
   'mobile': MinaMobile,
-  'moon-copy': MinaMoonCopy,
   'moon-star': MinaMoonStar,
   'moon': MinaMoon,
   'mountain-snow': MinaMountainSnow,
@@ -2410,7 +2407,6 @@ export const minaIcons = {
   'stop': MinaStop,
   'store': MinaStore,
   'subtract': MinaSubtract,
-  'sun-copy': MinaSunCopy,
   'sun-dim': MinaSunDim,
   'sun-medium': MinaSunMedium,
   'sun-snow': MinaSunSnow,

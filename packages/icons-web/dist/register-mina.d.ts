@@ -890,7 +890,6 @@ export declare const minaIcons: {
   readonly 'mobile-signal-three': string;
   readonly 'mobile-signal-two': string;
   readonly 'mobile': string;
-  readonly 'moon-copy': string;
   readonly 'moon-star': string;
   readonly 'moon': string;
   readonly 'mountain-snow': string;
@@ -1128,7 +1127,6 @@ export declare const minaIcons: {
   readonly 'stop': string;
   readonly 'store': string;
   readonly 'subtract': string;
-  readonly 'sun-copy': string;
   readonly 'sun-dim': string;
   readonly 'sun-medium': string;
   readonly 'sun-snow': string;

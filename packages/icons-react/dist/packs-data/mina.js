@@ -889,7 +889,6 @@ import { MinaMobileSignalOne } from '../mina-mobile-signal-one.js';
 import { MinaMobileSignalThree } from '../mina-mobile-signal-three.js';
 import { MinaMobileSignalTwo } from '../mina-mobile-signal-two.js';
 import { MinaMobile } from '../mina-mobile.js';
-import { MinaMoonCopy } from '../mina-moon-copy.js';
 import { MinaMoonStar } from '../mina-moon-star.js';
 import { MinaMoon } from '../mina-moon.js';
 import { MinaMountainSnow } from '../mina-mountain-snow.js';
@@ -1127,7 +1126,6 @@ import { MinaStopWaves } from '../mina-stop-waves.js';
 import { MinaStop } from '../mina-stop.js';
 import { MinaStore } from '../mina-store.js';
 import { MinaSubtract } from '../mina-subtract.js';
-import { MinaSunCopy } from '../mina-sun-copy.js';
 import { MinaSunDim } from '../mina-sun-dim.js';
 import { MinaSunMedium } from '../mina-sun-medium.js';
 import { MinaSunSnow } from '../mina-sun-snow.js';
@@ -2170,7 +2168,6 @@ export const minaIcons = {
   'mobile-signal-three': MinaMobileSignalThree,
   'mobile-signal-two': MinaMobileSignalTwo,
   'mobile': MinaMobile,
-  'moon-copy': MinaMoonCopy,
   'moon-star': MinaMoonStar,
   'moon': MinaMoon,
   'mountain-snow': MinaMountainSnow,
@@ -2408,7 +2405,6 @@ export const minaIcons = {
   'stop': MinaStop,
   'store': MinaStore,
   'subtract': MinaSubtract,
-  'sun-copy': MinaSunCopy,
   'sun-dim': MinaSunDim,
   'sun-medium': MinaSunMedium,
   'sun-snow': MinaSunSnow,

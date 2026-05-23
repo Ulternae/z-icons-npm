@@ -892,7 +892,6 @@ export declare const minaIcons: {
   readonly 'mobile-signal-three': IconComponent;
   readonly 'mobile-signal-two': IconComponent;
   readonly 'mobile': IconComponent;
-  readonly 'moon-copy': IconComponent;
   readonly 'moon-star': IconComponent;
   readonly 'moon': IconComponent;
   readonly 'mountain-snow': IconComponent;
@@ -1130,7 +1129,6 @@ export declare const minaIcons: {
   readonly 'stop': IconComponent;
   readonly 'store': IconComponent;
   readonly 'subtract': IconComponent;
-  readonly 'sun-copy': IconComponent;
   readonly 'sun-dim': IconComponent;
   readonly 'sun-medium': IconComponent;
   readonly 'sun-snow': IconComponent;
