@@ -6,3 +6,5 @@ export { ZMina } from './mina.js';
 export type { ZMinaProps } from './mina.js';
 export { ZMinaSolid } from './mina-solid.js';
 export type { ZMinaSolidProps } from './mina-solid.js';
+export { ZBru } from './bru.js';
+export type { ZBruProps } from './bru.js';

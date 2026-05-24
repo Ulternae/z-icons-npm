@@ -6,7 +6,7 @@ import { svgoConfig } from './svgo.config.js';
 const CONFIG = {
   sourceDir: 'icons',
   packagesDir: 'packages',
-  packs: ['core', 'neo', 'mina'],
+  packs: ['core', 'neo', 'mina', 'bru'],
   variants: ['light', 'solid', 'regular', 'thin'],
   publicVariantSuffixes: {
     light: '',
@@ -388,6 +388,14 @@ function buildCorePackage(icons, packData) {
   const rootExports = CONFIG.packs.map((pack) => `export { ${pack}Icons } from './svg/${pack}.js';`).join('\n');
   const rootNames = CONFIG.packs.map((pack) => `export { ${pack}IconNames } from './names/${pack}.js';`).join('\n');
   const rootIconMap = CONFIG.packs.map((pack) => `  ${pack}: ${pack}Icons`).join(',\n');
+  const rootTypeExports = [
+    'AllIconNames',
+    ...CONFIG.packs.map((pack) => `${capitalize(pack)}IconName`),
+    'IconPack',
+    'IconVariant',
+  ].join(', ');
+  const rootNameExports = CONFIG.packs.map((pack) => `${pack}IconNames`).join(', ');
+  const rootSvgExports = CONFIG.packs.map((pack) => `${pack}Icons`).join(', ');
 
   writeFile(
     path.join(distDir, 'index.js'),
@@ -395,7 +403,7 @@ function buildCorePackage(icons, packData) {
   );
   writeFile(
     path.join(distDir, 'index.d.ts'),
-    `import type { AllIconNames, IconPack, IconVariant } from './types/index.js';\nexport type { AllIconNames, CoreIconName, IconPack, IconVariant, MinaIconName, NeoIconName } from './types/index.js';\nexport { coreIconNames, minaIconNames, neoIconNames } from './names/index.js';\nexport { coreIcons, minaIcons, neoIcons } from './svg/index.js';\nexport declare function getIconSvg(pack: IconPack, name: AllIconNames, variant?: IconVariant): string | undefined;\n`
+    `import type { AllIconNames, IconPack, IconVariant } from './types/index.js';\nexport type { ${rootTypeExports} } from './types/index.js';\nexport { ${rootNameExports} } from './names/index.js';\nexport { ${rootSvgExports} } from './svg/index.js';\nexport declare function getIconSvg(pack: IconPack, name: AllIconNames, variant?: IconVariant): string | undefined;\n`
   );
 }
 

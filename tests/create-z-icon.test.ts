@@ -2,6 +2,7 @@ import React from 'react';
 import { describe, expect, it, vi } from 'vitest';
 import { createZIcon } from '@zcorvus/icons-react/create';
 import {
+  BruGithub,
   CoreAnchor,
   CoreSun,
   MinaAnchor,
@@ -11,6 +12,7 @@ import {
   MinaX,
 } from '@zcorvus/icons-react';
 import {
+  bruIcons,
   coreIcons,
   minaIcons,
   minaIconsSolid,
@@ -221,10 +223,14 @@ describe('createZIcon', () => {
         light: minaIcons,
         solid: minaIconsSolid,
       },
+      bru: {
+        light: bruIcons,
+      },
     });
 
     expect(expectElement(AppIcon({ type: 'core', name: 'anchor' })).type).toBe(CoreAnchor);
     expect(expectElement(AppIcon({ type: 'mina', name: 'anchor' })).type).toBe(MinaAnchor);
     expect(expectElement(AppIcon({ type: 'mina', name: 'anchor', variant: 'solid' })).type).toBe(MinaAnchorSolid);
+    expect(expectElement(AppIcon({ type: 'bru', name: 'github' })).type).toBe(BruGithub);
   });
 });

@@ -1,0 +1,2 @@
+export const BruPixelfed = '<svg width="512" height="512" fill="none" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_3021_244)"><path fill="currentColor" d="M256 0a256 256 0 1 1 0 511.999A256 256 0 0 1 256 0m-20.3 311.9h47c44.2 0 80.1-34.9 80.1-78s-35.9-78-80.1-78h-67.8c-25.5 0-46.2 20.1-46.2 45V376z"/></g><defs><clipPath id="clip0_3021_244"><path fill="currentColor" d="M0 0h512v512H0z"/></clipPath></defs></svg>';
+export default BruPixelfed;
