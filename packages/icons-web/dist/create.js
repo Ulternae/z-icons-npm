@@ -1,5 +1,6 @@
 const DEFAULT_OPTIONS = {
   defaultVariant: 'light',
+  defaultVariants: undefined,
   fallbackVariant: undefined,
   fallbackPack: undefined,
   fallbackIcon: undefined,
@@ -57,8 +58,8 @@ function handleMissingIcon({ type, name, variant, missing }) {
   return '';
 }
 
-function getSpriteSymbolId(type, name, variant) {
-  return `${type}-${variant === 'light' ? name : `${name}-${variant}`}`;
+function getSpriteSymbolId(type, name, variant, defaultVariant = 'light') {
+  return `${type}-${variant === defaultVariant ? name : `${name}-${variant}`}`;
 }
 
 function toCssSize(value) {
@@ -169,7 +170,7 @@ export function createZIconElement(registry, options = {}) {
     render() {
       const type = fixedType ?? this.getAttribute('type') ?? config.defaultType;
       const name = this.getAttribute('name');
-      const variant = fixedVariant ?? this.getAttribute('variant') ?? config.defaultVariant;
+      const variant = fixedVariant ?? this.getAttribute('variant') ?? config.defaultVariants?.[type] ?? config.defaultVariant;
 
       if (!type || !name) {
         this.innerHTML = '';
@@ -187,7 +188,7 @@ export function createZIconElement(registry, options = {}) {
 
       if (svg) {
         if (spriteMode) {
-          this.innerHTML = buildUseSvg(getSpriteSymbolId(type, name, variant), this);
+          this.innerHTML = buildUseSvg(getSpriteSymbolId(type, name, variant, config.defaultVariant), this);
           return;
         }
 

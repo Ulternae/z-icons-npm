@@ -10,8 +10,17 @@ const iconCollections = {
   bru: bruIcons
 };
 
-export function getIconSvg(pack, name, variant = 'light') {
-  return iconCollections[pack]?.[variant]?.[name];
+const defaultVariants = {
+  core: 'light',
+  neo: 'light',
+  mina: 'light',
+  bru: 'solid'
+};
+
+export function getIconSvg(pack, name, variant) {
+  const resolvedVariant = variant ?? defaultVariants[pack] ?? 'light';
+
+  return iconCollections[pack]?.[resolvedVariant]?.[name];
 }
 
 export { coreIcons } from './svg/core.js';

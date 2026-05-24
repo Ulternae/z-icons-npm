@@ -11,4 +11,11 @@ export const zIconRegistry = {
   bru: bruIcons
 };
 
-export const ZIconElement = defineZIconElement('z-icon', zIconRegistry, { defaultVariant: 'light' });
+export const zIconDefaultVariants = {
+  core: 'light',
+  neo: 'light',
+  mina: 'light',
+  bru: 'solid'
+};
+
+export const ZIconElement = defineZIconElement('z-icon', zIconRegistry, { defaultVariant: 'light', defaultVariants: zIconDefaultVariants });

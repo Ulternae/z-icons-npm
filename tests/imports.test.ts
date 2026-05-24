@@ -75,6 +75,7 @@ describe('public package imports', () => {
       if (typeof root.createZIconElement !== 'function') throw new Error('missing createZIconElement root export');
       if (typeof create.defineZIconElement !== 'function') throw new Error('missing defineZIconElement');
       if (!register.zIconRegistry) throw new Error('missing zIconRegistry');
+      if (register.zIconDefaultVariants?.bru !== 'solid') throw new Error('missing bru default variant');
       if (!registerCore.coreIcons?.sun) throw new Error('missing coreIcons web registry');
       if (!registerNeo.neoIcons?.sun) throw new Error('missing neoIcons web registry');
       if (!registerBru.bruIcons?.github) throw new Error('missing bruIcons web registry');

@@ -539,8 +539,8 @@ import { BruZhihu } from '../bru-zhihu.js';
 import { BruZoom } from '../bru-zoom.js';
 import { BruZulip } from '../bru-zulip.js';
 
-export const bruLightIconMap = {
-  light: {
+export const bruSolidIconMap = {
+  solid: {
     '42-group': Bru42Group,
     '500px': Bru500px,
     'accessible-icon': BruAccessibleIcon,
@@ -1083,5 +1083,5 @@ export const bruLightIconMap = {
   }
 };
 
-export const ZBru = createPackIcon(bruLightIconMap, 'light');
+export const ZBru = createPackIcon(bruSolidIconMap, 'solid');
 export default ZBru;

@@ -27,6 +27,7 @@ type FlatIconName<TRegistry> = TRegistry extends Record<string, infer TPack>
 
 export interface CreateZIconOptions {
   defaultVariant?: IconVariant | string;
+  defaultVariants?: Record<string, IconVariant | string>;
   fallbackVariant?: IconVariant | string;
   fallbackPack?: IconPack | string;
   fallbackIcon?: IconComponent;

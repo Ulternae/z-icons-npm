@@ -6,7 +6,7 @@ export const BruFlipboard = ({ size = 24, color, style, ...props }) => React.cre
     viewBox: '0 0 448 512',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"d":"M0 32v448h448V32zm358.4 179.2h-89.6v89.6h-89.6v89.6H89.6V121.6h268.8z"})

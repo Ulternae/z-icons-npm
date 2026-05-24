@@ -15,7 +15,7 @@ import {
 } from '@zcorvus/icons-react';
 
 describe('packs-data', () => {
-  it('exports default light variant maps without a suffix', () => {
+  it('exports default variant maps without a suffix', () => {
     expect(coreIcons.sun).toBe(CoreSun);
     expect(neoIcons.sun).toBe(NeoSun);
     expect(minaIcons.check).toBe(MinaCheck);

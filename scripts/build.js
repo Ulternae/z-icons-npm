@@ -8,11 +8,23 @@ const CONFIG = {
   packagesDir: 'packages',
   packs: ['core', 'neo', 'mina', 'bru'],
   variants: ['light', 'solid', 'regular', 'thin'],
+  defaultVariants: {
+    core: 'light',
+    neo: 'light',
+    mina: 'light',
+    bru: 'solid',
+  },
   publicVariantSuffixes: {
-    light: '',
+    light: 'Light',
     solid: 'Solid',
     regular: 'Regular',
     thin: 'Thin',
+  },
+  iconStyles: {
+    core: { light: 'stroke' },
+    neo: { light: 'stroke' },
+    mina: { light: 'stroke', solid: 'fill' },
+    bru: { solid: 'fill' },
   },
   svgoConfig,
 };
@@ -58,12 +70,36 @@ function toKebabCase(value) {
     .toLowerCase();
 }
 
-function getPublicVariantSuffix(variant) {
+function getDefaultVariant(pack) {
+  return CONFIG.defaultVariants[pack] ?? 'light';
+}
+
+function isDefaultVariant(pack, variant) {
+  return variant === getDefaultVariant(pack);
+}
+
+function getPublicVariantSuffix(pack, variant) {
+  if (isDefaultVariant(pack, variant)) {
+    return '';
+  }
+
   return CONFIG.publicVariantSuffixes[variant] ?? capitalize(variant);
 }
 
+function getVariantFileSuffix(pack, variant) {
+  return isDefaultVariant(pack, variant) ? '' : `-${variant}`;
+}
+
+function getIconStyle(pack, variant) {
+  return CONFIG.iconStyles[pack]?.[variant] ?? 'stroke';
+}
+
+function isFillIcon(pack, variant) {
+  return getIconStyle(pack, variant) === 'fill';
+}
+
 function getPublicIconName(pack, iconName, variant) {
-  return `${capitalize(pack)}${toPascalCase(iconName)}${getPublicVariantSuffix(variant)}`;
+  return `${capitalize(pack)}${toPascalCase(iconName)}${getPublicVariantSuffix(pack, variant)}`;
 }
 
 function getPublicFileName(pack, iconName, variant) {
@@ -142,12 +178,32 @@ function getSvgPresentationAttributes(svgContent) {
     .join(' ');
 }
 
+function withSvgRootAttribute(svgContent, attribute, value) {
+  return svgContent.replace(/<svg\b([^>]*)>/, (match, attrs) => {
+    const attrRegex = new RegExp(`\\s${attribute}=["'][^"']*["']`);
+
+    if (attrRegex.test(attrs)) {
+      return match.replace(attrRegex, ` ${attribute}="${value}"`);
+    }
+
+    return `<svg${attrs} ${attribute}="${value}">`;
+  });
+}
+
+function normalizeSvgForIconStyle(svgContent, pack, variant) {
+  if (!isFillIcon(pack, variant)) {
+    return svgContent;
+  }
+
+  return withSvgRootAttribute(svgContent, 'fill', 'currentColor');
+}
+
 function createSvgSprite(pack, variant, variantIcons) {
   const symbols = variantIcons.map((icon) => {
     const { viewBox } = parseSvg(icon.svg);
     const body = getSvgInnerContent(icon.svg);
     const presentationAttrs = getSvgPresentationAttributes(icon.svg);
-    const id = `${pack}-${variant === 'light' ? icon.name : `${icon.name}-${variant}`}`;
+    const id = `${pack}-${isDefaultVariant(pack, variant) ? icon.name : `${icon.name}-${variant}`}`;
 
     return `  <symbol id="${id}" viewBox="${viewBox}"${presentationAttrs ? ` ${presentationAttrs}` : ''}>\n    ${body}\n  </symbol>`;
   });
@@ -155,10 +211,10 @@ function createSvgSprite(pack, variant, variantIcons) {
   return `<svg xmlns="http://www.w3.org/2000/svg" style="display:none">\n${symbols.join('\n')}\n</svg>\n`;
 }
 
-function createReactComponent(svgContent, componentName, variant) {
+function createReactComponent(svgContent, componentName, pack, variant) {
   const { viewBox, children } = parseSvg(svgContent);
   const childrenCode = children.length > 0 ? `, ${children.join(', ')}` : '';
-  const variantProps = variant === 'solid'
+  const variantProps = isFillIcon(pack, variant)
     ? "fill: 'currentColor'"
     : "fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2";
 
@@ -224,7 +280,9 @@ function getIconFiles() {
           throw new Error(`Error optimizing ${filePath}: ${result.error}`);
         }
 
-        fs.writeFileSync(filePath, result.data, 'utf8');
+        const svg = normalizeSvgForIconStyle(result.data, pack, variant);
+
+        fs.writeFileSync(filePath, svg, 'utf8');
 
         const name = path.basename(file, '.svg').toLowerCase().replace(/[_\s]+/g, '-');
         const componentName = getPublicIconName(pack, name, variant);
@@ -235,7 +293,7 @@ function getIconFiles() {
           name,
           componentName,
           publicFileName,
-          svg: result.data,
+          svg,
         };
 
         icons.push(icon);
@@ -333,9 +391,9 @@ function buildCorePackage(icons, packData) {
     const variants = packData[pack] ?? {};
 
     for (const [variant, variantIcons] of Object.entries(variants)) {
-      const suffix = getPublicVariantSuffix(variant);
+      const suffix = getPublicVariantSuffix(pack, variant);
       const spriteName = `${pack}Sprite${suffix}`;
-      const fileName = `${pack}${variant === 'light' ? '' : `-${variant}`}`;
+      const fileName = `${pack}${getVariantFileSuffix(pack, variant)}`;
       const sprite = createSvgSprite(pack, variant, variantIcons);
 
       writeFile(path.join(distDir, 'sprites', `${fileName}.svg`), sprite);
@@ -388,6 +446,7 @@ function buildCorePackage(icons, packData) {
   const rootExports = CONFIG.packs.map((pack) => `export { ${pack}Icons } from './svg/${pack}.js';`).join('\n');
   const rootNames = CONFIG.packs.map((pack) => `export { ${pack}IconNames } from './names/${pack}.js';`).join('\n');
   const rootIconMap = CONFIG.packs.map((pack) => `  ${pack}: ${pack}Icons`).join(',\n');
+  const rootDefaultVariantMap = CONFIG.packs.map((pack) => `  ${pack}: '${getDefaultVariant(pack)}'`).join(',\n');
   const rootTypeExports = [
     'AllIconNames',
     ...CONFIG.packs.map((pack) => `${capitalize(pack)}IconName`),
@@ -399,7 +458,7 @@ function buildCorePackage(icons, packData) {
 
   writeFile(
     path.join(distDir, 'index.js'),
-    `${rootImports}\n\nconst iconCollections = {\n${rootIconMap}\n};\n\nexport function getIconSvg(pack, name, variant = 'light') {\n  return iconCollections[pack]?.[variant]?.[name];\n}\n\n${rootExports}\n${rootNames}\n`
+    `${rootImports}\n\nconst iconCollections = {\n${rootIconMap}\n};\n\nconst defaultVariants = {\n${rootDefaultVariantMap}\n};\n\nexport function getIconSvg(pack, name, variant) {\n  const resolvedVariant = variant ?? defaultVariants[pack] ?? 'light';\n\n  return iconCollections[pack]?.[resolvedVariant]?.[name];\n}\n\n${rootExports}\n${rootNames}\n`
   );
   writeFile(
     path.join(distDir, 'index.d.ts'),
@@ -446,6 +505,7 @@ function createZIconRuntime() {
 
 const DEFAULT_OPTIONS = {
   defaultVariant: 'light',
+  defaultVariants: undefined,
   fallbackVariant: undefined,
   fallbackPack: undefined,
   fallbackIcon: undefined,
@@ -514,17 +574,18 @@ export function createZIcon(registry, options = {}) {
   return function CreatedZIcon({
     type,
     name,
-    variant = config.defaultVariant,
+    variant,
     size = 24,
     color,
     style,
     ...props
   }) {
+    const resolvedVariant = variant ?? config.defaultVariants?.[type] ?? config.defaultVariant;
     const Icon = resolveIcon(
       normalizedRegistry,
       type,
       name,
-      variant,
+      resolvedVariant,
       config.fallbackVariant,
       config.fallbackPack
     );
@@ -537,7 +598,7 @@ export function createZIcon(registry, options = {}) {
       return React.createElement(config.fallbackIcon, { size, color, style, ...props });
     }
 
-    return handleMissingIcon({ type, name, variant, missing: config.missing });
+    return handleMissingIcon({ type, name, variant: resolvedVariant, missing: config.missing });
   };
 }
 `;
@@ -573,6 +634,7 @@ type FlatIconName<TRegistry> = TRegistry extends Record<string, infer TPack>
 
 export interface CreateZIconOptions {
   defaultVariant?: IconVariant | string;
+  defaultVariants?: Record<string, IconVariant | string>;
   fallbackVariant?: IconVariant | string;
   fallbackPack?: IconPack | string;
   fallbackIcon?: IconComponent;
@@ -622,7 +684,7 @@ function buildReactPackage(icons, packData) {
   for (const icon of icons) {
     writeFile(
       path.join(distDir, `${icon.publicFileName}.js`),
-      createReactComponent(icon.svg, icon.componentName, icon.variant)
+      createReactComponent(icon.svg, icon.componentName, icon.pack, icon.variant)
     );
     writeFile(
       path.join(distDir, `${icon.publicFileName}.d.ts`),
@@ -641,9 +703,10 @@ function buildReactPackage(icons, packData) {
     const variants = packData[pack] ?? {};
 
     for (const [variant, variantIcons] of Object.entries(variants)) {
-      const wrapperName = `Z${capitalize(pack)}${getPublicVariantSuffix(variant)}`;
-      const mapName = `${pack}${getPublicVariantSuffix(variant) || 'Light'}IconMap`;
-      const fileName = `${pack}${variant === 'light' ? '' : `-${variant}`}`;
+      const suffix = getPublicVariantSuffix(pack, variant);
+      const wrapperName = `Z${capitalize(pack)}${suffix}`;
+      const mapName = `${pack}${capitalize(variant)}IconMap`;
+      const fileName = `${pack}${getVariantFileSuffix(pack, variant)}`;
       const imports = variantIcons.map((icon) => `import { ${icon.componentName} } from '../${icon.publicFileName}.js';`);
       const iconMap = `export const ${mapName} = {\n  ${variant}: {\n${variantIcons.map((icon) => `    '${icon.name}': ${icon.componentName}`).join(',\n')}\n  }\n};`;
 
@@ -668,9 +731,9 @@ function buildReactPackage(icons, packData) {
     const variants = packData[pack] ?? {};
 
     for (const [variant, variantIcons] of Object.entries(variants)) {
-      const suffix = getPublicVariantSuffix(variant);
+      const suffix = getPublicVariantSuffix(pack, variant);
       const dataName = `${pack}Icons${suffix}`;
-      const fileName = `${pack}${variant === 'light' ? '' : `-${variant}`}`;
+      const fileName = `${pack}${getVariantFileSuffix(pack, variant)}`;
       const imports = variantIcons.map((icon) => `import { ${icon.componentName} } from '../${icon.publicFileName}.js';`);
       const iconMap = `export const ${dataName} = {\n${variantIcons.map((icon) => `  '${icon.name}': ${icon.componentName}`).join(',\n')}\n};`;
 
@@ -715,10 +778,11 @@ function buildReactPackage(icons, packData) {
 
     return `  ${pack}: {\n${entries}\n  }`;
   }).join(',\n');
+  const zIconDefaultVariants = CONFIG.packs.map((pack) => `  ${pack}: '${getDefaultVariant(pack)}'`).join(',\n');
 
   writeFile(
     path.join(distDir, 'z-icon.js'),
-    `import React from 'react';\n${allPackImports.join('\n')}\n\nconst iconCollections = {\n${zIconCollection}\n};\n\nexport function ZIcon({ type, name, variant = 'light', size = 24, color, style, ...props }) {\n  const Icon = iconCollections[type]?.[variant]?.[name];\n\n  if (!Icon) {\n    return null;\n  }\n\n  return React.createElement(Icon, { size, color, style, ...props });\n}\n`
+    `import React from 'react';\n${allPackImports.join('\n')}\n\nconst iconCollections = {\n${zIconCollection}\n};\n\nconst defaultVariants = {\n${zIconDefaultVariants}\n};\n\nexport function ZIcon({ type, name, variant, size = 24, color, style, ...props }) {\n  const resolvedVariant = variant ?? defaultVariants[type] ?? 'light';\n  const Icon = iconCollections[type]?.[resolvedVariant]?.[name];\n\n  if (!Icon) {\n    return null;\n  }\n\n  return React.createElement(Icon, { size, color, style, ...props });\n}\n`
   );
   writeFile(
     path.join(distDir, 'z-icon.d.ts'),
@@ -732,6 +796,7 @@ function buildReactPackage(icons, packData) {
 function createWebElementRuntime() {
   return `const DEFAULT_OPTIONS = {
   defaultVariant: 'light',
+  defaultVariants: undefined,
   fallbackVariant: undefined,
   fallbackPack: undefined,
   fallbackIcon: undefined,
@@ -789,8 +854,8 @@ function handleMissingIcon({ type, name, variant, missing }) {
   return '';
 }
 
-function getSpriteSymbolId(type, name, variant) {
-  return \`\${type}-\${variant === 'light' ? name : \`\${name}-\${variant}\`}\`;
+function getSpriteSymbolId(type, name, variant, defaultVariant = 'light') {
+  return \`\${type}-\${variant === defaultVariant ? name : \`\${name}-\${variant}\`}\`;
 }
 
 function toCssSize(value) {
@@ -901,7 +966,7 @@ export function createZIconElement(registry, options = {}) {
     render() {
       const type = fixedType ?? this.getAttribute('type') ?? config.defaultType;
       const name = this.getAttribute('name');
-      const variant = fixedVariant ?? this.getAttribute('variant') ?? config.defaultVariant;
+      const variant = fixedVariant ?? this.getAttribute('variant') ?? config.defaultVariants?.[type] ?? config.defaultVariant;
 
       if (!type || !name) {
         this.innerHTML = '';
@@ -919,7 +984,7 @@ export function createZIconElement(registry, options = {}) {
 
       if (svg) {
         if (spriteMode) {
-          this.innerHTML = buildUseSvg(getSpriteSymbolId(type, name, variant), this);
+          this.innerHTML = buildUseSvg(getSpriteSymbolId(type, name, variant, config.defaultVariant), this);
           return;
         }
 
@@ -968,6 +1033,7 @@ export type MissingIconBehavior = 'null' | 'warn' | 'error';
 export interface CreateZIconElementOptions {
   defaultType?: IconPack | string;
   defaultVariant?: IconVariant | string;
+  defaultVariants?: Record<string, IconVariant | string>;
   fallbackVariant?: IconVariant | string;
   fallbackPack?: IconPack | string;
   fallbackIcon?: string;
@@ -1004,14 +1070,15 @@ function buildWebPackage(icons, packData) {
 
   const rootImports = CONFIG.packs.map((pack) => `import { ${pack}Icons } from '@zcorvus/icons/svg';`).join('\n');
   const rootRegistry = CONFIG.packs.map((pack) => `  ${pack}: ${pack}Icons`).join(',\n');
+  const rootDefaultVariants = CONFIG.packs.map((pack) => `  ${pack}: '${getDefaultVariant(pack)}'`).join(',\n');
 
   writeFile(
     path.join(distDir, 'register.js'),
-    `import { defineZIconElement } from './create.js';\n${rootImports}\n\nexport const zIconRegistry = {\n${rootRegistry}\n};\n\nexport const ZIconElement = defineZIconElement('z-icon', zIconRegistry, { defaultVariant: 'light' });\n`
+    `import { defineZIconElement } from './create.js';\n${rootImports}\n\nexport const zIconRegistry = {\n${rootRegistry}\n};\n\nexport const zIconDefaultVariants = {\n${rootDefaultVariants}\n};\n\nexport const ZIconElement = defineZIconElement('z-icon', zIconRegistry, { defaultVariant: 'light', defaultVariants: zIconDefaultVariants });\n`
   );
   writeFile(
     path.join(distDir, 'register.d.ts'),
-    `export declare const zIconRegistry: Record<string, Record<string, Record<string, string>>>;\nexport declare const ZIconElement: CustomElementConstructor | undefined;\n`
+    `export declare const zIconRegistry: Record<string, Record<string, Record<string, string>>>;\nexport declare const zIconDefaultVariants: Record<string, string>;\nexport declare const ZIconElement: CustomElementConstructor | undefined;\n`
   );
 
   const rootExports = [
@@ -1023,9 +1090,10 @@ function buildWebPackage(icons, packData) {
     const variants = packData[pack] ?? {};
 
     for (const [variant, variantIcons] of Object.entries(variants)) {
-      const suffix = getPublicVariantSuffix(variant);
-      const fileName = `register-${pack}${variant === 'light' ? '' : `-${variant}`}`;
-      const tagName = `z-${pack}${variant === 'light' ? '' : `-${variant}`}`;
+      const suffix = getPublicVariantSuffix(pack, variant);
+      const variantFileSuffix = getVariantFileSuffix(pack, variant);
+      const fileName = `register-${pack}${variantFileSuffix}`;
+      const tagName = `z-${pack}${variantFileSuffix}`;
       const registryName = `${pack}Icons${suffix}`;
       const imports = variantIcons.map((icon) => `import { ${icon.componentName} } from '@zcorvus/icons/svg/${icon.publicFileName}';`);
       const map = `export const ${registryName} = {\n${variantIcons.map((icon) => `  '${icon.name}': ${icon.componentName}`).join(',\n')}\n};`;
@@ -1040,17 +1108,17 @@ function buildWebPackage(icons, packData) {
         `export declare const ${registryName}: {\n${variantIcons.map((icon) => `  readonly '${icon.name}': string;`).join('\n')}\n};\nexport declare const ${elementName}: CustomElementConstructor | undefined;\n`
       );
 
-      const spriteFileName = `register-${pack}${variant === 'light' ? '' : `-${variant}`}-sprite`;
-      const spriteTagName = `z-${pack}${variant === 'light' ? '' : `-${variant}`}-sprite`;
+      const spriteFileName = `register-${pack}${variantFileSuffix}-sprite`;
+      const spriteTagName = `z-${pack}${variantFileSuffix}-sprite`;
       const spriteName = `${pack}Sprite${suffix}`;
-      const spriteAssetFileName = `${pack}${variant === 'light' ? '' : `-${variant}`}`;
+      const spriteAssetFileName = `${pack}${variantFileSuffix}`;
       const spriteElementName = `Z${capitalize(pack)}${suffix}SpriteElement`;
       const spriteImports = variantIcons.map((icon) => `import { ${icon.componentName} } from '@zcorvus/icons/svg/${icon.publicFileName}';`);
       const spriteMap = `export const ${registryName} = {\n${variantIcons.map((icon) => `  '${icon.name}': ${icon.componentName}`).join(',\n')}\n};`;
 
       writeFile(
         path.join(distDir, `${spriteFileName}.js`),
-        `import { defineZIconElement } from './create.js';\nimport { ${spriteName} } from '@zcorvus/icons/sprites/${spriteAssetFileName}.js';\n${spriteImports.join('\n')}\n\n${spriteMap};\n\nexport { ${spriteName} } from '@zcorvus/icons/sprites/${spriteAssetFileName}.js';\nexport const ${spriteElementName} = defineZIconElement('${spriteTagName}', { ${pack}: { ${variant}: ${registryName} } }, { type: '${pack}', variant: '${variant}', defaultVariant: '${variant}', mode: 'sprite', spriteId: '${pack}-${variant}', sprite: ${spriteName} });\n`
+        `import { defineZIconElement } from './create.js';\nimport { ${spriteName} } from '@zcorvus/icons/sprites/${spriteAssetFileName}.js';\n${spriteImports.join('\n')}\n\n${spriteMap};\n\nexport { ${spriteName} } from '@zcorvus/icons/sprites/${spriteAssetFileName}.js';\nexport const ${spriteElementName} = defineZIconElement('${spriteTagName}', { ${pack}: { ${variant}: ${registryName} } }, { type: '${pack}', variant: '${variant}', defaultVariant: '${variant}', mode: 'sprite', spriteId: '${pack}${variantFileSuffix}', sprite: ${spriteName} });\n`
       );
       writeFile(
         path.join(distDir, `${spriteFileName}.d.ts`),

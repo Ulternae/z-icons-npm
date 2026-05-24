@@ -1081,4 +1081,4 @@ export const bruIcons = {
   'zulip': BruZulip
 };;
 
-export const ZBruElement = defineZIconElement('z-bru', { bru: { light: bruIcons } }, { type: 'bru', variant: 'light', defaultVariant: 'light' });
+export const ZBruElement = defineZIconElement('z-bru', { bru: { solid: bruIcons } }, { type: 'bru', variant: 'solid', defaultVariant: 'solid' });

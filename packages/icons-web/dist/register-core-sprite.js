@@ -17,4 +17,4 @@ export const coreIcons = {
 };;
 
 export { coreSprite } from '@zcorvus/icons/sprites/core.js';
-export const ZCoreSpriteElement = defineZIconElement('z-core-sprite', { core: { light: coreIcons } }, { type: 'core', variant: 'light', defaultVariant: 'light', mode: 'sprite', spriteId: 'core-light', sprite: coreSprite });
+export const ZCoreSpriteElement = defineZIconElement('z-core-sprite', { core: { light: coreIcons } }, { type: 'core', variant: 'light', defaultVariant: 'light', mode: 'sprite', spriteId: 'core', sprite: coreSprite });

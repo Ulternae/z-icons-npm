@@ -169,7 +169,7 @@
     <section class="toolbar">
       <div class="title">
         <h1>BRU Icons Local Preview</h1>
-        <p class="meta" id="meta">Cargando iconos desde icons/bru/light...</p>
+          <p class="meta" id="meta">Cargando iconos desde icons/bru/solid...</p>
       </div>
 
       <label>
@@ -751,7 +751,7 @@
     let visibleIcons = iconNames;
 
     function iconPath(name) {
-      return `/icons/bru/light/${name}.svg`;
+      return `/icons/bru/solid/${name}.svg`;
     }
 
     function normalizeSvg(svg) {
@@ -811,7 +811,7 @@
     }
 
     function updateMeta() {
-      meta.textContent = `${visibleIcons.length} de ${iconNames.length} iconos BRU light`;
+        meta.textContent = `${visibleIcons.length} de ${iconNames.length} iconos BRU solid`;
     }
 
     function applyControls() {

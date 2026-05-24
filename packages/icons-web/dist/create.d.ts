@@ -9,6 +9,7 @@ export type MissingIconBehavior = 'null' | 'warn' | 'error';
 export interface CreateZIconElementOptions {
   defaultType?: IconPack | string;
   defaultVariant?: IconVariant | string;
+  defaultVariants?: Record<string, IconVariant | string>;
   fallbackVariant?: IconVariant | string;
   fallbackPack?: IconPack | string;
   fallbackIcon?: string;

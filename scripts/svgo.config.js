@@ -63,7 +63,12 @@ const svgoConfig = {
     'removeEmptyContainers',
     'removeEmptyAttrs',
     'removeMetadata',
-    'removeComments',
+    {
+      name: 'removeComments',
+      params: {
+        preservePatterns: false,
+      },
+    },
     'removeDesc',
     'removeTitle',
     'removeEditorsNSData',

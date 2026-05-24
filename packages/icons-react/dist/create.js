@@ -2,6 +2,7 @@ import React from 'react';
 
 const DEFAULT_OPTIONS = {
   defaultVariant: 'light',
+  defaultVariants: undefined,
   fallbackVariant: undefined,
   fallbackPack: undefined,
   fallbackIcon: undefined,
@@ -70,17 +71,18 @@ export function createZIcon(registry, options = {}) {
   return function CreatedZIcon({
     type,
     name,
-    variant = config.defaultVariant,
+    variant,
     size = 24,
     color,
     style,
     ...props
   }) {
+    const resolvedVariant = variant ?? config.defaultVariants?.[type] ?? config.defaultVariant;
     const Icon = resolveIcon(
       normalizedRegistry,
       type,
       name,
-      variant,
+      resolvedVariant,
       config.fallbackVariant,
       config.fallbackPack
     );
@@ -93,6 +95,6 @@ export function createZIcon(registry, options = {}) {
       return React.createElement(config.fallbackIcon, { size, color, style, ...props });
     }
 
-    return handleMissingIcon({ type, name, variant, missing: config.missing });
+    return handleMissingIcon({ type, name, variant: resolvedVariant, missing: config.missing });
   };
 }

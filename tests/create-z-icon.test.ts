@@ -215,18 +215,25 @@ describe('createZIcon', () => {
   });
 
   it('accepts generated packs-data maps', () => {
-    const AppIcon = createZIcon({
-      core: {
-        light: coreIcons,
+    const AppIcon = createZIcon(
+      {
+        core: {
+          light: coreIcons,
+        },
+        mina: {
+          light: minaIcons,
+          solid: minaIconsSolid,
+        },
+        bru: {
+          solid: bruIcons,
+        },
       },
-      mina: {
-        light: minaIcons,
-        solid: minaIconsSolid,
-      },
-      bru: {
-        light: bruIcons,
-      },
-    });
+      {
+        defaultVariants: {
+          bru: 'solid',
+        },
+      }
+    );
 
     expect(expectElement(AppIcon({ type: 'core', name: 'anchor' })).type).toBe(CoreAnchor);
     expect(expectElement(AppIcon({ type: 'mina', name: 'anchor' })).type).toBe(MinaAnchor);
