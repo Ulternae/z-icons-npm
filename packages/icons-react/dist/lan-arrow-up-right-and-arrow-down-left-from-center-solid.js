@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanArrowUpRightAndArrowDownLeftFromCenterSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M352 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h50.7L297.3 169.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V160c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32zM214.6 297.4c-12.5-12.5-32.8-12.5-45.3 0L64 402.7V352c0-17.7-14.3-32-32-32S0 334.3 0 352v128c0 17.7 14.3 32 32 32h128c17.7 0 32-14.3 32-32s-14.3-32-32-32h-50.7l105.4-105.4c12.5-12.5 12.5-32.8 0-45.3z"})
+);
+
+export default LanArrowUpRightAndArrowDownLeftFromCenterSolid;

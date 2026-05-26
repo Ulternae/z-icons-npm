@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanRollerCoasterSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M128 132.2c-37.1 11.7-64 46.4-64 87.3V448c0 17.7-14.3 32-32 32S0 465.7 0 448V219.5C0 133.6 69.6 64 155.5 64c53.7 0 103.5 27.6 131.9 73.1l93.5 149.6c13 20.7 35.7 33.3 60.2 33.3h6.9c35.3 0 64-28.7 64-64v-.7c-.2-24.7-12.9-46.4-32-59.2v42.6c0 18.4-14.9 33.2-33.2 33.2-11.5 0-22.1-5.9-28.2-15.6l-2.6-4.1V188c-8.9 3.1-17.2 8-24.3 14.4l-3.5 3.2c-4.1-5.2-8-10.7-11.6-16.4L353 151.4c24.4-20.3 55.2-31.4 87-31.4 75.1 0 136.1 60.9 136.1 136v.8L576 448c0 17.7-14.3 32-32 32s-32-14.3-32-32v-81.1c-18.8 10.9-40.7 17.1-64 17.1v64c0 17.7-14.3 32-32 32s-32-14.3-32-32v-76.7c-23.3-10.9-43.3-28.3-57.4-50.8L320 310v138c0 17.7-14.3 32-32 32s-32-14.3-32-32V207.6L233.2 171c-10-16-24.4-28.2-41.2-35.4V448c0 17.7-14.3 32-32 32s-32-14.3-32-32z"})
+);
+
+export default LanRollerCoasterSolid;

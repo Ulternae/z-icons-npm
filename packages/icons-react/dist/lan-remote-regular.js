@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanRemoteRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 320 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M256-32c35.3 0 64 28.7 64 64v352l-.2 8.2C315.5 476.8 245.6 544 160 544S4.5 476.8.2 392.2L0 384V32C0-3.3 28.7-32 64-32zM64 16c-8.8 0-16 7.2-16 16v352c0 61.9 50.1 112 112 112s112-50.1 112-112V32c0-8.8-7.2-16-16-16zm56 320c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24m80 0c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24m-80-32a24 24 0 1 1 0-48 24 24 0 1 1 0 48m80 0a24 24 0 1 1 0-48 24 24 0 1 1 0 48m-40-96a80 80 0 1 1 0-160 80 80 0 1 1 0 160m0-112a32 32 0 1 0 0 64 32 32 0 1 0 0-64"})
+);
+
+export default LanRemoteRegular;

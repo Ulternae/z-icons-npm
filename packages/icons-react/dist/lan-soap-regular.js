@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanSoapRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M208 64a48 48 0 1 0 0-96 48 48 0 1 0 0 96m-15 96H96c-53 0-96 43-96 96v128c0 53 43 96 96 96h320c53 0 96-43 96-96V256c0-42.4-27.5-78.4-65.7-91.1-2.7 16.3-8.4 31.5-16.6 45.1 19.8 5.9 34.3 24.3 34.3 46v128c0 26.5-21.5 48-48 48H96c-26.5 0-48-21.5-48-48V256c0-26.5 21.5-48 48-48h113.1c-8.4-14.5-14-30.7-16.1-48m175 160c0 8.8-7.2 16-16 16H160c-8.8 0-16-7.2-16-16s7.2-16 16-16h192c8.8 0 16 7.2 16 16m-208-64c-35.3 0-64 28.7-64 64s28.7 64 64 64h192c35.3 0 64-28.7 64-64s-28.7-64-64-64zm160-144a32 32 0 1 1 0 64 32 32 0 1 1 0-64m0 112a80 80 0 1 0 0-160 80 80 0 1 0 0 160m64-192a32 32 0 1 0 0-64 32 32 0 1 0 0 64"})
+);
+
+export default LanSoapRegular;

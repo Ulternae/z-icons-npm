@@ -1,0 +1,2 @@
+export declare const LanBarProgressThreeQuartersRegular: string;
+export default LanBarProgressThreeQuartersRegular;

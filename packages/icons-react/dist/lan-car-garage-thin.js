@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCarGarageThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M291.2 8.7c-2-.9-4.4-.9-6.4 0l-256 112c-4 1.8-5.9 6.5-4.1 10.5s6.5 5.9 10.5 4.1L288 24.7l252.8 110.6c4 1.8 8.8-.1 10.5-4.1s-.1-8.8-4.1-10.5zM187.3 160h201.4c17.5 0 33 11.4 38.2 28.1l26.3 84.1c-1.7-.1-3.4-.2-5.2-.2H128c-1.7 0-3.5.1-5.2.2l26.3-84.1c5.2-16.7 20.7-28.1 38.2-28.1m-53.5 23.3-29.1 93.1C80.9 285.7 64 308.9 64 336v144c0 17.7 14.3 32 32 32s32-14.3 32-32v-32h320v32c0 17.7 14.3 32 32 32s32-14.3 32-32V336c0-27.1-16.9-50.3-40.8-59.6l-29.1-93.1c-7.3-23.4-29-39.3-53.5-39.3H187.2c-24.5 0-46.1 15.9-53.5 39.3zM464 432H80v-96c0-26.5 21.5-48 48-48h320c26.5 0 48 21.5 48 48v96zm0 48v-32h32v32c0 8.8-7.2 16-16 16s-16-7.2-16-16m-352-32v32c0 8.8-7.2 16-16 16s-16-7.2-16-16v-32zm32-96a16 16 0 1 1 32 0 16 16 0 1 1-32 0m48 0a32 32 0 1 0-64 0 32 32 0 1 0 64 0m224-16a16 16 0 1 1 0 32 16 16 0 1 1 0-32m0 48a32 32 0 1 0 0-64 32 32 0 1 0 0 64"})
+);
+
+export default LanCarGarageThin;

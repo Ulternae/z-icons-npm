@@ -1,0 +1,2 @@
+export const LanSignalAlt2Regular = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M184 280c0-13.3-10.7-24-24-24s-24 10.7-24 24v176c0 13.3 10.7 24 24 24s24-10.7 24-24zM56 408c0-13.3-10.7-24-24-24S8 394.7 8 408v48c0 13.3 10.7 24 24 24s24-10.7 24-24z"/></svg>';
+export default LanSignalAlt2Regular;

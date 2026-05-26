@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanThetaSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 384 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M64 256c0-56 16.2-105.3 40.9-139.8C129.6 81.6 160.8 64 192 64s62.4 17.6 87.1 52.2C303.8 150.7 320 200 320 256s-16.2 105.3-40.9 139.8C254.4 430.4 223.2 448 192 448s-62.4-17.6-87.1-52.2C80.2 361.3 64 312 64 256M192 0C134.8 0 86 32.5 52.8 79 19.6 125.6 0 188.2 0 256s19.6 130.4 52.8 177c33.2 46.5 82 79 139.2 79s106-32.5 139.2-79c33.2-46.6 52.8-109.2 52.8-177s-19.6-130.4-52.8-177C298 32.5 249.2 0 192 0m-48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32z"})
+);
+
+export default LanThetaSolid;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCrutchesRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M393 7c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l15 15-156.3 156.3c-16.5 16.5-25.8 38.9-25.8 62.2v59c0 10.6-4.2 20.8-11.7 28.3L95 447l-24 24c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l109.3-109.3c7.5-7.5 17.7-11.7 28.3-11.7h59c23.3 0 45.7-9.3 62.2-25.8L520 201.9l15 15.1c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9zm93.1 161L392 262.1 313.9 184 408 89.9zm-234.4 78.2 28.3-28.3 78.1 78.1-28.3 28.3c-7.5 7.5-17.7 11.7-28.3 11.7H240v-61.5c0-10.6 4.2-20.8 11.7-28.3M201.9 56l15-15c9.4-9.4 9.4-24.6 0-33.9S192.4-2.3 183 7L7 183c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l15-15 88 88v-15.4c0-15.4 2.6-30.6 7.6-44.8L89.9 168 168 89.9l52.1 52.2 34-34zM447 481l24 24c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-24-24-69.1-69.1-14.2 14.2c-6.7 6.7-14 12.6-21.8 17.7z"})
+);
+
+export default LanCrutchesRegular;

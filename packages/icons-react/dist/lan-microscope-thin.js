@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanMicroscopeThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M176 16c-17.7 0-32 14.3-32 32v224c0 17.7 14.3 32 32 32h64c17.7 0 32-14.3 32-32V48c0-17.7-14.3-32-32-32zm112 128v128c0 26.5-21.5 48-48 48h-64c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48h64c26.5 0 48 21.5 48 48v80h32c106 0 192 86 192 192 0 78.7-47.4 146.4-115.1 176H496c4.4 0 8 3.6 8 8s-3.6 8-8 8H8c-4.4 0-8-3.6-8-8s3.6-8 8-8h312c97.2 0 176-78.8 176-176s-78.8-176-176-176zM104 400h208c4.4 0 8 3.6 8 8s-3.6 8-8 8H104c-4.4 0-8-3.6-8-8s3.6-8 8-8"})
+);
+
+export default LanMicroscopeThin;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanAreaChartRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M48 56c0-13.3-10.7-24-24-24S0 42.7 0 56v344c0 44.2 35.8 80 80 80h408c13.3 0 24-10.7 24-24s-10.7-24-24-24H80c-17.7 0-32-14.3-32-32zm209.7 47.8c-4.5-5-11-7.8-17.7-7.8s-13.1 2.8-17.7 7.8l-104 113.5c-4.1 4.4-6.3 10.2-6.3 16.2V344c0 13.3 10.7 24 24 24h320c13.3 0 24-10.7 24-24V216c0-6.4-2.5-12.5-7-17l-64-64c-9.4-9.4-24.6-9.4-33.9 0l-46.3 46.3zM160 320v-77.2l80-87.3 70.3 76.7c4.4 4.8 10.6 7.6 17.2 7.8s12.9-2.4 17.5-7l47-47 40 40v94.1H160z"})
+);
+
+export default LanAreaChartRegular;

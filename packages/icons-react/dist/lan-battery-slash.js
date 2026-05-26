@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanBatterySlash = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M59.3-27.2c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6l544 544c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6l-75.4-75.4c28.3-12.3 48.1-40.6 48.1-73.4v-32h32c17.7 0 32-14.3 32-32v-96c0-17.7-14.3-32-32-32h-32v-32c0-44.2-35.8-80-80-80H150.5zM182.5 96H496c26.5 0 48 21.5 48 48v224c0 24.4-18.2 44.6-41.9 47.6zM32 144v224c0 44.2 35.8 80 80 80h309.5l-32-32H112c-26.5 0-48-21.5-48-48V144c0-14.7 6.6-27.8 16.9-36.6L58.2 84.8C42.1 99.4 32 120.5 32 144m544 64h32v96h-32z"})
+);
+
+export default LanBatterySlash;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanRupiahSignRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M0 56c0-13.3 10.7-24 24-24h96c75.1 0 136 60.9 136 136 0 54.4-32 101.4-78.1 123.1l45.2 158.3c3.6 12.7-3.7 26-16.5 29.7s-26-3.7-29.7-16.5l-45.4-159.1c-3.8.3-7.6.5-11.5.5H48v152c0 13.3-10.7 24-24 24S0 469.3 0 456zm48 200h72c48.6 0 88-39.4 88-88s-39.4-88-88-88H48zm264-32h88c61.9 0 112 50.1 112 112s-50.1 112-112 112h-64v72c0 13.3-10.7 24-24 24s-24-10.7-24-24V248c0-13.3 10.7-24 24-24m88 176c35.3 0 64-28.7 64-64s-28.7-64-64-64h-64v128z"})
+);
+
+export default LanRupiahSignRegular;

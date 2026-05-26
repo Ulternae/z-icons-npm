@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanEllipsisVAlt = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 128 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M64 48a32 32 0 1 0 0 64 32 32 0 1 0 0-64m0 96a64 64 0 1 1 0-128 64 64 0 1 1 0 128m32 112c0-17.7-14.3-32-32-32s-32 14.3-32 32 14.3 32 32 32 32-14.3 32-32m32 0c0 35.3-28.7 64-64 64S0 291.3 0 256s28.7-64 64-64 64 28.7 64 64M96 432c0-17.7-14.3-32-32-32s-32 14.3-32 32 14.3 32 32 32 32-14.3 32-32m32 0c0 35.3-28.7 64-64 64S0 467.3 0 432s28.7-64 64-64 64 28.7 64 64"})
+);
+
+export default LanEllipsisVAlt;

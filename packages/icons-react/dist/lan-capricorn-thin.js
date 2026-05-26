@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCapricornThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M216 32c66.3 0 120 53.7 120 120v138c21.8-39.4 63.8-66 112-66 70.7 0 128 57.3 128 128s-57.3 128-128 128c-51 0-95-29.8-115.6-73-14 60.2-68 105-132.4 105-4.4 0-8-3.6-8-8s3.6-8 8-8c66.3 0 120-53.7 120-120V152c0-57.4-46.6-104-104-104S112 94.6 112 152v256c0 4.4-3.6 8-8 8s-8-3.6-8-8V136c0-48.6-39.4-88-88-88-4.4 0-8-3.6-8-8s3.6-8 8-8c45.8 0 84.7 29.7 98.5 70.8C125.3 61.1 167.3 32 216 32m232 208a112 112 0 1 0 0 224 112 112 0 1 0 0-224"})
+);
+
+export default LanCapricornThin;

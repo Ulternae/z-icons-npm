@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanAmpGuitar = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M184 32h144c30.9 0 56 25.1 56 56v8H128v-8c0-30.9 25.1-56 56-56M96 88v8H64c-35.3 0-64 28.7-64 64v256c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64h-32v-8c0-48.6-39.4-88-88-88H184c-48.6 0-88 39.4-88 88m352 40c17.7 0 32 14.3 32 32v256c0 17.7-14.3 32-32 32H64c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32zM112 288h288v80H112zm-32 0v80c0 17.7 14.3 32 32 32h288c17.7 0 32-14.3 32-32v-80c0-17.7-14.3-32-32-32H112c-17.7 0-32 14.3-32 32m40-88a24 24 0 1 0-48 0 24 24 0 1 0 48 0m72 24a24 24 0 1 0 0-48 24 24 0 1 0 0 48m152-24a24 24 0 1 0-48 0 24 24 0 1 0 48 0m72 24a24 24 0 1 0 0-48 24 24 0 1 0 0 48"})
+);
+
+export default LanAmpGuitar;

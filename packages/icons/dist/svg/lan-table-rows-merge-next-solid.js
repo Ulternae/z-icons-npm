@@ -1,0 +1,2 @@
+export const LanTableRowsMergeNextSolid = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M448 416c0 35.3-28.7 64-64 64H64C30.9 480 3.6 454.8.3 422.5L0 416V96l.3-6.5c3.1-30.1 27-54.1 57.1-57.1L64 32h320c35.3 0 64 28.7 64 64zM64 96v128h32v64H64v128h320V288h-32v-64h32V96zm241 151c9.4 9.4 9.4 24.6 0 33.9l-64 64-1.8 1.7c-9.4 7.7-23.3 7.1-32.1-1.7l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l23 23v-86.1c0-13.3 10.7-24 24-24s24 10.7 24 24V270l23-23c9.4-9.4 24.6-9.4 33.9 0z"/></svg>';
+export default LanTableRowsMergeNextSolid;

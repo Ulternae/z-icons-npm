@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanShuttleVan = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M32 128v96h128V96H64c-17.7 0-32 14.3-32 32m0 128v80c0 17.7 14.3 32 32 32h3.3c10.4-36.9 44.4-64 84.7-64s74.2 27.1 84.7 64h110.6c10.4-36.9 44.4-64 84.7-64 40.2 0 74 26.9 84.6 63.7 15.5-2.2 27.4-15.6 27.4-31.7v-80zm507.4-32c-.7-1.1-1.4-2.2-2.2-3.2l-87.4-112.4c-6.1-7.8-15.4-12.4-25.3-12.4H352v128zM320 224V96H192v128zm256 112c0 32.7-24.6 59.8-56.3 63.5-3.8 45.1-41.6 80.5-87.7 80.5-45.9 0-83.6-35.1-87.6-80H239.7c-4 44.9-41.7 80-87.6 80s-83.6-35.1-87.6-80h-.4c-35.3 0-64-28.7-64-64L0 128c0-35.3 28.7-64 64-64h360.5c19.8 0 38.4 9.1 50.5 24.7l87.5 112.5c8.7 11.2 13.5 25.1 13.5 39.3zm-88 56a56 56 0 1 0-112 0 56 56 0 1 0 112 0m-336 56a56 56 0 1 0 0-112 56 56 0 1 0 0 112"})
+);
+
+export default LanShuttleVan;

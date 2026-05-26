@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanUserHair = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M320 144c0 53-43 96-96 96s-96-43-96-96v-16h63.1c24.9 0 49.1-8.3 68.8-23.6l42-32.7C313.3 87.6 320 107 320 128zM224 32c20.4 0 39.2 6.3 54.8 17.1l-38.6 30c-14.1 11-31.3 16.9-49.1 16.9h-57.6c13.2-37.3 48.7-64 90.5-64m0-32C153.3 0 96 57.3 96 128v16c0 70.7 57.3 128 128 128s128-57.3 128-128v-16C352 57.3 294.7 0 224 0M32 496c0-79.5 64.5-144 144-144h96c79.5 0 144 64.5 144 144 0 8.8 7.2 16 16 16s16-7.2 16-16c0-97.2-78.8-176-176-176h-96C78.8 320 0 398.8 0 496c0 8.8 7.2 16 16 16s16-7.2 16-16"})
+);
+
+export default LanUserHair;

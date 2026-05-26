@@ -1,0 +1,2 @@
+export declare const LanRectangleHistoryCircleUserSolid: string;
+export default LanRectangleHistoryCircleUserSolid;

@@ -1,0 +1,2 @@
+export declare const LanLandmarkMagnifyingGlassRegular: string;
+export default LanLandmarkMagnifyingGlassRegular;

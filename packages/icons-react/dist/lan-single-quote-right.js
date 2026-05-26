@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanSingleQuoteRight = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 192 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M48 416c-8.8 0-16-7.2-16-16s7.2-16 16-16h32c44.2 0 80-35.8 80-80v-24.6c-7.6 4.4-16.3 7.3-25.5 8.3l-6.5.3H64l-6.5-.3C25.2 284.4 0 257.1 0 224v-64l.3-6.5c3.1-30.1 27-54.1 57.1-57.1l6.5-.3h64l6.5.3c30.1 3.1 54.1 27 57.1 57.1l.3 6.5v144c0 61.9-50.1 112-112 112h-32zm80-160c17.7 0 32-14.3 32-32v-64c0-17.7-14.3-32-32-32H64c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32z"})
+);
+
+export default LanSingleQuoteRight;

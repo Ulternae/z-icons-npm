@@ -1,0 +1,2 @@
+export declare const LanDistributeSpacingHorizontalRegular: string;
+export default LanDistributeSpacingHorizontalRegular;

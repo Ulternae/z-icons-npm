@@ -1,0 +1,2 @@
+export const LanChevronSquareLeftThin = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16 416c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48V96c0-26.5-21.5-48-48-48H64c-26.5 0-48 21.5-48 48zm48 64c-35.3 0-64-28.7-64-64V96c0-35.3 28.7-64 64-64h320c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64zm66.3-229.7 120-120c3.1-3.1 8.2-3.1 11.3 0s3.1 8.2 0 11.3L147.3 256l114.4 114.3c3.1 3.1 3.1 8.2 0 11.3s-8.2 3.1-11.3 0l-120-120c-3.1-3.1-3.1-8.2 0-11.3z"/></svg>';
+export default LanChevronSquareLeftThin;

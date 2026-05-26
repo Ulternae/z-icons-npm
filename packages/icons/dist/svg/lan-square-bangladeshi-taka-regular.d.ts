@@ -1,0 +1,2 @@
+export declare const LanSquareBangladeshiTakaRegular: string;
+export default LanSquareBangladeshiTakaRegular;

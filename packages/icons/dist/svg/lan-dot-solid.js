@@ -1,0 +1,2 @@
+export const LanDotSolid = '<svg viewBox="0 0 128 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M64 192c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64"/></svg>';
+export default LanDotSolid;

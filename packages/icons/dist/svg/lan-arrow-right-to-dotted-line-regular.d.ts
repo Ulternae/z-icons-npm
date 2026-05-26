@@ -1,0 +1,2 @@
+export declare const LanArrowRightToDottedLineRegular: string;
+export default LanArrowRightToDottedLineRegular;

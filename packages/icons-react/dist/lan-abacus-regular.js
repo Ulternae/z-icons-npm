@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanAbacusRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M512 80c8.8 0 16 7.2 16 16v112h-80v-32h8c13.3 0 24-10.7 24-24s-10.7-24-24-24h-8V80zm-96 48h-8c-13.3 0-24 10.7-24 24s10.7 24 24 24h8v32H288v-32h8c13.3 0 24-10.7 24-24s-10.7-24-24-24h-8V80h128zm-160 0h-8c-13.3 0-24 10.7-24 24s10.7 24 24 24h8v32h-96v-32h8c13.3 0 24-10.7 24-24s-10.7-24-24-24h-8V80h96zm-128 0h-8c-13.3 0-24 10.7-24 24s10.7 24 24 24h8v32H48V96c0-8.8 7.2-16 16-16h64zM48 416V240h80v24h-8c-13.3 0-24 10.7-24 24s10.7 24 24 24h8v24h-8c-13.3 0-24 10.7-24 24s10.7 24 24 24h8v48H64c-8.8 0-16-7.2-16-16m112-32h8c13.3 0 24-10.7 24-24s-10.7-24-24-24h-8v-24h8c13.3 0 24-10.7 24-24s-10.7-24-24-24h-8v-24h96v24h-8c-13.3 0-24 10.7-24 24s10.7 24 24 24h8v24h-8c-13.3 0-24 10.7-24 24s10.7 24 24 24h8v48h-96zm128-72h8c13.3 0 24-10.7 24-24s-10.7-24-24-24h-8v-24h128v96h-8c-13.3 0-24 10.7-24 24s10.7 24 24 24h8v48H288v-48h8c13.3 0 24-10.7 24-24s-10.7-24-24-24h-8zm160 72h8c13.3 0 24-10.7 24-24s-10.7-24-24-24h-8v-96h80v176c0 8.8-7.2 16-16 16h-64zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64z"})
+);
+
+export default LanAbacusRegular;

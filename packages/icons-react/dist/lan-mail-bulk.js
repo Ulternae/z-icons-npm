@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanMailBulk = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M112 32h256c8.8 0 16 7.2 16 16h32c0-26.5-21.5-48-48-48H112C85.5 0 64 21.5 64 48v128h32V48c0-8.8 7.2-16 16-16m80 112c0-8.8 7.2-16 16-16h320c8.8 0 16 7.2 16 16v224c0 8.8-7.2 16-16 16H400v32h128c26.5 0 48-21.5 48-48V144c0-26.5-21.5-48-48-48H208c-26.5 0-48 21.5-48 48v32h32zm112 112c8.8 0 16 7.2 16 16v23.2l-137.8 87c-1.9 1.2-4 1.8-6.2 1.8s-4.4-.6-6.2-1.8L32 295.2V272c0-8.8 7.2-16 16-16zM32 464V333l120.7 76.2c7 4.4 15.1 6.7 23.3 6.7s16.3-2.3 23.3-6.7L320 333v131c0 8.8-7.2 16-16 16H48c-8.8 0-16-7.2-16-16m16-240c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h256c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm416 16h-32v-32h32zm-64-40v48c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24v-48c0-13.3-10.7-24-24-24h-48c-13.3 0-24 10.7-24 24"})
+);
+
+export default LanMailBulk;

@@ -1,0 +1,2 @@
+export declare const LanCircleUserCircleCheckRegular: string;
+export default LanCircleUserCircleCheckRegular;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanRepeat1Regular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M393 192c-22.6 0-41-18.3-41-41v-31H192c-79.5 0-144 64.5-144 144 0 13.3-10.7 24-24 24S0 277.3 0 264C0 158 86 72 192 72h160V41c0-22.6 18.3-41 41-41 10.9 0 21.3 4.3 29 12l67 67c4.5 4.5 7 10.6 7 17s-2.5 12.5-7 17l-67 67c-7.7 7.7-18.1 12-29 12m7-57.9L438.1 96 400 57.9V134zM160 471c0 22.6-18.3 41-41 41-10.9 0-21.3-4.3-29-12l-67-67c-4.5-4.5-7-10.6-7-17s2.5-12.5 7-17l67-67c7.7-7.7 18.1-12 29-12 22.6 0 41 18.3 41 41v31h160c79.5 0 144-64.5 144-144 0-13.3 10.7-24 24-24s24 10.7 24 24c0 106-86 192-192 192H160zm-48-93.1L73.9 416l38.1 38.1V378zM288 208v96c0 13.3-10.7 24-24 24s-24-10.7-24-24v-49.4c-9.6 3.4-20.7.4-27.2-8.2-8-10.6-5.8-25.6 4.8-33.6l32-24c7.3-5.5 17-6.3 25.1-2.3S288 198.9 288 208"})
+);
+
+export default LanRepeat1Regular;

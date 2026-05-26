@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanVolumeMuteThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"m123.3 340.7 118.1 118c3.4 3.4 7.9 5.3 12.7 5.3 9.9 0 17.9-8 17.9-17.9V66c0-9.9-8-17.9-17.9-17.9-4.8 0-9.3 1.9-12.7 5.3L123.3 171.3c-3 3-7.1 4.7-11.3 4.7H48c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32h64c4.2 0 8.3 1.7 11.3 4.7M48 160h64L230.1 41.9c6.4-6.4 15-9.9 24-9.9 18.7 0 33.9 15.2 33.9 33.9V446c0 18.7-15.2 33.9-33.9 33.9-9 0-17.6-3.6-24-9.9L112 352H48c-26.5 0-48-21.5-48-48v-96c0-26.5 21.5-48 48-48m322.3 18.3c3.1-3.1 8.2-3.1 11.3 0l66.3 66.3 66.3-66.3c3.1-3.1 8.2-3.1 11.3 0s3.1 8.2 0 11.3l-66.3 66.3 66.3 66.3c3.1 3.1 3.1 8.2 0 11.3s-8.2 3.1-11.3 0l-66.3-66.3-66.3 66.3c-3.1 3.1-8.2 3.1-11.3 0s-3.1-8.2 0-11.3l66.3-66.3-66.3-66.3c-3.1-3.1-3.1-8.2 0-11.3"})
+);
+
+export default LanVolumeMuteThin;

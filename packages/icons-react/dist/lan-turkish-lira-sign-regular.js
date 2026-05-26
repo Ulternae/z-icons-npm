@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanTurkishLiraSignRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 384 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M120 32c13.3 0 24 10.7 24 24v56.2l137.4-39.3c12.7-3.6 26 3.7 29.7 16.5s-3.7 26-16.5 29.7l-150.6 43v46.1l137.4-39.3c12.7-3.6 26 3.7 29.7 16.5s-3.7 26-16.5 29.7l-150.6 43V432h72c66.3 0 120-53.7 120-120 0-13.3 10.7-24 24-24s24 10.7 24 24c0 92.8-75.2 168-168 168h-96c-13.3 0-24-10.7-24-24V271.8l-25.4 7.3c-12.7 3.6-26-3.7-29.7-16.5s3.7-26 16.5-29.7l38.6-11v-46.1l-25.4 7.3c-12.7 3.6-26-3.7-29.7-16.5s3.7-26 16.5-29.7l38.6-11V56c0-13.3 10.7-24 24-24"})
+);
+
+export default LanTurkishLiraSignRegular;

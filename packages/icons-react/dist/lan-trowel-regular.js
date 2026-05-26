@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanTrowelRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"m404.4 110 29.6 29.6 87.9-87.9c8.2-8.2 8.2-21.4 0-29.6s-21.4-8.2-29.6 0zM555.8-11.8c26.9 26.9 26.9 70.5 0 97.5l-95.4 95.4c-14.6 14.6-38.2 14.6-52.8 0l-5.4-5.4L269.9 308l75 75c5.9 5.9 8.3 14.5 6.4 22.6s-8 14.6-15.9 17.2l-272 88c-8.6 2.8-18 .5-24.4-5.9s-8.6-15.8-5.9-24.4l88-272c2.6-7.9 9.1-14 17.2-15.9s16.7.5 22.6 6.4l75 75 132.3-132.3-5.4-5.4c-14.6-14.6-14.6-38.2 0-52.8l95.4-95.4c26.9-26.9 70.5-26.9 97.5 0zM93.3 450.7l190-61.5-128.5-128.5z"})
+);
+
+export default LanTrowelRegular;

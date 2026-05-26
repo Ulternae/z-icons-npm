@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanAustralSign = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M284.4 240H163.6L224 76.2zm34.1 0L248 48.7c-3.7-10-13.3-16.7-24-16.7s-20.3 6.7-24 16.7L129.5 240H32c-8.8 0-16 7.2-16 16s7.2 16 16 16h85.7l-23.6 64H32c-8.8 0-16 7.2-16 16s7.2 16 16 16h50.3L49 458.5c-3.1 8.3 1.2 17.5 9.5 20.5s17.5-1.2 20.5-9.5L116.4 368h215.2L369 469.5c3.1 8.3 12.3 12.5 20.5 9.5s12.5-12.3 9.5-20.5L365.7 368H416c8.8 0 16-7.2 16-16s-7.2-16-16-16h-62.1l-23.6-64H416c8.8 0 16-7.2 16-16s-7.2-16-16-16zm-22.3 32 23.6 64H128.3l23.6-64h144.4z"})
+);
+
+export default LanAustralSign;

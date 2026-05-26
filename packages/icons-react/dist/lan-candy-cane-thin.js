@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCandyCaneThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"m248.7 92.9-22.6 22.6c-15.6 15.6-40.9 15.6-56.6 0s-15.6-40.9 0-56.6l22.6-22.6c20.4-20.4 45.6-32.9 72-37.7v83.3c-5.6 2.7-10.8 6.3-15.4 10.9zm70.4-7.2a55.88 55.88 0 0 0-39-8.6V-3.3c33.9-2 68.5 8.6 96 31.9l-57 57zm12 10.6 56.6-56.6c25.2 27 37.4 61.8 36.5 96.3h-80.1c.9-14-3.5-28.3-13.1-39.6zm91.8 55.7c-3.8 26.1-15.1 51.2-34 72H276l51.9-51.9c5.9-5.9 10.2-12.8 12.9-20.1zM180.1 320l80-80h113.1l-80 80zm97.1 16-72 72H92.1l72-72zM67.7 432.3 76 424h113.1l-64.9 64.9c-15.6 15.6-40.9 15.6-56.6 0s-15.6-40.9 0-56.6zm192.4-328.1c15.6-15.6 40.9-15.6 56.6 0s15.6 40.9 0 56.6L56.4 421c-21.9 21.9-21.9 57.3 0 79.2s57.3 21.9 79.2 0L395.8 240c59.4-59.4 59.4-155.6 0-215s-155.6-59.4-215 0l-22.6 22.7c-21.9 21.9-21.9 57.3 0 79.2s57.3 21.9 79.2 0l22.6-22.6z"})
+);
+
+export default LanCandyCaneThin;

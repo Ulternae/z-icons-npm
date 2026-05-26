@@ -1,0 +1,2 @@
+export declare const LanSquareHalfStrokeHorizontalRegular: string;
+export default LanSquareHalfStrokeHorizontalRegular;

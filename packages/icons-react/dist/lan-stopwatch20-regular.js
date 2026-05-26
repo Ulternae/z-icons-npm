@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanStopwatch20Regular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M168 0c-13.3 0-24 10.7-24 24s10.7 24 24 24h32v25.3C92 85.3 8 176.8 8 288c0 119.3 96.7 216 216 216s216-96.7 216-216c0-42.8-12.4-82.6-33.9-116.2L433 145c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-23.3 23.3c-33.7-33.2-78.2-55.5-127.8-61V48.1h32c13.3 0 24-10.7 24-24S293.3 0 280 0zm56 456a168 168 0 1 1 0-336 168 168 0 1 1 0 336M108 240c0 11 9 20 20 20s20-9 20-20c0-6.6 5.4-12 12-12s12 5.4 12 12v3.8c0 4.3-1.2 8.4-3.4 12.1L111.9 348c-2.5 4.1-3.9 8.9-3.9 13.8 0 14.5 11.7 26.2 26.2 26.2H192c11 0 20-9 20-20s-9-20-20-20h-33.1l43.8-71.2c6.1-9.9 9.3-21.4 9.3-33V240c0-28.7-23.3-52-52-52s-52 23.3-52 52m180-52c-28.7 0-52 23.3-52 52v96c0 28.7 23.3 52 52 52s52-23.3 52-52v-96c0-28.7-23.3-52-52-52m-12 52c0-6.6 5.4-12 12-12s12 5.4 12 12v96c0 6.6-5.4 12-12 12s-12-5.4-12-12z"})
+);
+
+export default LanStopwatch20Regular;

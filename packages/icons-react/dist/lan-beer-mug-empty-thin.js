@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanBeerMugEmptyThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M400 48c17.7 0 32 14.3 32 32v304c0 44.2-35.8 80-80 80H160c-44.2 0-80-35.8-80-80V80c0-17.7 14.3-32 32-32zm48 336v-27.1L553.9 304c13.6-6.8 22.1-20.6 22.1-35.8V136c0-22.1-17.9-40-40-40h-88V80c0-26.5-21.5-48-48-48H112c-26.5 0-48 21.5-48 48v304c0 53 43 96 96 96h192c53 0 96-43 96-96m98.7-94.3L448 339.1V112h88c13.3 0 24 10.7 24 24v132.2c0 9.1-5.1 17.4-13.3 21.5M168 128c-4.4 0-8 3.6-8 8v240c0 4.4 3.6 8 8 8s8-3.6 8-8V136c0-4.4-3.6-8-8-8m168 8v240c0 4.4 3.6 8 8 8s8-3.6 8-8V136c0-4.4-3.6-8-8-8s-8 3.6-8 8m-80-8c-4.4 0-8 3.6-8 8v240c0 4.4 3.6 8 8 8s8-3.6 8-8V136c0-4.4-3.6-8-8-8"})
+);
+
+export default LanBeerMugEmptyThin;

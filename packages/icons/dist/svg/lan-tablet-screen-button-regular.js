@@ -1,0 +1,2 @@
+export const LanTabletScreenButtonRegular = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M48 448c0 8.8 7.2 16 16 16h320c8.8 0 16-7.2 16-16V336H48zm0-160h352V64c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zM0 64C0 28.7 28.7 0 64 0h320c35.3 0 64 28.7 64 64v384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64zm224 304a32 32 0 1 1 0 64 32 32 0 1 1 0-64"/></svg>';
+export default LanTabletScreenButtonRegular;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanBridgeCircleExclamationThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M8 32c-4.4 0-8 3.6-8 8s3.6 8 8 8h48v96H8c-4.4 0-8 3.6-8 8v104c0 3.3 2.1 6.3 5.2 7.5l12.1 4.5C45.4 278.6 64 305.4 64 335.4V456c0 13.3 10.7 24 24 24h64c13.3 0 24-10.7 24-24v-88c0-44.2 35.8-80 80-80 6.4 0 12.6.7 18.5 2.2 3.3-4.7 6.8-9.3 10.5-13.7-9.2-2.9-18.9-4.5-29-4.5-53 0-96 43-96 96v88c0 4.4-3.6 8-8 8H88c-4.4 0-8-3.6-8-8V335.4c0-36.7-22.8-69.5-57.1-82.4l-6.9-2.6v-90.5h480v58.9c5.4 1.9 10.8 4.1 16 6.5v-73.4c0-4.4-3.6-8-8-8h-48v-96h48c4.4 0 8-3.6 8-8s-3.6-8-8-8zm432 16v96H328V48zm-128 0v96H200V48zm-128 0v96H72V48zm120 352a128 128 0 1 1 256 0 128 128 0 1 1-256 0m272 0a144 144 0 1 0-288 0 144 144 0 1 0 288 0m-144 76a12 12 0 1 0 0-24 12 12 0 1 0 0 24m0-164c-4.4 0-8 3.6-8 8v96c0 4.4 3.6 8 8 8s8-3.6 8-8v-96c0-4.4-3.6-8-8-8"})
+);
+
+export default LanBridgeCircleExclamationThin;

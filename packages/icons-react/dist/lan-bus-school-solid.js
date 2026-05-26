@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanBusSchoolSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M128 0C75 0 32 43 32 96v168.6c-19.1 11-32 31.7-32 55.4v64c0 29.8 20.4 54.9 48 62v34c0 17.7 14.3 32 32 32h16c17.7 0 32-14.3 32-32v-32h192v32c0 17.7 14.3 32 32 32h16c17.7 0 32-14.3 32-32v-34c27.6-7.1 48-32.2 48-62v-64c0-23.7-12.9-44.4-32-55.4V96c0-53-43-96-96-96zM64 352a32 32 0 1 1 64 0 32 32 0 1 1-64 0m288-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64m-104-64V128h88c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32zm-48-128v128h-88c-17.7 0-32-14.3-32-32v-64c0-17.7 14.3-32 32-32zm-16-80h80c13.3 0 24 10.7 24 24s-10.7 24-24 24h-80c-13.3 0-24-10.7-24-24s10.7-24 24-24"})
+);
+
+export default LanBusSchoolSolid;

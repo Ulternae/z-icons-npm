@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanHeadphonesSlashThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M13.7-29.8c-3.1-3.1-8.2-3.1-11.3 0s-3.1 8.2 0 11.3l560 560c3.1 3.1 8.2 3.1 11.3 0s3.1-8.2 0-11.3l-84.3-84.3c14.1-16.7 22.6-38.3 22.6-61.9V224C512 100.3 411.7 0 288 0c-67.1 0-127.3 29.5-168.4 76.2l-106-106zM131 87.6C169.1 43.7 225.3 16 288 16c114.9 0 208 93.1 208 208v74.9C478.8 273 449.4 256 416 256h-16c-26.5 0-48 21.5-48 48v4.6zm237 237V304c0-17.7 14.3-32 32-32h16c44.2 0 80 35.8 80 80v32c0 19.2-6.8 36.8-18 50.6zM352.8 400l-.8-.8v.8zM96.2 143.4 84 131.2c-12.8 28.3-20 59.7-20 92.8v160c0 53 43 96 96 96h16c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48h-16c-33.4 0-62.8 17-80 42.9V224c0-28.6 5.8-55.8 16.2-80.6M80 368v-16c0-44.2 35.8-80 80-80h16c17.7 0 32 14.3 32 32v128c0 17.7-14.3 32-32 32h-16c-44.2 0-80-35.8-80-80z"})
+);
+
+export default LanHeadphonesSlashThin;

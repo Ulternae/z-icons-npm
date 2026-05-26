@@ -1,0 +1,2 @@
+export declare const LanTableColumnsRemoveBeforeThin: string;
+export default LanTableColumnsRemoveBeforeThin;

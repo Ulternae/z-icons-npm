@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanBinBottlesRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M128 32c-17.7 0-32 14.3-32 32v32c-35.3 0-64 28.7-64 64v16h-8c-13.3 0-24 10.7-24 24s10.7 24 24 24h12.6l21.9 230.1c3.1 32.8 30.7 57.9 63.7 57.9h331.6c33 0 60.6-25.1 63.7-57.9L539.4 224H552c13.3 0 24-10.7 24-24s-10.7-24-24-24h-8v-16c0-35.3-28.7-64-64-64V64c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v32c-35.3 0-64 28.7-64 64 0-35.3-28.7-64-64-64V64c0-17.7-14.3-32-32-32zm-21.7 417.5L84.8 224h406.4l-21.5 225.5c-.8 8.2-7.7 14.5-15.9 14.5H122.2c-8.2 0-15.1-6.3-15.9-14.5"})
+);
+
+export default LanBinBottlesRegular;

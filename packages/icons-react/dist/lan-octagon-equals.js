@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanOctagonEquals = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M.5 330.4c0 12.7 5.1 24.9 14.1 33.9l133.5 133.6c9 9 21.2 14.1 33.9 14.1h148.8c12.7 0 24.9-5.1 33.9-14.1l133.6-133.5c9-9 14.1-21.2 14.1-33.9V181.7c0-12.7-5.1-24.9-14.1-33.9L364.8 14.1c-9-9-21.2-14.1-33.9-14.1L182 .1c-12.7 0-24.9 5.1-33.9 14.1L14.6 147.6c-9 9-14.1 21.2-14.1 33.9v148.8zM182 32.1h148.8c4.2 0 8.3 1.7 11.3 4.7l133.6 133.5c3 3 4.7 7.1 4.7 11.3v148.8c0 4.2-1.7 8.3-4.7 11.3L342.2 475.2c-3 3-7.1 4.7-11.3 4.7H182.1c-4.2 0-8.3-1.7-11.3-4.7L37.2 341.7c-3-3-4.7-7.1-4.7-11.3V181.6c0-4.2 1.7-8.3 4.7-11.3L170.7 36.8c3-3 7.1-4.7 11.3-4.7M160.4 208c0 8.8 7.2 16 16 16h160c8.8 0 16-7.2 16-16s-7.2-16-16-16h-160c-8.8 0-16 7.2-16 16m0 96c0 8.8 7.2 16 16 16h160c8.8 0 16-7.2 16-16s-7.2-16-16-16h-160c-8.8 0-16 7.2-16 16"})
+);
+
+export default LanOctagonEquals;

@@ -10,7 +10,11 @@
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
     "check": "pnpm run build && pnpm run typecheck && pnpm run test",
-    "prepublishOnly": "pnpm run build"
+    "prepublishOnly": "pnpm run build",
+    "duplicates:lan-light": "node scripts/find-duplicate-icons.js --pack lan --variant light",
+    "dedupe:lan-light": "node scripts/remove-duplicate-icons.js --report metadata/icon-duplicates/lan-light.json",
+    "sync:lan-variants": "node scripts/sync-variant-icons.js --pack lan --reference light --variants regular,solid,thin",
+    "sync:lan-variants:write": "node scripts/sync-variant-icons.js --pack lan --reference light --variants regular,solid,thin --write"
   },
   "devDependencies": {
     "@types/node": "^25.6.2",

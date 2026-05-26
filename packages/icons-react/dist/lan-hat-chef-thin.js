@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanHatChefThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M256 16c-35.4 0-66.9 16.4-87.4 42-2.4 3-6.7 3.9-10.1 2-13.8-7.6-29.6-12-46.5-12-53 0-96 43-96 96 0 39.9 24.4 74.2 59.1 88.6 3 1.2 4.9 4.2 4.9 7.4v128h72V224c0-4.4 3.6-8 8-8s8 3.6 8 8v144h80V224c0-4.4 3.6-8 8-8s8 3.6 8 8v144h80V224c0-4.4 3.6-8 8-8s8 3.6 8 8v144h72V240c0-3.2 1.9-6.1 4.9-7.4 34.7-14.5 59.1-48.7 59.1-88.6 0-53-43-96-96-96-16.9 0-32.7 4.3-46.5 12-3.4 1.9-7.7 1-10.1-2-20.5-25.6-52.1-42-87.4-42m176 368H80v72c0 22.1 17.9 40 40 40h272c22.1 0 40-17.9 40-40zM160.3 42.9C183.8 16.6 218 0 256 0s72.2 16.6 95.7 42.9c14.6-7 31-10.9 48.3-10.9 61.9 0 112 50.1 112 112 0 44.7-26.2 83.3-64 101.2V456c0 30.9-25.1 56-56 56H120c-30.9 0-56-25.1-56-56V245.2C26.2 227.2 0 188.7 0 144 0 82.1 50.1 32 112 32c17.3 0 33.7 3.9 48.3 10.9"})
+);
+
+export default LanHatChefThin;

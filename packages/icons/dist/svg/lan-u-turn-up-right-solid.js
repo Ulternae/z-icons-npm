@@ -1,0 +1,2 @@
+export const LanUTurnUpRightSolid = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M0 272C0 157.1 93.1 64 208 64h128V16c0-12.9 7.8-24.6 19.8-29.6s25.7-2.2 34.9 6.9l112 112 2.2 2.4c10.2 12.6 9.5 31.1-2.2 42.8l-112 112c-9.2 9.2-22.9 11.9-34.9 6.9S336 252.9 336 240v-48H208c-44.2 0-80 35.8-80 80s35.8 80 80 80h208c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32H208C93.1 480 0 386.9 0 272"/></svg>';
+export default LanUTurnUpRightSolid;

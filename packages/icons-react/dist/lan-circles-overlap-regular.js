@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCirclesOverlapRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M168.5 363.1c-5.5-18.7-8.5-38.6-8.5-59.1 0-100.6 71.4-184.5 166.2-203.8C297 68.1 254.8 48 208 48c-88.4 0-160 71.6-160 160 0 74.7 51.2 137.5 120.5 155.1m23.8 52.3C84.8 407.4 0 317.6 0 208 0 93.1 93.1 0 208 0c73.9 0 138.8 38.5 175.7 96.6C491.2 104.6 576 194.4 576 304c0 114.9-93.1 208-208 208-73.9 0-138.8-38.5-175.7-96.6m57.4-3.6C279 443.9 321.1 464 367.9 464c88.4 0 160-71.6 160-160 0-74.7-51.2-137.5-120.5-155.1 5.5 18.7 8.5 38.6 8.5 59.1 0 100.6-71.4 184.5-166.2 203.8m105.2-267.3C272.7 151.2 208 220 208 304c0 22.6 4.7 44 13.1 63.5C303.3 360.8 368 292 368 208c0-22.6-4.7-44-13.1-63.5"})
+);
+
+export default LanCirclesOverlapRegular;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanUtensilKnife = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M452.8 36.7c6.2-6.2 16.4-6.2 22.6 0l.8.8c50 50 50 131 0 181L338.1 356.7c-18.7 18.7-49.1 18.7-67.9 0l-46.1-46.1L27.4 507.3c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6zM246.7 288l46.1 46.1c6.2 6.2 16.4 6.2 22.6 0l138.2-138.2c33.9-33.9 37.1-86.9 9.7-124.4z"})
+);
+
+export default LanUtensilKnife;

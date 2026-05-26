@@ -1,0 +1,2 @@
+export const LanLocationArrowUpSolid = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M253.1 18.6C247.8 7.3 236.5 0 224 0s-23.8 7.3-29.1 18.6l-192 416c-5.6 12.2-3.1 26.5 6.4 36s23.8 12.1 36 6.5L224 395.2l178.7 81.9c12.2 5.6 26.5 3 36-6.5s12-23.8 6.4-36z"/></svg>';
+export default LanLocationArrowUpSolid;

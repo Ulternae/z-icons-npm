@@ -1,0 +1,2 @@
+export declare const LanUpRightAndDownLeftFromCenterThin: string;
+export default LanUpRightAndDownLeftFromCenterThin;

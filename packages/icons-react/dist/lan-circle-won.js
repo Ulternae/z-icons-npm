@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCircleWon = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M256 32a224 224 0 1 1 0 448 224 224 0 1 1 0-448m0 480a256 256 0 1 0 0-512 256 256 0 1 0 0 512m0-368c-7.1 0-13.4 4.7-15.4 11.6L211.9 256h-41.2l-27.4-92.5c-2.5-8.5-11.4-13.3-19.9-10.8s-13.3 11.4-10.8 19.9l24.7 83.4h-9.4c-8.8 0-16 7.2-16 16s7.2 16 16 16h18.9l29.8 100.5c2 6.8 8.3 11.5 15.4 11.5s13.4-4.8 15.3-11.6L236 288h39.9l28.7 100.4c2 6.8 8.2 11.6 15.3 11.6s13.4-4.6 15.4-11.5L365.1 288H384c8.8 0 16-7.2 16-16s-7.2-16-16-16h-9.4l24.7-83.4c2.5-8.5-2.3-17.4-10.8-19.9s-17.4 2.3-19.9 10.8L341.2 256H300l-28.7-100.4c-2-6.9-8.2-11.6-15.4-11.6zm64.3 182.7L309.2 288h22.5l-11.5 38.7zM256 218.2l10.8 37.8h-21.6zM180.2 288h22.5l-11.1 38.7-11.5-38.7z"})
+);
+
+export default LanCircleWon;

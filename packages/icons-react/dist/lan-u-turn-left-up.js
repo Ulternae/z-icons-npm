@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanUTurnLeftUp = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M160.5 0c-9.7 0-16.7 4.4-21.5 8.3l-1.1 1-112 112C5.7 141.5 20.3 176 48.5 176h48v128c0 114.9 93.1 208 208 208s208-93.1 208-208V96l-.2-3.3C510.7 76.6 497 64 480.5 64h-64l-3.3.2c-16.1 1.6-28.7 15.3-28.7 31.8v208c0 44.2-35.8 80-80 80s-80-35.8-80-80V176h48c28.1 0 42.7-34.5 22.6-54.6l-112-112-1.1-1c-4.8-4-11.8-8.4-21.5-8.4m.8 32.8L272.5 144h-64c-8.8 0-16 7.2-16 16v144c0 61.8 50.1 112 112 112s112-50.2 112-112V96h64v208c0 97.2-78.8 176-176 176s-176-78.8-176-176V160c0-8.8-7.2-16-16-16h-64L159.7 32.8c.3-.3.6-.4.8-.6.2.1.5.3.8.6"})
+);
+
+export default LanUTurnLeftUp;

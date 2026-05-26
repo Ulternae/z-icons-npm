@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanLocationCrosshairsSlashSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M41-24.9c-9.4-9.4-24.6-9.4-33.9 0S-2.3-.3 7 9.1l528 528c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L462.4 396.6c24.7-30.6 41.5-67.8 47.3-108.6H528c17.7 0 32-14.3 32-32s-14.3-32-32-32h-18.3c-14-98.1-91.6-175.7-189.7-189.7V16c0-17.7-14.3-32-32-32s-32 14.3-32 32v18.3c-40.8 5.8-78 22.6-108.6 47.3zm152.1 152.1C219.7 107.6 252.5 96 288 96c88.4 0 160 71.6 160 160 0 35.5-11.6 68.4-31.2 94.9l-46.1-46.1c8.5-14.3 13.3-31 13.3-48.8 0-53-43-96-96-96-17.8 0-34.5 4.9-48.8 13.3zM338.2 408c-15.8 5.2-32.6 8-50.2 8-88.4 0-160-71.6-160-160 0-17.5 2.8-34.4 8-50.2l-49-49c-10.2 20.8-17.3 43.4-20.7 67.2H48c-17.7 0-32 14.3-32 32s14.3 32 32 32h18.3c14 98.1 91.6 175.7 189.7 189.7V496c0 17.7 14.3 32 32 32s32-14.3 32-32v-18.3c23.8-3.4 46.4-10.5 67.1-20.8l-49-49zm-146-146c3 48.2 41.6 86.8 89.8 89.8z"})
+);
+
+export default LanLocationCrosshairsSlashSolid;

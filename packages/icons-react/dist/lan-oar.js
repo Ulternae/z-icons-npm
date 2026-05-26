@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanOar = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M469.1-11.3c6.2-6.2 16.4-6.2 22.6 0l64 64c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0l-20.7-20.7-192.8 192.8-13.9 111.7c-1.3 10.6-6.2 20.4-13.7 28L153.7 525.3c-22.8 22.8-59.8 22.8-82.6 0l-52-52c-22.8-22.8-22.8-59.8 0-82.6l138.3-138.2c7.5-7.5 17.4-12.4 28-13.7l111.6-14L489.8 32l-20.7-20.7c-6.2-6.2-6.2-16.4 0-22.6M189.3 270.5c-3.5.4-6.8 2.1-9.3 4.6L41.7 413.3c-10.3 10.3-10.3 27.1 0 37.4l52 52c10.3 10.3 27.1 10.3 37.4 0l138.3-138.2c2.5-2.5 4.1-5.8 4.6-9.3l12.1-96.7-96.7 12.1z"})
+);
+
+export default LanOar;

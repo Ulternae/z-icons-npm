@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanInboxArrowDownThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M33 86.7C37.7 55.3 64.6 32 96.4 32h319.3c31.8 0 58.7 23.3 63.3 54.7l29.6 201c2.3 15.8 3.5 31.8 3.5 47.7V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64v-80.6c0-16 1.2-31.9 3.5-47.7zM96.4 48c-23.8 0-44 17.5-47.5 41L19.3 290c-.7 4.6-1.3 9.3-1.7 14h117.9c8 0 15.5 4 20 10.7l22.5 33.8c1.5 2.2 4 3.6 6.7 3.6h142.9c2.7 0 5.2-1.3 6.7-3.6l22.5-33.8c4.5-6.7 11.9-10.7 20-10.7h117.9c-.5-4.7-1.1-9.3-1.7-14L463.1 89c-3.5-23.6-23.7-41-47.5-41zM16 416c0 26.5 21.5 48 48 48h384c26.5 0 48-21.5 48-48v-96H376.6c-2.7 0-5.2 1.3-6.7 3.6l-22.5 33.8c-4.5 6.7-11.9 10.7-20 10.7H184.5c-8 0-15.5-4-20-10.7L142 323.6c-1.5-2.2-4-3.6-6.7-3.6H16zm317.7-186.3-72 72c-3.1 3.1-8.2 3.1-11.3 0l-72-72c-3.1-3.1-3.1-8.2 0-11.3s8.2-3.1 11.3 0l58.3 58.3V120c0-4.4 3.6-8 8-8s8 3.6 8 8v156.7l58.3-58.3c3.1-3.1 8.2-3.1 11.3 0s3.1 8.2 0 11.3z"})
+);
+
+export default LanInboxArrowDownThin;

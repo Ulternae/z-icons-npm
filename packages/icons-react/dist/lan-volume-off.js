@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanVolumeOff = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 320 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M112 320H48c-8.8 0-16-7.2-16-16v-96c0-8.8 7.2-16 16-16h64c8.5 0 16.6-3.4 22.6-9.4l118.1-118c.4-.4.9-.6 1.4-.6 1.1 0 1.9.9 1.9 1.9V446c0 1.1-.9 1.9-1.9 1.9-.5 0-1-.2-1.4-.6L134.6 329.4c-6-6-14.1-9.4-22.6-9.4m0-160H48c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h64l118.1 118.1c6.4 6.4 15 9.9 24 9.9 18.7 0 33.9-15.2 33.9-33.9V66c0-18.7-15.2-33.9-33.9-33.9-9 0-17.6 3.6-24 9.9z"})
+);
+
+export default LanVolumeOff;

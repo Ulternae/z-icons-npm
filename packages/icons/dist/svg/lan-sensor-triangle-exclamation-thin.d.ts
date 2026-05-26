@@ -1,0 +1,2 @@
+export declare const LanSensorTriangleExclamationThin: string;
+export default LanSensorTriangleExclamationThin;

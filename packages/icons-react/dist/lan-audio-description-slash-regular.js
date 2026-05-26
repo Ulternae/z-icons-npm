@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanAudioDescriptionSlashRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M41-24.9c-9.4-9.4-24.6-9.4-33.9 0S-2.3-.3 7 9.1l528 528c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-61.4-61.4c21.6-10.4 36.5-32.3 36.5-57.8V128c0-35.3-28.7-64-64-64H129.8zM177.8 112H480c8.8 0 16 7.2 16 16v256c0 8.8-7.2 16-16 16h-14.2l-56.3-56.3c22.9-12.1 38.5-36.1 38.5-63.7v-48c0-39.8-32.2-72-72-72h-48c-13.3 0-24 10.7-24 24v54.2zm192 192L352 286.2V208h24c13.3 0 24 10.7 24 24v48c0 13.3-10.7 24-24 24zM132 201.8c-2.6 6.9-4 14.4-4 22.2v104c0 13.3 10.7 24 24 24s24-10.7 24-24v-24h48v24c0 13.3 10.7 24 24 24 9.2 0 17.3-5.2 21.3-12.9zm-52-52-44-44c-2.6 6.9-4 14.4-4 22.2v256c0 35.3 28.7 64 64 64h282.2l-48-48H96c-8.8 0-16-7.2-16-16z"})
+);
+
+export default LanAudioDescriptionSlashRegular;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanRadarThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M340.7 160c-22.6-19.9-52.2-32-84.7-32-70.7 0-128 57.3-128 128s57.3 128 128 128 128-57.3 128-128h16c0 79.5-64.5 144-144 144s-144-64.5-144-144 64.5-144 144-144c36.9 0 70.5 13.9 96 36.7l68-68C377.1 40.6 319.4 16 256 16 123.5 16 16 123.5 16 256s107.5 240 240 240 240-107.5 240-240h16c0 141.4-114.6 256-256 256S0 397.4 0 256 114.6 0 256 0c67.8 0 129.5 26.4 175.3 69.4l43.1-43.1c3.1-3.1 8.2-3.1 11.3 0s3.1 8.2 0 11.3l-224 224c-3.1 3.1-8.2 3.1-11.3 0s-3.1-8.2 0-11.3z"})
+);
+
+export default LanRadarThin;

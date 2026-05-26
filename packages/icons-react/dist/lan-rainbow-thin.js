@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanRainbowThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M320 48C152.1 48 16 184.1 16 352v88c0 4.4-3.6 8-8 8s-8-3.6-8-8v-88C0 175.3 143.3 32 320 32s320 143.3 320 320v88c0 4.4-3.6 8-8 8s-8-3.6-8-8v-88c0-167.9-136.1-304-304-304m0 112c-106 0-192 86-192 192v88c0 4.4-3.6 8-8 8s-8-3.6-8-8v-88c0-114.9 93.1-208 208-208s208 93.1 208 208v88c0 4.4-3.6 8-8 8s-8-3.6-8-8v-88c0-106-86-192-192-192m-80 192v88c0 4.4-3.6 8-8 8s-8-3.6-8-8v-88c0-53 43-96 96-96s96 43 96 96v88c0 4.4-3.6 8-8 8s-8-3.6-8-8v-88c0-44.2-35.8-80-80-80s-80 35.8-80 80"})
+);
+
+export default LanRainbowThin;

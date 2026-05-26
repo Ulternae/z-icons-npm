@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanTableColumnsRemoveAfterThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M423 32.3c30.1 3.1 54.1 27 57.1 57.1l.3 6.5v32h-16v-32c0-26.5-21.5-48-48-48h-152v416h152c26.5 0 48-21.5 48-48v-32h16v32l-.3 6.5c-3.3 32.3-30.5 57.5-63.7 57.5h-320c-35.3 0-64-28.7-64-64v-320l.3-6.5C36.1 57.2 63.4 32 96.5 32h320zM96.5 48c-26.5 0-48 21.5-48 48v320c0 26.5 21.5 48 48 48h152V48zm405.8 142.8c3.1-3.1 8.2-3.1 11.3 0s3.1 8.2 0 11.3l-53.8 53.8 53.8 53.8c3.1 3.1 3.1 8.2 0 11.3s-8.2 3.1-11.3 0l-53.8-53.8-53.8 53.8c-3.1 3.1-8.2 3.1-11.3 0s-3.1-8.2 0-11.3l53.8-53.8-53.8-53.8c-3.1-3.1-3.1-8.2 0-11.3s8.2-3.1 11.3 0l53.8 53.8z"})
+);
+
+export default LanTableColumnsRemoveAfterThin;

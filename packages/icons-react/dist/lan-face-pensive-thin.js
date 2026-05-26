@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanFacePensiveThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M496 256a240 240 0 1 0-480 0 240 240 0 1 0 480 0M0 256a256 256 0 1 1 512 0 256 256 0 1 1-512 0m200 128h112c4.4 0 8 3.6 8 8s-3.6 8-8 8H200c-4.4 0-8-3.6-8-8s3.6-8 8-8m144-80h16c22.1 0 40-17.9 40-40 0-4.4 3.6-8 8-8s8 3.6 8 8c0 30.9-25.1 56-56 56h-16c-30.9 0-56-25.1-56-56 0-4.4 3.6-8 8-8s8 3.6 8 8c0 22.1 17.9 40 40 40m-232-40c0 22.1 17.9 40 40 40h16c22.1 0 40-17.9 40-40 0-4.4 3.6-8 8-8s8 3.6 8 8c0 30.9-25.1 56-56 56h-16c-30.9 0-56-25.1-56-56 0-4.4 3.6-8 8-8s8 3.6 8 8m-6.2-51c-2.8-3.4-2.2-8.5 1.2-11.2l80-64c3.4-2.8 8.5-2.2 11.2 1.2s2.2 8.5-1.2 11.2l-80 64c-3.4 2.8-8.5 2.2-11.2-1.2M405 201.8c3.4 2.8 4 7.8 1.2 11.2s-7.8 4-11.2 1.2l-80-64c-3.4-2.8-4-7.8-1.2-11.2s7.8-4 11.2-1.2z"})
+);
+
+export default LanFacePensiveThin;

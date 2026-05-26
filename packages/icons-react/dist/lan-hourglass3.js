@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanHourglass3 = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 384 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M0 16C0 7.2 7.2 0 16 0h352c8.8 0 16 7.2 16 16s-7.2 16-16 16h-16v41.6c0 49.4-22.8 96-61.8 126.3L218 256l72.2 56.1c39 30.3 61.8 76.9 61.8 126.3V480h16c8.8 0 16 7.2 16 16s-7.2 16-16 16H16c-8.8 0-16-7.2-16-16s7.2-16 16-16h16v-41.6c0-49.4 22.8-96 61.8-126.3L166 256l-72.2-56.1c-39-30.3-61.8-77-61.8-126.3V32H16C7.2 32 0 24.8 0 16m64 16v41.6c0 39.5 18.2 76.8 49.4 101l78.6 61.1 78.6-61.1c31.2-24.3 49.4-61.5 49.4-101V32zm49.4 305.4c-5.7 4.5-11 9.3-15.8 14.6h188.8c-4.8-5.3-10.1-10.2-15.8-14.6L192 276.3zM76.1 384C68.2 400.8 64 419.4 64 438.4V480h256v-41.6c0-19.1-4.2-37.6-12.1-54.4z"})
+);
+
+export default LanHourglass3;

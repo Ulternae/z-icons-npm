@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanWhistle = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M592 64c26.5 0 48 21.5 48 48v70.5c0 21-13.6 39.3-33.2 45.7l-4 1.1L416 272.4C415.8 387.1 322.7 480 208 480 93.1 480 0 386.9 0 272S93.1 64 208 64zM208 96c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176c0-3.6-.2-7.4-.4-11.2-.5-7.8 4.7-14.8 12.4-16.6l199.6-46.1 2.6-.8c5.8-2.5 9.8-8.2 9.8-14.8V112c0-8.8-7.2-16-16-16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V96zm0 256a80 80 0 1 1 0-160 80 80 0 1 1 0 160m0-128a48 48 0 1 0 0 96 48 48 0 1 0 0-96"})
+);
+
+export default LanWhistle;

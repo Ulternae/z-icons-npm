@@ -3,3 +3,7 @@ export { neoIcons } from './neo.js';
 export { minaIcons } from './mina.js';
 export { minaIconsSolid } from './mina-solid.js';
 export { bruIcons } from './bru.js';
+export { lanIcons } from './lan.js';
+export { lanIconsSolid } from './lan-solid.js';
+export { lanIconsRegular } from './lan-regular.js';
+export { lanIconsThin } from './lan-thin.js';

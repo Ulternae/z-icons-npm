@@ -1,0 +1,2 @@
+export declare const LanMagnifyingGlassDollarRegular: string;
+export default LanMagnifyingGlassDollarRegular;

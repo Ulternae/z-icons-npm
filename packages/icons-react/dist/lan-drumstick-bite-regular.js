@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanDrumstickBiteRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M208 288.6c0 4 1.9 7.8 4.8 10.6s6.6 4.8 10.6 4.8h83.8c-2.1-10.4-3.2-21.1-3.2-32 0-82.8 62.8-150.8 143.4-159.1C425.4 74.2 383.7 48 336 48c-70.7 0-128 57.3-128 128zM160 240v-64C160 78.8 238.8 0 336 0c86.5 0 158.5 62.5 173.2 144.8 2.1 11.8-10.3 20.1-22 17.6-7.5-1.6-15.3-2.4-23.2-2.4-61.9 0-112 50.1-112 112 0 19.2 4.8 37.2 13.3 53 5.7 10.5 1.1 24.8-10.8 26-6.1.6-12.3 1-18.5 1h-87.2c-13.9 0-25.5 9.8-35.1 19.9l-.9.9-15.4 15.4c-12.3 12.3-11.4 32.5-7.2 49.4 1.1 4.6 1.8 9.5 1.8 14.5 0 33.1-26.9 60-60 60s-60-26.9-60-60c0-6.3-5.7-12-12-12-33.1 0-60-26.9-60-60s26.9-60 60-60c5 0 9.8.6 14.5 1.8 16.9 4.2 37.1 5.2 49.4-7.2l15.4-15.4.9-.9c10.1-9.6 19.9-21.2 19.9-35.1v-23.2z"})
+);
+
+export default LanDrumstickBiteRegular;

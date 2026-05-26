@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanSquarePersonConfinedRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M64 80c-8.8 0-16 7.2-16 16v320c0 8.8 7.2 16 16 16h320c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16zM0 96c0-35.3 28.7-64 64-64h320c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64zm292 104c33.1 0 60 26.9 60 60v88c0 31.8-24.7 57.8-56 59.9v.1h-4c-5.7 0-11.1-.8-16.3-2.2-19.6-4.4-37.5-15.1-50.7-30.7l-44.6-52.7-39.3 73c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l56-104c3.8-7 10.7-11.7 18.6-12.5s15.7 2.3 20.8 8.4l37.7 44.5v-49c0-33.1 26.9-60 60-60zm-4.2 159.2c1.8.3 3.7.6 5.6.7 6-.7 10.6-5.8 10.6-11.9v-88c0-6.6-5.4-12-12-12s-12 5.4-12 12v88c0 5.2 3.3 9.5 7.8 11.2M208 112a48 48 0 1 1 0 96 48 48 0 1 1 0-96"})
+);
+
+export default LanSquarePersonConfinedRegular;

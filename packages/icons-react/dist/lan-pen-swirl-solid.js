@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanPenSwirlSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M448 256c0-11.4-1-22.5-2.9-33.4l52.5-51.4c9.3 26.5 14.4 55.1 14.4 84.8 0 88.4-71.6 160-160 160-13.8 0-27.2-1.7-40-5-17.1-4.4-27.4-21.8-23-39s21.8-27.4 39-23c7.6 2 15.7 3 24 3 53 0 96-43 96-96M256 0c29.5 0 57.7 5 84.1 14.1l-52.4 52.5C277.4 64.9 266.8 64 256 64 150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0m217.9 16 21.9 21.9c18.9 18.9 18.7 49.6-.4 68.2l-34.1 33.3L371.9 50l34-34.1c18.7-18.8 49.1-18.8 67.9 0zM200.5 221.8 338.1 84.1l89 89-139.5 136.6c-6.9 6.8-15.3 11.9-24.5 15l-71.5 23.9c-8.6 2.9-18.1.6-24.6-5.8s-8.7-15.9-5.8-24.6l23.8-71.4c3.1-9.4 8.4-18 15.4-25z"})
+);
+
+export default LanPenSwirlSolid;

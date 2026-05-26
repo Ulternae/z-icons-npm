@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanBellSchool = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M272 32a176 176 0 1 1 0 352 176 176 0 1 1 0-352m0 384a208 208 0 1 0 0-416 208 208 0 1 0 0 416m0-256a48 48 0 1 1 0 96 48 48 0 1 1 0-96m0 128a80 80 0 1 0 0-160 80 80 0 1 0 0 160m224 64a16 16 0 1 1 32 0 16 16 0 1 1-32 0m64 0c0-26.5-21.5-48-48-48s-48 21.5-48 48c0 20.9 13.4 38.7 32 45.3V416c0 35.3-28.7 64-64 64h-24.6c5.4-9.4 8.6-20.3 8.6-32v-28.3c-10.2 6.9-20.9 13.1-32 18.6v9.7c0 17.7-14.3 32-32 32H192c-17.7 0-32-14.3-32-32v-9.7c-11.1-5.4-21.8-11.6-32-18.6V448c0 35.3 28.7 64 64 64h240c53 0 96-43 96-96v-18.7c18.6-6.6 32-24.4 32-45.3"})
+);
+
+export default LanBellSchool;

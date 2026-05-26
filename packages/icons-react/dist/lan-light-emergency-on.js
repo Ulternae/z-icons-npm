@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanLightEmergencyOn = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"m55.2 33.7 64 32c7.9 4 11.1 13.6 7.2 21.5s-13.6 11.1-21.5 7.2l-64-32c-7.9-4-11.1-13.6-7.2-21.5s13.6-11.1 21.5-7.2m544 28.6-64 32c-7.9 4-17.5.7-21.5-7.2s-.7-17.5 7.2-21.5l64-32c7.9-4 17.5-.7 21.5 7.2s.7 17.5-7.2 21.5M16 192h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H16c-8.8 0-16-7.2-16-16s7.2-16 16-16m544 0h64c8.8 0 16 7.2 16 16s-7.2 16-16 16h-64c-8.8 0-16-7.2-16-16s7.2-16 16-16m-80 128h16c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H144c-26.5 0-48-21.5-48-48v-64c0-26.5 21.5-48 48-48h16V192c0-88.4 71.6-160 160-160s160 71.6 160 160zm-32 0V192c0-70.7-57.3-128-128-128s-128 57.3-128 128v128zm-320 48v64c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16v-64c0-8.8-7.2-16-16-16H144c-8.8 0-16 7.2-16 16m192-240c-35.3 0-64 28.7-64 64 0 8.8-7.2 16-16 16s-16-7.2-16-16c0-53 43-96 96-96 8.8 0 16 7.2 16 16s-7.2 16-16 16"})
+);
+
+export default LanLightEmergencyOn;

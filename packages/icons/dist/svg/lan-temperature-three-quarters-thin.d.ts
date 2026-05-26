@@ -1,0 +1,2 @@
+export declare const LanTemperatureThreeQuartersThin: string;
+export default LanTemperatureThreeQuartersThin;

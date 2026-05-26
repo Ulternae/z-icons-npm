@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCircleHryvniaThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M256 16a240 240 0 1 1 0 480 240 240 0 1 1 0-480m0 496a256 256 0 1 0 0-512 256 256 0 1 0 0 512m18.1-393.2-87.3 10.3c-4.4.5-7.5 4.5-7 8.9s4.5 7.5 8.9 7l87.3-10.3c25.7-3 48.3 17.1 48.3 42.9 0 14.4-7.2 27.9-19.2 36L289.3 224H152c-4.4 0-8 3.6-8 8 0 4.3 3.5 7.9 7.8 8h208.5c4.3-.1 7.8-3.7 7.8-8 0-4.4-3.6-8-8-8h-42.2c14.1-11.2 22.4-28.2 22.4-46.4 0-35.4-30.9-62.9-66.1-58.8zM217.3 272H152c-4.4 0-8 3.6-8 8s3.6 8 8 8h41.7c-14.1 11.3-22.5 28.4-22.5 46.6 0 35.4 30.7 63 65.9 59.3l104.5-11c4.4-.5 7.6-4.4 7.1-8.8s-4.4-7.6-8.8-7.1l-104.4 11c-25.8 2.7-48.2-17.5-48.2-43.4 0-14.6 7.3-28.2 19.4-36.3l15.5-10.3H360c4.4 0 8-3.6 8-8s-3.6-8-8-8H217.4z"})
+);
+
+export default LanCircleHryvniaThin;

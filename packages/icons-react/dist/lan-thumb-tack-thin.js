@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanThumbTackThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 384 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M40.2 16h48.5L75.9 188.6c-34.9 26-60.5 64.4-70 109.5l-3.2 15.3C-1.5 333.3 13.7 352 34 352h316.3c20.3 0 35.5-18.7 31.3-38.6l-3.2-15.3c-9.5-45.1-35.1-83.5-70-109.5L295.6 16h48.6c4.4 0 8-3.6 8-8s-3.6-8-8-8h-304c-4.4 0-8 3.6-8 8s3.6 8 8 8m51.4 177.4L104.7 16h174.9l13.1 177.4c.2 2.3 1.3 4.4 3.2 5.8l2.9 2.2c31.9 23.8 55.2 58.8 63.9 100l3.2 15.3c2.1 9.9-5.5 19.3-15.7 19.3H34c-10.2 0-17.8-9.4-15.7-19.3l3.2-15.3c8.7-41.2 32-76.2 63.9-100l2.9-2.2c1.9-1.4 3-3.5 3.2-5.8zM184.2 400v136c0 4.4 3.6 8 8 8s8-3.6 8-8V400z"})
+);
+
+export default LanThumbTackThin;

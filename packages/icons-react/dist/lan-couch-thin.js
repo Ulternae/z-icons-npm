@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCouchThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M80 176v53.4c18.9 9 32 28.3 32 50.6v40h416v-40c0-22.3 13.1-41.6 32-50.6V176c0-53-43-96-96-96H176c-53 0-96 43-96 96m-16 48.6V176c0-61.9 50.1-112 112-112h288c61.9 0 112 50.1 112 112v48.6c2.6-.4 5.3-.6 8-.6 30.9 0 56 25.1 56 56v96c0 39.8-32.2 72-72 72H72c-39.8 0-72-32.2-72-72v-96c0-30.9 25.1-56 56-56 2.7 0 5.4.2 8 .6M16 280v96c0 30.9 25.1 56 56 56h496c30.9 0 56-25.1 56-56v-96c0-22.1-17.9-40-40-40s-40 17.9-40 40v48c0 4.4-3.6 8-8 8H104c-4.4 0-8-3.6-8-8v-48c0-22.1-17.9-40-40-40s-40 17.9-40 40"})
+);
+
+export default LanCouchThin;

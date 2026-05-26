@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanTricycleAdultThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M288 72c0-4.4 3.6-8 8-8h48c2.6 0 5 1.3 6.5 3.4l142.9 203c14.7-9.1 32-14.4 50.6-14.4 53 0 96 43 96 96s-43 96-96 96-96-43-96-96c0-28.7 12.6-54.5 32.6-72l-15.4-21.8-72.8 72.8a71.98 71.98 0 0 1-50.9 21.1H222.9c-7.8 54.3-54.4 96-110.9 96-61.9 0-112-50.1-112-112 0-57.8 43.8-105.4 100.1-111.4-6.5-6.2-11.6-14-14.6-22.9l-21.1-63.3c-1.4-4.2.9-8.7 5.1-10.1s8.7.9 10.1 5.1l21.1 63.2c5.4 16.3 20.7 27.4 37.9 27.4H216c4.4 0 8 3.6 8 8s-3.6 8-8 8h-46.3c32.5 19.6 54.3 55.3 54.3 96h117.5c14.9 0 29.1-5.9 39.6-16.4l74.8-74.8-116-164.8h-43.8c-4.4 0-8-3.6-8-8zm212.2 213.1-4.3 3C476.5 302.7 464 325.9 464 352c0 44.2 35.8 80 80 80s80-35.8 80-80-35.8-80-80-80c-16.2 0-31.2 4.8-43.8 13.1M208 336a96 96 0 1 0-192 0 96 96 0 1 0 192 0"})
+);
+
+export default LanTricycleAdultThin;

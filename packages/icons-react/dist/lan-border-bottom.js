@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanBorderBottom = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M448 464c0 8.8-7.2 16-16 16H16c-8.8 0-16-7.2-16-16s7.2-16 16-16h416c8.8 0 16 7.2 16 16m-56-144a24 24 0 1 1 48 0 24 24 0 1 1-48 0m-336 0a24 24 0 1 1-48 0 24 24 0 1 1 48 0m336-128a24 24 0 1 1 48 0 24 24 0 1 1-48 0m-336 0a24 24 0 1 1-48 0 24 24 0 1 1 48 0M392 64a24 24 0 1 1 48 0 24 24 0 1 1-48 0M56 64a24 24 0 1 1-48 0 24 24 0 1 1 48 0m208 0a24 24 0 1 1 48 0 24 24 0 1 1-48 0m-80 0a24 24 0 1 1-48 0 24 24 0 1 1 48 0"})
+);
+
+export default LanBorderBottom;

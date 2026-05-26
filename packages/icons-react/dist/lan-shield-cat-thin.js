@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanShieldCatThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M237.3 22.6c12-5.1 25.5-5.1 37.5 0l176.7 75c16.6 7.1 28.6 23.2 28.5 42.4-.5 96.6-40.3 270.2-204.5 348.8-12.3 5.9-26.7 5.9-39 0C72.3 410.2 32.4 236.6 31.9 140c-.1-19.1 11.9-35.3 28.5-42.4l176.7-75zm43.8-14.8c-16-6.8-34-6.8-50 0l-176.8 75c-22 9.3-38.4 31-38.3 57.2.5 99.2 41.3 280.7 213.6 363.2 16.7 8 36.1 8 52.8 0C454.8 420.7 495.5 239.2 496 140c.1-26.2-16.3-47.9-38.3-57.2zM165.7 138.3c-2.3-2.3-5.7-3-8.7-1.7s-4.9 4.2-4.9 7.4v128c0 57.4 46.6 104 104 104s104-46.6 104-104V144c0-3.2-1.9-6.2-4.9-7.4s-6.4-.6-8.7 1.7L284.8 200h-57.4zM168 272V163.3l50.3 50.3c1.5 1.5 3.5 2.3 5.7 2.3h64c2.1 0 4.2-.8 5.7-2.3l50.3-50.3V272c0 48.6-39.4 88-88 88s-88-39.4-88-88m48 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32m80 0a16 16 0 1 0 0-32 16 16 0 1 0 0 32"})
+);
+
+export default LanShieldCatThin;

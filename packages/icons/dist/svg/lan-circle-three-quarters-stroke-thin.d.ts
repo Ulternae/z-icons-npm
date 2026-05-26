@@ -1,0 +1,2 @@
+export declare const LanCircleThreeQuartersStrokeThin: string;
+export default LanCircleThreeQuartersStrokeThin;

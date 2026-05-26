@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanSproutThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"m496 0 3.2.3c7.3 1.5 12.8 8 12.8 15.7v32l-.3 11.5C505.9 174 414 265.9 299.5 271.7l-11.5.3h-8v232c0 4.4-3.6 8-8 8s-8-3.6-8-8V320h-40l-11.5-.3C94.1 313.7 0 215.8 0 96V80c0-7.7 5.5-14.2 12.8-15.7L16 64h40l11.5.3c90 4.6 166 62.3 197.2 142.4C273.2 94.9 363.8 6 476.4.3L488 0zM16 96c0 114.9 93.1 208 208 208h40v-16c0-114.9-93.1-208-208-208H16zm472-80c-114.9 0-208 93.1-208 208v32h8c114.9 0 208-93.1 208-208V16z"})
+);
+
+export default LanSproutThin;

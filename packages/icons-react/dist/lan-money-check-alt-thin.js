@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanMoneyCheckAltThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M64 80c-26.5 0-48 21.5-48 48v256c0 26.5 21.5 48 48 48h384c26.5 0 48-21.5 48-48V128c0-26.5-21.5-48-48-48zM0 128c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64zm280 160h144c4.4 0 8 3.6 8 8s-3.6 8-8 8H280c-4.4 0-8-3.6-8-8s3.6-8 8-8m-8-72c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8s-3.6 8-8 8H280c-4.4 0-8-3.6-8-8m-112-64c4.4 0 8 3.6 8 8v16h24c4.4 0 8 3.6 8 8s-3.6 8-8 8h-45.4c-14.7 0-26.6 11.9-26.6 26.6 0 13 9.4 24.1 22.3 26.3l38.1 6.3c20.6 3.4 35.6 21.2 35.6 42.1 0 23.6-19.1 42.6-42.6 42.6H168v16c0 4.4-3.6 8-8 8s-8-3.6-8-8v-16h-32c-4.4 0-8-3.6-8-8s3.6-8 8-8h53.4c14.7 0 26.6-11.9 26.6-26.6 0-13-9.4-24.1-22.3-26.3l-38.1-6.3c-20.6-3.4-35.6-21.2-35.6-42.1 0-23.6 19.1-42.6 42.6-42.6h5.4v-16c0-4.4 3.6-8 8-8"})
+);
+
+export default LanMoneyCheckAltThin;

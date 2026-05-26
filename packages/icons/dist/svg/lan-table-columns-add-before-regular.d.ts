@@ -1,0 +1,2 @@
+export declare const LanTableColumnsAddBeforeRegular: string;
+export default LanTableColumnsAddBeforeRegular;

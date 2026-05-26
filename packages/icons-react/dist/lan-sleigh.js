@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanSleigh = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M48 32c-8.8 0-16 7.2-16 16s7.2 16 16 16h16v192c0 41.8 26.7 77.4 64 90.5V432H48c-8.8 0-16 7.2-16 16s7.2 16 16 16h520c39.8 0 72-32.2 72-72v-8c0-8.8-7.2-16-16-16s-16 7.2-16 16v8c0 22.1-17.9 40-40 40h-88v-80c53 0 96-43 96-96V128h16c8.8 0 16-7.2 16-16s-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v16c0 35.3-28.7 64-64 64h-87.5c-45 0-86.6-23.6-109.8-62.1l-21.4-35.8C238.2 55.6 196.5 32 151.5 32zm400 400H160v-80h288zm96-176c0 35.3-28.7 64-64 64H160c-35.3 0-64-28.7-64-64V64h55.5c33.7 0 65 17.7 82.3 46.6l21.4 35.7c28.9 48.2 81 77.7 137.2 77.7h87.5c24.6 0 47-9.2 64-24.4V256z"})
+);
+
+export default LanSleigh;

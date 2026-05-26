@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanScooter = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M256 48c0-8.8 7.2-16 16-16h80c7.4 0 13.9 5.1 15.6 12.3l64 272 .9 3.7c44 .2 79.6 36 79.6 80 0 44.2-35.8 80-80 80-38.7 0-71-27.5-78.4-64H158.5c-7.4 36.5-39.7 64-78.4 64-44.2 0-80-35.8-80-80s35.8-80 80-80c38.7 0 71 27.5 78.4 64h195.2c5.3-26.2 23.4-47.7 47.4-57.8l-.6-2.6-61.1-259.7h-67.3c-8.8 0-16-7.2-16-16zM128 400a48 48 0 1 0-96 0 48 48 0 1 0 96 0m256 0a48 48 0 1 0 96 0 48 48 0 1 0-96 0"})
+);
+
+export default LanScooter;

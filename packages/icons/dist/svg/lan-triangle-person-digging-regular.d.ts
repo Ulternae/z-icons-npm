@@ -1,0 +1,2 @@
+export declare const LanTrianglePersonDiggingRegular: string;
+export default LanTrianglePersonDiggingRegular;

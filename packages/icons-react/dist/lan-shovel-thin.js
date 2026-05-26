@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanShovelThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M442.3-5.7c3.1-3.1 8.2-3.1 11.3 0l96 96c3.1 3.1 3.1 8.2 0 11.3l-44.1 44.1c-14.2 14.2-33.5 22.2-53.7 22.2-18.1 0-34.7-6.3-47.7-16.9L261.6 293.5l56.4 56.4c18.7 18.7 18.7 49.1 0 67.9l-84.8 84.8C206.8 529.2 171 544 133.7 544 59.9 544 0 484.1 0 410.3c0-37.3 14.8-73.1 41.2-99.5L126 226c18.7-18.7 49.1-18.7 67.9 0l56.4 56.4 142.5-142.5c-10.6-13-16.9-29.6-16.9-47.7 0-20.1 8-39.4 22.2-53.7zm5.7 17-38.5 38.5C398.3 61 392 76.3 392 92.1c0 33.1 26.8 59.9 59.9 59.9 15.9 0 31.1-6.3 42.3-17.5L532.7 96zM52.5 322.1C29.1 345.5 16 377.2 16 410.3c0 65 52.7 117.7 117.7 117.7 33.1 0 64.8-13.1 88.2-36.5l84.8-84.8c12.5-12.5 12.5-32.8 0-45.3L182.6 237.3c-12.5-12.5-32.8-12.5-45.3 0z"})
+);
+
+export default LanShovelThin;

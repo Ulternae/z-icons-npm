@@ -1,0 +1,2 @@
+export declare const LanSquareHalfStrokeHorizontalThin: string;
+export default LanSquareHalfStrokeHorizontalThin;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanTintSlashThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M13.7-29.8c-3.1-3.1-8.2-3.1-11.3 0s-3.1 8.2 0 11.3l560 560c3.1 3.1 8.2 3.1 11.3 0s3.1-8.2 0-11.3L456.2 412.7c15.2-27.5 23.8-59.1 23.8-92.7 0-91.2-130.2-274.1-166.6-323.5-5.9-8-15.2-12.5-25.2-12.5h-.4c-10 0-19.3 4.5-25.2 12.5-17 23-54.3 75.1-89.4 133.3zm171.2 171.3c35.3-59 73.4-112.2 90.6-135.5 2.8-3.8 7.2-6 12.3-6h.4c5.1 0 9.5 2.3 12.3 6 18.1 24.5 59.4 82.1 96 144.6 18.4 31.3 35.4 63.6 47.8 93.4 12.5 30.2 19.7 56.3 19.7 75.9 0 29.2-7.1 56.7-19.7 80.9zm-53.2 102.6c6-14.4 13-29.3 20.8-44.4l-11.9-11.9C115.1 236.9 96 285.2 96 320c0 106 86 192 192 192 49.2 0 94-18.5 128-48.8l-11.3-11.3c-31 27.5-71.9 44.2-116.6 44.2-97.2 0-176-78.8-176-176 0-19.6 7.1-45.8 19.7-75.9z"})
+);
+
+export default LanTintSlashThin;

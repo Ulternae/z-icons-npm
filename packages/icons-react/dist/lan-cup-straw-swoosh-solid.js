@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCupStrawSwooshSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 384 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M178.5 25.6C185 1.1 207.2-16 232.6-16H264c13.3 0 24 10.7 24 24s-10.7 24-24 24h-31.4c-3.6 0-6.8 2.4-7.7 5.9L209.4 96H352c13.3 0 24 10.7 24 24s-10.7 24-24 24H32c-13.3 0-24-10.7-24-24s10.7-24 24-24h127.7zM50.1 352 36.2 192h311.7c-7.1 82-13.1 150-24 276.2C321.7 493 301 512 276.1 512h-168c-24.9 0-45.7-19-47.8-43.8-4.2-48.8-7.6-87.5-10.1-116.2zM212 341.3c15.5-23.3 41.7-37.3 69.7-37.3h8.2l4.2-48h-12.4c-44.1 0-85.2 22-109.7 58.7-15.5 23.3-41.7 37.3-69.7 37.3h-4l4.2 48c44 0 85.1-22.1 109.5-58.7"})
+);
+
+export default LanCupStrawSwooshSolid;

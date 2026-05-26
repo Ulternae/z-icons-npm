@@ -1,0 +1,2 @@
+export declare const LanDisplayChartUpCircleCurrency: string;
+export default LanDisplayChartUpCircleCurrency;

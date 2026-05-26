@@ -1,0 +1,2 @@
+export const LanLessThanRegular = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M477.8 45.9c5.6 12 .3 26.3-11.7 31.9L81.1 256l385 178.2c12 5.6 17.3 19.8 11.7 31.9s-19.8 17.3-31.9 11.7l-432-200C5.4 273.9 0 265.4 0 256s5.4-17.8 13.9-21.8l432-200c12-5.6 26.3-.3 31.9 11.7"/></svg>';
+export default LanLessThanRegular;

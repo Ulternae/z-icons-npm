@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanSlotMachineSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M448 32c35.3 0 64 28.7 64 64v320h16c17.7 0 32-14.3 32-32V179.7c-9.8-8.8-16-21.5-16-35.7 0-26.5 21.5-48 48-48s48 21.5 48 48c0 14.2-6.2 26.9-16 35.7V384c0 53-43 96-96 96H96c-35.3 0-64-28.7-64-64V96c0-35.3 28.7-64 64-64zM120 160c-13.3 0-24 10.7-24 24s10.7 24 24 24h18.1l-25.5 114.8c-2.9 12.9 5.3 25.8 18.2 28.7s25.8-5.3 28.7-18.2l32-144c1.6-7.1-.2-14.6-4.7-20.3s-11.4-9-18.7-9h-48zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24h18.1l-25.5 114.8c-2.9 12.9 5.3 25.8 18.2 28.7s25.8-5.3 28.7-18.2l32-144c1.6-7.1-.2-14.6-4.7-20.3s-11.4-9-18.7-9h-48zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24h18.1l-25.5 114.8c-2.9 12.9 5.3 25.8 18.2 28.7s25.8-5.3 28.7-18.2l32-144c1.6-7.1-.2-14.6-4.7-20.3s-11.4-9-18.7-9h-48z"})
+);
+
+export default LanSlotMachineSolid;

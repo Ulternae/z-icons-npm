@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanTextWidthRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M40 0C17.9 0 0 17.9 0 40v64c0 13.3 10.7 24 24 24s24-10.7 24-24V48h152v192h-48c-13.3 0-24 10.7-24 24s10.7 24 24 24h144c13.3 0 24-10.7 24-24s-10.7-24-24-24h-48V48h152v56c0 13.3 10.7 24 24 24s24-10.7 24-24V40c0-22.1-17.9-40-40-40zm73 393c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L7 431c-9.4 9.4-9.4 24.6 0 33.9l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-31-31H366l-31 31c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l72-72c9.4-9.4 9.4-24.6 0-33.9l-72-72c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l31 31H81.9l31-31z"})
+);
+
+export default LanTextWidthRegular;

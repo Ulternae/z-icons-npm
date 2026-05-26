@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanArrowRotateRight15Regular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M488.1 0c13.3 0 24 10.7 24 24v136c0 9.7-5.8 18.5-14.8 22.2s-19.3 1.6-26.2-5.2L403 108.9c-81.2-81.2-212.9-81.2-294.2 0s-81.2 213 0 294.2 212.9 81.2 294.2 0c12.2-12.2 22.5-25.4 31-39.5 6.9-11.3 21.6-14.9 32.9-8.1 11.3 6.9 15 21.6 8.1 33-10.5 17.3-23.2 33.6-38.1 48.5-100 100-262.1 100-362.1 0S-25 174.9 75 75s262-100 362 0l27.1 27.1V24c0-13.2 10.8-24 24-24M173.4 162.5c7.4-3.7 16.3-3.3 23.3 1.1s11.4 12.1 11.4 20.4v144c0 13.3-10.7 24-24 24s-24-10.7-24-24V222.6c-11.3 4-24-.9-29.5-11.8-5.9-11.8-1.1-26.3 10.8-32.2l32-16zm162.7-2.5c13.3 0 24 10.7 24 24s-10.7 24-24 24h-48v24h20c33.1 0 60 26.9 60 60s-26.9 60-60 60h-44c-13.2 0-24-10.7-24-24s10.8-24 24-24h44c6.6 0 12-5.4 12-12s-5.4-12-12-12h-44c-13.2 0-24-10.7-24-24v-72c0-13.2 10.8-24 24-24z"})
+);
+
+export default LanArrowRotateRight15Regular;

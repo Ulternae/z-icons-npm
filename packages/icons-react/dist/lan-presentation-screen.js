@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanPresentationScreen = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M16 32C7.2 32 0 39.2 0 48s7.2 16 16 16h16v256c0 35.3 28.7 64 64 64h144v47.7l-73.2 51.2c-7.2 5.1-9 15-3.9 22.3s15 9 22.3 3.9l70.8-49.6 70.8 49.6c7.2 5.1 17.2 3.3 22.3-3.9s3.3-17.2-3.9-22.3L272 431.7V384h144c35.3 0 64-28.7 64-64V64h16c8.8 0 16-7.2 16-16s-7.2-16-16-16zm432 32v256c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V64z"})
+);
+
+export default LanPresentationScreen;

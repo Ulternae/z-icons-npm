@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanMugTeaSaucerRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M112 288c0 26.5 21.5 48 48 48h192c26.5 0 48-21.5 48-48V80H248v20.4c0 7.5 2.6 14.7 7.4 20.5l25.2 30.2c4.8 5.8 7.4 13 7.4 20.5V224c0 17.7-14.3 32-32 32h-64c-17.7 0-32-14.3-32-32v-52.4c0-7.5 2.6-14.7 7.4-20.5l25.2-30.2c4.8-5.8 7.4-13 7.4-20.5V80h-88zM448 80v144h8c39.8 0 72-32.2 72-72s-32.2-72-72-72zm0 192v16c0 53-43 96-96 96H160c-53 0-96-43-96-96V64c0-17.7 14.3-32 32-32h360c66.3 0 120 53.7 120 120s-53.7 120-120 120zM32 488c0-13.3 10.7-24 24-24h400c13.3 0 24 10.7 24 24s-10.7 24-24 24H56c-13.3 0-24-10.7-24-24"})
+);
+
+export default LanMugTeaSaucerRegular;

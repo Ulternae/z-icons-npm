@@ -1,0 +1,2 @@
+export declare const LanUserHatTieMagnifyingGlassSolid: string;
+export default LanUserHatTieMagnifyingGlassSolid;

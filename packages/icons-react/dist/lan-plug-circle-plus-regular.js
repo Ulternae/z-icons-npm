@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanPlugCirclePlusRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M352 400a144 144 0 1 1 288 0 144 144 0 1 1-288 0m144-80c-8.8 0-16 7.2-16 16v48h-48c-8.8 0-16 7.2-16 16s7.2 16 16 16h48v48c0 8.8 7.2 16 16 16s16-7.2 16-16v-48h48c8.8 0 16-7.2 16-16s-7.2-16-16-16h-48v-48c0-8.8-7.2-16-16-16M208-8c0-13.3-10.7-24-24-24s-24 10.7-24 24V96H88c-13.3 0-24 10.7-24 24s10.7 24 24 24h8v80c0 97.9 73.3 178.7 168 190.5V488c0 13.3 10.7 24 24 24s24-10.7 24-24v-33c-11.4-38.4-8.1-71.1-5.1-88.2q-9.3 1.2-18.9 1.2c-79.5 0-144-64.5-144-144v-80h288v74.9c15.2-5.4 31.3-8.9 48-10.3v-64.7h8c13.3 0 24-10.7 24-24s-10.7-24-24-24h-72v-104c0-13.3-10.7-24-24-24S368-21.3 368-8V96H208z"})
+);
+
+export default LanPlugCirclePlusRegular;

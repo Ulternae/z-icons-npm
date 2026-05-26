@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanBridgeCircleXmarkRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M24 32C10.7 32 0 42.7 0 56s10.7 24 24 24h16v64H24c-13.3 0-24 10.7-24 24v88c0 9.1 5.1 17.4 13.3 21.5l3.8 1.9c19 9.5 31 28.9 31 50.1L48 440c0 22.1 17.9 40 40 40h64c22.1 0 40-17.9 40-40v-72c0-35.3 28.7-64 64-64 3.2 0 6.3.2 9.3.7 8.6-15.1 19.3-28.9 31.5-41-12.6-5-26.4-7.7-40.8-7.7-61.9 0-112 50.1-112 112v64H96V329.4c0-35.7-18.3-68.7-48-87.6V192h416v18.7c16.8 2.8 32.9 7.8 48 14.8v-57.4c0-13.3-10.7-24-24-24h-16v-64h16c13.3 0 24-10.7 24-24s-10.7-24-24-24zm400 48v64h-80V80zm-128 0v64h-80V80zm-128 0v64H88V80zm264 464a144 144 0 1 0 0-288 144 144 0 1 0 0 288m59.3-180.7L454.6 400l36.7 36.7c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0L432 422.6l-36.7 36.7c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l36.7-36.7-36.7-36.7c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l36.7 36.7 36.7-36.7c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6"})
+);
+
+export default LanBridgeCircleXmarkRegular;

@@ -1,0 +1,2 @@
+export const LanMoonFirstQuarterInverseSolid = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M256 0a256 256 0 1 0 0 512 256 256 0 1 0 0-512m0 448c-106 0-192-86-192-192S150 64 256 64z"/></svg>';
+export default LanMoonFirstQuarterInverseSolid;

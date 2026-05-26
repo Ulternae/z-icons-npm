@@ -1,0 +1,2 @@
+export const LanPesetaSignRegular = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M104 32c-13.3 0-24 10.7-24 24v112H56c-13.3 0-24 10.7-24 24s10.7 24 24 24h24v240c0 13.3 10.7 24 24 24s24-10.7 24-24V352h96c80.2 0 146.6-59 158.2-136H408c13.3 0 24-10.7 24-24s-10.7-24-24-24h-25.8C370.6 91 304.2 32 224 32zm229.4 136H128V80h96c53.6 0 98.4 37.7 109.4 88M128 216h205.4c-11 50.3-55.8 88-109.4 88h-96z"/></svg>';
+export default LanPesetaSignRegular;

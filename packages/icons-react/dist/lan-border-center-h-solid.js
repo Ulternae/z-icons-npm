@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanBorderCenterHSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M104 64a24 24 0 1 1 48 0 24 24 0 1 1-48 0m340 192c0 15.5-12.5 28-28 28H32c-15.5 0-28-12.5-28-28s12.5-28 28-28h384c15.5 0 28 12.5 28 28m-28 216a24 24 0 1 1 0-48 24 24 0 1 1 0 48M8 448a24 24 0 1 1 48 0 24 24 0 1 1-48 0m120 24a24 24 0 1 1 0-48 24 24 0 1 1 0 48m192 0a24 24 0 1 1 0-48 24 24 0 1 1 0 48m-120-24a24 24 0 1 1 48 0 24 24 0 1 1-48 0m24-72a24 24 0 1 1 0-48 24 24 0 1 1 0 48m72-312a24 24 0 1 1 48 0 24 24 0 1 1-48 0m-72 24a24 24 0 1 1 0-48 24 24 0 1 1 0 48m-24 72a24 24 0 1 1 48 0 24 24 0 1 1-48 0m216 216a24 24 0 1 1 0-48 24 24 0 1 1 0 48M8 352a24 24 0 1 1 48 0 24 24 0 1 1-48 0m408-168a24 24 0 1 1 0-48 24 24 0 1 1 0 48M8 160a24 24 0 1 1 48 0 24 24 0 1 1-48 0m408-72a24 24 0 1 1 0-48 24 24 0 1 1 0 48M8 64a24 24 0 1 1 48 0 24 24 0 1 1-48 0"})
+);
+
+export default LanBorderCenterHSolid;

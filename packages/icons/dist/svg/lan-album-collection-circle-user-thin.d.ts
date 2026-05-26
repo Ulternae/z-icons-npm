@@ -1,0 +1,2 @@
+export declare const LanAlbumCollectionCircleUserThin: string;
+export default LanAlbumCollectionCircleUserThin;

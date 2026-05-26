@@ -1,0 +1,8 @@
+import React from 'react';
+
+export interface LanKazooThinProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+  size?: string | number;
+}
+
+export declare const LanKazooThin: React.FC<LanKazooThinProps>;
+export default LanKazooThin;

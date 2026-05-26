@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanMosqueThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M434.7 111.5C453.3 127 464 150 464 174.2c0 45.2-36.6 81.8-81.8 81.8H193.7c-45.2 0-81.8-36.6-81.8-81.8 0-24.2 10.7-47.2 29.3-62.7L288-11.1zM96 174.2c0 34.2 17.6 64.3 44.2 81.8H64v-32c0-17.7-14.3-32-32-32S0 206.3 0 224v224c0 35.3 28.7 64 64 64h448c35.3 0 64-28.7 64-64V224c0-17.7-14.3-32-32-32s-32 14.3-32 32v32h-76.2c26.6-17.5 44.2-47.6 44.2-81.8 0-29-12.8-56.4-35.1-75L298.3-23.4c-5.9-5-14.6-5-20.5 0L131.1 99.2c-22.2 18.6-35.1 46-35.1 75M528 272h32v176c0 26.5-21.5 48-48 48H352v-80c0-35.3-28.7-64-64-64s-64 28.7-64 64v80H64c-26.5 0-48-21.5-48-48V272zm32-48v32h-32v-32c0-8.8 7.2-16 16-16s16 7.2 16 16M48 256H16v-32c0-8.8 7.2-16 16-16s16 7.2 16 16zm192 160c0-26.5 21.5-48 48-48s48 21.5 48 48v80h-96z"})
+);
+
+export default LanMosqueThin;

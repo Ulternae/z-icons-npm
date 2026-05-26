@@ -1,0 +1,2 @@
+export const LanPaperPlaneAlt = '<svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M156 272h360.1L69.2 474.5zm360.2-32H156L69.2 37.5 516.1 240zM34.1 37 128 256 34.1 475c-1.4 3.3-2.1 6.9-2.1 10.5C32 500 43.8 512 58.3 512c3.7 0 7.4-.8 10.9-2.3l485-219.8c13.3-6 21.9-19.3 21.9-33.9s-8.6-27.9-21.9-33.9L69.2 2.3C65.8.8 62.1 0 58.3 0 43.8 0 32 12 32 26.5c0 3.6.7 7.2 2.1 10.5"/></svg>';
+export default LanPaperPlaneAlt;

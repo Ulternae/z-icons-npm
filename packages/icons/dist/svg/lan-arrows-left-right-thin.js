@@ -1,0 +1,2 @@
+export const LanArrowsLeftRightThin = '<svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="m453.7 381.7 120-120c3.1-3.1 3.1-8.2 0-11.3l-120-120c-3.1-3.1-8.2-3.1-11.3 0s-3.1 8.2 0 11.3L548.7 248H27.3l106.4-106.3c3.1-3.1 3.1-8.2 0-11.3s-8.2-3.1-11.3 0l-120 120C.8 251.8 0 253.9 0 256s.8 4.2 2.3 5.7l120 120c3.1 3.1 8.2 3.1 11.3 0s3.1-8.2 0-11.3L27.3 264h521.4L442.3 370.3c-3.1 3.1-3.1 8.2 0 11.3s8.2 3.1 11.3 0z"/></svg>';
+export default LanArrowsLeftRightThin;

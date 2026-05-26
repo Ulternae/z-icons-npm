@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanBagsShoppingSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M176 64v32h96V64c0-26.5-21.5-48-48-48s-48 21.5-48 48m-48 32V64c0-53 43-96 96-96s96 43 96 96v32h64c35.3 0 64 28.7 64 64v16H256c-61.9 0-112 50.1-112 112v160H64c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64zm128 128h256c35.3 0 64 28.7 64 64v160c0 35.3-28.7 64-64 64H256c-35.3 0-64-28.7-64-64V288c0-35.3 28.7-64 64-64m80 88c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 53 43 96 96 96s96-43 96-96v-40c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 26.5-21.5 48-48 48s-48-21.5-48-48z"})
+);
+
+export default LanBagsShoppingSolid;

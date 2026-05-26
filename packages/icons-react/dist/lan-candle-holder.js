@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCandleHolder = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M224 160c-26.5 0-48-21.5-48-48 0-8.8 6.5-24 20.5-43.1C205.7 56.4 216 45 224 36.8c8 8.3 18.4 19.6 27.5 32.1 14 19 20.5 34.3 20.5 43.1 0 26.5-21.5 48-48 48m-80-48c0 44.2 35.8 80 80 80s80-35.8 80-80c0-39.6-49.1-90.1-66.2-106.6C234.1 1.8 229.1 0 224 0s-10.1 1.9-13.8 5.4C193.1 21.9 144 72.4 144 112M80 480c-8.8 0-16 7.2-16 16s7.2 16 16 16h368c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64c0 11.7 3.1 22.6 8.6 32H320V288c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v192zm80 0V288c0-8.8 7.2-16 16-16h96c8.8 0 16 7.2 16 16v192zm256-32a32 32 0 1 1 64 0 32 32 0 1 1-64 0"})
+);
+
+export default LanCandleHolder;

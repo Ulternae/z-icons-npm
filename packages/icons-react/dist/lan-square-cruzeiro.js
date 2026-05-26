@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanSquareCruzeiro = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M64 64c-17.7 0-32 14.3-32 32v320c0 17.7 14.3 32 32 32h320c17.7 0 32-14.3 32-32V96c0-17.7-14.3-32-32-32zM0 96c0-35.3 28.7-64 64-64h320c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64zm120.5 160c0 51.8 37.9 94.8 87.5 102.7V248c0-8.8 7.2-16 16-16s16 7.2 16 16v4.1c11.4-7.7 25.2-12.1 40-12.1 8.8 0 16 7.2 16 16s-7.2 16-16 16c-22.1 0-40 17.9-40 40v46.9c21.5-3.2 40.8-13 55.8-27.2 6.4-6.1 16.6-5.8 22.6.6s5.8 16.6-.6 22.6c-24.3 23-57.2 37.1-93.3 37.1-75.1 0-136-60.9-136-136s60.9-136 136-136c36.1 0 69 14.1 93.3 37.1 6.4 6.1 6.7 16.2.6 22.6s-16.2 6.7-22.6.7c-18.6-17.6-43.7-28.4-71.4-28.4-57.4 0-104 46.6-104 104z"})
+);
+
+export default LanSquareCruzeiro;

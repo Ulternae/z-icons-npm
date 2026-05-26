@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCassetteBetamax = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M448 96c17.7 0 32 14.3 32 32v16H32v-16c0-17.7 14.3-32 32-32zM32 384V176h448v208c0 17.7-14.3 32-32 32H64c-17.7 0-32-14.3-32-32M64 64C28.7 64 0 92.7 0 128v256c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64zm256 192h96v96h-96zm-32 0v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32v-96c0-17.7-14.3-32-32-32h-96c-17.7 0-32 14.3-32 32m-144 0a48 48 0 1 1 0 96 48 48 0 1 1 0-96m0 128a80 80 0 1 0 0-160 80 80 0 1 0 0 160m0-64a16 16 0 1 0 0-32 16 16 0 1 0 0 32"})
+);
+
+export default LanCassetteBetamax;

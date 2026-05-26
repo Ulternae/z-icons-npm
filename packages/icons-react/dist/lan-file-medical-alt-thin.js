@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanFileMedicalAltThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M128 16h133.5q5.4 0 10.5 1.2V120c0 30.9 25.1 56 56 56h102.8q1.2 5.1 1.2 10.5V448c0 26.5-21.5 48-48 48H128c-26.5 0-48-21.5-48-48v-80H64v80c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V186.5c0-17-6.7-33.3-18.7-45.3L306.7 18.7C294.7 6.7 278.5 0 261.5 0H128C92.7 0 64 28.7 64 64v240H8c-4.4 0-8 3.6-8 8s3.6 8 8 8h131.5l45.7 76.1c1.5 2.6 4.4 4.1 7.3 3.9s5.6-2 6.8-4.7l57.1-128.5 24.4 48.8c1.4 2.7 4.1 4.4 7.2 4.4h72c4.4 0 8-3.6 8-8s-3.6-8-8-8h-67.1l-29.8-59.6c-1.4-2.8-4.2-4.5-7.3-4.4s-5.9 1.9-7.1 4.7L191 374.6l-40.1-66.8c-1.4-2.4-4-3.9-6.9-3.9H80v-240c0-26.5 21.5-48 48-48zm296 144h-96c-22.1 0-40-17.9-40-40V24c2.7 1.8 5.1 3.8 7.4 6.1l122.5 122.5c2.3 2.3 4.3 4.8 6.1 7.4"})
+);
+
+export default LanFileMedicalAltThin;

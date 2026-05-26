@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanRulerRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"m175.1 482.3 339.4-339.4L401.4 29.8l-33.9 33.9 50.9 50.9c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-50.9-50.9-45.3 45.3 28.3 28.3c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-28.3-28.3-45.3 45.3L260 273c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L175.2 256l-45.3 45.3 28.3 28.3c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-28.4-28.3L62 369.1zm33.9 33.9c-18.7 18.7-49.1 18.7-67.9 0l-113-113.1c-18.7-18.7-18.7-49.1 0-67.9L367.5-4.2c18.7-18.7 49.1-18.7 67.9 0l113.1 113.1c18.7 18.7 18.7 49.1 0 67.9L209.1 516.2z"})
+);
+
+export default LanRulerRegular;

@@ -1,0 +1,2 @@
+export declare const LanHouseMedicalCircleXmarkRegular: string;
+export default LanHouseMedicalCircleXmarkRegular;

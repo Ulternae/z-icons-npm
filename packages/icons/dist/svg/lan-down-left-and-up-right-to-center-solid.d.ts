@@ -1,0 +1,2 @@
+export declare const LanDownLeftAndUpRightToCenterSolid: string;
+export default LanDownLeftAndUpRightToCenterSolid;

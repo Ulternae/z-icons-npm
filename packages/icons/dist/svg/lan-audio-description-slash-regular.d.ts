@@ -1,0 +1,2 @@
+export declare const LanAudioDescriptionSlashRegular: string;
+export default LanAudioDescriptionSlashRegular;

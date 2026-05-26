@@ -1,0 +1,2 @@
+export const LanCirclePesetaThin = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M256 16a240 240 0 1 1 0 480 240 240 0 1 1 0-480m0 496a256 256 0 1 0 0-512 256 256 0 1 0 0 512m-80-376v80h-24c-4.4 0-8 3.6-8 8s3.6 8 8 8h24v136c0 4.4 3.6 8 8 8s8-3.6 8-8v-48h64c50.3 0 91.6-38.7 95.7-88H376c4.4 0 8-3.6 8-8s-3.6-8-8-8h-24.3c-4.1-49.3-45.3-88-95.7-88h-72c-4.4 0-8 3.6-8 8m80 8c41.5 0 75.6 31.6 79.6 72H192v-72zm-64 160v-72h143.6c-4 40.4-38.1 72-79.6 72z"/></svg>';
+export default LanCirclePesetaThin;

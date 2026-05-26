@@ -1,0 +1,2 @@
+export const LanShelvesEmptyRegular = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24v464c0 13.3 10.7 24 24 24s24-10.7 24-24v-16h416v16c0 13.3 10.7 24 24 24s24-10.7 24-24V24c0-13.3-10.7-24-24-24s-24 10.7-24 24v144H48zm0 192h416v208H48z"/></svg>';
+export default LanShelvesEmptyRegular;

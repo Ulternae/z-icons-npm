@@ -6,13 +6,14 @@ import { svgoConfig } from './svgo.config.js';
 const CONFIG = {
   sourceDir: 'icons',
   packagesDir: 'packages',
-  packs: ['core', 'neo', 'mina', 'bru'],
+  packs: ['core', 'neo', 'mina', 'bru', 'lan'],
   variants: ['light', 'solid', 'regular', 'thin'],
   defaultVariants: {
     core: 'light',
     neo: 'light',
     mina: 'light',
     bru: 'solid',
+    lan: 'light',
   },
   publicVariantSuffixes: {
     light: 'Light',
@@ -25,6 +26,7 @@ const CONFIG = {
     neo: { light: 'stroke' },
     mina: { light: 'stroke', solid: 'fill' },
     bru: { solid: 'fill' },
+    lan: { light: 'stroke' },
   },
   svgoConfig,
 };
@@ -317,6 +319,7 @@ function buildCorePackage(icons, packData) {
   const distDir = path.join(CONFIG.packagesDir, 'icons', 'dist');
   cleanDir(distDir);
 
+  const componentNames = new Set(icons.map((icon) => icon.componentName));
   const svgExports = [];
   const svgTypes = [];
   const packDictionaryExports = [];
@@ -338,8 +341,15 @@ function buildCorePackage(icons, packData) {
       `export declare const ${icon.componentName}: string;\nexport default ${icon.componentName};\n`
     );
 
-    svgExports.push(`export { ${icon.componentName}, default as ${icon.componentName}Svg } from './${icon.publicFileName}.js';`);
-    svgTypes.push(`export { ${icon.componentName}, default as ${icon.componentName}Svg } from './${icon.publicFileName}.js';`);
+    const defaultExportName = `${icon.componentName}Svg`;
+
+    if (componentNames.has(defaultExportName)) {
+      svgExports.push(`export { ${icon.componentName} } from './${icon.publicFileName}.js';`);
+      svgTypes.push(`export { ${icon.componentName} } from './${icon.publicFileName}.js';`);
+    } else {
+      svgExports.push(`export { ${icon.componentName}, default as ${defaultExportName} } from './${icon.publicFileName}.js';`);
+      svgTypes.push(`export { ${icon.componentName}, default as ${defaultExportName} } from './${icon.publicFileName}.js';`);
+    }
     availableVariants.add(icon.variant);
 
     if (!packNames[icon.pack]) {

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanHatChefSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M448 384H64v80c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48zm0-48v-90.8c37.8-18 64-56.5 64-101.2 0-61.9-50.1-112-112-112-17.3 0-33.7 3.9-48.3 10.9C328.3 16.6 294.1 0 256 0s-72.2 16.6-95.7 42.9c-14.6-7-31-10.9-48.3-10.9C50.1 32 0 82.1 0 144c0 44.7 26.2 83.2 64 101.2V336h64V216c0-13.3 10.7-24 24-24s24 10.7 24 24v120h56V216c0-13.3 10.7-24 24-24s24 10.7 24 24v120h56V216c0-13.3 10.7-24 24-24s24 10.7 24 24v120z"})
+);
+
+export default LanHatChefSolid;

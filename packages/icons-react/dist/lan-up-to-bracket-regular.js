@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanUpToBracketRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M385 311 241 167c-9.4-9.4-24.6-9.4-33.9 0L63 311c-6.9 6.9-8.9 17.2-5.2 26.2S70.3 352 80 352h64v112c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V352h64c9.7 0 18.5-5.8 22.2-14.8s1.7-19.3-5.2-26.2m-217-7h-30.1l86.1-86.1 86.1 86.1H280c-13.3 0-24 10.7-24 24v136h-64V328c0-13.3-10.7-24-24-24M48 168V96c0-26.5 21.5-48 48-48h256c26.5 0 48 21.5 48 48v72c0 13.3 10.7 24 24 24s24-10.7 24-24V96c0-53-43-96-96-96H96C43 0 0 43 0 96v72c0 13.3 10.7 24 24 24s24-10.7 24-24"})
+);
+
+export default LanUpToBracketRegular;

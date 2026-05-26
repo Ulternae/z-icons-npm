@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanHouseSignalRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M287.4-9.3c9.3-8.9 24-8.9 33.3 0l216 208c9.5 9.2 9.8 24.4.6 33.9s-24.4 9.8-33.9.6l-7.4-7.1v157.8c0 35.3-28.7 64-64 64H295q-6.6-25.05-17.4-48l154.4.1c8.8 0 16-7.2 16-16V180L304 41.3l-199.4 192c-9.5 9.2-24.7 8.9-33.9-.6s-8.9-24.7.6-33.9l216-208zM256 216c0-13.3 10.7-24 24-24h48c13.3 0 24 10.7 24 24v48c0 13.3-10.7 24-24 24h-48c-13.3 0-24-10.7-24-24zM24 288c128.1 0 232 103.9 232 232 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184-13.3 0-24-10.7-24-24s10.7-24 24-24m8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64M0 408c0-13.3 10.7-24 24-24 75.1 0 136 60.9 136 136 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88-13.3 0-24-10.7-24-24"})
+);
+
+export default LanHouseSignalRegular;

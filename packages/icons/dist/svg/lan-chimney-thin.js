@@ -1,0 +1,2 @@
+export const LanChimneyThin = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M32 48c-8.8 0-16 7.2-16 16v64c0 8.8 7.2 16 16 16h384c8.8 0 16-7.2 16-16V64c0-8.8-7.2-16-16-16zM0 64c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32v312c0 4.4-3.6 8-8 8s-8-3.6-8-8v-88H176v88c0 4.4-3.6 8-8 8s-8-3.6-8-8v-88H48v88c0 4.4-3.6 8-8 8s-8-3.6-8-8V160c-17.7 0-32-14.3-32-32zm48 96v96h112v-96zm128 0v96h224v-96zm-8 208h104v-96H48v96zm120 0h112v-96H288z"/></svg>';
+export default LanChimneyThin;

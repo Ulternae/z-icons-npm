@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCircle8Thin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M256 16a240 240 0 1 1 0 480 240 240 0 1 1 0-480m0 496a256 256 0 1 0 0-512 256 256 0 1 0 0 512m-64-300c0 17 8.1 32 20.7 41.5-17 8.5-28.7 26.2-28.7 46.5 0 28.7 23.3 52 52 52h40c28.7 0 52-23.3 52-52 0-20.3-11.7-37.9-28.7-46.5C311.9 244 320 228.9 320 212c0-28.7-23.3-52-52-52h-24c-28.7 0-52 23.3-52 52m112 0c0 19.9-16.1 36-36 36h-24c-19.9 0-36-16.1-36-36s16.1-36 36-36h24c19.9 0 36 16.1 36 36m-68 52h40c19.9 0 36 16.1 36 36s-16.1 36-36 36h-40c-19.9 0-36-16.1-36-36s16.1-36 36-36"})
+);
+
+export default LanCircle8Thin;

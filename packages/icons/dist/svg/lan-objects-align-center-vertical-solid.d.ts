@@ -1,0 +1,2 @@
+export declare const LanObjectsAlignCenterVerticalSolid: string;
+export default LanObjectsAlignCenterVerticalSolid;

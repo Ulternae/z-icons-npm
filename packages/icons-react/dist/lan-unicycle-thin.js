@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanUnicycleThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 384 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M88 0c4.4 0 8 3.6 8 8 0 22.1 17.9 40 40 40h144c4.4 0 8 3.6 8 8s-3.6 8-8 8h-80v96.2c93.5 4.2 168 81.3 168 175.8 0 97.2-78.8 176-176 176S16 433.2 16 336c0-94.5 74.5-171.6 168-175.8V64h-48c-30.9 0-56-25.1-56-56 0-4.4 3.6-8 8-8m96 176.2C99.4 180.4 32 250.3 32 336c0 88.4 71.6 160 160 160s160-71.6 160-160c0-85.7-67.4-155.6-152-159.8V344c0 4.4-3.6 8-8 8s-8-3.6-8-8z"})
+);
+
+export default LanUnicycleThin;

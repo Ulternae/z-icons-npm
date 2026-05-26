@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCalendarsSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M224 0c-17.7 0-32 14.3-32 32v32h-48c-26.5 0-48 21.5-48 48v48h416v-48c0-26.5-21.5-48-48-48h-48V32c0-17.7-14.3-32-32-32s-32 14.3-32 32v32h-96V32c0-17.7-14.3-32-32-32M96 208v160c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48V208zm-48-24c0-13.3-10.7-24-24-24S0 170.7 0 184v264c0 35.3 28.7 64 64 64h328c13.3 0 24-10.7 24-24s-10.7-24-24-24H64c-8.8 0-16-7.2-16-16z"})
+);
+
+export default LanCalendarsSolid;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanBombThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M448 8c4.4 0 8 3.6 8 8v40h40c4.4 0 8 3.6 8 8s-3.6 8-8 8h-40v40c0 4.4-3.6 8-8 8s-8-3.6-8-8V72h-40c-4.4 0-8-3.6-8-8s3.6-8 8-8h40V16c0-4.4 3.6-8 8-8M295.4 92.2c9.5-8.5 24-8.2 33 .9l39.6 39.6 26.3-26.3c3.1-3.1 8.2-3.1 11.3 0s3.1 8.2 0 11.3L379.3 144l39 39c9.4 9.4 9.4 24.6 0 33.9L403.2 232c8.3 22.4 12.8 46.6 12.8 71.9 0 114.9-93.1 208-208 208S0 418.9 0 304 93.1 96 208 96c24.5 0 48 4.2 69.8 12zm21.7 12.2c-3-3-7.8-3.1-11-.3l-21.1 19c-2.2 2-5.4 2.6-8.2 1.5-21.3-8.2-44.5-12.7-68.7-12.7-106 0-192 86-192 192s86 192 192 192 192-86 192-192c0-25.1-4.8-49-13.5-70.9-1.2-3-.5-6.4 1.8-8.6l18.6-18.7c3.1-3.1 3.1-8.2 0-11.3l-90-90zM80 304c0 4.4-3.6 8-8 8s-8-3.6-8-8c0-79.5 64.5-144 144-144 4.4 0 8 3.6 8 8s-3.6 8-8 8c-70.7 0-128 57.3-128 128"})
+);
+
+export default LanBombThin;

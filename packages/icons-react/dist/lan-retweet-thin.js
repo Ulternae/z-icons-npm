@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanRetweetThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M107.3 52.7c-6.2-6.2-16.4-6.2-22.6 0l-64 64c-4.6 4.6-5.9 11.5-3.5 17.4S25.5 144 32 144h128c6.5 0 12.3-3.9 14.8-9.9s1.1-12.9-3.5-17.4zm11.3-11.3 64 64c9.2 9.2 11.9 22.9 6.9 34.9S172.9 160 160 160h-56v224c0 44.2 35.8 80 80 80h128c4.4 0 8 3.6 8 8s-3.6 8-8 8H184c-53 0-96-43-96-96V160H32c-12.9 0-24.6-7.8-29.6-19.8s-2.2-25.7 7-34.8l64-64c12.5-12.5 32.8-12.5 45.3 0zM472 352V128c0-44.2-35.8-80-80-80H264c-4.4 0-8-3.6-8-8s3.6-8 8-8h128c53 0 96 43 96 96v224h56c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-64 64c-12.5 12.5-32.8 12.5-45.3 0l-64-64c-9.2-9.2-11.9-22.9-6.9-34.9S403.1 352 416 352zm-3.3 107.3c6.2 6.2 16.4 6.2 22.6 0l64-64c4.6-4.6 5.9-11.5 3.5-17.4s-8.3-9.9-14.8-9.9H416c-6.5 0-12.3 3.9-14.8 9.9s-1.1 12.9 3.5 17.4z"})
+);
+
+export default LanRetweetThin;

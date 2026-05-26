@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanTimelineThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M120 32a56 56 0 1 1 0 112 56 56 0 1 1 0-112m8 127.6c36-4 64-34.5 64-71.6 0-39.8-32.2-72-72-72S48 48.2 48 88c0 37.1 28 67.6 64 71.6V256H8c-4.4 0-8 3.6-8 8s3.6 8 8 8h272v80.4c-36 4-64 34.5-64 71.6 0 39.8 32.2 72 72 72s72-32.2 72-72c0-37.1-28-67.6-64-71.6V272h272c4.4 0 8-3.6 8-8s-3.6-8-8-8H464v-96.4c36-4 64-34.5 64-71.6 0-39.8-32.2-72-72-72s-72 32.2-72 72c0 37.1 28 67.6 64 71.6V256H128zM456 32a56 56 0 1 1 0 112 56 56 0 1 1 0-112M232 424a56 56 0 1 1 112 0 56 56 0 1 1-112 0"})
+);
+
+export default LanTimelineThin;

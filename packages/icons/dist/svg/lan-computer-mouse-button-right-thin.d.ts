@@ -1,0 +1,2 @@
+export declare const LanComputerMouseButtonRightThin: string;
+export default LanComputerMouseButtonRightThin;

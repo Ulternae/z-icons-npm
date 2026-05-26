@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanHardOfHearingThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"m509.7 13.7-80 80c-3.1 3.1-8.2 3.1-11.3 0s-3.1-8.2 0-11.3l80-80c3.1-3.1 8.2-3.1 11.3 0s3.1 8.2 0 11.3m-320 320-176 176c-3.1 3.1-8.2 3.1-11.3 0s-3.1-8.2 0-11.3l176-176c3.1-3.1 8.2-3.1 11.3 0s3.1 8.2 0 11.3M240 80c-88.4 0-160 70.9-160 158.2 0 4.4-3.6 8-8 8s-8-3.6-8-8C64 141.9 142.9 64 240 64s176 77.9 176 174.2c0 51-22.2 96.8-57.4 128.7-6.1 5.6-9.8 12.9-9.8 20.4v4.8c0 66.3-53.7 120-120 120h-22.4c-4.4 0-8-3.6-8-8s3.6-8 8-8h22.4c57.4 0 104-46.6 104-104v-4.8c0-12.8 6.2-24.2 15.1-32.2C380 326.2 400 284.5 400 238.3c0-87.3-71.6-158.2-160-158.2zm0 64c-53 0-96 43-96 96 0 4.4-3.6 8-8 8s-8-3.6-8-8c0-61.9 50.1-112 112-112s112 50.1 112 112c0 4.4-3.6 8-8 8s-8-3.6-8-8c0-53-43-96-96-96"})
+);
+
+export default LanHardOfHearingThin;

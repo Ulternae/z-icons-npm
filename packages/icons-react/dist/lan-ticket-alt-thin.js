@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanTicketAltThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M0 128c0-35.3 28.7-64 64-64h448c35.3 0 64 28.7 64 64v72.6c0 4-2.9 7.4-6.9 7.9-23.3 3.3-41.1 23.3-41.1 47.5s17.9 44.2 41.1 47.5c3.9.6 6.9 3.9 6.9 7.9V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64v-72.6c0-4 2.9-7.4 6.9-7.9C30.2 300.2 48 280.2 48 256s-17.9-44.2-41.1-47.5c-3.9-.6-6.9-3.9-6.9-7.9zm64-48c-26.5 0-48 21.5-48 48v66c27.6 7.1 48 32.2 48 62s-20.4 54.9-48 62v66c0 26.5 21.5 48 48 48h448c26.5 0 48-21.5 48-48v-66c-27.6-7.1-48-32.2-48-62s20.4-54.9 48-62v-66c0-26.5-21.5-48-48-48z"})
+);
+
+export default LanTicketAltThin;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanWindCircleExclamation = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M256 32c118.3 0 215.2 91.8 223.4 208h-32.1C439.2 141.4 356.6 64 256 64 150 64 64 150 64 256s86 192 192 192c64.2 0 121.1-31.5 156-80h38.1c-38.7 67-111.1 112-194 112-123.7 0-224-100.3-224-224S132.3 32 256 32m272 256c44.2 0 80 35.8 80 80s-35.8 80-80 80h-32c-8.8 0-16-7.2-16-16s7.2-16 16-16h32c26.5 0 48-21.5 48-48s-21.5-48-48-48H400c-8.8 0-16-7.2-16-16s7.2-16 16-16zm-272 96a24 24 0 1 1 0-48 24 24 0 1 1 0 48m0-256c13.5 0 24.3 11.4 23.5 24.9l-7.6 136c-.5 8.5-7.5 15.1-16 15.1s-15.5-6.6-16-15.1l-7.6-136c-.8-13.5 10-24.9 23.5-24.9zm304-64c44.2 0 80 35.8 80 80s-35.8 80-80 80h-33.8c-1.3-10.9-3.2-21.6-5.7-32h39.6c26.5 0 48-21.5 48-48s-21.5-48-48-48h-32c-8.8 0-16-7.2-16-16s7.2-16 16-16h32z"})
+);
+
+export default LanWindCircleExclamation;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanPeapod = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M416 32C203.9 32 32 203.9 32 416v48c0 8.8 7.2 16 16 16h48c212.1 0 384-171.9 384-384V48c0-8.8-7.2-16-16-16zm0-32h48c26.5 0 48 21.5 48 48v48c0 229.8-186.2 416-416 416H48c-26.5 0-48-21.5-48-48v-48C0 186.2 186.2 0 416 0m-48 112a32 32 0 1 0 0 64 32 32 0 1 0 0-64m64 32a64 64 0 1 1-128 0 64 64 0 1 1 128 0M224 256a32 32 0 1 0 64 0 32 32 0 1 0-64 0m32 64a64 64 0 1 1 0-128 64 64 0 1 1 0 128m-144 48a32 32 0 1 0 64 0 32 32 0 1 0-64 0m32 64a64 64 0 1 1 0-128 64 64 0 1 1 0 128"})
+);
+
+export default LanPeapod;

@@ -1,0 +1,2 @@
+export declare const LanWheatAwnCircleExclamationRegular: string;
+export default LanWheatAwnCircleExclamationRegular;

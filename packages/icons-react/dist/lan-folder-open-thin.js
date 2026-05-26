@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanFolderOpenThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M97.5 432c-21.6 0-37-20.9-30.5-41.5l50-160c4.2-13.4 16.5-22.5 30.5-22.5H527c21.6 0 37 20.9 30.5 41.5l-50 160C503.3 422.9 491 432 477 432zm126.7 16H477c21 0 39.6-13.6 45.8-33.7l50-160c9.7-30.9-13.4-62.3-45.8-62.3H147.6c-21 0-39.6 13.6-45.8 33.7l-50 160c-1.1 3.4-1.7 6.7-2 10.1-.9-3.8-1.5-7.7-1.5-11.8V96c0-26.5 21.5-48 48-48H235c10.4 0 20.5 3.4 28.8 9.6l38.4 28.8c8.3 6.2 18.4 9.6 28.8 9.6h117.3c26.5 0 48 21.5 48 48h16c0-35.3-28.7-64-64-64H330.9c-6.9 0-13.7-2.2-19.2-6.4l-38.4-28.8C262.2 36.5 248.8 32 234.9 32H96.2c-35.3 0-64 28.7-64 64v288c0 35.3 28.7 64 64 64z"})
+);
+
+export default LanFolderOpenThin;

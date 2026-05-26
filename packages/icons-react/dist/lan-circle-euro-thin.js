@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCircleEuroThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M496 256a240 240 0 1 0-480 0 240 240 0 1 0 480 0M0 256a256 256 0 1 1 512 0 256 256 0 1 1-512 0m153.5-24H128c-4.4 0-8-3.6-8-8s3.6-8 8-8h29.7c17.1-51.1 65.3-88 122.2-88h41c4.4 0 8 3.6 8 8s-3.6 8-8 8h-41c-47.9 0-88.8 29.9-105.2 72H248c4.4 0 8 3.6 8 8s-3.6 8-8 8h-78.1c-1.8 8-2.7 16.3-2.7 24.8 0 8 .8 15.7 2.4 23.2H248c4.4 0 8 3.6 8 8s-3.6 8-8 8h-73.8c15.9 42.9 57.3 73.5 105.7 73.5h41c4.4 0 8 3.6 8 8s-3.6 8-8 8h-41c-57.4 0-106.1-37.6-122.7-89.5H128c-4.4 0-8-3.6-8-8s3.6-8 8-8h25.2c-1.4-7.5-2.1-15.3-2.1-23.2 0-8.5.8-16.7 2.4-24.8"})
+);
+
+export default LanCircleEuroThin;

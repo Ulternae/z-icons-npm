@@ -1,0 +1,2 @@
+export declare const LanBoxArrowDownMagnifyingGlassThin: string;
+export default LanBoxArrowDownMagnifyingGlassThin;

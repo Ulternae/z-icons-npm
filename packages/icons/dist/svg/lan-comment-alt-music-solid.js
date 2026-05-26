@@ -1,0 +1,2 @@
+export const LanCommentAltMusicSolid = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M0 128v224c0 53 43 96 96 96h32v72c0 13.3 10.7 24 24 24 5.2 0 10.2-1.7 14.4-4.8l115.2-86.4c4.2-3.1 9.2-4.8 14.4-4.8h120c53 0 96-43 96-96V128c0-53-43-96-96-96H96C43 32 0 75 0 128m312 0c13.3 0 24 10.7 24 24v16c0 13.3-10.7 24-24 24h-24v104c0 30.9-28.7 56-64 56s-64-25.1-64-56 28.7-56 64-56c5.5 0 10.9.6 16 1.8V152c0-13.3 10.7-24 24-24z"/></svg>';
+export default LanCommentAltMusicSolid;

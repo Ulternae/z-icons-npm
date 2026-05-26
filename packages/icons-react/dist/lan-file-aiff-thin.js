@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanFileAiffThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M232 400c17.7 0 32 14.3 32 32v104c0 4.4-3.6 8-8 8s-8-3.6-8-8v-40h-48v40c0 4.4-3.6 8-8 8s-8-3.6-8-8V432c0-17.7 14.3-32 32-32zm88 0c4.4 0 8 3.6 8 8v128c0 4.4-3.6 8-8 8s-8-3.6-8-8V408c0-4.4 3.6-8 8-8m112 0c4.4 0 8 3.6 8 8s-3.6 8-8 8h-40v48h40c4.4 0 8 3.6 8 8s-3.6 8-8 8h-40v56c0 4.4-3.6 8-8 8s-8-3.6-8-8V408l.2-1.6c.7-3.6 4-6.4 7.8-6.4zm112 0c4.4 0 8 3.6 8 8s-3.6 8-8 8h-40v48h40c4.4 0 8 3.6 8 8s-3.6 8-8 8h-40v56c0 4.4-3.6 8-8 8s-8-3.6-8-8V408l.2-1.6c.7-3.6 4-6.4 7.8-6.4zM235.8.3c14.7 1.5 28.4 7.9 38.9 18.4l122.6 122.5c12 12 18.7 28.3 18.7 45.2v149.5h-16V186.4q0-5.4-1.2-10.5L296 176c-30.9 0-56-25.1-56-56V17.2q-5.1-1.2-10.5-1.2H96c-26.5 0-48 21.5-48 48v384c0 26.5 21.5 48 48 48h32v16H96l-6.5-.3C57.2 508.4 32 481.1 32 448V64C32 30.9 57.2 3.6 89.5.3L96 0h133.5zM216 416c-8.8 0-16 7.2-16 16v48h48v-48c0-8.8-7.2-16-16-16zm40-296c0 22.1 17.9 40 40 40h96c-.9-1.3-1.8-2.7-2.8-3.9l-3.2-3.5L263.5 30.1c-2.3-2.3-4.8-4.3-7.4-6.1v96z"})
+);
+
+export default LanFileAiffThin;

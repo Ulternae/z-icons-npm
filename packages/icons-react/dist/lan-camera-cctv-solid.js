@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCameraCctvSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M157.1 7c-33.2-12.1-69.9 5-82 38.3L20.4 195.6c-12.1 33.2 5 69.9 38.3 82l93.7 34.1V416c0 4.4-3.6 8-8 8h-64v-24c0-13.3-10.7-24-24-24s-24 10.7-24 24v96c0 13.3 10.7 24 24 24s24-10.7 24-24v-24h64c30.9 0 56-25.1 56-56v-86.8l66.2 24.1c10.9 4 23.1 1.7 31.9-5.9l193.4-167.9c18.4-16 12.9-45.9-10-54.2zm292.4 412.9c16.6 6 35-2.5 41-19.1l43.8-120.3c6-16.6-2.5-35-19.1-41l-13.6-4.9-165.9 143.9z"})
+);
+
+export default LanCameraCctvSolid;

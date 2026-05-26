@@ -1,0 +1,2 @@
+export declare const LanCalendarCircleExclamationSolid: string;
+export default LanCalendarCircleExclamationSolid;

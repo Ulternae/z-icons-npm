@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCaravanAlt = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M416 64c53 0 96 43 96 96v224H302.4c-14.6-28.5-44.2-48-78.4-48s-63.8 19.5-78.4 48H96c-17.7 0-32-14.3-32-32V96c0-17.7 14.3-32 32-32zM96 416h40.4c-.2 2.6-.4 5.3-.4 8 0 48.6 39.4 88 88 88s88-39.4 88-88c0-2.7-.1-5.4-.4-8H624c8.8 0 16-7.2 16-16s-7.2-16-16-16h-80V160c0-70.7-57.3-128-128-128H96c-35.3 0-64 28.7-64 64v256c0 35.3 28.7 64 64 64m72-256h48c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8m-40 8v48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40v-48c0-22.1-17.9-40-40-40h-48c-22.1 0-40 17.9-40 40m280-8c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8zm-48-32c-22.1 0-40 17.9-40 40v48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40v-48c0-22.1-17.9-40-40-40zM224 368a56 56 0 1 1 0 112 56 56 0 1 1 0-112"})
+);
+
+export default LanCaravanAlt;

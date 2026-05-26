@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanSkiBootThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M377.6.2c3.8.7 6.4 4.1 6.4 7.8l-.2 1.6L329 275.9l115.1 66.7c22.2 12.9 35.9 36.6 35.9 62.3V496h24c4.4 0 8 3.6 8 8s-3.6 8-8 8H8c-4.4 0-8-3.6-8-8v-43.6c0-8.8.8-17.6 2.5-26.2L80.1 38.4l.4-1.4c1.2-3 4.1-5.1 7.5-5.1h274.9l5.3-25.6.5-1.5c1.5-3.4 5.2-5.5 9-4.7zM233.4 48c-37.6 176.8-132.8 236-189 255.6L18.2 437.4c-1.4 7.6-2.2 15.3-2.2 23V496h448v-91.1c0-20-10.6-38.5-27.9-48.5L317.8 288H232c-4.4 0-8-3.6-8-8s3.6-8 8-8h81.5l16.5-80h-65.9c-4.4 0-8-3.6-8-8s3.6-8 8-8h69.2l26.4-128H233.5zM48.3 283.9C99.9 263 181.4 205.8 216 48H94.6z"})
+);
+
+export default LanSkiBootThin;

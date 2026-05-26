@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanMarker = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M358.5 52.9 201 210.3 301.7 311l157.4-157.5c13.4-13.4 20.9-31.5 20.9-50.3 0-39.3-31.9-71.2-71.2-71.2-18.9 0-37 7.5-50.3 20.9M178.3 233 125 286.3c-45.3 45.3-75.5 103.4-86.7 166.4l-4.5 25.4 25.4-4.5c63-11.1 121.1-41.4 166.4-86.6l53.4-53.3zM335.8 30.2C355.2 10.8 381.4 0 408.8 0 465.8 0 512 46.2 512 103.2c0 27.4-10.9 53.6-30.2 73L248.3 409.7c-49.9 49.9-114 83.3-183.5 95.5l-36.7 6.5C20.5 513 12.6 510.5 7 505s-8-13.4-6.7-21.1l6.5-36.7c12.3-69.5 45.6-133.6 95.5-183.5L299.7 66.3l-21.1-21c-12.5-12.5-32.8-12.5-45.3 0l-110 110c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l110-110.1c25-25 65.5-25 90.5 0l21.1 21.1z"})
+);
+
+export default LanMarker;

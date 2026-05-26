@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanUserHeadsetThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M224 8C140.1 8 72 76.1 72 160v24c0 4.4-3.6 8-8 8s-8-3.6-8-8v-24C56 67.2 131.2-8 224-8s168 75.2 168 168v152c0 4.4-3.6 8-8 8H192c-26.5 0-48-21.5-48-48s21.5-48 48-48h64c26.5 0 48 21.5 48 48 0 12.3-4.6 23.5-12.2 32H376V160C376 76.1 307.9 8 224 8m32 296c17.7 0 32-14.3 32-32s-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32s14.3 32 32 32zm64-144c0-53-43-96-96-96s-96 43-96 96c0 12.4 2.3 24.2 6.6 35-4.5 3.4-8.7 7.2-12.6 11.3-6.4-14.1-10-29.8-10-46.3 0-61.9 50.1-112 112-112s112 50.1 112 112c0 16.5-3.6 32.2-10 46.3-3.9-4.1-8.1-7.9-12.6-11.3 4.3-10.9 6.6-22.7 6.6-35M16 504c0 4.4-3.6 8-8 8s-8-3.6-8-8c0-83.9 68.1-152 152-152h144c83.9 0 152 68.1 152 152 0 4.4-3.6 8-8 8s-8-3.6-8-8c0-75.1-60.9-136-136-136H152c-75.1 0-136 60.9-136 136"})
+);
+
+export default LanUserHeadsetThin;

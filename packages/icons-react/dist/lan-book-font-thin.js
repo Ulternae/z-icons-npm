@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanBookFontThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M0 56C0 25.1 25.1 0 56 0h352c22.1 0 40 17.9 40 40v336c0 19.4-13.7 35.5-32 39.2V496h24c4.4 0 8 3.6 8 8s-3.6 8-8 8H56c-30.9 0-56-25.1-56-56zm56 360c-22.1 0-40 17.9-40 40s17.9 40 40 40h344v-80zm-40 .8C26.2 406.4 40.3 400 56 400h352c13.3 0 24-10.7 24-24V40c0-13.3-10.7-24-24-24H56c-22.1 0-40 17.9-40 40zm215.2-316.4 63.9 127.9.1.3 23.9 47.8c2 4 .4 8.8-3.6 10.7s-8.8.4-10.7-3.6L283 239.9H164.9l-21.8 43.6c-2 4-6.8 5.6-10.7 3.6s-5.6-6.8-3.6-10.7l88-176c1.4-2.7 4.1-4.4 7.2-4.4s5.8 1.7 7.2 4.4M275.1 224 224 121.9 172.9 224z"})
+);
+
+export default LanBookFontThin;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanChairOfficeRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M160 48c-8.8 0-16 7.2-16 16v192h160V64c0-8.8-7.2-16-16-16zm192 16v192h16c26.5 0 48 21.5 48 48v48c0 26.5-21.5 48-48 48H248v64h48c13.3 0 24 10.7 24 24s-10.7 24-24 24H152c-13.3 0-24-10.7-24-24s10.7-24 24-24h48v-64H80c-26.5 0-48-21.5-48-48v-48c0-26.5 21.5-48 48-48h16V64c0-35.3 28.7-64 64-64h128c35.3 0 64 28.7 64 64M224 352h144v-48H80v48zM48 152v48c0 13.3-10.7 24-24 24S0 213.3 0 200v-48c0-13.3 10.7-24 24-24s24 10.7 24 24m400 0v48c0 13.3-10.7 24-24 24s-24-10.7-24-24v-48c0-13.3 10.7-24 24-24s24 10.7 24 24"})
+);
+
+export default LanChairOfficeRegular;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanAcornRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M228.8 9.6c8-10.6 23-12.7 33.6-4.8 10.6 8 12.7 23 4.8 33.6l-4.8 6.4c-4.4 5.9-7.8 12.4-10.2 19.2H352l4.9.1c50.8 2.6 91.1 44.5 91.1 95.9v32l-.2 3.3c-1.5 15-13.5 27-28.6 28.6l-3.3.2h-16l-.4 15.1c-3.8 78.1-38.6 190-165.5 237.3l-5 1.4c-3.4.6-6.9.6-10.3 0l-5-1.4C87 429.1 52.2 317.3 48.4 239.1L48 224H32l-3.3-.2c-15.1-1.5-27-13.5-28.6-28.6L0 192v-32c0-51.4 40.3-93.3 91.1-95.9L96 64h106.5c3.5-17.3 10.8-33.7 21.5-48zM96.3 236.9C99.5 303 127.7 389.5 224 428.8 326.7 386.9 352 291.3 352 224H96zM96 112c-26.5 0-48 21.5-48 48v16h352v-16c0-26.5-21.5-48-48-48z"})
+);
+
+export default LanAcornRegular;

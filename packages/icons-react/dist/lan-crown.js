@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCrown = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M304 64a16 16 0 1 0-32 0 16 16 0 1 0 32 0m-13.9 48c-1.4.1-2.8.1-4.1 0l-80.7 120.9c-4.5 6.7-13.3 9-20.5 5.4l-99.6-49.8 33.1 187.8c4 22.9 24 39.7 47.3 39.7h244.6c23.3 0 43.2-16.7 47.3-39.7l33.1-187.8-99.6 49.8c-7.2 3.6-16 1.3-20.5-5.4zm-34.4-12.5C246 90.7 240 78 240 64c0-26.5 21.5-48 48-48s48 21.5 48 48c0 14.1-6.1 26.8-15.7 35.5l69.2 103.8 85.5-42.7c-1.9-5.2-3-10.8-3-16.6 0-26.5 21.5-48 48-48s48 21.5 48 48c0 25.6-20.1 46.6-45.4 47.9l-33.5 190c-6.7 38.2-40 66.1-78.8 66.1H165.7c-38.8 0-72-27.9-78.8-66.1l-33.5-190C28.1 190.6 8 169.6 8 144c0-26.5 21.5-48 48-48s48 21.5 48 48c0 5.8-1 11.4-3 16.6l85.5 42.7zM72 144a16 16 0 1 0-32 0 16 16 0 1 0 32 0m448 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32"})
+);
+
+export default LanCrown;

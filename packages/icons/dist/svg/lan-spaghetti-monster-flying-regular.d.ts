@@ -1,0 +1,2 @@
+export declare const LanSpaghettiMonsterFlyingRegular: string;
+export default LanSpaghettiMonsterFlyingRegular;

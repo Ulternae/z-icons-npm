@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanMagnifyingGlassPlayRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M208 48a160 160 0 1 1 0 320 160 160 0 1 1 0-320m0 368c48.8 0 93.7-16.8 129.1-44.9L471 505c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-133.8-134C399.2 301.7 416 256.8 416 208 416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208m-41-120c2.5 0 4.9-.7 7.1-2l121.2-72.7c4.7-2.8 7.5-7.9 7.5-13.3s-2.9-10.5-7.5-13.3L174.1 122c-2.1-1.3-4.6-2-7.1-2-7.6 0-13.8 6.2-13.8 13.8v148.4c0 7.6 6.2 13.8 13.8 13.8"})
+);
+
+export default LanMagnifyingGlassPlayRegular;

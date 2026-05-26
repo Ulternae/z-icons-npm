@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanPhoneArrowDownLeftSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M112.1 1.4c19.7-5.4 40.3 4.7 48.1 23.5l40.5 97.3c6.9 16.5 2.1 35.6-11.8 47l-44.1 36.1c32.5 71.6 89 130 159.3 164.9l38.7-47.2c11.3-13.9 30.4-18.6 47-11.8l97.2 40.6c18.8 7.8 28.9 28.4 23.5 48.1l-1.5 5.5c-17.6 64.7-80.1 119.9-156.4 103.8-175-37.1-312.7-174.8-349.8-349.8C-13.3 83.1 41.9 20.6 106.5 2.9l5.5-1.5zM505 41 402 144h54.1c13.3 0 24 10.7 24 24s-10.7 24-24 24h-112c-13.3 0-24-10.7-24-24V56c0-13.3 10.7-24 24-24s24 10.7 24 24v54.1l103-103c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9"})
+);
+
+export default LanPhoneArrowDownLeftSolid;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanFilms = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M512 64c17.7 0 32 14.3 32 32v48h-64V64zm-288 0h224v288H224zm288 288h-32v-80h64v48c0 17.7-14.3 32-32 32m32-176v64h-64v-64zm-352 96v80h-32c-17.7 0-32-14.3-32-32v-48zm0-96v64h-64v-64zm0-112v80h-64V96c0-17.7 14.3-32 32-32zm-32-32c-35.3 0-64 28.7-64 64v224c0 35.3 28.7 64 64 64h352c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zM32 144c0-8.8-7.2-16-16-16s-16 7.2-16 16v272c0 35.3 28.7 64 64 64h400c8.8 0 16-7.2 16-16s-7.2-16-16-16H64c-17.7 0-32-14.3-32-32z"})
+);
+
+export default LanFilms;

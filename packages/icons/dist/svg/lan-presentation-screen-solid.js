@@ -1,0 +1,2 @@
+export const LanPresentationScreenSolid = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M24 32h464c13.3 0 24 10.7 24 24s-10.7 24-24 24H24C10.7 80 0 69.3 0 56s10.7-24 24-24m208 352H96c-35.3 0-64-28.7-64-64V128h448v192c0 35.3-28.7 64-64 64H280v35.5l69.8 48.8c10.9 7.6 13.5 22.6 5.9 33.4s-22.6 13.5-33.4 5.9l-66.2-46.4-66.2 46.4c-10.9 7.6-25.8 5-33.4-5.9s-5-25.8 5.9-33.4l69.8-48.8V384z"/></svg>';
+export default LanPresentationScreenSolid;

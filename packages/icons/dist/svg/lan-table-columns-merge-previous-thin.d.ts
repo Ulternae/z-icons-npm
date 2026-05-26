@@ -1,0 +1,2 @@
+export declare const LanTableColumnsMergePreviousThin: string;
+export default LanTableColumnsMergePreviousThin;

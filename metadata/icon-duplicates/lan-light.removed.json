@@ -1,0 +1,10 @@
+{
+  "pack": "lan",
+  "variant": "light",
+  "sourceDir": "icons/lan/light",
+  "dryRun": false,
+  "removedCount": 0,
+  "skippedCount": 0,
+  "removed": [],
+  "skipped": []
+}

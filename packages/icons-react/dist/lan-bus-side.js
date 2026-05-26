@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanBusSide = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M488.2.2C572.8 4.5 640 74.4 640 160v224l-.3 6.5c-3.1 30.1-27 54.1-57.1 57.1l-6.5.3h-5.6c-13.2 37.3-48.6 64-90.4 64s-77.3-26.7-90.4-64H250.6c-13.2 37.3-48.7 64-90.4 64s-77.2-26.7-90.4-64h-5.6l-6.5-.3c-30.1-3.1-54.1-27-57.1-57.1L0 384V96C0 44.6 40.3 2.7 91.1.1L96 0h384zM160 352a64 64 0 1 0 0 128 64 64 0 1 0 0-128m320 0a64 64 0 1 0 0 128 64 64 0 1 0 0-128M32 224v160c0 17.7 14.3 32 32 32 0-53 43-96 96-96s96 43 96 96h128c0-41.8 26.7-77.3 64-90.4V224zm448 96c53 0 96 43 96 96 17.7 0 32-14.3 32-32V160c0-70.7-57.3-128-128-128zM256 192h192V32H256zM96 32c-35.3 0-64 28.7-64 64v96h192V32z"})
+);
+
+export default LanBusSide;

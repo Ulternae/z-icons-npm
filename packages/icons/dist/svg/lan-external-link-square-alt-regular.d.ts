@@ -1,0 +1,2 @@
+export declare const LanExternalLinkSquareAltRegular: string;
+export default LanExternalLinkSquareAltRegular;

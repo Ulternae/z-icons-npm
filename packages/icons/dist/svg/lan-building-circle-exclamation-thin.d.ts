@@ -1,0 +1,2 @@
+export declare const LanBuildingCircleExclamationThin: string;
+export default LanBuildingCircleExclamationThin;

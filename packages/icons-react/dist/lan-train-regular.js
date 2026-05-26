@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanTrainRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 384 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M288 48c26.5 0 48 21.5 48 48v96H48V96c0-26.5 21.5-48 48-48zM0 192v160c0 40.1 24.6 74.5 59.5 88.8L5.7 504.5c-8.6 10.1-7.3 25.3 2.8 33.8s25.3 7.3 33.8-2.8l74-87.5h151.3l74 87.5c8.6 10.1 23.7 11.4 33.8 2.8s11.4-23.7 2.8-33.8l-53.9-63.7c35.1-14.3 59.7-48.7 59.7-88.8V96c0-53-43-96-96-96H96C43 0 0 43 0 96zm336 160c0 26.5-21.5 48-48 48H96c-26.5 0-48-21.5-48-48V240h288zm-144 0a32 32 0 1 0 0-64 32 32 0 1 0 0 64"})
+);
+
+export default LanTrainRegular;

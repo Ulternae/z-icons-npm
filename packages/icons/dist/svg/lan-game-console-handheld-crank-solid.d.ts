@@ -1,0 +1,2 @@
+export declare const LanGameConsoleHandheldCrankSolid: string;
+export default LanGameConsoleHandheldCrankSolid;

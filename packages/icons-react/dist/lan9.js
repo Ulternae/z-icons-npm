@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const Lan9 = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 384 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M208 320c45.2 0 85.6-20.9 112-53.5V344c0 57.4-46.6 104-104 104H96c-8.8 0-16 7.2-16 16s7.2 16 16 16h120c75.1 0 136-60.9 136-136V175.9C352 96.4 287.5 32 208 32h-48C80.5 32 16 96.5 16 176s64.5 144 144 144zm112-144c0 61.9-50.1 112-112 112h-48c-61.9 0-112-50.1-112-112S98.1 64 160 64h48c61.9 0 112 50.1 112 112"})
+);
+
+export default Lan9;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCalendarImageThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M120 0c4.4 0 8 3.6 8 8v56h192V8c0-4.4 3.6-8 8-8s8 3.6 8 8v56h48c35.3 0 64 28.7 64 64v288c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128c0-35.3 28.7-64 64-64h48V8c0-4.4 3.6-8 8-8m-8 104V80H64c-26.5 0-48 21.5-48 48v288c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48V128c0-26.5-21.5-48-48-48h-48v24c0 4.4-3.6 8-8 8s-8-3.6-8-8V80H128v24c0 4.4-3.6 8-8 8s-8-3.6-8-8m16 104a16 16 0 1 0 0-32 16 16 0 1 0 0 32m0-48a32 32 0 1 1 0 64 32 32 0 1 1 0-64m76.7 72.5c5-5.4 12-8.5 19.3-8.5s14.3 3.1 19.3 8.5l102.3 111.1c4.1 4.5 6.4 10.3 6.4 16.3 0 13.3-10.8 24.1-24.1 24.1H120.1c-13.3 0-24.1-10.8-24.1-24.1 0-6.1 2.3-11.9 6.4-16.3zM224 240c-2.9 0-5.6 1.2-7.5 3.3L114.1 354.4c-1.4 1.5-2.1 3.5-2.1 5.5 0 4.5 3.6 8.1 8.1 8.1h207.8c4.5 0 8.1-3.6 8.1-8.1 0-2-.8-4-2.1-5.5L231.5 243.3c-1.9-2.1-4.7-3.3-7.5-3.3"})
+);
+
+export default LanCalendarImageThin;

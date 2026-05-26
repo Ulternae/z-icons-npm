@@ -1,0 +1,2 @@
+export const LanArrowDownThin = '<svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M186.3 509.7c3.1 3.1 8.2 3.1 11.3 0l176-176c3.1-3.1 3.1-8.2 0-11.3s-8.2-3.1-11.3 0L200 484.7V8c0-4.4-3.6-8-8-8s-8 3.6-8 8v476.7L21.7 322.4c-3.1-3.1-8.2-3.1-11.3 0s-3.1 8.2 0 11.3l176 176z"/></svg>';
+export default LanArrowDownThin;

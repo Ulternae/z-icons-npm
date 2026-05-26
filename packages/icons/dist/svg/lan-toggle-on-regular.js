@@ -1,0 +1,2 @@
+export const LanToggleOnRegular = '<svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M192 112c-79.5 0-144 64.5-144 144s64.5 144 144 144h192c79.5 0 144-64.5 144-144s-64.5-144-144-144zM0 256C0 150 86 64 192 64h192c106 0 192 86 192 192s-86 192-192 192H192C86 448 0 362 0 256m384-96a96 96 0 1 1 0 192 96 96 0 1 1 0-192"/></svg>';
+export default LanToggleOnRegular;

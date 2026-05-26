@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanSprinklerCeilingThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 384 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M0 0v96c0 3.6 2.5 6.8 6 7.7l122 31.9V119L16 89.8V0zm256 119v16.5l122-31.8c3.5-.9 6-4.1 6-7.7V0h-16v89.8zm-64-71c8.8 0 16 7.2 16 16v176h-32V64c0-8.8 7.2-16 16-16m32 192V64c0-17.7-14.3-32-32-32s-32 14.3-32 32v176H72c-4.4 0-8 3.6-8 8s3.6 8 8 8h240c4.4 0 8-3.6 8-8s-3.6-8-8-8zm-80 112a16 16 0 1 0 0-32 16 16 0 1 0 0 32m-64 64c8.8 0 16-7.2 16-16s-7.2-16-16-16-16 7.2-16 16 7.2 16 16 16m176-80a16 16 0 1 0-32 0 16 16 0 1 0 32 0m-64 80c8.8 0 16-7.2 16-16s-7.2-16-16-16-16 7.2-16 16 7.2 16 16 16m-32 48c0-8.8-7.2-16-16-16s-16 7.2-16 16 7.2 16 16 16 16-7.2 16-16m80 16c8.8 0 16-7.2 16-16s-7.2-16-16-16-16 7.2-16 16 7.2 16 16 16m144-16c0-8.8-7.2-16-16-16s-16 7.2-16 16 7.2 16 16 16 16-7.2 16-16m-80-48c8.8 0 16-7.2 16-16s-7.2-16-16-16-16 7.2-16 16 7.2 16 16 16M32 464c0-8.8-7.2-16-16-16s-16 7.2-16 16 7.2 16 16 16 16-7.2 16-16"})
+);
+
+export default LanSprinklerCeilingThin;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanPhoneIntercomRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M64 80c-8.8 0-16 7.2-16 16v320c0 8.8 7.2 16 16 16h48c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16zm88 386c-11 8.8-24.9 14-40 14H64c-35.3 0-64-28.7-64-64V96c0-35.3 28.7-64 64-64h48c15.1 0 29 5.3 40 14 11-8.8 24.9-14 40-14h256c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H192c-15.1 0-29-5.3-40-14m24-370v320c0 8.8 7.2 16 16 16h256c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H192c-8.8 0-16 7.2-16 16m40 240a24 24 0 1 1 48 0 24 24 0 1 1-48 0m104-24a24 24 0 1 1 0 48 24 24 0 1 1 0-48m56 24a24 24 0 1 1 48 0 24 24 0 1 1-48 0M259.2 128h121.6c19.4 0 35.2 15.8 35.2 35.2v57.6c0 19.4-15.8 35.2-35.2 35.2H259.2c-19.4 0-35.2-15.8-35.2-35.2v-57.6c0-19.4 15.8-35.2 35.2-35.2"})
+);
+
+export default LanPhoneIntercomRegular;

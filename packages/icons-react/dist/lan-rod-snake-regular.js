@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanRodSnakeRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M200 464v56c0 13.3 10.7 24 24 24s24-10.7 24-24V336h32c22.1 0 40 17.9 40 40 0 19.4-13.7 35.5-32 39.2v48.4c44.9-4 80-41.7 80-87.6 0-48.6-39.4-88-88-88h-32V96h68c19.9 0 36 16.1 36 36s-16.1 36-36 36h-28v48h28c46.4 0 84-37.6 84-84s-37.6-84-84-84h-68V-8c0-13.3-10.7-24-24-24s-24 10.7-24 24v56H72c-30.9 0-56 25.1-56 56s25.1 56 56 56 56-25.1 56-56v-8h72v192h-36c-19.9 0-36-16.1-36-36 0-18.5 14-33.8 32-35.8v-48.1c-44.5 2.1-80 38.9-80 83.9 0 46.4 37.6 84 84 84h36v80h-32c-13.3 0-24 10.7-24 24s10.7 24 24 24z"})
+);
+
+export default LanRodSnakeRegular;

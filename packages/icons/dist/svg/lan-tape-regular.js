@@ -1,0 +1,2 @@
+export const LanTapeRegular = '<svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M256 80a176 176 0 1 1 0 352 176 176 0 1 1 0-352m138.6 352c52-41 85.4-104.6 85.4-176 0-123.7-100.3-224-224-224S32 132.3 32 256s100.3 224 224 224h296c13.3 0 24-10.7 24-24s-10.7-24-24-24zM256 208a48 48 0 1 1 0 96 48 48 0 1 1 0-96m0 144a96 96 0 1 0 0-192 96 96 0 1 0 0 192"/></svg>';
+export default LanTapeRegular;

@@ -1,0 +1,2 @@
+export declare const LanPersonMilitaryToPersonRegular: string;
+export default LanPersonMilitaryToPersonRegular;

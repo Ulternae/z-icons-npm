@@ -1,0 +1,2 @@
+export declare const LanTableCellsColumnUnlockRegular: string;
+export default LanTableCellsColumnUnlockRegular;

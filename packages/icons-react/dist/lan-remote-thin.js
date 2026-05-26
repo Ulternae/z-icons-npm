@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanRemoteThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 320 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M256-32c35.3 0 64 28.7 64 64v352l-.2 8.2C315.5 476.8 245.6 544 160 544S4.5 476.8.2 392.2L0 384V32C0-3.3 28.7-32 64-32zM64-16C37.5-16 16 5.5 16 32v352c0 79.5 64.5 144 144 144s144-64.5 144-144V32c0-26.5-21.5-48-48-48zm96 448c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16m-80-80c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16m80 0c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16m80 0c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16M80 304a16 16 0 1 1 0-32 16 16 0 1 1 0 32m80 0a16 16 0 1 1 0-32 16 16 0 1 1 0 32m80 0a16 16 0 1 1 0-32 16 16 0 1 1 0 32m-80-80a96 96 0 1 1 0-192 96 96 0 1 1 0 192m0-176a80 80 0 1 0 0 160 80 80 0 1 0 0-160m0 112a32 32 0 1 1 0-64 32 32 0 1 1 0 64m0-48a16 16 0 1 0 0 32 16 16 0 1 0 0-32"})
+);
+
+export default LanRemoteThin;

@@ -1,0 +1,2 @@
+export const LanClockDeskSolid = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M384 224a160 160 0 1 0-320 0 160 160 0 1 0 320 0M224 0c123.7 0 224 100.3 224 224v224c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V224C0 100.3 100.3 0 224 0m0 112c13.3 0 24 10.7 24 24v78.1l41 41c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-4.5-4.5-7-10.6-7-17v-88c0-13.3 10.7-24 24-24z"/></svg>';
+export default LanClockDeskSolid;

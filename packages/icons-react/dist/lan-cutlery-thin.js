@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCutleryThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M41.3.1c4.4.7 7.3 4.8 6.6 9.2L24.8 148.1c-.5 3-.8 6.1-.8 9.2V168c0 30.9 25.1 56 56 56h64c30.9 0 56-25.1 56-56v-10.7c0-3.1-.3-6.2-.8-9.2L176.1 9.3c-.7-4.4 2.2-8.5 6.6-9.2s8.5 2.2 9.2 6.6L215 145.5c.7 3.9 1 7.9 1 11.8V168c0 39.8-32.2 72-72 72h-24v264c0 4.4-3.6 8-8 8s-8-3.6-8-8V240H80c-39.8 0-72-32.2-72-72v-10.7c0-4 .3-7.9 1-11.8L32.1 6.7C32.8 2.3 37-.6 41.3.1M88.4 0c4.4.2 7.8 4 7.6 8.4l-8 160c-.2 4.4-4 7.8-8.4 7.6s-7.8-4-7.6-8.4l8-160c.2-4.4 4-7.8 8.4-7.6m47.2 0c4.4-.2 8.2 3.2 8.4 7.6l8 160c.2 4.4-3.2 8.2-7.6 8.4s-8.2-3.2-8.4-7.6l-8-160c-.2-4.4 3.2-8.2 7.6-8.4M416 16c-61.9 0-112 50.1-112 112v176c0 17.7 14.3 32 32 32h80zm16 328v160c0 4.4-3.6 8-8 8s-8-3.6-8-8V352h-80c-26.5 0-48-21.5-48-48V128C288 57.3 345.3 0 416 0c8.8 0 16 7.2 16 16z"})
+);
+
+export default LanCutleryThin;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanPaintbrushSlashRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M41-24.9c-9.4-9.4-24.6-9.4-33.9 0S-2.3-.3 7 9.1l528 528c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-171-171c.6-.7 1.2-1.5 1.8-2.2l159.9-204.7c10.7-13.6 16.4-30.4 16.4-47.7C576 34.8 541.3 0 498.4 0c-17.3 0-34.1 5.8-47.8 16.4L246.1 176.3c-.8.6-1.5 1.2-2.2 1.8zm237.1 237.1 202.2-158c5.2-4.1 11.6-6.3 18.2-6.3 16.3 0 29.6 13.2 29.6 29.6 0 6.6-2.2 13-6.3 18.2l-158 202.2zm-13.4 138.3c4.7 10.2 7.3 21.5 7.3 33.5 0 44.2-35.8 80-80 80H99.9c.5-.7 1-1.5 1.5-2.2 11.5-17.5 16.6-39.9 12.2-62-1-5.1-1.6-10.4-1.6-15.8 0-44.2 35.8-80 80-80 12 0 23.3 2.6 33.5 7.3l-53.7-53.7C110.7 267.3 64 320.2 64 384c0 8.6.9 17.1 2.5 25.2 3.6 18.1-8.5 38.8-27 38.8H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h160c63.8 0 116.7-46.7 126.4-107.8z"})
+);
+
+export default LanPaintbrushSlashRegular;

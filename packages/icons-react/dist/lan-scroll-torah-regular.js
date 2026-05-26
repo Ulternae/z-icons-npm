@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanScrollTorahRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M96 88v336c0 13.3-10.7 24-24 24s-24-10.7-24-24V88c0-13.3 10.7-24 24-24s24 10.7 24 24M72 496c25 0 47-12.7 59.9-32h312.2c12.9 19.3 34.9 32 59.9 32 39.8 0 72-32.2 72-72V88c0-39.8-32.2-72-72-72-25 0-47 12.7-59.9 32H131.9C119 28.7 97 16 72 16 32.2 16 0 48.2 0 88v336c0 39.8 32.2 72 72 72M480 88c0-13.3 10.7-24 24-24s24 10.7 24 24v336c0 13.3-10.7 24-24 24s-24-10.7-24-24zm-48 8v320H144V96zM177.9 301c-1.2 2-1.9 4.2-1.9 6.6 0 6.9 5.6 12.5 12.5 12.5h56.9l30.5 49.2c2.6 4.2 7.2 6.8 12.2 6.8s9.6-2.6 12.2-6.8l30.5-49.2h56.9c6.9 0 12.5-5.6 12.5-12.5 0-2.3-.6-4.6-1.9-6.6l-27.8-45 27.8-45c1.2-2 1.9-4.2 1.9-6.6 0-6.9-5.6-12.5-12.5-12.5h-56.9l-30.5-49.2c-2.6-4.2-7.2-6.8-12.2-6.8s-9.6 2.6-12.2 6.8l-30.5 49.2h-56.9c-6.9 0-12.5 5.6-12.5 12.5 0 2.3.6 4.6 1.9 6.6l27.8 45z"})
+);
+
+export default LanScrollTorahRegular;

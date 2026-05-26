@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanPumpThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M112 0c-4.4 0-8 3.6-8 8s3.6 8 8 8h16v208H16v-16c0-4.4-3.6-8-8-8s-8 3.6-8 8v192c0 4.4 3.6 8 8 8s8-3.6 8-8v-16h288v-16H16V240h128V16h128v224h32v-16h-16V16h16c4.4 0 8-3.6 8-8s-3.6-8-8-8zm464 112c26.5 0 48 21.5 48 48v288c0 26.5-21.5 48-48 48H416c-26.5 0-48-21.5-48-48V160c0-26.5 21.5-48 48-48zM416 96c-35.3 0-64 28.7-64 64v288c0 35.3 28.7 64 64 64h160c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64zm16 96c-4.4 0-8 3.6-8 8s3.6 8 8 8h128c4.4 0 8-3.6 8-8s-3.6-8-8-8zm0 104c-4.4 0-8 3.6-8 8s3.6 8 8 8h128c4.4 0 8-3.6 8-8s-3.6-8-8-8zm0 104c-4.4 0-8 3.6-8 8s3.6 8 8 8h128c4.4 0 8-3.6 8-8s-3.6-8-8-8z"})
+);
+
+export default LanPumpThin;

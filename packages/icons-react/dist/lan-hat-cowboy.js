@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanHatCowboy = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M253.8 64c-21.1 0-39.4 14.7-44 35.3L182.1 224h275.8L430.2 99.3c-4.6-20.6-22.9-35.3-44-35.3h-1c-6.3 0-12.6 1.5-18.3 4.3-29.5 14.8-64.3 14.8-93.8 0-5.7-2.8-11.9-4.3-18.3-4.3zM175 256l-23.2 104.6c-10.6-4.1-20.4-9.7-29.1-16.6l55.9-251.7c7.8-35.2 39.1-60.3 75.2-60.3h1c11.3 0 22.5 2.6 32.6 7.7a72.65 72.65 0 0 0 65.2 0c10.1-5.1 21.3-7.7 32.6-7.7h1c36.1 0 67.4 25.1 75.2 60.3L517.3 344c-8.7 6.9-18.5 12.5-29.1 16.6L465 256zM16 240c8.8 0 16 7.2 16 16 0 88.4 71.6 160 160 160h256c88.4 0 160-71.6 160-160 0-8.8 7.2-16 16-16s16 7.2 16 16c0 106-86 192-192 192H192C86 448 0 362 0 256c0-8.8 7.2-16 16-16"})
+);
+
+export default LanHatCowboy;

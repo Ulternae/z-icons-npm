@@ -1,0 +1,2 @@
+export declare const LanBridgeCircleExclamationSolid: string;
+export default LanBridgeCircleExclamationSolid;

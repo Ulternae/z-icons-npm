@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanChessKing = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M224-32c8.8 0 16 7.2 16 16v48h64c8.8 0 16 7.2 16 16s-7.2 16-16 16h-64v96h182.1c14.3 0 25.9 11.6 25.9 25.9 0 4-1 8-2.8 11.6L352 384l56.2 70.3c5 6.3 7.8 14.1 7.8 22.2 0 19.6-15.9 35.5-35.5 35.5H67.6c-19.6 0-35.5-15.9-35.5-35.5 0-8.1 2.7-15.9 7.8-22.2L96 384 2.7 197.5C.9 193.9 0 189.9 0 185.9 0 171.6 11.6 160 25.9 160H208V64h-64c-8.8 0-16-7.2-16-16s7.2-16 16-16h64v-48c0-8.8 7.2-16 16-16m-99.8 432-3.2 4-56.2 70.3c-.5.6-.8 1.4-.8 2.2 0 2 1.6 3.5 3.5 3.5h312.9c1.5 0 2.7-.9 3.3-2.2l.3-1.4c0-.7-.3-1.5-.8-2.2L327 403.9l-3.2-4H124.2zm-.4-32h200.4l88-176H35.8z"})
+);
+
+export default LanChessKing;

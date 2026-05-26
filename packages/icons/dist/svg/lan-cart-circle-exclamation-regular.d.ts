@@ -1,0 +1,2 @@
+export declare const LanCartCircleExclamationRegular: string;
+export default LanCartCircleExclamationRegular;

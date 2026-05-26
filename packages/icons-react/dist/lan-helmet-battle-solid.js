@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanHelmetBattleSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M96 192v220.2c0 12.1 6.8 23.2 17.7 28.6l119.2 59.6c10.6 5.3 23.2-2.4 23.2-14.3v-207c0-13.8-8.8-26-21.9-30.4l-61.4-20.5c-7.6-2.5-12.7-9.6-12.7-17.6 0-10.3 8.3-18.6 18.6-18.6h218.8c10.3 0 18.6 8.3 18.6 18.6 0 8-5.1 15.1-12.7 17.6L342 248.7c-13.1 4.4-21.9 16.6-21.9 30.4v207c0 11.9 12.5 19.6 23.2 14.3l119.2-59.6c10.8-5.4 17.7-16.5 17.7-28.6L480 192c0-40.3-19-78.2-51.2-102.4L307.2-1.6a32.1 32.1 0 0 0-38.4 0L147.2 89.6C115 113.8 96 151.7 96 192m-32 34V17c0-9.4-7.6-17-17-17-8.6 0-15.8 6.4-16.9 14.9L4.2 222.3C2 240.2 16 256 34 256c16.6 0 30-13.4 30-30M512 17v209c0 16.6 13.4 30 30 30 18.1 0 32-15.8 29.8-33.7L545.9 14.9C544.8 6.4 537.6 0 529 0c-9.4 0-17 7.6-17 17"})
+);
+
+export default LanHelmetBattleSolid;

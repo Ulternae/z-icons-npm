@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanDiceD10 = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M219.8 11c19.2-22.5 54-22.5 73.1 0l205.9 242.2c16.6 19.5 15 48.5-3.7 66.1L289.2 513.1l-3.6 3.1c-17.2 13.3-41.4 13.3-58.6 0l-3.5-3.2L17.6 319.3C.2 302.8-2.3 276.3 11 257l3-3.8zM46.2 302.2l194.2 182.7V352.8l-92.1-56.7-102.1 6zm226.2 50.7V485l194.1-182.7-102.1-6-92.1 56.7zm-100.2-79.5 84.2 51.8 84.2-51.8-84.2-213.7zm-130.9-2.9 100-5.9 82.1-208.3-182 214.2zm330.3-5.9 100 5.9-182-214.2 82.1 208.3z"})
+);
+
+export default LanDiceD10;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanMegaphoneSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M480 32c-17.7 0-32 14.3-32 32v9.1L62.8 183.2C59 169.8 46.6 160 32 160c-17.7 0-32 14.3-32 32v128c0 17.7 14.3 32 32 32 14.6 0 27-9.8 30.8-23.2l71.7 20.5c-4.2 10.8-6.5 22.5-6.5 34.7 0 53 43 96 96 96 46.9 0 86-33.7 94.3-78.2l129.7 37v9.1c0 17.7 14.3 32 32 32s32-14.3 32-32v-384c0-17.7-14.3-32-32-32zM271.8 388.5C269.5 412.9 249 432 224 432c-26.5 0-48-21.5-48-48 0-7.7 1.8-15 5-21.4z"})
+);
+
+export default LanMegaphoneSolid;

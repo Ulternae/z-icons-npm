@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanPumpRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M112 0C98.7 0 88 10.7 88 24s10.7 24 24 24v160H48c0-13.3-10.7-24-24-24S0 194.7 0 208v192c0 13.3 10.7 24 24 24s24-10.7 24-24h256v-48H48v-96h112V48h96v208h48V48c13.3 0 24-10.7 24-24S317.3 0 304 0zm464 144c8.8 0 16 7.2 16 16v288c0 8.8-7.2 16-16 16H416c-8.8 0-16-7.2-16-16V160c0-8.8 7.2-16 16-16zM416 96c-35.3 0-64 28.7-64 64v288c0 35.3 28.7 64 64 64h160c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64zm40 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24zm0 88c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24zm0 88c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24z"})
+);
+
+export default LanPumpRegular;

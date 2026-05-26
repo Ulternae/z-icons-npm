@@ -1,0 +1,8 @@
+import React from 'react';
+
+export interface LanCircleDownRightRegularProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+  size?: string | number;
+}
+
+export declare const LanCircleDownRightRegular: React.FC<LanCircleDownRightRegularProps>;
+export default LanCircleDownRightRegular;

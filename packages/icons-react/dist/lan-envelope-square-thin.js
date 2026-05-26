@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanEnvelopeSquareThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M64 48c-26.5 0-48 21.5-48 48v320c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48V96c0-26.5-21.5-48-48-48zM0 96c0-35.3 28.7-64 64-64h320c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64zm320 64H128c-17.7 0-32 14.3-32 32v13.5l116.9 65.1a22.7 22.7 0 0 0 22.2 0L352 205.5V192c0-17.7-14.3-32-32-32M96 320c0 17.7 14.3 32 32 32h192c17.7 0 32-14.3 32-32v-96.2l-109.1 60.8c-5.8 3.2-12.3 4.9-18.9 4.9s-13.1-1.7-18.9-4.9L96 223.8zm32-176h192c26.5 0 48 21.5 48 48v128c0 26.5-21.5 48-48 48H128c-26.5 0-48-21.5-48-48V192c0-26.5 21.5-48 48-48"})
+);
+
+export default LanEnvelopeSquareThin;

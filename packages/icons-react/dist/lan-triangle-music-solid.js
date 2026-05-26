@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanTriangleMusicSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M288 0c0-17.7-14.3-32-32-32s-32 14.3-32 32v32c-1 1.4-2 2.9-2.9 4.4l-216 384c-7 12.4-6.8 27.5.3 39.8S25.8 480 40 480h432c14.2 0 27.4-7.5 34.5-19.8s7.3-27.4.3-39.8l-95.6-169.9-47 47L430.9 416H81l175-311 59.4 105.7-40.6 40.6c-5.9-2.1-12.2-3.2-18.8-3.2-30.9 0-56 25.1-56 56s25.1 56 56 56 56-25.1 56-56c0-6.6-1.1-12.9-3.2-18.8L505 89c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L362.4 163.6 290.9 36.4c-.9-1.5-1.8-3-2.9-4.4z"})
+);
+
+export default LanTriangleMusicSolid;

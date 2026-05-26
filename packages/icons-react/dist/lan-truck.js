@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanTruck = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M64 64c-17.7 0-32 14.3-32 32v288c0 17.7 14.3 32 32 32h.4c4-44.9 41.7-80 87.6-80s83.6 35.1 87.6 80h96.7c2.8-30.8 21.4-57 47.6-70.4L384 96c0-17.7-14.3-32-32-32zm352 224v48.4c2.6-.2 5.3-.4 8-.4 45.9 0 83.6 35.1 87.6 80h.4c17.7 0 32-14.3 32-32v-96zm128-32v-28.1c0-8.5-3.4-16.6-9.4-22.6l-35.9-35.9c-6-6-14.1-9.4-22.6-9.4H416v96zM67.3 448H64c-35.3 0-64-28.7-64-64V96c0-35.3 28.7-64 64-64h288c35.3 0 64 28.7 64 64v32h60.1c17 0 33.3 6.7 45.3 18.7l35.9 35.9c12 12 18.7 28.3 18.7 45.3V384c0 35.3-28.7 64-64 64h-3.3c-10.4 36.9-44.4 64-84.7 64s-74.2-27.1-84.7-64H236.7c-10.4 36.9-44.4 64-84.7 64s-74.2-27.1-84.7-64m84.7 32a56 56 0 1 0 0-112 56 56 0 1 0 0 112m272 0a56 56 0 1 0 0-112 56 56 0 1 0 0 112"})
+);
+
+export default LanTruck;

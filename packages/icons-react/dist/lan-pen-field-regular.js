@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanPenFieldRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M569.3 27.1c-9.4-9.4-24.7-9.4-34.1.1l-20.8 21.2 45.7 45.7L581.2 73c9.4-9.4 9.4-24.6 0-33.9zM360 204.8c-3.2 3.3-5.5 7.4-6.4 11.9l-10.4 49.7 49.5-10.4c4.6-1 8.7-3.2 12-6.5L526.2 128l-45.5-45.5zM501.1-6.5c28.1-28.4 73.9-28.6 102.2-.3l11.9 11.9c28.1 28.1 28.1 73.7 0 101.8L438.7 283.5a72.1 72.1 0 0 1-36.1 19.6L317.1 321c-7.9 1.7-16.2-.8-21.9-6.5s-8.2-14-6.5-21.9l18-85.7c2.8-13.5 9.5-26 19.2-35.8zM64.1 168c0-39.8 32.2-72 72-72h128c13.3 0 24 10.7 24 24s-10.7 24-24 24h-128c-13.3 0-24 10.7-24 24v240c0 13.3 10.7 24 24 24h368c13.3 0 24-10.7 24-24V280c0-13.3 10.7-24 24-24s24 10.7 24 24v128c0 39.8-32.2 72-72 72h-368c-39.8 0-72-32.2-72-72zm112 120a32 32 0 1 1 64 0 32 32 0 1 1-64 0"})
+);
+
+export default LanPenFieldRegular;

@@ -1,0 +1,2 @@
+export declare const LanSquareMalaysianRinggitRegular: string;
+export default LanSquareMalaysianRinggitRegular;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanPenNibSlashSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M41-24.9c-9.4-9.4-24.6-9.4-33.9 0S-2.3-.3 7 9.1l528 528c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L412.5 346.8l34.1-113.5.1-.5L311.2 97.3l-.5.1-113.5 34.1L40.9-24.8zm229.9 365.6c-8.4 7-19.1 11.3-30.9 11.3-4.3 0-8.5-.6-12.4-1.6L72.2 505.7c7.8 4.4 17.2 5.4 26 2.5L353 422.8zM121.2 191 35.8 445.8c-2.9 8.7-1.9 18.2 2.5 26l155.3-155.4c-1.1-4-1.6-8.1-1.6-12.4 0-11.8 4.2-22.6 11.3-30.9zM400.4 18.3l-50.1 50.1 125.3 125.3 50.1-50.1c21.9-21.9 21.9-57.3 0-79.2l-46.1-46.1c-21.9-21.9-57.3-21.9-79.2 0"})
+);
+
+export default LanPenNibSlashSolid;

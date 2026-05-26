@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanMapThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M512 18.7c0-2.8-1.4-5.4-3.8-6.8s-5.3-1.6-7.8-.3L361.6 81.5l-183.1-61c-6.1-2-12.7-1.5-18.5 1.4L4.4 100.8c-2.7 1.4-4.4 4.1-4.4 7.1v385.4c0 2.7 1.4 5.3 3.7 6.7s5.2 1.7 7.6.6l155-70.1 182.9 61c6.4 2.1 13.5 1.5 19.4-1.9L508 411c2.5-1.4 4.1-4.1 4.1-7V18.6zM368 96.1l128-64.4v367.8l-128 72.1zm-16-1v380.5l-176-58.7V36.4zM160 415.8 16 480.9V112.8l144-73.1z"})
+);
+
+export default LanMapThin;

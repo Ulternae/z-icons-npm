@@ -1,0 +1,2 @@
+export declare const LanPersonWalkingWithCaneRegular: string;
+export default LanPersonWalkingWithCaneRegular;

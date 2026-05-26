@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanChartFftThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M16 40c0-4.4-3.6-8-8-8s-8 3.6-8 8v360c0 44.2 35.8 80 80 80h424c4.4 0 8-3.6 8-8s-3.6-8-8-8H80c-35.3 0-64-28.7-64-64zm247.2 52.6c-1.4-2.9-4.3-4.7-7.5-4.6s-6 2.2-7.2 5.2l-86 226.8H104c-4.4 0-8 3.6-8 8s3.6 8 8 8h64c3.3 0 6.3-2.1 7.5-5.2l81.3-214.4 56 118.9c1.3 2.8 4.1 4.6 7.2 4.6h76l69.6 92.8c2.6 3.5 7.7 4.2 11.2 1.6s4.2-7.7 1.6-11.2l-72-96c-1.5-2-3.9-3.2-6.4-3.2h-74.9L263.3 92.5z"})
+);
+
+export default LanChartFftThin;

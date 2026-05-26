@@ -1,0 +1,2 @@
+export declare const LanSensorTriangleExclamationSolid: string;
+export default LanSensorTriangleExclamationSolid;

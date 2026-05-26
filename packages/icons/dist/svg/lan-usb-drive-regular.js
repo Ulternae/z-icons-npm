@@ -1,0 +1,2 @@
+export const LanUsbDriveRegular = '<svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M64 144c-8.8 0-16 7.2-16 16v192c0 8.8 7.2 16 16 16h256V144zM0 160c0-35.3 28.7-64 64-64h272c17.7 0 32 14.3 32 32v256c0 17.7-14.3 32-32 32H64c-35.3 0-64-28.7-64-64zm544-32c17.7 0 32 14.3 32 32v192c0 17.7-14.3 32-32 32H416V128zm-48 56a24 24 0 1 0 0 48 24 24 0 1 0 0-48m-24 120a24 24 0 1 0 48 0 24 24 0 1 0-48 0"/></svg>';
+export default LanUsbDriveRegular;

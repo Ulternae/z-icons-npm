@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanBookOpenThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"m248 86-23.3-9.7C179.9 57.6 131.8 48 83.2 48H48c-17.7 0-32 14.3-32 32v352c0 17.7 14.3 32 32 32h35.2c52.8 0 105.1 10.5 153.8 30.8l11 4.6V86.1zm16 413.3 11-4.6c48.7-20.2 101-30.7 153.8-30.7H464c17.7 0 32-14.3 32-32V80c0-17.7-14.3-32-32-32h-35.2c-48.6 0-96.7 9.6-141.5 28.3L264 86zM230.9 61.5 256 72l25.1-10.5C327.9 42 378.1 32 428.8 32H464c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48h-35.2c-50.7 0-100.9 10-147.7 29.5l-12.8 5.3c-7.9 3.3-16.7 3.3-24.6 0l-12.8-5.3C184.1 490 133.9 480 83.2 480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h35.2c50.7 0 100.9 10 147.7 29.5"})
+);
+
+export default LanBookOpenThin;

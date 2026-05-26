@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCircleParking = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M480 256a224 224 0 1 0-448 0 224 224 0 1 0 448 0M0 256a256 256 0 1 1 512 0 256 256 0 1 1-512 0m208 32h80c35.3 0 64-28.7 64-64s-28.7-64-64-64h-80zm80 32h-80v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V152c0-13.3 10.7-24 24-24h88c53 0 96 43 96 96s-43 96-96 96"})
+);
+
+export default LanCircleParking;

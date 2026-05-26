@@ -4,6 +4,10 @@ import { neoLightIconMap } from './packs/neo.js';
 import { minaLightIconMap } from './packs/mina.js';
 import { minaSolidIconMap } from './packs/mina-solid.js';
 import { bruSolidIconMap } from './packs/bru.js';
+import { lanLightIconMap } from './packs/lan.js';
+import { lanSolidIconMap } from './packs/lan-solid.js';
+import { lanRegularIconMap } from './packs/lan-regular.js';
+import { lanThinIconMap } from './packs/lan-thin.js';
 
 const iconCollections = {
   core: {
@@ -18,6 +22,12 @@ const iconCollections = {
   },
   bru: {
     solid: bruSolidIconMap.solid
+  },
+  lan: {
+    light: lanLightIconMap.light,
+    solid: lanSolidIconMap.solid,
+    regular: lanRegularIconMap.regular,
+    thin: lanThinIconMap.thin
   }
 };
 
@@ -25,7 +35,8 @@ const defaultVariants = {
   core: 'light',
   neo: 'light',
   mina: 'light',
-  bru: 'solid'
+  bru: 'solid',
+  lan: 'light'
 };
 
 export function ZIcon({ type, name, variant, size = 24, color, style, ...props }) {

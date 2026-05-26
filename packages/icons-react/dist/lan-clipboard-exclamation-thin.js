@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanClipboardExclamationThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 384 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M256 0c20.9 0 38.7 13.4 45.3 32H320c35.3 0 64 28.7 64 64v352c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96c0-35.3 28.7-64 64-64h18.7C89.3 13.4 107.1 0 128 0zM64 48c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h256c26.5 0 48-21.5 48-48V96c0-26.5-21.5-48-48-48h-16c0 26.5-21.5 48-48 48H128c-26.5 0-48-21.5-48-48zm128 336c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16m2.9-223.7c6.6 1.4 11.5 7.4 11.2 14.4L200 336.3c-.2 4.3-3.7 7.7-8 7.7s-7.8-3.4-8-7.7l-6.2-161.6c-.3-8 6.1-14.7 14.2-14.7zM128 16c-17.7 0-32 14.3-32 32s14.3 32 32 32h128c17.7 0 32-14.3 32-32s-14.3-32-32-32z"})
+);
+
+export default LanClipboardExclamationThin;

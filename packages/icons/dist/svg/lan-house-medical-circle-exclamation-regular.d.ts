@@ -1,0 +1,2 @@
+export declare const LanHouseMedicalCircleExclamationRegular: string;
+export default LanHouseMedicalCircleExclamationRegular;

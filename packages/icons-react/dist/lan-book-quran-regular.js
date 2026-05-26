@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanBookQuranRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M360 0c48.6 0 88 39.4 88 88v344c0 44.2-35.8 80-80 80H24c-13.3 0-24-10.7-24-24s10.7-24 24-24h8v-76.1C12.7 375 0 353 0 328V72C0 32.2 32.2 0 72 0zM80 400v64h288c17.7 0 32-14.3 32-32s-14.3-32-32-32zm288-48c11.4 0 22.2 2.4 32 6.7V88c0-22.1-17.9-40-40-40H72c-13.3 0-24 10.7-24 24v256c0 13.3 10.7 24 24 24zM266.4 150.5c2.2-5.3 9.7-5.3 11.9 0l9 21.6 23.3 1.9c5.7.5 8.1 7.6 3.7 11.3l-17.8 15.2 5.4 22.8c1.3 5.6-4.7 10-9.7 7l-20-12.2-20 12.2c-4.9 3-11-1.4-9.7-7l5.4-22.8-17.8-15.2c-4.4-3.7-2-10.9 3.7-11.3l23.3-1.9 9-21.6zM115.6 192c0-59.6 48.4-108 108-108 20.7 0 40.1 5.9 56.6 16 4.2 2.6 6 7.7 4.4 12.3s-6.2 7.5-11 7c-2.7-.3-5.4-.4-8.2-.4-40.4 0-73.2 32.8-73.2 73.2s32.8 73.2 73.2 73.2c2.8 0 5.5-.2 8.2-.4 4.9-.5 9.4 2.4 11 7s-.2 9.7-4.4 12.3c-16.5 10.2-35.9 16-56.6 16-59.6 0-108-48.4-108-108z"})
+);
+
+export default LanBookQuranRegular;

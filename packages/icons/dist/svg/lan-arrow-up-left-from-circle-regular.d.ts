@@ -1,0 +1,2 @@
+export declare const LanArrowUpLeftFromCircleRegular: string;
+export default LanArrowUpLeftFromCircleRegular;

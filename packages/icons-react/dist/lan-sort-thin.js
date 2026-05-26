@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanSortThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 384 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M21.3 177.4c-3.4 3.4-5.3 7.9-5.3 12.7 0 9.9 8 17.9 17.9 17.9H350c9.9 0 17.9-8 17.9-17.9 0-4.8-1.9-9.3-5.3-12.7L208 22.6c-4.2-4.2-10-6.6-16-6.6s-11.8 2.4-16 6.6zM9.9 166.1 164.7 11.3C171.9 4.1 181.8 0 192 0s20.1 4.1 27.3 11.3l154.8 154.8c6.4 6.4 9.9 15 9.9 24 0 18.7-15.2 33.9-33.9 33.9H33.9C15.2 224 0 208.8 0 190.1c0-9 3.6-17.6 9.9-24m11.4 168.5L176 489.4c4.2 4.2 10 6.6 16 6.6s11.8-2.4 16-6.6l154.7-154.8c3.4-3.4 5.3-7.9 5.3-12.7 0-9.9-8-17.9-17.9-17.9H33.9C24 304 16 312 16 321.9c0 4.8 1.9 9.3 5.3 12.7M9.9 345.9c-6.4-6.4-9.9-15-9.9-24C0 303.2 15.2 288 33.9 288H350c18.7 0 33.9 15.2 33.9 33.9 0 9-3.6 17.6-9.9 24L219.3 500.7c-7.2 7.2-17.1 11.3-27.3 11.3s-20.1-4.1-27.3-11.3z"})
+);
+
+export default LanSortThin;

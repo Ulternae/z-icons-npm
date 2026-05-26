@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanSatelliteDish = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M224 0c-8.8 0-16 7.2-16 16s7.2 16 16 16c141.4 0 256 114.6 256 256 0 8.8 7.2 16 16 16s16-7.2 16-16C512 128.9 383.1 0 224 0m-16 112c0 8.8 7.2 16 16 16 88.4 0 160 71.6 160 160 0 8.8 7.2 16 16 16s16-7.2 16-16c0-106-86-192-192-192-8.8 0-16 7.2-16 16M32 256c0-33.7 7.4-65.5 20.7-94.1l297.4 297.4C321.5 472.6 289.7 480 256 480 132.3 480 32 379.7 32 256m40.8-119.2c-14.1-14.1-37.6-12-46.5 5.8C9.4 176.8-.1 215.2-.1 255.9c0 141.4 114.6 256 256 256 40.7 0 79.2-9.5 113.3-26.4 17.9-8.8 19.9-32.4 5.8-46.5L235.2 299.2l48-48c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0l-48 48z"})
+);
+
+export default LanSatelliteDish;

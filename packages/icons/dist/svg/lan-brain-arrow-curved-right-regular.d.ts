@@ -1,0 +1,2 @@
+export declare const LanBrainArrowCurvedRightRegular: string;
+export default LanBrainArrowCurvedRightRegular;

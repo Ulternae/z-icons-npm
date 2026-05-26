@@ -1,0 +1,2 @@
+export declare const LanMagnifyingGlassArrowsRotateRegular: string;
+export default LanMagnifyingGlassArrowsRotateRegular;

@@ -1,0 +1,2 @@
+export const LanArrowDownLongToLineSolid = '<svg viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M9.4 310.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l73.3 73.4V-32c0-17.7 14.3-32 32-32s32 14.3 32 32v370.7l73.4-73.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-128 128c-12.5 12.5-32.8 12.5-45.3 0zM32 576c-17.7 0-32-14.3-32-32s14.3-32 32-32h256c17.7 0 32 14.3 32 32s-14.3 32-32 32z"/></svg>';
+export default LanArrowDownLongToLineSolid;

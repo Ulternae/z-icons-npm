@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanTableColumnsMergeNextSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M384 32c35.3 0 64 28.7 64 64v320c0 33.1-25.2 60.4-57.5 63.7l-6.5.3H64l-6.5-.3c-30.1-3.1-54.1-27-57.1-57.1L0 416V96c0-35.3 28.7-64 64-64zM64 416h128v-32h64v32h128V96H256v32h-64V96H64zm151-241c9.4-9.4 24.6-9.4 33.9 0l64 64 1.7 1.8c7.7 9.4 7.1 23.3-1.7 32.1l-64 64c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l23-23h-86.1c-13.3 0-24-10.7-24-24s10.7-24 24-24H238l-23-23c-9.4-9.4-9.4-24.6 0-33.9z"})
+);
+
+export default LanTableColumnsMergeNextSolid;

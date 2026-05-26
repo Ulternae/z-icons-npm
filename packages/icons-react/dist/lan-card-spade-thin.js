@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCardSpadeThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 384 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M320 0c35.3 0 64 28.7 64 64v384c0 35.3-28.7 64-64 64H64l-6.5-.3C25.2 508.4 0 481.1 0 448V64C0 28.7 28.7 0 64 0zM64 16c-26.5 0-48 21.5-48 48v384c0 26.5 21.5 48 48 48h256c26.5 0 48-21.5 48-48V64c0-26.5-21.5-48-48-48zm160 352c4.4 0 8 3.6 8 8s-3.6 8-8 8h-64c-4.4 0-8-3.6-8-8s3.6-8 8-8zm-36.4-242.5c3.1-2 7.3-1.7 10 1 23.1 23 56.2 56.2 99.3 99.3 23.4 23.4 24.9 60.5 4.4 85.6l-4.4 4.9c-25 25-65.5 25-90.5 0l-14.5-14.5-14.5 14.5c-25 25-65.5 25-90.5 0s-25-65.5 0-90.5l99.3-99.3 1.3-1zM158 177.4l-59.7 59.8c-18.7 18.7-18.7 49.1 0 67.9l3.7 3.3c18.8 15.4 46.6 14.3 64.2-3.3l20.1-20.1 1.3-1c3.1-2 7.3-1.7 10 1l20.2 20.1c18.7 18.7 49.1 18.7 67.9 0 18.7-18.7 18.7-49.1 0-67.9-44.1-44.1-75.3-75.4-93.7-93.7l-33.9 34z"})
+);
+
+export default LanCardSpadeThin;

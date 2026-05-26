@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanNoseRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M161.3-3c10.5-8.1 25.6-6.2 33.7 4.3l224.2 289.4c18.6 24.1 28.8 53.6 28.8 84.1 0 75.8-61.4 137.3-137.3 137.3L120 512C53.7 512 0 458.3 0 392s53.7-120 120-120h16c13.3 0 24 10.7 24 24s-10.7 24-24 24h-16c-39.8 0-72 32.2-72 72 0 37.1 28 67.6 64 71.6V448c0-44.2 35.8-80 80-80s80 35.8 80 80v16h38.7c49.3 0 89.3-40 89.3-89.3 0-19.8-6.6-39-18.7-54.7L157 30.7c-8.1-10.5-6.2-25.6 4.3-33.7M224 464v-16c0-17.7-14.3-32-32-32s-32 14.3-32 32v16z"})
+);
+
+export default LanNoseRegular;

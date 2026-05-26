@@ -1,0 +1,2 @@
+export const LanDiagramLeanCanvasSolid = '<svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M464 96v176h48V96zm-48 0h-48v64h48zm-96 0h-64v176h64zm-112 0h-48v64h48zm-96 0H64v176h48zM64 320v96h200v-96zm248 96h200v-96H312zM0 96c0-35.3 28.7-64 64-64h448c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64zm208 176v-64h-48v64zm208-64h-48v64h48z"/></svg>';
+export default LanDiagramLeanCanvasSolid;

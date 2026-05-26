@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanH2Regular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M80 88c0-13.3-10.7-24-24-24S32 74.7 32 88v336c0 13.3 10.7 24 24 24s24-10.7 24-24V280h128v144c0 13.3 10.7 24 24 24s24-10.7 24-24V88c0-13.3-10.7-24-24-24s-24 10.7-24 24v144H80zm280-24c-13.3 0-24 10.7-24 24s10.7 24 24 24h93.3c28 0 50.7 22.7 50.7 50.7 0 18.9-10.5 36.2-27.3 45l-82.5 43.1c-45.6 23.8-74.2 71-74.2 122.5v50.8c0 13.3 10.7 24 24 24h176c13.3 0 24-10.7 24-24s-10.7-24-24-24H368v-26.8c0-33.6 18.7-64.4 48.4-79.9l82.5-43c32.6-17 53-50.7 53-87.5 0-54.5-44.2-98.7-98.7-98.7z"})
+);
+
+export default LanH2Regular;

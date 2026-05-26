@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanChartColumnThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M8 32c4.4 0 8 3.6 8 8v360c0 35.3 28.7 64 64 64h424c4.4 0 8 3.6 8 8s-3.6 8-8 8H80c-44.2 0-80-35.8-80-80V40c0-4.4 3.6-8 8-8m128 224c4.4 0 8 3.6 8 8v112c0 4.4-3.6 8-8 8s-8-3.6-8-8V264c0-4.4 3.6-8 8-8m120-88v208c0 4.4-3.6 8-8 8s-8-3.6-8-8V168c0-4.4 3.6-8 8-8s8 3.6 8 8m104 56c4.4 0 8 3.6 8 8v144c0 4.4-3.6 8-8 8s-8-3.6-8-8V232c0-4.4 3.6-8 8-8M480 72v304c0 4.4-3.6 8-8 8s-8-3.6-8-8V72c0-4.4 3.6-8 8-8s8 3.6 8 8"})
+);
+
+export default LanChartColumnThin;

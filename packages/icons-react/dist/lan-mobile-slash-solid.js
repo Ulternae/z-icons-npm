@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanMobileSlashSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M7-24.9c8.8-8.8 22.7-9.3 32.1-1.7l1.9 1.7 73 73.1C121.1 20.5 146.1 0 176 0h224c35.3 0 64 28.7 64 64v334.2l105 105 1.7 1.8c7.7 9.4 7.1 23.3-1.7 32.1s-22.7 9.3-32.1 1.7l-1.9-1.7L7 9.1 5.4 7.2C-2.3-2.2-1.8-16.1 7-24.9m425.9 527.6c-9.6 5.8-20.9 9.2-32.9 9.2H176c-35.3 0-64-28.7-64-64V181.7l320.9 320.9zM248 416c-13.3 0-24 10.7-24 24s10.7 24 24 24h78.3l-48-48z"})
+);
+
+export default LanMobileSlashSolid;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanFlaskVialRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M224 48h8c13.3 0 24-10.7 24-24S245.3 0 232 0H24C10.7 0 0 10.7 0 24s10.7 24 24 24h8v304c0 53 43 96 96 96 18.4 0 35.5-5.2 50.1-14.1 1.4-7 3.6-13.9 6.4-20.5l39.5-92.2zM80 48h96v128H80zm0 176h96v128c0 26.5-21.5 48-48 48s-48-21.5-48-48zM312 0c-13.3 0-24 10.7-24 24s10.7 24 24 24h8v169.4c0 1.1-.2 2.2-.6 3.2l-90.8 211.7c-3.1 7.1-4.6 14.8-4.6 22.5 0 31.6 25.6 57.2 57.2 57.2h269.6c31.6 0 57.2-25.6 57.2-57.2 0-7.7-1.6-15.4-4.6-22.5l-90.8-211.7c-.4-1-.6-2.1-.6-3.2V48h8c13.3 0 24-10.7 24-24S533.3 0 520 0zm152 48v169.4c0 7.6 1.5 15.1 4.5 22.1l27.6 64.5H335.7l27.6-64.5c3-7 4.5-14.5 4.5-22.1V48h96zM272.7 451.2l42.5-99.2h201.5l42.5 99.2c.5 1.1.7 2.4.7 3.6 0 5.1-4.1 9.2-9.2 9.2H281.1c-5.1 0-9.2-4.1-9.2-9.2 0-1.2.3-2.5.7-3.6z"})
+);
+
+export default LanFlaskVialRegular;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanBrainArrowCurvedRightSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M240 0c-30.9 0-56 25.1-56 56v24c-44.2 0-80 35.8-80 80 0 15 4.1 29 11.2 40.9C89.5 214.2 72 241 72 272c0 26.2 12.6 49.4 32 64-10 13.4-16 30-16 48 0 44.2 35.8 80 80 80h2c7.1 27.6 32.2 48 62 48h32c17.7 0 32-14.3 32-32v-12.3c-4.9-15.1-8-32.4-8-51.7 0-17.5 2.8-34.3 8-50.1V32c0-17.7-14.3-32-32-32zm289.3 192c4.3-9.8 6.7-20.6 6.7-32 0-44.2-35.8-80-80-80V56c0-30.9-25.1-56-56-56h-24c-17.7 0-32 14.3-32 32v262.4c28-23.9 64.3-38.4 104-38.4h16c0-25.9 15.6-49.2 39.5-59.1 8.4-3.5 17.1-5 25.8-4.9m106 148.7-96-96c-9.9-9.9-27.3-2.7-27.3 11.3v48h-64c-61.9 0-112 50.1-112 112 0 54.3 34.6 85.6 45 93.8 7.6 6 19-.8 19-10.1V464c0-35.3 28.7-64 64-64h48v48c0 14 17.4 21.2 27.3 11.3l96-96c6.2-6.2 6.2-16.4 0-22.6"})
+);
+
+export default LanBrainArrowCurvedRightSolid;

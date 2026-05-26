@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanChfSign = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M0 144c0-44.2 35.8-80 80-80h4.2c28 0 53.6 15.8 66.1 40.8 4 7.9.7 17.5-7.2 21.5s-17.5.7-21.5-7.2C114.6 105 100.1 96 84.2 96H80c-26.5 0-48 21.5-48 48v224c0 26.5 21.5 48 48 48h4.2c15.9 0 30.4-9 37.5-23.2 4-7.9 13.6-11.1 21.5-7.2s11.1 13.6 7.2 21.5c-12.5 25-38.1 40.8-66.1 40.8l-4.3.1c-44.2 0-80-35.8-80-80zm208-80c8.8 0 16 7.2 16 16v144h160V80c0-8.8 7.2-16 16-16s16 7.2 16 16v352c0 8.8-7.2 16-16 16s-16-7.2-16-16V256H224v176c0 8.8-7.2 16-16 16s-16-7.2-16-16V80c0-8.8 7.2-16 16-16m240 16c0-8.8 7.2-16 16-16h160c8.8 0 16 7.2 16 16s-7.2 16-16 16H480v128h112c8.8 0 16 7.2 16 16s-7.2 16-16 16H480v176c0 8.8-7.2 16-16 16s-16-7.2-16-16z"})
+);
+
+export default LanChfSign;

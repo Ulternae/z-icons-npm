@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanSlidersVSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M448 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v86.7c-28.3 12.3-48 40.5-48 73.3s19.7 61 48 73.3V480c0 17.7 14.3 32 32 32s32-14.3 32-32V265.3c28.3-12.3 48-40.5 48-73.3s-19.7-61-48-73.3zm-160 0c0-17.7-14.3-32-32-32s-32 14.3-32 32v246.7c-28.3 12.3-48 40.5-48 73.3s19.7 61 48 73.3V480c0 17.7 14.3 32 32 32s32-14.3 32-32v-54.7c28.3-12.3 48-40.5 48-73.3s-19.7-61-48-73.3zm-160 0c0-17.7-14.3-32-32-32S64 14.3 64 32v54.7C35.7 99 16 127.2 16 160s19.7 61 48 73.3V480c0 17.7 14.3 32 32 32s32-14.3 32-32V233.3c28.3-12.3 48-40.5 48-73.3s-19.7-61-48-73.3z"})
+);
+
+export default LanSlidersVSolid;

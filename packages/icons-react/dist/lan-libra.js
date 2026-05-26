@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanLibra = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M496 416c8.8 0 16 7.2 16 16s-7.2 16-16 16H16c-8.8 0-16-7.2-16-16s7.2-16 16-16zM256 32c97.2 0 176 78.8 176 176 0 16.6-2.4 32.7-6.7 48H496c8.8 0 16 7.2 16 16s-7.2 16-16 16h-93.3c-5.4 0-10.4-2.7-13.4-7.3s-3.4-10.2-1.3-15.2c7.7-17.6 12-37.1 12-57.6 0-79.5-64.5-144-144-144S112 128.5 112 208c0 20.5 4.3 40 12 57.6 2.2 4.9 1.7 10.6-1.3 15.2s-8 7.3-13.4 7.3L16 288c-8.8 0-16-7.2-16-16s7.2-16 16-16h70.7c-4.3-15.3-6.7-31.4-6.7-48 0-97.2 78.8-176 176-176"})
+);
+
+export default LanLibra;

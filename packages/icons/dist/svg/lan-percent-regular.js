@@ -1,0 +1,2 @@
+export const LanPercentRegular = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M96 80a48 48 0 1 1 0 96 48 48 0 1 1 0-96m0 144a96 96 0 1 0 0-192 96 96 0 1 0 0 192m256 112a48 48 0 1 1 0 96 48 48 0 1 1 0-96m0 144a96 96 0 1 0 0-192 96 96 0 1 0 0 192m89-407c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L7 439c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0z"/></svg>';
+export default LanPercentRegular;

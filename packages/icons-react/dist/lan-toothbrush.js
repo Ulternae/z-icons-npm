@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanToothbrush = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M64 192c-17.7 0-32-14.3-32-32s14.3-32 32-32h224c24.8 0 45.1-9.9 57.7-28.9 6.6-10.1 10.1-21.2 11.9-31.6 14.8 3.6 27.9 9.7 37.9 17.8C408.3 95.7 416 109.4 416 128c0 35.3-28.7 64-64 64zM0 160c0 35.3 28.7 64 64 64h288c53 0 96-43 96-96 0-58.5-51.6-89.9-104-95.2-8.8-.9-15.8 6.4-16.4 15.2-1.5 25.3-8.4 48-39.6 48H64c-35.3 0-64 28.7-64 64m64 112c0-8.8-7.2-16-16-16s-16 7.2-16 16v176H16c-8.8 0-16 7.2-16 16s7.2 16 16 16h544c8.8 0 16-7.2 16-16s-7.2-16-16-16H384V272c0-8.8-7.2-16-16-16s-16 7.2-16 16v176h-32V272c0-8.8-7.2-16-16-16s-16 7.2-16 16v176h-32V272c0-8.8-7.2-16-16-16s-16 7.2-16 16v176h-32V272c0-8.8-7.2-16-16-16s-16 7.2-16 16v176h-32V272c0-8.8-7.2-16-16-16s-16 7.2-16 16v176H64z"})
+);
+
+export default LanToothbrush;

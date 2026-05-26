@@ -1,0 +1,2 @@
+export declare const LanMicrophoneSignalMeterRegular: string;
+export default LanMicrophoneSignalMeterRegular;

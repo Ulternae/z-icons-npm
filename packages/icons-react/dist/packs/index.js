@@ -3,3 +3,7 @@ export { ZNeo } from './neo.js';
 export { ZMina } from './mina.js';
 export { ZMinaSolid } from './mina-solid.js';
 export { ZBru } from './bru.js';
+export { ZLan } from './lan.js';
+export { ZLanSolid } from './lan-solid.js';
+export { ZLanRegular } from './lan-regular.js';
+export { ZLanThin } from './lan-thin.js';

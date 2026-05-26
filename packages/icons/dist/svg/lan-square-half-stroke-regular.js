@@ -1,0 +1,2 @@
+export const LanSquareHalfStrokeRegular = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M248 80v352h136c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16zm-48 0H64c-8.8 0-16 7.2-16 16v320c0 8.8 7.2 16 16 16h136zM0 96c0-35.3 28.7-64 64-64h320c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64z"/></svg>';
+export default LanSquareHalfStrokeRegular;

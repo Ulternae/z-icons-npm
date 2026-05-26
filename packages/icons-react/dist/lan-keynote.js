@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanKeynote = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M224 32c-8.8 0-16 7.2-16 16s7.2 16 16 16h64c8.8 0 16-7.2 16-16s-7.2-16-16-16zm-45.3 0c6.6-18.6 24.4-32 45.3-32h64c26.5 0 48 21.5 48 48s-21.5 48-48 48h-64c-20.9 0-38.7-13.4-45.3-32H144c-26.5 0-48 21.5-48 48v16h254.4c20.2 0 38.2 12.6 45.1 31.6l50.1 137.6c1.6 4.5 2.5 9.2 2.5 13.9 0 22.5-18.3 40.8-40.8 40.8H240.1v128h64c8.8 0 16 7.2 16 16s-7.2 16-16 16h-160c-8.8 0-16-7.2-16-16s7.2-16 16-16h64v-128H40.9C18.4 351.9.1 333.6.1 311.1c0-4.8.8-9.5 2.5-13.9l49.9-137.6c2.5-6.9 6.5-12.9 11.5-17.9V112c0-44.2 35.8-80 80-80zM32.5 308.2c-.4 1-.5 2-.5 3 0 4.9 3.9 8.8 8.8 8.8h366.4c4.9 0 8.8-3.9 8.8-8.8 0-1-.2-2-.5-3l-50.1-137.7c-2.3-6.3-8.3-10.5-15-10.5H97.6c-6.7 0-12.7 4.2-15 10.5z"})
+);
+
+export default LanKeynote;

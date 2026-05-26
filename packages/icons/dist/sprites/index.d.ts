@@ -3,3 +3,7 @@ export { neoSprite, default as neoSpriteSvg } from './neo.js';
 export { minaSprite, default as minaSpriteSvg } from './mina.js';
 export { minaSpriteSolid, default as minaSpriteSolidSvg } from './mina-solid.js';
 export { bruSprite, default as bruSpriteSvg } from './bru.js';
+export { lanSprite, default as lanSpriteSvg } from './lan.js';
+export { lanSpriteSolid, default as lanSpriteSolidSvg } from './lan-solid.js';
+export { lanSpriteRegular, default as lanSpriteRegularSvg } from './lan-regular.js';
+export { lanSpriteThin, default as lanSpriteThinSvg } from './lan-thin.js';

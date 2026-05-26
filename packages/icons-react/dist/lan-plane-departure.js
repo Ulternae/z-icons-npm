@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanPlaneDeparture = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M535.9 158.8c16.6-6 35 2.5 41 19.1s-2.5 35-19.1 41L189.5 353c-3.4 1.2-11.7 4.3-25 9.1-21.8 7.9-46.2-.9-57.9-20.9L53 249.4l19.9-7.2 80.9 49.3c4.2 2.5 9.2 3 13.8 1.4l82.7-30.1c4.8-1.8 8.5-5.7 9.9-10.7s.3-10.3-2.9-14.3l-112-141.1L193 79.3l224.8 117c4 2.1 8.6 2.4 12.9.8zM607 167c-12.1-33.2-48.8-50.3-82-38.3l-98.6 35.9-224.8-117c-4-2.1-8.6-2.4-12.9-.8l-75.2 27.4c-4.8 1.8-8.5 5.7-9.9 10.7s-.3 10.3 2.9 14.3l112 141.1-54.6 19.9L83 210.9c-4.2-2.5-9.2-3-13.8-1.4L24 226c-4.5 1.6-8 5.1-9.6 9.6s-1.2 9.4 1.2 13.5L79 357.4c19.5 33.4 60.1 48 96.4 34.8 13.3-4.8 21.6-7.9 25-9.1L568.8 249c33.2-12.1 50.3-48.8 38.2-82M48.2 480c-8.8 0-16 7.2-16 16s7.2 16 16 16h544c8.8 0 16-7.2 16-16s-7.2-16-16-16z"})
+);
+
+export default LanPlaneDeparture;

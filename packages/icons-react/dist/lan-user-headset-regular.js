@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanUserHeadsetRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M80 160c0-79.5 64.5-144 144-144s144 64.5 144 144v112h-80c0-26.5-21.5-48-48-48h-32c-26.5 0-48 21.5-48 48s21.5 48 48 48h184c13.3 0 24-10.7 24-24V160c0-106-86-192-192-192S32 54 32 160c0 13.3 10.7 24 24 24s24-10.7 24-24m208 0c0 12.1-3.3 23.4-9.2 33 14.8 7.3 27.3 18.6 35.9 32.6 13.3-18.4 21.2-41.1 21.2-65.6 0-61.9-50.1-112-112-112S112 98.1 112 160c0 24.5 7.9 47.2 21.2 65.6 8.7-13.9 21.1-25.3 35.9-32.6-5.8-9.6-9.2-20.9-9.2-33 0-35.3 28.7-64 64-64s64 28.7 64 64zM48 488c0-48.6 39.4-88 88-88h176c48.6 0 88 39.4 88 88 0 13.3 10.7 24 24 24s24-10.7 24-24c0-75.1-60.9-136-136-136H136C60.9 352 0 412.9 0 488c0 13.3 10.7 24 24 24s24-10.7 24-24"})
+);
+
+export default LanUserHeadsetRegular;

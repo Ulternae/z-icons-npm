@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanKaabaRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M48 146.8v36.7l205.2 77.8c1.8.7 3.8.7 5.7 0l205.2-77.8v-36.7L276 218.2c-12.8 4.9-26.9 4.9-39.7 0zm371.2-34.3L256 51.3 92.8 112.4l160.4 60.9c1.8.7 3.8.7 5.7 0zM464 234.8l-188.1 71.3c-12.8 4.9-26.9 4.9-39.7 0L48.1 234.7v36.7l80 30.3V353l-80-30.3v60l208 78 208-78v-60l-80 30.3v-51.3l80-30.3v-36.7zM0 382.7V129.3c0-20 12.4-37.9 31.1-44.9l208-78c10.9-4.1 22.8-4.1 33.7 0l208 78c18.7 7 31.1 24.9 31.1 44.9v253.5c0 20-12.4 37.9-31.1 44.9l-208 78c-10.9 4.1-22.8 4.1-33.7 0l-208-78c-18.7-7-31.1-25-31.1-45m176-11.4V320l77.2 29.3c1.8.7 3.8.7 5.7 0l77.2-29.3v51.3L276 394.1c-12.8 4.9-26.9 4.9-39.7 0z"})
+);
+
+export default LanKaabaRegular;

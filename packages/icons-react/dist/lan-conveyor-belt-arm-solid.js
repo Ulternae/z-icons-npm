@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanConveyorBeltArmSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M192 160V64h-64c-17.7 0-32-14.3-32-32s14.3-32 32-32h192c17.7 0 32 14.3 32 32s-14.3 32-32 32h-64v64h184c22.1 0 40 17.9 40 40v32c0 13.3-10.7 24-24 24s-24-10.7-24-24v-8H224c-17.7 0-32-14.3-32-32m224 120c0-13.3 10.7-24 24-24h48c13.3 0 24 10.7 24 24v40h32c53 0 96 43 96 96s-43 96-96 96H96c-53 0-96-43-96-96s43-96 96-96v-40c0-13.3 10.7-24 24-24h48c13.3 0 24 10.7 24 24v40h64v-40c0-13.3 10.7-24 24-24h48c13.3 0 24 10.7 24 24v40h64zM128 448a32 32 0 1 0 0-64 32 32 0 1 0 0 64m224-32a32 32 0 1 0-64 0 32 32 0 1 0 64 0m160 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64"})
+);
+
+export default LanConveyorBeltArmSolid;

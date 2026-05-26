@@ -1,0 +1,2 @@
+export const LanObjectUnionRegular = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M160 304c26.5 0 48 21.5 48 48v96c0 8.8 7.2 16 16 16h224c8.8 0 16-7.2 16-16V224c0-8.8-7.2-16-16-16h-96c-26.5 0-48-21.5-48-48V64c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16v224c0 8.8 7.2 16 16 16zm-48 48H64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0h224c35.3 0 64 28.7 64 64v96h96c35.3 0 64 28.7 64 64v224c0 35.3-28.7 64-64 64H224c-35.3 0-64-28.7-64-64v-96z"/></svg>';
+export default LanObjectUnionRegular;

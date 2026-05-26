@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanUserMicrophoneThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M336 128a112 112 0 1 0-224 0 112 112 0 1 0 224 0m-240 0a128 128 0 1 1 256 0 128 128 0 1 1-256 0M16 480v24c0 4.4-3.6 8-8 8s-8-3.6-8-8v-24c0-97.2 78.8-176 176-176h96c12.5 0 24.7 1.3 36.4 3.8-7.7 2.9-14.5 7.3-20.2 13-5.3-.5-10.8-.8-16.2-.8h-96c-88.4 0-160 71.6-160 160m368-192c0-35.3 28.7-64 64-64s64 28.7 64 64v96c0 35.3-28.7 64-64 64s-64-28.7-64-64zm64-48c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48s48-21.5 48-48v-96c0-26.5-21.5-48-48-48M328 352c4.4 0 8 3.6 8 8v24c0 61.9 50.1 112 112 112s112-50.1 112-112v-24c0-4.4 3.6-8 8-8s8 3.6 8 8v24c0 68-53 123.6-120 127.8V536c0 4.4-3.6 8-8 8s-8-3.6-8-8v-24.2C373 507.6 320 452 320 384v-24c0-4.4 3.6-8 8-8"})
+);
+
+export default LanUserMicrophoneThin;

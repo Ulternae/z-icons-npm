@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanThoughtBubbleRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M256 0c-48.7 0-91.4 25.6-115.4 64C62.7 65.8 0 129.6 0 208c0 79.5 64.5 144 144 144 9.4 0 18.7-.9 27.6-2.7 21.7 21.4 51.5 34.7 84.4 34.7s62.7-13.3 84.4-34.7c9 1.7 18.2 2.7 27.6 2.7 79.5 0 144-64.5 144-144 0-78.4-62.6-142.1-140.6-144-24-38.4-66.7-64-115.4-64m-79.7 98.7C190.4 68.7 220.8 48 256 48s65.6 20.7 79.7 50.7c4.3 9.1 13.8 14.6 23.8 13.7 2.8-.2 5.6-.4 8.5-.4 53 0 96 43 96 96s-43 96-96 96c-10 0-19.7-1.5-28.7-4.4-9.6-3-20 .3-26.2 8.3C299.9 325 279.2 336 256 336s-43.9-11-57.1-28.1c-6.1-8-16.6-11.3-26.2-8.3-9 2.8-18.7 4.4-28.7 4.4-53 0-96-43-96-96s43-96 96-96c2.9 0 5.7.1 8.5.4 10 .9 19.5-4.6 23.8-13.7M192 432a48 48 0 1 0-96 0 48 48 0 1 0 96 0M64 480a32 32 0 1 0-64 0 32 32 0 1 0 64 0"})
+);
+
+export default LanThoughtBubbleRegular;

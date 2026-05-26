@@ -1,0 +1,2 @@
+export declare const LanMoonWaningCrescentInverseSolid: string;
+export default LanMoonWaningCrescentInverseSolid;

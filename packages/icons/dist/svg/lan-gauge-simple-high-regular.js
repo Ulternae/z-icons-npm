@@ -1,0 +1,2 @@
+export const LanGaugeSimpleHighRegular = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416m0 464a256 256 0 1 0 0-512 256 256 0 1 0 0 512m56-160c0-14.4-5.4-27.5-14.4-37.5l60.5-145.3c5.1-12.2-.7-26.3-12.9-31.4s-26.3.7-31.4 12.9l-60.5 145.4C223.6 297.5 200 322 200 352c0 30.9 25.1 56 56 56s56-25.1 56-56"/></svg>';
+export default LanGaugeSimpleHighRegular;

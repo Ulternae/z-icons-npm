@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanUmbrellaBeachRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M464 256c0 16.4-1.9 32.3-5.5 47.6l-362.1-181C134.6 76.9 192 48 256 48c114.9 0 208 93.1 208 208m-7.6 100.2c15.8 7.9 35.2 1.5 41.1-15.1 9.4-26.6 14.5-55.3 14.5-85.1C512 114.6 397.4 0 256 0 167.2 0 89 45.2 43.1 113.8c-9.8 14.7-3.3 34.1 12.5 42l172.5 86.3-1.6 3.2L117.1 464H23.9c-13.3 0-24 10.7-24 24s10.7 24 24 24h464c13.3 0 24-10.7 24-24s-10.7-24-24-24H170.7l98.6-197.3 1.6-3.2 185.4 92.7z"})
+);
+
+export default LanUmbrellaBeachRegular;

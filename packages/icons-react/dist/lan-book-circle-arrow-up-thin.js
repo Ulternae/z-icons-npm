@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanBookCircleArrowUpThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M88 0C57.1 0 32 25.1 32 56v400c0 30.9 25.1 56 56 56h188c-3.7-5.1-7.2-10.5-10.3-16H88c-22.1 0-40-17.9-40-40s17.9-40 40-40h152.7c-.4-5.3-.7-10.6-.7-16H88c-15.7 0-29.8 6.4-40 16.8V56c0-22.1 17.9-40 40-40h352c13.3 0 24 10.7 24 24v170.7c5.4.9 10.7 2 16 3.4V40c0-22.1-17.9-40-40-40zm216 400a128 128 0 1 1 256 0 128 128 0 1 1-256 0m272 0a144 144 0 1 0-288 0 144 144 0 1 0 288 0m-213.7-2.3c3.1 3.1 8.2 3.1 11.3 0l50.4-50.4V472c0 4.4 3.6 8 8 8s8-3.6 8-8V347.3l50.3 50.3c3.1 3.1 8.2 3.1 11.3 0s3.1-8.2 0-11.3l-64-64c-3.1-3.1-8.2-3.1-11.3 0l-64 64c-3.1 3.1-3.1 8.2 0 11.3z"})
+);
+
+export default LanBookCircleArrowUpThin;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanFaucetRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M224 32c13.3 0 24 10.7 24 24v16h112c13.3 0 24 10.7 24 24s-10.7 24-24 24H248v40h26.7c14.9 0 29.1 5.9 39.6 16.4l15.6 15.6H360c83.9 0 152 68.1 152 152v16c0 30.9-25.1 56-56 56h-48c-30.9 0-56-25.1-56-56 0-4.4-3.6-8-8-8h-20.1c-23.4 29.2-59.5 48-99.9 48s-76.5-18.8-99.9-48H24c-13.3 0-24-10.7-24-24s10.7-24 24-24h112.3c8.2 0 15.8 4.2 20.2 11.1 14.3 22.3 39.1 36.9 67.4 36.9s53.2-14.7 67.4-36.9c4.4-6.9 12-11.1 20.2-11.1h32.3c30.9 0 56 25.1 56 56 0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-16c0-57.4-46.6-104-104-104h-40c-6.4 0-12.5-2.5-17-7l-22.6-22.6c-1.5-1.5-3.5-2.3-5.7-2.3H181c-2.1 0-4.2.8-5.7 2.3L153 233c-4.5 4.5-10.6 7-17 7H24c-13.3 0-24-10.7-24-24s10.7-24 24-24h102.1l15.6-15.6c10.5-10.5 24.7-16.4 39.6-16.4H200v-40H88c-13.3 0-24-10.7-24-24s10.7-24 24-24h112V56c0-13.3 10.7-24 24-24"})
+);
+
+export default LanFaucetRegular;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanFolderUserSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M448 448H64c-35.3 0-64-28.7-64-64V96c0-35.3 28.7-64 64-64h138.7c13.8 0 27.3 4.5 38.4 12.8l38.4 28.8c5.5 4.2 12.3 6.4 19.2 6.4H448c35.3 0 64 28.7 64 64v240c0 35.3-28.7 64-64 64M256 280a56 56 0 1 0 0-112 56 56 0 1 0 0 112m-93.7 69c-12.9 15.6 2.2 35 22.4 35h142.5c20.2 0 35.3-19.4 22.4-35-14.7-17.7-36.9-29-61.7-29h-64c-24.8 0-47 11.3-61.7 29z"})
+);
+
+export default LanFolderUserSolid;

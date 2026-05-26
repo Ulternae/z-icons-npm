@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanSkullCrossbonesThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M311 246c-4.4 3-7 7.9-7 13.3v12.8c0 17.7-14.3 32-32 32h-96c-17.7 0-32-14.3-32-32v-12.8c0-5.3-2.6-10.3-7-13.3-35-23.7-57-60.8-57-102 0-69.1 62.8-128 144-128s144 58.9 144 128c0 41.1-21.9 78.3-57 102m9 26v-12.8c38.9-26.3 64-68.1 64-115.2C384 64.5 312.4 0 224 0S64 64.5 64 144c0 47.1 25.1 88.9 64 115.2V272c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48M.8 324.5c-1.9 4-.2 8.8 3.7 10.7l201 96.8-201 96.8c-4 1.9-5.7 6.7-3.7 10.7s6.7 5.7 10.7 3.7L224 440.9l212.5 102.3c4 1.9 8.8.2 10.7-3.7s.2-8.8-3.7-10.7l-201-96.8 201-96.8c4-1.9 5.7-6.7 3.7-10.7s-6.7-5.7-10.7-3.7L224 423.1 11.5 320.8c-4-1.9-8.8-.2-10.7 3.7M200 160a40 40 0 1 0-80 0 40 40 0 1 0 80 0m-40-24a24 24 0 1 1 0 48 24 24 0 1 1 0-48m128 64a40 40 0 1 0 0-80 40 40 0 1 0 0 80m-24-40a24 24 0 1 1 48 0 24 24 0 1 1-48 0"})
+);
+
+export default LanSkullCrossbonesThin;

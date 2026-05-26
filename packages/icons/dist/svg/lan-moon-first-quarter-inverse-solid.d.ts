@@ -1,0 +1,2 @@
+export declare const LanMoonFirstQuarterInverseSolid: string;
+export default LanMoonFirstQuarterInverseSolid;

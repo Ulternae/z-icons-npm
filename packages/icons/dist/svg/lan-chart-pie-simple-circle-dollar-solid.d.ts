@@ -1,0 +1,2 @@
+export declare const LanChartPieSimpleCircleDollarSolid: string;
+export default LanChartPieSimpleCircleDollarSolid;

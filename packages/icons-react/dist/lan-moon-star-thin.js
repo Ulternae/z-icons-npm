@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanMoonStarThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M16 256c0 132.5 107.5 240 240 240 64.5 0 123.1-25.5 166.2-66.9 2.4-2.3 3.1-6 1.8-9s-4.6-5-7.9-4.7C301.5 424.5 200 331.5 200 216c0-78.4 45.2-146.4 110.9-179.1 3-1.5 4.8-4.8 4.4-8.1s-2.9-6.1-6.2-6.8q-25.65-6-53.1-6C123.5 16 16 123.4 16 256m-16 0C0 114.6 114.6 0 256 0c19.4 0 38.4 2.2 56.7 6.3 9.9 2.2 17.3 10.5 18.5 20.5s-4 19.8-13.1 24.4C257.5 81.4 216 143.9 216 216c0 106.1 93.4 191.8 198.8 183.4 10.1-.8 19.6 4.8 23.8 14.1s2 20.1-5.3 27.1C387.3 484.8 324.8 512 256 512 114.6 512 0 397.4 0 256m416-144v80h80c4.4 0 8 3.6 8 8s-3.6 8-8 8h-80v80c0 4.4-3.6 8-8 8s-8-3.6-8-8v-80h-80c-4.4 0-8-3.6-8-8s3.6-8 8-8h80v-80c0-4.4 3.6-8 8-8s8 3.6 8 8"})
+);
+
+export default LanMoonStarThin;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCommentArrowUpRightThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M68.5 394.8c2.8-5.7 2-12.5-2-17.4C34.8 339.4 16 291.7 16 240 16 117.2 122.5 16 256 16s240 101.2 240 224-106.5 224-240 224c-35.7 0-69.5-7.3-99.9-20.2-3.9-1.7-8.3-1.7-12.2-.1L19.1 493.5zM0 240c0 55.7 20.2 106.9 54.2 147.7L1.4 493.3C-4 504 7.6 515.4 18.4 511l131.5-52.6c32.3 13.8 68.3 21.5 106.2 21.5 141.4 0 256-107.5 256-240S397.4 0 256 0 0 107.5 0 240m344-96H216c-4.4 0-8 3.6-8 8s3.6 8 8 8h108.7L162.4 322.3c-3.1 3.1-3.1 8.2 0 11.3s8.2 3.1 11.3 0L336 171.3V280c0 4.4 3.6 8 8 8s8-3.6 8-8V152c0-4.4-3.6-8-8-8"})
+);
+
+export default LanCommentArrowUpRightThin;

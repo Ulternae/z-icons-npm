@@ -1,0 +1,2 @@
+export declare const LanAssistiveListeningSystemsSolid: string;
+export default LanAssistiveListeningSystemsSolid;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanZzzThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M160 8c0-4.4 3.6-8 8-8h144c3.3 0 6.3 2.1 7.5 5.2s.3 6.6-2.2 8.8L189 128h123c4.4 0 8 3.6 8 8s-3.6 8-8 8H168c-3.3 0-6.3-2.1-7.5-5.2s-.3-6.6 2.2-8.8L291 16H168c-4.4 0-8-3.6-8-8M0 264c0-4.4 3.6-8 8-8h208c3.1 0 6 1.8 7.3 4.7s.8 6.2-1.2 8.6L25.5 496H216c4.4 0 8 3.6 8 8s-3.6 8-8 8H8c-3.1 0-6-1.8-7.3-4.7s-.8-6.2 1.2-8.6L198.5 272H8c-4.4 0-8-3.6-8-8m296-40h144c3.2 0 6 1.9 7.3 4.7s.8 6.3-1.4 8.6L314 384h126c4.4 0 8 3.6 8 8s-3.6 8-8 8H296c-3.2 0-6-1.9-7.3-4.7s-.8-6.3 1.4-8.6L422 240H296c-4.4 0-8-3.6-8-8s3.6-8 8-8"})
+);
+
+export default LanZzzThin;

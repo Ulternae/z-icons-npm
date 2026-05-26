@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCalculatorRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 384 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M336 176v272c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V176zm0-48H48V64c0-8.8 7.2-16 16-16h256c8.8 0 16 7.2 16 16zm48 0V64c0-35.3-28.7-64-64-64H64C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64zM80 232a24 24 0 1 0 48 0 24 24 0 1 0-48 0m24 64a24 24 0 1 0 0 48 24 24 0 1 0 0-48M80 408c0 13.3 10.7 24 24 24h88c13.3 0 24-10.7 24-24s-10.7-24-24-24h-88c-13.3 0-24 10.7-24 24m112-200a24 24 0 1 0 0 48 24 24 0 1 0 0-48m-24 112a24 24 0 1 0 48 0 24 24 0 1 0-48 0m112-112a24 24 0 1 0 0 48 24 24 0 1 0 0-48m-24 112a24 24 0 1 0 48 0 24 24 0 1 0-48 0m24 64c-13.3 0-24 10.7-24 24s10.7 24 24 24 24-10.7 24-24-10.7-24-24-24"})
+);
+
+export default LanCalculatorRegular;

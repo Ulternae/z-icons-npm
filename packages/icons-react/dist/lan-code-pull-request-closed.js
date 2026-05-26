@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCodePullRequestClosed = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 384 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M251.3 4.7 304 57.4l52.7-52.7c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6L326.6 80l52.7 52.7c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0L304 102.6l-52.7 52.7c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L281.4 80l-52.7-52.7c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0M128 80a48 48 0 1 0-96 0 48 48 0 1 0 96 0m32 0c0 38.7-27.5 71-64 78.4v195.2c36.5 7.4 64 39.7 64 78.4 0 44.2-35.8 80-80 80S0 476.2 0 432c0-38.7 27.5-71 64-78.4V158.4C27.5 151 0 118.7 0 80 0 35.8 35.8 0 80 0s80 35.8 80 80M32 432c0 26.5 21.5 48 48 48s48-21.5 48-48-21.5-48-48-48-48 21.5-48 48m272 48c26.5 0 48-21.5 48-48s-21.5-48-48-48-48 21.5-48 48 21.5 48 48 48m-80-48c0-38.7 27.5-71 64-78.4V208c0-8.8 7.2-16 16-16s16 7.2 16 16v145.6c36.5 7.4 64 39.7 64 78.4 0 44.2-35.8 80-80 80s-80-35.8-80-80"})
+);
+
+export default LanCodePullRequestClosed;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanObjectSubtractRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M64 48h16V0H64C28.7 0 0 28.7 0 64v16h48V64c0-8.8 7.2-16 16-16m160 0V0h-96v48zM48 128H0v96h48zm0 144H0v16c0 35.3 28.7 64 64 64h16v-48H64c-8.8 0-16-7.2-16-16zm80 80h96v-48h-96zm32 48v48c0 35.3 28.7 64 64 64h224c35.3 0 64-28.7 64-64V224c0-35.3-28.7-64-64-64h-48v48h48c8.8 0 16 7.2 16 16v224c0 8.8-7.2 16-16 16H224c-8.8 0-16-7.2-16-16v-48zm192-192v-80h-48v96h48zm-80 96v48h16c35.3 0 64-28.7 64-64v-16h-48v16c0 8.8-7.2 16-16 16zm80-224V64c0-35.3-28.7-64-64-64h-16v48h16c8.8 0 16 7.2 16 16v16z"})
+);
+
+export default LanObjectSubtractRegular;

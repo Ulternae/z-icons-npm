@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanSignPostThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M248.4 8c0-4.4 3.6-8 8-8s8 3.6 8 8v56h129.9c14 0 27.3 6.1 36.4 16.8l68.3 79.6c7.7 9 7.7 22.3 0 31.2l-68.2 79.6c-9.1 10.6-22.4 16.8-36.4 16.8H264.5v216c0 4.4-3.6 8-8 8s-8-3.6-8-8V288h-168c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h168V8zm-168 72c-17.7 0-32 14.3-32 32v128c0 17.7 14.3 32 32 32h313.9c9.3 0 18.2-4.1 24.3-11.2l68.2-79.6c2.6-3 2.6-7.4 0-10.4l-68.2-79.6c-6.1-7.1-15-11.2-24.3-11.2z"})
+);
+
+export default LanSignPostThin;

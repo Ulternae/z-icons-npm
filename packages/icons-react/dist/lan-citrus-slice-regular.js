@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCitrusSliceRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M7 391c-4.5 4.5-7 10.6-7 17s2.5 12.5 7 17c115.6 115.6 302.6 116 418.3.3S540.5 122.6 425 7c-9.4-9.4-24.6-9.4-33.9 0zm384.3.3c-91.1 91.1-235.2 96.2-332.6 15.8l22.4-22.4c37 29.6 83.8 47.2 134.8 47.2 119.3 0 216-96.7 216-216 0-51-17.7-97.9-47.2-134.8l22.4-22.4c80.4 97.4 75.3 241.5-15.8 332.6m-40.8-276c13.3 17.8 23.2 38.3 28.7 60.6h-89.3zM272 208h111.8c.1 2.7.2 5.3.2 8 0 40.6-14.4 77.9-38.4 106.9l-82.4-82.4c5.9-10 8.9-21.3 8.9-32.5zm-31.5 55.1 82.4 82.4c-29.1 24-66.3 38.4-106.9 38.4-2.7 0-5.3-.1-8-.2V272c11.3 0 22.5-3 32.5-8.9m-125.1 87.5L176 290v89.3c-22.3-5.4-42.8-15.3-60.6-28.7"})
+);
+
+export default LanCitrusSliceRegular;

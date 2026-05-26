@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanRetweetAltThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M474.3 477.7c3.1 3.1 8.2 3.1 11.3 0l88-88c3.1-3.1 3.1-8.2 0-11.3s-8.2-3.1-11.3 0L488 452.7V128c0-53-43-96-96-96H264c-4.4 0-8 3.6-8 8s3.6 8 8 8h128c44.2 0 80 35.8 80 80v324.7l-74.3-74.3c-3.1-3.1-8.2-3.1-11.3 0s-3.1 8.2 0 11.3l88 88zM101.7 34.3c-3.1-3.1-8.2-3.1-11.3 0l-88 88c-3.1 3.1-3.1 8.2 0 11.3s8.2 3.1 11.3 0L88 59.3V384c0 53 43 96 96 96h128c4.4 0 8-3.6 8-8s-3.6-8-8-8H184c-44.2 0-80-35.8-80-80V59.3l74.3 74.3c3.1 3.1 8.2 3.1 11.3 0s3.1-8.2 0-11.3l-88-88z"})
+);
+
+export default LanRetweetAltThin;

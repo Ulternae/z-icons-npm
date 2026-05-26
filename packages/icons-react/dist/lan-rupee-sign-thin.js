@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanRupeeSignThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M0 40c0-4.4 3.6-8 8-8h112c75.1 0 136 60.9 136 136 0 63.6-43.7 117-102.6 131.9l46.4 170c1.2 4.3-1.4 8.7-5.6 9.8s-8.7-1.4-9.8-5.6l-46.8-171.2c-5.8.7-11.6 1.1-17.6 1.1H16v168c0 4.4-3.6 8-8 8s-8-3.6-8-8zm16 248h104c66.3 0 120-53.7 120-120S186.3 48 120 48H16zm317.3-64H400c4.4 0 8 3.6 8 8s-3.6 8-8 8h-66.7c-25 0-45.3 20.3-45.3 45.3 0 20.4 13.6 38.3 33.3 43.7l78.3 21.5c28.6 7.9 48.4 33.9 48.4 63.5 0 36.4-29.5 65.9-65.9 65.9l-86.1.1c-4.4 0-8-3.6-8-8s3.6-8 8-8h86.1c27.5 0 49.9-22.3 49.9-49.9 0-22.5-15-42.1-36.6-48.1l-78.3-21.5c-26.6-7.3-45.1-31.5-45.1-59.1 0-33.9 27.5-61.3 61.3-61.3z"})
+);
+
+export default LanRupeeSignThin;

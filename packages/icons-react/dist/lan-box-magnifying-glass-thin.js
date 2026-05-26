@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanBoxMagnifyingGlassThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M408.5 256.1c66.3 0 120 53.7 120 120 0 30.2-11.2 57.8-29.7 78.9l75.3 75.4c3.1 3.1 3.1 8.2 0 11.3-2.7 2.7-7 3.1-10.1 1l-1.3-1-75.3-75.4c-21.1 18.5-48.7 29.8-79 29.8-66.3 0-120-53.7-120-120s53.7-120 120-120zm0 16a104 104 0 1 0 0 208 104 104 0 1 0 0-208M367.6 16c20.7 0 40.1 10 52.1 26.8l48.9 68.5c7.7 10.8 11.9 23.9 11.9 37.2v75.8c-5.2-2.5-10.5-4.6-16-6.6v-69.2c0-1.5-.1-3-.2-4.5H48.7c-.1 1.5-.2 3-.2 4.5V416c0 26.5 21.5 48 48 48h168.8c3.4 5.6 7.2 10.9 11.2 16h-180l-6.5-.3c-30.1-3.1-54.1-27-57.1-57.1l-.3-6.5V148.6c0-11.7 3.2-23.1 9.2-33l2.7-4.2 48.9-68.5c10.5-14.7 26.7-24.2 44.4-26.3l7.7-.5h222.1zM145.4 32c-15.5 0-30.1 7.5-39.1 20.1l-48.9 68.5c-1.7 2.3-3.1 4.8-4.3 7.4h406.8c-1.2-2.6-2.6-5-4.3-7.4l-49-68.5c-7.9-11-20-18.1-33.3-19.8l-5.8-.3z"})
+);
+
+export default LanBoxMagnifyingGlassThin;

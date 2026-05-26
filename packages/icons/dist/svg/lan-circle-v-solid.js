@@ -1,0 +1,2 @@
+export const LanCircleVSolid = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512m-66.5-354.7 66.5 133 66.5-133c5.9-11.9 20.3-16.7 32.2-10.7s16.7 20.3 10.7 32.2l-88 176c-4.1 8.1-12.4 13.3-21.5 13.3s-17.4-5.1-21.5-13.3l-88-176c-5.9-11.9-1.1-26.3 10.7-32.2s26.3-1.1 32.2 10.7z"/></svg>';
+export default LanCircleVSolid;

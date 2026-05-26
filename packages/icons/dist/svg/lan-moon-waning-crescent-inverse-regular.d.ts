@@ -1,0 +1,2 @@
+export declare const LanMoonWaningCrescentInverseRegular: string;
+export default LanMoonWaningCrescentInverseRegular;

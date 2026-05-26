@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanPersonDotsFromLineThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M328 72a72 72 0 1 1-144 0 72 72 0 1 1 144 0m-72-56a56 56 0 1 0 0 112 56 56 0 1 0 0-112M56 384c0-110.5 89.5-200 200-200s200 89.5 200 200v48h-16v-48c0-101.6-82.4-184-184-184S72 282.4 72 384v48H56zm336 48h-16v-48c0-27-8.9-52-24-72v120h-16V291c0-3.2 1.9-6.1 4.8-7.3s6.3-.7 8.7 1.5C375.7 310 392 345.1 392 384zm-216 0h-16V312c-15.1 20.1-24 45-24 72v48h-16v-48c0-38.9 16.3-74 42.5-98.8 2.3-2.2 5.7-2.8 8.7-1.5s4.8 4.2 4.8 7.4v141zm64-80a16 16 0 1 1 0 32 16 16 0 1 1 0-32m16-80a16 16 0 1 1 32 0 16 16 0 1 1-32 0M8 480h496c4.4 0 8 3.6 8 8s-3.6 8-8 8H8c-4.4 0-8-3.6-8-8s3.6-8 8-8m56-304a16 16 0 1 1 32 0 16 16 0 1 1-32 0m432 80a16 16 0 1 1 0 32 16 16 0 1 1 0-32"})
+);
+
+export default LanPersonDotsFromLineThin;

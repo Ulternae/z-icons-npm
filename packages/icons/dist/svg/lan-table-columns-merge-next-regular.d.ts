@@ -1,0 +1,2 @@
+export declare const LanTableColumnsMergeNextRegular: string;
+export default LanTableColumnsMergeNextRegular;

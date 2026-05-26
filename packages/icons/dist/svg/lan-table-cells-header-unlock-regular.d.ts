@@ -1,0 +1,2 @@
+export declare const LanTableCellsHeaderUnlockRegular: string;
+export default LanTableCellsHeaderUnlockRegular;

@@ -1,0 +1,2 @@
+export const LanTableColumnsAddAfterSolid = '<svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M448 32c35.3 0 64 28.7 64 64H320v320h192c0 33.1-25.2 60.4-57.5 63.7l-6.5.3H128l-6.5-.3c-30.1-3.1-54.1-27-57.1-57.1L64 416V96c0-35.3 28.7-64 64-64zM128 416h128V96H128zm352-256c13.3 0 24 10.7 24 24v48h48c13.3 0 24 10.7 24 24s-10.7 24-24 24h-48v48c0 13.3-10.7 24-24 24s-24-10.7-24-24v-48h-48c-13.3 0-24-10.7-24-24s10.7-24 24-24h48v-48c0-13.3 10.7-24 24-24"/></svg>';
+export default LanTableColumnsAddAfterSolid;

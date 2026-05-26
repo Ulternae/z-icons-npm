@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanDiagramVennSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M224 416c-88.4 0-160-71.6-160-160S135.6 96 224 96c11 0 21.7 1.1 32 3.2-39.6 40.4-64 95.7-64 156.8s24.4 116.4 64 156.8c-10.3 2.1-21.1 3.2-32 3.2m0 64c34.4 0 66.9-7.7 96-21.6 29.1 13.8 61.6 21.6 96 21.6 123.7 0 224-100.3 224-224S539.7 32 416 32c-34.4 0-66.9 7.7-96 21.6C290.9 39.7 258.4 32 224 32 100.3 32 0 132.3 0 256s100.3 224 224 224M416 96c88.4 0 160 71.6 160 160s-71.6 160-160 160c-11 0-21.7-1.1-32-3.2 39.6-40.4 64-95.7 64-156.8s-24.4-116.4-64-156.8c10.3-2.1 21-3.2 32-3.2"})
+);
+
+export default LanDiagramVennSolid;

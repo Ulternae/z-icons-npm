@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanTrafficLightThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 320 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M64-16C37.5-16 16 5.5 16 32v352c0 79.5 64.5 144 144 144s144-64.5 144-144V32c0-26.5-21.5-48-48-48zM0 32C0-3.3 28.7-32 64-32h192c35.3 0 64 28.7 64 64v352c0 88.4-71.6 160-160 160S0 472.4 0 384zm120 368c0 22.1 17.9 40 40 40s40-17.9 40-40-17.9-40-40-40-40 17.9-40 40m-16 0c0-30.9 25.1-56 56-56s56 25.1 56 56-25.1 56-56 56-56-25.1-56-56m56-184a40 40 0 1 0 0 80 40 40 0 1 0 0-80m0 96a56 56 0 1 1 0-112 56 56 0 1 1 0 112m-40-200a40 40 0 1 0 80 0 40 40 0 1 0-80 0m96 0a56 56 0 1 1-112 0 56 56 0 1 1 112 0"})
+);
+
+export default LanTrafficLightThin;

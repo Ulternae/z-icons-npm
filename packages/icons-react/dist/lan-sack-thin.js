@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanSackThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M160.1 16c-8.9 0-16.1 7.2-16.1 16.1 0 2.6.6 5.2 1.9 7.5l46.7 88.4h127l46.6-88.4c1.2-2.3 1.9-4.9 1.9-7.5 0-8.9-7.2-16.1-16.1-16.1zm17 117-45.4-86c-2.4-4.6-3.7-9.7-3.7-15 0-17.7 14.4-32.1 32.1-32.1l191.8.1C369.6 0 384 14.4 384 32.1c0 5.2-1.3 10.3-3.7 15l-45.4 86c85.9 79 161.1 155.8 161.1 283.8 0 52.6-42.6 95.2-95.2 95.2H111.2C58.6 512 16 469.4 16 416.8 16 288.9 91.1 212.1 177.1 133m11.7 11C102.4 223.4 32 296 32 416.8c0 43.8 35.4 79.2 79.2 79.2h289.6c43.7 0 79.2-35.4 79.2-79.2C480 296 409.6 223.4 323.2 144z"})
+);
+
+export default LanSackThin;

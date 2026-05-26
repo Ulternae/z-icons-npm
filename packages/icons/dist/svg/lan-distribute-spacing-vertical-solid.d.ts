@@ -1,0 +1,2 @@
+export declare const LanDistributeSpacingVerticalSolid: string;
+export default LanDistributeSpacingVerticalSolid;

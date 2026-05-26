@@ -1,0 +1,2 @@
+export declare const LanFaceBeamHandOverMouthRegular: string;
+export default LanFaceBeamHandOverMouthRegular;

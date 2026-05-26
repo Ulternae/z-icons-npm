@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanDaggerRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 384 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M192-32c13.3 0 24 10.7 24 24V96h120c26.5 0 48 21.5 48 48s-21.5 48-48 48-48-21.5-48-48h-16v320.6c0 9.7-4.4 18.9-12 25L202 536c-5.8 4.7-14.1 4.7-20 0l-58-46.4c-7.6-6.1-12-15.3-12-25V144H96c0 26.5-21.5 48-48 48S0 170.5 0 144s21.5-48 48-48h120V-8c0-13.3 10.7-24 24-24m-32 176v312.9l32 25.6 32-25.6V144z"})
+);
+
+export default LanDaggerRegular;

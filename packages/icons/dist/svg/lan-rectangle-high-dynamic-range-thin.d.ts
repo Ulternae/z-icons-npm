@@ -1,0 +1,2 @@
+export declare const LanRectangleHighDynamicRangeThin: string;
+export default LanRectangleHighDynamicRangeThin;

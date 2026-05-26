@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanObjectIntersectRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M64 48c-8.8 0-16 7.2-16 16v16H0V64C0 28.7 28.7 0 64 0h16v48zm160 0h-96V0h96zM48 128v96H0v-96zM0 288v-16h48v16c0 8.8 7.2 16 16 16h48v48H64c-35.3 0-64-28.7-64-64m160 64V224c0-35.3 28.7-64 64-64h128v128c0 35.3-28.7 64-64 64zm304-64h48v96h-48zm48-48h-48v-16c0-8.8-7.2-16-16-16h-48v-48h48c35.3 0 64 28.7 64 64zm0 192v16c0 35.3-28.7 64-64 64h-16v-48h16c8.8 0 16-7.2 16-16v-16zm-128 80h-96v-48h96zM160 400h48v48c0 8.8 7.2 16 16 16h16v48h-16c-35.3 0-64-28.7-64-64zm192-288h-48V64c0-8.8-7.2-16-16-16h-16V0h16c35.3 0 64 28.7 64 64zm-48 96h-80c-8.8 0-16 7.2-16 16v80h80c8.8 0 16-7.2 16-16z"})
+);
+
+export default LanObjectIntersectRegular;

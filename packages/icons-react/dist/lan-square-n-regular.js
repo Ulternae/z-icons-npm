@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanSquareNRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M64 80c-8.8 0-16 7.2-16 16v320c0 8.8 7.2 16 16 16h320c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16zM0 96c0-35.3 28.7-64 64-64h320c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64zm170.6 56.8 101.4 124V168c0-13.3 10.7-24 24-24s24 10.7 24 24v176c0 10.1-6.4 19.2-15.9 22.6s-20.2.4-26.6-7.4L176 235.2V344c0 13.3-10.7 24-24 24s-24-10.7-24-24V168c0-10.1 6.4-19.2 15.9-22.6s20.2-.4 26.6 7.4z"})
+);
+
+export default LanSquareNRegular;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanUserMusicThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M144 128a112 112 0 1 1 224 0 112 112 0 1 1-224 0m240 0a128 128 0 1 0-256 0 128 128 0 1 0 256 0M48 480c0-88.4 71.6-160 160-160h96c29.1 0 56.5 7.8 80 21.4v-18.2c-24-12.3-51.2-19.2-80-19.2h-96c-97.2 0-176 78.8-176 176v24c0 4.4 3.6 8 8 8s8-3.6 8-8zm592-238.2c0-10.1-9.3-17.7-19.3-15.7l-176 36.7c-7.4 1.5-12.7 8.1-12.7 15.7v179.2c-11.7-10.8-28.9-17.6-48-17.6-35.4 0-64 23.3-64 52s28.6 52 64 52 64-23.3 64-52V358.5l176-36.7v103.9c-11.7-10.8-28.9-17.6-48-17.6-35.4 0-64 23.3-64 52s28.6 52 64 52 64-23.3 64-52zm-16 63.7-176 36.7v-63.7l176-36.7zM384 456.1c29.7 0 48 19 48 36s-18.3 36-48 36-48-19-48-36 18.3-36 48-36m240 4c0 17-18.3 36-48 36s-48-19-48-36 18.3-36 48-36 48 19 48 36"})
+);
+
+export default LanUserMusicThin;

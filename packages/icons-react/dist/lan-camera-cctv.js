@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCameraCctv = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M146.2 37.1c-16.6-6-35 2.5-41 19.1L50.4 206.6c-6 16.6 2.5 35 19.1 41l207.9 75.6L471 155.3zm-71.1 8.2c12.1-33.2 48.8-50.4 82-38.3l324.8 118.2c22.9 8.3 28.5 38.3 10 54.2l-193.5 168c-8.8 7.6-21 9.9-31.9 5.9l-74.2-27V416c0 26.5-21.5 48-48 48h-80v32c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16v32h80c8.8 0 16-7.2 16-16V314.7l-101.7-37c-33.2-12.1-50.3-48.8-38.3-82zm374.4 374.6-113.8-41.4 27.7-24 97.1 35.3 43.8-120.3-30.3-11 27.6-24 13.6 4.9c16.6 6 25.2 24.4 19.1 41l-43.7 120.4c-6 16.6-24.4 25.2-41 19.1z"})
+);
+
+export default LanCameraCctv;

@@ -1,0 +1,41 @@
+{
+  "pack": "lan",
+  "referenceVariant": "light",
+  "targetVariants": [
+    "regular",
+    "solid",
+    "thin"
+  ],
+  "sourceDir": "icons/lan",
+  "dryRun": true,
+  "referenceIcons": 3756,
+  "extraIcons": 0,
+  "removedIcons": 0,
+  "variants": [
+    {
+      "variant": "regular",
+      "totalIcons": 3756,
+      "extraIcons": 0,
+      "removedIcons": 0,
+      "skipped": false,
+      "files": []
+    },
+    {
+      "variant": "solid",
+      "totalIcons": 3756,
+      "extraIcons": 0,
+      "removedIcons": 0,
+      "skipped": false,
+      "files": []
+    },
+    {
+      "variant": "thin",
+      "totalIcons": 3756,
+      "extraIcons": 0,
+      "removedIcons": 0,
+      "skipped": false,
+      "files": []
+    }
+  ],
+  "removed": []
+}

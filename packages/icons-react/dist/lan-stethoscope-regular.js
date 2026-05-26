@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanStethoscopeRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M32 48C32 21.5 53.5 0 80 0h56c13.3 0 24 10.7 24 24s-10.7 24-24 24H80v128c0 61.9 50.1 112 112 112s112-50.1 112-112V48h-56c-13.3 0-24-10.7-24-24s10.7-24 24-24h56c26.5 0 48 21.5 48 48v128c0 80.2-59 146.6-136 158.2V376c0 66.3 53.7 120 120 120s120-53.7 120-120V272q0-1.8.3-3.6C423.7 258.3 400 227.9 400 192c0-44.2 35.8-80 80-80s80 35.8 80 80c0 35.9-23.7 66.3-56.3 76.4q.3 1.8.3 3.6v104c0 92.8-75.2 168-168 168s-168-75.2-168-168v-41.8C91 322.6 32 256.2 32 176zm448 176a32 32 0 1 0 0-64 32 32 0 1 0 0 64"})
+);
+
+export default LanStethoscopeRegular;

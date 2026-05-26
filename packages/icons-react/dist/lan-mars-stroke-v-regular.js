@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanMarsStrokeVRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 384 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M192 224a128 128 0 1 0 0 256 128 128 0 1 0 0-256M16 352c0-89.1 66.2-162.7 152-174.4V144h-40c-13.3 0-24-10.7-24-24s10.7-24 24-24h40V40l-25.6 19.2c-10.6 8-25.6 5.8-33.6-4.8s-5.8-25.6 4.8-33.6l64-48c8.5-6.4 20.3-6.4 28.8 0l64 48c10.6 8 12.8 23 4.8 33.6s-23 12.8-33.6 4.8L216 40v56h40c13.3 0 24 10.7 24 24s-10.7 24-24 24h-40v33.6c85.8 11.7 152 85.3 152 174.4 0 97.2-78.8 176-176 176S16 449.2 16 352"})
+);
+
+export default LanMarsStrokeVRegular;

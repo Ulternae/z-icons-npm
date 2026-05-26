@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanKeySkeletonLeftRightSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M576 128a64 64 0 1 0-128 0 64 64 0 1 0 128 0m64 0c0 70.7-57.3 128-128 128-59.6 0-109.8-40.8-124-96h-68v32c0 17.7-14.3 32-32 32s-32-14.3-32-32v-32h-32v32c0 17.7-14.3 32-32 32s-32-14.3-32-32v-64c0-17.7 14.3-32 32-32h196c14.2-55.2 64.3-96 124-96 70.7 0 128 57.3 128 128M64 384a64 64 0 1 0 128 0 64 64 0 1 0-128 0m-64 0c0-70.7 57.3-128 128-128 59.6 0 109.8 40.8 124 96h68v-32c0-17.7 14.3-32 32-32s32 14.3 32 32v32h32v-32c0-17.7 14.3-32 32-32s32 14.3 32 32v64c0 17.7-14.3 32-32 32H252c-14.2 55.2-64.3 96-124 96C57.3 512 0 454.7 0 384"})
+);
+
+export default LanKeySkeletonLeftRightSolid;

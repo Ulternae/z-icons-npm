@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanChartPieAltSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M304 240h176c17.7 0 32.2-14.4 29.9-31.9-14.2-107-99-191.7-206-206C286.4-.2 272 14.3 272 32v176c0 17.7 14.3 32 32 32M224 66.7c0-18.5-15.7-33.3-33.8-29.5C81.6 60.1 0 156.6 0 272c0 132.5 107.5 240 240 240 115.5 0 211.9-81.5 234.8-190.2 3.8-18.1-11-33.8-29.5-33.8H248c-13.3 0-24-10.7-24-24z"})
+);
+
+export default LanChartPieAltSolid;

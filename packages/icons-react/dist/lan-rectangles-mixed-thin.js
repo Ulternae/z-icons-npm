@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanRectanglesMixedThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M240 80c17.7 0 32 14.3 32 32v96c0 17.7-14.3 32-32 32H48c-17.7 0-32-14.3-32-32v-96c0-17.7 14.3-32 32-32zM48 64C21.5 64 0 85.5 0 112v96c0 26.5 21.5 48 48 48h192c26.5 0 48-21.5 48-48v-96c0-26.5-21.5-48-48-48zm416 16c17.7 0 32 14.3 32 32v256c0 17.7-14.3 32-32 32h-64c-17.7 0-32-14.3-32-32V112c0-17.7 14.3-32 32-32zm-64-16c-26.5 0-48 21.5-48 48v256c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM112 336h128c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32H112c-17.7 0-32-14.3-32-32v-64c0-17.7 14.3-32 32-32m-48 32v64c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48v-64c0-26.5-21.5-48-48-48H112c-26.5 0-48 21.5-48 48"})
+);
+
+export default LanRectanglesMixedThin;

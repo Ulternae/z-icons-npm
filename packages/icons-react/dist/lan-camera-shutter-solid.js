@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCameraShutterSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"m49.5-33 47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-64 64c-9.4 9.4-24.6 9.4-33.9 0L15.5 1c-9.3-9.4-9.3-24.6 0-34s24.6-9.4 33.9 0zM171.2 96l10.4-31.2c6.5-19.6 24.8-32.8 45.5-32.8h122.8c20.7 0 39 13.2 45.5 32.8L405.8 96h74.7c35.3 0 64 28.7 64 64v256c0 35.3-28.7 64-64 64h-384c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64zm213.3 192a96 96 0 1 0-192 0 96 96 0 1 0 192 0"})
+);
+
+export default LanCameraShutterSolid;

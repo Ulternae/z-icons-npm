@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanAudioDescriptionSlashSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M7-24.9c9.4-9.4 24.6-9.4 33.9 0L129.8 64H480c35.3 0 64 28.7 64 64v256c0 25.5-14.9 47.4-36.4 57.8l61.4 61.3c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L7 9.1c-9.3-9.4-9.3-24.6 0-34M352 208h24c13.3 0 24 10.7 24 24v48c0 13.3-10.7 24-24 24h-6.2l39.7 39.7c22.9-12 38.5-36.1 38.5-63.7v-48c0-39.8-32.2-72-72-72h-48c-13.3 0-24 10.7-24 24v54.2l48 48zm-224 16v104c0 13.3 10.7 24 24 24s24-10.7 24-24v-24h48v24c0 13.3 10.7 24 24 24 9.2 0 17.3-5.2 21.3-12.9L378.2 448H96c-35.3 0-64-28.7-64-64V128c0-7.8 1.4-15.3 4-22.2l96 96c-2.6 6.9-4 14.4-4 22.2"})
+);
+
+export default LanAudioDescriptionSlashSolid;

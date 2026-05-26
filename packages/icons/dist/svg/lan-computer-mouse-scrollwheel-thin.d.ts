@@ -1,0 +1,2 @@
+export declare const LanComputerMouseScrollwheelThin: string;
+export default LanComputerMouseScrollwheelThin;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanLandMineOn = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M304 0c0-8.8-7.2-16-16-16s-16 7.2-16 16v128c0 8.8 7.2 16 16 16s16-7.2 16-16zm80 352H192v-64h192zm-224-64v64H80c-26.5 0-48 21.5-48 48v64c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48v-64c0-26.5-21.5-48-48-48h-80v-64c0-17.7-14.3-32-32-32H192c-17.7 0-32 14.3-32 32m224 96h112c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64c0-8.8 7.2-16 16-16zM18.7 119.1c-4.9 7.4-2.9 17.3 4.4 22.2l96 64c7.4 4.9 17.3 2.9 22.2-4.4s2.9-17.3-4.4-22.2l-96-64c-7.4-4.9-17.3-2.9-22.2 4.4m516.4-4.4-96 64c-7.4 4.9-9.3 14.8-4.4 22.2s14.8 9.3 22.2 4.4l96-64c7.4-4.9 9.3-14.8 4.4-22.2s-14.8-9.3-22.2-4.4"})
+);
+
+export default LanLandMineOn;

@@ -1,0 +1,2 @@
+export const LanPageRegular = '<svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M197.5 48c4.2 0 8.3 1.7 11.3 4.7l122.5 122.5c3 3 4.7 7.1 4.7 11.3V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16zM64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V186.5c0-17-6.7-33.3-18.7-45.3L242.7 18.7C230.7 6.7 214.5 0 197.5 0z"/></svg>';
+export default LanPageRegular;

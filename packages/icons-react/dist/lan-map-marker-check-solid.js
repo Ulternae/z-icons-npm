@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanMapMarkerCheckSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 384 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M192 0c106 0 192 84.4 192 188.6 0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.4 12.8-43.2 0C120.2 450.9 0 307.9 0 188.6 0 84.4 86 0 192 0m90.9 132.6c-10.7-7.8-25.7-5.4-33.5 5.3l-85.6 117.7-26.5-27.4c-9.2-9.5-24.4-9.8-33.9-.6s-9.8 24.4-.6 33.9l46.4 48c4.9 5.1 11.8 7.8 18.9 7.3s13.6-4.1 17.8-9.8l102.3-140.9c7.8-10.7 5.4-25.7-5.3-33.5"})
+);
+
+export default LanMapMarkerCheckSolid;

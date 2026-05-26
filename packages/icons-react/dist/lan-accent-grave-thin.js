@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanAccentGraveThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 192 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M55.8 86.6c-5-7.4-7.6-16.3-7.6-25.3 0-24.9 20.2-45.3 45-45.3 21.8 0 40.4 15.6 44.3 37.1l24.2 135.7c1.8 10-5.9 19.3-16.1 19.3-5.5 0-10.6-2.7-13.6-7.3zm-13.3 8.9 76.1 114.1c6 9 16.1 14.4 26.9 14.4 20.2 0 35.4-18.2 31.9-38.1L153.2 50.2C148 21.1 122.7 0 93.2 0c-33.7 0-61 27.6-61 61.3 0 12.1 3.6 24.1 10.3 34.2"})
+);
+
+export default LanAccentGraveThin;

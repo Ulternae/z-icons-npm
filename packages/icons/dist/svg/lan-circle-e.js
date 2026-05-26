@@ -1,0 +1,2 @@
+export const LanCircleE = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M256 32a224 224 0 1 1 0 448 224 224 0 1 1 0-448m0 480a256 256 0 1 0 0-512 256 256 0 1 0 0 512m-48-352c-8.8 0-16 7.2-16 16v160c0 8.8 7.2 16 16 16h96c8.8 0 16-7.2 16-16s-7.2-16-16-16h-80v-48h64c8.8 0 16-7.2 16-16s-7.2-16-16-16h-64v-48h80c8.8 0 16-7.2 16-16s-7.2-16-16-16z"/></svg>';
+export default LanCircleE;

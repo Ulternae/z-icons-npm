@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanRobotAstromech = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M256 0c-79.5 0-144 64.5-144 144v16H96c-35.3 0-64 28.7-64 64v196.2L2.4 479.5C.8 482.6 0 486 0 489.5 0 501.9 10.1 512 22.5 512H128c8.8 0 16-7.2 16-16v-89.4l36.7 36.7c3 3 7.1 4.7 11.3 4.7h128c4.2 0 8.3-1.7 11.3-4.7l36.7-36.7V496c0 8.8 7.2 16 16 16h105.5c12.4 0 22.5-10.1 22.5-22.5 0-3.5-.8-6.9-2.4-10L480 420.2V224c0-35.3-28.7-64-64-64h-16v-16C400 64.5 335.5 0 256 0m144 192h16c17.7 0 32 14.3 32 32v200c0 2.5.6 4.9 1.7 7.2l24.4 48.8H400zm-32 0v169.4L313.4 416H198.7l-54.6-54.6V192h224zm-256 0v288H37.9l24.4-48.8c1.1-2.2 1.7-4.7 1.7-7.2V224c0-17.7 14.3-32 32-32zm32-48c0-61.9 50.1-112 112-112s112 50.1 112 112v16H144zm80-16a32 32 0 1 0 0-64 32 32 0 1 0 0 64m80 0a16 16 0 1 0 0-32 16 16 0 1 0 0 32M192 240c0 8.8 7.2 16 16 16h96c8.8 0 16-7.2 16-16s-7.2-16-16-16h-96c-8.8 0-16 7.2-16 16m0 64c0 8.8 7.2 16 16 16h96c8.8 0 16-7.2 16-16s-7.2-16-16-16h-96c-8.8 0-16 7.2-16 16"})
+);
+
+export default LanRobotAstromech;

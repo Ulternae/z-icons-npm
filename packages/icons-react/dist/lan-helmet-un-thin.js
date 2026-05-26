@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanHelmetUnThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M16 240v72c0 30.9 25.1 56 56 56h146.2l30.2-90.5c1.1-3.3 4.1-5.5 7.6-5.5h208v-32c0-123.7-100.3-224-224-224S16 116.3 16 240m464 0v32h24c4.4 0 8 3.6 8 8s-3.6 8-8 8H368v208h104c4.4 0 8 3.6 8 8s-3.6 8-8 8H360c-2 0-4-.8-5.5-2.2L220.8 384H72c-39.8 0-72-32.2-72-72v-72C0 107.5 107.5 0 240 0s240 107.5 240 240m-218.2 48-28.6 85.7L352 485.5V288zm8.7-188.6 65.5 91.7v-87c0-4.4 3.6-8 8-8s8 3.6 8 8v112c0 3.5-2.2 6.6-5.6 7.6s-6.9-.1-9-3L272 129v87c0 4.4-3.6 8-8 8s-8-3.6-8-8V104c0-3.5 2.2-6.6 5.6-7.6s6.9.1 9 3zM144 104v72c0 17.7 14.3 32 32 32s32-14.3 32-32v-72c0-4.4 3.6-8 8-8s8 3.6 8 8v72c0 26.5-21.5 48-48 48s-48-21.5-48-48v-72c0-4.4 3.6-8 8-8s8 3.6 8 8"})
+);
+
+export default LanHelmetUnThin;

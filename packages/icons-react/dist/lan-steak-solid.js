@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanSteakSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M143.9 288.1c56.7 0 109.3-22.2 137.5-74.3l45.5-84.1c11.3-20.8 33-33.8 56.7-33.8 35.6 0 64.4 28.8 64.4 64.4V288c0 53-43 96-96 96H143.9c-26.4 0-47.9-21.5-47.9-47.9s21.5-47.9 47.9-47.9zM416 192a32 32 0 1 0-64 0 32 32 0 1 0 64 0m-272.1.1C64.4 192.1 0 256.6 0 336.1S64.4 480 143.9 480H352c106 0 192-86 192-192V160.4C544 71.8 472.2 0 383.6 0c-58.9 0-113.1 32.3-141.1 84.1L197 168.2c-11.3 20.9-31.8 24-53 24zm0 64c45 0 86.7-15.8 109.3-57.5l45.5-84.1C315.5 83.4 348.1 64 383.5 64c53.3 0 96.4 43.2 96.4 96.4L480 288c0 70.7-57.3 128-128 128H143.9C99.8 416 64 380.2 64 336.1s35.8-79.9 79.9-79.9z"})
+);
+
+export default LanSteakSolid;

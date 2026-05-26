@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanFlyingDiscSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M23.7 456.3C3 435.6-3.6 404 1.8 366.6c2 3 4.2 5.9 6.7 8.7L12 379l3.7 3.5c18.9 16.7 42.3 21.9 62.7 21.7 21.6-.2 43.6-6.1 64.2-14.5 41.4-17 86.2-48.3 126.4-88.6s71.5-85 88.6-126.4c8.5-20.6 14.4-42.6 14.5-64.2.2-21.8-5.7-46.9-25.2-66.4-3.9-3.9-8.1-7.3-12.4-10.2 37.4-5.5 69.1 1.2 89.7 21.9 55.3 55.3 10.5 189.8-100.2 300.5S79 511.6 23.7 456.3m211.4-189.2C161.4 340.9 76.7 375.8 45.9 345s4.1-115.4 77.9-189.2S282.2 47.2 313 77.9s-4.1 115.4-77.9 189.2"})
+);
+
+export default LanFlyingDiscSolid;

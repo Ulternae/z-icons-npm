@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanPeoplePantsSimpleThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M96 112a48 48 0 1 0 0-96 48 48 0 1 0 0 96M96 0a64 64 0 1 1 0 128A64 64 0 1 1 96 0M72 176c-30.9 0-56 25.1-56 56v48c0 20.7 11.2 38.8 28 48.5 2.5 1.4 4 4.1 4 6.9V464c0 17.7 14.3 32 32 32h32c17.7 0 32-14.3 32-32V335.4c0-2.9 1.5-5.5 4-6.9 16.8-9.7 28-27.8 28-48.5v-48c0-30.9-25.1-56-56-56zM0 232c0-39.8 32.2-72 72-72h48c39.8 0 72 32.2 72 72v48c0 25-12.7 47-32 59.9V464c0 26.5-21.5 48-48 48H80c-26.5 0-48-21.5-48-48V339.9C12.7 327 0 305 0 280zm352-120a48 48 0 1 0 0-96 48 48 0 1 0 0 96m0-112a64 64 0 1 1 0 128 64 64 0 1 1 0-128m-24 176c-30.9 0-56 25.1-56 56v48c0 20.7 11.2 38.8 28 48.5 2.5 1.4 4 4.1 4 6.9V464c0 17.7 14.3 32 32 32h32c17.7 0 32-14.3 32-32V335.4c0-2.9 1.5-5.5 4-6.9 16.8-9.7 28-27.8 28-48.5v-48c0-30.9-25.1-56-56-56zm-72 56c0-39.8 32.2-72 72-72h48c39.8 0 72 32.2 72 72v48c0 25-12.7 47-32 59.9V464c0 26.5-21.5 48-48 48h-32c-26.5 0-48-21.5-48-48V339.9C268.7 327 256 305 256 280z"})
+);
+
+export default LanPeoplePantsSimpleThin;

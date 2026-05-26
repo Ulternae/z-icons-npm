@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanArrowsTurnToDotsThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M250.3 18.3c3.1-3.1 8.2-3.1 11.3 0s3.1 8.2 0 11.3L203.3 88H352c53 0 96 43 96 96v32c0 4.4-3.6 8-8 8s-8-3.6-8-8v-32c0-44.2-35.8-80-80-80H203.3l58.3 58.3c3.1 3.1 3.1 8.2 0 11.3s-8.2 3.1-11.3 0l-72-72c-3.1-3.1-3.1-8.2 0-11.3zm-52.7 272 72 72c3.1 3.1 3.1 8.2 0 11.3l-72 72c-3.1 3.1-8.2 3.1-11.3 0s-3.1-8.2 0-11.3l58.4-58.3H96c-44.2 0-80 35.8-80 80v32c0 4.4-3.6 8-8 8s-8-3.6-8-8v-32c0-53 43-96 96-96h148.7l-58.3-58.3c-3.1-3.1-3.1-8.2 0-11.3s8.2-3.1 11.3 0zM384 416a48 48 0 1 0 0-96 48 48 0 1 0 0 96m0-112a64 64 0 1 1 0 128 64 64 0 1 1 0-128M16 96a48 48 0 1 0 96 0 48 48 0 1 0-96 0m112 0A64 64 0 1 1 0 96a64 64 0 1 1 128 0"})
+);
+
+export default LanArrowsTurnToDotsThin;

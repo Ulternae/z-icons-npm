@@ -1,0 +1,2 @@
+export declare const LanSquareEllipsisVerticalRegular: string;
+export default LanSquareEllipsisVerticalRegular;

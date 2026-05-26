@@ -1,0 +1,2 @@
+export declare const LanAnchorCircleExclamationSolid: string;
+export default LanAnchorCircleExclamationSolid;

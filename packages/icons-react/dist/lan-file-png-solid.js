@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanFilePngSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M96 0C60.7 0 32 28.7 32 64v384c0 35.3 28.7 64 64 64h80V400c0-35.3 28.7-64 64-64h176V170.5c0-17-6.7-33.3-18.7-45.3L290.7 18.7C278.7 6.7 262.5 0 245.5 0zm261.5 176H264c-13.3 0-24-10.7-24-24V58.5zm28.4 215.1c-4.1-8.3-13.5-12.7-22.5-10.5S348 390.7 348 400v128c0 11 9 20 20 20s20-9 20-20v-43.3l26.1 52.2c4.1 8.3 13.5 12.7 22.5 10.5S452 537.3 452 528V400c0-11-9-20-20-20s-20 9-20 20v43.3zM240 380c-11 0-20 9-20 20v128c0 11 9 20 20 20s20-9 20-20v-28h12c33.1 0 60-26.9 60-60s-26.9-60-60-60zm32 80h-12v-40h12c11 0 20 9 20 20s-9 20-20 20m204-36v80c0 24.3 19.7 44 44 44h16c24.3 0 44-19.7 44-44v-24c0-11-9-20-20-20h-8c-11 0-20 9-20 20 0 6.5 3.1 12.4 8 16v8c0 2.2-1.8 4-4 4h-16c-2.2 0-4-1.8-4-4v-80c0-2.2 1.8-4 4-4h20.4c1.9 9.1 9.9 16 19.6 16 11 0 20-9 20-20 0-19.9-16.1-36-36-36h-24c-24.3 0-44 19.7-44 44"})
+);
+
+export default LanFilePngSolid;

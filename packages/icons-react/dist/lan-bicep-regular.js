@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanBicepRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M232.1 0c30.9 0 56 25.1 56 56v48c0 48.6-39.4 88-88 88h-2.2l5.2 67.9c39.1-22.8 84.6-35.9 133.1-35.9 63.5 0 121.8 22.4 167.3 59.8 10.2 8.4 11.7 23.5 3.3 33.8-8.4 10.2-23.5 11.7-33.8 3.3-37.3-30.6-84.9-48.9-136.9-48.9-48.4 0-92.9 15.9-128.9 42.7l2.1 27.6c1 13.2-8.9 24.7-22.1 25.8s-24.7-8.9-25.8-22.1l-17.3-226.8c-1-13.2 8.9-24.7 22.1-25.8s24.7 8.9 25.8 22.1l2.2 28.4h5.9c22.1 0 40-17.9 40-40v-48c0-4.4-3.6-8-8-8l-111.7.1c-18 0-32.8 11.8-36.4 28.1C70 138.3 48.2 255.9 48.2 384c0 44 35.6 79.8 79.6 80l358.8-23.9c13.2-.9 24.6 9.1 25.5 22.3s-9.1 24.6-22.3 25.5l-360 24-.8.1h-.8C57.4 512 .1 454.7.1 384c0-133.1 22.6-254.5 37-318.5C46 26.1 81.2 0 120.4 0z"})
+);
+
+export default LanBicepRegular;

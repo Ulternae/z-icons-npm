@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanTree = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M224-32c4.7 0 9.1 2.1 12.2 5.6l136 160c4 4.8 5 11.4 2.3 17.1s-8.3 9.3-14.5 9.3h-55.8l100 117.6c4 4.8 5 11.4 2.3 17.1s-8.3 9.3-14.5 9.3h-55.8l100 117.6c4 4.8 5 11.4 2.3 17.1s-8.3 9.3-14.5 9.3H240v80c0 8.8-7.2 16-16 16s-16-7.2-16-16v-80H24c-6.2 0-11.9-3.6-14.5-9.3s-1.7-12.3 2.3-17.1l100-117.6H56c-6.2 0-11.9-3.6-14.5-9.3s-1.7-12.3 2.3-17.1l100-117.6H88c-6.2 0-11.9-3.6-14.5-9.3s-1.7-12.3 2.3-17.1l136-160 2.5-2.4c2.8-2.1 6.1-3.2 9.7-3.2M122.6 128h55.8c6.2 0 11.9 3.6 14.5 9.3s1.7 12.3-2.3 17.1L90.6 272h55.8c6.2 0 11.9 3.6 14.5 9.3s1.7 12.3-2.3 17.1L58.6 416h330.8l-100-117.6c-4-4.7-5-11.4-2.3-17.1s8.3-9.3 14.5-9.3h55.8l-100-117.6c-4-4.8-5-11.4-2.3-17.1s8.3-9.3 14.5-9.3h55.8L224 8.7z"})
+);
+
+export default LanTree;

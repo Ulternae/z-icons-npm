@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanDigitalTachographThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M512 80c26.5 0 48 21.5 48 48v256c0 26.5-21.5 48-48 48H64c-26.5 0-48-21.5-48-48V128c0-26.5 21.5-48 48-48zM64 64C28.7 64 0 92.7 0 128v256c0 35.3 28.7 64 64 64h448c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64zm192 80c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16v-32c0-8.8 7.2-16 16-16zM96 128c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32h160c17.7 0 32-14.3 32-32v-32c0-17.7-14.3-32-32-32zm288 64a48 48 0 1 1 96 0 48 48 0 1 1-96 0m112 0a64 64 0 1 0-128 0 64 64 0 1 0 128 0M64 376c0 4.4 3.6 8 8 8h176c4.4 0 8-3.6 8-8s-3.6-8-8-8H72c-4.4 0-8 3.6-8 8m256 0c0 4.4 3.6 8 8 8h176c4.4 0 8-3.6 8-8s-3.6-8-8-8H328c-4.4 0-8 3.6-8 8M80 304a16 16 0 1 0 0-32 16 16 0 1 0 0 32m96-16a16 16 0 1 0-32 0 16 16 0 1 0 32 0m64 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32"})
+);
+
+export default LanDigitalTachographThin;

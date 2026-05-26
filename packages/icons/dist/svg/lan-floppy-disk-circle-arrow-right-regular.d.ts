@@ -1,0 +1,2 @@
+export declare const LanFloppyDiskCircleArrowRightRegular: string;
+export default LanFloppyDiskCircleArrowRightRegular;

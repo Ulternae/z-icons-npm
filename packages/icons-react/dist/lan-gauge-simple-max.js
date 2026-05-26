@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanGaugeSimpleMax = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M256 480a224 224 0 1 0 0-448 224 224 0 1 0 0 448m0-480a256 256 0 1 1 0 512 256 256 0 1 1 0-512m0 384a32 32 0 1 0 0-64 32 32 0 1 0 0 64m0 32c-35.3 0-64-28.7-64-64s28.7-64 64-64c17.5 0 33.4 7 44.9 18.4l106.9-64.1c7.6-4.5 17.4-2.1 22 5.5s2.1 17.4-5.5 22l-106.9 64c1.7 5.8 2.6 11.9 2.6 18.2 0 35.3-28.7 64-64 64"})
+);
+
+export default LanGaugeSimpleMax;

@@ -1,0 +1,2 @@
+export const LanGlassCitrusSolid = '<svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M512 80c0-44.2-35.8-80-80-80-18 0-34.6 6-48 16h-81c23.6-47.4 72.5-80 129-80C511.5-64 576 .5 576 80c0 68.5-47.9 125.9-112 140.4v-67.1c28.3-12.3 48-40.5 48-73.3M64 96c0-17.7 14.3-32 32-32h288c17.7 0 32 14.3 32 32v288c0 70.7-57.3 128-128 128h-96c-70.7 0-128-57.3-128-128zm64 32v128h224V128z"/></svg>';
+export default LanGlassCitrusSolid;

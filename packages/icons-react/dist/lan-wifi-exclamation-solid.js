@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanWifiExclamationSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M288 32c-27.2 0-48.7 23.1-46.8 50.2l14.9 208C257.3 307 271.2 320 288 320s30.7-13 31.9-29.7l14.9-208C336.7 55.1 315.2 32 288 32m-94.7 53.7c-1.1-15.7 1.6-30.7 7.4-44.1-73.3 16.3-139 52.7-191 103.1C-3 157-3.3 177.3 9 189.9s32.6 13 45.2.7c39-37.8 87.1-66.2 140.7-81.6l-1.7-23.4zm189.3 0L381 109c53.6 15.4 101.7 43.8 140.7 81.6 12.7 12.3 33 12 45.2-.7s12-33-.7-45.2c-52-50.4-117.7-86.8-191-103.1 5.8 13.4 8.5 28.4 7.4 44.1M120 283.8c-11.7 13.3-10.4 33.5 2.8 45.2s33.5 10.4 45.2-2.8c11.5-13 25.1-24.2 40.2-32.9l-4.9-68.7c-32.2 13.2-60.6 33.6-83.3 59.2m252.7-59.2-4.9 68.7c15.1 8.7 28.7 19.9 40.2 32.9 11.7 13.3 31.9 14.5 45.2 2.8s14.5-31.9 2.8-45.2c-22.6-25.6-51.1-46.1-83.3-59.2M336 432a48 48 0 1 0-96 0 48 48 0 1 0 96 0"})
+);
+
+export default LanWifiExclamationSolid;

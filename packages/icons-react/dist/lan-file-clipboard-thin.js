@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanFileClipboardThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M64 16h224c26.5 0 48 21.5 48 48v48h16V64c0-35.3-28.7-64-64-64H64C28.7 0 0 28.7 0 64v320c0 35.3 28.7 64 64 64h112v-16H64c-26.5 0-48-21.5-48-48V64c0-26.5 21.5-48 48-48m46.6 80H88c-4.4 0-8 3.6-8 8s3.6 8 8 8h144c4.4 0 8-3.6 8-8s-3.6-8-8-8zM448 496H288c-26.5 0-48-21.5-48-48V224c0-26.5 21.5-48 48-48h102.3c12.4 0 24.3 4.8 33.2 13.4l57.7 55.4c9.4 9.1 14.8 21.6 14.8 34.6V448c0 26.5-21.5 48-48 48M224 224v224c0 35.3 28.7 64 64 64h160c35.3 0 64-28.7 64-64V279.4c0-17.4-7.1-34.1-19.7-46.2l-57.8-55.4a64.1 64.1 0 0 0-44.3-17.8H288c-35.3 0-64 28.7-64 64"})
+);
+
+export default LanFileClipboardThin;

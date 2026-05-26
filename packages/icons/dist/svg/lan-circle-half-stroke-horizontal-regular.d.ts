@@ -1,0 +1,2 @@
+export declare const LanCircleHalfStrokeHorizontalRegular: string;
+export default LanCircleHalfStrokeHorizontalRegular;

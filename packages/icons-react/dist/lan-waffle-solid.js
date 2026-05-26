@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanWaffleSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M0 256a256 256 0 1 1 512 0 256 256 0 1 1-512 0M160 80c-8.8 0-16 7.2-16 16v48H96c-8.8 0-16 7.2-16 16s7.2 16 16 16h48v64H64c-8.8 0-16 7.2-16 16s7.2 16 16 16h80v64H96c-8.8 0-16 7.2-16 16s7.2 16 16 16h48v48c0 8.8 7.2 16 16 16s16-7.2 16-16v-48h64v80c0 8.8 7.2 16 16 16s16-7.2 16-16v-80h64v48c0 8.8 7.2 16 16 16s16-7.2 16-16v-48h48c8.8 0 16-7.2 16-16s-7.2-16-16-16h-48v-64h80c8.8 0 16-7.2 16-16s-7.2-16-16-16h-80v-64h48c8.8 0 16-7.2 16-16s-7.2-16-16-16h-48V96c0-8.8-7.2-16-16-16s-16 7.2-16 16v48h-64V64c0-8.8-7.2-16-16-16s-16 7.2-16 16v80h-64V96c0-8.8-7.2-16-16-16m16 256v-64h64v64zm96 0v-64h64v64zm64-160v64h-64v-64zm-96 0v64h-64v-64z"})
+);
+
+export default LanWaffleSolid;

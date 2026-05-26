@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanMusicSlash = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M27.3-27.2c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6l544 544c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L461.1 406.6c30.3-13.5 50.9-40 50.9-70.6V55.9c0-30.7-28.4-53.5-58.4-46.9l-224 49.8c-22 4.9-37.6 24.4-37.6 46.9v31.8zm205.4 205.3-8.7-8.7v-63.8c0-7.5 5.2-14 12.5-15.6l224-49.8c10-2.2 19.5 5.4 19.5 15.6v67.3zm26.8 26.8 220.5-49v120.4c-17-12.7-39.4-20.4-64-20.4-30.5 0-57.6 11.8-75.2 30.3zm103.8 103.9c11.5-12.5 30.8-20.8 52.7-20.8 35.3 0 64 21.5 64 48 0 21.2-18.4 39.3-43.9 45.6zM192 340.4c-17-12.7-39.4-20.4-64-20.4-53 0-96 35.8-96 80s43 80 96 80 96-35.8 96-80V282.5l-32-32zm0 59.6c0 26.5-28.7 48-64 48s-64-21.5-64-48 28.7-48 64-48 64 21.5 64 48"})
+);
+
+export default LanMusicSlash;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanLaptopMedicalThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M128 48h384c26.5 0 48 21.5 48 48v240h16V96c0-35.3-28.7-64-64-64H128c-35.3 0-64 28.7-64 64v240h16V96c0-26.5 21.5-48 48-48m492.8 352c1.8 0 3.2 1.4 3.2 3.2 0 33.6-27.2 60.8-60.8 60.8H76.8C43.2 464 16 436.8 16 403.2c0-1.8 1.4-3.2 3.2-3.2zM19.2 384C8.6 384 0 392.6 0 403.2 0 445.6 34.4 480 76.8 480h486.4c42.4 0 76.8-34.4 76.8-76.8 0-10.6-8.6-19.2-19.2-19.2zM296 152c0-4.4 3.6-8 8-8h32c4.4 0 8 3.6 8 8v40c0 4.4 3.6 8 8 8h40c4.4 0 8 3.6 8 8v32c0 4.4-3.6 8-8 8h-40c-4.4 0-8 3.6-8 8v40c0 4.4-3.6 8-8 8h-32c-4.4 0-8-3.6-8-8v-40c0-4.4-3.6-8-8-8h-40c-4.4 0-8-3.6-8-8v-32c0-4.4 3.6-8 8-8h40c2.1 0 4.2-.8 5.7-2.3s2.3-3.5 2.3-5.7zm8-24c-13.3 0-24 10.7-24 24v32h-32c-13.3 0-24 10.7-24 24v32c0 13.3 10.7 24 24 24h32v32c0 13.3 10.7 24 24 24h32c13.3 0 24-10.7 24-24v-32h32c13.3 0 24-10.7 24-24v-32c0-13.3-10.7-24-24-24h-32v-32c0-13.3-10.7-24-24-24z"})
+);
+
+export default LanLaptopMedicalThin;

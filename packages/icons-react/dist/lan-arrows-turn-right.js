@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanArrowsTurnRight = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M332.7-3.3c6.2-6.2 16.4-6.2 22.6 0l88 88c6.2 6.2 6.2 16.4 0 22.6l-88 88c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l60.7-60.7H128c-53 0-96 43-96 96v32c0 8.8-7.2 16-16 16s-16-7.2-16-16v-32C0 137.3 57.3 80 128 80h265.4l-60.7-60.7c-6.2-6.2-6.2-16.4 0-22.6m-88 264c6.2-6.2 16.4-6.2 22.6 0l80 80c6.2 6.2 6.2 16.4 0 22.6l-80 80c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l52.7-52.7H96c-35.3 0-64 28.7-64 64v32c0 8.8-7.2 16-16 16s-16-7.2-16-16v-32c0-53 43-96 96-96h201.4l-52.7-52.7c-6.2-6.2-6.2-16.4 0-22.6"})
+);
+
+export default LanArrowsTurnRight;

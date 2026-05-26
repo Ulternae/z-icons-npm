@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCaravan = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M96 64c-17.7 0-32 14.3-32 32v256c0 17.7 14.3 32 32 32h49.6c14.6-28.5 44.2-48 78.4-48s63.8 19.5 78.4 48H320V168c0-22.1 17.9-40 40-40h48c22.1 0 40 17.9 40 40v216h64V160c0-53-43-96-96-96zm288 208c0-8.8 7.2-16 16-16h16v-88c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v216h64v-96h-16c-8.8 0-16-7.2-16-16M136.4 416H96c-35.3 0-64-28.7-64-64V96c0-35.3 28.7-64 64-64h320c70.7 0 128 57.3 128 128v224h80c8.8 0 16 7.2 16 16s-7.2 16-16 16H311.6c.2 2.6.4 5.3.4 8 0 48.6-39.4 88-88 88s-88-39.4-88-88c0-2.7.1-5.4.4-8M216 160h-48c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8m-48-32h48c22.1 0 40 17.9 40 40v48c0 22.1-17.9 40-40 40h-48c-22.1 0-40-17.9-40-40v-48c0-22.1 17.9-40 40-40m56 352a56 56 0 1 0 0-112 56 56 0 1 0 0 112"})
+);
+
+export default LanCaravan;

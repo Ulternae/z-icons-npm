@@ -1,0 +1,2 @@
+export declare const LanMicrophoneCircleXmarkRegular: string;
+export default LanMicrophoneCircleXmarkRegular;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanTablePicnicSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M93.7 427.9c-6.6 16.4-25.2 24.4-41.6 17.8s-24.4-25.2-17.8-41.6L61.5 336h68.9l-36.8 91.9zm384-23.8c6.6 16.4-1.4 35-17.8 41.6s-35-1.4-41.6-17.8L381.6 336h68.9l27.3 68.1zM416 64c17.7 0 32 14.3 32 32s-14.3 32-32 32h-48.7l38.4 96H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h74.3l38.4-96H95.9c-17.7 0-32-14.3-32-32S78.3 64 96 64zM175.2 224h161.5l-38.4-96h-84.7z"})
+);
+
+export default LanTablePicnicSolid;

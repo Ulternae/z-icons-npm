@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanFilePrescription = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 384 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M64 32h128v96c0 35.3 28.7 64 64 64h96v256c0 17.7-14.3 32-32 32H64c-17.7 0-32-14.3-32-32V64c0-17.7 14.3-32 32-32m160 13.3L338.7 160H256c-17.7 0-32-14.3-32-32zM64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V186.5c0-17-6.7-33.3-18.7-45.3L242.7 18.7C230.7 6.7 214.5 0 197.5 0zm48 224c-8.8 0-16 7.2-16 16v144c0 8.8 7.2 16 16 16s16-7.2 16-16v-48h10l59.4 52-32.7 32.7c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l34.2-34.2 39.9 34.9c6.7 5.8 16.8 5.1 22.6-1.5s5.1-16.8-1.5-22.6l-38.3-33.5 39.1-39.1c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0l-40.6 40.6-36.1-31.6c23.2-6.9 40.1-28.3 40.1-53.7 0-30.9-25.1-56-56-56h-56zm32 80h-16v-48h40c13.3 0 24 10.7 24 24s-10.7 24-24 24z"})
+);
+
+export default LanFilePrescription;

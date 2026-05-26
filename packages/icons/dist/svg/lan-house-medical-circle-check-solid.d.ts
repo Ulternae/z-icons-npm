@@ -1,0 +1,2 @@
+export declare const LanHouseMedicalCircleCheckSolid: string;
+export default LanHouseMedicalCircleCheckSolid;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCameraCircleSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512m-60-352 6.2-16.4c3.5-9.4 12.5-15.6 22.5-15.6h62.7c10 0 19 6.2 22.5 15.6l6.2 16.4h28c22.1 0 40 17.9 40 40v112c0 22.1-17.9 40-40 40h-176c-22.1 0-40-17.9-40-40V200c0-22.1 17.9-40 40-40h28zm108 96a48 48 0 1 0-96 0 48 48 0 1 0 96 0"})
+);
+
+export default LanCameraCircleSolid;

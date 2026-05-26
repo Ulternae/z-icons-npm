@@ -1,0 +1,2 @@
+export const LanBedEmptyRegular = '<svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M48 56c0-13.3-10.7-24-24-24S0 42.7 0 56v400c0 13.3 10.7 24 24 24s24-10.7 24-24v-72h480v80c0 13.3 10.7 24 24 24s24-10.7 24-24V280c0-66.3-53.7-120-120-120H48zm480 280H48V208h408c39.8 0 72 32.2 72 72z"/></svg>';
+export default LanBedEmptyRegular;

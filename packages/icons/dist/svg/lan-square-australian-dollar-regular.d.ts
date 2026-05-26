@@ -1,0 +1,2 @@
+export declare const LanSquareAustralianDollarRegular: string;
+export default LanSquareAustralianDollarRegular;

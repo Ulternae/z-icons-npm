@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCircleUserCircleMinus = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M310 352c2.9-11.1 6.7-21.8 11.4-32H256c-59.9 0-110.1 41.1-124.1 96.6C90 375.9 64 319 64 256 64 132.3 164.3 32 288 32c107.3 0 197.1 75.5 218.9 176.3 11.5.6 22.7 2.3 33.5 4.9C520.1 92.2 414.8 0 288 0 146.6 0 32 114.6 32 256s114.6 256 256 256c16.7 0 33-1.6 48.8-4.6-6.3-9.3-11.8-19.3-16.4-29.7-10.6 1.5-21.4 2.3-32.4 2.3-47.5 0-91.5-14.8-127.7-39.9 4-49.3 45.3-88.1 95.7-88.1zm-22-112a48 48 0 1 1 0-96 48 48 0 1 1 0 96m-80-48a80 80 0 1 0 160 0 80 80 0 1 0-160 0m288 96a112 112 0 1 1 0 224 112 112 0 1 1 0-224m0 256a144 144 0 1 0 0-288 144 144 0 1 0 0 288m80-144c0-8.8-7.2-16-16-16H432c-8.8 0-16 7.2-16 16s7.2 16 16 16h128c8.8 0 16-7.2 16-16"})
+);
+
+export default LanCircleUserCircleMinus;

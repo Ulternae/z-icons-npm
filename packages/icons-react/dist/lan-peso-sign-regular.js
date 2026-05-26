@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanPesoSignRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M104 32c-13.3 0-24 10.7-24 24v72H56c-13.3 0-24 10.7-24 24s10.7 24 24 24h24v32H56c-13.3 0-24 10.7-24 24s10.7 24 24 24h24v200c0 13.3 10.7 24 24 24s24-10.7 24-24V352h96c65.6 0 122-39.5 146.7-96H408c13.3 0 24-10.7 24-24s-10.7-24-24-24h-24.8c.5-5.3.8-10.6.8-16s-.3-10.7-.8-16H408c13.3 0 24-10.7 24-24s-10.7-24-24-24h-37.3C346 71.5 289.6 32 224 32zm211.9 96H128V80h96c38.1 0 71.7 19 91.9 48M128 176h206.9c.7 5.2 1.1 10.6 1.1 16s-.4 10.8-1.1 16H128zm187.9 80c-20.2 29-53.9 48-91.9 48h-96v-48z"})
+);
+
+export default LanPesoSignRegular;

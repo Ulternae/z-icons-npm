@@ -1,0 +1,2 @@
+export declare const LanLightbulbExclamationOnRegular: string;
+export default LanLightbulbExclamationOnRegular;

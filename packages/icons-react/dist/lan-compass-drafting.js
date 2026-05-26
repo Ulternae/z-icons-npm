@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCompassDrafting = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M320 96a64 64 0 1 0-128 0 64 64 0 1 0 128 0m-21.7 86.2c-12.8 6.3-27.1 9.8-42.3 9.8s-29.5-3.5-42.3-9.8l-71.5 125.2C176.1 325.7 214.8 336 256 336c88.8 0 166.4-48.2 207.9-120 4.4-7.6 14.2-10.3 21.9-5.8s10.3 14.2 5.8 21.9c-47 81.3-134.9 136-235.6 136-47 0-91.1-11.9-129.7-32.8L29.9 503.9c-4.4 7.7-14.2 10.3-21.8 6s-10.3-14.2-6-21.8l97-169.8c-32.1-22.7-59-52.1-78.7-86.2-4.4-7.6-1.8-17.4 5.8-21.9s17.4-1.8 21.9 5.8c16.9 29.2 39.8 54.6 67 74.3l72.5-126.9C170.5 146.1 160 122.3 160 96c0-53 43-96 96-96s96 43 96 96c0 26.3-10.5 50.1-27.6 67.4l48.5 84.9c-8.5 6.5-17.5 12.3-26.9 17.3l-47.7-83.5zm211.6 305.9c4.4 7.7 1.7 17.4-6 21.8s-17.4 1.7-21.8-6l-72.6-127.1q14.1-7.65 27.3-16.8l73.1 128z"})
+);
+
+export default LanCompassDrafting;

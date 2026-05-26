@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanFaceFrown = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M480 256a224 224 0 1 0-448 0 224 224 0 1 0 448 0M0 256a256 256 0 1 1 512 0 256 256 0 1 1-512 0m353.3 140.9C329.8 369.4 295 352 256 352s-73.8 17.4-97.3 44.9c-5.7 6.7-15.8 7.5-22.6 1.8s-7.5-15.8-1.8-22.6c29.3-34.3 73-56.1 121.7-56.1s92.4 21.8 121.7 56.1c5.7 6.7 5 16.8-1.8 22.6s-16.8 5-22.6-1.8M152 208a24 24 0 1 1 48 0 24 24 0 1 1-48 0m184-24a24 24 0 1 1 0 48 24 24 0 1 1 0-48"})
+);
+
+export default LanFaceFrown;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanVestThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"m224 261.3 70.4-223.9C280.8 50.8 258.6 64 224 64s-56.8-13.2-70.4-26.6zM329.6 16c-7 0-13.2 4.5-15.3 11.2l-80.5 256.2q-1.8 5.85-1.8 12V496h176c13.3 0 24-10.7 24-24V293.3c0-7.3-2-14.4-5.7-20.6L392 215.5c-5.2-8.7-8-18.7-8-28.8V40c0-13.3-10.7-24-24-24zM344 0h16c22.1 0 40 17.9 40 40v146.7c0 7.2 2 14.4 5.7 20.6l34.3 57.2c5.2 8.7 8 18.7 8 28.8V472c0 22.1-17.9 40-40 40H40c-22.1 0-40-17.9-40-40V293.3c0-10.2 2.8-20.1 8-28.8l34.3-57.2C46 201.1 48 194 48 186.7V40C48 17.9 65.9 0 88 0h32.4c17 0 31.2 10.9 40.6 21.9C171.2 33.8 190.3 48 224 48s52.8-14.2 63-26.1c9.4-11 23.6-21.9 40.6-21.9zM104 16H88c-13.3 0-24 10.7-24 24v146.7c0 10.1-2.8 20.1-8 28.8l-34.3 57.2C18 278.9 16 286 16 293.3V472c0 13.3 10.7 24 24 24h176V295.4q0-6.15-1.8-12L133.6 27.2c-2.1-6.7-8.3-11.2-15.3-11.2z"})
+);
+
+export default LanVestThin;

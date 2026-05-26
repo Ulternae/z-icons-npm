@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanFeatherThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M339.2 161.4c3.1-3.1 8.2-3.1 11.3 0s3.1 8.2 0 11.3l-51.2 51.2h181c10.2-19.6 15.7-41.5 15.7-64 0-36.7-14.6-72-40.6-97.9l-5.5-5.5C424 30.6 388.7 16 352 16s-72 14.6-97.9 40.6L150.3 160.3C105.3 205.3 80 266.4 80 330v90.6zM283.3 240l-80 80h190.1l62.1-62.1c5.6-5.6 10.6-11.6 15.1-17.9H283.4zM400 336l-37 37c-48 48-113.1 75-181 75H75.4l-61.7 61.7c-3.1 3.1-8.2 3.1-11.3 0s-3.1-8.2 0-11.3L64 436.7V330c0-67.9 27-133 75-181L242.7 45.3C271.7 16.3 311 0 352 0s80.3 16.3 109.3 45.3l5.5 5.5C495.7 79.7 512 119 512 160s-16.3 80.3-45.3 109.3zm-22.6 0H187.3l-96 96h90.6c63.7 0 124.7-25.3 169.7-70.3z"})
+);
+
+export default LanFeatherThin;

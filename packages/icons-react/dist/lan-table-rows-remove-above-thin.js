@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanTableRowsRemoveAboveThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M.3 89.5c3.1-30.1 27-54.1 57.1-57.1l6.5-.3h32v16h-32C37.5 48 16 69.5 16 96v152h416V96c0-26.5-21.5-48-48-48h-32V32h32l6.5.3C422.8 35.6 448 62.9 448 96v320c0 35.3-28.7 64-64 64H64l-6.5-.3C25.2 476.4 0 449.1 0 416V96zM16 416c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48V264H16zM158.8 10.2c-3.1-3.1-3.1-8.2 0-11.3s8.2-3.1 11.3 0L224 52.7l53.8-53.9c3.1-3.1 8.2-3.1 11.3 0s3.1 8.2 0 11.3L235.3 64l53.9 53.8c3.1 3.1 3.1 8.2 0 11.3s-8.2 3.1-11.3 0L224 75.3l-53.8 53.9c-3.1 3.1-8.2 3.1-11.3 0s-3.1-8.2 0-11.3L212.7 64z"})
+);
+
+export default LanTableRowsRemoveAboveThin;

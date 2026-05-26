@@ -1,0 +1,2 @@
+export declare const LanRectangleVerticalHistorySolid: string;
+export default LanRectangleVerticalHistorySolid;

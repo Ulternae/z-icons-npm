@@ -1,0 +1,8 @@
+import React from 'react';
+
+export interface LanStopThinProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+  size?: string | number;
+}
+
+export declare const LanStopThin: React.FC<LanStopThinProps>;
+export default LanStopThin;

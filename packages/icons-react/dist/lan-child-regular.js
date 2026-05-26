@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanChildRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 320 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M160 96a24 24 0 1 0 0-48 24 24 0 1 0 0 48m0-96a72 72 0 1 1 0 144 72 72 0 1 1 0-144m-32 214v122h64V214.4c-10.2-4.2-21.2-6.4-32.4-6.4-11 0-21.6 2.1-31.6 6m0 170v104c0 13.3-10.7 24-24 24s-24-10.7-24-24V257.9l-36.3 51.9c-7.6 10.9-22.6 13.5-33.4 5.9s-13.5-22.6-5.9-33.4L50.1 217c25-35.7 65.9-57 109.5-57 43.2 0 83.7 20.8 108.8 56l47.2 66.1c7.7 10.8 5.2 25.8-5.6 33.5s-25.8 5.2-33.5-5.6L240 258.9V488c0 13.3-10.7 24-24 24s-24-10.7-24-24V384z"})
+);
+
+export default LanChildRegular;

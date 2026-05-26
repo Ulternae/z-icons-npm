@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanArrowAltFromLeftThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"m493.7 250.3-144-144c-2.3-2.3-5.7-3-8.7-1.7s-4.9 4.2-4.9 7.4v88c0 4.4-3.6 8-8 8h-152c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32h152c4.4 0 8 3.6 8 8v88c0 3.2 1.9 6.2 4.9 7.4s6.4.6 8.7-1.7l144-144c3.1-3.1 3.1-8.2 0-11.3zM256 320h-80c-26.5 0-48-21.5-48-48v-32c0-26.5 21.5-48 48-48h144v-80c0-9.7 5.8-18.5 14.8-22.2s19.3-1.6 26.2 5.2l144 144c9.4 9.4 9.4 24.6 0 33.9L361 417c-6.9 6.9-17.2 8.9-26.2 5.2S320 409.7 320 400v-80zM8 64c4.4 0 8 3.6 8 8v368c0 4.4-3.6 8-8 8s-8-3.6-8-8V72c0-4.4 3.6-8 8-8"})
+);
+
+export default LanArrowAltFromLeftThin;

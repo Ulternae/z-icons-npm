@@ -1,0 +1,2 @@
+export declare const LanCodePullRequestClosedRegular: string;
+export default LanCodePullRequestClosedRegular;

@@ -1,0 +1,2 @@
+export const LanSlashBackThin = '<svg viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M3.8 1.2c-3.7 2.3-4.9 7.2-2.6 11l304 496c2.3 3.8 7.2 4.9 11 2.6s4.9-7.2 2.6-11l-304-496C12.5.1 7.6-1.1 3.8 1.2"/></svg>';
+export default LanSlashBackThin;

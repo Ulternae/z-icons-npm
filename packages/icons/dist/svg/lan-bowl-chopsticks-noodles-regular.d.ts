@@ -1,0 +1,2 @@
+export declare const LanBowlChopsticksNoodlesRegular: string;
+export default LanBowlChopsticksNoodlesRegular;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanWaveformSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M288 0c15.5 0 28.8 11.1 31.5 26.4l47.4 265.5 33.5-201.1c2.5-15 15.1-26.1 30.3-26.7s28.6 9.5 32.3 24.2L505 256h23c17.7 0 32 14.3 32 32s-14.3 32-32 32h-48c-14.7 0-27.5-10-31-24.2L438.3 253l-38.7 232.3c-2.6 15.4-15.8 26.6-31.4 26.7s-29-11-31.7-26.4L288 214l-48.5 271.6c-2.7 15.3-16.1 26.5-31.7 26.4s-28.8-11.4-31.4-26.7L137.7 253 127 295.8C123.5 310 110.7 320 96 320H48c-17.7 0-32-14.3-32-32s14.3-32 32-32h23l42-167.8c3.7-14.7 17.2-24.8 32.3-24.2s27.8 11.8 30.3 26.7l33.5 201.1 47.4-265.5C259.2 11.1 272.5 0 288 0"})
+);
+
+export default LanWaveformSolid;

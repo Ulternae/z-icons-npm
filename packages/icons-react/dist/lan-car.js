@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCar = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M108.9 107.8 80.8 192h350.3L403 107.8A63.87 63.87 0 0 0 342.3 64H169.7c-27.5 0-52 17.6-60.7 43.8zm-62.6 86.7 32.3-96.9C91.7 58.4 128.3 32 169.7 32h172.7c41.3 0 78 26.4 91.1 65.6l32.3 96.8c26.7 7.7 46.3 32.3 46.3 61.5v208c0 8.8-7.2 16-16 16s-16-7.2-16-16v-48h-448v48c0 8.8-7.2 16-16 16S0 472.8 0 464V256c0-29.2 19.6-53.8 46.3-61.5M64 224c-17.7 0-32 14.3-32 32v128h448V256c0-17.7-14.3-32-32-32zm40 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48m280 24a24 24 0 1 1 48 0 24 24 0 1 1-48 0"})
+);
+
+export default LanCar;

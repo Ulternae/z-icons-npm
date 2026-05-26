@@ -1,0 +1,2 @@
+export declare const LanStarfighterTwinIonEngineRegular: string;
+export default LanStarfighterTwinIonEngineRegular;

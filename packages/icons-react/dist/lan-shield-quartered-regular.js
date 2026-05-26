@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanShieldQuarteredRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M73.1 127c-5.9 2.5-9.1 7.8-9 12.8.1 17.9 1.6 38.4 5.1 60.3h162.9V59.7l-159 67.4zm6.7 121c20.9 73.9 65.9 153.7 152.3 202.3V248zm200.2 0v202.4C366.5 401.8 411.4 322 432.3 248zm162.9-48c3.5-21.9 5-42.3 5.1-60.3 0-5-3.1-10.2-9-12.8L280 59.5v140.4h162.9zM269.4 2.9l188.4 79.9c22 9.3 38.4 31 38.3 57.2-.5 99.2-41.3 280.7-213.6 363.2-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16.1 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.9 1 251.4 0 256 0s9.2 1 13.4 2.9"})
+);
+
+export default LanShieldQuarteredRegular;

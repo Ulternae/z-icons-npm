@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanBusAltThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M96 16h256c44.2 0 80 35.8 80 80H16c0-44.2 35.8-80 80-80m-80 96h416v160H16zm416 176v96c0 26.5-21.5 48-48 48H64c-26.5 0-48-21.5-48-48v-96zM128 448h192v32c0 17.7 14.3 32 32 32h32c17.7 0 32-14.3 32-32v-40.6c19.1-11.1 32-31.7 32-55.4V96c0-53-43-96-96-96H96C43 0 0 43 0 96v288c0 23.7 12.9 44.4 32 55.4V480c0 17.7 14.3 32 32 32h32c17.7 0 32-14.3 32-32zm-16 0v32c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16v-34c5.1 1.3 10.5 2 16 2zm224 32v-32h48c5.5 0 10.9-.7 16-2v34c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16M96 336a16 16 0 1 1 0 32 16 16 0 1 1 0-32m0 48a32 32 0 1 0 0-64 32 32 0 1 0 0 64m240-32a16 16 0 1 1 32 0 16 16 0 1 1-32 0m48 0a32 32 0 1 0-64 0 32 32 0 1 0 64 0"})
+);
+
+export default LanBusAltThin;

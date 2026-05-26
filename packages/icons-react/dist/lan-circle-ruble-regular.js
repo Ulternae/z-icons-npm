@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCircleRubleRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416m0 464a256 256 0 1 0 0-512 256 256 0 1 0 0 512m-80-368v104h-24c-8.8 0-16 7.2-16 16s7.2 16 16 16h24v40h-24c-8.8 0-16 7.2-16 16s7.2 16 16 16h24v16c0 13.3 10.7 24 24 24s24-10.7 24-24v-16h56c8.8 0 16-7.2 16-16s-7.2-16-16-16h-56v-24h56c48.6 0 88-39.4 88-88s-39.4-88-88-88h-80c-13.3 0-24 10.7-24 24m104 104h-56v-80h56c22.1 0 40 17.9 40 40s-17.9 40-40 40"})
+);
+
+export default LanCircleRubleRegular;

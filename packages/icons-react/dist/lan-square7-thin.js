@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanSquare7Thin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M64 48c-26.5 0-48 21.5-48 48v320c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48V96c0-26.5-21.5-48-48-48zM0 96c0-35.3 28.7-64 64-64h320c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64zm168 64h128c3 0 5.7 1.6 7.1 4.3s1.2 5.8-.5 8.2l-120 176c-2.5 3.7-7.5 4.6-11.1 2.1s-4.6-7.5-2.1-11.1L280.9 176H168c-4.4 0-8-3.6-8-8s3.6-8 8-8"})
+);
+
+export default LanSquare7Thin;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanFileExclamation = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 384 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M197.5 0c17 0 33.2 6.8 45.2 18.8l122.6 122.4c12 12 18.7 28.3 18.7 45.2V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0zM64 32c-17.7 0-32 14.3-32 32v384c0 17.7 14.3 32 32 32h256c17.7 0 32-14.3 32-32V192h-96c-35.3 0-64-28.7-64-64V32zm128 360c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24m0-176c13.6 0 24.3 11.6 23.4 25.1l-7.4 104c-.6 8.4-7.6 14.9-16 14.9s-15.4-6.5-16-14.9l-7.4-104c-1-13.6 9.8-25.1 23.4-25.1m32-88c0 17.7 14.3 32 32 32h82.7L224 45.2z"})
+);
+
+export default LanFileExclamation;

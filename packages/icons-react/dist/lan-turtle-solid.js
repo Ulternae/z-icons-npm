@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanTurtleSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M384 249.2c0 21.4-17.4 38.8-38.8 38.8H70.8C49.4 288 32 270.6 32 249.2V208c0-97.2 78.8-176 176-176s176 78.8 176 176zm96 38.8c-2 0-4-.1-5.9-.3-16.3 53.3-64.3 92.7-122.1 96v56.2c0 22.1-17.9 40-40 40h-48c-22.1 0-40-17.9-40-40v-56h-32v56c0 22.1-17.9 40-40 40h-48c-22.1 0-40-17.9-40-40v-56H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h312c39.8 0 72-32.2 72-72v-72c0-35.3 28.7-64 64-64 53 0 96 43 96 96v16c0 35.3-28.7 64-64 64h-32zm16-64a16 16 0 1 0 0-32 16 16 0 1 0 0 32"})
+);
+
+export default LanTurtleSolid;

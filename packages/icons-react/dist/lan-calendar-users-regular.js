@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCalendarUsersRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M216 0c13.3 0 24 10.7 24 24v40h160V24c0-13.3 10.7-24 24-24s24 10.7 24 24v40h32c35.3 0 64 28.7 64 64v81.1c-5.2-.7-10.6-1.1-16-1.1-21.1 0-40.9 5.8-57.7 16H169.7c-16.9-10.2-36.6-16-57.7-16-5.4 0-10.8.4-16 1.1V128c0-35.3 28.7-64 64-64h32V24c0-13.3 10.7-24 24-24m165.8 432c-7.7 14.5-12.4 30.7-13.6 48h-96.5c-1.1-17.3-5.9-33.5-13.6-48zM216 112h-56c-8.8 0-16 7.2-16 16v48h352v-48c0-8.8-7.2-16-16-16zM112 264a56 56 0 1 1 0 112 56 56 0 1 1 0-112M80 416h64c44.2 0 80 35.8 80 80 0 8.8-7.2 16-16 16H16c-8.8 0-16-7.2-16-16 0-44.2 35.8-80 80-80m392-96a56 56 0 1 1 112 0 56 56 0 1 1-112 0m-56 176c0-44.2 35.8-80 80-80h64c44.2 0 80 35.8 80 80 0 8.8-7.2 16-16 16H432c-8.8 0-16-7.2-16-16"})
+);
+
+export default LanCalendarUsersRegular;

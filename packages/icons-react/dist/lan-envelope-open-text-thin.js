@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanEnvelopeOpenTextThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M96 480c-35.3 0-64-28.7-64-64V168c0-12.6 6-24.5 16.1-32l197-146.2c25.5-18.9 60.3-18.9 85.8 0l197 146.2c3.1 2.3 5.8 5 8 8h-24.1L321.4 2.7c-19.8-14.7-47-14.7-66.8 0l-197 146.2c-6 4.5-9.6 11.6-9.6 19.1s3.6 14.6 9.6 19.1l197 146.2q8.1 6 17.4 8.7v16.5c-9.5-2.2-18.7-6.3-26.9-12.4L48.1 200l-.1-.1V416c0 26.5 21.5 48 48 48h176v16zm432-272H368c-17.7 0-32 14.3-32 32v224c0 17.7 14.3 32 32 32h160c17.7 0 32-14.3 32-32V240c0-17.7-14.3-32-32-32m-160-16h160c26.5 0 48 21.5 48 48v224c0 26.5-21.5 48-48 48H368c-26.5 0-48-21.5-48-48V240c0-26.5 21.5-48 48-48m24 96h112c4.4 0 8 3.6 8 8s-3.6 8-8 8H392c-4.4 0-8-3.6-8-8s3.6-8 8-8m0 64h96c4.4 0 8 3.6 8 8s-3.6 8-8 8h-96c-4.4 0-8-3.6-8-8s3.6-8 8-8"})
+);
+
+export default LanEnvelopeOpenTextThin;

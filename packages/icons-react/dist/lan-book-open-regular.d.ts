@@ -1,0 +1,8 @@
+import React from 'react';
+
+export interface LanBookOpenRegularProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+  size?: string | number;
+}
+
+export declare const LanBookOpenRegular: React.FC<LanBookOpenRegularProps>;
+export default LanBookOpenRegular;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanChartScatter3d = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M272 48c0-8.8-7.2-16-16-16s-16 7.2-16 16v232.6L37.7 451.8c-6.7 5.7-7.6 15.8-1.9 22.6s15.8 7.6 22.5 1.9L256 309l197.7 167.2c6.7 5.7 16.8 4.9 22.6-1.9s4.9-16.8-1.9-22.6L272 280.6zm112 40a24 24 0 1 0 0-48 24 24 0 1 0 0 48m24 168a24 24 0 1 0-48 0 24 24 0 1 0 48 0m72-72a24 24 0 1 0 0-48 24 24 0 1 0 0 48m-328-24a24 24 0 1 0-48 0 24 24 0 1 0 48 0M32 88a24 24 0 1 0 0-48 24 24 0 1 0 0 48m24 168a24 24 0 1 0-48 0 24 24 0 1 0 48 0m200 216a24 24 0 1 0 0-48 24 24 0 1 0 0 48"})
+);
+
+export default LanChartScatter3d;

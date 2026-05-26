@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanHouseSignalThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M298.4-21.8c3.1-3 8-3 11.1 0l224 216c3.2 3.1 3.3 8.1.2 11.3s-8.1 3.3-11.3.2L496 180.3V392c0 30.9-25.1 56-56 56H295c-1.4-5.4-3-10.7-4.7-16H440c22.1 0 40-17.9 40-40V164.8L304-4.9 128 164.8v94.7c-5.3-2.1-10.6-4-16-5.8v-73.5l-26.4 25.5c-3.2 3.1-8.2 3-11.3-.2s-3-8.2.2-11.3l224-216zM280 184h48c17.7 0 32 14.3 32 32v48c0 17.7-14.3 32-32 32h-48c-17.7 0-32-14.3-32-32v-48c0-17.7 14.3-32 32-32m-16 32v48c0 8.8 7.2 16 16 16h48c8.8 0 16-7.2 16-16v-48c0-8.8-7.2-16-16-16h-48c-8.8 0-16 7.2-16 16M8 288c137 0 248 111 248 248 0 4.4-3.6 8-8 8s-8-3.6-8-8c0-128.1-103.9-232-232-232-4.4 0-8-3.6-8-8s3.6-8 8-8m40 224a16 16 0 1 0-32 0 16 16 0 1 0 32 0m-48 0a32 32 0 1 1 64 0 32 32 0 1 1-64 0m0-120c0-4.4 3.6-8 8-8 83.9 0 152 68.1 152 152 0 4.4-3.6 8-8 8s-8-3.6-8-8c0-75.1-60.9-136-136-136-4.4 0-8-3.6-8-8"})
+);
+
+export default LanHouseSignalThin;

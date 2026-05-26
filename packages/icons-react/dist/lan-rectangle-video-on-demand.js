@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanRectangleVideoOnDemand = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M64 96c-17.7 0-32 14.3-32 32v256c0 17.7 14.3 32 32 32h448c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32zM0 128c0-35.3 28.7-64 64-64h448c35.3 0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64zm96 48v68.9c0 23.3 9.3 45.7 25.8 62.2l6.2 6.2 6.2-6.2c16.5-16.5 25.8-38.9 25.8-62.2V176c0-8.8 7.2-16 16-16s16 7.2 16 16v68.9c0 31.8-12.6 62.3-35.1 84.9l-17.5 17.5c-6.2 6.2-16.4 6.2-22.6 0l-17.7-17.5C76.6 307.3 64 276.7 64 244.9V176c0-8.8 7.2-16 16-16s16 7.2 16 16m184 16c-13.3 0-24 10.7-24 24v80c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-80c0-13.3-10.7-24-24-24zm-56 24c0-30.9 25.1-56 56-56h16c30.9 0 56 25.1 56 56v80c0 30.9-25.1 56-56 56h-16c-30.9 0-56-25.1-56-56zm176-56h48c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64h-48c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16m16 160h32c17.7 0 32-14.3 32-32v-64c0-17.7-14.3-32-32-32h-32z"})
+);
+
+export default LanRectangleVideoOnDemand;

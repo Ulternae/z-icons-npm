@@ -1,0 +1,8 @@
+import React from 'react';
+
+export interface LanCircleLitecoinThinProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+  size?: string | number;
+}
+
+export declare const LanCircleLitecoinThin: React.FC<LanCircleLitecoinThinProps>;
+export default LanCircleLitecoinThin;

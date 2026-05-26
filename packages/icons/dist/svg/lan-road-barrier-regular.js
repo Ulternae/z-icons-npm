@@ -1,0 +1,2 @@
+export const LanRoadBarrierRegular = '<svg viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M24 32c13.3 0 24 10.7 24 24v24h544V56c0-13.3 10.7-24 24-24s24 10.7 24 24v400c0 13.3-10.7 24-24 24s-24-10.7-24-24V304H48v152c0 13.3-10.7 24-24 24S0 469.3 0 456V56c0-13.3 10.7-24 24-24m568 224V128h-21.2l-64 128zm-544 0h21.2l64-128H48zm341.2-128h-74.3l-64 128h74.3zm-10.4 128h74.3l64-128h-74.3zm-192-128-64 128h74.3l64-128z"/></svg>';
+export default LanRoadBarrierRegular;

@@ -1,0 +1,8 @@
+import React from 'react';
+
+export interface LanRectangleVideoOnDemandSolidProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+  size?: string | number;
+}
+
+export declare const LanRectangleVideoOnDemandSolid: React.FC<LanRectangleVideoOnDemandSolidProps>;
+export default LanRectangleVideoOnDemandSolid;

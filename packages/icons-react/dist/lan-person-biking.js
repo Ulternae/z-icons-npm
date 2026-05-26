@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanPersonBiking = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M336 56a24 24 0 1 1 48 0 24 24 0 1 1-48 0m80 0a56 56 0 1 0-112 0 56 56 0 1 0 112 0M277.6 156.8c5.9-4.7 14.4-4.7 20.2.2l75.9 63.3c2.9 2.4 6.5 3.7 10.2 3.7h64c8.8 0 16-7.2 16-16s-7.2-16-16-16h-58.2l-71.5-59.6c-17.5-14.6-42.9-14.9-60.7-.6l-52.2 41.7c-31.4 25.1-26.9 74.2 8.6 93.1l58.1 31V416c0 8.8 7.2 16 16 16s16-7.2 16-16V288c0-5.9-3.3-11.3-8.5-14.1l-66.4-35.4c-15.2-8.1-17.2-29.1-3.7-39.9l52.2-41.7zM112 320a80 80 0 1 1 0 160 80 80 0 1 1 0-160m0 192a112 112 0 1 0 0-224 112 112 0 1 0 0 224m272-112a80 80 0 1 1 160 0 80 80 0 1 1-160 0m192 0a112 112 0 1 0-224 0 112 112 0 1 0 224 0"})
+);
+
+export default LanPersonBiking;

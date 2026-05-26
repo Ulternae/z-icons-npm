@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanGunSlash = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M27.3-27.2c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6l544 544c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L294.5 240h146.9c8.5 0 16.6-3.4 22.6-9.4l22.6-22.6H544c17.7 0 32-14.3 32-32V96c0-17.7-14.3-32-32-32h-32V48c0-8.8-7.2-16-16-16s-16 7.2-16 16v16H118.5zM150.5 96H544v80h-57.4c-8.5 0-16.6 3.4-22.6 9.4L441.4 208H262.6l-112-112zM0 96v112c0 17.7 14.3 32 32 32h10c20.8 0 36.1 19.6 31 39.8L33 440.2c-2.4 9.6-.2 19.7 5.8 27.5S54.1 480 64 480h112c14.7 0 27.5-10 31-24.2l38-152.2-26.4-26.4L175.9 448h-112L104 287.5c4.3-17 1.3-33.8-6.7-47.5h84l-32-32H31.8V96h5.5L12.1 70.8C4.8 76.7 0 85.8 0 96"})
+);
+
+export default LanGunSlash;

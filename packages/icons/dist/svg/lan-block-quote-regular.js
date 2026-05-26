@@ -1,0 +1,2 @@
+export const LanBlockQuoteRegular = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M24 64C10.7 64 0 74.7 0 88s10.7 24 24 24h400c13.3 0 24-10.7 24-24s-10.7-24-24-24zm128 168c-13.3 0-24 10.7-24 24s10.7 24 24 24h272c13.3 0 24-10.7 24-24s-10.7-24-24-24zm-24 192c0 13.3 10.7 24 24 24h272c13.3 0 24-10.7 24-24s-10.7-24-24-24H152c-13.3 0-24 10.7-24 24M0 424c0 13.3 10.7 24 24 24s24-10.7 24-24V248c0-13.3-10.7-24-24-24S0 234.7 0 248z"/></svg>';
+export default LanBlockQuoteRegular;

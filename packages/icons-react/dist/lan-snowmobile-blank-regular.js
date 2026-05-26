@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanSnowmobileBlankRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M309.8 62c-5.5-12-19.7-17.3-31.8-11.8S260.7 69.9 266.2 82l27.2 59.5-50.8 82.5H88c-30.9 0-56 25.1-56 56v56c-19.4 14.6-32 37.8-32 64 0 44.2 35.8 80 80 80h160c44.2 0 80-35.8 80-80 0-11.4-2.4-22.2-6.7-32h51.6l29.5 64h-19.5c-13.3 0-24 10.7-24 24s10.7 24 24 24H456c30.9 0 56-25.1 56-56 0-13.3-10.7-24-24-24s-24 10.7-24 24c0 4.4-3.6 8-8 8h-8.6l-30.1-65.3C470.9 358.4 512 312 512 256v-16c0-8.6-4.6-16.6-12.1-20.8l-160-91.4-30.1-65.7zM199.9 320H80v-40c0-4.4 3.6-8 8-8h168c8.3 0 16.1-4.3 20.4-11.4l51.8-84.2L463.9 254v2.1c0 35.3-28.7 64-64 64H199.8zM80 368h160c17.7 0 32 14.3 32 32s-14.3 32-32 32H80c-17.7 0-32-14.3-32-32s14.3-32 32-32"})
+);
+
+export default LanSnowmobileBlankRegular;

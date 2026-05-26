@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCropAlt = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M128 16c0-8.8-7.2-16-16-16S96 7.2 96 16v80H16c-8.8 0-16 7.2-16 16s7.2 16 16 16h80v240c0 26.5 21.5 48 48 48h192v-32H144c-8.8 0-16-7.2-16-16zm256 480c0 8.8 7.2 16 16 16s16-7.2 16-16v-80h80c8.8 0 16-7.2 16-16s-7.2-16-16-16h-80V144c0-26.5-21.5-48-48-48H176v32h192c8.8 0 16 7.2 16 16z"})
+);
+
+export default LanCropAlt;

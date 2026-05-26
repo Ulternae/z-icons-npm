@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanUpRightRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M368.1 112v222.1l-71-71c-9.4-9.4-24.6-9.4-33.9 0l-151.1 151L66 368l151-151c9.4-9.4 9.4-24.6 0-33.9l-71-71h222.1zm48-16c0-17.7-14.3-32-32-32H107.4c-28.5 0-42.8 34.5-22.6 54.6l81.3 81.4-134 134.1c-18.7 18.7-18.7 49.1 0 67.9l46 46c18.7 18.7 49.1 18.7 67.9 0l134.1-134.1 81.4 81.4c20.2 20.2 54.6 5.9 54.6-22.6z"})
+);
+
+export default LanUpRightRegular;

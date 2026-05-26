@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanBoxIsometricSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"m256 240 55.4-29.8-154.6-88.4L98.2 155zm105.2-56.7 52.6-28.3L256 65.6l-50.7 28.7zm102.3 235-176 99.7a63.95 63.95 0 0 1-63.1 0l-176-99.7C28.4 407 16 385.8 16 362.7V165.3c0-23 12.4-44.3 32.4-55.7l176-99.7C244-1.2 268-1.2 287.6 9.9l176 99.7c20 11.4 32.4 32.6 32.4 55.7v197.4c0 23-12.4 44.3-32.4 55.7z"})
+);
+
+export default LanBoxIsometricSolid;

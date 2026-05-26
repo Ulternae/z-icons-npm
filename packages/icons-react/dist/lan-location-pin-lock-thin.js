@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanLocationPinLockThin = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M16 188.6C16 93.6 94.5 16 192 16c94.6 0 171.3 73 175.8 164.1 5.2-1.3 10.5-2.4 15.9-3.1C377.6 78.2 294.1 0 192.1 0 86.1 0 .1 84.4.1 188.6c0 119.3 120.2 262.3 170.4 316.8 11.8 12.8 31.5 12.8 43.3 0 7.5-8.1 16.4-18.1 26.4-29.8v-24.9c-14.5 17.7-27.8 32.6-38.1 43.8-5.5 6-14.3 6-19.7 0-24.8-26.9-66.7-75.5-102.3-131.8-35.9-56.8-63.9-119.2-63.9-174.2zM192 272a80 80 0 1 0 0-160 80 80 0 1 0 0 160m-64-80a64 64 0 1 1 128 0 64 64 0 1 1-128 0m320 96.1V352h-96v-63.9c0-26.5 21.5-48 48-48s48 21.5 48 48M304 400c0-17.7 14.3-32 32-32v.1h128v-.1c17.7 0 32 14.3 32 32v96c0 17.7-14.3 32-32 32H336c-17.7 0-32-14.3-32-32zm160-111.9c0-35.3-28.7-64-64-64s-64 28.7-64 64V352c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48v-96c0-26.5-21.5-48-48-48z"})
+);
+
+export default LanLocationPinLockThin;

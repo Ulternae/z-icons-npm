@@ -1,0 +1,2 @@
+export const LanClapperboardThin = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16 208v176c0 26.5 21.5 48 48 48h384c26.5 0 48-21.5 48-48V208zm362.4-16H496v-64c0-16.4-8.3-31-20.9-39.6zm-21.9 0L459.7 81.4C456 80.5 452 80 448 80H323.4L218.5 192h138.1zm-55-112h-138l-105 112h138.1zm-160 0H64c-26.5 0-48 21.5-48 48v64h20.5zM512 128v256c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64"/></svg>';
+export default LanClapperboardThin;

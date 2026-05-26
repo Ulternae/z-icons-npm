@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanEyeDropperEmpty = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"m198.1 172.7 118.5 118.5 40.1 40.1c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6l-17.4-17.4 120.9-120.9c39-39 39-102.2 0-141.1s-102.2-39-141.1 0L220.8 150.2l-17.4-17.4c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6l17.4 17.4zm262-25L339.3 268.6l-95.9-95.9L364.2 51.9c26.5-26.5 69.4-26.5 95.9 0s26.5 69.4 0 95.9zM55.4 321.9c-15 15-23.4 35.4-23.4 56.6v41.2L3.8 469.1c-2.5 4.3-3.8 9.2-3.8 14.2 0 15.8 12.8 28.6 28.6 28.6 5 0 9.9-1.3 14.2-3.8l49.4-28.2h41.2c21.2 0 41.6-8.4 56.6-23.4l112-112-22.6-22.6-112 112c-9 9-21.2 14.1-33.9 14.1H88c-2.8 0-5.5.7-7.9 2.1l-42.4 24.2 24.2-42.4c1.4-2.4 2.1-5.2 2.1-7.9v-45.5c0-12.7 5.1-24.9 14.1-33.9l112-112-22.6-22.6-112 112z"})
+);
+
+export default LanEyeDropperEmpty;

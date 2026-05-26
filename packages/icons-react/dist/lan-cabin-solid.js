@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanCabinSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M237.4 6c11.1-8 26.1-8 37.2 0L384 84.1V64c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32v88.7l18.6 13.3c11.3 8.1 16.1 22.6 11.9 35.8S493.9 224 480 224H32c-13.9 0-26.2-9-30.5-22.2S2.1 174 13.4 166zM80 448h352c17.7 0 32 14.3 32 32s-14.3 32-32 32H80c-17.7 0-32-14.3-32-32s14.3-32 32-32m-32-64c0-17.7 14.3-32 32-32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H80c-17.7 0-32-14.3-32-32m32-128h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H80c-17.7 0-32-14.3-32-32s14.3-32 32-32m224 32c0-17.7 14.3-32 32-32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32h-96c-17.7 0-32-14.3-32-32m32 64h96c17.7 0 32 14.3 32 32s-14.3 32-32 32h-96c-17.7 0-32-14.3-32-32s14.3-32 32-32"})
+);
+
+export default LanCabinSolid;

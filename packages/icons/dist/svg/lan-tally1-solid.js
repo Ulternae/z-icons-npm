@@ -1,0 +1,2 @@
+export const LanTally1Solid = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M32 32c17.7 0 32 14.3 32 32v384c0 17.7-14.3 32-32 32S0 465.7 0 448V64c0-17.7 14.3-32 32-32"/></svg>';
+export default LanTally1Solid;

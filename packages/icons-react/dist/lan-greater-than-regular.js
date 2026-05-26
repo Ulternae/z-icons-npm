@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanGreaterThanRegular = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M34.2 45.9c-5.6 12-.3 26.3 11.7 31.9l385 178.2-385 178.2c-12 5.6-17.3 19.8-11.7 31.9s19.8 17.3 31.9 11.7l432-200c8.5-3.9 13.9-12.4 13.9-21.8s-5.4-17.8-13.9-21.8l-432-200c-12-5.6-26.3-.3-31.9 11.7"})
+);
+
+export default LanGreaterThanRegular;

@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const LanLaptopBinarySolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M64 96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v240h-64V96H128v240H64zM0 403.2C0 392.6 8.6 384 19.2 384h601.6c10.6 0 19.2 8.6 19.2 19.2 0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2M200 128h16c22.1 0 40 17.9 40 40v32c0 22.1-17.9 40-40 40h-16c-22.1 0-40-17.9-40-40v-32c0-22.1 17.9-40 40-40m-8 40v32c0 4.4 3.6 8 8 8h16c4.4 0 8-3.6 8-8v-32c0-4.4-3.6-8-8-8h-16c-4.4 0-8 3.6-8 8m112-40h16c8.8 0 16 7.2 16 16v80c0 8.8-7.2 16-16 16s-16-7.2-16-16v-64c-8.8 0-16-7.2-16-16s7.2-16 16-16m80 40c0-22.1 17.9-40 40-40h16c22.1 0 40 17.9 40 40v32c0 22.1-17.9 40-40 40h-16c-22.1 0-40-17.9-40-40zm40-8c-4.4 0-8 3.6-8 8v32c0 4.4 3.6 8 8 8h16c4.4 0 8-3.6 8-8v-32c0-4.4-3.6-8-8-8zM192 272h16c8.8 0 16 7.2 16 16v48h-32v-32c-8.8 0-16-7.2-16-16s7.2-16 16-16m256 16v48h-32v-32c-8.8 0-16-7.2-16-16s7.2-16 16-16h16c8.8 0 16 7.2 16 16m-80 24v24h-32v-24c0-4.4-3.6-8-8-8h-16c-4.4 0-8 3.6-8 8v24h-32v-24c0-22.1 17.9-40 40-40h16c22.1 0 40 17.9 40 40"})
+);
+
+export default LanLaptopBinarySolid;

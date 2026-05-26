@@ -1,0 +1,2 @@
+export declare const LanRectangleHistoryCirclePlusRegular: string;
+export default LanRectangleHistoryCirclePlusRegular;
