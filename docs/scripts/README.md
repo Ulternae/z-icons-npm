@@ -20,11 +20,15 @@ Incluye:
 Comandos principales:
 
 ```bash
+pnpm run optimize:icons -- lan
+pnpm run optimize:icons -- lan light
 pnpm run build
 pnpm run typecheck
 pnpm run test
 pnpm run check
 ```
+
+`pnpm run optimize:icons` optimiza SVG fuente por pack antes de regenerar `dist`.
 
 `pnpm run build` regenera `dist` para todos los paquetes publicables.
 

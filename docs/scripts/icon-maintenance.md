@@ -2,6 +2,30 @@
 
 Estos scripts preparan los SVG fuente antes de regenerar y publicar paquetes. Funcionan con cualquier pack bajo `icons/{pack}/{variant}`.
 
+## 0. Optimizar SVG fuente por pack o variante
+
+Optimiza los SVG fuente usando la configuracion de SVGO del repo.
+
+Optimizar todas las variantes de un pack:
+
+```bash
+pnpm run optimize:icons -- lan
+```
+
+Optimizar solo una variante:
+
+```bash
+pnpm run optimize:icons -- lan light
+```
+
+Tambien puedes usar flags explicitos:
+
+```bash
+pnpm run optimize:icons -- --pack lan --variant light
+```
+
+Si no pasas variante, el script recorre todas las carpetas dentro de `icons/{pack}`.
+
 ## 1. Detectar SVG duplicados exactos
 
 Genera un reporte con grupos de iconos que tienen el mismo SVG despues de pasar por SVGO en memoria.
@@ -92,6 +116,7 @@ pnpm run duplicates -- --pack lan --variant light
 pnpm run sync:variants -- --pack lan --reference light
 pnpm run sync:variants:write -- --pack lan --reference light
 pnpm run sync:variants -- --pack lan --reference light
+pnpm run optimize:icons -- lan
 pnpm run build
 ```
 
