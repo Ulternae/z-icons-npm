@@ -1,2 +1,2 @@
-export declare const CoreMugSaucerRegular-duo: string;
-export default CoreMugSaucerRegular-duo;
+export declare const CoreMugSaucerRegularDuo: string;
+export default CoreMugSaucerRegularDuo;

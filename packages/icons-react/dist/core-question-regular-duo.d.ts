@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreQuestionRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreQuestionRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreQuestionRegular-duo: React.FC<CoreQuestionRegular-duoProps>;
-export default CoreQuestionRegular-duo;
+export declare const CoreQuestionRegularDuo: React.FC<CoreQuestionRegularDuoProps>;
+export default CoreQuestionRegularDuo;

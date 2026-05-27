@@ -1,2 +1,2 @@
-export declare const CoreSkullRegular-duo: string;
-export default CoreSkullRegular-duo;
+export declare const CoreSkullRegularDuo: string;
+export default CoreSkullRegularDuo;

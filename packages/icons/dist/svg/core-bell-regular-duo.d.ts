@@ -1,2 +1,2 @@
-export declare const CoreBellRegular-duo: string;
-export default CoreBellRegular-duo;
+export declare const CoreBellRegularDuo: string;
+export default CoreBellRegularDuo;

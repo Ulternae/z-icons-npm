@@ -1,2 +1,2 @@
-export declare const CoreBombRegular-duo: string;
-export default CoreBombRegular-duo;
+export declare const CoreBombRegularDuo: string;
+export default CoreBombRegularDuo;

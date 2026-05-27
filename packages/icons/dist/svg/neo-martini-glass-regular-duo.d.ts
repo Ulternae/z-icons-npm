@@ -1,2 +1,2 @@
-export declare const NeoMartiniGlassRegular-duo: string;
-export default NeoMartiniGlassRegular-duo;
+export declare const NeoMartiniGlassRegularDuo: string;
+export default NeoMartiniGlassRegularDuo;

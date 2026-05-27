@@ -3757,7 +3757,7 @@ import { LanZapSolid } from '../lan-zap-solid.js';
 import { LanZzzSolid } from '../lan-zzz-solid.js';
 
 export const lanSolidIconMap = {
-  solid: {
+  'solid': {
     '0': Lan0Solid,
     '00': Lan00Solid,
     '1': Lan1Solid,

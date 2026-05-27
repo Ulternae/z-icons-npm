@@ -1,2 +1,2 @@
-export declare const CoreCircleExclamationRegular-duo: string;
-export default CoreCircleExclamationRegular-duo;
+export declare const CoreCircleExclamationRegularDuo: string;
+export default CoreCircleExclamationRegularDuo;

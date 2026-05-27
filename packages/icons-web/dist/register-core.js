@@ -675,4 +675,4 @@ export const coreIcons = {
   'xmark': CoreXmark
 };;
 
-export const ZCoreElement = defineZIconElement('z-core', { core: { regular: coreIcons } }, { type: 'core', variant: 'regular', defaultVariant: 'regular' });
+export const ZCoreElement = defineZIconElement('z-core', { core: { 'regular': coreIcons } }, { type: 'core', variant: 'regular', defaultVariant: 'regular' });

@@ -1,2 +1,2 @@
-export declare const NeoSlidersRegular-duo: string;
-export default NeoSlidersRegular-duo;
+export declare const NeoSlidersRegularDuo: string;
+export default NeoSlidersRegularDuo;

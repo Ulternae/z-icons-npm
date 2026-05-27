@@ -1,4 +1,4 @@
-export declare const coreIconsRegular-duo: {
+export declare const coreIconsRegularDuo: {
   readonly 'airplay': string;
   readonly 'alarm-clock': string;
   readonly 'anchor': string;
@@ -336,5 +336,5 @@ export declare const coreIconsRegular-duo: {
   readonly 'wrench': string;
   readonly 'xmark': string;
 };
-export { coreSpriteRegular-duo } from '@zcorvus/icons/sprites/core-regular-duo.js';
-export declare const ZCoreRegular-duoSpriteElement: CustomElementConstructor | undefined;
+export { coreSpriteRegularDuo } from '@zcorvus/icons/sprites/core-regular-duo.js';
+export declare const ZCoreRegularDuoSpriteElement: CustomElementConstructor | undefined;

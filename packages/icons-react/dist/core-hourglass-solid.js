@@ -6,7 +6,7 @@ export const CoreHourglassSolid = ({ size = 24, color, style, ...props }) => Rea
     viewBox: '0 0 448 512',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"fill":"currentColor","d":"M33.8 64H0V0h448v64h-33.8c-7.3 57.3-36.6 110.1-82.3 146.6L275.2 256l56.7 45.4c45.7 36.6 75 89.3 82.3 146.6H448v64H0v-64h33.8c7.3-57.3 36.6-110.1 82.3-146.6l56.7-45.4-56.7-45.4c-45.7-36.5-75-89.3-82.3-146.6m64.7 0c4.1 23.1 13.3 44.9 26.8 64h197.4c13.5-19.1 22.6-40.9 26.8-64zM156 351.3c-11.9 9.5-22.2 20.5-30.8 32.7h197.4c-8.6-12.1-18.9-23.2-30.8-32.7l-68-54.4-68 54.4z"})

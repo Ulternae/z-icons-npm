@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CorePauseRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CorePauseRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CorePauseRegular-duo: React.FC<CorePauseRegular-duoProps>;
-export default CorePauseRegular-duo;
+export declare const CorePauseRegularDuo: React.FC<CorePauseRegularDuoProps>;
+export default CorePauseRegularDuo;

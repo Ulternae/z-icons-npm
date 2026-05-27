@@ -1,2 +1,2 @@
-export declare const CoreRectangleWideRegular-duo: string;
-export default CoreRectangleWideRegular-duo;
+export declare const CoreRectangleWideRegularDuo: string;
+export default CoreRectangleWideRegularDuo;

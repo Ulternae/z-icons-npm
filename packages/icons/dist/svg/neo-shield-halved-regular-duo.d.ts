@@ -1,2 +1,2 @@
-export declare const NeoShieldHalvedRegular-duo: string;
-export default NeoShieldHalvedRegular-duo;
+export declare const NeoShieldHalvedRegularDuo: string;
+export default NeoShieldHalvedRegularDuo;

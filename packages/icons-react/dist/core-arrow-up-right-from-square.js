@@ -6,7 +6,7 @@ export const CoreArrowUpRightFromSquare = ({ size = 24, color, style, ...props }
     viewBox: '0 0 512 512',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"fill":"currentColor","d":"M320 0h-32v64h114.7L201.3 265.4 178.7 288l45.3 45.3 22.6-22.6L448 109.3V224h64V32c0-17.7-14.3-32-32-32zM64 64C28.7 64 0 92.7 0 128v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V320h-64v128H64V128h128V64z"})

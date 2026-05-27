@@ -1,2 +1,2 @@
-export declare const NeoMagnifyingGlassMinusRegular-duo: string;
-export default NeoMagnifyingGlassMinusRegular-duo;
+export declare const NeoMagnifyingGlassMinusRegularDuo: string;
+export default NeoMagnifyingGlassMinusRegularDuo;

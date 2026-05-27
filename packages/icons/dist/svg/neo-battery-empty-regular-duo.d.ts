@@ -1,2 +1,2 @@
-export declare const NeoBatteryEmptyRegular-duo: string;
-export default NeoBatteryEmptyRegular-duo;
+export declare const NeoBatteryEmptyRegularDuo: string;
+export default NeoBatteryEmptyRegularDuo;

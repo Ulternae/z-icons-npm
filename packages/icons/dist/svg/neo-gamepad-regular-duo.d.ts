@@ -1,2 +1,2 @@
-export declare const NeoGamepadRegular-duo: string;
-export default NeoGamepadRegular-duo;
+export declare const NeoGamepadRegularDuo: string;
+export default NeoGamepadRegularDuo;

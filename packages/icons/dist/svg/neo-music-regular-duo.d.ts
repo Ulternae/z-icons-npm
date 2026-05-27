@@ -1,2 +1,2 @@
-export declare const NeoMusicRegular-duo: string;
-export default NeoMusicRegular-duo;
+export declare const NeoMusicRegularDuo: string;
+export default NeoMusicRegularDuo;

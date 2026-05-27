@@ -1,2 +1,2 @@
-export declare const NeoPaperclipRegular-duo: string;
-export default NeoPaperclipRegular-duo;
+export declare const NeoPaperclipRegularDuo: string;
+export default NeoPaperclipRegularDuo;

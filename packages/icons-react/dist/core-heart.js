@@ -6,7 +6,7 @@ export const CoreHeart = ({ size = 24, color, style, ...props }) => React.create
     viewBox: '0 0 576 512',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"fill":"currentColor","d":"M289.8 77.8c61.1-61.1 160.2-61.1 221.3 0s61.1 160.2 0 221.2L288.4 521.7 65.8 299.1C4.7 238 4.7 138.9 65.8 77.8s160.2-61.1 221.3 0l1.4 1.4 1.4-1.4zm176 45.2c-36.1-36.1-94.7-36.1-130.7 0l-46.6 46.6-46.6-46.6c-36.1-36.1-94.7-36.1-130.7 0s-36.1 94.6 0 130.8l177.2 177.4 177.4-177.4c36.1-36.1 36.1-94.6 0-130.8"})

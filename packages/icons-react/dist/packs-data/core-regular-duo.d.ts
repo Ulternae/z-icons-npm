@@ -1,6 +1,6 @@
 import type { IconComponent } from '../create.js';
 
-export declare const coreIconsRegular-duo: {
+export declare const coreIconsRegularDuo: {
   readonly 'airplay': IconComponent;
   readonly 'alarm-clock': IconComponent;
   readonly 'anchor': IconComponent;

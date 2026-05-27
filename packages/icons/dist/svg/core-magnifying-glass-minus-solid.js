@@ -1,2 +1,2 @@
-export const CoreMagnifyingGlassMinusSolid = '<svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M256.3 0c123.7 0 224 100.3 224 224 0 50.3-16.6 96.7-44.6 134.1L557.5 480l-45.2 45.3-121.9-121.9c-37.4 28-83.8 44.6-134.1 44.6-123.7 0-224-100.3-224-224S132.5 0 256.3 0m-96 200v48h192v-48z"/></svg>';
+export const CoreMagnifyingGlassMinusSolid = '<svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill="currentColor" d="M256.3 0c123.7 0 224 100.3 224 224 0 50.3-16.6 96.7-44.6 134.1L557.5 480l-45.2 45.3-121.9-121.9c-37.4 28-83.8 44.6-134.1 44.6-123.7 0-224-100.3-224-224S132.5 0 256.3 0m-96 200v48h192v-48z"/></svg>';
 export default CoreMagnifyingGlassMinusSolid;

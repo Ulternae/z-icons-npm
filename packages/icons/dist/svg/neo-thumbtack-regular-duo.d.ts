@@ -1,2 +1,2 @@
-export declare const NeoThumbtackRegular-duo: string;
-export default NeoThumbtackRegular-duo;
+export declare const NeoThumbtackRegularDuo: string;
+export default NeoThumbtackRegularDuo;

@@ -1,2 +1,2 @@
-export declare const NeoBackwardRegular-duo: string;
-export default NeoBackwardRegular-duo;
+export declare const NeoBackwardRegularDuo: string;
+export default NeoBackwardRegularDuo;

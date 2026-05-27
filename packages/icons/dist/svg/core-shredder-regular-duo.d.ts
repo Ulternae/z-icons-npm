@@ -1,2 +1,2 @@
-export declare const CoreShredderRegular-duo: string;
-export default CoreShredderRegular-duo;
+export declare const CoreShredderRegularDuo: string;
+export default CoreShredderRegularDuo;

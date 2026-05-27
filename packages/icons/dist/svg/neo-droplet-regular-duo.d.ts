@@ -1,2 +1,2 @@
-export declare const NeoDropletRegular-duo: string;
-export default NeoDropletRegular-duo;
+export declare const NeoDropletRegularDuo: string;
+export default NeoDropletRegularDuo;

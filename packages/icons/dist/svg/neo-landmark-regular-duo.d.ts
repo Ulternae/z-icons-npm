@@ -1,2 +1,2 @@
-export declare const NeoLandmarkRegular-duo: string;
-export default NeoLandmarkRegular-duo;
+export declare const NeoLandmarkRegularDuo: string;
+export default NeoLandmarkRegularDuo;

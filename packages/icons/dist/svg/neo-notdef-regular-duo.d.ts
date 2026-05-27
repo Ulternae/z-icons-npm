@@ -1,2 +1,2 @@
-export declare const NeoNotdefRegular-duo: string;
-export default NeoNotdefRegular-duo;
+export declare const NeoNotdefRegularDuo: string;
+export default NeoNotdefRegularDuo;

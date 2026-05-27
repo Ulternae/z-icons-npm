@@ -7517,4 +7517,4 @@ export const lanIconsRegular = {
 };;
 
 export { lanSpriteRegular } from '@zcorvus/icons/sprites/lan-regular.js';
-export const ZLanRegularSpriteElement = defineZIconElement('z-lan-regular-sprite', { lan: { regular: lanIconsRegular } }, { type: 'lan', variant: 'regular', defaultVariant: 'regular', mode: 'sprite', spriteId: 'lan-regular', sprite: lanSpriteRegular });
+export const ZLanRegularSpriteElement = defineZIconElement('z-lan-regular-sprite', { lan: { 'regular': lanIconsRegular } }, { type: 'lan', variant: 'regular', defaultVariant: 'regular', mode: 'sprite', spriteId: 'lan-regular', sprite: lanSpriteRegular });

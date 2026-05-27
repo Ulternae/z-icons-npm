@@ -6,7 +6,7 @@ export const CoreItalicSolid = ({ size = 24, color, style, ...props }) => React.
     viewBox: '0 0 448 512',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"fill":"currentColor","d":"M321 32h127v64h-60.2l-160 320H288v64H0v-64h60.2l160-320H160V32z"})

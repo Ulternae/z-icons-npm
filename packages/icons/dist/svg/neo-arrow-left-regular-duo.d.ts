@@ -1,2 +1,2 @@
-export declare const NeoArrowLeftRegular-duo: string;
-export default NeoArrowLeftRegular-duo;
+export declare const NeoArrowLeftRegularDuo: string;
+export default NeoArrowLeftRegularDuo;

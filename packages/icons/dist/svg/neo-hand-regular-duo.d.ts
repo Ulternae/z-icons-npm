@@ -1,2 +1,2 @@
-export declare const NeoHandRegular-duo: string;
-export default NeoHandRegular-duo;
+export declare const NeoHandRegularDuo: string;
+export default NeoHandRegularDuo;

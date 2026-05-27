@@ -1,2 +1,2 @@
-export declare const NeoCompressRegular-duo: string;
-export default NeoCompressRegular-duo;
+export declare const NeoCompressRegularDuo: string;
+export default NeoCompressRegularDuo;

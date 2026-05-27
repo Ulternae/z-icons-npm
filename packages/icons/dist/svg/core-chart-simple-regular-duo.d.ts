@@ -1,2 +1,2 @@
-export declare const CoreChartSimpleRegular-duo: string;
-export default CoreChartSimpleRegular-duo;
+export declare const CoreChartSimpleRegularDuo: string;
+export default CoreChartSimpleRegularDuo;

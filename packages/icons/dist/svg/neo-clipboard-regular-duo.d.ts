@@ -1,2 +1,2 @@
-export declare const NeoClipboardRegular-duo: string;
-export default NeoClipboardRegular-duo;
+export declare const NeoClipboardRegularDuo: string;
+export default NeoClipboardRegularDuo;

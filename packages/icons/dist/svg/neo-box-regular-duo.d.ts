@@ -1,2 +1,2 @@
-export declare const NeoBoxRegular-duo: string;
-export default NeoBoxRegular-duo;
+export declare const NeoBoxRegularDuo: string;
+export default NeoBoxRegularDuo;

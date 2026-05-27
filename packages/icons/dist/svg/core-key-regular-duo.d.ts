@@ -1,2 +1,2 @@
-export declare const CoreKeyRegular-duo: string;
-export default CoreKeyRegular-duo;
+export declare const CoreKeyRegularDuo: string;
+export default CoreKeyRegularDuo;

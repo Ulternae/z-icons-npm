@@ -1,2 +1,2 @@
-export declare const NeoSortRegular-duo: string;
-export default NeoSortRegular-duo;
+export declare const NeoSortRegularDuo: string;
+export default NeoSortRegularDuo;

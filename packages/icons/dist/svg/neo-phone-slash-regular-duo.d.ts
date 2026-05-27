@@ -1,2 +1,2 @@
-export declare const NeoPhoneSlashRegular-duo: string;
-export default NeoPhoneSlashRegular-duo;
+export declare const NeoPhoneSlashRegularDuo: string;
+export default NeoPhoneSlashRegularDuo;

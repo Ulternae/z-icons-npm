@@ -1,2 +1,2 @@
-export declare const NeoAlarmClockRegular-duo: string;
-export default NeoAlarmClockRegular-duo;
+export declare const NeoAlarmClockRegularDuo: string;
+export default NeoAlarmClockRegularDuo;

@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoMicrophoneRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoMicrophoneRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoMicrophoneRegular-duo: React.FC<NeoMicrophoneRegular-duoProps>;
-export default NeoMicrophoneRegular-duo;
+export declare const NeoMicrophoneRegularDuo: React.FC<NeoMicrophoneRegularDuoProps>;
+export default NeoMicrophoneRegularDuo;

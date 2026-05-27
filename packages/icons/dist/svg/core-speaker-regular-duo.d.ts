@@ -1,2 +1,2 @@
-export declare const CoreSpeakerRegular-duo: string;
-export default CoreSpeakerRegular-duo;
+export declare const CoreSpeakerRegularDuo: string;
+export default CoreSpeakerRegularDuo;

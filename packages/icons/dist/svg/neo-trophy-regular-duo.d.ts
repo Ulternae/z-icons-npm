@@ -1,2 +1,2 @@
-export declare const NeoTrophyRegular-duo: string;
-export default NeoTrophyRegular-duo;
+export declare const NeoTrophyRegularDuo: string;
+export default NeoTrophyRegularDuo;

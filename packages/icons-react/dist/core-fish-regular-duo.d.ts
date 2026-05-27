@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreFishRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreFishRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreFishRegular-duo: React.FC<CoreFishRegular-duoProps>;
-export default CoreFishRegular-duo;
+export declare const CoreFishRegularDuo: React.FC<CoreFishRegularDuoProps>;
+export default CoreFishRegularDuo;

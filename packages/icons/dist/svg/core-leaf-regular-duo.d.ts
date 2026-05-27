@@ -1,2 +1,2 @@
-export declare const CoreLeafRegular-duo: string;
-export default CoreLeafRegular-duo;
+export declare const CoreLeafRegularDuo: string;
+export default CoreLeafRegularDuo;

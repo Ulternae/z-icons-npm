@@ -1,2 +1,2 @@
-export declare const NeoFontRegular-duo: string;
-export default NeoFontRegular-duo;
+export declare const NeoFontRegularDuo: string;
+export default NeoFontRegularDuo;

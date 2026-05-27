@@ -1,2 +1,2 @@
-export declare const CoreRectangleTallRegular-duo: string;
-export default CoreRectangleTallRegular-duo;
+export declare const CoreRectangleTallRegularDuo: string;
+export default CoreRectangleTallRegularDuo;

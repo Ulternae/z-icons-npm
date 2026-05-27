@@ -1,2 +1,2 @@
-export declare const CoreScissorsRegular-duo: string;
-export default CoreScissorsRegular-duo;
+export declare const CoreScissorsRegularDuo: string;
+export default CoreScissorsRegularDuo;

@@ -1,2 +1,2 @@
-export declare const CoreBagShoppingRegular-duo: string;
-export default CoreBagShoppingRegular-duo;
+export declare const CoreBagShoppingRegularDuo: string;
+export default CoreBagShoppingRegularDuo;

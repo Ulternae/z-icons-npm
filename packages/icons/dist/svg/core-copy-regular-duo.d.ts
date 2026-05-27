@@ -1,2 +1,2 @@
-export declare const CoreCopyRegular-duo: string;
-export default CoreCopyRegular-duo;
+export declare const CoreCopyRegularDuo: string;
+export default CoreCopyRegularDuo;

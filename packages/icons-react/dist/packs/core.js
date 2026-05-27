@@ -337,7 +337,7 @@ import { CoreWrench } from '../core-wrench.js';
 import { CoreXmark } from '../core-xmark.js';
 
 export const coreRegularIconMap = {
-  regular: {
+  'regular': {
     'airplay': CoreAirplay,
     'alarm-clock': CoreAlarmClock,
     'anchor': CoreAnchor,

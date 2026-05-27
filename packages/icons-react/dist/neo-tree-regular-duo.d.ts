@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoTreeRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoTreeRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoTreeRegular-duo: React.FC<NeoTreeRegular-duoProps>;
-export default NeoTreeRegular-duo;
+export declare const NeoTreeRegularDuo: React.FC<NeoTreeRegularDuoProps>;
+export default NeoTreeRegularDuo;

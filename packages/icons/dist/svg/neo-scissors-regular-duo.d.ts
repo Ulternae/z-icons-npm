@@ -1,2 +1,2 @@
-export declare const NeoScissorsRegular-duo: string;
-export default NeoScissorsRegular-duo;
+export declare const NeoScissorsRegularDuo: string;
+export default NeoScissorsRegularDuo;

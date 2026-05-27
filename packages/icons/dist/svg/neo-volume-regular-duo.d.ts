@@ -1,2 +1,2 @@
-export declare const NeoVolumeRegular-duo: string;
-export default NeoVolumeRegular-duo;
+export declare const NeoVolumeRegularDuo: string;
+export default NeoVolumeRegularDuo;

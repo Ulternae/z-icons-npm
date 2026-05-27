@@ -1,2 +1,2 @@
-export declare const CoreMusicRegular-duo: string;
-export default CoreMusicRegular-duo;
+export declare const CoreMusicRegularDuo: string;
+export default CoreMusicRegularDuo;

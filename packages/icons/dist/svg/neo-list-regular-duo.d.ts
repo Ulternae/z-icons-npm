@@ -1,2 +1,2 @@
-export declare const NeoListRegular-duo: string;
-export default NeoListRegular-duo;
+export declare const NeoListRegularDuo: string;
+export default NeoListRegularDuo;

@@ -1,2 +1,2 @@
-export declare const CoreUtensilsRegular-duo: string;
-export default CoreUtensilsRegular-duo;
+export declare const CoreUtensilsRegularDuo: string;
+export default CoreUtensilsRegularDuo;

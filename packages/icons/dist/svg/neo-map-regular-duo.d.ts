@@ -1,2 +1,2 @@
-export declare const NeoMapRegular-duo: string;
-export default NeoMapRegular-duo;
+export declare const NeoMapRegularDuo: string;
+export default NeoMapRegularDuo;

@@ -1,2 +1,2 @@
-export declare const NeoPaletteRegular-duo: string;
-export default NeoPaletteRegular-duo;
+export declare const NeoPaletteRegularDuo: string;
+export default NeoPaletteRegularDuo;

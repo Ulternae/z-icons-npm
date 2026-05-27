@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreSignalFairRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreSignalFairRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreSignalFairRegular-duo: React.FC<CoreSignalFairRegular-duoProps>;
-export default CoreSignalFairRegular-duo;
+export declare const CoreSignalFairRegularDuo: React.FC<CoreSignalFairRegularDuoProps>;
+export default CoreSignalFairRegularDuo;

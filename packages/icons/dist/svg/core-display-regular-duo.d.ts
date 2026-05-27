@@ -1,2 +1,2 @@
-export declare const CoreDisplayRegular-duo: string;
-export default CoreDisplayRegular-duo;
+export declare const CoreDisplayRegularDuo: string;
+export default CoreDisplayRegularDuo;

@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreCloudBoltRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreCloudBoltRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreCloudBoltRegular-duo: React.FC<CoreCloudBoltRegular-duoProps>;
-export default CoreCloudBoltRegular-duo;
+export declare const CoreCloudBoltRegularDuo: React.FC<CoreCloudBoltRegularDuoProps>;
+export default CoreCloudBoltRegularDuo;

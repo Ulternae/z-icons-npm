@@ -1083,4 +1083,4 @@ export const bruIcons = {
 };;
 
 export { bruSprite } from '@zcorvus/icons/sprites/bru.js';
-export const ZBruSpriteElement = defineZIconElement('z-bru-sprite', { bru: { solid: bruIcons } }, { type: 'bru', variant: 'solid', defaultVariant: 'solid', mode: 'sprite', spriteId: 'bru', sprite: bruSprite });
+export const ZBruSpriteElement = defineZIconElement('z-bru-sprite', { bru: { 'solid': bruIcons } }, { type: 'bru', variant: 'solid', defaultVariant: 'solid', mode: 'sprite', spriteId: 'bru', sprite: bruSprite });

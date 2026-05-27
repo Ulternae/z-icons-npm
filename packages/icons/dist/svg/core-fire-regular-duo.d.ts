@@ -1,2 +1,2 @@
-export declare const CoreFireRegular-duo: string;
-export default CoreFireRegular-duo;
+export declare const CoreFireRegularDuo: string;
+export default CoreFireRegularDuo;

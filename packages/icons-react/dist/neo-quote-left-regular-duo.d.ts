@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoQuoteLeftRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoQuoteLeftRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoQuoteLeftRegular-duo: React.FC<NeoQuoteLeftRegular-duoProps>;
-export default NeoQuoteLeftRegular-duo;
+export declare const NeoQuoteLeftRegularDuo: React.FC<NeoQuoteLeftRegularDuoProps>;
+export default NeoQuoteLeftRegularDuo;

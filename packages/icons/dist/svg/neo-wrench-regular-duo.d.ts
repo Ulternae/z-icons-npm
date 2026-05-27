@@ -1,2 +1,2 @@
-export declare const NeoWrenchRegular-duo: string;
-export default NeoWrenchRegular-duo;
+export declare const NeoWrenchRegularDuo: string;
+export default NeoWrenchRegularDuo;

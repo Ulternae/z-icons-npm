@@ -1,2 +1,2 @@
-export const CoreBurger = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M320 0c106 0 192 86 192 192h-64c0-70.7-57.3-128-128-128H192c-70.7 0-128 57.3-128 128H0C0 86 86 0 192 0zm64 512H128C57.3 512 0 454.7 0 384h64c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64h64c0 70.7-57.3 128-128 128m128-256v64H0v-64z"/></svg>';
+export const CoreBurger = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill="currentColor" d="M320 0c106 0 192 86 192 192h-64c0-70.7-57.3-128-128-128H192c-70.7 0-128 57.3-128 128H0C0 86 86 0 192 0zm64 512H128C57.3 512 0 454.7 0 384h64c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64h64c0 70.7-57.3 128-128 128m128-256v64H0v-64z"/></svg>';
 export default CoreBurger;

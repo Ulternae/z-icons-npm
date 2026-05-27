@@ -1,2 +1,2 @@
-export declare const NeoHeadphonesRegular-duo: string;
-export default NeoHeadphonesRegular-duo;
+export declare const NeoHeadphonesRegularDuo: string;
+export default NeoHeadphonesRegularDuo;

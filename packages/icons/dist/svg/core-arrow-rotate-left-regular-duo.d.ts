@@ -1,2 +1,2 @@
-export declare const CoreArrowRotateLeftRegular-duo: string;
-export default CoreArrowRotateLeftRegular-duo;
+export declare const CoreArrowRotateLeftRegularDuo: string;
+export default CoreArrowRotateLeftRegularDuo;

@@ -1,2 +1,2 @@
-export declare const NeoFaceFrownRegular-duo: string;
-export default NeoFaceFrownRegular-duo;
+export declare const NeoFaceFrownRegularDuo: string;
+export default NeoFaceFrownRegularDuo;

@@ -1,2 +1,2 @@
-export declare const CoreGaugeRegular-duo: string;
-export default CoreGaugeRegular-duo;
+export declare const CoreGaugeRegularDuo: string;
+export default CoreGaugeRegularDuo;

@@ -1,2 +1,2 @@
-export declare const NeoMoneyBillRegular-duo: string;
-export default NeoMoneyBillRegular-duo;
+export declare const NeoMoneyBillRegularDuo: string;
+export default NeoMoneyBillRegularDuo;

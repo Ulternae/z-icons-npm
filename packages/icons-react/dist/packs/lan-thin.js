@@ -3757,7 +3757,7 @@ import { LanZapThin } from '../lan-zap-thin.js';
 import { LanZzzThin } from '../lan-zzz-thin.js';
 
 export const lanThinIconMap = {
-  thin: {
+  'thin': {
     '0': Lan0Thin,
     '00': Lan00Thin,
     '1': Lan1Thin,

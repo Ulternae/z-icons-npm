@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoCircleQuestionRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoCircleQuestionRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoCircleQuestionRegular-duo: React.FC<NeoCircleQuestionRegular-duoProps>;
-export default NeoCircleQuestionRegular-duo;
+export declare const NeoCircleQuestionRegularDuo: React.FC<NeoCircleQuestionRegularDuoProps>;
+export default NeoCircleQuestionRegularDuo;

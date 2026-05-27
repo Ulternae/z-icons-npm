@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreWifiSlashRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreWifiSlashRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreWifiSlashRegular-duo: React.FC<CoreWifiSlashRegular-duoProps>;
-export default CoreWifiSlashRegular-duo;
+export declare const CoreWifiSlashRegularDuo: React.FC<CoreWifiSlashRegularDuoProps>;
+export default CoreWifiSlashRegularDuo;

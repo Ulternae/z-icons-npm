@@ -1,2 +1,2 @@
-export declare const NeoBoldRegular-duo: string;
-export default NeoBoldRegular-duo;
+export declare const NeoBoldRegularDuo: string;
+export default NeoBoldRegularDuo;

@@ -1,2 +1,2 @@
-export declare const NeoCircleCheckRegular-duo: string;
-export default NeoCircleCheckRegular-duo;
+export declare const NeoCircleCheckRegularDuo: string;
+export default NeoCircleCheckRegularDuo;

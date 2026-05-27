@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreArrowUpFromLineRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreArrowUpFromLineRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreArrowUpFromLineRegular-duo: React.FC<CoreArrowUpFromLineRegular-duoProps>;
-export default CoreArrowUpFromLineRegular-duo;
+export declare const CoreArrowUpFromLineRegularDuo: React.FC<CoreArrowUpFromLineRegularDuoProps>;
+export default CoreArrowUpFromLineRegularDuo;

@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreMusicRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreMusicRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreMusicRegular-duo: React.FC<CoreMusicRegular-duoProps>;
-export default CoreMusicRegular-duo;
+export declare const CoreMusicRegularDuo: React.FC<CoreMusicRegularDuoProps>;
+export default CoreMusicRegularDuo;

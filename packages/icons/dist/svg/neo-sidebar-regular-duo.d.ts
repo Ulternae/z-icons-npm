@@ -1,2 +1,2 @@
-export declare const NeoSidebarRegular-duo: string;
-export default NeoSidebarRegular-duo;
+export declare const NeoSidebarRegularDuo: string;
+export default NeoSidebarRegularDuo;

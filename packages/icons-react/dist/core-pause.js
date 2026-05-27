@@ -6,7 +6,7 @@ export const CorePause = ({ size = 24, color, style, ...props }) => React.create
     viewBox: '0 0 256 512',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"fill":"currentColor","d":"M64 64H0v384h64zm192 0h-64v384h64z"})

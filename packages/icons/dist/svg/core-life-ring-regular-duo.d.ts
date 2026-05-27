@@ -1,2 +1,2 @@
-export declare const CoreLifeRingRegular-duo: string;
-export default CoreLifeRingRegular-duo;
+export declare const CoreLifeRingRegularDuo: string;
+export default CoreLifeRingRegularDuo;

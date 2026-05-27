@@ -477,4 +477,4 @@ export const neoIcons = {
 };;
 
 export { neoSprite } from '@zcorvus/icons/sprites/neo.js';
-export const ZNeoSpriteElement = defineZIconElement('z-neo-sprite', { neo: { regular: neoIcons } }, { type: 'neo', variant: 'regular', defaultVariant: 'regular', mode: 'sprite', spriteId: 'neo', sprite: neoSprite });
+export const ZNeoSpriteElement = defineZIconElement('z-neo-sprite', { neo: { 'regular': neoIcons } }, { type: 'neo', variant: 'regular', defaultVariant: 'regular', mode: 'sprite', spriteId: 'neo', sprite: neoSprite });

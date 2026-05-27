@@ -1,2 +1,2 @@
-export declare const CoreBatterySlashRegular-duo: string;
-export default CoreBatterySlashRegular-duo;
+export declare const CoreBatterySlashRegularDuo: string;
+export default CoreBatterySlashRegularDuo;

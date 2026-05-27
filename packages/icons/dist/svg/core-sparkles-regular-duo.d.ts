@@ -1,2 +1,2 @@
-export declare const CoreSparklesRegular-duo: string;
-export default CoreSparklesRegular-duo;
+export declare const CoreSparklesRegularDuo: string;
+export default CoreSparklesRegularDuo;

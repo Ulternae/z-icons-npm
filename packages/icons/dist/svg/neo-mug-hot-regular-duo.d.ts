@@ -1,2 +1,2 @@
-export declare const NeoMugHotRegular-duo: string;
-export default NeoMugHotRegular-duo;
+export declare const NeoMugHotRegularDuo: string;
+export default NeoMugHotRegularDuo;

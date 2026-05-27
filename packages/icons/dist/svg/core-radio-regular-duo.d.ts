@@ -1,2 +1,2 @@
-export declare const CoreRadioRegular-duo: string;
-export default CoreRadioRegular-duo;
+export declare const CoreRadioRegularDuo: string;
+export default CoreRadioRegularDuo;

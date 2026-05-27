@@ -1,2 +1,2 @@
-export declare const CoreEyeRegular-duo: string;
-export default CoreEyeRegular-duo;
+export declare const CoreEyeRegularDuo: string;
+export default CoreEyeRegularDuo;

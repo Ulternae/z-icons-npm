@@ -1,2 +1,2 @@
-export declare const CoreTruckRegular-duo: string;
-export default CoreTruckRegular-duo;
+export declare const CoreTruckRegularDuo: string;
+export default CoreTruckRegularDuo;

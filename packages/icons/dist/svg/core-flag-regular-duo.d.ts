@@ -1,2 +1,2 @@
-export declare const CoreFlagRegular-duo: string;
-export default CoreFlagRegular-duo;
+export declare const CoreFlagRegularDuo: string;
+export default CoreFlagRegularDuo;

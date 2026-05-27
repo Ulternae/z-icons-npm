@@ -1,2 +1,2 @@
-export declare const CoreEllipsisRegular-duo: string;
-export default CoreEllipsisRegular-duo;
+export declare const CoreEllipsisRegularDuo: string;
+export default CoreEllipsisRegularDuo;

@@ -1,2 +1,2 @@
-export declare const NeoAddressCardRegular-duo: string;
-export default NeoAddressCardRegular-duo;
+export declare const NeoAddressCardRegularDuo: string;
+export default NeoAddressCardRegularDuo;

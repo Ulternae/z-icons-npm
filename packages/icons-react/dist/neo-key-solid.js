@@ -6,7 +6,7 @@ export const NeoKeySolid = ({ size = 24, color, style, ...props }) => React.crea
     viewBox: '0 0 560 560',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"fill":"currentColor","d":"M364 0c-57.4 0-107 18.4-142.3 53.7S168 138.6 168 196q0 21.3 3.3 41.1L24.6 383.8C8.8 399.6 0 420.9 0 443.2V476c0 46.4 37.6 84 84 84h32.8c22.3 0 43.6-8.9 59.4-24.6l11.6-11.6c5.3-5.3 8.2-12.4 8.2-19.8v-28h28c7.4 0 14.5-3 19.8-8.2l28-28c5.3-5.3 8.2-12.4 8.2-19.8v-28h84c57.4 0 107-18.4 142.3-53.7S560 253.4 560 196 541.6 89 506.3 53.7 421.4 0 364 0m42 112a42 42 0 1 1 0 84 42 42 0 1 1 0-84"})

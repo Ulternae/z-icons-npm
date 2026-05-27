@@ -1,2 +1,2 @@
-export declare const CorePlayRegular-duo: string;
-export default CorePlayRegular-duo;
+export declare const CorePlayRegularDuo: string;
+export default CorePlayRegularDuo;

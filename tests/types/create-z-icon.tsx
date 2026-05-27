@@ -1,16 +1,12 @@
 import React from 'react';
 import { createZIcon } from '@zcorvus/icons-react/create';
-import {
-  CoreSun,
-  MinaCheck,
-  MinaCheckSolid,
-  MinaX,
-} from '@zcorvus/icons-react';
-import {
-  coreIcons,
-  minaIcons,
-  minaIconsSolid,
-} from '@zcorvus/icons-react/packs-data';
+import { CoreSun } from '@zcorvus/icons-react/core-sun';
+import { MinaCheck } from '@zcorvus/icons-react/mina-check';
+import { MinaCheckSolid } from '@zcorvus/icons-react/mina-check-solid';
+import { MinaX } from '@zcorvus/icons-react/mina-x';
+import { coreIcons } from '@zcorvus/icons-react/packs-data/core';
+import { minaIcons } from '@zcorvus/icons-react/packs-data/mina';
+import { minaIconsSolid } from '@zcorvus/icons-react/packs-data/mina-solid';
 
 const ManualIcon = createZIcon({
   mina: {
@@ -22,7 +18,7 @@ const ManualIcon = createZIcon({
     },
   },
   core: {
-    light: {
+    regular: {
       sun: CoreSun,
     },
   },
@@ -44,7 +40,7 @@ const PackDataIcon = createZIcon({
     solid: minaIconsSolid,
   },
   core: {
-    light: coreIcons,
+    regular: coreIcons,
   },
 });
 

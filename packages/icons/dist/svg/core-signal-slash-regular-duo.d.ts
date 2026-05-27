@@ -1,2 +1,2 @@
-export declare const CoreSignalSlashRegular-duo: string;
-export default CoreSignalSlashRegular-duo;
+export declare const CoreSignalSlashRegularDuo: string;
+export default CoreSignalSlashRegularDuo;

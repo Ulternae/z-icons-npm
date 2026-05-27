@@ -65,7 +65,7 @@ export function buildIconsPackage(icons, packData) {
 
     for (const [variant, variantIcons] of Object.entries(variants)) {
       packImports.push(...variantIcons.map((icon) => `import { ${icon.componentName} } from './${icon.publicFileName}.js';`));
-      variantObjects.push(`  ${variant}: {\n${variantIcons.map((icon) => `    '${icon.name}': ${icon.componentName}`).join(',\n')}\n  }`);
+      variantObjects.push(`  '${variant}': {\n${variantIcons.map((icon) => `    '${icon.name}': ${icon.componentName}`).join(',\n')}\n  }`);
     }
 
     const packConst = `${pack}Icons`;

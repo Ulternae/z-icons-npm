@@ -1,2 +1,2 @@
-export declare const NeoTagRegular-duo: string;
-export default NeoTagRegular-duo;
+export declare const NeoTagRegularDuo: string;
+export default NeoTagRegularDuo;

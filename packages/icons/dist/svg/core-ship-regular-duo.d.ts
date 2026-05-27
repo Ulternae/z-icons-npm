@@ -1,2 +1,2 @@
-export declare const CoreShipRegular-duo: string;
-export default CoreShipRegular-duo;
+export declare const CoreShipRegularDuo: string;
+export default CoreShipRegularDuo;

@@ -1,2 +1,2 @@
-export declare const NeoLifeRingRegular-duo: string;
-export default NeoLifeRingRegular-duo;
+export declare const NeoLifeRingRegularDuo: string;
+export default NeoLifeRingRegularDuo;

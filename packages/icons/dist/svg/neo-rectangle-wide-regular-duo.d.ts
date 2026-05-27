@@ -1,2 +1,2 @@
-export declare const NeoRectangleWideRegular-duo: string;
-export default NeoRectangleWideRegular-duo;
+export declare const NeoRectangleWideRegularDuo: string;
+export default NeoRectangleWideRegularDuo;

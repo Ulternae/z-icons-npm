@@ -1,2 +1,2 @@
-export declare const CoreUserMinusRegular-duo: string;
-export default CoreUserMinusRegular-duo;
+export declare const CoreUserMinusRegularDuo: string;
+export default CoreUserMinusRegularDuo;

@@ -1,2 +1,2 @@
-export declare const CoreShieldCheckRegular-duo: string;
-export default CoreShieldCheckRegular-duo;
+export declare const CoreShieldCheckRegularDuo: string;
+export default CoreShieldCheckRegularDuo;

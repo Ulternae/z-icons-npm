@@ -316,7 +316,7 @@ export function buildWebPackage(icons, packData) {
 
       writeFile(
         path.join(distDir, `${fileName}.js`),
-        `import { defineZIconElement } from './create.js';\n${imports.join('\n')}\n\n${map};\n\nexport const ${elementName} = defineZIconElement('${tagName}', { ${pack}: { ${variant}: ${registryName} } }, { type: '${pack}', variant: '${variant}', defaultVariant: '${variant}' });\n`
+        `import { defineZIconElement } from './create.js';\n${imports.join('\n')}\n\n${map};\n\nexport const ${elementName} = defineZIconElement('${tagName}', { ${pack}: { '${variant}': ${registryName} } }, { type: '${pack}', variant: '${variant}', defaultVariant: '${variant}' });\n`
       );
       writeFile(
         path.join(distDir, `${fileName}.d.ts`),
@@ -333,7 +333,7 @@ export function buildWebPackage(icons, packData) {
 
       writeFile(
         path.join(distDir, `${spriteFileName}.js`),
-        `import { defineZIconElement } from './create.js';\nimport { ${spriteName} } from '@zcorvus/icons/sprites/${spriteAssetFileName}.js';\n${spriteImports.join('\n')}\n\n${spriteMap};\n\nexport { ${spriteName} } from '@zcorvus/icons/sprites/${spriteAssetFileName}.js';\nexport const ${spriteElementName} = defineZIconElement('${spriteTagName}', { ${pack}: { ${variant}: ${registryName} } }, { type: '${pack}', variant: '${variant}', defaultVariant: '${variant}', mode: 'sprite', spriteId: '${pack}${variantFileSuffix}', sprite: ${spriteName} });\n`
+        `import { defineZIconElement } from './create.js';\nimport { ${spriteName} } from '@zcorvus/icons/sprites/${spriteAssetFileName}.js';\n${spriteImports.join('\n')}\n\n${spriteMap};\n\nexport { ${spriteName} } from '@zcorvus/icons/sprites/${spriteAssetFileName}.js';\nexport const ${spriteElementName} = defineZIconElement('${spriteTagName}', { ${pack}: { '${variant}': ${registryName} } }, { type: '${pack}', variant: '${variant}', defaultVariant: '${variant}', mode: 'sprite', spriteId: '${pack}${variantFileSuffix}', sprite: ${spriteName} });\n`
       );
       writeFile(
         path.join(distDir, `${spriteFileName}.d.ts`),

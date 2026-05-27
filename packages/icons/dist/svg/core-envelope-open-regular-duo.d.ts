@@ -1,2 +1,2 @@
-export declare const CoreEnvelopeOpenRegular-duo: string;
-export default CoreEnvelopeOpenRegular-duo;
+export declare const CoreEnvelopeOpenRegularDuo: string;
+export default CoreEnvelopeOpenRegularDuo;

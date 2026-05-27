@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoItalicRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoItalicRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoItalicRegular-duo: React.FC<NeoItalicRegular-duoProps>;
-export default NeoItalicRegular-duo;
+export declare const NeoItalicRegularDuo: React.FC<NeoItalicRegularDuoProps>;
+export default NeoItalicRegularDuo;

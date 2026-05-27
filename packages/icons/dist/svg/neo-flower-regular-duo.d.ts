@@ -1,2 +1,2 @@
-export declare const NeoFlowerRegular-duo: string;
-export default NeoFlowerRegular-duo;
+export declare const NeoFlowerRegularDuo: string;
+export default NeoFlowerRegularDuo;

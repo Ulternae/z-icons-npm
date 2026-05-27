@@ -1,2 +1,2 @@
-export declare const CoreStrikethroughRegular-duo: string;
-export default CoreStrikethroughRegular-duo;
+export declare const CoreStrikethroughRegularDuo: string;
+export default CoreStrikethroughRegularDuo;

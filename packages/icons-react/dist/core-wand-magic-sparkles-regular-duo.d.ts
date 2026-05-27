@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreWandMagicSparklesRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreWandMagicSparklesRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreWandMagicSparklesRegular-duo: React.FC<CoreWandMagicSparklesRegular-duoProps>;
-export default CoreWandMagicSparklesRegular-duo;
+export declare const CoreWandMagicSparklesRegularDuo: React.FC<CoreWandMagicSparklesRegularDuoProps>;
+export default CoreWandMagicSparklesRegularDuo;

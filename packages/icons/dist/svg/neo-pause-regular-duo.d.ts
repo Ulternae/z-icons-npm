@@ -1,2 +1,2 @@
-export declare const NeoPauseRegular-duo: string;
-export default NeoPauseRegular-duo;
+export declare const NeoPauseRegularDuo: string;
+export default NeoPauseRegularDuo;

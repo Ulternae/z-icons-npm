@@ -1,2 +1,2 @@
-export declare const CoreWheelchairRegular-duo: string;
-export default CoreWheelchairRegular-duo;
+export declare const CoreWheelchairRegularDuo: string;
+export default CoreWheelchairRegularDuo;

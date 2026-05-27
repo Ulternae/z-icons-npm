@@ -1,2 +1,2 @@
-export declare const CoreNotdefRegular-duo: string;
-export default CoreNotdefRegular-duo;
+export declare const CoreNotdefRegularDuo: string;
+export default CoreNotdefRegularDuo;

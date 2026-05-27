@@ -1,2 +1,2 @@
-export declare const NeoWandMagicSparklesRegular-duo: string;
-export default NeoWandMagicSparklesRegular-duo;
+export declare const NeoWandMagicSparklesRegularDuo: string;
+export default NeoWandMagicSparklesRegularDuo;

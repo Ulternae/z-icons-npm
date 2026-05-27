@@ -1,2 +1,2 @@
-export declare const CoreGridRoundRegular-duo: string;
-export default CoreGridRoundRegular-duo;
+export declare const CoreGridRoundRegularDuo: string;
+export default CoreGridRoundRegularDuo;

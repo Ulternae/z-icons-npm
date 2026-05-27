@@ -1,2 +1,2 @@
-export declare const CorePlaneUpRegular-duo: string;
-export default CorePlaneUpRegular-duo;
+export declare const CorePlaneUpRegularDuo: string;
+export default CorePlaneUpRegularDuo;

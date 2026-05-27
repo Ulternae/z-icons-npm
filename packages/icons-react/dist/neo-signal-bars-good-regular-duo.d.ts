@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoSignalBarsGoodRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoSignalBarsGoodRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoSignalBarsGoodRegular-duo: React.FC<NeoSignalBarsGoodRegular-duoProps>;
-export default NeoSignalBarsGoodRegular-duo;
+export declare const NeoSignalBarsGoodRegularDuo: React.FC<NeoSignalBarsGoodRegularDuoProps>;
+export default NeoSignalBarsGoodRegularDuo;

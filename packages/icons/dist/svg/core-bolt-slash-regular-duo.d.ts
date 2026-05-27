@@ -1,2 +1,2 @@
-export declare const CoreBoltSlashRegular-duo: string;
-export default CoreBoltSlashRegular-duo;
+export declare const CoreBoltSlashRegularDuo: string;
+export default CoreBoltSlashRegularDuo;

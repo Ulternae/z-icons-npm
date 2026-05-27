@@ -677,4 +677,4 @@ export const coreIconsSolid = {
 };;
 
 export { coreSpriteSolid } from '@zcorvus/icons/sprites/core-solid.js';
-export const ZCoreSolidSpriteElement = defineZIconElement('z-core-solid-sprite', { core: { solid: coreIconsSolid } }, { type: 'core', variant: 'solid', defaultVariant: 'solid', mode: 'sprite', spriteId: 'core-solid', sprite: coreSpriteSolid });
+export const ZCoreSolidSpriteElement = defineZIconElement('z-core-solid-sprite', { core: { 'solid': coreIconsSolid } }, { type: 'core', variant: 'solid', defaultVariant: 'solid', mode: 'sprite', spriteId: 'core-solid', sprite: coreSpriteSolid });

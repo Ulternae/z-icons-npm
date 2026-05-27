@@ -1,2 +1,2 @@
-export declare const CoreMobileRegular-duo: string;
-export default CoreMobileRegular-duo;
+export declare const CoreMobileRegularDuo: string;
+export default CoreMobileRegularDuo;

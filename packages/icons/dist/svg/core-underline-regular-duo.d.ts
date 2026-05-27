@@ -1,2 +1,2 @@
-export declare const CoreUnderlineRegular-duo: string;
-export default CoreUnderlineRegular-duo;
+export declare const CoreUnderlineRegularDuo: string;
+export default CoreUnderlineRegularDuo;

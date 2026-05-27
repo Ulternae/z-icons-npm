@@ -1,2 +1,2 @@
-export declare const NeoEqualsRegular-duo: string;
-export default NeoEqualsRegular-duo;
+export declare const NeoEqualsRegularDuo: string;
+export default NeoEqualsRegularDuo;

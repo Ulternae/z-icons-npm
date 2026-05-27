@@ -1,2 +1,2 @@
-export declare const CoreExpandRegular-duo: string;
-export default CoreExpandRegular-duo;
+export declare const CoreExpandRegularDuo: string;
+export default CoreExpandRegularDuo;

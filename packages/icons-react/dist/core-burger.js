@@ -6,7 +6,7 @@ export const CoreBurger = ({ size = 24, color, style, ...props }) => React.creat
     viewBox: '0 0 512 512',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"fill":"currentColor","d":"M320 0c106 0 192 86 192 192h-64c0-70.7-57.3-128-128-128H192c-70.7 0-128 57.3-128 128H0C0 86 86 0 192 0zm64 512H128C57.3 512 0 454.7 0 384h64c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64h64c0 70.7-57.3 128-128 128m128-256v64H0v-64z"})

@@ -1,2 +1,2 @@
-export declare const CoreCameraRegular-duo: string;
-export default CoreCameraRegular-duo;
+export declare const CoreCameraRegularDuo: string;
+export default CoreCameraRegularDuo;

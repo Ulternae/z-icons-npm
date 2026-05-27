@@ -1,2 +1,2 @@
-export declare const NeoCompactDiscRegular-duo: string;
-export default NeoCompactDiscRegular-duo;
+export declare const NeoCompactDiscRegularDuo: string;
+export default NeoCompactDiscRegularDuo;

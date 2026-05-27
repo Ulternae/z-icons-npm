@@ -1,2 +1,2 @@
-export declare const NeoBatteryThreeQuartersRegular-duo: string;
-export default NeoBatteryThreeQuartersRegular-duo;
+export declare const NeoBatteryThreeQuartersRegularDuo: string;
+export default NeoBatteryThreeQuartersRegularDuo;

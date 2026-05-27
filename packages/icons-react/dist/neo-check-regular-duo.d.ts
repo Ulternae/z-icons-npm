@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoCheckRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoCheckRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoCheckRegular-duo: React.FC<NeoCheckRegular-duoProps>;
-export default NeoCheckRegular-duo;
+export declare const NeoCheckRegularDuo: React.FC<NeoCheckRegularDuoProps>;
+export default NeoCheckRegularDuo;

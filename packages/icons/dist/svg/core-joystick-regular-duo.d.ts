@@ -1,2 +1,2 @@
-export declare const CoreJoystickRegular-duo: string;
-export default CoreJoystickRegular-duo;
+export declare const CoreJoystickRegularDuo: string;
+export default CoreJoystickRegularDuo;

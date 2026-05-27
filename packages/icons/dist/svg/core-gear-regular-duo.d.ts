@@ -1,2 +1,2 @@
-export declare const CoreGearRegular-duo: string;
-export default CoreGearRegular-duo;
+export declare const CoreGearRegularDuo: string;
+export default CoreGearRegularDuo;

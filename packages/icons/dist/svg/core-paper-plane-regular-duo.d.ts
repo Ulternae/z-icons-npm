@@ -1,2 +1,2 @@
-export declare const CorePaperPlaneRegular-duo: string;
-export default CorePaperPlaneRegular-duo;
+export declare const CorePaperPlaneRegularDuo: string;
+export default CorePaperPlaneRegularDuo;

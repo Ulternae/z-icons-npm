@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreHourglassRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreHourglassRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreHourglassRegular-duo: React.FC<CoreHourglassRegular-duoProps>;
-export default CoreHourglassRegular-duo;
+export declare const CoreHourglassRegularDuo: React.FC<CoreHourglassRegularDuoProps>;
+export default CoreHourglassRegularDuo;

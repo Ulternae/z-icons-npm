@@ -1,2 +1,2 @@
-export declare const NeoHourglassRegular-duo: string;
-export default NeoHourglassRegular-duo;
+export declare const NeoHourglassRegularDuo: string;
+export default NeoHourglassRegularDuo;

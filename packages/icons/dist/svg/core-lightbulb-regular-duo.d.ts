@@ -1,2 +1,2 @@
-export declare const CoreLightbulbRegular-duo: string;
-export default CoreLightbulbRegular-duo;
+export declare const CoreLightbulbRegularDuo: string;
+export default CoreLightbulbRegularDuo;

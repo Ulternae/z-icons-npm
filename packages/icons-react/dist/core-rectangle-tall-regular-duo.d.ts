@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreRectangleTallRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreRectangleTallRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreRectangleTallRegular-duo: React.FC<CoreRectangleTallRegular-duoProps>;
-export default CoreRectangleTallRegular-duo;
+export declare const CoreRectangleTallRegularDuo: React.FC<CoreRectangleTallRegularDuoProps>;
+export default CoreRectangleTallRegularDuo;

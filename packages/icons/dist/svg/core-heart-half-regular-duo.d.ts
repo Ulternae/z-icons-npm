@@ -1,2 +1,2 @@
-export declare const CoreHeartHalfRegular-duo: string;
-export default CoreHeartHalfRegular-duo;
+export declare const CoreHeartHalfRegularDuo: string;
+export default CoreHeartHalfRegularDuo;

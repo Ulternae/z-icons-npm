@@ -1,22 +1,18 @@
 import React from 'react';
 import { describe, expect, it, vi } from 'vitest';
 import { createZIcon } from '@zcorvus/icons-react/create';
-import {
-  BruGithub,
-  CoreAnchor,
-  CoreSun,
-  MinaAnchor,
-  MinaAnchorSolid,
-  MinaCheck,
-  MinaCheckSolid,
-  MinaX,
-} from '@zcorvus/icons-react';
-import {
-  bruIcons,
-  coreIcons,
-  minaIcons,
-  minaIconsSolid,
-} from '@zcorvus/icons-react/packs-data';
+import { BruGithub } from '@zcorvus/icons-react/bru-github';
+import { CoreAnchor } from '@zcorvus/icons-react/core-anchor';
+import { CoreSun } from '@zcorvus/icons-react/core-sun';
+import { MinaAnchor } from '@zcorvus/icons-react/mina-anchor';
+import { MinaAnchorSolid } from '@zcorvus/icons-react/mina-anchor-solid';
+import { MinaCheck } from '@zcorvus/icons-react/mina-check';
+import { MinaCheckSolid } from '@zcorvus/icons-react/mina-check-solid';
+import { MinaX } from '@zcorvus/icons-react/mina-x';
+import { bruIcons } from '@zcorvus/icons-react/packs-data/bru';
+import { coreIcons } from '@zcorvus/icons-react/packs-data/core';
+import { minaIcons } from '@zcorvus/icons-react/packs-data/mina';
+import { minaIconsSolid } from '@zcorvus/icons-react/packs-data/mina-solid';
 
 function expectElement(value: React.ReactNode) {
   expect(React.isValidElement(value)).toBe(true);
@@ -112,13 +108,14 @@ describe('createZIcon', () => {
           },
         },
         core: {
-          light: {
+          regular: {
             sun: CoreSun,
           },
         },
       },
       {
         fallbackPack: 'core',
+        fallbackVariant: 'regular',
       }
     );
 
@@ -218,7 +215,7 @@ describe('createZIcon', () => {
     const AppIcon = createZIcon(
       {
         core: {
-          light: coreIcons,
+          regular: coreIcons,
         },
         mina: {
           light: minaIcons,
@@ -231,6 +228,7 @@ describe('createZIcon', () => {
       {
         defaultVariants: {
           bru: 'solid',
+          core: 'regular',
         },
       }
     );

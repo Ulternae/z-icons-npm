@@ -1,2 +1,2 @@
-export declare const NeoLightbulbRegular-duo: string;
-export default NeoLightbulbRegular-duo;
+export declare const NeoLightbulbRegularDuo: string;
+export default NeoLightbulbRegularDuo;

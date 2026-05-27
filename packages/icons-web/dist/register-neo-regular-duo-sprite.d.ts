@@ -1,4 +1,4 @@
-export declare const neoIconsRegular-duo: {
+export declare const neoIconsRegularDuo: {
   readonly 'address-card': string;
   readonly 'alarm-clock': string;
   readonly 'anchor': string;
@@ -236,5 +236,5 @@ export declare const neoIconsRegular-duo: {
   readonly 'wrench': string;
   readonly 'xmark': string;
 };
-export { neoSpriteRegular-duo } from '@zcorvus/icons/sprites/neo-regular-duo.js';
-export declare const ZNeoRegular-duoSpriteElement: CustomElementConstructor | undefined;
+export { neoSpriteRegularDuo } from '@zcorvus/icons/sprites/neo-regular-duo.js';
+export declare const ZNeoRegularDuoSpriteElement: CustomElementConstructor | undefined;

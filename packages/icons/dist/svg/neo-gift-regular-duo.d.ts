@@ -1,2 +1,2 @@
-export declare const NeoGiftRegular-duo: string;
-export default NeoGiftRegular-duo;
+export declare const NeoGiftRegularDuo: string;
+export default NeoGiftRegularDuo;

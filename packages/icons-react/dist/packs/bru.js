@@ -540,7 +540,7 @@ import { BruZoom } from '../bru-zoom.js';
 import { BruZulip } from '../bru-zulip.js';
 
 export const bruSolidIconMap = {
-  solid: {
+  'solid': {
     '42-group': Bru42Group,
     '500px': Bru500px,
     'accessible-icon': BruAccessibleIcon,

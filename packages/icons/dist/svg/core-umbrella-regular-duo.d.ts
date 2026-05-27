@@ -1,2 +1,2 @@
-export declare const CoreUmbrellaRegular-duo: string;
-export default CoreUmbrellaRegular-duo;
+export declare const CoreUmbrellaRegularDuo: string;
+export default CoreUmbrellaRegularDuo;

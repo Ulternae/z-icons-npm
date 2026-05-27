@@ -1,2 +1,2 @@
-export declare const CorePenNibRegular-duo: string;
-export default CorePenNibRegular-duo;
+export declare const CorePenNibRegularDuo: string;
+export default CorePenNibRegularDuo;

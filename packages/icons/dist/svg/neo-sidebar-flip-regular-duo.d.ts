@@ -1,2 +1,2 @@
-export declare const NeoSidebarFlipRegular-duo: string;
-export default NeoSidebarFlipRegular-duo;
+export declare const NeoSidebarFlipRegularDuo: string;
+export default NeoSidebarFlipRegularDuo;

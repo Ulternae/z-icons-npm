@@ -1,2 +1,2 @@
-export declare const CoreFilmRegular-duo: string;
-export default CoreFilmRegular-duo;
+export declare const CoreFilmRegularDuo: string;
+export default CoreFilmRegularDuo;

@@ -1,2 +1,2 @@
-export declare const CoreBurgerRegular-duo: string;
-export default CoreBurgerRegular-duo;
+export declare const CoreBurgerRegularDuo: string;
+export default CoreBurgerRegularDuo;

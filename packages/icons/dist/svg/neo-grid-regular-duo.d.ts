@@ -1,2 +1,2 @@
-export declare const NeoGridRegular-duo: string;
-export default NeoGridRegular-duo;
+export declare const NeoGridRegularDuo: string;
+export default NeoGridRegularDuo;

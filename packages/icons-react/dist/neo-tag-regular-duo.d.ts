@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoTagRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoTagRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoTagRegular-duo: React.FC<NeoTagRegular-duoProps>;
-export default NeoTagRegular-duo;
+export declare const NeoTagRegularDuo: React.FC<NeoTagRegularDuoProps>;
+export default NeoTagRegularDuo;

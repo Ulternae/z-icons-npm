@@ -1,2 +1,2 @@
-export declare const NeoBagShoppingRegular-duo: string;
-export default NeoBagShoppingRegular-duo;
+export declare const NeoBagShoppingRegularDuo: string;
+export default NeoBagShoppingRegularDuo;

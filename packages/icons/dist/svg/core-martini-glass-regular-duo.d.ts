@@ -1,2 +1,2 @@
-export declare const CoreMartiniGlassRegular-duo: string;
-export default CoreMartiniGlassRegular-duo;
+export declare const CoreMartiniGlassRegularDuo: string;
+export default CoreMartiniGlassRegularDuo;

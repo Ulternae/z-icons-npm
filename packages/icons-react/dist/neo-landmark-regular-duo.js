@@ -1,15 +1,15 @@
 import React from 'react';
 
-export const NeoLandmarkRegular-duo = ({ size = 24, color, style, ...props }) => React.createElement(
+export const NeoLandmarkRegularDuo = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
     viewBox: '0 0 560 560',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"fill":"currentColor","d":"M56.4 183.3c-.5.3-.7 1.5 0 1.7 40.3 4 124.9 11.1 223.6 11.1s183.2-7 223.6-11.1c.7-.1.5-1.3 0-1.7-34-21.1-125.3-76.7-209.6-120.3l-1.2-.6c-12.8-6.6-12.8-6.6-25.6 0l-1.2.6c-84.3 43.6-175.6 99.2-209.6 120.3","opacity":".4"}), React.createElement('path', {"fill":"currentColor","d":"M84 315v156.7c-18.1-.8-36.2-1.6-54.4-2.6C14.2 468.2.9 480 0 495.4s10.9 28.7 26.4 29.6c84.4 4.8 169.1 7 253.6 7s169.2-2.2 253.6-7c15.4-.9 27.2-14.2 26.3-29.6s-14.2-27.2-29.6-26.3c-18.1 1-36.2 1.9-54.4 2.6L476 315c0-15.5-12.5-28-28-28s-28 12.5-28 28v158.7c-17.4.5-36.2 1-56 1.4V322c0-15.5-12.5-28-28-28s-28 12.5-28 28v153.9c-18.4.1-37.6.1-56 0V322c0-15.5-12.5-28-28-28s-28 12.5-28 28v153.1c-19.8-.4-38.6-.9-56-1.4V315c0-15.5-12.5-28-28-28s-28 12.5-28 28m196-63c-101.1 0-187.7-7.2-229.1-11.3C21.5 237.8 0 213 0 184.2c0-19.6 10-38 26.9-48.5 36-22.3 137.1-84 227.2-129.5 8.1-4.1 17-6.1 25.9-6.1s17.8 2.1 25.9 6.1C396 51.8 497.2 113.4 533.1 135.7c16.9 10.5 26.9 28.9 26.9 48.5 0 28.8-21.5 53.6-50.9 56.5-41.5 4.1-128 11.3-229.1 11.3m0-56c98.6 0 183.2-7 223.6-11.1.7-.1.5-1.3 0-1.7-34-21.1-125.3-76.7-209.6-120.3-14.4-7.5-13.6-7.5-28 0-84.3 43.6-175.6 99.3-209.6 120.3-.5.3-.7 1.5 0 1.7 40.3 4 124.9 11.1 223.6 11.1"})
 );
 
-export default NeoLandmarkRegular-duo;
+export default NeoLandmarkRegularDuo;

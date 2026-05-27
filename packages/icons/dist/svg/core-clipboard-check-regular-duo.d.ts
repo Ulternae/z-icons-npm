@@ -1,2 +1,2 @@
-export declare const CoreClipboardCheckRegular-duo: string;
-export default CoreClipboardCheckRegular-duo;
+export declare const CoreClipboardCheckRegularDuo: string;
+export default CoreClipboardCheckRegularDuo;

@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreCompassRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreCompassRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreCompassRegular-duo: React.FC<CoreCompassRegular-duoProps>;
-export default CoreCompassRegular-duo;
+export declare const CoreCompassRegularDuo: React.FC<CoreCompassRegularDuoProps>;
+export default CoreCompassRegularDuo;

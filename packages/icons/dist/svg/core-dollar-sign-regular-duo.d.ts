@@ -1,2 +1,2 @@
-export declare const CoreDollarSignRegular-duo: string;
-export default CoreDollarSignRegular-duo;
+export declare const CoreDollarSignRegularDuo: string;
+export default CoreDollarSignRegularDuo;

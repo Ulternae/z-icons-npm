@@ -1,2 +1,2 @@
-export declare const CorePaintbrushSlashRegular-duo: string;
-export default CorePaintbrushSlashRegular-duo;
+export declare const CorePaintbrushSlashRegularDuo: string;
+export default CorePaintbrushSlashRegularDuo;

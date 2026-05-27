@@ -6,7 +6,7 @@ export const CoreBlockQuoteSolid = ({ size = 24, color, style, ...props }) => Re
     viewBox: '0 0 512 512',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"fill":"currentColor","d":"M64 64V32H0v448h64zm384 64h32V64H160v64zm0 320h32v-64H160v64zm64-160v-64H160v64z"})

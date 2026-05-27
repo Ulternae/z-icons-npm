@@ -1,2 +1,2 @@
-export declare const NeoShipRegular-duo: string;
-export default NeoShipRegular-duo;
+export declare const NeoShipRegularDuo: string;
+export default NeoShipRegularDuo;

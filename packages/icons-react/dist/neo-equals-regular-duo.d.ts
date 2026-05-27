@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoEqualsRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoEqualsRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoEqualsRegular-duo: React.FC<NeoEqualsRegular-duoProps>;
-export default NeoEqualsRegular-duo;
+export declare const NeoEqualsRegularDuo: React.FC<NeoEqualsRegularDuoProps>;
+export default NeoEqualsRegularDuo;

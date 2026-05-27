@@ -1,2 +1,2 @@
-export declare const NeoShirtRegular-duo: string;
-export default NeoShirtRegular-duo;
+export declare const NeoShirtRegularDuo: string;
+export default NeoShirtRegularDuo;

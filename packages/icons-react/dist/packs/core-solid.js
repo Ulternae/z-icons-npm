@@ -337,7 +337,7 @@ import { CoreWrenchSolid } from '../core-wrench-solid.js';
 import { CoreXmarkSolid } from '../core-xmark-solid.js';
 
 export const coreSolidIconMap = {
-  solid: {
+  'solid': {
     'airplay': CoreAirplaySolid,
     'alarm-clock': CoreAlarmClockSolid,
     'anchor': CoreAnchorSolid,

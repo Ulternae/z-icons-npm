@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoAlarmClockRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoAlarmClockRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoAlarmClockRegular-duo: React.FC<NeoAlarmClockRegular-duoProps>;
-export default NeoAlarmClockRegular-duo;
+export declare const NeoAlarmClockRegularDuo: React.FC<NeoAlarmClockRegularDuoProps>;
+export default NeoAlarmClockRegularDuo;

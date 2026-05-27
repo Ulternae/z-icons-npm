@@ -1,2 +1,2 @@
-export declare const NeoUmbrellaRegular-duo: string;
-export default NeoUmbrellaRegular-duo;
+export declare const NeoUmbrellaRegularDuo: string;
+export default NeoUmbrellaRegularDuo;

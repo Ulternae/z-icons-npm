@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoShirtRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoShirtRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoShirtRegular-duo: React.FC<NeoShirtRegular-duoProps>;
-export default NeoShirtRegular-duo;
+export declare const NeoShirtRegularDuo: React.FC<NeoShirtRegularDuoProps>;
+export default NeoShirtRegularDuo;

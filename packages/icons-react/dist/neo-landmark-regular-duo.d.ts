@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoLandmarkRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoLandmarkRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoLandmarkRegular-duo: React.FC<NeoLandmarkRegular-duoProps>;
-export default NeoLandmarkRegular-duo;
+export declare const NeoLandmarkRegularDuo: React.FC<NeoLandmarkRegularDuoProps>;
+export default NeoLandmarkRegularDuo;

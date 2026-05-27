@@ -1,2 +1,2 @@
-export declare const CoreBuildingsRegular-duo: string;
-export default CoreBuildingsRegular-duo;
+export declare const CoreBuildingsRegularDuo: string;
+export default CoreBuildingsRegularDuo;

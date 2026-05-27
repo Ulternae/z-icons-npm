@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreMagnifyingGlassRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreMagnifyingGlassRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreMagnifyingGlassRegular-duo: React.FC<CoreMagnifyingGlassRegular-duoProps>;
-export default CoreMagnifyingGlassRegular-duo;
+export declare const CoreMagnifyingGlassRegularDuo: React.FC<CoreMagnifyingGlassRegularDuoProps>;
+export default CoreMagnifyingGlassRegularDuo;

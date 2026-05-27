@@ -1,2 +1,2 @@
-export declare const CoreCalendarPlusRegular-duo: string;
-export default CoreCalendarPlusRegular-duo;
+export declare const CoreCalendarPlusRegularDuo: string;
+export default CoreCalendarPlusRegularDuo;

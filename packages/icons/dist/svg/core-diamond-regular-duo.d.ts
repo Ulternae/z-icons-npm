@@ -1,2 +1,2 @@
-export declare const CoreDiamondRegular-duo: string;
-export default CoreDiamondRegular-duo;
+export declare const CoreDiamondRegularDuo: string;
+export default CoreDiamondRegularDuo;

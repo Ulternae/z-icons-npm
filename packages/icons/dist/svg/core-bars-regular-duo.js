@@ -1,2 +1,2 @@
-export const CoreBarsRegular-duo = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M512 128H0V64h512zm0 320H0v-64h512zm-32-160H0v-64h512v64z"/></svg>';
-export default CoreBarsRegular-duo;
+export const CoreBarsRegularDuo = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill="currentColor" d="M512 128H0V64h512zm0 320H0v-64h512zm-32-160H0v-64h512v64z"/></svg>';
+export default CoreBarsRegularDuo;

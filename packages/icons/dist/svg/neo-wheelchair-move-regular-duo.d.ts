@@ -1,2 +1,2 @@
-export declare const NeoWheelchairMoveRegular-duo: string;
-export default NeoWheelchairMoveRegular-duo;
+export declare const NeoWheelchairMoveRegularDuo: string;
+export default NeoWheelchairMoveRegularDuo;

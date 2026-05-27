@@ -1,2 +1,2 @@
-export declare const CoreLinkRegular-duo: string;
-export default CoreLinkRegular-duo;
+export declare const CoreLinkRegularDuo: string;
+export default CoreLinkRegularDuo;

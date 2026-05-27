@@ -6,7 +6,7 @@ export const CoreEnvelopeOpen = ({ size = 24, color, style, ...props }) => React
     viewBox: '0 0 512 512',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"fill":"currentColor","d":"M448 225.3 272.3 350.8 256 362.4l-16.3-11.6L64 225.3V448h384zm-5.2-65.1L256 43.5 69.2 160.2 256 293.6zm-412.7-51L256-32l225.9 141.2c18.7 11.7 30.1 32.2 30.1 54.3V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V163.5c0-22.1 11.4-42.6 30.1-54.3"})

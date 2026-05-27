@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreUmbrellaRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreUmbrellaRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreUmbrellaRegular-duo: React.FC<CoreUmbrellaRegular-duoProps>;
-export default CoreUmbrellaRegular-duo;
+export declare const CoreUmbrellaRegularDuo: React.FC<CoreUmbrellaRegularDuoProps>;
+export default CoreUmbrellaRegularDuo;

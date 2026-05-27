@@ -1,2 +1,2 @@
-export declare const CoreBarsRegular-duo: string;
-export default CoreBarsRegular-duo;
+export declare const CoreBarsRegularDuo: string;
+export default CoreBarsRegularDuo;

@@ -237,7 +237,7 @@ import { NeoWrenchSolid } from '../neo-wrench-solid.js';
 import { NeoXmarkSolid } from '../neo-xmark-solid.js';
 
 export const neoSolidIconMap = {
-  solid: {
+  'solid': {
     'address-card': NeoAddressCardSolid,
     'alarm-clock': NeoAlarmClockSolid,
     'anchor': NeoAnchorSolid,

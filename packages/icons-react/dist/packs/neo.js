@@ -237,7 +237,7 @@ import { NeoWrench } from '../neo-wrench.js';
 import { NeoXmark } from '../neo-xmark.js';
 
 export const neoRegularIconMap = {
-  regular: {
+  'regular': {
     'address-card': NeoAddressCard,
     'alarm-clock': NeoAlarmClock,
     'anchor': NeoAnchor,

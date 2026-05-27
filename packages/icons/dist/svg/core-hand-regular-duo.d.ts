@@ -1,2 +1,2 @@
-export declare const CoreHandRegular-duo: string;
-export default CoreHandRegular-duo;
+export declare const CoreHandRegularDuo: string;
+export default CoreHandRegularDuo;

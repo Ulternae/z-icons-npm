@@ -1,2 +1,2 @@
-export declare const CoreWifiRegular-duo: string;
-export default CoreWifiRegular-duo;
+export declare const CoreWifiRegularDuo: string;
+export default CoreWifiRegularDuo;

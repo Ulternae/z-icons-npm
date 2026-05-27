@@ -1,2 +1,2 @@
-export declare const NeoBookRegular-duo: string;
-export default NeoBookRegular-duo;
+export declare const NeoBookRegularDuo: string;
+export default NeoBookRegularDuo;

@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoMoonRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoMoonRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoMoonRegular-duo: React.FC<NeoMoonRegular-duoProps>;
-export default NeoMoonRegular-duo;
+export declare const NeoMoonRegularDuo: React.FC<NeoMoonRegularDuoProps>;
+export default NeoMoonRegularDuo;

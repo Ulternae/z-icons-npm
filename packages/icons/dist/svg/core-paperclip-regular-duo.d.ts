@@ -1,2 +1,2 @@
-export declare const CorePaperclipRegular-duo: string;
-export default CorePaperclipRegular-duo;
+export declare const CorePaperclipRegularDuo: string;
+export default CorePaperclipRegularDuo;

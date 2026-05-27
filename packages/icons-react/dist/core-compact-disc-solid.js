@@ -6,7 +6,7 @@ export const CoreCompactDiscSolid = ({ size = 24, color, style, ...props }) => R
     viewBox: '0 0 512 512',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"fill":"currentColor","d":"M256 512a256 256 0 1 1 0-512 256 256 0 1 1 0 512m106.4-221c-4.9 14.8-12.7 28.2-22.8 39.5l44.9 68.1c29.6-26.6 50.8-62.3 59.3-102.7zM256 192a64 64 0 1 0 0 128 64 64 0 1 0 0-128m-128.5-78.7C97.9 140 76.7 175.7 68.2 216.1l81.4 4.9c4.9-14.8 12.7-28.2 22.8-39.5l-44.9-68.1z"})

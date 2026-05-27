@@ -1,6 +1,6 @@
 import type { IconComponent } from '../create.js';
 
-export declare const neoIconsRegular-duo: {
+export declare const neoIconsRegularDuo: {
   readonly 'address-card': IconComponent;
   readonly 'alarm-clock': IconComponent;
   readonly 'anchor': IconComponent;

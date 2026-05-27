@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreSkullCrossbonesRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreSkullCrossbonesRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreSkullCrossbonesRegular-duo: React.FC<CoreSkullCrossbonesRegular-duoProps>;
-export default CoreSkullCrossbonesRegular-duo;
+export declare const CoreSkullCrossbonesRegularDuo: React.FC<CoreSkullCrossbonesRegularDuoProps>;
+export default CoreSkullCrossbonesRegularDuo;

@@ -1,2 +1,2 @@
-export declare const CoreFrameRegular-duo: string;
-export default CoreFrameRegular-duo;
+export declare const CoreFrameRegularDuo: string;
+export default CoreFrameRegularDuo;

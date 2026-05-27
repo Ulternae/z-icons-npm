@@ -1,2 +1,2 @@
-export declare const CoreShieldHalvedRegular-duo: string;
-export default CoreShieldHalvedRegular-duo;
+export declare const CoreShieldHalvedRegularDuo: string;
+export default CoreShieldHalvedRegularDuo;

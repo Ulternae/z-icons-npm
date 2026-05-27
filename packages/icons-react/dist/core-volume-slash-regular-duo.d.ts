@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreVolumeSlashRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreVolumeSlashRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreVolumeSlashRegular-duo: React.FC<CoreVolumeSlashRegular-duoProps>;
-export default CoreVolumeSlashRegular-duo;
+export declare const CoreVolumeSlashRegularDuo: React.FC<CoreVolumeSlashRegularDuoProps>;
+export default CoreVolumeSlashRegularDuo;

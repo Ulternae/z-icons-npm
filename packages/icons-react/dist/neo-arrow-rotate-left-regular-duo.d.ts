@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoArrowRotateLeftRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoArrowRotateLeftRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoArrowRotateLeftRegular-duo: React.FC<NeoArrowRotateLeftRegular-duoProps>;
-export default NeoArrowRotateLeftRegular-duo;
+export declare const NeoArrowRotateLeftRegularDuo: React.FC<NeoArrowRotateLeftRegularDuoProps>;
+export default NeoArrowRotateLeftRegularDuo;

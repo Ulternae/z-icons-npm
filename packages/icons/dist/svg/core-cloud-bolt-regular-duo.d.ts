@@ -1,2 +1,2 @@
-export declare const CoreCloudBoltRegular-duo: string;
-export default CoreCloudBoltRegular-duo;
+export declare const CoreCloudBoltRegularDuo: string;
+export default CoreCloudBoltRegularDuo;

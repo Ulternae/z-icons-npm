@@ -1,2 +1,2 @@
-export declare const CoreTvRegular-duo: string;
-export default CoreTvRegular-duo;
+export declare const CoreTvRegularDuo: string;
+export default CoreTvRegularDuo;

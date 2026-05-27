@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoBagShoppingRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoBagShoppingRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoBagShoppingRegular-duo: React.FC<NeoBagShoppingRegular-duoProps>;
-export default NeoBagShoppingRegular-duo;
+export declare const NeoBagShoppingRegularDuo: React.FC<NeoBagShoppingRegularDuoProps>;
+export default NeoBagShoppingRegularDuo;

@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreClosedCaptioningRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreClosedCaptioningRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreClosedCaptioningRegular-duo: React.FC<CoreClosedCaptioningRegular-duoProps>;
-export default CoreClosedCaptioningRegular-duo;
+export declare const CoreClosedCaptioningRegularDuo: React.FC<CoreClosedCaptioningRegularDuoProps>;
+export default CoreClosedCaptioningRegularDuo;

@@ -6,7 +6,7 @@ export const CorePhonePlusSolid = ({ size = 24, color, style, ...props }) => Rea
     viewBox: '0 0 512 512',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"fill":"currentColor","d":"M83.1 29.3c25-25 65.5-25 90.5 0l53.5 53.5c25 25 25 65.5 0 90.5l-49.4 49.4c-.8.8-1.1 2-.8 3.2 14.6 53.4 56.3 95.1 109.7 109.7 1.1.3 2.3 0 3.2-.8l49.4-49.4c25-25 65.5-25 90.5 0l53.5 53.5c25 25 25 65.5 0 90.5l-26.9 26.9c-45 45-109.6 64.7-172 52.8-141.9-27-253.8-138.9-280.8-280.8-11.9-62.4 7.8-127.1 52.8-172zM428.3 84h68v56h-68v68h-56v-68h-68V84h68V16h56z"})

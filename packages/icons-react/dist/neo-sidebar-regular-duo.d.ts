@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoSidebarRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoSidebarRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoSidebarRegular-duo: React.FC<NeoSidebarRegular-duoProps>;
-export default NeoSidebarRegular-duo;
+export declare const NeoSidebarRegularDuo: React.FC<NeoSidebarRegularDuoProps>;
+export default NeoSidebarRegularDuo;

@@ -6,7 +6,7 @@ export const NeoChartBarSolid = ({ size = 24, color, style, ...props }) => React
     viewBox: '0 0 560 560',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"fill":"currentColor","d":"M462 532c27.8 0 55.2-4.3 74.5-23.5S560 461.8 560 434V238c0-27.8-4.3-55.2-23.5-74.5S489.8 140 462 140h-14c-15.5 0-28 12.5-28 28v336c0 15.5 12.5 28 28 28zm-126 0c15.5 0 28-12.5 28-28V98c0-63.2-6.8-98-84-98s-84 34.8-84 98v406c0 15.5 12.5 28 28 28zm-224 0c15.5 0 28-12.5 28-28V280c0-15.5-12.5-28-28-28H98c-27.8 0-55.2 4.3-74.5 23.5S0 322.2 0 350v84c0 27.8 4.3 55.2 23.5 74.5S70.2 532 98 532z"})

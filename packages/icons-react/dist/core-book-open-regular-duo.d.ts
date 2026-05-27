@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreBookOpenRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreBookOpenRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreBookOpenRegular-duo: React.FC<CoreBookOpenRegular-duoProps>;
-export default CoreBookOpenRegular-duo;
+export declare const CoreBookOpenRegularDuo: React.FC<CoreBookOpenRegularDuoProps>;
+export default CoreBookOpenRegularDuo;

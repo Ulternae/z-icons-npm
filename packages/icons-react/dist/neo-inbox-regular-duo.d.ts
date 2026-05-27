@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoInboxRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoInboxRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoInboxRegular-duo: React.FC<NeoInboxRegular-duoProps>;
-export default NeoInboxRegular-duo;
+export declare const NeoInboxRegularDuo: React.FC<NeoInboxRegularDuoProps>;
+export default NeoInboxRegularDuo;

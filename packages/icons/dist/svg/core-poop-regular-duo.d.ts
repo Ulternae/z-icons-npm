@@ -1,2 +1,2 @@
-export declare const CorePoopRegular-duo: string;
-export default CorePoopRegular-duo;
+export declare const CorePoopRegularDuo: string;
+export default CorePoopRegularDuo;

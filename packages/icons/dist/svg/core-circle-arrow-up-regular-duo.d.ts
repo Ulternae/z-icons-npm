@@ -1,2 +1,2 @@
-export declare const CoreCircleArrowUpRegular-duo: string;
-export default CoreCircleArrowUpRegular-duo;
+export declare const CoreCircleArrowUpRegularDuo: string;
+export default CoreCircleArrowUpRegularDuo;

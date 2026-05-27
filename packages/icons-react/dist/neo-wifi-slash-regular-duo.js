@@ -1,15 +1,15 @@
 import React from 'react';
 
-export const NeoWifiSlashRegular-duo = ({ size = 24, color, style, ...props }) => React.createElement(
+export const NeoWifiSlashRegularDuo = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
     viewBox: '0 0 616 560',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"fill":"currentColor","d":"M280.5 448c0-12.8 4.5-19.4 9.1-22.8 10.3-7.7 13.8-21.1 9.4-32.6q4.65-.6 9.6-.6c34.2 0 56 21.8 56 56q0 4.95-.6 9.6c-5.7-2.2-11.9-2.5-17.7-.8-2.9.8-5.6 2.1-8.2 3.8-1.3.9-2.5 1.8-3.6 2.9s-2.2 2.3-3.1 3.5c-3.4 4.6-10.1 9.1-22.8 9.1-11.1 0-17.5-3.4-21-7s-7-10-7-21z","opacity":".4"}), React.createElement('path', {"fill":"currentColor","d":"M36.7 8.2c10.9-10.9 28.7-10.9 39.6 0l52.2 52.2C181.9 39.1 242.4 28 308.5 28c122.2 0 225.4 37.9 299.3 108.2 11.2 10.7 11.6 28.4 1 39.6s-28.4 11.6-39.6 1C507.5 118.1 419 84 308.5 84c-50.1 0-95.7 7-136.3 20.1l46.3 46.3c28.1-6.9 58.2-10.4 90-10.4 89 0 164.8 27.6 219.3 79.5 11.2 10.7 11.6 28.4 1 39.6s-28.4 11.6-39.6 1c-42.3-40.3-103.4-64-180.7-64-14.6 0-28.5.8-41.9 2.5l53.8 53.8c50.7 2.3 94.8 19.5 127.4 50.5 11.2 10.7 11.6 28.4 1 39.6-8.6 9-21.7 11.1-32.4 6l163.9 163.7c10.9 10.9 10.9 28.7 0 39.6s-28.7 10.9-39.6 0l-504-504c-10.9-10.9-10.9-28.7 0-39.6m252.9 417c12.4-9.2 14.9-26.8 5.7-39.2s-26.8-14.9-39.2-5.7c-21.3 15.9-31.6 40.6-31.6 67.7 0 23.1 7.5 44.7 23.4 60.6s37.5 23.4 60.6 23.4c27.1 0 51.9-10.3 67.7-31.6 9.2-12.4 6.7-29.9-5.7-39.2s-29.9-6.7-39.2 5.7c-3.4 4.6-10.1 9.1-22.8 9.1-11.1 0-17.5-3.4-21-7s-7-10-7-21c0-12.8 4.5-19.4 9.1-22.8"})
 );
 
-export default NeoWifiSlashRegular-duo;
+export default NeoWifiSlashRegularDuo;

@@ -1,2 +1,2 @@
-export declare const CoreCommentSlashRegular-duo: string;
-export default CoreCommentSlashRegular-duo;
+export declare const CoreCommentSlashRegularDuo: string;
+export default CoreCommentSlashRegularDuo;

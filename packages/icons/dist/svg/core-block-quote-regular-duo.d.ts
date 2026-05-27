@@ -1,2 +1,2 @@
-export declare const CoreBlockQuoteRegular-duo: string;
-export default CoreBlockQuoteRegular-duo;
+export declare const CoreBlockQuoteRegularDuo: string;
+export default CoreBlockQuoteRegularDuo;

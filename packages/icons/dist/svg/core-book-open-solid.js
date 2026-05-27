@@ -1,2 +1,2 @@
-export const CoreBookOpenSolid = '<svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M320 496.8c48.7-30.8 117.5-45.2 193.3-48.2 34-1.3 62.7-28.9 62.7-64.6V32h-32c-76.7 0-157.6 9.8-224 40.3zM256 72.3C189.6 41.8 108.7 32 32 32H0v352c0 35.7 28.7 63.3 62.7 64.6 75.8 3 144.5 17.5 193.3 48.2z"/></svg>';
+export const CoreBookOpenSolid = '<svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill="currentColor" d="M320 496.8c48.7-30.8 117.5-45.2 193.3-48.2 34-1.3 62.7-28.9 62.7-64.6V32h-32c-76.7 0-157.6 9.8-224 40.3zM256 72.3C189.6 41.8 108.7 32 32 32H0v352c0 35.7 28.7 63.3 62.7 64.6 75.8 3 144.5 17.5 193.3 48.2z"/></svg>';
 export default CoreBookOpenSolid;

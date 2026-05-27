@@ -1,2 +1,2 @@
-export const CoreTrashSolid = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M160 0c-35.3 0-64 28.7-64 64v32H0v64h32v288c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V160h32V96h-96V64c0-35.3-28.7-64-64-64zm128 96H160V64h128z"/></svg>';
+export const CoreTrashSolid = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill="currentColor" d="M160 0c-35.3 0-64 28.7-64 64v32H0v64h32v288c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V160h32V96h-96V64c0-35.3-28.7-64-64-64zm128 96H160V64h128z"/></svg>';
 export default CoreTrashSolid;

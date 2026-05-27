@@ -1,2 +1,2 @@
-export declare const CoreEqualsRegular-duo: string;
-export default CoreEqualsRegular-duo;
+export declare const CoreEqualsRegularDuo: string;
+export default CoreEqualsRegularDuo;

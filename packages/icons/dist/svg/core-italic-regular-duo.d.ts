@@ -1,2 +1,2 @@
-export declare const CoreItalicRegular-duo: string;
-export default CoreItalicRegular-duo;
+export declare const CoreItalicRegularDuo: string;
+export default CoreItalicRegularDuo;

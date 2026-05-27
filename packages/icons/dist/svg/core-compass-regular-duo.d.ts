@@ -1,2 +1,2 @@
-export declare const CoreCompassRegular-duo: string;
-export default CoreCompassRegular-duo;
+export declare const CoreCompassRegularDuo: string;
+export default CoreCompassRegularDuo;

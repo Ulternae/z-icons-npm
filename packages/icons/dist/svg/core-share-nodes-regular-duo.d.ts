@@ -1,2 +1,2 @@
-export declare const CoreShareNodesRegular-duo: string;
-export default CoreShareNodesRegular-duo;
+export declare const CoreShareNodesRegularDuo: string;
+export default CoreShareNodesRegularDuo;

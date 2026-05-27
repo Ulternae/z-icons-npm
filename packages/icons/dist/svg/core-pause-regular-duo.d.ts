@@ -1,2 +1,2 @@
-export declare const CorePauseRegular-duo: string;
-export default CorePauseRegular-duo;
+export declare const CorePauseRegularDuo: string;
+export default CorePauseRegularDuo;

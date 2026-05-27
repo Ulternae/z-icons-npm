@@ -1,2 +1,2 @@
-export declare const CorePencilLineRegular-duo: string;
-export default CorePencilLineRegular-duo;
+export declare const CorePencilLineRegularDuo: string;
+export default CorePencilLineRegularDuo;

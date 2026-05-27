@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreWheelchairRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreWheelchairRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreWheelchairRegular-duo: React.FC<CoreWheelchairRegular-duoProps>;
-export default CoreWheelchairRegular-duo;
+export declare const CoreWheelchairRegularDuo: React.FC<CoreWheelchairRegularDuoProps>;
+export default CoreWheelchairRegularDuo;

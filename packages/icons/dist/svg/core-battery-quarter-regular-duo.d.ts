@@ -1,2 +1,2 @@
-export declare const CoreBatteryQuarterRegular-duo: string;
-export default CoreBatteryQuarterRegular-duo;
+export declare const CoreBatteryQuarterRegularDuo: string;
+export default CoreBatteryQuarterRegularDuo;

@@ -1,2 +1,2 @@
-export declare const NeoFilmRegular-duo: string;
-export default NeoFilmRegular-duo;
+export declare const NeoFilmRegularDuo: string;
+export default NeoFilmRegularDuo;

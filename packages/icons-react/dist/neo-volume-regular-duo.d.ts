@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoVolumeRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoVolumeRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoVolumeRegular-duo: React.FC<NeoVolumeRegular-duoProps>;
-export default NeoVolumeRegular-duo;
+export declare const NeoVolumeRegularDuo: React.FC<NeoVolumeRegularDuoProps>;
+export default NeoVolumeRegularDuo;

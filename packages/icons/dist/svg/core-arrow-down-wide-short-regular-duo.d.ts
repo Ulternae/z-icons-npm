@@ -1,2 +1,2 @@
-export declare const CoreArrowDownWideShortRegular-duo: string;
-export default CoreArrowDownWideShortRegular-duo;
+export declare const CoreArrowDownWideShortRegularDuo: string;
+export default CoreArrowDownWideShortRegularDuo;

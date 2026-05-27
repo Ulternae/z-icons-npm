@@ -1,2 +1,2 @@
-export declare const CoreFaceMehRegular-duo: string;
-export default CoreFaceMehRegular-duo;
+export declare const CoreFaceMehRegularDuo: string;
+export default CoreFaceMehRegularDuo;

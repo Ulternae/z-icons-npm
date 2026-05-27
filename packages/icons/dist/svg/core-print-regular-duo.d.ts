@@ -1,2 +1,2 @@
-export declare const CorePrintRegular-duo: string;
-export default CorePrintRegular-duo;
+export declare const CorePrintRegularDuo: string;
+export default CorePrintRegularDuo;

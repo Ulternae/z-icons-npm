@@ -1,2 +1,2 @@
-export declare const CoreMugHotRegular-duo: string;
-export default CoreMugHotRegular-duo;
+export declare const CoreMugHotRegularDuo: string;
+export default CoreMugHotRegularDuo;

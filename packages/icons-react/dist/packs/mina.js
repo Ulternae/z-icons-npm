@@ -1278,7 +1278,7 @@ import { MinaZeroWaves } from '../mina-zero-waves.js';
 import { MinaZero } from '../mina-zero.js';
 
 export const minaLightIconMap = {
-  light: {
+  'light': {
     'a-arrow-down': MinaAArrowDown,
     'a-arrow-up': MinaAArrowUp,
     'academic-hat': MinaAcademicHat,

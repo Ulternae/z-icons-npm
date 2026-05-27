@@ -1,2 +1,2 @@
-export declare const CoreFontRegular-duo: string;
-export default CoreFontRegular-duo;
+export declare const CoreFontRegularDuo: string;
+export default CoreFontRegularDuo;

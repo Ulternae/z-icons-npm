@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreJoystickRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreJoystickRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreJoystickRegular-duo: React.FC<CoreJoystickRegular-duoProps>;
-export default CoreJoystickRegular-duo;
+export declare const CoreJoystickRegularDuo: React.FC<CoreJoystickRegularDuoProps>;
+export default CoreJoystickRegularDuo;

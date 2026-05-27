@@ -6,7 +6,7 @@ export const CorePlusSolid = ({ size = 24, color, style, ...props }) => React.cr
     viewBox: '0 0 448 512',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"fill":"currentColor","d":"M256 224h192v64H256v192h-64V288H0v-64h192V32h64z"})

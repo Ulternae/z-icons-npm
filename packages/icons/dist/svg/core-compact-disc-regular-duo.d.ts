@@ -1,2 +1,2 @@
-export declare const CoreCompactDiscRegular-duo: string;
-export default CoreCompactDiscRegular-duo;
+export declare const CoreCompactDiscRegularDuo: string;
+export default CoreCompactDiscRegularDuo;

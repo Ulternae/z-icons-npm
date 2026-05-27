@@ -1,2 +1,2 @@
-export declare const CoreMoneyBillRegular-duo: string;
-export default CoreMoneyBillRegular-duo;
+export declare const CoreMoneyBillRegularDuo: string;
+export default CoreMoneyBillRegularDuo;

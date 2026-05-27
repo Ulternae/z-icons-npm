@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoWifiRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoWifiRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoWifiRegular-duo: React.FC<NeoWifiRegular-duoProps>;
-export default NeoWifiRegular-duo;
+export declare const NeoWifiRegularDuo: React.FC<NeoWifiRegularDuoProps>;
+export default NeoWifiRegularDuo;

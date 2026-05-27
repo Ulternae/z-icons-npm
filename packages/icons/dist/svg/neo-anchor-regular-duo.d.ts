@@ -1,2 +1,2 @@
-export declare const NeoAnchorRegular-duo: string;
-export default NeoAnchorRegular-duo;
+export declare const NeoAnchorRegularDuo: string;
+export default NeoAnchorRegularDuo;

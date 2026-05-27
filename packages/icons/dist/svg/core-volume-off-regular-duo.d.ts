@@ -1,2 +1,2 @@
-export declare const CoreVolumeOffRegular-duo: string;
-export default CoreVolumeOffRegular-duo;
+export declare const CoreVolumeOffRegularDuo: string;
+export default CoreVolumeOffRegularDuo;

@@ -1,2 +1,2 @@
-export declare const CoreAnchorRegular-duo: string;
-export default CoreAnchorRegular-duo;
+export declare const CoreAnchorRegularDuo: string;
+export default CoreAnchorRegularDuo;

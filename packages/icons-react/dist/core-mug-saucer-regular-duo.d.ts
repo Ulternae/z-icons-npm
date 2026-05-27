@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreMugSaucerRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreMugSaucerRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreMugSaucerRegular-duo: React.FC<CoreMugSaucerRegular-duoProps>;
-export default CoreMugSaucerRegular-duo;
+export declare const CoreMugSaucerRegularDuo: React.FC<CoreMugSaucerRegularDuoProps>;
+export default CoreMugSaucerRegularDuo;

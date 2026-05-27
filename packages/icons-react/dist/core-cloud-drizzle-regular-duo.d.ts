@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreCloudDrizzleRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreCloudDrizzleRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreCloudDrizzleRegular-duo: React.FC<CoreCloudDrizzleRegular-duoProps>;
-export default CoreCloudDrizzleRegular-duo;
+export declare const CoreCloudDrizzleRegularDuo: React.FC<CoreCloudDrizzleRegularDuoProps>;
+export default CoreCloudDrizzleRegularDuo;

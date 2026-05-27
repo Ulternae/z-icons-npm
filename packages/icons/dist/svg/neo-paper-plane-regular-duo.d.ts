@@ -1,2 +1,2 @@
-export declare const NeoPaperPlaneRegular-duo: string;
-export default NeoPaperPlaneRegular-duo;
+export declare const NeoPaperPlaneRegularDuo: string;
+export default NeoPaperPlaneRegularDuo;

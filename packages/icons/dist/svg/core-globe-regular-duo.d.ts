@@ -1,2 +1,2 @@
-export declare const CoreGlobeRegular-duo: string;
-export default CoreGlobeRegular-duo;
+export declare const CoreGlobeRegularDuo: string;
+export default CoreGlobeRegularDuo;

@@ -1,2 +1,2 @@
-export declare const CorePhonePlusRegular-duo: string;
-export default CorePhonePlusRegular-duo;
+export declare const CorePhonePlusRegularDuo: string;
+export default CorePhonePlusRegularDuo;

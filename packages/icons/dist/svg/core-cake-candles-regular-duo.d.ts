@@ -1,2 +1,2 @@
-export declare const CoreCakeCandlesRegular-duo: string;
-export default CoreCakeCandlesRegular-duo;
+export declare const CoreCakeCandlesRegularDuo: string;
+export default CoreCakeCandlesRegularDuo;

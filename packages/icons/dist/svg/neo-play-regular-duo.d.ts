@@ -1,2 +1,2 @@
-export declare const NeoPlayRegular-duo: string;
-export default NeoPlayRegular-duo;
+export declare const NeoPlayRegularDuo: string;
+export default NeoPlayRegularDuo;

@@ -1,2 +1,2 @@
-export declare const NeoImagesRegular-duo: string;
-export default NeoImagesRegular-duo;
+export declare const NeoImagesRegularDuo: string;
+export default NeoImagesRegularDuo;

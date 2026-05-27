@@ -1,2 +1,2 @@
-export declare const CoreBookmarkRegular-duo: string;
-export default CoreBookmarkRegular-duo;
+export declare const CoreBookmarkRegularDuo: string;
+export default CoreBookmarkRegularDuo;

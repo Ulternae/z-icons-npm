@@ -6,7 +6,7 @@ export const NeoCommentDotsSolid = ({ size = 24, color, style, ...props }) => Re
     viewBox: '0 0 560 560',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"fill":"currentColor","d":"M69.6 61.8C117.5 20.5 188.2 0 280 0s162.5 20.5 210.4 61.8C539.1 103.7 560 163.2 560 231c0 61.8-17.3 116.8-57.6 158-40 40.9-99.2 64.6-176 71.1l-106.8 88.6c-8.7 7.3-19.7 11.3-31.1 11.3-26.8 0-48.6-21.7-48.6-48.6 0-9 1.9-17.8 6.2-25.8 3.9-7.4 11-22.2 14.8-38.3-53.4-15.1-94.3-42.1-121.7-80.1C11.8 329.1-.1 282.3-.1 231c0-67.9 20.9-127.3 69.6-169.2zM280 266a28 28 0 1 0 0-56 28 28 0 1 0 0 56m126-28a28 28 0 1 0-56 0 28 28 0 1 0 56 0m-224 28a28 28 0 1 0 0-56 28 28 0 1 0 0 56"})

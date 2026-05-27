@@ -1,2 +1,2 @@
-export const CorePlusRegular-duo = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M256 224h192v64H256v192h-64V288H0v-64h192V32h64z"/></svg>';
-export default CorePlusRegular-duo;
+export const CorePlusRegularDuo = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill="currentColor" d="M256 224h192v64H256v192h-64V288H0v-64h192V32h64z"/></svg>';
+export default CorePlusRegularDuo;

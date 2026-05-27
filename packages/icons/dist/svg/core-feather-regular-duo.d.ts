@@ -1,2 +1,2 @@
-export declare const CoreFeatherRegular-duo: string;
-export default CoreFeatherRegular-duo;
+export declare const CoreFeatherRegularDuo: string;
+export default CoreFeatherRegularDuo;

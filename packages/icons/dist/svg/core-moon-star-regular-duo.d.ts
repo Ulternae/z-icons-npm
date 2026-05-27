@@ -1,2 +1,2 @@
-export declare const CoreMoonStarRegular-duo: string;
-export default CoreMoonStarRegular-duo;
+export declare const CoreMoonStarRegularDuo: string;
+export default CoreMoonStarRegularDuo;

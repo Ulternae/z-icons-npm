@@ -1,2 +1,2 @@
-export declare const CoreAlarmClockRegular-duo: string;
-export default CoreAlarmClockRegular-duo;
+export declare const CoreAlarmClockRegularDuo: string;
+export default CoreAlarmClockRegularDuo;

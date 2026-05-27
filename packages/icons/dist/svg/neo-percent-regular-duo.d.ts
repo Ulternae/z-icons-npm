@@ -1,2 +1,2 @@
-export declare const NeoPercentRegular-duo: string;
-export default NeoPercentRegular-duo;
+export declare const NeoPercentRegularDuo: string;
+export default NeoPercentRegularDuo;

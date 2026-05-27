@@ -1,2 +1,2 @@
-export declare const CoreBatteryBoltRegular-duo: string;
-export default CoreBatteryBoltRegular-duo;
+export declare const CoreBatteryBoltRegularDuo: string;
+export default CoreBatteryBoltRegularDuo;

@@ -1,2 +1,2 @@
-export declare const CoreBoxRegular-duo: string;
-export default CoreBoxRegular-duo;
+export declare const CoreBoxRegularDuo: string;
+export default CoreBoxRegularDuo;

@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreExpandRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreExpandRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreExpandRegular-duo: React.FC<CoreExpandRegular-duoProps>;
-export default CoreExpandRegular-duo;
+export declare const CoreExpandRegularDuo: React.FC<CoreExpandRegularDuoProps>;
+export default CoreExpandRegularDuo;

@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreBriefcaseRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreBriefcaseRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreBriefcaseRegular-duo: React.FC<CoreBriefcaseRegular-duoProps>;
-export default CoreBriefcaseRegular-duo;
+export declare const CoreBriefcaseRegularDuo: React.FC<CoreBriefcaseRegularDuoProps>;
+export default CoreBriefcaseRegularDuo;

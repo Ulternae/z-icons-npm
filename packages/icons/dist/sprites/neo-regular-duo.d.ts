@@ -1,2 +1,2 @@
-export declare const neoSpriteRegular-duo: string;
-export default neoSpriteRegular-duo;
+export declare const neoSpriteRegularDuo: string;
+export default neoSpriteRegularDuo;

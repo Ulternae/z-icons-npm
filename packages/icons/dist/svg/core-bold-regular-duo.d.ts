@@ -1,2 +1,2 @@
-export declare const CoreBoldRegular-duo: string;
-export default CoreBoldRegular-duo;
+export declare const CoreBoldRegularDuo: string;
+export default CoreBoldRegularDuo;

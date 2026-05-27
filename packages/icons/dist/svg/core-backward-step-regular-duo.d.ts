@@ -1,2 +1,2 @@
-export declare const CoreBackwardStepRegular-duo: string;
-export default CoreBackwardStepRegular-duo;
+export declare const CoreBackwardStepRegularDuo: string;
+export default CoreBackwardStepRegularDuo;

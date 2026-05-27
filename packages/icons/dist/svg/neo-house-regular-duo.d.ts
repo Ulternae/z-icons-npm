@@ -1,2 +1,2 @@
-export declare const NeoHouseRegular-duo: string;
-export default NeoHouseRegular-duo;
+export declare const NeoHouseRegularDuo: string;
+export default NeoHouseRegularDuo;

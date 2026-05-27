@@ -1,2 +1,2 @@
-export declare const NeoVideoRegular-duo: string;
-export default NeoVideoRegular-duo;
+export declare const NeoVideoRegularDuo: string;
+export default NeoVideoRegularDuo;

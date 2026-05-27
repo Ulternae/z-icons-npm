@@ -1,15 +1,15 @@
 import React from 'react';
 
-export const NeoTrashRegular-duo = ({ size = 24, color, style, ...props }) => React.createElement(
+export const NeoTrashRegularDuo = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
     viewBox: '0 0 504 560',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"fill":"currentColor","d":"M84 174.2c27.9 2.6 55.9 4.5 84 5.8 14 .7 28 1.1 42 1.5 15.8.4 26.3.4 31.5.5H252c55.9 0 112.1-2.7 168-7.8V210c-15.5 0-28 12.5-28 28v126c0 67.6-13.8 99.1-32.4 115.4C340 496.5 307.5 504 252 504s-88-7.4-107.6-24.6C125.8 463.1 112 431.6 112 364V238c0-15.5-12.5-28-28-28z","opacity":".4"}), React.createElement('path', {"fill":"currentColor","d":"M112 238c0-15.5-12.5-28-28-28s-28 12.5-28 28v126c0 72.4 14.2 124.9 51.6 157.6C144 553.4 195.5 560 252 560s108-6.6 144.4-38.4C433.8 488.9 448 436.4 448 364V238c0-15.5-12.5-28-28-28s-28 12.5-28 28v126c0 67.6-13.8 99.1-32.4 115.4C340 496.5 307.5 504 252 504s-88-7.4-107.6-24.6C125.8 463.1 112 431.6 112 364zm-11.7-118.9 5.8-45.5c5.3-42 41-73.6 83.4-73.6h125.1C357 0 392.7 31.5 398 73.6l5.8 45.5c23-1.9 46-4.1 68.9-6.9 15.3-1.9 29.3 9 31.3 24.3s-9 29.3-24.3 31.3C404.2 177.1 327.9 182 252 182s-152.2-4.9-227.5-14.2C9.2 165.9-1.7 151.9.2 136.5s15.9-26.2 31.3-24.3c22.9 2.8 45.9 5 68.9 6.9zM189.4 56c-14.1 0-26 10.5-27.8 24.5l-5.3 42.5c30 1.7 62.9 2.9 95.7 2.9s65.7-1.2 95.7-2.9l-5.3-42.5c-1.8-14-13.7-24.5-27.8-24.5z"})
 );
 
-export default NeoTrashRegular-duo;
+export default NeoTrashRegularDuo;

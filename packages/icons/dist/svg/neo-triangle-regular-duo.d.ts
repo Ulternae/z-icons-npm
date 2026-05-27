@@ -1,2 +1,2 @@
-export declare const NeoTriangleRegular-duo: string;
-export default NeoTriangleRegular-duo;
+export declare const NeoTriangleRegularDuo: string;
+export default NeoTriangleRegularDuo;

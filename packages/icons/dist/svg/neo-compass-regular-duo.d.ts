@@ -1,2 +1,2 @@
-export declare const NeoCompassRegular-duo: string;
-export default NeoCompassRegular-duo;
+export declare const NeoCompassRegularDuo: string;
+export default NeoCompassRegularDuo;

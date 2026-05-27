@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreScissorsRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreScissorsRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreScissorsRegular-duo: React.FC<CoreScissorsRegular-duoProps>;
-export default CoreScissorsRegular-duo;
+export declare const CoreScissorsRegularDuo: React.FC<CoreScissorsRegularDuoProps>;
+export default CoreScissorsRegularDuo;

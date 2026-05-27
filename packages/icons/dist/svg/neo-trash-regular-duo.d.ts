@@ -1,2 +1,2 @@
-export declare const NeoTrashRegular-duo: string;
-export default NeoTrashRegular-duo;
+export declare const NeoTrashRegularDuo: string;
+export default NeoTrashRegularDuo;

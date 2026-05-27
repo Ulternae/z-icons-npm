@@ -1,2 +1,2 @@
-export declare const CoreHourglassRegular-duo: string;
-export default CoreHourglassRegular-duo;
+export declare const CoreHourglassRegularDuo: string;
+export default CoreHourglassRegularDuo;

@@ -1,2 +1,2 @@
-export const CoreBuilding = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M384 64v384H64V64zM64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zm64 160v64h64v-64zm192 0h-64v64h64zm-64 128v64h64v-64zm-64 0h-64v64h64z"/></svg>';
+export const CoreBuilding = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill="currentColor" d="M384 64v384H64V64zM64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zm64 160v64h64v-64zm192 0h-64v64h64zm-64 128v64h64v-64zm-64 0h-64v64h64z"/></svg>';
 export default CoreBuilding;

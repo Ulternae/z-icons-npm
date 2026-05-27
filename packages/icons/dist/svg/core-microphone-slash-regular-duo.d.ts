@@ -1,2 +1,2 @@
-export declare const CoreMicrophoneSlashRegular-duo: string;
-export default CoreMicrophoneSlashRegular-duo;
+export declare const CoreMicrophoneSlashRegularDuo: string;
+export default CoreMicrophoneSlashRegularDuo;

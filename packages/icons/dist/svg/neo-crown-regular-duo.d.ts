@@ -1,2 +1,2 @@
-export declare const NeoCrownRegular-duo: string;
-export default NeoCrownRegular-duo;
+export declare const NeoCrownRegularDuo: string;
+export default NeoCrownRegularDuo;

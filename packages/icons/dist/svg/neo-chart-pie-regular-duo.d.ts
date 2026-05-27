@@ -1,2 +1,2 @@
-export declare const NeoChartPieRegular-duo: string;
-export default NeoChartPieRegular-duo;
+export declare const NeoChartPieRegularDuo: string;
+export default NeoChartPieRegularDuo;

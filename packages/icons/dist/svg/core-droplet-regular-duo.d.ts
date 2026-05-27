@@ -1,2 +1,2 @@
-export declare const CoreDropletRegular-duo: string;
-export default CoreDropletRegular-duo;
+export declare const CoreDropletRegularDuo: string;
+export default CoreDropletRegularDuo;

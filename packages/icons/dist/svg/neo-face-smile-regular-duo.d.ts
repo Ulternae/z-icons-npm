@@ -1,2 +1,2 @@
-export declare const NeoFaceSmileRegular-duo: string;
-export default NeoFaceSmileRegular-duo;
+export declare const NeoFaceSmileRegularDuo: string;
+export default NeoFaceSmileRegularDuo;

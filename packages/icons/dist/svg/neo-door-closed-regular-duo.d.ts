@@ -1,2 +1,2 @@
-export declare const NeoDoorClosedRegular-duo: string;
-export default NeoDoorClosedRegular-duo;
+export declare const NeoDoorClosedRegularDuo: string;
+export default NeoDoorClosedRegularDuo;

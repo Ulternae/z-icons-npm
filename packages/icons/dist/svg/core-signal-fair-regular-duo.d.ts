@@ -1,2 +1,2 @@
-export declare const CoreSignalFairRegular-duo: string;
-export default CoreSignalFairRegular-duo;
+export declare const CoreSignalFairRegularDuo: string;
+export default CoreSignalFairRegularDuo;

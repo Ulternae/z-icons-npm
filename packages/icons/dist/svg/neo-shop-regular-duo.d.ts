@@ -1,2 +1,2 @@
-export declare const NeoShopRegular-duo: string;
-export default NeoShopRegular-duo;
+export declare const NeoShopRegularDuo: string;
+export default NeoShopRegularDuo;

@@ -1,2 +1,2 @@
-export declare const CoreGhostRegular-duo: string;
-export default CoreGhostRegular-duo;
+export declare const CoreGhostRegularDuo: string;
+export default CoreGhostRegularDuo;

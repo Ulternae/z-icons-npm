@@ -1,2 +1,2 @@
-export declare const CoreTrainRegular-duo: string;
-export default CoreTrainRegular-duo;
+export declare const CoreTrainRegularDuo: string;
+export default CoreTrainRegularDuo;

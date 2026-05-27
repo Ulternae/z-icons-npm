@@ -1,2 +1,2 @@
-export declare const CoreFloppyDiskRegular-duo: string;
-export default CoreFloppyDiskRegular-duo;
+export declare const CoreFloppyDiskRegularDuo: string;
+export default CoreFloppyDiskRegularDuo;

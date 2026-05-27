@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoHeartHalfRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoHeartHalfRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoHeartHalfRegular-duo: React.FC<NeoHeartHalfRegular-duoProps>;
-export default NeoHeartHalfRegular-duo;
+export declare const NeoHeartHalfRegularDuo: React.FC<NeoHeartHalfRegularDuoProps>;
+export default NeoHeartHalfRegularDuo;

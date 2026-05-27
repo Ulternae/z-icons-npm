@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreTicketRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreTicketRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreTicketRegular-duo: React.FC<CoreTicketRegular-duoProps>;
-export default CoreTicketRegular-duo;
+export declare const CoreTicketRegularDuo: React.FC<CoreTicketRegularDuoProps>;
+export default CoreTicketRegularDuo;

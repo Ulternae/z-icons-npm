@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoTicketRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoTicketRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoTicketRegular-duo: React.FC<NeoTicketRegular-duoProps>;
-export default NeoTicketRegular-duo;
+export declare const NeoTicketRegularDuo: React.FC<NeoTicketRegularDuoProps>;
+export default NeoTicketRegularDuo;

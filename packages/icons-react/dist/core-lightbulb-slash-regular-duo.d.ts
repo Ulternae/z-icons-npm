@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreLightbulbSlashRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreLightbulbSlashRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreLightbulbSlashRegular-duo: React.FC<CoreLightbulbSlashRegular-duoProps>;
-export default CoreLightbulbSlashRegular-duo;
+export declare const CoreLightbulbSlashRegularDuo: React.FC<CoreLightbulbSlashRegularDuoProps>;
+export default CoreLightbulbSlashRegularDuo;

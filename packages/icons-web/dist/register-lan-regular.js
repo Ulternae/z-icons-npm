@@ -7515,4 +7515,4 @@ export const lanIconsRegular = {
   'zzz': LanZzzRegular
 };;
 
-export const ZLanRegularElement = defineZIconElement('z-lan-regular', { lan: { regular: lanIconsRegular } }, { type: 'lan', variant: 'regular', defaultVariant: 'regular' });
+export const ZLanRegularElement = defineZIconElement('z-lan-regular', { lan: { 'regular': lanIconsRegular } }, { type: 'lan', variant: 'regular', defaultVariant: 'regular' });

@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreCameraSlashRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreCameraSlashRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreCameraSlashRegular-duo: React.FC<CoreCameraSlashRegular-duoProps>;
-export default CoreCameraSlashRegular-duo;
+export declare const CoreCameraSlashRegularDuo: React.FC<CoreCameraSlashRegularDuoProps>;
+export default CoreCameraSlashRegularDuo;

@@ -475,4 +475,4 @@ export const neoIcons = {
   'xmark': NeoXmark
 };;
 
-export const ZNeoElement = defineZIconElement('z-neo', { neo: { regular: neoIcons } }, { type: 'neo', variant: 'regular', defaultVariant: 'regular' });
+export const ZNeoElement = defineZIconElement('z-neo', { neo: { 'regular': neoIcons } }, { type: 'neo', variant: 'regular', defaultVariant: 'regular' });

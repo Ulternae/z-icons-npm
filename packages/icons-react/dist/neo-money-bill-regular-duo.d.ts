@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoMoneyBillRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoMoneyBillRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoMoneyBillRegular-duo: React.FC<NeoMoneyBillRegular-duoProps>;
-export default NeoMoneyBillRegular-duo;
+export declare const NeoMoneyBillRegularDuo: React.FC<NeoMoneyBillRegularDuoProps>;
+export default NeoMoneyBillRegularDuo;

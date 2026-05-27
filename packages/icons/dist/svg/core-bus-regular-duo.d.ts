@@ -1,2 +1,2 @@
-export declare const CoreBusRegular-duo: string;
-export default CoreBusRegular-duo;
+export declare const CoreBusRegularDuo: string;
+export default CoreBusRegularDuo;

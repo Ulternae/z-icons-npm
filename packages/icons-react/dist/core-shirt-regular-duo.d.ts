@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreShirtRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreShirtRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreShirtRegular-duo: React.FC<CoreShirtRegular-duoProps>;
-export default CoreShirtRegular-duo;
+export declare const CoreShirtRegularDuo: React.FC<CoreShirtRegularDuoProps>;
+export default CoreShirtRegularDuo;

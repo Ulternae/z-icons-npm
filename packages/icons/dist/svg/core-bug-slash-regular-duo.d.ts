@@ -1,2 +1,2 @@
-export declare const CoreBugSlashRegular-duo: string;
-export default CoreBugSlashRegular-duo;
+export declare const CoreBugSlashRegularDuo: string;
+export default CoreBugSlashRegularDuo;

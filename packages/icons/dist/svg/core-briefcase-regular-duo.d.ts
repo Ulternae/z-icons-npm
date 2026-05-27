@@ -1,2 +1,2 @@
-export declare const CoreBriefcaseRegular-duo: string;
-export default CoreBriefcaseRegular-duo;
+export declare const CoreBriefcaseRegularDuo: string;
+export default CoreBriefcaseRegularDuo;

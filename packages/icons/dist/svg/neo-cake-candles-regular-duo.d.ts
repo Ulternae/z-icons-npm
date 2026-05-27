@@ -1,2 +1,2 @@
-export declare const NeoCakeCandlesRegular-duo: string;
-export default NeoCakeCandlesRegular-duo;
+export declare const NeoCakeCandlesRegularDuo: string;
+export default NeoCakeCandlesRegularDuo;

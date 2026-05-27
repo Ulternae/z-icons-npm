@@ -1,2 +1,2 @@
-export declare const CoreSlidersRegular-duo: string;
-export default CoreSlidersRegular-duo;
+export declare const CoreSlidersRegularDuo: string;
+export default CoreSlidersRegularDuo;

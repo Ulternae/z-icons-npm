@@ -1,2 +1,2 @@
-export declare const CorePawRegular-duo: string;
-export default CorePawRegular-duo;
+export declare const CorePawRegularDuo: string;
+export default CorePawRegularDuo;

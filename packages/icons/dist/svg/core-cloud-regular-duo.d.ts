@@ -1,2 +1,2 @@
-export declare const CoreCloudRegular-duo: string;
-export default CoreCloudRegular-duo;
+export declare const CoreCloudRegularDuo: string;
+export default CoreCloudRegularDuo;

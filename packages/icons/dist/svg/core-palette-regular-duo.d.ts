@@ -1,2 +1,2 @@
-export declare const CorePaletteRegular-duo: string;
-export default CorePaletteRegular-duo;
+export declare const CorePaletteRegularDuo: string;
+export default CorePaletteRegularDuo;

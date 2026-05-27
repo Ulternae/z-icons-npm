@@ -1,2 +1,2 @@
-export declare const CoreArrowDownToBracketRegular-duo: string;
-export default CoreArrowDownToBracketRegular-duo;
+export declare const CoreArrowDownToBracketRegularDuo: string;
+export default CoreArrowDownToBracketRegularDuo;

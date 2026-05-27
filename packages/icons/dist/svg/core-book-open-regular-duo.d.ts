@@ -1,2 +1,2 @@
-export declare const CoreBookOpenRegular-duo: string;
-export default CoreBookOpenRegular-duo;
+export declare const CoreBookOpenRegularDuo: string;
+export default CoreBookOpenRegularDuo;

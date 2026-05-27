@@ -1,2 +1,2 @@
-export declare const NeoPersonBikingRegular-duo: string;
-export default NeoPersonBikingRegular-duo;
+export declare const NeoPersonBikingRegularDuo: string;
+export default NeoPersonBikingRegularDuo;

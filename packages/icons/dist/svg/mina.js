@@ -2554,7 +2554,7 @@ import { MinaZeroWavesSolid } from './mina-zero-waves-solid.js';
 import { MinaZeroSolid } from './mina-zero-solid.js';
 
 export const minaIcons = {
-  light: {
+  'light': {
     'a-arrow-down': MinaAArrowDown,
     'a-arrow-up': MinaAArrowUp,
     'academic-hat': MinaAcademicHat,
@@ -3833,7 +3833,7 @@ export const minaIcons = {
     'zero-waves': MinaZeroWaves,
     'zero': MinaZero
   },
-  solid: {
+  'solid': {
     'a-arrow-down': MinaAArrowDownSolid,
     'a-arrow-up': MinaAArrowUpSolid,
     'academic-hat': MinaAcademicHatSolid,

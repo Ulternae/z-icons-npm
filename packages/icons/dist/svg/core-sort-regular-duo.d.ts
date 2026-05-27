@@ -1,2 +1,2 @@
-export declare const CoreSortRegular-duo: string;
-export default CoreSortRegular-duo;
+export declare const CoreSortRegularDuo: string;
+export default CoreSortRegularDuo;

@@ -1,2 +1,2 @@
-export declare const CoreInboxRegular-duo: string;
-export default CoreInboxRegular-duo;
+export declare const CoreInboxRegularDuo: string;
+export default CoreInboxRegularDuo;

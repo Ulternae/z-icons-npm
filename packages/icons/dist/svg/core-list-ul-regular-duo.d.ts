@@ -1,2 +1,2 @@
-export declare const CoreListUlRegular-duo: string;
-export default CoreListUlRegular-duo;
+export declare const CoreListUlRegularDuo: string;
+export default CoreListUlRegularDuo;

@@ -1,2 +1,2 @@
-export declare const NeoSignalBarsSlashRegular-duo: string;
-export default NeoSignalBarsSlashRegular-duo;
+export declare const NeoSignalBarsSlashRegularDuo: string;
+export default NeoSignalBarsSlashRegularDuo;

@@ -1,2 +1,2 @@
-export declare const NeoCommentDotsRegular-duo: string;
-export default NeoCommentDotsRegular-duo;
+export declare const NeoCommentDotsRegularDuo: string;
+export default NeoCommentDotsRegularDuo;

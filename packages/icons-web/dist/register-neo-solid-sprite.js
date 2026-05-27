@@ -477,4 +477,4 @@ export const neoIconsSolid = {
 };;
 
 export { neoSpriteSolid } from '@zcorvus/icons/sprites/neo-solid.js';
-export const ZNeoSolidSpriteElement = defineZIconElement('z-neo-solid-sprite', { neo: { solid: neoIconsSolid } }, { type: 'neo', variant: 'solid', defaultVariant: 'solid', mode: 'sprite', spriteId: 'neo-solid', sprite: neoSpriteSolid });
+export const ZNeoSolidSpriteElement = defineZIconElement('z-neo-solid-sprite', { neo: { 'solid': neoIconsSolid } }, { type: 'neo', variant: 'solid', defaultVariant: 'solid', mode: 'sprite', spriteId: 'neo-solid', sprite: neoSpriteSolid });

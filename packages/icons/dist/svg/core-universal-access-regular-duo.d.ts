@@ -1,2 +1,2 @@
-export declare const CoreUniversalAccessRegular-duo: string;
-export default CoreUniversalAccessRegular-duo;
+export declare const CoreUniversalAccessRegularDuo: string;
+export default CoreUniversalAccessRegularDuo;

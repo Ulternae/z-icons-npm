@@ -1,2 +1,2 @@
-export declare const CoreNewspaperRegular-duo: string;
-export default CoreNewspaperRegular-duo;
+export declare const CoreNewspaperRegularDuo: string;
+export default CoreNewspaperRegularDuo;

@@ -1,2 +1,2 @@
-export declare const NeoVolumeSlashRegular-duo: string;
-export default NeoVolumeSlashRegular-duo;
+export declare const NeoVolumeSlashRegularDuo: string;
+export default NeoVolumeSlashRegularDuo;

@@ -1,2 +1,2 @@
-export declare const CoreWrenchRegular-duo: string;
-export default CoreWrenchRegular-duo;
+export declare const CoreWrenchRegularDuo: string;
+export default CoreWrenchRegularDuo;

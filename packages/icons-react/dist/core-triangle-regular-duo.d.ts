@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreTriangleRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreTriangleRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreTriangleRegular-duo: React.FC<CoreTriangleRegular-duoProps>;
-export default CoreTriangleRegular-duo;
+export declare const CoreTriangleRegularDuo: React.FC<CoreTriangleRegularDuoProps>;
+export default CoreTriangleRegularDuo;

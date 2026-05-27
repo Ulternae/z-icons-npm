@@ -1,2 +1,2 @@
-export declare const CoreSquareRegular-duo: string;
-export default CoreSquareRegular-duo;
+export declare const CoreSquareRegularDuo: string;
+export default CoreSquareRegularDuo;

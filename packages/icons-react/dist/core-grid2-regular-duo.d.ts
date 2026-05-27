@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreGrid2Regular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreGrid2RegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreGrid2Regular-duo: React.FC<CoreGrid2Regular-duoProps>;
-export default CoreGrid2Regular-duo;
+export declare const CoreGrid2RegularDuo: React.FC<CoreGrid2RegularDuoProps>;
+export default CoreGrid2RegularDuo;

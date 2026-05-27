@@ -1,2 +1,2 @@
-export declare const CoreVolumeSlashRegular-duo: string;
-export default CoreVolumeSlashRegular-duo;
+export declare const CoreVolumeSlashRegularDuo: string;
+export default CoreVolumeSlashRegularDuo;

@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoPaperclipRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoPaperclipRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoPaperclipRegular-duo: React.FC<NeoPaperclipRegular-duoProps>;
-export default NeoPaperclipRegular-duo;
+export declare const NeoPaperclipRegularDuo: React.FC<NeoPaperclipRegularDuoProps>;
+export default NeoPaperclipRegularDuo;

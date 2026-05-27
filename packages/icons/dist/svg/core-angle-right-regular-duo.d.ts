@@ -1,2 +1,2 @@
-export declare const CoreAngleRightRegular-duo: string;
-export default CoreAngleRightRegular-duo;
+export declare const CoreAngleRightRegularDuo: string;
+export default CoreAngleRightRegularDuo;

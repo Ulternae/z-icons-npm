@@ -1,2 +1,2 @@
-export declare const CoreLocationArrowRegular-duo: string;
-export default CoreLocationArrowRegular-duo;
+export declare const CoreLocationArrowRegularDuo: string;
+export default CoreLocationArrowRegularDuo;

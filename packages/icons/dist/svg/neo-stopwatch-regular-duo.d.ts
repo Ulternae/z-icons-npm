@@ -1,2 +1,2 @@
-export declare const NeoStopwatchRegular-duo: string;
-export default NeoStopwatchRegular-duo;
+export declare const NeoStopwatchRegularDuo: string;
+export default NeoStopwatchRegularDuo;

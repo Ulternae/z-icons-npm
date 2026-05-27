@@ -3757,7 +3757,7 @@ import { LanZap } from '../lan-zap.js';
 import { LanZzz } from '../lan-zzz.js';
 
 export const lanLightIconMap = {
-  light: {
+  'light': {
     '0': Lan0,
     '00': Lan00,
     '1': Lan1,

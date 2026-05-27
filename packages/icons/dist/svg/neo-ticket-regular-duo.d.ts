@@ -1,2 +1,2 @@
-export declare const NeoTicketRegular-duo: string;
-export default NeoTicketRegular-duo;
+export declare const NeoTicketRegularDuo: string;
+export default NeoTicketRegularDuo;

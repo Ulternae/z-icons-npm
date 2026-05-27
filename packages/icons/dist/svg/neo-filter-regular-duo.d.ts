@@ -1,2 +1,2 @@
-export declare const NeoFilterRegular-duo: string;
-export default NeoFilterRegular-duo;
+export declare const NeoFilterRegularDuo: string;
+export default NeoFilterRegularDuo;

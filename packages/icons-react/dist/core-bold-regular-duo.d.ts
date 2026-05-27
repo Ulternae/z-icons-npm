@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreBoldRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreBoldRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreBoldRegular-duo: React.FC<CoreBoldRegular-duoProps>;
-export default CoreBoldRegular-duo;
+export declare const CoreBoldRegularDuo: React.FC<CoreBoldRegularDuoProps>;
+export default CoreBoldRegularDuo;

@@ -1,2 +1,2 @@
-export declare const NeoTerminalRegular-duo: string;
-export default NeoTerminalRegular-duo;
+export declare const NeoTerminalRegularDuo: string;
+export default NeoTerminalRegularDuo;

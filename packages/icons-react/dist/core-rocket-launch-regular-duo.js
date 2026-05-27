@@ -1,15 +1,15 @@
 import React from 'react';
 
-export const CoreRocketLaunchRegular-duo = ({ size = 24, color, style, ...props }) => React.createElement(
+export const CoreRocketLaunchRegularDuo = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
     viewBox: '0 0 576 512',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"fill":"currentColor","d":"M112.2 192v2.8l25.6 25.6c33.3-55.5 55-91.6 65-108.4h-10.7c-44.2 0-80 35.8-80 80zm72.2 75c4.6 4.6 35.4 35.4 92.7 92.6l125.4-75.2c17.1-10.3 31.9-23.5 43.8-38.7.1-.1.2-.3.3-.4l.1-.1c.5-.7 1-1.3 1.5-2 20.4-27.3 31.9-60.8 32-96V63.9H397c-56.2 0-108.3 29.5-137.2 77.7-16.2 26.9-41.2 68.7-75.2 125.4zm135.7-91c0-2.1.1-4.1.4-6.1 0-.4.1-.8.2-1.1 3.5-23.1 23.4-40.7 47.5-40.7 8.3 0 16.1 2.1 22.9 5.8.7.4 1.3.7 2 1.1 13.9 8.4 23.1 23.7 23.1 41.1 0 26.5-21.5 48-48 48s-48-21.5-48-48zm3.6 230.3 25.7 25.7h2.8c41.1 0 75-31 79.5-70.9v-.8c.3-2.7.4-5.5.4-8.2v-10.7c-49.3 29.6-85.5 51.3-108.4 65z","opacity":".4"}), React.createElement('path', {"fill":"currentColor","d":"m236.8 480.6-54.1 54.1-45.2-45.2 54.1-54.1 45.2 45.3zm-64-64-86.1 86.1-45.2-45.2 86.1-86.1 45.2 45.3zm371.4-269.3c0 51-17.4 99.5-48 138.4v66.4c0 79.5-64.5 144-144 144H323L48.2 221.3v-29.2c0-79.5 64.5-144 144-144h66.3C297.4 17.4 345.9 0 396.8 0h147.3v147.3zm-220.5 259 25.6 25.7h2.8c44.2 0 80-35.8 80-80v-10.8zm-214.9-53.7-54.1 54.1-45.2-45.2 54.1-54.1 45.2 45.3zM396.9 64c-56.2 0-108.3 29.5-137.2 77.7L184.5 267l92.7 92.7 125.4-75.2c48.2-28.9 77.7-81 77.7-137.2V64h-83.2zm-28.8 160a48 48 0 1 1 0-96 48 48 0 1 1 0 96m-176-112c-44.2 0-80 35.8-80 80v2.8l25.6 25.6L202.8 112z"})
 );
 
-export default CoreRocketLaunchRegular-duo;
+export default CoreRocketLaunchRegularDuo;

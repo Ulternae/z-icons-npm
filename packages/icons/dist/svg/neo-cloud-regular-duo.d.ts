@@ -1,2 +1,2 @@
-export declare const NeoCloudRegular-duo: string;
-export default NeoCloudRegular-duo;
+export declare const NeoCloudRegularDuo: string;
+export default NeoCloudRegularDuo;

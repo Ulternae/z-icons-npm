@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreUsersRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreUsersRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreUsersRegular-duo: React.FC<CoreUsersRegular-duoProps>;
-export default CoreUsersRegular-duo;
+export declare const CoreUsersRegularDuo: React.FC<CoreUsersRegularDuoProps>;
+export default CoreUsersRegularDuo;

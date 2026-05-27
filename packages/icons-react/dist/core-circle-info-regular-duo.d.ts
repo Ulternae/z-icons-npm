@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreCircleInfoRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreCircleInfoRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreCircleInfoRegular-duo: React.FC<CoreCircleInfoRegular-duoProps>;
-export default CoreCircleInfoRegular-duo;
+export declare const CoreCircleInfoRegularDuo: React.FC<CoreCircleInfoRegularDuoProps>;
+export default CoreCircleInfoRegularDuo;

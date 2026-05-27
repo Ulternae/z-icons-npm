@@ -1,2 +1,2 @@
-export declare const CoreCommentsRegular-duo: string;
-export default CoreCommentsRegular-duo;
+export declare const CoreCommentsRegularDuo: string;
+export default CoreCommentsRegularDuo;

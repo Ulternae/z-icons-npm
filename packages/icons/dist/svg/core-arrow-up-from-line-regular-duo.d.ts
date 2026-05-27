@@ -1,2 +1,2 @@
-export declare const CoreArrowUpFromLineRegular-duo: string;
-export default CoreArrowUpFromLineRegular-duo;
+export declare const CoreArrowUpFromLineRegularDuo: string;
+export default CoreArrowUpFromLineRegularDuo;

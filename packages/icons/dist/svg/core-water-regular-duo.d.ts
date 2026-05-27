@@ -1,2 +1,2 @@
-export declare const CoreWaterRegular-duo: string;
-export default CoreWaterRegular-duo;
+export declare const CoreWaterRegularDuo: string;
+export default CoreWaterRegularDuo;

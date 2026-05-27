@@ -7515,4 +7515,4 @@ export const lanIconsThin = {
   'zzz': LanZzzThin
 };;
 
-export const ZLanThinElement = defineZIconElement('z-lan-thin', { lan: { thin: lanIconsThin } }, { type: 'lan', variant: 'thin', defaultVariant: 'thin' });
+export const ZLanThinElement = defineZIconElement('z-lan-thin', { lan: { 'thin': lanIconsThin } }, { type: 'lan', variant: 'thin', defaultVariant: 'thin' });

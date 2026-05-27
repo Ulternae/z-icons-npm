@@ -1,2 +1,2 @@
-export declare const NeoQuestionRegular-duo: string;
-export default NeoQuestionRegular-duo;
+export declare const NeoQuestionRegularDuo: string;
+export default NeoQuestionRegularDuo;

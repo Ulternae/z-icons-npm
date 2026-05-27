@@ -1,2 +1,2 @@
-export const CoreLockOpen = '<svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M128 128v64h192c35.3 0 64 28.7 64 64v192c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64v-64C64 57.3 121.3 0 192 0s128 57.3 128 128h-64c0-35.3-28.7-64-64-64s-64 28.7-64 64m128 128H64v192h256V256z"/></svg>';
+export const CoreLockOpen = '<svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill="currentColor" d="M128 128v64h192c35.3 0 64 28.7 64 64v192c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64v-64C64 57.3 121.3 0 192 0s128 57.3 128 128h-64c0-35.3-28.7-64-64-64s-64 28.7-64 64m128 128H64v192h256V256z"/></svg>';
 export default CoreLockOpen;

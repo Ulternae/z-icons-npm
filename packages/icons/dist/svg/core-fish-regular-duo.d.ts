@@ -1,2 +1,2 @@
-export declare const CoreFishRegular-duo: string;
-export default CoreFishRegular-duo;
+export declare const CoreFishRegularDuo: string;
+export default CoreFishRegularDuo;

@@ -1,2 +1,2 @@
-export declare const CoreMicrochipRegular-duo: string;
-export default CoreMicrochipRegular-duo;
+export declare const CoreMicrochipRegularDuo: string;
+export default CoreMicrochipRegularDuo;

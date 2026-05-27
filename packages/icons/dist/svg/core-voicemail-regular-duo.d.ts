@@ -1,2 +1,2 @@
-export declare const CoreVoicemailRegular-duo: string;
-export default CoreVoicemailRegular-duo;
+export declare const CoreVoicemailRegularDuo: string;
+export default CoreVoicemailRegularDuo;

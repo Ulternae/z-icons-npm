@@ -2557,4 +2557,4 @@ export const minaIconsSolid = {
   'zero': MinaZeroSolid
 };;
 
-export const ZMinaSolidElement = defineZIconElement('z-mina-solid', { mina: { solid: minaIconsSolid } }, { type: 'mina', variant: 'solid', defaultVariant: 'solid' });
+export const ZMinaSolidElement = defineZIconElement('z-mina-solid', { mina: { 'solid': minaIconsSolid } }, { type: 'mina', variant: 'solid', defaultVariant: 'solid' });

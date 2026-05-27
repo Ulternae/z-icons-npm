@@ -1,2 +1,2 @@
-export declare const CoreClosedCaptioningRegular-duo: string;
-export default CoreClosedCaptioningRegular-duo;
+export declare const CoreClosedCaptioningRegularDuo: string;
+export default CoreClosedCaptioningRegularDuo;

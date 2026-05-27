@@ -1,2 +1,2 @@
-export declare const NeoQuoteLeftRegular-duo: string;
-export default NeoQuoteLeftRegular-duo;
+export declare const NeoQuoteLeftRegularDuo: string;
+export default NeoQuoteLeftRegularDuo;

@@ -1,2 +1,2 @@
-export declare const NeoWifiSlashRegular-duo: string;
-export default NeoWifiSlashRegular-duo;
+export declare const NeoWifiSlashRegularDuo: string;
+export default NeoWifiSlashRegularDuo;

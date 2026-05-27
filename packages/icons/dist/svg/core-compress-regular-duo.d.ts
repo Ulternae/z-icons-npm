@@ -1,2 +1,2 @@
-export declare const CoreCompressRegular-duo: string;
-export default CoreCompressRegular-duo;
+export declare const CoreCompressRegularDuo: string;
+export default CoreCompressRegularDuo;

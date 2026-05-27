@@ -1,2 +1,2 @@
-export declare const NeoEnvelopeRegular-duo: string;
-export default NeoEnvelopeRegular-duo;
+export declare const NeoEnvelopeRegularDuo: string;
+export default NeoEnvelopeRegularDuo;

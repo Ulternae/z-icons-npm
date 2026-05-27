@@ -6,7 +6,7 @@ export const CoreFlowerSolid = ({ size = 24, color, style, ...props }) => React.
     viewBox: '0 0 512 512',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"fill":"currentColor","d":"M15.4 204.7c10.5 20.5 25.8 38.1 44.7 51.3-18.9 13.2-34.2 30.9-44.7 51.3C5.5 326.6 0 348.4 0 371.3 0 449 63 512 140.7 512c47.1 0 89.6-23.4 115.3-60.1 25.7 36.7 68.2 60.1 115.3 60.1C449 512 512 449 512 371.3c0-22.9-5.5-44.7-15.4-64-10.5-20.5-25.8-38.1-44.7-51.3 18.9-13.2 34.2-30.9 44.7-51.3 9.9-19.3 15.4-41.1 15.4-64C512 63 449 0 371.3 0 324.2 0 281.7 23.4 256 60.1 230.3 23.4 187.8 0 140.7 0 63 0 0 63 0 140.7c0 22.9 5.5 44.7 15.4 64M256 176a80 80 0 1 1 0 160 80 80 0 1 1 0-160"})

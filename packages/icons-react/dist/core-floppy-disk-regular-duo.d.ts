@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreFloppyDiskRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreFloppyDiskRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreFloppyDiskRegular-duo: React.FC<CoreFloppyDiskRegular-duoProps>;
-export default CoreFloppyDiskRegular-duo;
+export declare const CoreFloppyDiskRegularDuo: React.FC<CoreFloppyDiskRegularDuoProps>;
+export default CoreFloppyDiskRegularDuo;

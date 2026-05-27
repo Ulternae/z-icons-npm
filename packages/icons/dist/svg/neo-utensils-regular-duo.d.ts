@@ -1,2 +1,2 @@
-export declare const NeoUtensilsRegular-duo: string;
-export default NeoUtensilsRegular-duo;
+export declare const NeoUtensilsRegularDuo: string;
+export default NeoUtensilsRegularDuo;

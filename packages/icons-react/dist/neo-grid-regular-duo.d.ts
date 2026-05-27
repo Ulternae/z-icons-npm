@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoGridRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoGridRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoGridRegular-duo: React.FC<NeoGridRegular-duoProps>;
-export default NeoGridRegular-duo;
+export declare const NeoGridRegularDuo: React.FC<NeoGridRegularDuoProps>;
+export default NeoGridRegularDuo;

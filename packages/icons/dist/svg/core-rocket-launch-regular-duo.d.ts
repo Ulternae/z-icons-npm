@@ -1,2 +1,2 @@
-export declare const CoreRocketLaunchRegular-duo: string;
-export default CoreRocketLaunchRegular-duo;
+export declare const CoreRocketLaunchRegularDuo: string;
+export default CoreRocketLaunchRegularDuo;

@@ -1,2 +1,2 @@
-export declare const CoreTriangleRegular-duo: string;
-export default CoreTriangleRegular-duo;
+export declare const CoreTriangleRegularDuo: string;
+export default CoreTriangleRegularDuo;

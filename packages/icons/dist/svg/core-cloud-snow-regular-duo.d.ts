@@ -1,2 +1,2 @@
-export declare const CoreCloudSnowRegular-duo: string;
-export default CoreCloudSnowRegular-duo;
+export declare const CoreCloudSnowRegularDuo: string;
+export default CoreCloudSnowRegularDuo;

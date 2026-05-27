@@ -1,2 +1,2 @@
-export declare const NeoEyeRegular-duo: string;
-export default NeoEyeRegular-duo;
+export declare const NeoEyeRegularDuo: string;
+export default NeoEyeRegularDuo;

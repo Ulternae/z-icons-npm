@@ -1,2 +1,2 @@
-export declare const NeoPrintRegular-duo: string;
-export default NeoPrintRegular-duo;
+export declare const NeoPrintRegularDuo: string;
+export default NeoPrintRegularDuo;

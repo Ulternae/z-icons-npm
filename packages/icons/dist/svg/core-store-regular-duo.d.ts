@@ -1,2 +1,2 @@
-export declare const CoreStoreRegular-duo: string;
-export default CoreStoreRegular-duo;
+export declare const CoreStoreRegularDuo: string;
+export default CoreStoreRegularDuo;

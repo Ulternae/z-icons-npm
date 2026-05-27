@@ -1,2 +1,2 @@
-export declare const CoreStopwatchRegular-duo: string;
-export default CoreStopwatchRegular-duo;
+export declare const CoreStopwatchRegularDuo: string;
+export default CoreStopwatchRegularDuo;

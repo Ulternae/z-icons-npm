@@ -1,15 +1,15 @@
 import React from 'react';
 
-export const CoreLayerGroupRegular-duo = ({ size = 24, color, style, ...props }) => React.createElement(
+export const CoreLayerGroupRegularDuo = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
     viewBox: '0 0 576 512',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"fill":"currentColor","d":"m104 128 184.5-92.2L472.9 128l-184.4 92.2z","opacity":".4"}), React.createElement('path', {"fill":"currentColor","d":"m555.4 414.3-28.6 14.3-209.7 104.8c-18 9-39.2 9-57.2 0L50.2 428.6l-28.7-14.3L50.2 357l28.6 14.4 209.7 104.8L526.8 357zm0-128L317.1 405.5c-18 9-39.2 9-57.2 0L21.6 286.3l28.6-57.2 238.3 119.2 238.3-119.2zM259.8-21.5c18-9 39.2-9 57.2 0L544.4 92.2v71.6L317 277.5c-18 9-39.2 9-57.2 0L32.5 163.8V92.2zM104 128l184.5 92.2L472.9 128 288.5 35.8z"})
 );
 
-export default CoreLayerGroupRegular-duo;
+export default CoreLayerGroupRegularDuo;

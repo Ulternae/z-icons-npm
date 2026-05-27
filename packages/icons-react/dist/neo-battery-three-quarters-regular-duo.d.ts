@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoBatteryThreeQuartersRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoBatteryThreeQuartersRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoBatteryThreeQuartersRegular-duo: React.FC<NeoBatteryThreeQuartersRegular-duoProps>;
-export default NeoBatteryThreeQuartersRegular-duo;
+export declare const NeoBatteryThreeQuartersRegularDuo: React.FC<NeoBatteryThreeQuartersRegularDuoProps>;
+export default NeoBatteryThreeQuartersRegularDuo;

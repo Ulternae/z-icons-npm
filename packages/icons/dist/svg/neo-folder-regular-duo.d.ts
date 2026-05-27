@@ -1,2 +1,2 @@
-export declare const NeoFolderRegular-duo: string;
-export default NeoFolderRegular-duo;
+export declare const NeoFolderRegularDuo: string;
+export default NeoFolderRegularDuo;

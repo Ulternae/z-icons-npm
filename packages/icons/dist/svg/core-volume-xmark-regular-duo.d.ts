@@ -1,2 +1,2 @@
-export declare const CoreVolumeXmarkRegular-duo: string;
-export default CoreVolumeXmarkRegular-duo;
+export declare const CoreVolumeXmarkRegularDuo: string;
+export default CoreVolumeXmarkRegularDuo;

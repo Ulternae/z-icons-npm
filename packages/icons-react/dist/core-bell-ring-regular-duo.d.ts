@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreBellRingRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreBellRingRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreBellRingRegular-duo: React.FC<CoreBellRingRegular-duoProps>;
-export default CoreBellRingRegular-duo;
+export declare const CoreBellRingRegularDuo: React.FC<CoreBellRingRegularDuoProps>;
+export default CoreBellRingRegularDuo;

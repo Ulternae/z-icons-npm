@@ -1,2 +1,2 @@
-export declare const NeoFlagRegular-duo: string;
-export default NeoFlagRegular-duo;
+export declare const NeoFlagRegularDuo: string;
+export default NeoFlagRegularDuo;

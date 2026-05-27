@@ -1,2 +1,2 @@
-export declare const NeoVolumeXmarkRegular-duo: string;
-export default NeoVolumeXmarkRegular-duo;
+export declare const NeoVolumeXmarkRegularDuo: string;
+export default NeoVolumeXmarkRegularDuo;

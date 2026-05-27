@@ -1,2 +1,2 @@
-export declare const CoreImageRegular-duo: string;
-export default CoreImageRegular-duo;
+export declare const CoreImageRegularDuo: string;
+export default CoreImageRegularDuo;

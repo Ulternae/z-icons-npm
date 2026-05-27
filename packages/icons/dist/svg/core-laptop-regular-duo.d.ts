@@ -1,2 +1,2 @@
-export declare const CoreLaptopRegular-duo: string;
-export default CoreLaptopRegular-duo;
+export declare const CoreLaptopRegularDuo: string;
+export default CoreLaptopRegularDuo;

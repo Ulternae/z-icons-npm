@@ -7517,4 +7517,4 @@ export const lanIconsSolid = {
 };;
 
 export { lanSpriteSolid } from '@zcorvus/icons/sprites/lan-solid.js';
-export const ZLanSolidSpriteElement = defineZIconElement('z-lan-solid-sprite', { lan: { solid: lanIconsSolid } }, { type: 'lan', variant: 'solid', defaultVariant: 'solid', mode: 'sprite', spriteId: 'lan-solid', sprite: lanSpriteSolid });
+export const ZLanSolidSpriteElement = defineZIconElement('z-lan-solid-sprite', { lan: { 'solid': lanIconsSolid } }, { type: 'lan', variant: 'solid', defaultVariant: 'solid', mode: 'sprite', spriteId: 'lan-solid', sprite: lanSpriteSolid });

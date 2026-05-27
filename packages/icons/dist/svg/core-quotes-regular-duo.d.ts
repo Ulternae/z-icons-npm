@@ -1,2 +1,2 @@
-export declare const CoreQuotesRegular-duo: string;
-export default CoreQuotesRegular-duo;
+export declare const CoreQuotesRegularDuo: string;
+export default CoreQuotesRegularDuo;

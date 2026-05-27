@@ -1,2 +1,2 @@
-export declare const CoreCreditCardRegular-duo: string;
-export default CoreCreditCardRegular-duo;
+export declare const CoreCreditCardRegularDuo: string;
+export default CoreCreditCardRegularDuo;

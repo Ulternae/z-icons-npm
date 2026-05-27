@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreFileCheckRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreFileCheckRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreFileCheckRegular-duo: React.FC<CoreFileCheckRegular-duoProps>;
-export default CoreFileCheckRegular-duo;
+export declare const CoreFileCheckRegularDuo: React.FC<CoreFileCheckRegularDuoProps>;
+export default CoreFileCheckRegularDuo;

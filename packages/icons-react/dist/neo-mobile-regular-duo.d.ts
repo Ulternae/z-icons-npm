@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoMobileRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoMobileRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoMobileRegular-duo: React.FC<NeoMobileRegular-duoProps>;
-export default NeoMobileRegular-duo;
+export declare const NeoMobileRegularDuo: React.FC<NeoMobileRegularDuoProps>;
+export default NeoMobileRegularDuo;

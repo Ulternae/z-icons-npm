@@ -1,2 +1,2 @@
-export declare const CoreFillRegular-duo: string;
-export default CoreFillRegular-duo;
+export declare const CoreFillRegularDuo: string;
+export default CoreFillRegularDuo;

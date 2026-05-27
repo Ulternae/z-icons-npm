@@ -1,2 +1,2 @@
-export declare const NeoGaugeRegular-duo: string;
-export default NeoGaugeRegular-duo;
+export declare const NeoGaugeRegularDuo: string;
+export default NeoGaugeRegularDuo;

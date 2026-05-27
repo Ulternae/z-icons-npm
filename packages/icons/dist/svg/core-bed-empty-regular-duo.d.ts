@@ -1,2 +1,2 @@
-export declare const CoreBedEmptyRegular-duo: string;
-export default CoreBedEmptyRegular-duo;
+export declare const CoreBedEmptyRegularDuo: string;
+export default CoreBedEmptyRegularDuo;

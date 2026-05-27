@@ -3757,7 +3757,7 @@ import { LanZapRegular } from '../lan-zap-regular.js';
 import { LanZzzRegular } from '../lan-zzz-regular.js';
 
 export const lanRegularIconMap = {
-  regular: {
+  'regular': {
     '0': Lan0Regular,
     '00': Lan00Regular,
     '1': Lan1Regular,

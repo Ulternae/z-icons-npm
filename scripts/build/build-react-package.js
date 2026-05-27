@@ -7,7 +7,7 @@ import {
   isFillIcon,
 } from '../icon-config.js';
 import { finishOutputTracking, startOutputTracking, writeFile } from './fs-utils.js';
-import { capitalize } from './naming.js';
+import { capitalize, toPascalCase } from './naming.js';
 import { parseSvg } from './svg-utils.js';
 
 function createReactComponent(svgContent, componentName, pack, variant) {
@@ -280,10 +280,10 @@ export function buildReactPackage(icons, packData) {
     for (const [variant, variantIcons] of Object.entries(variants)) {
       const suffix = getPublicVariantSuffix(pack, variant);
       const wrapperName = `Z${capitalize(pack)}${suffix}`;
-      const mapName = `${pack}${capitalize(variant)}IconMap`;
+      const mapName = `${pack}${toPascalCase(variant)}IconMap`;
       const fileName = `${pack}${getVariantFileSuffix(pack, variant)}`;
       const imports = variantIcons.map((icon) => `import { ${icon.componentName} } from '../${icon.publicFileName}.js';`);
-      const iconMap = `export const ${mapName} = {\n  ${variant}: {\n${variantIcons.map((icon) => `    '${icon.name}': ${icon.componentName}`).join(',\n')}\n  }\n};`;
+      const iconMap = `export const ${mapName} = {\n  '${variant}': {\n${variantIcons.map((icon) => `    '${icon.name}': ${icon.componentName}`).join(',\n')}\n  }\n};`;
 
       writeFile(
         path.join(distDir, 'packs', `${fileName}.js`),
@@ -333,7 +333,7 @@ export function buildReactPackage(icons, packData) {
   const zIconCollection = CONFIG.packs.map((pack) => {
     const entries = zIconMaps
       .filter((map) => map.pack === pack)
-      .map((map) => `    ${map.variant}: ${map.mapName}.${map.variant}`)
+      .map((map) => `    '${map.variant}': ${map.mapName}['${map.variant}']`)
       .join(',\n');
 
     return `  ${pack}: {\n${entries}\n  }`;

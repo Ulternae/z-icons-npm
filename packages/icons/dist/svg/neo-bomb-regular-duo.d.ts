@@ -1,2 +1,2 @@
-export declare const NeoBombRegular-duo: string;
-export default NeoBombRegular-duo;
+export declare const NeoBombRegularDuo: string;
+export default NeoBombRegularDuo;

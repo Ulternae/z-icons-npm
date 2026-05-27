@@ -1,2 +1,2 @@
-export declare const CoreTreeRegular-duo: string;
-export default CoreTreeRegular-duo;
+export declare const CoreTreeRegularDuo: string;
+export default CoreTreeRegularDuo;

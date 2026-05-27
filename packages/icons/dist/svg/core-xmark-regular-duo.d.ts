@@ -1,2 +1,2 @@
-export declare const CoreXmarkRegular-duo: string;
-export default CoreXmarkRegular-duo;
+export declare const CoreXmarkRegularDuo: string;
+export default CoreXmarkRegularDuo;

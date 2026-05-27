@@ -1,2 +1,2 @@
-export declare const CoreLockRegular-duo: string;
-export default CoreLockRegular-duo;
+export declare const CoreLockRegularDuo: string;
+export default CoreLockRegularDuo;

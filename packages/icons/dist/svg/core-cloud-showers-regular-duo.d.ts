@@ -1,2 +1,2 @@
-export declare const CoreCloudShowersRegular-duo: string;
-export default CoreCloudShowersRegular-duo;
+export declare const CoreCloudShowersRegularDuo: string;
+export default CoreCloudShowersRegularDuo;

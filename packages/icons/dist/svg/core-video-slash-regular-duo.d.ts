@@ -1,2 +1,2 @@
-export declare const CoreVideoSlashRegular-duo: string;
-export default CoreVideoSlashRegular-duo;
+export declare const CoreVideoSlashRegularDuo: string;
+export default CoreVideoSlashRegularDuo;

@@ -1,2 +1,2 @@
-export declare const CoreCircleHalfStrokeRegular-duo: string;
-export default CoreCircleHalfStrokeRegular-duo;
+export declare const CoreCircleHalfStrokeRegularDuo: string;
+export default CoreCircleHalfStrokeRegularDuo;

@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoHouseRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoHouseRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoHouseRegular-duo: React.FC<NeoHouseRegular-duoProps>;
-export default NeoHouseRegular-duo;
+export declare const NeoHouseRegularDuo: React.FC<NeoHouseRegularDuoProps>;
+export default NeoHouseRegularDuo;

@@ -1,2 +1,2 @@
-export declare const CoreWandMagicSparklesRegular-duo: string;
-export default CoreWandMagicSparklesRegular-duo;
+export declare const CoreWandMagicSparklesRegularDuo: string;
+export default CoreWandMagicSparklesRegularDuo;

@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoCalendarRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoCalendarRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoCalendarRegular-duo: React.FC<NeoCalendarRegular-duoProps>;
-export default NeoCalendarRegular-duo;
+export declare const NeoCalendarRegularDuo: React.FC<NeoCalendarRegularDuoProps>;
+export default NeoCalendarRegularDuo;

@@ -475,4 +475,4 @@ export const neoIconsSolid = {
   'xmark': NeoXmarkSolid
 };;
 
-export const ZNeoSolidElement = defineZIconElement('z-neo-solid', { neo: { solid: neoIconsSolid } }, { type: 'neo', variant: 'solid', defaultVariant: 'solid' });
+export const ZNeoSolidElement = defineZIconElement('z-neo-solid', { neo: { 'solid': neoIconsSolid } }, { type: 'neo', variant: 'solid', defaultVariant: 'solid' });

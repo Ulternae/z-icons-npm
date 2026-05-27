@@ -1,2 +1,2 @@
-export declare const CoreWifiSlashRegular-duo: string;
-export default CoreWifiSlashRegular-duo;
+export declare const CoreWifiSlashRegularDuo: string;
+export default CoreWifiSlashRegularDuo;

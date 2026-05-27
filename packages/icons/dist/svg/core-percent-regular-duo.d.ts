@@ -1,2 +1,2 @@
-export declare const CorePercentRegular-duo: string;
-export default CorePercentRegular-duo;
+export declare const CorePercentRegularDuo: string;
+export default CorePercentRegularDuo;

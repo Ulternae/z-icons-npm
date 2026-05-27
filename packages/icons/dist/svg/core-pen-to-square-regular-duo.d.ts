@@ -1,2 +1,2 @@
-export declare const CorePenToSquareRegular-duo: string;
-export default CorePenToSquareRegular-duo;
+export declare const CorePenToSquareRegularDuo: string;
+export default CorePenToSquareRegularDuo;

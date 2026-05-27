@@ -1,15 +1,15 @@
 import React from 'react';
 
-export const CorePoopRegular-duo = ({ size = 24, color, style, ...props }) => React.createElement(
+export const CorePoopRegularDuo = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
     viewBox: '0 0 512 512',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"fill":"currentColor","d":"M64 368c0 44.2 35.8 80 80 80h224c44.2 0 80-35.8 80-80 0-28.2-14.5-53-36.7-67.3l-35.9-23.1c2.5-14 5.1-28 7.6-42 .7-3.7 1-7.5 1-11.5 0-23.8-13-44.6-32.5-55.7-9.4-5.3-18.7-10.6-28.1-16-1.3-10.7-2.6-21.4-3.8-32.1-2.9-24.3-19.5-44.4-41.9-52.5-9.2 30.7-27.4 57.9-52.2 78.1l-16.2 13.2c-6.9.4-13.9.7-20.8 1.1-33.7 1.8-60.4 29.8-60.4 63.9v.9c5.3-.6 10.6-.9 16-.9h32v64h-32c-44.2 0-80 35.8-80 80z","opacity":".4"}), React.createElement('path', {"fill":"currentColor","d":"m209.3 159 16.2-13.2c24.8-20.2 43-47.4 52.2-78.1 22.4 8 39 28.2 41.9 52.5l3.8 32.1 28.1 16C371 179.4 384 200.2 384 224c0 4-.4 7.8-1 11.5l-7.6 42 35.9 23.1c22.2 14.3 36.7 39.2 36.7 67.3 0 44.2-35.8 80-80 80H144c-44.2 0-80-35.8-80-80s35.8-80 80-80h32v-64h-32c-5.4 0-10.7.3-16 .9v-.9c0-34.2 26.8-62.1 60.4-63.9l20.8-1.1zM0 368c0 79.5 64.5 144 144 144h224c79.5 0 144-64.5 144-144 0-50.8-26.3-95.5-66-121.1 1.3-7.4 2-15.1 2-22.9 0-47.8-26.2-89.4-64.9-111.4C375.5 49.2 321.5 0 256 0c-9.2 0-18.3 1-27 2.8L217 47c-5.3 19.4-16.5 36.6-32 49.2C117.6 99.8 64 155.7 64 224c0 7.8.7 15.5 2 22.9C26.3 272.5 0 317.2 0 368"})
 );
 
-export default CorePoopRegular-duo;
+export default CorePoopRegularDuo;

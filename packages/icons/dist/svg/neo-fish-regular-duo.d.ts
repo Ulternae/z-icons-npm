@@ -1,2 +1,2 @@
-export declare const NeoFishRegular-duo: string;
-export default NeoFishRegular-duo;
+export declare const NeoFishRegularDuo: string;
+export default NeoFishRegularDuo;

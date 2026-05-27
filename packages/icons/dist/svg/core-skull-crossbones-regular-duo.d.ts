@@ -1,2 +1,2 @@
-export declare const CoreSkullCrossbonesRegular-duo: string;
-export default CoreSkullCrossbonesRegular-duo;
+export declare const CoreSkullCrossbonesRegularDuo: string;
+export default CoreSkullCrossbonesRegularDuo;

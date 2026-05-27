@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreSignalGoodRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreSignalGoodRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreSignalGoodRegular-duo: React.FC<CoreSignalGoodRegular-duoProps>;
-export default CoreSignalGoodRegular-duo;
+export declare const CoreSignalGoodRegularDuo: React.FC<CoreSignalGoodRegularDuoProps>;
+export default CoreSignalGoodRegularDuo;

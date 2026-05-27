@@ -675,4 +675,4 @@ export const coreIconsSolid = {
   'xmark': CoreXmarkSolid
 };;
 
-export const ZCoreSolidElement = defineZIconElement('z-core-solid', { core: { solid: coreIconsSolid } }, { type: 'core', variant: 'solid', defaultVariant: 'solid' });
+export const ZCoreSolidElement = defineZIconElement('z-core-solid', { core: { 'solid': coreIconsSolid } }, { type: 'core', variant: 'solid', defaultVariant: 'solid' });

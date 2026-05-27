@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoThumbsUpRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoThumbsUpRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoThumbsUpRegular-duo: React.FC<NeoThumbsUpRegular-duoProps>;
-export default NeoThumbsUpRegular-duo;
+export declare const NeoThumbsUpRegularDuo: React.FC<NeoThumbsUpRegularDuoProps>;
+export default NeoThumbsUpRegularDuo;

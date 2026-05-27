@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreGamepadModernRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreGamepadModernRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreGamepadModernRegular-duo: React.FC<CoreGamepadModernRegular-duoProps>;
-export default CoreGamepadModernRegular-duo;
+export declare const CoreGamepadModernRegularDuo: React.FC<CoreGamepadModernRegularDuoProps>;
+export default CoreGamepadModernRegularDuo;

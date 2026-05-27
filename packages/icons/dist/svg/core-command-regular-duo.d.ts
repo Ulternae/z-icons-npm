@@ -1,2 +1,2 @@
-export declare const CoreCommandRegular-duo: string;
-export default CoreCommandRegular-duo;
+export declare const CoreCommandRegularDuo: string;
+export default CoreCommandRegularDuo;

@@ -1,2 +1,2 @@
-export declare const NeoShareNodesRegular-duo: string;
-export default NeoShareNodesRegular-duo;
+export declare const NeoShareNodesRegularDuo: string;
+export default NeoShareNodesRegularDuo;

@@ -1,2 +1,2 @@
-export declare const CoreShirtRegular-duo: string;
-export default CoreShirtRegular-duo;
+export declare const CoreShirtRegularDuo: string;
+export default CoreShirtRegularDuo;

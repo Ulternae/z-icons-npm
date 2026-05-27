@@ -1,2 +1,2 @@
-export declare const NeoMicrophoneSlashRegular-duo: string;
-export default NeoMicrophoneSlashRegular-duo;
+export declare const NeoMicrophoneSlashRegularDuo: string;
+export default NeoMicrophoneSlashRegularDuo;

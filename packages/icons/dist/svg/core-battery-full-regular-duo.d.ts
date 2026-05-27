@@ -1,2 +1,2 @@
-export declare const CoreBatteryFullRegular-duo: string;
-export default CoreBatteryFullRegular-duo;
+export declare const CoreBatteryFullRegularDuo: string;
+export default CoreBatteryFullRegularDuo;

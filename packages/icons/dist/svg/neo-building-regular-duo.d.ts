@@ -1,2 +1,2 @@
-export declare const NeoBuildingRegular-duo: string;
-export default NeoBuildingRegular-duo;
+export declare const NeoBuildingRegularDuo: string;
+export default NeoBuildingRegularDuo;

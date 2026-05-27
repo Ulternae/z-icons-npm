@@ -6,7 +6,7 @@ export const NeoBookmarkSolid = ({ size = 24, color, style, ...props }) => React
     viewBox: '0 0 448 560',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"fill":"currentColor","d":"M196 0c-35.6 0-65.9 1.7-91.2 7.2C79.2 12.7 57 22.4 39.7 39.7s-27 39.5-32.5 65.1C1.7 130.1 0 160.4 0 196v270.7C0 518.2 41.8 560 93.3 560c29.4 0 57-13.8 74.7-37.3l56-74.7 56 74.7c17.6 23.5 45.3 37.3 74.7 37.3 51.5 0 93.3-41.8 93.3-93.3V196c0-35.6-1.7-65.9-7.2-91.2-5.5-25.6-15.2-47.8-32.5-65.1s-39.5-27-65.1-32.5C317.9 1.7 287.6 0 252 0z"})

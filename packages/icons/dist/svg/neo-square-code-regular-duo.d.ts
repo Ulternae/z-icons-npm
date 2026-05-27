@@ -1,2 +1,2 @@
-export declare const NeoSquareCodeRegular-duo: string;
-export default NeoSquareCodeRegular-duo;
+export declare const NeoSquareCodeRegularDuo: string;
+export default NeoSquareCodeRegularDuo;

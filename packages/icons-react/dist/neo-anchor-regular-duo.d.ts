@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface NeoAnchorRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface NeoAnchorRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const NeoAnchorRegular-duo: React.FC<NeoAnchorRegular-duoProps>;
-export default NeoAnchorRegular-duo;
+export declare const NeoAnchorRegularDuo: React.FC<NeoAnchorRegularDuoProps>;
+export default NeoAnchorRegularDuo;

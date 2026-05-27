@@ -1,2 +1,2 @@
-export declare const CoreTextRegular-duo: string;
-export default CoreTextRegular-duo;
+export declare const CoreTextRegularDuo: string;
+export default CoreTextRegularDuo;

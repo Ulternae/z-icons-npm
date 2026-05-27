@@ -1,2 +1,2 @@
-export declare const NeoSnowflakeRegular-duo: string;
-export default NeoSnowflakeRegular-duo;
+export declare const NeoSnowflakeRegularDuo: string;
+export default NeoSnowflakeRegularDuo;

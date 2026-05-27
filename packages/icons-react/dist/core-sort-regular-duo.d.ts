@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreSortRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreSortRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreSortRegular-duo: React.FC<CoreSortRegular-duoProps>;
-export default CoreSortRegular-duo;
+export declare const CoreSortRegularDuo: React.FC<CoreSortRegularDuoProps>;
+export default CoreSortRegularDuo;

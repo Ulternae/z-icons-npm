@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreDropletRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreDropletRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreDropletRegular-duo: React.FC<CoreDropletRegular-duoProps>;
-export default CoreDropletRegular-duo;
+export declare const CoreDropletRegularDuo: React.FC<CoreDropletRegularDuoProps>;
+export default CoreDropletRegularDuo;

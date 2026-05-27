@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreSlidersRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreSlidersRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreSlidersRegular-duo: React.FC<CoreSlidersRegular-duoProps>;
-export default CoreSlidersRegular-duo;
+export declare const CoreSlidersRegularDuo: React.FC<CoreSlidersRegularDuoProps>;
+export default CoreSlidersRegularDuo;

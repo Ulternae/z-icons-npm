@@ -1,2 +1,2 @@
-export declare const NeoEllipsisRegular-duo: string;
-export default NeoEllipsisRegular-duo;
+export declare const NeoEllipsisRegularDuo: string;
+export default NeoEllipsisRegularDuo;

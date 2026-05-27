@@ -1,2 +1,2 @@
-export declare const NeoLayerGroupRegular-duo: string;
-export default NeoLayerGroupRegular-duo;
+export declare const NeoLayerGroupRegularDuo: string;
+export default NeoLayerGroupRegularDuo;

@@ -1,2 +1,2 @@
-export declare const CoreFolderRegular-duo: string;
-export default CoreFolderRegular-duo;
+export declare const CoreFolderRegularDuo: string;
+export default CoreFolderRegularDuo;

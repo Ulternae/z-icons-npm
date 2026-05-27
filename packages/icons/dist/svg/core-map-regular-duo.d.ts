@@ -1,2 +1,2 @@
-export declare const CoreMapRegular-duo: string;
-export default CoreMapRegular-duo;
+export declare const CoreMapRegularDuo: string;
+export default CoreMapRegularDuo;

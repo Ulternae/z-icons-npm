@@ -1,2 +1,2 @@
-export declare const CoreTrophyRegular-duo: string;
-export default CoreTrophyRegular-duo;
+export declare const CoreTrophyRegularDuo: string;
+export default CoreTrophyRegularDuo;

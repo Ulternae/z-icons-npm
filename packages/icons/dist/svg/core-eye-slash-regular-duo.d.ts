@@ -1,2 +1,2 @@
-export declare const CoreEyeSlashRegular-duo: string;
-export default CoreEyeSlashRegular-duo;
+export declare const CoreEyeSlashRegularDuo: string;
+export default CoreEyeSlashRegularDuo;

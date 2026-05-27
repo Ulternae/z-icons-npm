@@ -1,2 +1,2 @@
-export declare const CoreCircleCheckRegular-duo: string;
-export default CoreCircleCheckRegular-duo;
+export declare const CoreCircleCheckRegularDuo: string;
+export default CoreCircleCheckRegularDuo;

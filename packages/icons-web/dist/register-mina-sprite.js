@@ -2559,4 +2559,4 @@ export const minaIcons = {
 };;
 
 export { minaSprite } from '@zcorvus/icons/sprites/mina.js';
-export const ZMinaSpriteElement = defineZIconElement('z-mina-sprite', { mina: { light: minaIcons } }, { type: 'mina', variant: 'light', defaultVariant: 'light', mode: 'sprite', spriteId: 'mina', sprite: minaSprite });
+export const ZMinaSpriteElement = defineZIconElement('z-mina-sprite', { mina: { 'light': minaIcons } }, { type: 'mina', variant: 'light', defaultVariant: 'light', mode: 'sprite', spriteId: 'mina', sprite: minaSprite });

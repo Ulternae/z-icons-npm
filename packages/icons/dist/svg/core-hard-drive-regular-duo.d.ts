@@ -1,2 +1,2 @@
-export declare const CoreHardDriveRegular-duo: string;
-export default CoreHardDriveRegular-duo;
+export declare const CoreHardDriveRegularDuo: string;
+export default CoreHardDriveRegularDuo;

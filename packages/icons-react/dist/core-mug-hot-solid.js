@@ -6,7 +6,7 @@ export const CoreMugHotSolid = ({ size = 24, color, style, ...props }) => React.
     viewBox: '0 0 576 512',
     width: size,
     height: size,
-    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
   }, React.createElement('path', {"fill":"currentColor","d":"M100-32h56v21.5c0 9.5 3.8 18.7 10.5 25.5L193 41.5c17.3 17.2 27 40.6 27 65V128h-56v-21.5c0-9.5-3.8-18.7-10.5-25.5l-26.6-26.5c-17.2-17.2-26.9-40.6-26.9-65zM64 192h400c61.9 0 112 50.1 112 112s-50.1 112-112 112h-20c-14.2 55.2-64.3 96-124 96H192c-70.7 0-128-57.3-128-128zm384 160h16c26.5 0 48-21.5 48-48s-21.5-48-48-48h-16zM228-10.5V-32h56v21.5c0 9.5 3.8 18.7 10.5 25.5L321 41.5c17.3 17.2 27 40.6 27 65V128h-56v-21.5c0-9.5-3.8-18.7-10.5-25.5l-26.6-26.5c-17.2-17.2-26.9-40.6-26.9-65"})

@@ -1,2 +1,2 @@
-export declare const NeoPencilRegular-duo: string;
-export default NeoPencilRegular-duo;
+export declare const NeoPencilRegularDuo: string;
+export default NeoPencilRegularDuo;

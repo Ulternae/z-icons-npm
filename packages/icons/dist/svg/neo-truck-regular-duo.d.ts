@@ -1,2 +1,2 @@
-export declare const NeoTruckRegular-duo: string;
-export default NeoTruckRegular-duo;
+export declare const NeoTruckRegularDuo: string;
+export default NeoTruckRegularDuo;

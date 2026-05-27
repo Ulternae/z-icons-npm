@@ -1,2 +1,2 @@
-export declare const NeoCircleHalfStrokeRegular-duo: string;
-export default NeoCircleHalfStrokeRegular-duo;
+export declare const NeoCircleHalfStrokeRegularDuo: string;
+export default NeoCircleHalfStrokeRegularDuo;

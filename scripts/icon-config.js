@@ -15,10 +15,11 @@ export const iconConfig = {
     light: 'Light',
     solid: 'Solid',
     regular: 'Regular',
+    'regular-duo': 'RegularDuo',
   },
   iconStyles: {
-    core: { light: 'stroke' },
-    neo: { light: 'stroke' },
+    core: { regular: 'fill', 'regular-duo': 'fill', solid: 'fill' },
+    neo: { regular: 'fill', 'regular-duo': 'fill', solid: 'fill' },
     mina: { light: 'stroke', solid: 'fill' },
     bru: { solid: 'fill' },
     lan: { light: 'stroke' },
@@ -27,6 +28,14 @@ export const iconConfig = {
 
 function capitalize(value) {
   return value.charAt(0).toUpperCase() + value.slice(1);
+}
+
+function toPascalCase(value) {
+  return value
+    .split('-')
+    .filter(Boolean)
+    .map(capitalize)
+    .join('');
 }
 
 export function getDefaultVariant(pack) {
@@ -42,7 +51,7 @@ export function getPublicVariantSuffix(pack, variant) {
     return '';
   }
 
-  return iconConfig.publicVariantSuffixes[variant] ?? capitalize(variant);
+  return iconConfig.publicVariantSuffixes[variant] ?? toPascalCase(variant);
 }
 
 export function getVariantFileSuffix(pack, variant) {

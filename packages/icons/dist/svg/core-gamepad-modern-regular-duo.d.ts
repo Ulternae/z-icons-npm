@@ -1,2 +1,2 @@
-export declare const CoreGamepadModernRegular-duo: string;
-export default CoreGamepadModernRegular-duo;
+export declare const CoreGamepadModernRegularDuo: string;
+export default CoreGamepadModernRegularDuo;

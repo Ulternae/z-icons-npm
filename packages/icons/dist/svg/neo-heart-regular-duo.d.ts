@@ -1,2 +1,2 @@
-export declare const NeoHeartRegular-duo: string;
-export default NeoHeartRegular-duo;
+export declare const NeoHeartRegularDuo: string;
+export default NeoHeartRegularDuo;

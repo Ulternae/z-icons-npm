@@ -1,2 +1,2 @@
-export declare const CoreWindRegular-duo: string;
-export default CoreWindRegular-duo;
+export declare const CoreWindRegularDuo: string;
+export default CoreWindRegularDuo;

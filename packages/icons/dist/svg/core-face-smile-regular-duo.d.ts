@@ -1,2 +1,2 @@
-export declare const CoreFaceSmileRegular-duo: string;
-export default CoreFaceSmileRegular-duo;
+export declare const CoreFaceSmileRegularDuo: string;
+export default CoreFaceSmileRegularDuo;

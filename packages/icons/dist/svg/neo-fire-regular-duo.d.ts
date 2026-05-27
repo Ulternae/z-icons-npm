@@ -1,2 +1,2 @@
-export declare const NeoFireRegular-duo: string;
-export default NeoFireRegular-duo;
+export declare const NeoFireRegularDuo: string;
+export default NeoFireRegularDuo;

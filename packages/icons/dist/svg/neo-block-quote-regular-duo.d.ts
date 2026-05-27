@@ -1,2 +1,2 @@
-export declare const NeoBlockQuoteRegular-duo: string;
-export default NeoBlockQuoteRegular-duo;
+export declare const NeoBlockQuoteRegularDuo: string;
+export default NeoBlockQuoteRegularDuo;

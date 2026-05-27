@@ -7515,4 +7515,4 @@ export const lanIcons = {
   'zzz': LanZzz
 };;
 
-export const ZLanElement = defineZIconElement('z-lan', { lan: { light: lanIcons } }, { type: 'lan', variant: 'light', defaultVariant: 'light' });
+export const ZLanElement = defineZIconElement('z-lan', { lan: { 'light': lanIcons } }, { type: 'lan', variant: 'light', defaultVariant: 'light' });

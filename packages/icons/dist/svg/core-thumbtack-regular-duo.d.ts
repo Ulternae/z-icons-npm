@@ -1,2 +1,2 @@
-export declare const CoreThumbtackRegular-duo: string;
-export default CoreThumbtackRegular-duo;
+export declare const CoreThumbtackRegularDuo: string;
+export default CoreThumbtackRegularDuo;

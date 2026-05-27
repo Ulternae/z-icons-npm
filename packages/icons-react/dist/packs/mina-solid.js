@@ -1278,7 +1278,7 @@ import { MinaZeroWavesSolid } from '../mina-zero-waves-solid.js';
 import { MinaZeroSolid } from '../mina-zero-solid.js';
 
 export const minaSolidIconMap = {
-  solid: {
+  'solid': {
     'a-arrow-down': MinaAArrowDownSolid,
     'a-arrow-up': MinaAArrowUpSolid,
     'academic-hat': MinaAcademicHatSolid,

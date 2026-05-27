@@ -1,2 +1,2 @@
-export declare const CoreSuitcaseRegular-duo: string;
-export default CoreSuitcaseRegular-duo;
+export declare const CoreSuitcaseRegularDuo: string;
+export default CoreSuitcaseRegularDuo;

@@ -1,2 +1,2 @@
-export declare const NeoNewspaperRegular-duo: string;
-export default NeoNewspaperRegular-duo;
+export declare const NeoNewspaperRegularDuo: string;
+export default NeoNewspaperRegularDuo;

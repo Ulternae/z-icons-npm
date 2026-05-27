@@ -15024,7 +15024,7 @@ import { LanZapThin } from './lan-zap-thin.js';
 import { LanZzzThin } from './lan-zzz-thin.js';
 
 export const lanIcons = {
-  light: {
+  'light': {
     '0': Lan0,
     '00': Lan00,
     '1': Lan1,
@@ -18782,7 +18782,7 @@ export const lanIcons = {
     'zap': LanZap,
     'zzz': LanZzz
   },
-  solid: {
+  'solid': {
     '0': Lan0Solid,
     '00': Lan00Solid,
     '1': Lan1Solid,
@@ -22540,7 +22540,7 @@ export const lanIcons = {
     'zap': LanZapSolid,
     'zzz': LanZzzSolid
   },
-  regular: {
+  'regular': {
     '0': Lan0Regular,
     '00': Lan00Regular,
     '1': Lan1Regular,
@@ -26298,7 +26298,7 @@ export const lanIcons = {
     'zap': LanZapRegular,
     'zzz': LanZzzRegular
   },
-  thin: {
+  'thin': {
     '0': Lan0Thin,
     '00': Lan00Thin,
     '1': Lan1Thin,

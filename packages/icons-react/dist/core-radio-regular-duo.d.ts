@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CoreRadioRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CoreRadioRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CoreRadioRegular-duo: React.FC<CoreRadioRegular-duoProps>;
-export default CoreRadioRegular-duo;
+export declare const CoreRadioRegularDuo: React.FC<CoreRadioRegularDuoProps>;
+export default CoreRadioRegularDuo;

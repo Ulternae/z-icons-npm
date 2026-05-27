@@ -1,2 +1,2 @@
-export declare const CoreMagnifyingGlassMinusRegular-duo: string;
-export default CoreMagnifyingGlassMinusRegular-duo;
+export declare const CoreMagnifyingGlassMinusRegularDuo: string;
+export default CoreMagnifyingGlassMinusRegularDuo;

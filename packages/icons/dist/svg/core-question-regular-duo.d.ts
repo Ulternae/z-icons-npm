@@ -1,2 +1,2 @@
-export declare const CoreQuestionRegular-duo: string;
-export default CoreQuestionRegular-duo;
+export declare const CoreQuestionRegularDuo: string;
+export default CoreQuestionRegularDuo;

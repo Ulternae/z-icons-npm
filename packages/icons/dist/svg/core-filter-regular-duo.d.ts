@@ -1,2 +1,2 @@
-export declare const CoreFilterRegular-duo: string;
-export default CoreFilterRegular-duo;
+export declare const CoreFilterRegularDuo: string;
+export default CoreFilterRegularDuo;

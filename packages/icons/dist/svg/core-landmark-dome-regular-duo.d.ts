@@ -1,2 +1,2 @@
-export declare const CoreLandmarkDomeRegular-duo: string;
-export default CoreLandmarkDomeRegular-duo;
+export declare const CoreLandmarkDomeRegularDuo: string;
+export default CoreLandmarkDomeRegularDuo;

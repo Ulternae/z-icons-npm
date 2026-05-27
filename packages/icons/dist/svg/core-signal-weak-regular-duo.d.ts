@@ -1,2 +1,2 @@
-export declare const CoreSignalWeakRegular-duo: string;
-export default CoreSignalWeakRegular-duo;
+export declare const CoreSignalWeakRegularDuo: string;
+export default CoreSignalWeakRegularDuo;

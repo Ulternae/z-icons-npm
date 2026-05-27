@@ -1,675 +1,675 @@
-import { CoreAirplayRegular-duo } from '../core-airplay-regular-duo.js';
-import { CoreAlarmClockRegular-duo } from '../core-alarm-clock-regular-duo.js';
-import { CoreAnchorRegular-duo } from '../core-anchor-regular-duo.js';
-import { CoreAngleDownRegular-duo } from '../core-angle-down-regular-duo.js';
-import { CoreAngleLeftRegular-duo } from '../core-angle-left-regular-duo.js';
-import { CoreAngleRightRegular-duo } from '../core-angle-right-regular-duo.js';
-import { CoreAngleUpRegular-duo } from '../core-angle-up-regular-duo.js';
-import { CoreApertureRegular-duo } from '../core-aperture-regular-duo.js';
-import { CoreArrowDownToBracketRegular-duo } from '../core-arrow-down-to-bracket-regular-duo.js';
-import { CoreArrowDownToLineRegular-duo } from '../core-arrow-down-to-line-regular-duo.js';
-import { CoreArrowDownWideShortRegular-duo } from '../core-arrow-down-wide-short-regular-duo.js';
-import { CoreArrowDownRegular-duo } from '../core-arrow-down-regular-duo.js';
-import { CoreArrowLeftRegular-duo } from '../core-arrow-left-regular-duo.js';
-import { CoreArrowPointerRegular-duo } from '../core-arrow-pointer-regular-duo.js';
-import { CoreArrowRightArrowLeftRegular-duo } from '../core-arrow-right-arrow-left-regular-duo.js';
-import { CoreArrowRightFromBracketRegular-duo } from '../core-arrow-right-from-bracket-regular-duo.js';
-import { CoreArrowRightFromLineRegular-duo } from '../core-arrow-right-from-line-regular-duo.js';
-import { CoreArrowRightToBracketRegular-duo } from '../core-arrow-right-to-bracket-regular-duo.js';
-import { CoreArrowRightToLineRegular-duo } from '../core-arrow-right-to-line-regular-duo.js';
-import { CoreArrowRightRegular-duo } from '../core-arrow-right-regular-duo.js';
-import { CoreArrowRotateLeft10Regular-duo } from '../core-arrow-rotate-left10-regular-duo.js';
-import { CoreArrowRotateLeftRegular-duo } from '../core-arrow-rotate-left-regular-duo.js';
-import { CoreArrowRotateRight10Regular-duo } from '../core-arrow-rotate-right10-regular-duo.js';
-import { CoreArrowRotateRightRegular-duo } from '../core-arrow-rotate-right-regular-duo.js';
-import { CoreArrowUpArrowDownRegular-duo } from '../core-arrow-up-arrow-down-regular-duo.js';
-import { CoreArrowUpFromBracketRegular-duo } from '../core-arrow-up-from-bracket-regular-duo.js';
-import { CoreArrowUpFromLineRegular-duo } from '../core-arrow-up-from-line-regular-duo.js';
-import { CoreArrowUpRightFromSquareRegular-duo } from '../core-arrow-up-right-from-square-regular-duo.js';
-import { CoreArrowUpWideShortRegular-duo } from '../core-arrow-up-wide-short-regular-duo.js';
-import { CoreArrowUpRegular-duo } from '../core-arrow-up-regular-duo.js';
-import { CoreArrowsRotateRegular-duo } from '../core-arrows-rotate-regular-duo.js';
-import { CoreAtRegular-duo } from '../core-at-regular-duo.js';
-import { CoreBackwardStepRegular-duo } from '../core-backward-step-regular-duo.js';
-import { CoreBackwardRegular-duo } from '../core-backward-regular-duo.js';
-import { CoreBagShoppingRegular-duo } from '../core-bag-shopping-regular-duo.js';
-import { CoreBarsRegular-duo } from '../core-bars-regular-duo.js';
-import { CoreBatteryBoltRegular-duo } from '../core-battery-bolt-regular-duo.js';
-import { CoreBatteryEmptyRegular-duo } from '../core-battery-empty-regular-duo.js';
-import { CoreBatteryFullRegular-duo } from '../core-battery-full-regular-duo.js';
-import { CoreBatteryHalfRegular-duo } from '../core-battery-half-regular-duo.js';
-import { CoreBatteryQuarterRegular-duo } from '../core-battery-quarter-regular-duo.js';
-import { CoreBatterySlashRegular-duo } from '../core-battery-slash-regular-duo.js';
-import { CoreBatteryThreeQuartersRegular-duo } from '../core-battery-three-quarters-regular-duo.js';
-import { CoreBedEmptyRegular-duo } from '../core-bed-empty-regular-duo.js';
-import { CoreBedRegular-duo } from '../core-bed-regular-duo.js';
-import { CoreBellRingRegular-duo } from '../core-bell-ring-regular-duo.js';
-import { CoreBellSlashRegular-duo } from '../core-bell-slash-regular-duo.js';
-import { CoreBellRegular-duo } from '../core-bell-regular-duo.js';
-import { CoreBlockQuoteRegular-duo } from '../core-block-quote-regular-duo.js';
-import { CoreBoldRegular-duo } from '../core-bold-regular-duo.js';
-import { CoreBoltSlashRegular-duo } from '../core-bolt-slash-regular-duo.js';
-import { CoreBoltRegular-duo } from '../core-bolt-regular-duo.js';
-import { CoreBombRegular-duo } from '../core-bomb-regular-duo.js';
-import { CoreBookOpenRegular-duo } from '../core-book-open-regular-duo.js';
-import { CoreBookRegular-duo } from '../core-book-regular-duo.js';
-import { CoreBookmarkRegular-duo } from '../core-bookmark-regular-duo.js';
-import { CoreBoxArchiveRegular-duo } from '../core-box-archive-regular-duo.js';
-import { CoreBoxRegular-duo } from '../core-box-regular-duo.js';
-import { CoreBriefcaseRegular-duo } from '../core-briefcase-regular-duo.js';
-import { CoreBugSlashRegular-duo } from '../core-bug-slash-regular-duo.js';
-import { CoreBugRegular-duo } from '../core-bug-regular-duo.js';
-import { CoreBuildingRegular-duo } from '../core-building-regular-duo.js';
-import { CoreBuildingsRegular-duo } from '../core-buildings-regular-duo.js';
-import { CoreBurgerRegular-duo } from '../core-burger-regular-duo.js';
-import { CoreBusRegular-duo } from '../core-bus-regular-duo.js';
-import { CoreCakeCandlesRegular-duo } from '../core-cake-candles-regular-duo.js';
-import { CoreCalendarCheckRegular-duo } from '../core-calendar-check-regular-duo.js';
-import { CoreCalendarPlusRegular-duo } from '../core-calendar-plus-regular-duo.js';
-import { CoreCalendarRegular-duo } from '../core-calendar-regular-duo.js';
-import { CoreCameraSlashRegular-duo } from '../core-camera-slash-regular-duo.js';
-import { CoreCameraRegular-duo } from '../core-camera-regular-duo.js';
-import { CoreCarRegular-duo } from '../core-car-regular-duo.js';
-import { CoreCartShoppingRegular-duo } from '../core-cart-shopping-regular-duo.js';
-import { CoreChartPieRegular-duo } from '../core-chart-pie-regular-duo.js';
-import { CoreChartSimpleRegular-duo } from '../core-chart-simple-regular-duo.js';
-import { CoreCheckRegular-duo } from '../core-check-regular-duo.js';
-import { CoreCircleArrowDownRegular-duo } from '../core-circle-arrow-down-regular-duo.js';
-import { CoreCircleArrowLeftRegular-duo } from '../core-circle-arrow-left-regular-duo.js';
-import { CoreCircleArrowRightRegular-duo } from '../core-circle-arrow-right-regular-duo.js';
-import { CoreCircleArrowUpRegular-duo } from '../core-circle-arrow-up-regular-duo.js';
-import { CoreCircleCheckRegular-duo } from '../core-circle-check-regular-duo.js';
-import { CoreCircleDollarRegular-duo } from '../core-circle-dollar-regular-duo.js';
-import { CoreCircleExclamationRegular-duo } from '../core-circle-exclamation-regular-duo.js';
-import { CoreCircleHalfStrokeRegular-duo } from '../core-circle-half-stroke-regular-duo.js';
-import { CoreCircleInfoRegular-duo } from '../core-circle-info-regular-duo.js';
-import { CoreCirclePlusRegular-duo } from '../core-circle-plus-regular-duo.js';
-import { CoreCircleQuestionRegular-duo } from '../core-circle-question-regular-duo.js';
-import { CoreCircleUserRegular-duo } from '../core-circle-user-regular-duo.js';
-import { CoreCircleRegular-duo } from '../core-circle-regular-duo.js';
-import { CoreClipboardCheckRegular-duo } from '../core-clipboard-check-regular-duo.js';
-import { CoreClipboardRegular-duo } from '../core-clipboard-regular-duo.js';
-import { CoreClockRegular-duo } from '../core-clock-regular-duo.js';
-import { CoreClosedCaptioningRegular-duo } from '../core-closed-captioning-regular-duo.js';
-import { CoreCloudArrowDownRegular-duo } from '../core-cloud-arrow-down-regular-duo.js';
-import { CoreCloudArrowUpRegular-duo } from '../core-cloud-arrow-up-regular-duo.js';
-import { CoreCloudBoltRegular-duo } from '../core-cloud-bolt-regular-duo.js';
-import { CoreCloudDrizzleRegular-duo } from '../core-cloud-drizzle-regular-duo.js';
-import { CoreCloudMoonRegular-duo } from '../core-cloud-moon-regular-duo.js';
-import { CoreCloudShowersRegular-duo } from '../core-cloud-showers-regular-duo.js';
-import { CoreCloudSlashRegular-duo } from '../core-cloud-slash-regular-duo.js';
-import { CoreCloudSnowRegular-duo } from '../core-cloud-snow-regular-duo.js';
-import { CoreCloudSunRegular-duo } from '../core-cloud-sun-regular-duo.js';
-import { CoreCloudRegular-duo } from '../core-cloud-regular-duo.js';
-import { CoreCodeRegular-duo } from '../core-code-regular-duo.js';
-import { CoreCommandRegular-duo } from '../core-command-regular-duo.js';
-import { CoreCommentSlashRegular-duo } from '../core-comment-slash-regular-duo.js';
-import { CoreCommentRegular-duo } from '../core-comment-regular-duo.js';
-import { CoreCommentsRegular-duo } from '../core-comments-regular-duo.js';
-import { CoreCompactDiscRegular-duo } from '../core-compact-disc-regular-duo.js';
-import { CoreCompassRegular-duo } from '../core-compass-regular-duo.js';
-import { CoreCompressRegular-duo } from '../core-compress-regular-duo.js';
-import { CoreComputerClassicRegular-duo } from '../core-computer-classic-regular-duo.js';
-import { CoreCopyRegular-duo } from '../core-copy-regular-duo.js';
-import { CoreCreditCardRegular-duo } from '../core-credit-card-regular-duo.js';
-import { CoreCrownRegular-duo } from '../core-crown-regular-duo.js';
-import { CoreDatabaseRegular-duo } from '../core-database-regular-duo.js';
-import { CoreDiamondRegular-duo } from '../core-diamond-regular-duo.js';
-import { CoreDisplayRegular-duo } from '../core-display-regular-duo.js';
-import { CoreDollarSignRegular-duo } from '../core-dollar-sign-regular-duo.js';
-import { CoreDropletRegular-duo } from '../core-droplet-regular-duo.js';
-import { CoreEllipsisRegular-duo } from '../core-ellipsis-regular-duo.js';
-import { CoreEnvelopeOpenRegular-duo } from '../core-envelope-open-regular-duo.js';
-import { CoreEnvelopeRegular-duo } from '../core-envelope-regular-duo.js';
-import { CoreEqualsRegular-duo } from '../core-equals-regular-duo.js';
-import { CoreExpandRegular-duo } from '../core-expand-regular-duo.js';
-import { CoreEyeSlashRegular-duo } from '../core-eye-slash-regular-duo.js';
-import { CoreEyeRegular-duo } from '../core-eye-regular-duo.js';
-import { CoreFaceFrownRegular-duo } from '../core-face-frown-regular-duo.js';
-import { CoreFaceLaughRegular-duo } from '../core-face-laugh-regular-duo.js';
-import { CoreFaceMehRegular-duo } from '../core-face-meh-regular-duo.js';
-import { CoreFaceSmileRegular-duo } from '../core-face-smile-regular-duo.js';
-import { CoreFeatherRegular-duo } from '../core-feather-regular-duo.js';
-import { CoreFileCheckRegular-duo } from '../core-file-check-regular-duo.js';
-import { CoreFileMinusRegular-duo } from '../core-file-minus-regular-duo.js';
-import { CoreFilePlusRegular-duo } from '../core-file-plus-regular-duo.js';
-import { CoreFileRegular-duo } from '../core-file-regular-duo.js';
-import { CoreFilesRegular-duo } from '../core-files-regular-duo.js';
-import { CoreFillRegular-duo } from '../core-fill-regular-duo.js';
-import { CoreFilmRegular-duo } from '../core-film-regular-duo.js';
-import { CoreFilterRegular-duo } from '../core-filter-regular-duo.js';
-import { CoreFireRegular-duo } from '../core-fire-regular-duo.js';
-import { CoreFishRegular-duo } from '../core-fish-regular-duo.js';
-import { CoreFlagRegular-duo } from '../core-flag-regular-duo.js';
-import { CoreFloppyDiskRegular-duo } from '../core-floppy-disk-regular-duo.js';
-import { CoreFlowerRegular-duo } from '../core-flower-regular-duo.js';
-import { CoreFolderCheckRegular-duo } from '../core-folder-check-regular-duo.js';
-import { CoreFolderMinusRegular-duo } from '../core-folder-minus-regular-duo.js';
-import { CoreFolderPlusRegular-duo } from '../core-folder-plus-regular-duo.js';
-import { CoreFolderRegular-duo } from '../core-folder-regular-duo.js';
-import { CoreFoldersRegular-duo } from '../core-folders-regular-duo.js';
-import { CoreFontCaseRegular-duo } from '../core-font-case-regular-duo.js';
-import { CoreFontRegular-duo } from '../core-font-regular-duo.js';
-import { CoreForwardStepRegular-duo } from '../core-forward-step-regular-duo.js';
-import { CoreForwardRegular-duo } from '../core-forward-regular-duo.js';
-import { CoreFrameRegular-duo } from '../core-frame-regular-duo.js';
-import { CoreGamepadModernRegular-duo } from '../core-gamepad-modern-regular-duo.js';
-import { CoreGaugeHighRegular-duo } from '../core-gauge-high-regular-duo.js';
-import { CoreGaugeLowRegular-duo } from '../core-gauge-low-regular-duo.js';
-import { CoreGaugeRegular-duo } from '../core-gauge-regular-duo.js';
-import { CoreGearRegular-duo } from '../core-gear-regular-duo.js';
-import { CoreGhostRegular-duo } from '../core-ghost-regular-duo.js';
-import { CoreGiftRegular-duo } from '../core-gift-regular-duo.js';
-import { CoreGlobeRegular-duo } from '../core-globe-regular-duo.js';
-import { CoreGrid2Regular-duo } from '../core-grid2-regular-duo.js';
-import { CoreGridRoundRegular-duo } from '../core-grid-round-regular-duo.js';
-import { CoreHandRegular-duo } from '../core-hand-regular-duo.js';
-import { CoreHardDriveRegular-duo } from '../core-hard-drive-regular-duo.js';
-import { CoreHeadphonesRegular-duo } from '../core-headphones-regular-duo.js';
-import { CoreHeartHalfRegular-duo } from '../core-heart-half-regular-duo.js';
-import { CoreHeartSlashRegular-duo } from '../core-heart-slash-regular-duo.js';
-import { CoreHeartRegular-duo } from '../core-heart-regular-duo.js';
-import { CoreHourglassRegular-duo } from '../core-hourglass-regular-duo.js';
-import { CoreHouseRegular-duo } from '../core-house-regular-duo.js';
-import { CoreIdCardRegular-duo } from '../core-id-card-regular-duo.js';
-import { CoreImageRegular-duo } from '../core-image-regular-duo.js';
-import { CoreImagesRegular-duo } from '../core-images-regular-duo.js';
-import { CoreInboxRegular-duo } from '../core-inbox-regular-duo.js';
-import { CoreItalicRegular-duo } from '../core-italic-regular-duo.js';
-import { CoreJoystickRegular-duo } from '../core-joystick-regular-duo.js';
-import { CoreKeyRegular-duo } from '../core-key-regular-duo.js';
-import { CoreKeyboardRegular-duo } from '../core-keyboard-regular-duo.js';
-import { CoreLandmarkDomeRegular-duo } from '../core-landmark-dome-regular-duo.js';
-import { CoreLandmarkRegular-duo } from '../core-landmark-regular-duo.js';
-import { CoreLanguageRegular-duo } from '../core-language-regular-duo.js';
-import { CoreLaptopRegular-duo } from '../core-laptop-regular-duo.js';
-import { CoreLayerGroupRegular-duo } from '../core-layer-group-regular-duo.js';
-import { CoreLeafRegular-duo } from '../core-leaf-regular-duo.js';
-import { CoreLifeRingRegular-duo } from '../core-life-ring-regular-duo.js';
-import { CoreLightbulbSlashRegular-duo } from '../core-lightbulb-slash-regular-duo.js';
-import { CoreLightbulbRegular-duo } from '../core-lightbulb-regular-duo.js';
-import { CoreLinkSimpleRegular-duo } from '../core-link-simple-regular-duo.js';
-import { CoreLinkRegular-duo } from '../core-link-regular-duo.js';
-import { CoreListMusicRegular-duo } from '../core-list-music-regular-duo.js';
-import { CoreListOlRegular-duo } from '../core-list-ol-regular-duo.js';
-import { CoreListUlRegular-duo } from '../core-list-ul-regular-duo.js';
-import { CoreLocationArrowRegular-duo } from '../core-location-arrow-regular-duo.js';
-import { CoreLocationDotRegular-duo } from '../core-location-dot-regular-duo.js';
-import { CoreLockOpenRegular-duo } from '../core-lock-open-regular-duo.js';
-import { CoreLockRegular-duo } from '../core-lock-regular-duo.js';
-import { CoreMagnifyingGlassMinusRegular-duo } from '../core-magnifying-glass-minus-regular-duo.js';
-import { CoreMagnifyingGlassPlusRegular-duo } from '../core-magnifying-glass-plus-regular-duo.js';
-import { CoreMagnifyingGlassRegular-duo } from '../core-magnifying-glass-regular-duo.js';
-import { CoreMapRegular-duo } from '../core-map-regular-duo.js';
-import { CoreMartiniGlassRegular-duo } from '../core-martini-glass-regular-duo.js';
-import { CoreMicrochipRegular-duo } from '../core-microchip-regular-duo.js';
-import { CoreMicrophoneSlashRegular-duo } from '../core-microphone-slash-regular-duo.js';
-import { CoreMicrophoneRegular-duo } from '../core-microphone-regular-duo.js';
-import { CoreMinusRegular-duo } from '../core-minus-regular-duo.js';
-import { CoreMobileRegular-duo } from '../core-mobile-regular-duo.js';
-import { CoreMoneyBillWaveRegular-duo } from '../core-money-bill-wave-regular-duo.js';
-import { CoreMoneyBillRegular-duo } from '../core-money-bill-regular-duo.js';
-import { CoreMoonStarRegular-duo } from '../core-moon-star-regular-duo.js';
-import { CoreMoonRegular-duo } from '../core-moon-regular-duo.js';
-import { CoreMugHotRegular-duo } from '../core-mug-hot-regular-duo.js';
-import { CoreMugSaucerRegular-duo } from '../core-mug-saucer-regular-duo.js';
-import { CoreMusicRegular-duo } from '../core-music-regular-duo.js';
-import { CoreNewspaperRegular-duo } from '../core-newspaper-regular-duo.js';
-import { CoreNotdefRegular-duo } from '../core-notdef-regular-duo.js';
-import { CorePaintbrushSlashRegular-duo } from '../core-paintbrush-slash-regular-duo.js';
-import { CorePaintbrushRegular-duo } from '../core-paintbrush-regular-duo.js';
-import { CorePaletteRegular-duo } from '../core-palette-regular-duo.js';
-import { CorePaperPlaneRegular-duo } from '../core-paper-plane-regular-duo.js';
-import { CorePaperclipRegular-duo } from '../core-paperclip-regular-duo.js';
-import { CorePauseRegular-duo } from '../core-pause-regular-duo.js';
-import { CorePawRegular-duo } from '../core-paw-regular-duo.js';
-import { CorePenLineRegular-duo } from '../core-pen-line-regular-duo.js';
-import { CorePenNibRegular-duo } from '../core-pen-nib-regular-duo.js';
-import { CorePenSlashRegular-duo } from '../core-pen-slash-regular-duo.js';
-import { CorePenToSquareRegular-duo } from '../core-pen-to-square-regular-duo.js';
-import { CorePenRegular-duo } from '../core-pen-regular-duo.js';
-import { CorePencilLineRegular-duo } from '../core-pencil-line-regular-duo.js';
-import { CorePencilRegular-duo } from '../core-pencil-regular-duo.js';
-import { CorePercentRegular-duo } from '../core-percent-regular-duo.js';
-import { CorePersonBikingRegular-duo } from '../core-person-biking-regular-duo.js';
-import { CorePhoneArrowDownLeftRegular-duo } from '../core-phone-arrow-down-left-regular-duo.js';
-import { CorePhoneArrowRightRegular-duo } from '../core-phone-arrow-right-regular-duo.js';
-import { CorePhoneArrowUpRightRegular-duo } from '../core-phone-arrow-up-right-regular-duo.js';
-import { CorePhoneHangupRegular-duo } from '../core-phone-hangup-regular-duo.js';
-import { CorePhonePlusRegular-duo } from '../core-phone-plus-regular-duo.js';
-import { CorePhoneSlashRegular-duo } from '../core-phone-slash-regular-duo.js';
-import { CorePhoneVolumeRegular-duo } from '../core-phone-volume-regular-duo.js';
-import { CorePhoneXmarkRegular-duo } from '../core-phone-xmark-regular-duo.js';
-import { CorePhoneRegular-duo } from '../core-phone-regular-duo.js';
-import { CorePlaneUpRegular-duo } from '../core-plane-up-regular-duo.js';
-import { CorePlaneRegular-duo } from '../core-plane-regular-duo.js';
-import { CorePlayPauseRegular-duo } from '../core-play-pause-regular-duo.js';
-import { CorePlayRegular-duo } from '../core-play-regular-duo.js';
-import { CorePlusRegular-duo } from '../core-plus-regular-duo.js';
-import { CorePoopRegular-duo } from '../core-poop-regular-duo.js';
-import { CorePrintRegular-duo } from '../core-print-regular-duo.js';
-import { CoreQuestionRegular-duo } from '../core-question-regular-duo.js';
-import { CoreQuotesRegular-duo } from '../core-quotes-regular-duo.js';
-import { CoreRadioRegular-duo } from '../core-radio-regular-duo.js';
-import { CoreRectangleCodeRegular-duo } from '../core-rectangle-code-regular-duo.js';
-import { CoreRectangleTallRegular-duo } from '../core-rectangle-tall-regular-duo.js';
-import { CoreRectangleVerticalRegular-duo } from '../core-rectangle-vertical-regular-duo.js';
-import { CoreRectangleWideRegular-duo } from '../core-rectangle-wide-regular-duo.js';
-import { CoreRectangleRegular-duo } from '../core-rectangle-regular-duo.js';
-import { CoreRocketLaunchRegular-duo } from '../core-rocket-launch-regular-duo.js';
-import { CoreScissorsRegular-duo } from '../core-scissors-regular-duo.js';
-import { CoreScreencastRegular-duo } from '../core-screencast-regular-duo.js';
-import { CoreServerRegular-duo } from '../core-server-regular-duo.js';
-import { CoreShareNodesRegular-duo } from '../core-share-nodes-regular-duo.js';
-import { CoreShieldCheckRegular-duo } from '../core-shield-check-regular-duo.js';
-import { CoreShieldHalvedRegular-duo } from '../core-shield-halved-regular-duo.js';
-import { CoreShieldSlashRegular-duo } from '../core-shield-slash-regular-duo.js';
-import { CoreShieldRegular-duo } from '../core-shield-regular-duo.js';
-import { CoreShipRegular-duo } from '../core-ship-regular-duo.js';
-import { CoreShirtRegular-duo } from '../core-shirt-regular-duo.js';
-import { CoreShopRegular-duo } from '../core-shop-regular-duo.js';
-import { CoreShredderRegular-duo } from '../core-shredder-regular-duo.js';
-import { CoreSignalFairRegular-duo } from '../core-signal-fair-regular-duo.js';
-import { CoreSignalGoodRegular-duo } from '../core-signal-good-regular-duo.js';
-import { CoreSignalSlashRegular-duo } from '../core-signal-slash-regular-duo.js';
-import { CoreSignalWeakRegular-duo } from '../core-signal-weak-regular-duo.js';
-import { CoreSkullCrossbonesRegular-duo } from '../core-skull-crossbones-regular-duo.js';
-import { CoreSkullRegular-duo } from '../core-skull-regular-duo.js';
-import { CoreSlidersRegular-duo } from '../core-sliders-regular-duo.js';
-import { CoreSnowflakeRegular-duo } from '../core-snowflake-regular-duo.js';
-import { CoreSortRegular-duo } from '../core-sort-regular-duo.js';
-import { CoreSparklesRegular-duo } from '../core-sparkles-regular-duo.js';
-import { CoreSpeakerRegular-duo } from '../core-speaker-regular-duo.js';
-import { CoreSquareRegular-duo } from '../core-square-regular-duo.js';
-import { CoreStarHalfRegular-duo } from '../core-star-half-regular-duo.js';
-import { CoreStarRegular-duo } from '../core-star-regular-duo.js';
-import { CoreStopRegular-duo } from '../core-stop-regular-duo.js';
-import { CoreStopwatchRegular-duo } from '../core-stopwatch-regular-duo.js';
-import { CoreStoreRegular-duo } from '../core-store-regular-duo.js';
-import { CoreStrikethroughRegular-duo } from '../core-strikethrough-regular-duo.js';
-import { CoreSuitcaseRegular-duo } from '../core-suitcase-regular-duo.js';
-import { CoreSunRegular-duo } from '../core-sun-regular-duo.js';
-import { CoreTagRegular-duo } from '../core-tag-regular-duo.js';
-import { CoreTextRegular-duo } from '../core-text-regular-duo.js';
-import { CoreThumbsDownRegular-duo } from '../core-thumbs-down-regular-duo.js';
-import { CoreThumbsUpRegular-duo } from '../core-thumbs-up-regular-duo.js';
-import { CoreThumbtackRegular-duo } from '../core-thumbtack-regular-duo.js';
-import { CoreTicketRegular-duo } from '../core-ticket-regular-duo.js';
-import { CoreTrainSubwayRegular-duo } from '../core-train-subway-regular-duo.js';
-import { CoreTrainRegular-duo } from '../core-train-regular-duo.js';
-import { CoreTrashSlashRegular-duo } from '../core-trash-slash-regular-duo.js';
-import { CoreTrashRegular-duo } from '../core-trash-regular-duo.js';
-import { CoreTreeRegular-duo } from '../core-tree-regular-duo.js';
-import { CoreTriangleRegular-duo } from '../core-triangle-regular-duo.js';
-import { CoreTrophyRegular-duo } from '../core-trophy-regular-duo.js';
-import { CoreTruckRegular-duo } from '../core-truck-regular-duo.js';
-import { CoreTvRetroRegular-duo } from '../core-tv-retro-regular-duo.js';
-import { CoreTvRegular-duo } from '../core-tv-regular-duo.js';
-import { CoreUmbrellaRegular-duo } from '../core-umbrella-regular-duo.js';
-import { CoreUnderlineRegular-duo } from '../core-underline-regular-duo.js';
-import { CoreUniversalAccessRegular-duo } from '../core-universal-access-regular-duo.js';
-import { CoreUnlockRegular-duo } from '../core-unlock-regular-duo.js';
-import { CoreUserCheckRegular-duo } from '../core-user-check-regular-duo.js';
-import { CoreUserMinusRegular-duo } from '../core-user-minus-regular-duo.js';
-import { CoreUserPlusRegular-duo } from '../core-user-plus-regular-duo.js';
-import { CoreUserXmarkRegular-duo } from '../core-user-xmark-regular-duo.js';
-import { CoreUserRegular-duo } from '../core-user-regular-duo.js';
-import { CoreUsersRegular-duo } from '../core-users-regular-duo.js';
-import { CoreUtensilsRegular-duo } from '../core-utensils-regular-duo.js';
-import { CoreVideoSlashRegular-duo } from '../core-video-slash-regular-duo.js';
-import { CoreVideoRegular-duo } from '../core-video-regular-duo.js';
-import { CoreVoicemailRegular-duo } from '../core-voicemail-regular-duo.js';
-import { CoreVolumeLowRegular-duo } from '../core-volume-low-regular-duo.js';
-import { CoreVolumeOffRegular-duo } from '../core-volume-off-regular-duo.js';
-import { CoreVolumeSlashRegular-duo } from '../core-volume-slash-regular-duo.js';
-import { CoreVolumeXmarkRegular-duo } from '../core-volume-xmark-regular-duo.js';
-import { CoreVolumeRegular-duo } from '../core-volume-regular-duo.js';
-import { CoreWandMagicSparklesRegular-duo } from '../core-wand-magic-sparkles-regular-duo.js';
-import { CoreWandMagicRegular-duo } from '../core-wand-magic-regular-duo.js';
-import { CoreWaterRegular-duo } from '../core-water-regular-duo.js';
-import { CoreWheelchairMoveRegular-duo } from '../core-wheelchair-move-regular-duo.js';
-import { CoreWheelchairRegular-duo } from '../core-wheelchair-regular-duo.js';
-import { CoreWifiSlashRegular-duo } from '../core-wifi-slash-regular-duo.js';
-import { CoreWifiRegular-duo } from '../core-wifi-regular-duo.js';
-import { CoreWindRegular-duo } from '../core-wind-regular-duo.js';
-import { CoreWrenchRegular-duo } from '../core-wrench-regular-duo.js';
-import { CoreXmarkRegular-duo } from '../core-xmark-regular-duo.js';
+import { CoreAirplayRegularDuo } from '../core-airplay-regular-duo.js';
+import { CoreAlarmClockRegularDuo } from '../core-alarm-clock-regular-duo.js';
+import { CoreAnchorRegularDuo } from '../core-anchor-regular-duo.js';
+import { CoreAngleDownRegularDuo } from '../core-angle-down-regular-duo.js';
+import { CoreAngleLeftRegularDuo } from '../core-angle-left-regular-duo.js';
+import { CoreAngleRightRegularDuo } from '../core-angle-right-regular-duo.js';
+import { CoreAngleUpRegularDuo } from '../core-angle-up-regular-duo.js';
+import { CoreApertureRegularDuo } from '../core-aperture-regular-duo.js';
+import { CoreArrowDownToBracketRegularDuo } from '../core-arrow-down-to-bracket-regular-duo.js';
+import { CoreArrowDownToLineRegularDuo } from '../core-arrow-down-to-line-regular-duo.js';
+import { CoreArrowDownWideShortRegularDuo } from '../core-arrow-down-wide-short-regular-duo.js';
+import { CoreArrowDownRegularDuo } from '../core-arrow-down-regular-duo.js';
+import { CoreArrowLeftRegularDuo } from '../core-arrow-left-regular-duo.js';
+import { CoreArrowPointerRegularDuo } from '../core-arrow-pointer-regular-duo.js';
+import { CoreArrowRightArrowLeftRegularDuo } from '../core-arrow-right-arrow-left-regular-duo.js';
+import { CoreArrowRightFromBracketRegularDuo } from '../core-arrow-right-from-bracket-regular-duo.js';
+import { CoreArrowRightFromLineRegularDuo } from '../core-arrow-right-from-line-regular-duo.js';
+import { CoreArrowRightToBracketRegularDuo } from '../core-arrow-right-to-bracket-regular-duo.js';
+import { CoreArrowRightToLineRegularDuo } from '../core-arrow-right-to-line-regular-duo.js';
+import { CoreArrowRightRegularDuo } from '../core-arrow-right-regular-duo.js';
+import { CoreArrowRotateLeft10RegularDuo } from '../core-arrow-rotate-left10-regular-duo.js';
+import { CoreArrowRotateLeftRegularDuo } from '../core-arrow-rotate-left-regular-duo.js';
+import { CoreArrowRotateRight10RegularDuo } from '../core-arrow-rotate-right10-regular-duo.js';
+import { CoreArrowRotateRightRegularDuo } from '../core-arrow-rotate-right-regular-duo.js';
+import { CoreArrowUpArrowDownRegularDuo } from '../core-arrow-up-arrow-down-regular-duo.js';
+import { CoreArrowUpFromBracketRegularDuo } from '../core-arrow-up-from-bracket-regular-duo.js';
+import { CoreArrowUpFromLineRegularDuo } from '../core-arrow-up-from-line-regular-duo.js';
+import { CoreArrowUpRightFromSquareRegularDuo } from '../core-arrow-up-right-from-square-regular-duo.js';
+import { CoreArrowUpWideShortRegularDuo } from '../core-arrow-up-wide-short-regular-duo.js';
+import { CoreArrowUpRegularDuo } from '../core-arrow-up-regular-duo.js';
+import { CoreArrowsRotateRegularDuo } from '../core-arrows-rotate-regular-duo.js';
+import { CoreAtRegularDuo } from '../core-at-regular-duo.js';
+import { CoreBackwardStepRegularDuo } from '../core-backward-step-regular-duo.js';
+import { CoreBackwardRegularDuo } from '../core-backward-regular-duo.js';
+import { CoreBagShoppingRegularDuo } from '../core-bag-shopping-regular-duo.js';
+import { CoreBarsRegularDuo } from '../core-bars-regular-duo.js';
+import { CoreBatteryBoltRegularDuo } from '../core-battery-bolt-regular-duo.js';
+import { CoreBatteryEmptyRegularDuo } from '../core-battery-empty-regular-duo.js';
+import { CoreBatteryFullRegularDuo } from '../core-battery-full-regular-duo.js';
+import { CoreBatteryHalfRegularDuo } from '../core-battery-half-regular-duo.js';
+import { CoreBatteryQuarterRegularDuo } from '../core-battery-quarter-regular-duo.js';
+import { CoreBatterySlashRegularDuo } from '../core-battery-slash-regular-duo.js';
+import { CoreBatteryThreeQuartersRegularDuo } from '../core-battery-three-quarters-regular-duo.js';
+import { CoreBedEmptyRegularDuo } from '../core-bed-empty-regular-duo.js';
+import { CoreBedRegularDuo } from '../core-bed-regular-duo.js';
+import { CoreBellRingRegularDuo } from '../core-bell-ring-regular-duo.js';
+import { CoreBellSlashRegularDuo } from '../core-bell-slash-regular-duo.js';
+import { CoreBellRegularDuo } from '../core-bell-regular-duo.js';
+import { CoreBlockQuoteRegularDuo } from '../core-block-quote-regular-duo.js';
+import { CoreBoldRegularDuo } from '../core-bold-regular-duo.js';
+import { CoreBoltSlashRegularDuo } from '../core-bolt-slash-regular-duo.js';
+import { CoreBoltRegularDuo } from '../core-bolt-regular-duo.js';
+import { CoreBombRegularDuo } from '../core-bomb-regular-duo.js';
+import { CoreBookOpenRegularDuo } from '../core-book-open-regular-duo.js';
+import { CoreBookRegularDuo } from '../core-book-regular-duo.js';
+import { CoreBookmarkRegularDuo } from '../core-bookmark-regular-duo.js';
+import { CoreBoxArchiveRegularDuo } from '../core-box-archive-regular-duo.js';
+import { CoreBoxRegularDuo } from '../core-box-regular-duo.js';
+import { CoreBriefcaseRegularDuo } from '../core-briefcase-regular-duo.js';
+import { CoreBugSlashRegularDuo } from '../core-bug-slash-regular-duo.js';
+import { CoreBugRegularDuo } from '../core-bug-regular-duo.js';
+import { CoreBuildingRegularDuo } from '../core-building-regular-duo.js';
+import { CoreBuildingsRegularDuo } from '../core-buildings-regular-duo.js';
+import { CoreBurgerRegularDuo } from '../core-burger-regular-duo.js';
+import { CoreBusRegularDuo } from '../core-bus-regular-duo.js';
+import { CoreCakeCandlesRegularDuo } from '../core-cake-candles-regular-duo.js';
+import { CoreCalendarCheckRegularDuo } from '../core-calendar-check-regular-duo.js';
+import { CoreCalendarPlusRegularDuo } from '../core-calendar-plus-regular-duo.js';
+import { CoreCalendarRegularDuo } from '../core-calendar-regular-duo.js';
+import { CoreCameraSlashRegularDuo } from '../core-camera-slash-regular-duo.js';
+import { CoreCameraRegularDuo } from '../core-camera-regular-duo.js';
+import { CoreCarRegularDuo } from '../core-car-regular-duo.js';
+import { CoreCartShoppingRegularDuo } from '../core-cart-shopping-regular-duo.js';
+import { CoreChartPieRegularDuo } from '../core-chart-pie-regular-duo.js';
+import { CoreChartSimpleRegularDuo } from '../core-chart-simple-regular-duo.js';
+import { CoreCheckRegularDuo } from '../core-check-regular-duo.js';
+import { CoreCircleArrowDownRegularDuo } from '../core-circle-arrow-down-regular-duo.js';
+import { CoreCircleArrowLeftRegularDuo } from '../core-circle-arrow-left-regular-duo.js';
+import { CoreCircleArrowRightRegularDuo } from '../core-circle-arrow-right-regular-duo.js';
+import { CoreCircleArrowUpRegularDuo } from '../core-circle-arrow-up-regular-duo.js';
+import { CoreCircleCheckRegularDuo } from '../core-circle-check-regular-duo.js';
+import { CoreCircleDollarRegularDuo } from '../core-circle-dollar-regular-duo.js';
+import { CoreCircleExclamationRegularDuo } from '../core-circle-exclamation-regular-duo.js';
+import { CoreCircleHalfStrokeRegularDuo } from '../core-circle-half-stroke-regular-duo.js';
+import { CoreCircleInfoRegularDuo } from '../core-circle-info-regular-duo.js';
+import { CoreCirclePlusRegularDuo } from '../core-circle-plus-regular-duo.js';
+import { CoreCircleQuestionRegularDuo } from '../core-circle-question-regular-duo.js';
+import { CoreCircleUserRegularDuo } from '../core-circle-user-regular-duo.js';
+import { CoreCircleRegularDuo } from '../core-circle-regular-duo.js';
+import { CoreClipboardCheckRegularDuo } from '../core-clipboard-check-regular-duo.js';
+import { CoreClipboardRegularDuo } from '../core-clipboard-regular-duo.js';
+import { CoreClockRegularDuo } from '../core-clock-regular-duo.js';
+import { CoreClosedCaptioningRegularDuo } from '../core-closed-captioning-regular-duo.js';
+import { CoreCloudArrowDownRegularDuo } from '../core-cloud-arrow-down-regular-duo.js';
+import { CoreCloudArrowUpRegularDuo } from '../core-cloud-arrow-up-regular-duo.js';
+import { CoreCloudBoltRegularDuo } from '../core-cloud-bolt-regular-duo.js';
+import { CoreCloudDrizzleRegularDuo } from '../core-cloud-drizzle-regular-duo.js';
+import { CoreCloudMoonRegularDuo } from '../core-cloud-moon-regular-duo.js';
+import { CoreCloudShowersRegularDuo } from '../core-cloud-showers-regular-duo.js';
+import { CoreCloudSlashRegularDuo } from '../core-cloud-slash-regular-duo.js';
+import { CoreCloudSnowRegularDuo } from '../core-cloud-snow-regular-duo.js';
+import { CoreCloudSunRegularDuo } from '../core-cloud-sun-regular-duo.js';
+import { CoreCloudRegularDuo } from '../core-cloud-regular-duo.js';
+import { CoreCodeRegularDuo } from '../core-code-regular-duo.js';
+import { CoreCommandRegularDuo } from '../core-command-regular-duo.js';
+import { CoreCommentSlashRegularDuo } from '../core-comment-slash-regular-duo.js';
+import { CoreCommentRegularDuo } from '../core-comment-regular-duo.js';
+import { CoreCommentsRegularDuo } from '../core-comments-regular-duo.js';
+import { CoreCompactDiscRegularDuo } from '../core-compact-disc-regular-duo.js';
+import { CoreCompassRegularDuo } from '../core-compass-regular-duo.js';
+import { CoreCompressRegularDuo } from '../core-compress-regular-duo.js';
+import { CoreComputerClassicRegularDuo } from '../core-computer-classic-regular-duo.js';
+import { CoreCopyRegularDuo } from '../core-copy-regular-duo.js';
+import { CoreCreditCardRegularDuo } from '../core-credit-card-regular-duo.js';
+import { CoreCrownRegularDuo } from '../core-crown-regular-duo.js';
+import { CoreDatabaseRegularDuo } from '../core-database-regular-duo.js';
+import { CoreDiamondRegularDuo } from '../core-diamond-regular-duo.js';
+import { CoreDisplayRegularDuo } from '../core-display-regular-duo.js';
+import { CoreDollarSignRegularDuo } from '../core-dollar-sign-regular-duo.js';
+import { CoreDropletRegularDuo } from '../core-droplet-regular-duo.js';
+import { CoreEllipsisRegularDuo } from '../core-ellipsis-regular-duo.js';
+import { CoreEnvelopeOpenRegularDuo } from '../core-envelope-open-regular-duo.js';
+import { CoreEnvelopeRegularDuo } from '../core-envelope-regular-duo.js';
+import { CoreEqualsRegularDuo } from '../core-equals-regular-duo.js';
+import { CoreExpandRegularDuo } from '../core-expand-regular-duo.js';
+import { CoreEyeSlashRegularDuo } from '../core-eye-slash-regular-duo.js';
+import { CoreEyeRegularDuo } from '../core-eye-regular-duo.js';
+import { CoreFaceFrownRegularDuo } from '../core-face-frown-regular-duo.js';
+import { CoreFaceLaughRegularDuo } from '../core-face-laugh-regular-duo.js';
+import { CoreFaceMehRegularDuo } from '../core-face-meh-regular-duo.js';
+import { CoreFaceSmileRegularDuo } from '../core-face-smile-regular-duo.js';
+import { CoreFeatherRegularDuo } from '../core-feather-regular-duo.js';
+import { CoreFileCheckRegularDuo } from '../core-file-check-regular-duo.js';
+import { CoreFileMinusRegularDuo } from '../core-file-minus-regular-duo.js';
+import { CoreFilePlusRegularDuo } from '../core-file-plus-regular-duo.js';
+import { CoreFileRegularDuo } from '../core-file-regular-duo.js';
+import { CoreFilesRegularDuo } from '../core-files-regular-duo.js';
+import { CoreFillRegularDuo } from '../core-fill-regular-duo.js';
+import { CoreFilmRegularDuo } from '../core-film-regular-duo.js';
+import { CoreFilterRegularDuo } from '../core-filter-regular-duo.js';
+import { CoreFireRegularDuo } from '../core-fire-regular-duo.js';
+import { CoreFishRegularDuo } from '../core-fish-regular-duo.js';
+import { CoreFlagRegularDuo } from '../core-flag-regular-duo.js';
+import { CoreFloppyDiskRegularDuo } from '../core-floppy-disk-regular-duo.js';
+import { CoreFlowerRegularDuo } from '../core-flower-regular-duo.js';
+import { CoreFolderCheckRegularDuo } from '../core-folder-check-regular-duo.js';
+import { CoreFolderMinusRegularDuo } from '../core-folder-minus-regular-duo.js';
+import { CoreFolderPlusRegularDuo } from '../core-folder-plus-regular-duo.js';
+import { CoreFolderRegularDuo } from '../core-folder-regular-duo.js';
+import { CoreFoldersRegularDuo } from '../core-folders-regular-duo.js';
+import { CoreFontCaseRegularDuo } from '../core-font-case-regular-duo.js';
+import { CoreFontRegularDuo } from '../core-font-regular-duo.js';
+import { CoreForwardStepRegularDuo } from '../core-forward-step-regular-duo.js';
+import { CoreForwardRegularDuo } from '../core-forward-regular-duo.js';
+import { CoreFrameRegularDuo } from '../core-frame-regular-duo.js';
+import { CoreGamepadModernRegularDuo } from '../core-gamepad-modern-regular-duo.js';
+import { CoreGaugeHighRegularDuo } from '../core-gauge-high-regular-duo.js';
+import { CoreGaugeLowRegularDuo } from '../core-gauge-low-regular-duo.js';
+import { CoreGaugeRegularDuo } from '../core-gauge-regular-duo.js';
+import { CoreGearRegularDuo } from '../core-gear-regular-duo.js';
+import { CoreGhostRegularDuo } from '../core-ghost-regular-duo.js';
+import { CoreGiftRegularDuo } from '../core-gift-regular-duo.js';
+import { CoreGlobeRegularDuo } from '../core-globe-regular-duo.js';
+import { CoreGrid2RegularDuo } from '../core-grid2-regular-duo.js';
+import { CoreGridRoundRegularDuo } from '../core-grid-round-regular-duo.js';
+import { CoreHandRegularDuo } from '../core-hand-regular-duo.js';
+import { CoreHardDriveRegularDuo } from '../core-hard-drive-regular-duo.js';
+import { CoreHeadphonesRegularDuo } from '../core-headphones-regular-duo.js';
+import { CoreHeartHalfRegularDuo } from '../core-heart-half-regular-duo.js';
+import { CoreHeartSlashRegularDuo } from '../core-heart-slash-regular-duo.js';
+import { CoreHeartRegularDuo } from '../core-heart-regular-duo.js';
+import { CoreHourglassRegularDuo } from '../core-hourglass-regular-duo.js';
+import { CoreHouseRegularDuo } from '../core-house-regular-duo.js';
+import { CoreIdCardRegularDuo } from '../core-id-card-regular-duo.js';
+import { CoreImageRegularDuo } from '../core-image-regular-duo.js';
+import { CoreImagesRegularDuo } from '../core-images-regular-duo.js';
+import { CoreInboxRegularDuo } from '../core-inbox-regular-duo.js';
+import { CoreItalicRegularDuo } from '../core-italic-regular-duo.js';
+import { CoreJoystickRegularDuo } from '../core-joystick-regular-duo.js';
+import { CoreKeyRegularDuo } from '../core-key-regular-duo.js';
+import { CoreKeyboardRegularDuo } from '../core-keyboard-regular-duo.js';
+import { CoreLandmarkDomeRegularDuo } from '../core-landmark-dome-regular-duo.js';
+import { CoreLandmarkRegularDuo } from '../core-landmark-regular-duo.js';
+import { CoreLanguageRegularDuo } from '../core-language-regular-duo.js';
+import { CoreLaptopRegularDuo } from '../core-laptop-regular-duo.js';
+import { CoreLayerGroupRegularDuo } from '../core-layer-group-regular-duo.js';
+import { CoreLeafRegularDuo } from '../core-leaf-regular-duo.js';
+import { CoreLifeRingRegularDuo } from '../core-life-ring-regular-duo.js';
+import { CoreLightbulbSlashRegularDuo } from '../core-lightbulb-slash-regular-duo.js';
+import { CoreLightbulbRegularDuo } from '../core-lightbulb-regular-duo.js';
+import { CoreLinkSimpleRegularDuo } from '../core-link-simple-regular-duo.js';
+import { CoreLinkRegularDuo } from '../core-link-regular-duo.js';
+import { CoreListMusicRegularDuo } from '../core-list-music-regular-duo.js';
+import { CoreListOlRegularDuo } from '../core-list-ol-regular-duo.js';
+import { CoreListUlRegularDuo } from '../core-list-ul-regular-duo.js';
+import { CoreLocationArrowRegularDuo } from '../core-location-arrow-regular-duo.js';
+import { CoreLocationDotRegularDuo } from '../core-location-dot-regular-duo.js';
+import { CoreLockOpenRegularDuo } from '../core-lock-open-regular-duo.js';
+import { CoreLockRegularDuo } from '../core-lock-regular-duo.js';
+import { CoreMagnifyingGlassMinusRegularDuo } from '../core-magnifying-glass-minus-regular-duo.js';
+import { CoreMagnifyingGlassPlusRegularDuo } from '../core-magnifying-glass-plus-regular-duo.js';
+import { CoreMagnifyingGlassRegularDuo } from '../core-magnifying-glass-regular-duo.js';
+import { CoreMapRegularDuo } from '../core-map-regular-duo.js';
+import { CoreMartiniGlassRegularDuo } from '../core-martini-glass-regular-duo.js';
+import { CoreMicrochipRegularDuo } from '../core-microchip-regular-duo.js';
+import { CoreMicrophoneSlashRegularDuo } from '../core-microphone-slash-regular-duo.js';
+import { CoreMicrophoneRegularDuo } from '../core-microphone-regular-duo.js';
+import { CoreMinusRegularDuo } from '../core-minus-regular-duo.js';
+import { CoreMobileRegularDuo } from '../core-mobile-regular-duo.js';
+import { CoreMoneyBillWaveRegularDuo } from '../core-money-bill-wave-regular-duo.js';
+import { CoreMoneyBillRegularDuo } from '../core-money-bill-regular-duo.js';
+import { CoreMoonStarRegularDuo } from '../core-moon-star-regular-duo.js';
+import { CoreMoonRegularDuo } from '../core-moon-regular-duo.js';
+import { CoreMugHotRegularDuo } from '../core-mug-hot-regular-duo.js';
+import { CoreMugSaucerRegularDuo } from '../core-mug-saucer-regular-duo.js';
+import { CoreMusicRegularDuo } from '../core-music-regular-duo.js';
+import { CoreNewspaperRegularDuo } from '../core-newspaper-regular-duo.js';
+import { CoreNotdefRegularDuo } from '../core-notdef-regular-duo.js';
+import { CorePaintbrushSlashRegularDuo } from '../core-paintbrush-slash-regular-duo.js';
+import { CorePaintbrushRegularDuo } from '../core-paintbrush-regular-duo.js';
+import { CorePaletteRegularDuo } from '../core-palette-regular-duo.js';
+import { CorePaperPlaneRegularDuo } from '../core-paper-plane-regular-duo.js';
+import { CorePaperclipRegularDuo } from '../core-paperclip-regular-duo.js';
+import { CorePauseRegularDuo } from '../core-pause-regular-duo.js';
+import { CorePawRegularDuo } from '../core-paw-regular-duo.js';
+import { CorePenLineRegularDuo } from '../core-pen-line-regular-duo.js';
+import { CorePenNibRegularDuo } from '../core-pen-nib-regular-duo.js';
+import { CorePenSlashRegularDuo } from '../core-pen-slash-regular-duo.js';
+import { CorePenToSquareRegularDuo } from '../core-pen-to-square-regular-duo.js';
+import { CorePenRegularDuo } from '../core-pen-regular-duo.js';
+import { CorePencilLineRegularDuo } from '../core-pencil-line-regular-duo.js';
+import { CorePencilRegularDuo } from '../core-pencil-regular-duo.js';
+import { CorePercentRegularDuo } from '../core-percent-regular-duo.js';
+import { CorePersonBikingRegularDuo } from '../core-person-biking-regular-duo.js';
+import { CorePhoneArrowDownLeftRegularDuo } from '../core-phone-arrow-down-left-regular-duo.js';
+import { CorePhoneArrowRightRegularDuo } from '../core-phone-arrow-right-regular-duo.js';
+import { CorePhoneArrowUpRightRegularDuo } from '../core-phone-arrow-up-right-regular-duo.js';
+import { CorePhoneHangupRegularDuo } from '../core-phone-hangup-regular-duo.js';
+import { CorePhonePlusRegularDuo } from '../core-phone-plus-regular-duo.js';
+import { CorePhoneSlashRegularDuo } from '../core-phone-slash-regular-duo.js';
+import { CorePhoneVolumeRegularDuo } from '../core-phone-volume-regular-duo.js';
+import { CorePhoneXmarkRegularDuo } from '../core-phone-xmark-regular-duo.js';
+import { CorePhoneRegularDuo } from '../core-phone-regular-duo.js';
+import { CorePlaneUpRegularDuo } from '../core-plane-up-regular-duo.js';
+import { CorePlaneRegularDuo } from '../core-plane-regular-duo.js';
+import { CorePlayPauseRegularDuo } from '../core-play-pause-regular-duo.js';
+import { CorePlayRegularDuo } from '../core-play-regular-duo.js';
+import { CorePlusRegularDuo } from '../core-plus-regular-duo.js';
+import { CorePoopRegularDuo } from '../core-poop-regular-duo.js';
+import { CorePrintRegularDuo } from '../core-print-regular-duo.js';
+import { CoreQuestionRegularDuo } from '../core-question-regular-duo.js';
+import { CoreQuotesRegularDuo } from '../core-quotes-regular-duo.js';
+import { CoreRadioRegularDuo } from '../core-radio-regular-duo.js';
+import { CoreRectangleCodeRegularDuo } from '../core-rectangle-code-regular-duo.js';
+import { CoreRectangleTallRegularDuo } from '../core-rectangle-tall-regular-duo.js';
+import { CoreRectangleVerticalRegularDuo } from '../core-rectangle-vertical-regular-duo.js';
+import { CoreRectangleWideRegularDuo } from '../core-rectangle-wide-regular-duo.js';
+import { CoreRectangleRegularDuo } from '../core-rectangle-regular-duo.js';
+import { CoreRocketLaunchRegularDuo } from '../core-rocket-launch-regular-duo.js';
+import { CoreScissorsRegularDuo } from '../core-scissors-regular-duo.js';
+import { CoreScreencastRegularDuo } from '../core-screencast-regular-duo.js';
+import { CoreServerRegularDuo } from '../core-server-regular-duo.js';
+import { CoreShareNodesRegularDuo } from '../core-share-nodes-regular-duo.js';
+import { CoreShieldCheckRegularDuo } from '../core-shield-check-regular-duo.js';
+import { CoreShieldHalvedRegularDuo } from '../core-shield-halved-regular-duo.js';
+import { CoreShieldSlashRegularDuo } from '../core-shield-slash-regular-duo.js';
+import { CoreShieldRegularDuo } from '../core-shield-regular-duo.js';
+import { CoreShipRegularDuo } from '../core-ship-regular-duo.js';
+import { CoreShirtRegularDuo } from '../core-shirt-regular-duo.js';
+import { CoreShopRegularDuo } from '../core-shop-regular-duo.js';
+import { CoreShredderRegularDuo } from '../core-shredder-regular-duo.js';
+import { CoreSignalFairRegularDuo } from '../core-signal-fair-regular-duo.js';
+import { CoreSignalGoodRegularDuo } from '../core-signal-good-regular-duo.js';
+import { CoreSignalSlashRegularDuo } from '../core-signal-slash-regular-duo.js';
+import { CoreSignalWeakRegularDuo } from '../core-signal-weak-regular-duo.js';
+import { CoreSkullCrossbonesRegularDuo } from '../core-skull-crossbones-regular-duo.js';
+import { CoreSkullRegularDuo } from '../core-skull-regular-duo.js';
+import { CoreSlidersRegularDuo } from '../core-sliders-regular-duo.js';
+import { CoreSnowflakeRegularDuo } from '../core-snowflake-regular-duo.js';
+import { CoreSortRegularDuo } from '../core-sort-regular-duo.js';
+import { CoreSparklesRegularDuo } from '../core-sparkles-regular-duo.js';
+import { CoreSpeakerRegularDuo } from '../core-speaker-regular-duo.js';
+import { CoreSquareRegularDuo } from '../core-square-regular-duo.js';
+import { CoreStarHalfRegularDuo } from '../core-star-half-regular-duo.js';
+import { CoreStarRegularDuo } from '../core-star-regular-duo.js';
+import { CoreStopRegularDuo } from '../core-stop-regular-duo.js';
+import { CoreStopwatchRegularDuo } from '../core-stopwatch-regular-duo.js';
+import { CoreStoreRegularDuo } from '../core-store-regular-duo.js';
+import { CoreStrikethroughRegularDuo } from '../core-strikethrough-regular-duo.js';
+import { CoreSuitcaseRegularDuo } from '../core-suitcase-regular-duo.js';
+import { CoreSunRegularDuo } from '../core-sun-regular-duo.js';
+import { CoreTagRegularDuo } from '../core-tag-regular-duo.js';
+import { CoreTextRegularDuo } from '../core-text-regular-duo.js';
+import { CoreThumbsDownRegularDuo } from '../core-thumbs-down-regular-duo.js';
+import { CoreThumbsUpRegularDuo } from '../core-thumbs-up-regular-duo.js';
+import { CoreThumbtackRegularDuo } from '../core-thumbtack-regular-duo.js';
+import { CoreTicketRegularDuo } from '../core-ticket-regular-duo.js';
+import { CoreTrainSubwayRegularDuo } from '../core-train-subway-regular-duo.js';
+import { CoreTrainRegularDuo } from '../core-train-regular-duo.js';
+import { CoreTrashSlashRegularDuo } from '../core-trash-slash-regular-duo.js';
+import { CoreTrashRegularDuo } from '../core-trash-regular-duo.js';
+import { CoreTreeRegularDuo } from '../core-tree-regular-duo.js';
+import { CoreTriangleRegularDuo } from '../core-triangle-regular-duo.js';
+import { CoreTrophyRegularDuo } from '../core-trophy-regular-duo.js';
+import { CoreTruckRegularDuo } from '../core-truck-regular-duo.js';
+import { CoreTvRetroRegularDuo } from '../core-tv-retro-regular-duo.js';
+import { CoreTvRegularDuo } from '../core-tv-regular-duo.js';
+import { CoreUmbrellaRegularDuo } from '../core-umbrella-regular-duo.js';
+import { CoreUnderlineRegularDuo } from '../core-underline-regular-duo.js';
+import { CoreUniversalAccessRegularDuo } from '../core-universal-access-regular-duo.js';
+import { CoreUnlockRegularDuo } from '../core-unlock-regular-duo.js';
+import { CoreUserCheckRegularDuo } from '../core-user-check-regular-duo.js';
+import { CoreUserMinusRegularDuo } from '../core-user-minus-regular-duo.js';
+import { CoreUserPlusRegularDuo } from '../core-user-plus-regular-duo.js';
+import { CoreUserXmarkRegularDuo } from '../core-user-xmark-regular-duo.js';
+import { CoreUserRegularDuo } from '../core-user-regular-duo.js';
+import { CoreUsersRegularDuo } from '../core-users-regular-duo.js';
+import { CoreUtensilsRegularDuo } from '../core-utensils-regular-duo.js';
+import { CoreVideoSlashRegularDuo } from '../core-video-slash-regular-duo.js';
+import { CoreVideoRegularDuo } from '../core-video-regular-duo.js';
+import { CoreVoicemailRegularDuo } from '../core-voicemail-regular-duo.js';
+import { CoreVolumeLowRegularDuo } from '../core-volume-low-regular-duo.js';
+import { CoreVolumeOffRegularDuo } from '../core-volume-off-regular-duo.js';
+import { CoreVolumeSlashRegularDuo } from '../core-volume-slash-regular-duo.js';
+import { CoreVolumeXmarkRegularDuo } from '../core-volume-xmark-regular-duo.js';
+import { CoreVolumeRegularDuo } from '../core-volume-regular-duo.js';
+import { CoreWandMagicSparklesRegularDuo } from '../core-wand-magic-sparkles-regular-duo.js';
+import { CoreWandMagicRegularDuo } from '../core-wand-magic-regular-duo.js';
+import { CoreWaterRegularDuo } from '../core-water-regular-duo.js';
+import { CoreWheelchairMoveRegularDuo } from '../core-wheelchair-move-regular-duo.js';
+import { CoreWheelchairRegularDuo } from '../core-wheelchair-regular-duo.js';
+import { CoreWifiSlashRegularDuo } from '../core-wifi-slash-regular-duo.js';
+import { CoreWifiRegularDuo } from '../core-wifi-regular-duo.js';
+import { CoreWindRegularDuo } from '../core-wind-regular-duo.js';
+import { CoreWrenchRegularDuo } from '../core-wrench-regular-duo.js';
+import { CoreXmarkRegularDuo } from '../core-xmark-regular-duo.js';
 
-export const coreIconsRegular-duo = {
-  'airplay': CoreAirplayRegular-duo,
-  'alarm-clock': CoreAlarmClockRegular-duo,
-  'anchor': CoreAnchorRegular-duo,
-  'angle-down': CoreAngleDownRegular-duo,
-  'angle-left': CoreAngleLeftRegular-duo,
-  'angle-right': CoreAngleRightRegular-duo,
-  'angle-up': CoreAngleUpRegular-duo,
-  'aperture': CoreApertureRegular-duo,
-  'arrow-down-to-bracket': CoreArrowDownToBracketRegular-duo,
-  'arrow-down-to-line': CoreArrowDownToLineRegular-duo,
-  'arrow-down-wide-short': CoreArrowDownWideShortRegular-duo,
-  'arrow-down': CoreArrowDownRegular-duo,
-  'arrow-left': CoreArrowLeftRegular-duo,
-  'arrow-pointer': CoreArrowPointerRegular-duo,
-  'arrow-right-arrow-left': CoreArrowRightArrowLeftRegular-duo,
-  'arrow-right-from-bracket': CoreArrowRightFromBracketRegular-duo,
-  'arrow-right-from-line': CoreArrowRightFromLineRegular-duo,
-  'arrow-right-to-bracket': CoreArrowRightToBracketRegular-duo,
-  'arrow-right-to-line': CoreArrowRightToLineRegular-duo,
-  'arrow-right': CoreArrowRightRegular-duo,
-  'arrow-rotate-left-10': CoreArrowRotateLeft10Regular-duo,
-  'arrow-rotate-left': CoreArrowRotateLeftRegular-duo,
-  'arrow-rotate-right-10': CoreArrowRotateRight10Regular-duo,
-  'arrow-rotate-right': CoreArrowRotateRightRegular-duo,
-  'arrow-up-arrow-down': CoreArrowUpArrowDownRegular-duo,
-  'arrow-up-from-bracket': CoreArrowUpFromBracketRegular-duo,
-  'arrow-up-from-line': CoreArrowUpFromLineRegular-duo,
-  'arrow-up-right-from-square': CoreArrowUpRightFromSquareRegular-duo,
-  'arrow-up-wide-short': CoreArrowUpWideShortRegular-duo,
-  'arrow-up': CoreArrowUpRegular-duo,
-  'arrows-rotate': CoreArrowsRotateRegular-duo,
-  'at': CoreAtRegular-duo,
-  'backward-step': CoreBackwardStepRegular-duo,
-  'backward': CoreBackwardRegular-duo,
-  'bag-shopping': CoreBagShoppingRegular-duo,
-  'bars': CoreBarsRegular-duo,
-  'battery-bolt': CoreBatteryBoltRegular-duo,
-  'battery-empty': CoreBatteryEmptyRegular-duo,
-  'battery-full': CoreBatteryFullRegular-duo,
-  'battery-half': CoreBatteryHalfRegular-duo,
-  'battery-quarter': CoreBatteryQuarterRegular-duo,
-  'battery-slash': CoreBatterySlashRegular-duo,
-  'battery-three-quarters': CoreBatteryThreeQuartersRegular-duo,
-  'bed-empty': CoreBedEmptyRegular-duo,
-  'bed': CoreBedRegular-duo,
-  'bell-ring': CoreBellRingRegular-duo,
-  'bell-slash': CoreBellSlashRegular-duo,
-  'bell': CoreBellRegular-duo,
-  'block-quote': CoreBlockQuoteRegular-duo,
-  'bold': CoreBoldRegular-duo,
-  'bolt-slash': CoreBoltSlashRegular-duo,
-  'bolt': CoreBoltRegular-duo,
-  'bomb': CoreBombRegular-duo,
-  'book-open': CoreBookOpenRegular-duo,
-  'book': CoreBookRegular-duo,
-  'bookmark': CoreBookmarkRegular-duo,
-  'box-archive': CoreBoxArchiveRegular-duo,
-  'box': CoreBoxRegular-duo,
-  'briefcase': CoreBriefcaseRegular-duo,
-  'bug-slash': CoreBugSlashRegular-duo,
-  'bug': CoreBugRegular-duo,
-  'building': CoreBuildingRegular-duo,
-  'buildings': CoreBuildingsRegular-duo,
-  'burger': CoreBurgerRegular-duo,
-  'bus': CoreBusRegular-duo,
-  'cake-candles': CoreCakeCandlesRegular-duo,
-  'calendar-check': CoreCalendarCheckRegular-duo,
-  'calendar-plus': CoreCalendarPlusRegular-duo,
-  'calendar': CoreCalendarRegular-duo,
-  'camera-slash': CoreCameraSlashRegular-duo,
-  'camera': CoreCameraRegular-duo,
-  'car': CoreCarRegular-duo,
-  'cart-shopping': CoreCartShoppingRegular-duo,
-  'chart-pie': CoreChartPieRegular-duo,
-  'chart-simple': CoreChartSimpleRegular-duo,
-  'check': CoreCheckRegular-duo,
-  'circle-arrow-down': CoreCircleArrowDownRegular-duo,
-  'circle-arrow-left': CoreCircleArrowLeftRegular-duo,
-  'circle-arrow-right': CoreCircleArrowRightRegular-duo,
-  'circle-arrow-up': CoreCircleArrowUpRegular-duo,
-  'circle-check': CoreCircleCheckRegular-duo,
-  'circle-dollar': CoreCircleDollarRegular-duo,
-  'circle-exclamation': CoreCircleExclamationRegular-duo,
-  'circle-half-stroke': CoreCircleHalfStrokeRegular-duo,
-  'circle-info': CoreCircleInfoRegular-duo,
-  'circle-plus': CoreCirclePlusRegular-duo,
-  'circle-question': CoreCircleQuestionRegular-duo,
-  'circle-user': CoreCircleUserRegular-duo,
-  'circle': CoreCircleRegular-duo,
-  'clipboard-check': CoreClipboardCheckRegular-duo,
-  'clipboard': CoreClipboardRegular-duo,
-  'clock': CoreClockRegular-duo,
-  'closed-captioning': CoreClosedCaptioningRegular-duo,
-  'cloud-arrow-down': CoreCloudArrowDownRegular-duo,
-  'cloud-arrow-up': CoreCloudArrowUpRegular-duo,
-  'cloud-bolt': CoreCloudBoltRegular-duo,
-  'cloud-drizzle': CoreCloudDrizzleRegular-duo,
-  'cloud-moon': CoreCloudMoonRegular-duo,
-  'cloud-showers': CoreCloudShowersRegular-duo,
-  'cloud-slash': CoreCloudSlashRegular-duo,
-  'cloud-snow': CoreCloudSnowRegular-duo,
-  'cloud-sun': CoreCloudSunRegular-duo,
-  'cloud': CoreCloudRegular-duo,
-  'code': CoreCodeRegular-duo,
-  'command': CoreCommandRegular-duo,
-  'comment-slash': CoreCommentSlashRegular-duo,
-  'comment': CoreCommentRegular-duo,
-  'comments': CoreCommentsRegular-duo,
-  'compact-disc': CoreCompactDiscRegular-duo,
-  'compass': CoreCompassRegular-duo,
-  'compress': CoreCompressRegular-duo,
-  'computer-classic': CoreComputerClassicRegular-duo,
-  'copy': CoreCopyRegular-duo,
-  'credit-card': CoreCreditCardRegular-duo,
-  'crown': CoreCrownRegular-duo,
-  'database': CoreDatabaseRegular-duo,
-  'diamond': CoreDiamondRegular-duo,
-  'display': CoreDisplayRegular-duo,
-  'dollar-sign': CoreDollarSignRegular-duo,
-  'droplet': CoreDropletRegular-duo,
-  'ellipsis': CoreEllipsisRegular-duo,
-  'envelope-open': CoreEnvelopeOpenRegular-duo,
-  'envelope': CoreEnvelopeRegular-duo,
-  'equals': CoreEqualsRegular-duo,
-  'expand': CoreExpandRegular-duo,
-  'eye-slash': CoreEyeSlashRegular-duo,
-  'eye': CoreEyeRegular-duo,
-  'face-frown': CoreFaceFrownRegular-duo,
-  'face-laugh': CoreFaceLaughRegular-duo,
-  'face-meh': CoreFaceMehRegular-duo,
-  'face-smile': CoreFaceSmileRegular-duo,
-  'feather': CoreFeatherRegular-duo,
-  'file-check': CoreFileCheckRegular-duo,
-  'file-minus': CoreFileMinusRegular-duo,
-  'file-plus': CoreFilePlusRegular-duo,
-  'file': CoreFileRegular-duo,
-  'files': CoreFilesRegular-duo,
-  'fill': CoreFillRegular-duo,
-  'film': CoreFilmRegular-duo,
-  'filter': CoreFilterRegular-duo,
-  'fire': CoreFireRegular-duo,
-  'fish': CoreFishRegular-duo,
-  'flag': CoreFlagRegular-duo,
-  'floppy-disk': CoreFloppyDiskRegular-duo,
-  'flower': CoreFlowerRegular-duo,
-  'folder-check': CoreFolderCheckRegular-duo,
-  'folder-minus': CoreFolderMinusRegular-duo,
-  'folder-plus': CoreFolderPlusRegular-duo,
-  'folder': CoreFolderRegular-duo,
-  'folders': CoreFoldersRegular-duo,
-  'font-case': CoreFontCaseRegular-duo,
-  'font': CoreFontRegular-duo,
-  'forward-step': CoreForwardStepRegular-duo,
-  'forward': CoreForwardRegular-duo,
-  'frame': CoreFrameRegular-duo,
-  'gamepad-modern': CoreGamepadModernRegular-duo,
-  'gauge-high': CoreGaugeHighRegular-duo,
-  'gauge-low': CoreGaugeLowRegular-duo,
-  'gauge': CoreGaugeRegular-duo,
-  'gear': CoreGearRegular-duo,
-  'ghost': CoreGhostRegular-duo,
-  'gift': CoreGiftRegular-duo,
-  'globe': CoreGlobeRegular-duo,
-  'grid-2': CoreGrid2Regular-duo,
-  'grid-round': CoreGridRoundRegular-duo,
-  'hand': CoreHandRegular-duo,
-  'hard-drive': CoreHardDriveRegular-duo,
-  'headphones': CoreHeadphonesRegular-duo,
-  'heart-half': CoreHeartHalfRegular-duo,
-  'heart-slash': CoreHeartSlashRegular-duo,
-  'heart': CoreHeartRegular-duo,
-  'hourglass': CoreHourglassRegular-duo,
-  'house': CoreHouseRegular-duo,
-  'id-card': CoreIdCardRegular-duo,
-  'image': CoreImageRegular-duo,
-  'images': CoreImagesRegular-duo,
-  'inbox': CoreInboxRegular-duo,
-  'italic': CoreItalicRegular-duo,
-  'joystick': CoreJoystickRegular-duo,
-  'key': CoreKeyRegular-duo,
-  'keyboard': CoreKeyboardRegular-duo,
-  'landmark-dome': CoreLandmarkDomeRegular-duo,
-  'landmark': CoreLandmarkRegular-duo,
-  'language': CoreLanguageRegular-duo,
-  'laptop': CoreLaptopRegular-duo,
-  'layer-group': CoreLayerGroupRegular-duo,
-  'leaf': CoreLeafRegular-duo,
-  'life-ring': CoreLifeRingRegular-duo,
-  'lightbulb-slash': CoreLightbulbSlashRegular-duo,
-  'lightbulb': CoreLightbulbRegular-duo,
-  'link-simple': CoreLinkSimpleRegular-duo,
-  'link': CoreLinkRegular-duo,
-  'list-music': CoreListMusicRegular-duo,
-  'list-ol': CoreListOlRegular-duo,
-  'list-ul': CoreListUlRegular-duo,
-  'location-arrow': CoreLocationArrowRegular-duo,
-  'location-dot': CoreLocationDotRegular-duo,
-  'lock-open': CoreLockOpenRegular-duo,
-  'lock': CoreLockRegular-duo,
-  'magnifying-glass-minus': CoreMagnifyingGlassMinusRegular-duo,
-  'magnifying-glass-plus': CoreMagnifyingGlassPlusRegular-duo,
-  'magnifying-glass': CoreMagnifyingGlassRegular-duo,
-  'map': CoreMapRegular-duo,
-  'martini-glass': CoreMartiniGlassRegular-duo,
-  'microchip': CoreMicrochipRegular-duo,
-  'microphone-slash': CoreMicrophoneSlashRegular-duo,
-  'microphone': CoreMicrophoneRegular-duo,
-  'minus': CoreMinusRegular-duo,
-  'mobile': CoreMobileRegular-duo,
-  'money-bill-wave': CoreMoneyBillWaveRegular-duo,
-  'money-bill': CoreMoneyBillRegular-duo,
-  'moon-star': CoreMoonStarRegular-duo,
-  'moon': CoreMoonRegular-duo,
-  'mug-hot': CoreMugHotRegular-duo,
-  'mug-saucer': CoreMugSaucerRegular-duo,
-  'music': CoreMusicRegular-duo,
-  'newspaper': CoreNewspaperRegular-duo,
-  'notdef': CoreNotdefRegular-duo,
-  'paintbrush-slash': CorePaintbrushSlashRegular-duo,
-  'paintbrush': CorePaintbrushRegular-duo,
-  'palette': CorePaletteRegular-duo,
-  'paper-plane': CorePaperPlaneRegular-duo,
-  'paperclip': CorePaperclipRegular-duo,
-  'pause': CorePauseRegular-duo,
-  'paw': CorePawRegular-duo,
-  'pen-line': CorePenLineRegular-duo,
-  'pen-nib': CorePenNibRegular-duo,
-  'pen-slash': CorePenSlashRegular-duo,
-  'pen-to-square': CorePenToSquareRegular-duo,
-  'pen': CorePenRegular-duo,
-  'pencil-line': CorePencilLineRegular-duo,
-  'pencil': CorePencilRegular-duo,
-  'percent': CorePercentRegular-duo,
-  'person-biking': CorePersonBikingRegular-duo,
-  'phone-arrow-down-left': CorePhoneArrowDownLeftRegular-duo,
-  'phone-arrow-right': CorePhoneArrowRightRegular-duo,
-  'phone-arrow-up-right': CorePhoneArrowUpRightRegular-duo,
-  'phone-hangup': CorePhoneHangupRegular-duo,
-  'phone-plus': CorePhonePlusRegular-duo,
-  'phone-slash': CorePhoneSlashRegular-duo,
-  'phone-volume': CorePhoneVolumeRegular-duo,
-  'phone-xmark': CorePhoneXmarkRegular-duo,
-  'phone': CorePhoneRegular-duo,
-  'plane-up': CorePlaneUpRegular-duo,
-  'plane': CorePlaneRegular-duo,
-  'play-pause': CorePlayPauseRegular-duo,
-  'play': CorePlayRegular-duo,
-  'plus': CorePlusRegular-duo,
-  'poop': CorePoopRegular-duo,
-  'print': CorePrintRegular-duo,
-  'question': CoreQuestionRegular-duo,
-  'quotes': CoreQuotesRegular-duo,
-  'radio': CoreRadioRegular-duo,
-  'rectangle-code': CoreRectangleCodeRegular-duo,
-  'rectangle-tall': CoreRectangleTallRegular-duo,
-  'rectangle-vertical': CoreRectangleVerticalRegular-duo,
-  'rectangle-wide': CoreRectangleWideRegular-duo,
-  'rectangle': CoreRectangleRegular-duo,
-  'rocket-launch': CoreRocketLaunchRegular-duo,
-  'scissors': CoreScissorsRegular-duo,
-  'screencast': CoreScreencastRegular-duo,
-  'server': CoreServerRegular-duo,
-  'share-nodes': CoreShareNodesRegular-duo,
-  'shield-check': CoreShieldCheckRegular-duo,
-  'shield-halved': CoreShieldHalvedRegular-duo,
-  'shield-slash': CoreShieldSlashRegular-duo,
-  'shield': CoreShieldRegular-duo,
-  'ship': CoreShipRegular-duo,
-  'shirt': CoreShirtRegular-duo,
-  'shop': CoreShopRegular-duo,
-  'shredder': CoreShredderRegular-duo,
-  'signal-fair': CoreSignalFairRegular-duo,
-  'signal-good': CoreSignalGoodRegular-duo,
-  'signal-slash': CoreSignalSlashRegular-duo,
-  'signal-weak': CoreSignalWeakRegular-duo,
-  'skull-crossbones': CoreSkullCrossbonesRegular-duo,
-  'skull': CoreSkullRegular-duo,
-  'sliders': CoreSlidersRegular-duo,
-  'snowflake': CoreSnowflakeRegular-duo,
-  'sort': CoreSortRegular-duo,
-  'sparkles': CoreSparklesRegular-duo,
-  'speaker': CoreSpeakerRegular-duo,
-  'square': CoreSquareRegular-duo,
-  'star-half': CoreStarHalfRegular-duo,
-  'star': CoreStarRegular-duo,
-  'stop': CoreStopRegular-duo,
-  'stopwatch': CoreStopwatchRegular-duo,
-  'store': CoreStoreRegular-duo,
-  'strikethrough': CoreStrikethroughRegular-duo,
-  'suitcase': CoreSuitcaseRegular-duo,
-  'sun': CoreSunRegular-duo,
-  'tag': CoreTagRegular-duo,
-  'text': CoreTextRegular-duo,
-  'thumbs-down': CoreThumbsDownRegular-duo,
-  'thumbs-up': CoreThumbsUpRegular-duo,
-  'thumbtack': CoreThumbtackRegular-duo,
-  'ticket': CoreTicketRegular-duo,
-  'train-subway': CoreTrainSubwayRegular-duo,
-  'train': CoreTrainRegular-duo,
-  'trash-slash': CoreTrashSlashRegular-duo,
-  'trash': CoreTrashRegular-duo,
-  'tree': CoreTreeRegular-duo,
-  'triangle': CoreTriangleRegular-duo,
-  'trophy': CoreTrophyRegular-duo,
-  'truck': CoreTruckRegular-duo,
-  'tv-retro': CoreTvRetroRegular-duo,
-  'tv': CoreTvRegular-duo,
-  'umbrella': CoreUmbrellaRegular-duo,
-  'underline': CoreUnderlineRegular-duo,
-  'universal-access': CoreUniversalAccessRegular-duo,
-  'unlock': CoreUnlockRegular-duo,
-  'user-check': CoreUserCheckRegular-duo,
-  'user-minus': CoreUserMinusRegular-duo,
-  'user-plus': CoreUserPlusRegular-duo,
-  'user-xmark': CoreUserXmarkRegular-duo,
-  'user': CoreUserRegular-duo,
-  'users': CoreUsersRegular-duo,
-  'utensils': CoreUtensilsRegular-duo,
-  'video-slash': CoreVideoSlashRegular-duo,
-  'video': CoreVideoRegular-duo,
-  'voicemail': CoreVoicemailRegular-duo,
-  'volume-low': CoreVolumeLowRegular-duo,
-  'volume-off': CoreVolumeOffRegular-duo,
-  'volume-slash': CoreVolumeSlashRegular-duo,
-  'volume-xmark': CoreVolumeXmarkRegular-duo,
-  'volume': CoreVolumeRegular-duo,
-  'wand-magic-sparkles': CoreWandMagicSparklesRegular-duo,
-  'wand-magic': CoreWandMagicRegular-duo,
-  'water': CoreWaterRegular-duo,
-  'wheelchair-move': CoreWheelchairMoveRegular-duo,
-  'wheelchair': CoreWheelchairRegular-duo,
-  'wifi-slash': CoreWifiSlashRegular-duo,
-  'wifi': CoreWifiRegular-duo,
-  'wind': CoreWindRegular-duo,
-  'wrench': CoreWrenchRegular-duo,
-  'xmark': CoreXmarkRegular-duo
+export const coreIconsRegularDuo = {
+  'airplay': CoreAirplayRegularDuo,
+  'alarm-clock': CoreAlarmClockRegularDuo,
+  'anchor': CoreAnchorRegularDuo,
+  'angle-down': CoreAngleDownRegularDuo,
+  'angle-left': CoreAngleLeftRegularDuo,
+  'angle-right': CoreAngleRightRegularDuo,
+  'angle-up': CoreAngleUpRegularDuo,
+  'aperture': CoreApertureRegularDuo,
+  'arrow-down-to-bracket': CoreArrowDownToBracketRegularDuo,
+  'arrow-down-to-line': CoreArrowDownToLineRegularDuo,
+  'arrow-down-wide-short': CoreArrowDownWideShortRegularDuo,
+  'arrow-down': CoreArrowDownRegularDuo,
+  'arrow-left': CoreArrowLeftRegularDuo,
+  'arrow-pointer': CoreArrowPointerRegularDuo,
+  'arrow-right-arrow-left': CoreArrowRightArrowLeftRegularDuo,
+  'arrow-right-from-bracket': CoreArrowRightFromBracketRegularDuo,
+  'arrow-right-from-line': CoreArrowRightFromLineRegularDuo,
+  'arrow-right-to-bracket': CoreArrowRightToBracketRegularDuo,
+  'arrow-right-to-line': CoreArrowRightToLineRegularDuo,
+  'arrow-right': CoreArrowRightRegularDuo,
+  'arrow-rotate-left-10': CoreArrowRotateLeft10RegularDuo,
+  'arrow-rotate-left': CoreArrowRotateLeftRegularDuo,
+  'arrow-rotate-right-10': CoreArrowRotateRight10RegularDuo,
+  'arrow-rotate-right': CoreArrowRotateRightRegularDuo,
+  'arrow-up-arrow-down': CoreArrowUpArrowDownRegularDuo,
+  'arrow-up-from-bracket': CoreArrowUpFromBracketRegularDuo,
+  'arrow-up-from-line': CoreArrowUpFromLineRegularDuo,
+  'arrow-up-right-from-square': CoreArrowUpRightFromSquareRegularDuo,
+  'arrow-up-wide-short': CoreArrowUpWideShortRegularDuo,
+  'arrow-up': CoreArrowUpRegularDuo,
+  'arrows-rotate': CoreArrowsRotateRegularDuo,
+  'at': CoreAtRegularDuo,
+  'backward-step': CoreBackwardStepRegularDuo,
+  'backward': CoreBackwardRegularDuo,
+  'bag-shopping': CoreBagShoppingRegularDuo,
+  'bars': CoreBarsRegularDuo,
+  'battery-bolt': CoreBatteryBoltRegularDuo,
+  'battery-empty': CoreBatteryEmptyRegularDuo,
+  'battery-full': CoreBatteryFullRegularDuo,
+  'battery-half': CoreBatteryHalfRegularDuo,
+  'battery-quarter': CoreBatteryQuarterRegularDuo,
+  'battery-slash': CoreBatterySlashRegularDuo,
+  'battery-three-quarters': CoreBatteryThreeQuartersRegularDuo,
+  'bed-empty': CoreBedEmptyRegularDuo,
+  'bed': CoreBedRegularDuo,
+  'bell-ring': CoreBellRingRegularDuo,
+  'bell-slash': CoreBellSlashRegularDuo,
+  'bell': CoreBellRegularDuo,
+  'block-quote': CoreBlockQuoteRegularDuo,
+  'bold': CoreBoldRegularDuo,
+  'bolt-slash': CoreBoltSlashRegularDuo,
+  'bolt': CoreBoltRegularDuo,
+  'bomb': CoreBombRegularDuo,
+  'book-open': CoreBookOpenRegularDuo,
+  'book': CoreBookRegularDuo,
+  'bookmark': CoreBookmarkRegularDuo,
+  'box-archive': CoreBoxArchiveRegularDuo,
+  'box': CoreBoxRegularDuo,
+  'briefcase': CoreBriefcaseRegularDuo,
+  'bug-slash': CoreBugSlashRegularDuo,
+  'bug': CoreBugRegularDuo,
+  'building': CoreBuildingRegularDuo,
+  'buildings': CoreBuildingsRegularDuo,
+  'burger': CoreBurgerRegularDuo,
+  'bus': CoreBusRegularDuo,
+  'cake-candles': CoreCakeCandlesRegularDuo,
+  'calendar-check': CoreCalendarCheckRegularDuo,
+  'calendar-plus': CoreCalendarPlusRegularDuo,
+  'calendar': CoreCalendarRegularDuo,
+  'camera-slash': CoreCameraSlashRegularDuo,
+  'camera': CoreCameraRegularDuo,
+  'car': CoreCarRegularDuo,
+  'cart-shopping': CoreCartShoppingRegularDuo,
+  'chart-pie': CoreChartPieRegularDuo,
+  'chart-simple': CoreChartSimpleRegularDuo,
+  'check': CoreCheckRegularDuo,
+  'circle-arrow-down': CoreCircleArrowDownRegularDuo,
+  'circle-arrow-left': CoreCircleArrowLeftRegularDuo,
+  'circle-arrow-right': CoreCircleArrowRightRegularDuo,
+  'circle-arrow-up': CoreCircleArrowUpRegularDuo,
+  'circle-check': CoreCircleCheckRegularDuo,
+  'circle-dollar': CoreCircleDollarRegularDuo,
+  'circle-exclamation': CoreCircleExclamationRegularDuo,
+  'circle-half-stroke': CoreCircleHalfStrokeRegularDuo,
+  'circle-info': CoreCircleInfoRegularDuo,
+  'circle-plus': CoreCirclePlusRegularDuo,
+  'circle-question': CoreCircleQuestionRegularDuo,
+  'circle-user': CoreCircleUserRegularDuo,
+  'circle': CoreCircleRegularDuo,
+  'clipboard-check': CoreClipboardCheckRegularDuo,
+  'clipboard': CoreClipboardRegularDuo,
+  'clock': CoreClockRegularDuo,
+  'closed-captioning': CoreClosedCaptioningRegularDuo,
+  'cloud-arrow-down': CoreCloudArrowDownRegularDuo,
+  'cloud-arrow-up': CoreCloudArrowUpRegularDuo,
+  'cloud-bolt': CoreCloudBoltRegularDuo,
+  'cloud-drizzle': CoreCloudDrizzleRegularDuo,
+  'cloud-moon': CoreCloudMoonRegularDuo,
+  'cloud-showers': CoreCloudShowersRegularDuo,
+  'cloud-slash': CoreCloudSlashRegularDuo,
+  'cloud-snow': CoreCloudSnowRegularDuo,
+  'cloud-sun': CoreCloudSunRegularDuo,
+  'cloud': CoreCloudRegularDuo,
+  'code': CoreCodeRegularDuo,
+  'command': CoreCommandRegularDuo,
+  'comment-slash': CoreCommentSlashRegularDuo,
+  'comment': CoreCommentRegularDuo,
+  'comments': CoreCommentsRegularDuo,
+  'compact-disc': CoreCompactDiscRegularDuo,
+  'compass': CoreCompassRegularDuo,
+  'compress': CoreCompressRegularDuo,
+  'computer-classic': CoreComputerClassicRegularDuo,
+  'copy': CoreCopyRegularDuo,
+  'credit-card': CoreCreditCardRegularDuo,
+  'crown': CoreCrownRegularDuo,
+  'database': CoreDatabaseRegularDuo,
+  'diamond': CoreDiamondRegularDuo,
+  'display': CoreDisplayRegularDuo,
+  'dollar-sign': CoreDollarSignRegularDuo,
+  'droplet': CoreDropletRegularDuo,
+  'ellipsis': CoreEllipsisRegularDuo,
+  'envelope-open': CoreEnvelopeOpenRegularDuo,
+  'envelope': CoreEnvelopeRegularDuo,
+  'equals': CoreEqualsRegularDuo,
+  'expand': CoreExpandRegularDuo,
+  'eye-slash': CoreEyeSlashRegularDuo,
+  'eye': CoreEyeRegularDuo,
+  'face-frown': CoreFaceFrownRegularDuo,
+  'face-laugh': CoreFaceLaughRegularDuo,
+  'face-meh': CoreFaceMehRegularDuo,
+  'face-smile': CoreFaceSmileRegularDuo,
+  'feather': CoreFeatherRegularDuo,
+  'file-check': CoreFileCheckRegularDuo,
+  'file-minus': CoreFileMinusRegularDuo,
+  'file-plus': CoreFilePlusRegularDuo,
+  'file': CoreFileRegularDuo,
+  'files': CoreFilesRegularDuo,
+  'fill': CoreFillRegularDuo,
+  'film': CoreFilmRegularDuo,
+  'filter': CoreFilterRegularDuo,
+  'fire': CoreFireRegularDuo,
+  'fish': CoreFishRegularDuo,
+  'flag': CoreFlagRegularDuo,
+  'floppy-disk': CoreFloppyDiskRegularDuo,
+  'flower': CoreFlowerRegularDuo,
+  'folder-check': CoreFolderCheckRegularDuo,
+  'folder-minus': CoreFolderMinusRegularDuo,
+  'folder-plus': CoreFolderPlusRegularDuo,
+  'folder': CoreFolderRegularDuo,
+  'folders': CoreFoldersRegularDuo,
+  'font-case': CoreFontCaseRegularDuo,
+  'font': CoreFontRegularDuo,
+  'forward-step': CoreForwardStepRegularDuo,
+  'forward': CoreForwardRegularDuo,
+  'frame': CoreFrameRegularDuo,
+  'gamepad-modern': CoreGamepadModernRegularDuo,
+  'gauge-high': CoreGaugeHighRegularDuo,
+  'gauge-low': CoreGaugeLowRegularDuo,
+  'gauge': CoreGaugeRegularDuo,
+  'gear': CoreGearRegularDuo,
+  'ghost': CoreGhostRegularDuo,
+  'gift': CoreGiftRegularDuo,
+  'globe': CoreGlobeRegularDuo,
+  'grid-2': CoreGrid2RegularDuo,
+  'grid-round': CoreGridRoundRegularDuo,
+  'hand': CoreHandRegularDuo,
+  'hard-drive': CoreHardDriveRegularDuo,
+  'headphones': CoreHeadphonesRegularDuo,
+  'heart-half': CoreHeartHalfRegularDuo,
+  'heart-slash': CoreHeartSlashRegularDuo,
+  'heart': CoreHeartRegularDuo,
+  'hourglass': CoreHourglassRegularDuo,
+  'house': CoreHouseRegularDuo,
+  'id-card': CoreIdCardRegularDuo,
+  'image': CoreImageRegularDuo,
+  'images': CoreImagesRegularDuo,
+  'inbox': CoreInboxRegularDuo,
+  'italic': CoreItalicRegularDuo,
+  'joystick': CoreJoystickRegularDuo,
+  'key': CoreKeyRegularDuo,
+  'keyboard': CoreKeyboardRegularDuo,
+  'landmark-dome': CoreLandmarkDomeRegularDuo,
+  'landmark': CoreLandmarkRegularDuo,
+  'language': CoreLanguageRegularDuo,
+  'laptop': CoreLaptopRegularDuo,
+  'layer-group': CoreLayerGroupRegularDuo,
+  'leaf': CoreLeafRegularDuo,
+  'life-ring': CoreLifeRingRegularDuo,
+  'lightbulb-slash': CoreLightbulbSlashRegularDuo,
+  'lightbulb': CoreLightbulbRegularDuo,
+  'link-simple': CoreLinkSimpleRegularDuo,
+  'link': CoreLinkRegularDuo,
+  'list-music': CoreListMusicRegularDuo,
+  'list-ol': CoreListOlRegularDuo,
+  'list-ul': CoreListUlRegularDuo,
+  'location-arrow': CoreLocationArrowRegularDuo,
+  'location-dot': CoreLocationDotRegularDuo,
+  'lock-open': CoreLockOpenRegularDuo,
+  'lock': CoreLockRegularDuo,
+  'magnifying-glass-minus': CoreMagnifyingGlassMinusRegularDuo,
+  'magnifying-glass-plus': CoreMagnifyingGlassPlusRegularDuo,
+  'magnifying-glass': CoreMagnifyingGlassRegularDuo,
+  'map': CoreMapRegularDuo,
+  'martini-glass': CoreMartiniGlassRegularDuo,
+  'microchip': CoreMicrochipRegularDuo,
+  'microphone-slash': CoreMicrophoneSlashRegularDuo,
+  'microphone': CoreMicrophoneRegularDuo,
+  'minus': CoreMinusRegularDuo,
+  'mobile': CoreMobileRegularDuo,
+  'money-bill-wave': CoreMoneyBillWaveRegularDuo,
+  'money-bill': CoreMoneyBillRegularDuo,
+  'moon-star': CoreMoonStarRegularDuo,
+  'moon': CoreMoonRegularDuo,
+  'mug-hot': CoreMugHotRegularDuo,
+  'mug-saucer': CoreMugSaucerRegularDuo,
+  'music': CoreMusicRegularDuo,
+  'newspaper': CoreNewspaperRegularDuo,
+  'notdef': CoreNotdefRegularDuo,
+  'paintbrush-slash': CorePaintbrushSlashRegularDuo,
+  'paintbrush': CorePaintbrushRegularDuo,
+  'palette': CorePaletteRegularDuo,
+  'paper-plane': CorePaperPlaneRegularDuo,
+  'paperclip': CorePaperclipRegularDuo,
+  'pause': CorePauseRegularDuo,
+  'paw': CorePawRegularDuo,
+  'pen-line': CorePenLineRegularDuo,
+  'pen-nib': CorePenNibRegularDuo,
+  'pen-slash': CorePenSlashRegularDuo,
+  'pen-to-square': CorePenToSquareRegularDuo,
+  'pen': CorePenRegularDuo,
+  'pencil-line': CorePencilLineRegularDuo,
+  'pencil': CorePencilRegularDuo,
+  'percent': CorePercentRegularDuo,
+  'person-biking': CorePersonBikingRegularDuo,
+  'phone-arrow-down-left': CorePhoneArrowDownLeftRegularDuo,
+  'phone-arrow-right': CorePhoneArrowRightRegularDuo,
+  'phone-arrow-up-right': CorePhoneArrowUpRightRegularDuo,
+  'phone-hangup': CorePhoneHangupRegularDuo,
+  'phone-plus': CorePhonePlusRegularDuo,
+  'phone-slash': CorePhoneSlashRegularDuo,
+  'phone-volume': CorePhoneVolumeRegularDuo,
+  'phone-xmark': CorePhoneXmarkRegularDuo,
+  'phone': CorePhoneRegularDuo,
+  'plane-up': CorePlaneUpRegularDuo,
+  'plane': CorePlaneRegularDuo,
+  'play-pause': CorePlayPauseRegularDuo,
+  'play': CorePlayRegularDuo,
+  'plus': CorePlusRegularDuo,
+  'poop': CorePoopRegularDuo,
+  'print': CorePrintRegularDuo,
+  'question': CoreQuestionRegularDuo,
+  'quotes': CoreQuotesRegularDuo,
+  'radio': CoreRadioRegularDuo,
+  'rectangle-code': CoreRectangleCodeRegularDuo,
+  'rectangle-tall': CoreRectangleTallRegularDuo,
+  'rectangle-vertical': CoreRectangleVerticalRegularDuo,
+  'rectangle-wide': CoreRectangleWideRegularDuo,
+  'rectangle': CoreRectangleRegularDuo,
+  'rocket-launch': CoreRocketLaunchRegularDuo,
+  'scissors': CoreScissorsRegularDuo,
+  'screencast': CoreScreencastRegularDuo,
+  'server': CoreServerRegularDuo,
+  'share-nodes': CoreShareNodesRegularDuo,
+  'shield-check': CoreShieldCheckRegularDuo,
+  'shield-halved': CoreShieldHalvedRegularDuo,
+  'shield-slash': CoreShieldSlashRegularDuo,
+  'shield': CoreShieldRegularDuo,
+  'ship': CoreShipRegularDuo,
+  'shirt': CoreShirtRegularDuo,
+  'shop': CoreShopRegularDuo,
+  'shredder': CoreShredderRegularDuo,
+  'signal-fair': CoreSignalFairRegularDuo,
+  'signal-good': CoreSignalGoodRegularDuo,
+  'signal-slash': CoreSignalSlashRegularDuo,
+  'signal-weak': CoreSignalWeakRegularDuo,
+  'skull-crossbones': CoreSkullCrossbonesRegularDuo,
+  'skull': CoreSkullRegularDuo,
+  'sliders': CoreSlidersRegularDuo,
+  'snowflake': CoreSnowflakeRegularDuo,
+  'sort': CoreSortRegularDuo,
+  'sparkles': CoreSparklesRegularDuo,
+  'speaker': CoreSpeakerRegularDuo,
+  'square': CoreSquareRegularDuo,
+  'star-half': CoreStarHalfRegularDuo,
+  'star': CoreStarRegularDuo,
+  'stop': CoreStopRegularDuo,
+  'stopwatch': CoreStopwatchRegularDuo,
+  'store': CoreStoreRegularDuo,
+  'strikethrough': CoreStrikethroughRegularDuo,
+  'suitcase': CoreSuitcaseRegularDuo,
+  'sun': CoreSunRegularDuo,
+  'tag': CoreTagRegularDuo,
+  'text': CoreTextRegularDuo,
+  'thumbs-down': CoreThumbsDownRegularDuo,
+  'thumbs-up': CoreThumbsUpRegularDuo,
+  'thumbtack': CoreThumbtackRegularDuo,
+  'ticket': CoreTicketRegularDuo,
+  'train-subway': CoreTrainSubwayRegularDuo,
+  'train': CoreTrainRegularDuo,
+  'trash-slash': CoreTrashSlashRegularDuo,
+  'trash': CoreTrashRegularDuo,
+  'tree': CoreTreeRegularDuo,
+  'triangle': CoreTriangleRegularDuo,
+  'trophy': CoreTrophyRegularDuo,
+  'truck': CoreTruckRegularDuo,
+  'tv-retro': CoreTvRetroRegularDuo,
+  'tv': CoreTvRegularDuo,
+  'umbrella': CoreUmbrellaRegularDuo,
+  'underline': CoreUnderlineRegularDuo,
+  'universal-access': CoreUniversalAccessRegularDuo,
+  'unlock': CoreUnlockRegularDuo,
+  'user-check': CoreUserCheckRegularDuo,
+  'user-minus': CoreUserMinusRegularDuo,
+  'user-plus': CoreUserPlusRegularDuo,
+  'user-xmark': CoreUserXmarkRegularDuo,
+  'user': CoreUserRegularDuo,
+  'users': CoreUsersRegularDuo,
+  'utensils': CoreUtensilsRegularDuo,
+  'video-slash': CoreVideoSlashRegularDuo,
+  'video': CoreVideoRegularDuo,
+  'voicemail': CoreVoicemailRegularDuo,
+  'volume-low': CoreVolumeLowRegularDuo,
+  'volume-off': CoreVolumeOffRegularDuo,
+  'volume-slash': CoreVolumeSlashRegularDuo,
+  'volume-xmark': CoreVolumeXmarkRegularDuo,
+  'volume': CoreVolumeRegularDuo,
+  'wand-magic-sparkles': CoreWandMagicSparklesRegularDuo,
+  'wand-magic': CoreWandMagicRegularDuo,
+  'water': CoreWaterRegularDuo,
+  'wheelchair-move': CoreWheelchairMoveRegularDuo,
+  'wheelchair': CoreWheelchairRegularDuo,
+  'wifi-slash': CoreWifiSlashRegularDuo,
+  'wifi': CoreWifiRegularDuo,
+  'wind': CoreWindRegularDuo,
+  'wrench': CoreWrenchRegularDuo,
+  'xmark': CoreXmarkRegularDuo
 };;

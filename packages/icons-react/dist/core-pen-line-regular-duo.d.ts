@@ -1,8 +1,8 @@
 import React from 'react';
 
-export interface CorePenLineRegular-duoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface CorePenLineRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   size?: string | number;
 }
 
-export declare const CorePenLineRegular-duo: React.FC<CorePenLineRegular-duoProps>;
-export default CorePenLineRegular-duo;
+export declare const CorePenLineRegularDuo: React.FC<CorePenLineRegularDuoProps>;
+export default CorePenLineRegularDuo;

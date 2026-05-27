@@ -7517,4 +7517,4 @@ export const lanIconsThin = {
 };;
 
 export { lanSpriteThin } from '@zcorvus/icons/sprites/lan-thin.js';
-export const ZLanThinSpriteElement = defineZIconElement('z-lan-thin-sprite', { lan: { thin: lanIconsThin } }, { type: 'lan', variant: 'thin', defaultVariant: 'thin', mode: 'sprite', spriteId: 'lan-thin', sprite: lanSpriteThin });
+export const ZLanThinSpriteElement = defineZIconElement('z-lan-thin-sprite', { lan: { 'thin': lanIconsThin } }, { type: 'lan', variant: 'thin', defaultVariant: 'thin', mode: 'sprite', spriteId: 'lan-thin', sprite: lanSpriteThin });
