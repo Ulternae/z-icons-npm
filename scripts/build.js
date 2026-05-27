@@ -1,7 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import { optimize } from 'svgo';
-import { svgoConfig } from './svgo.config.js';
 
 const CONFIG = {
   sourceDir: 'icons',
@@ -28,7 +26,6 @@ const CONFIG = {
     bru: { solid: 'fill' },
     lan: { light: 'stroke' },
   },
-  svgoConfig,
 };
 
 function ensureDir(dir) {
@@ -273,18 +270,7 @@ function getIconFiles() {
       for (const file of files) {
         const filePath = path.join(variantDir, file);
         const source = fs.readFileSync(filePath, 'utf8');
-        const result = optimize(source, {
-          path: filePath,
-          ...CONFIG.svgoConfig,
-        });
-
-        if (result.error) {
-          throw new Error(`Error optimizing ${filePath}: ${result.error}`);
-        }
-
-        const svg = normalizeSvgForIconStyle(result.data, pack, variant);
-
-        fs.writeFileSync(filePath, svg, 'utf8');
+        const svg = normalizeSvgForIconStyle(source, pack, variant);
 
         const name = path.basename(file, '.svg').toLowerCase().replace(/[_\s]+/g, '-');
         const componentName = getPublicIconName(pack, name, variant);

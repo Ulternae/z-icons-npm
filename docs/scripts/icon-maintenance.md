@@ -128,3 +128,19 @@ Antes de publicar, el segundo `duplicates` deberia mostrar `0` grupos duplicados
 - `sync:variants` nunca borra sin usar el comando `sync:variants:write`.
 - Ambos scripts validan que los archivos a borrar esten dentro del directorio fuente esperado.
 - Despues de eliminar SVGs, siempre corre `pnpm run build` para que `dist` refleje el nuevo catalogo.
+
+## Build vs optimizacion
+
+`pnpm run build` no optimiza ni reescribe archivos dentro de `icons/*`. Solo lee los SVG fuente actuales y regenera `dist`.
+
+Cuando agregues o cambies SVG fuente, primero prepara el pack con:
+
+```bash
+pnpm run optimize:icons -- lan
+```
+
+Luego regenera paquetes con:
+
+```bash
+pnpm run build
+```

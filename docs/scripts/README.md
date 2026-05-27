@@ -30,7 +30,7 @@ pnpm run check
 
 `pnpm run optimize:icons` optimiza SVG fuente por pack antes de regenerar `dist`.
 
-`pnpm run build` regenera `dist` para todos los paquetes publicables.
+`pnpm run build` regenera `dist` para todos los paquetes publicables. No optimiza ni reescribe SVG fuente.
 
 ## Release
 
