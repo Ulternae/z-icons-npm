@@ -2,9 +2,6 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const DEFAULTS = {
-  pack: 'lan',
-  referenceVariant: 'light',
-  variants: ['regular', 'solid', 'thin'],
   sourceRoot: 'icons',
   outputRoot: path.join('metadata', 'icon-sync'),
   write: false,
@@ -74,6 +71,14 @@ function getSvgFiles(dir) {
     .sort((a, b) => a.localeCompare(b));
 }
 
+function getVariantDirectories(packDir) {
+  return fs
+    .readdirSync(packDir, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name)
+    .sort((a, b) => a.localeCompare(b));
+}
+
 function assertInsideDirectory(filePath, directoryPath) {
   const resolvedFile = path.resolve(filePath);
   const resolvedDirectory = path.resolve(directoryPath);
@@ -85,14 +90,24 @@ function assertInsideDirectory(filePath, directoryPath) {
 }
 
 function syncVariantIcons(options) {
+  if (!options.pack) {
+    throw new Error('Missing required --pack value.');
+  }
+
+  if (!options.referenceVariant) {
+    throw new Error('Missing required --reference value.');
+  }
+
   const packDir = path.join(options.sourceRoot, options.pack);
+  const targetVariants = options.variants
+    ?? getVariantDirectories(packDir).filter((variant) => variant !== options.referenceVariant);
   const referenceDir = path.join(packDir, options.referenceVariant);
   const referenceFiles = getSvgFiles(referenceDir);
   const referenceNames = new Set(referenceFiles.map(normalizeIconName));
   const variants = [];
   const removed = [];
 
-  for (const variant of options.variants) {
+  for (const variant of targetVariants) {
     if (variant === options.referenceVariant) {
       continue;
     }
@@ -151,7 +166,7 @@ function syncVariantIcons(options) {
   const report = {
     pack: options.pack,
     referenceVariant: options.referenceVariant,
-    targetVariants: options.variants.filter((variant) => variant !== options.referenceVariant),
+    targetVariants: targetVariants.filter((variant) => variant !== options.referenceVariant),
     sourceDir: toPosixPath(packDir),
     dryRun: !options.write,
     referenceIcons: referenceNames.size,

@@ -1,11 +1,15 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const DEFAULT_REPORT = path.join('metadata', 'icon-duplicates', 'lan-light.json');
+const DEFAULTS = {
+  outputRoot: path.join('metadata', 'icon-duplicates'),
+};
 
 function parseArgs(argv) {
   const args = {
-    report: DEFAULT_REPORT,
+    pack: undefined,
+    variant: undefined,
+    report: undefined,
     output: undefined,
     dryRun: false,
   };
@@ -13,6 +17,18 @@ function parseArgs(argv) {
   for (let index = 0; index < argv.length; index += 1) {
     const arg = argv[index];
     const next = argv[index + 1];
+
+    if (arg === '--pack' && next) {
+      args.pack = next;
+      index += 1;
+      continue;
+    }
+
+    if (arg === '--variant' && next) {
+      args.variant = next;
+      index += 1;
+      continue;
+    }
 
     if (arg === '--report' && next) {
       args.report = next;
@@ -56,9 +72,26 @@ function readReport(reportPath) {
   return JSON.parse(fs.readFileSync(reportPath, 'utf8'));
 }
 
-function removeDuplicateIcons({ report: reportPath, output, dryRun }) {
-  const report = readReport(reportPath);
-  const sourceDir = report.sourceDir;
+function getReportPath({ pack, variant, report }) {
+  if (report) {
+    return report;
+  }
+
+  if (!pack) {
+    throw new Error('Missing required --pack value when --report is not provided.');
+  }
+
+  if (!variant) {
+    throw new Error('Missing required --variant value when --report is not provided.');
+  }
+
+  return path.join(DEFAULTS.outputRoot, `${pack}-${variant}.json`);
+}
+
+function removeDuplicateIcons({ pack, variant, report, output, dryRun }) {
+  const reportPath = getReportPath({ pack, variant, report });
+  const duplicateReport = readReport(reportPath);
+  const sourceDir = duplicateReport.sourceDir;
 
   if (!sourceDir) {
     throw new Error('Duplicate report is missing sourceDir.');
@@ -73,7 +106,7 @@ function removeDuplicateIcons({ report: reportPath, output, dryRun }) {
   const removed = [];
   const skipped = [];
 
-  for (const group of report.groups ?? []) {
+  for (const group of duplicateReport.groups ?? []) {
     for (const aliasFile of group.aliasFiles ?? []) {
       assertInsideDirectory(aliasFile, resolvedSourceDir);
 
@@ -104,9 +137,9 @@ function removeDuplicateIcons({ report: reportPath, output, dryRun }) {
 
   const outputPath = output ?? reportPath.replace(/\.json$/, '.removed.json');
   const removalReport = {
-    pack: report.pack,
-    variant: report.variant,
-    sourceDir: report.sourceDir,
+    pack: duplicateReport.pack,
+    variant: duplicateReport.variant,
+    sourceDir: duplicateReport.sourceDir,
     dryRun,
     removedCount: removed.length,
     skippedCount: skipped.length,

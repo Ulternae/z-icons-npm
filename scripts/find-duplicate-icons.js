@@ -5,8 +5,6 @@ import { optimize } from 'svgo';
 import { svgoConfig } from './svgo.config.js';
 
 const DEFAULTS = {
-  pack: 'lan',
-  variant: 'light',
   sourceRoot: 'icons',
   outputRoot: path.join('metadata', 'icon-duplicates'),
 };
@@ -121,6 +119,14 @@ function createHash(value) {
 }
 
 function findDuplicateIcons({ pack, variant, sourceRoot, output }) {
+  if (!pack) {
+    throw new Error('Missing required --pack value.');
+  }
+
+  if (!variant) {
+    throw new Error('Missing required --variant value.');
+  }
+
   const sourceDir = path.join(sourceRoot, pack, variant);
   const resolvedSourceDir = path.resolve(sourceDir);
 
