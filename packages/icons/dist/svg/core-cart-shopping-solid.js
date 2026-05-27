@@ -1,0 +1,2 @@
+export const CoreCartShoppingSolid = '<svg viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M32 0H0v64h69.8l48.5 242.8c9 44.9 48.4 77.2 94.1 77.2H430c44.1 0 82.5-30 93.1-72.7L565 143.5c10.2-40.4-20.3-79.5-62-79.5H135c-5.5-27.6-9.8-48.9-12.8-64zm176 512a48 48 0 1 0 0-96 48 48 0 1 0 0 96m272-48a48 48 0 1 0-96 0 48 48 0 1 0 96 0"/></svg>';
+export default CoreCartShoppingSolid;

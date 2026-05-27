@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const CorePercentRegular-duo = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M64 128a32 32 0 1 0 64 0 32 32 0 1 0-64 0m256 256a32 32 0 1 0 64 0 32 32 0 1 0-64 0","opacity":".4"}), React.createElement('path', {"fill":"currentColor","d":"M352 480a96 96 0 1 1 0-192 96 96 0 1 1 0 192m86.6-393.4-384 384-45.2-45.2 384-384zM352 352a32 32 0 1 0 0 64 32 32 0 1 0 0-64M96 224a96 96 0 1 1 0-192 96 96 0 1 1 0 192m0-128a32 32 0 1 0 0 64 32 32 0 1 0 0-64"})
+);
+
+export default CorePercentRegular-duo;

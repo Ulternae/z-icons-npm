@@ -1,0 +1,2 @@
+export const CoreSnowflakeSolid = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M288 32V0h-64v88.4l-64-64L120.4 64 224 167.6V224h-56.4L64 120.4 24.4 160l64 64H0v64h88.4l-64 64L64 391.6 167.6 288H224v56.4L120.4 448l39.6 39.6 64-64V512h64v-88.4l64 64 39.6-39.6L288 344.4V288h56.4L448 391.6l39.6-39.6-64-64H512v-64h-88.4l64-64-39.6-39.6L344.4 224H288v-56.4L391.6 64 352 24.4l-64 64z"/></svg>';
+export default CoreSnowflakeSolid;

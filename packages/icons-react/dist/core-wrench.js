@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const CoreWrench = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M301.2 16.2c8.3-6 19-7.7 28.7-4.6C426.3 42.7 496.1 133.2 496.1 240c0 85.5-44.8 160.5-112 203v69h-64V405.2l17.2-9c56.4-29.4 94.8-88.3 94.8-156.2 0-61.8-31.8-116.1-80-147.5L352 208c0 10.1-4.8 19.6-12.8 25.6L256 296l-83.2-62.4c-8.1-6-12.8-15.5-12.8-25.6V92.5c-48.2 31.4-80 85.8-80 147.5 0 67.8 38.4 126.8 94.8 156.2l17.2 9V512h-64v-69C60.8 400.5 16 325.5 16 240 16 133.2 85.8 42.7 182.2 11.6c9.7-3.1 20.4-1.5 28.7 4.6S224 31.8 224 42v150l32 24 32-24V42c0-10.2 4.9-19.9 13.2-25.9z"})
+);
+
+export default CoreWrench;

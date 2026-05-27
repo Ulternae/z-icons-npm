@@ -1,0 +1,2 @@
+export const CoreUnderline = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M448 480H0v64h448zm-96-256c0 70.7-57.3 128-128 128S96 294.7 96 224V32H32v192c0 106 86 192 192 192s192-86 192-192V32h-64z"/></svg>';
+export default CoreUnderline;

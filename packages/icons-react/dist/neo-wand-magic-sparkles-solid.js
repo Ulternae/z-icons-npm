@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const NeoWandMagicSparklesSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 560 560',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M418.1 18.6C429.7 6.6 445.6 0 462.2 0c16.3 0 31.9 6.5 43.4 18L542 54.4c11.5 11.5 18 27.1 18 43.4 0 16.6-6.6 32.4-18.6 44.1-10.3 10-27.7 26.9-48.8 47.7-11 10.8-28.6 10.8-39.5-.1L370.6 107c-10.9-10.9-10.9-28.5-.1-39.5 20.8-21.1 37.7-38.5 47.7-48.8zm-87 128.1c-10.9-10.9-28.6-10.9-39.6-.1-22.4 22.2-45 44.3-65.8 64C147.9 284.5 59.8 357.8 25.3 386 9.4 399 0 418.5 0 439.2c0 9.5 2 20 7.5 29.9 5.9 10.7 17.7 29.5 35.7 47.5s36.8 30 47.6 35.9c9.9 5.5 20.4 7.5 29.9 7.5 20.7 0 40.2-9.4 53.2-25.3 28.3-34.5 101.5-122.7 175.4-200.4 19.7-20.8 41.8-43.4 64-65.8 10.9-11 10.9-28.7-.1-39.6l-82.1-82.1zM196 42a42 42 0 1 1 84 0 42 42 0 1 1-84 0m224 392a42 42 0 1 1 84 0 42 42 0 1 1-84 0M84 56a28 28 0 1 1 0 56 28 28 0 1 1 0-56"})
+);
+
+export default NeoWandMagicSparklesSolid;

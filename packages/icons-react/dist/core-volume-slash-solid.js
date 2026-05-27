@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const CoreVolumeSlashSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"m621.5 512-45.2 45.3L19 0l45.3-45.2zm-269.2-88.2V480H299c-13.8 0-27.3-4.5-38.4-12.8l-111-83.2H96.3c-35.3 0-64-28.7-64-64V192c0-23.9 13.1-44.7 32.5-55.7zm64-389.4c108.5 15.5 192 108.8 192 221.7 0 43.5-12.4 84-33.9 118.4l-41-41c12-23.2 18.9-49.5 18.9-77.4 0-81.8-58.5-150-136-164.9zm0 97.7c55.2 14.2 96 64.3 96 124 0 16.7-3.3 32.5-9.1 47.1l-46.9-46.9v-.2c0-28.3-16.3-52.7-40-64.4v-59.5zm-64 20.2L251.6 51.6l9-6.7c11-8.4 24.5-12.9 38.3-12.9h53.3v120.2z"})
+);
+
+export default CoreVolumeSlashSolid;

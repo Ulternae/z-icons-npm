@@ -1,6 +1,10 @@
 import React from 'react';
-import { coreLightIconMap } from './packs/core.js';
-import { neoLightIconMap } from './packs/neo.js';
+import { coreSolidIconMap } from './packs/core-solid.js';
+import { coreRegularIconMap } from './packs/core.js';
+import { coreRegular-duoIconMap } from './packs/core-regular-duo.js';
+import { neoSolidIconMap } from './packs/neo-solid.js';
+import { neoRegularIconMap } from './packs/neo.js';
+import { neoRegular-duoIconMap } from './packs/neo-regular-duo.js';
 import { minaLightIconMap } from './packs/mina.js';
 import { minaSolidIconMap } from './packs/mina-solid.js';
 import { bruSolidIconMap } from './packs/bru.js';
@@ -11,10 +15,14 @@ import { lanThinIconMap } from './packs/lan-thin.js';
 
 const iconCollections = {
   core: {
-    light: coreLightIconMap.light
+    solid: coreSolidIconMap.solid,
+    regular: coreRegularIconMap.regular,
+    regular-duo: coreRegular-duoIconMap.regular-duo
   },
   neo: {
-    light: neoLightIconMap.light
+    solid: neoSolidIconMap.solid,
+    regular: neoRegularIconMap.regular,
+    regular-duo: neoRegular-duoIconMap.regular-duo
   },
   mina: {
     light: minaLightIconMap.light,
@@ -32,8 +40,8 @@ const iconCollections = {
 };
 
 const defaultVariants = {
-  core: 'light',
-  neo: 'light',
+  core: 'regular',
+  neo: 'regular',
   mina: 'light',
   bru: 'solid',
   lan: 'light'

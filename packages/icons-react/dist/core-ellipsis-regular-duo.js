@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const CoreEllipsisRegular-duo = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M256 192a64 64 0 1 1 0 128 64 64 0 1 1 0-128m-192 0a64 64 0 1 1 0 128 64 64 0 1 1 0-128m384 0a64 64 0 1 1 0 128 64 64 0 1 1 0-128"})
+);
+
+export default CoreEllipsisRegular-duo;

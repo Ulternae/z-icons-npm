@@ -1,0 +1,2 @@
+export declare const CoreArrowUpRightFromSquareSolid: string;
+export default CoreArrowUpRightFromSquareSolid;

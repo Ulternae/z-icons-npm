@@ -1,0 +1,8 @@
+import React from 'react';
+
+export interface CoreBoxSolidProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+  size?: string | number;
+}
+
+export declare const CoreBoxSolid: React.FC<CoreBoxSolidProps>;
+export default CoreBoxSolid;

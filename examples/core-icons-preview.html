@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CORE Icons Local Preview</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family:
+        Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      background: #09090b;
+      color: #fafafa;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #09090b;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(9, 9, 11, 0.92);
+      backdrop-filter: blur(14px);
+    }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: minmax(220px, 1fr) minmax(180px, 220px) minmax(220px, 320px) auto auto auto;
+      gap: 12px;
+      width: min(1440px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 16px 0;
+      align-items: center;
+    }
+
+    .title {
+      display: grid;
+      gap: 2px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 650;
+    }
+
+    .meta {
+      margin: 0;
+      color: #a1a1aa;
+      font-size: 13px;
+    }
+
+    label {
+      display: grid;
+      gap: 6px;
+      color: #a1a1aa;
+      font-size: 12px;
+    }
+
+    input,
+    select {
+      min-height: 36px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 8px;
+      background: #18181b;
+      color: #fafafa;
+      font: inherit;
+      padding: 0 10px;
+    }
+
+    input[type="range"] {
+      width: 132px;
+      padding: 0;
+    }
+
+    main {
+      width: min(1440px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 20px 0 48px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 12px;
+    }
+
+    .card {
+      display: grid;
+      grid-template-rows: 1fr auto;
+      gap: 12px;
+      min-height: 150px;
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      background: #18181b;
+    }
+
+    .preview {
+      display: grid;
+      place-items: center;
+      min-height: 88px;
+      border-radius: 6px;
+      background: var(--preview-bg, #09090b);
+      color: var(--preview-color, #fafafa);
+    }
+
+    .preview svg {
+      display: block;
+      width: var(--icon-size, 42px);
+      height: var(--icon-size, 42px);
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .name {
+      overflow: hidden;
+      color: #d4d4d8;
+      font-family:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", monospace;
+      font-size: 12px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .error {
+      border-color: rgba(248, 113, 113, 0.65);
+    }
+
+    .error .preview {
+      color: #f87171;
+    }
+
+    .empty,
+    .loading {
+      display: grid;
+      place-items: center;
+      min-height: 320px;
+      color: #a1a1aa;
+      text-align: center;
+    }
+
+    @media (max-width: 1120px) {
+      .toolbar {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .toolbar {
+        grid-template-columns: 1fr;
+      }
+
+      input[type="range"] {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <section class="toolbar">
+      <div class="title">
+        <h1>CORE Icons Local Preview</h1>
+        <p class="meta" id="meta">Cargando iconos desde icons/core...</p>
+      </div>
+
+      <label>
+        Variante
+        <select id="variant">
+          <option value="regular">Regular</option>
+          <option value="regular-duo">Regular Duo</option>
+          <option value="solid">Solid</option>
+        </select>
+      </label>
+
+      <label>
+        Buscar
+        <input id="search" type="search" placeholder="search, user, calendar..." autocomplete="off" />
+      </label>
+
+      <label>
+        Fondo
+        <select id="background">
+          <option value="#09090b">Oscuro</option>
+          <option value="#ffffff">Claro</option>
+          <option value="#f4f4f5">Neutral</option>
+          <option value="#111827">Azul oscuro</option>
+        </select>
+      </label>
+
+      <label>
+        Color
+        <select id="color">
+          <option value="#fafafa">Claro</option>
+          <option value="#18181b">Oscuro</option>
+          <option value="#2563eb">Azul</option>
+          <option value="#16a34a">Verde</option>
+          <option value="#dc2626">Rojo</option>
+        </select>
+      </label>
+
+      <label>
+        Tamano <span id="sizeLabel">42px</span>
+        <input id="size" type="range" min="16" max="96" value="42" />
+      </label>
+    </section>
+  </header>
+
+  <main>
+    <section id="content" class="loading">Cargando...</section>
+  </main>
+
+  <script type="module">
+    import { coreIconNames } from "../packages/icons/dist/names/core.js";
+
+    const PACK = "core";
+    const iconNames = [...coreIconNames];
+    const content = document.getElementById("content");
+    const meta = document.getElementById("meta");
+    const search = document.getElementById("search");
+    const variant = document.getElementById("variant");
+    const size = document.getElementById("size");
+    const sizeLabel = document.getElementById("sizeLabel");
+    const background = document.getElementById("background");
+    const color = document.getElementById("color");
+    const iconCache = new Map();
+    let visibleIcons = iconNames;
+
+    function iconPath(name) {
+      return `/icons/${PACK}/${variant.value}/${name}.svg`;
+    }
+
+    function normalizeSvg(svg) {
+      return svg
+        .replace(/<script[\s\S]*?<\/script>/gi, "")
+        .replace(/<svg\b/, '<svg aria-hidden="true" focusable="false"');
+    }
+
+    async function loadIcon(name) {
+      const cacheKey = `${variant.value}:${name}`;
+
+      if (iconCache.has(cacheKey)) {
+        return iconCache.get(cacheKey);
+      }
+
+      const response = await fetch(iconPath(name));
+
+      if (!response.ok) {
+        throw new Error(`${response.status} ${response.statusText}`);
+      }
+
+      const svg = normalizeSvg(await response.text());
+      iconCache.set(cacheKey, svg);
+
+      return svg;
+    }
+
+    function renderShell() {
+      content.className = "grid";
+      content.innerHTML = visibleIcons
+        .map(
+          (name) => `
+              <article class="card" data-name="${name}">
+                <div class="preview" data-preview></div>
+                <div class="name" title="${name}">${name}</div>
+              </article>
+            `
+        )
+        .join("");
+    }
+
+    async function hydrateVisibleIcons() {
+      const cards = [...content.querySelectorAll("[data-name]")];
+
+      await Promise.allSettled(
+        cards.map(async (card) => {
+          const name = card.dataset.name;
+          const preview = card.querySelector("[data-preview]");
+
+          try {
+            preview.innerHTML = await loadIcon(name);
+          } catch (error) {
+            card.classList.add("error");
+            preview.textContent = "Error";
+            console.error(`Could not load ${name}`, error);
+          }
+        })
+      );
+    }
+
+    function updateMeta() {
+      meta.textContent = `${visibleIcons.length} de ${iconNames.length} iconos CORE ${variant.value}`;
+    }
+
+    function applyControls() {
+      document.documentElement.style.setProperty("--icon-size", `${size.value}px`);
+      document.documentElement.style.setProperty("--preview-bg", background.value);
+      document.documentElement.style.setProperty("--preview-color", color.value);
+      sizeLabel.textContent = `${size.value}px`;
+    }
+
+    async function render() {
+      const query = search.value.trim().toLowerCase();
+      visibleIcons = query ? iconNames.filter((name) => name.includes(query)) : iconNames;
+
+      updateMeta();
+
+      if (visibleIcons.length === 0) {
+        content.className = "empty";
+        content.textContent = "No hay iconos para esa busqueda.";
+        return;
+      }
+
+      renderShell();
+      await hydrateVisibleIcons();
+    }
+
+    search.addEventListener("input", render);
+    variant.addEventListener("change", render);
+    size.addEventListener("input", applyControls);
+    background.addEventListener("change", applyControls);
+    color.addEventListener("change", applyControls);
+
+    applyControls();
+    render();
+  </script>
+</body>
+
+</html>

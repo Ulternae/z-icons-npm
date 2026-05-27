@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const NeoCircleQuestion = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 560 560',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M238.5 182.5c-8.4 8.4-14.5 21.8-14.5 41.5 0 15.5-12.5 28-28 28s-28-12.5-28-28c0-31.7 10.2-60.3 31-81s49.4-31 81-31 60.3 10.2 81 31 31 49.3 31 81-10.2 60.3-31 81-49.4 31-81 31c-15.5 0-28-12.5-28-28s12.5-28 28-28c19.6 0 33-6.1 41.5-14.5S336 243.7 336 224s-6.1-33-14.5-41.5S299.7 168 280 168s-33 6.1-41.5 14.5M280 448a42 42 0 1 0 0-84 42 42 0 1 0 0 84M76.5 76.5C126.4 26.5 197 0 280 0s153.6 26.5 203.5 76.5S560 197 560 280s-26.5 153.6-76.5 203.5S363 560 280 560s-153.6-26.5-203.5-76.5S0 363 0 280 26.5 126.4 76.5 76.5M116 116c-37.6 37.6-60 93-60 164s22.5 126.4 60 164 93 60 164 60 126.4-22.5 164-60 60-93 60-164-22.5-126.4-60-164-93-60-164-60-126.4 22.5-164 60"})
+);
+
+export default NeoCircleQuestion;

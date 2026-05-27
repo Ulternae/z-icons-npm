@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const NeoUtensilsSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 560 560',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M28 28c15.5 0 28 12.5 28 28v75.3c14.4 2.7 34.6 5.9 56 7.5V56c0-15.5 12.5-28 28-28s28 12.5 28 28v82.9c21.4-1.6 41.6-4.8 56-7.5V56c0-15.5 12.5-28 28-28s28 12.5 28 28v140c0 61.9-50.1 112-112 112v196c0 15.5-12.5 28-28 28s-28-12.5-28-28V308C50.1 308 0 257.9 0 196V56c0-15.5 12.5-28 28-28m448 364v112c0 15.5 12.5 28 28 28s28-12.5 28-28V101c0-40.3-32.7-73-73-73-25 0-49.4 12.9-61.9 36.6-20.5 38.8-61 126.1-61 215.4 0 61.9 50.1 112 112 112h28z"})
+);
+
+export default NeoUtensilsSolid;

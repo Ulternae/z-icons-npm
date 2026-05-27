@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const CoreShipSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M64 384c0 35.3 28.7 64 64 64s64-28.7 64-64h64c0 35.3 28.7 64 64 64s64-28.7 64-64h64c0 35.3 28.7 64 64 64s64-28.7 64-64h64c0 70.7-57.3 128-128 128-38.2 0-72.5-16.8-96-43.4-23.5 26.6-57.8 43.4-96 43.4s-72.5-16.8-96-43.4c-23.5 26.6-57.8 43.4-96 43.4C57.3 512 0 454.7 0 384zM448 0c35.3 0 64 28.7 64 64v125.8c19.5 11.3 32 32.2 32 55.4V266c0 18.7-3.3 36.9-9.4 54H500c-5.5 11.8-12.7 22.7-21.5 32.3L343.9 320V134.1l104 33.5V64h-256v103.6l104-33.5V320l-134.6 32.3c-8.8-9.6-16-20.5-21.5-32.3h-34.6c-6.1-17.1-9.4-35.3-9.4-54v-20.8c0-23.2 12.5-44.1 32-55.4L128 64c0-35.3 28.7-64 64-64z"})
+);
+
+export default CoreShipSolid;

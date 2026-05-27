@@ -14,8 +14,8 @@ export const zIconRegistry = {
 };
 
 export const zIconDefaultVariants = {
-  core: 'light',
-  neo: 'light',
+  core: 'regular',
+  neo: 'regular',
   mina: 'light',
   bru: 'solid',
   lan: 'light'

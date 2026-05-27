@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const CoreVolumeRegular-duo = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M64 192v128h74.7l8.5 6.4L256 408V104l-108.8 81.6-8.5 6.4z","opacity":".4"}), React.createElement('path', {"fill":"currentColor","d":"M320 480h-53.3c-13.8 0-27.3-4.5-38.4-12.8l-111-83.2H64C30.9 384 3.6 358.8.3 326.5L0 320V192c0-35.3 28.7-64 64-64h53.3l110.9-83.2c11.2-8.3 24.6-12.8 38.5-12.8H320zm64-445.7C492.5 49.8 576 143.1 576 256c0 112.8-83.5 206.2-192 221.7v-56.8C461.5 406 520 337.8 520 256S461.5 106 384 91.1zM147.2 185.6l-8.5 6.4H64v128h74.7l8.5 6.4L256 408V104zM384 132c55.2 14.2 96 64.3 96 124 0 59.6-40.8 109.8-96 124v-59.6c23.7-11.8 40-36.2 40-64.4 0-28.3-16.3-52.7-40-64.4v-59.5z"})
+);
+
+export default CoreVolumeRegular-duo;

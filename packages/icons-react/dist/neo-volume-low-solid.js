@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const NeoVolumeLowSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 616 560',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M0 287v-14c0-22.4 1.1-42.3 4.7-59.2 3.7-17.2 10.5-33.2 23.2-45.9s28.7-19.4 45.9-23.2c15.1-3.3 32.6-4.5 52.2-4.7l58.8-78.4A83.97 83.97 0 0 1 252 28h16.3c35.4 0 69 22.9 77.2 60.4 8.4 38.8 18.6 103.7 18.6 191.6S354 432.8 345.5 471.6c-8.1 37.5-41.7 60.4-77.2 60.4H252c-26.4 0-51.3-12.4-67.2-33.6L126 420c-19.6-.2-37.1-1.4-52.2-4.7-17.2-3.7-33.2-10.5-45.9-23.2S8.4 363.4 4.7 346.2C1.1 329.3 0 309.4 0 287m459.3-161.4c-8.9-12.7-26.3-15.7-39-6.8s-15.7 26.3-6.8 39c21.8 31 34.5 72.1 34.5 122.2s-12.8 91.2-34.5 122.2c-8.9 12.7-5.8 30.1 6.8 39s30.1 5.8 39-6.8c29.4-42 44.7-94.7 44.7-154.4s-15.3-112.4-44.7-154.4"})
+);
+
+export default NeoVolumeLowSolid;

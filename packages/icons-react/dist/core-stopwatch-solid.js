@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const CoreStopwatchSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M192.4-32h160v64h-192v-64zm288 320c0 123.7-100.3 224-224 224s-224-100.3-224-224 100.3-224 224-224c64.6 0 122.8 27.3 163.7 71.1 17.7-11.8 35.4-23.6 53.2-35.5l35.5 53.3c-17.9 12-35.3 23.5-52.1 34.7 15.2 30.2 23.7 64.3 23.7 100.4m-200-96v-24h-48v120c0 13.3 10.7 24 24 24s24-10.7 24-24z"})
+);
+
+export default CoreStopwatchSolid;

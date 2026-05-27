@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const CorePlane = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M287.5-32c20.7 0 40.1 10 52.1 26.8l118 165.2H544c53 0 96 43 96 96s-42.9 96-96 96h-86.4l-118 165.2-4.8 6c-12 13.2-29.2 20.8-47.2 20.8H143.5c5.4-12.6 32.8-76.6 82.3-192h-52.5l-64 64H64.1l-6.5-.3C25.2 412.4 0 385.1 0 352v-5.2l1.7-4.9L30.3 256 1.7 170.1 0 165.2V160c0-35.3 28.7-64 64-64h45.2l64 64h52.5Q151.6-13.1 143.5-32h144.1zm16.2 211.4 19.1 44.6H146.7l-64-64h-17l32 96-32 96h17l64-64h176.1c-5.4 12.6-32.8 76.6-82.3 192h47l127.6-178.6 9.6-13.4H544c17.7 0 32-14.3 32-32s-14.3-32-32-32H424.7l-9.6-13.4L287.5 32h-47z"})
+);
+
+export default CorePlane;

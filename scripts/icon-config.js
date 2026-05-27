@@ -2,19 +2,19 @@ export const iconConfig = {
   sourceDir: 'icons',
   packagesDir: 'packages',
   packs: ['core', 'neo', 'mina', 'bru', 'lan'],
-  variants: ['light', 'solid', 'regular', 'thin'],
+  variants: ['light', 'solid', 'regular', 'regular-duo', 'thin'],
   defaultVariants: {
-    core: 'light',
-    neo: 'light',
+    core: 'regular',
+    neo: 'regular',
     mina: 'light',
     bru: 'solid',
     lan: 'light',
   },
   publicVariantSuffixes: {
+    thin: 'Thin',
     light: 'Light',
     solid: 'Solid',
     regular: 'Regular',
-    thin: 'Thin',
   },
   iconStyles: {
     core: { light: 'stroke' },

@@ -1,0 +1,32 @@
+{
+  "pack": "neo",
+  "referenceVariant": "regular",
+  "targetVariants": [
+    "regular-duo",
+    "solid"
+  ],
+  "sourceDir": "icons/neo",
+  "dryRun": true,
+  "referenceIcons": 236,
+  "extraIcons": 0,
+  "removedIcons": 0,
+  "variants": [
+    {
+      "variant": "regular-duo",
+      "totalIcons": 236,
+      "extraIcons": 0,
+      "removedIcons": 0,
+      "skipped": false,
+      "files": []
+    },
+    {
+      "variant": "solid",
+      "totalIcons": 236,
+      "extraIcons": 0,
+      "removedIcons": 0,
+      "skipped": false,
+      "files": []
+    }
+  ],
+  "removed": []
+}

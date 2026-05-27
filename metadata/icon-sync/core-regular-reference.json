@@ -1,0 +1,32 @@
+{
+  "pack": "core",
+  "referenceVariant": "regular",
+  "targetVariants": [
+    "regular-duo",
+    "solid"
+  ],
+  "sourceDir": "icons/core",
+  "dryRun": true,
+  "referenceIcons": 336,
+  "extraIcons": 0,
+  "removedIcons": 0,
+  "variants": [
+    {
+      "variant": "regular-duo",
+      "totalIcons": 336,
+      "extraIcons": 0,
+      "removedIcons": 0,
+      "skipped": false,
+      "files": []
+    },
+    {
+      "variant": "solid",
+      "totalIcons": 336,
+      "extraIcons": 0,
+      "removedIcons": 0,
+      "skipped": false,
+      "files": []
+    }
+  ],
+  "removed": []
+}

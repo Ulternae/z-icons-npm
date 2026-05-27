@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const CoreAngleUpRegular-duo = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"m448.3 365.3-192-192-192 192L19.1 320l214.6-214.6c12.5-12.5 32.8-12.5 45.3 0L493.5 320z"})
+);
+
+export default CoreAngleUpRegular-duo;

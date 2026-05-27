@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const CoreShip = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 640 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M64 384c0 35.3 28.7 64 64 64s64-28.7 64-64h64c0 35.3 28.7 64 64 64s64-28.7 64-64h64c0 35.3 28.7 64 64 64s64-28.7 64-64h64c0 70.7-57.3 128-128 128-38.2 0-72.5-16.8-96-43.4-23.5 26.6-57.8 43.4-96 43.4s-72.5-16.8-96-43.4c-23.5 26.6-57.8 43.4-96 43.4C57.3 512 0 454.7 0 384zM448 0c35.3 0 64 28.7 64 64v125.8c19.5 11.3 32 32.2 32 55.4V266c0 18.7-3.3 36.9-9.4 54h-71.2c10.6-15.7 16.6-34.4 16.6-54v-20.8l-132-42.6V352h-56V202.6l-132 42.6V266l.2 6.5c1.2 17.2 6.9 33.6 16.4 47.5h-71.2c-4.9-13.7-8-28.3-9-43.2L96 266v-20.8c0-23.2 12.5-44.1 32-55.4V64c0-35.3 28.7-64 64-64zM192 167.6l118.2-38.1 9.8-3.2 9.8 3.2L448 167.6V64H192z"})
+);
+
+export default CoreShip;

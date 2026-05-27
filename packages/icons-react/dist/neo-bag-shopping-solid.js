@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const NeoBagShoppingSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 560',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M162.3 50.1C149 63.4 140.2 83.8 140.2 112c0 15.5-12.5 28-28 28s-28-12.5-28-28c0-40.3 12.9-75.9 38.5-101.5S183.9-28 224.2-28 300-15.1 325.6 10.5s38.6 61.2 38.6 101.5c0 15.5-12.5 28-28 28s-28-12.5-28-28c0-28.2-8.8-48.6-22.1-61.9S252.3 28 224.2 28s-48.6 8.8-61.9 22.1M70.2 192.8c26.4-4.4 77.7-10.8 154-10.8s127.6 6.4 154 10.8c24.4 4.1 41.3 23.8 44.3 46.4L448 430.3c.7 5.4.2 11.1.2 16.5 0 54.5-39.8 102.4-96.1 107.4-34.1 3-78.3 5.7-127.9 5.7s-93.7-2.7-127.9-5.7C39.9 549.2.2 501.3.2 446.8c0-5.5-.5-11.1.2-16.5l25.5-191.1c3-22.6 19.9-42.3 44.3-46.4"})
+);
+
+export default NeoBagShoppingSolid;

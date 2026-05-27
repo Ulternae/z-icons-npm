@@ -1,5 +1,9 @@
+export { coreSpriteSolid, default as coreSpriteSolidSvg } from './core-solid.js';
 export { coreSprite, default as coreSpriteSvg } from './core.js';
+export { coreSpriteRegular-duo, default as coreSpriteRegular-duoSvg } from './core-regular-duo.js';
+export { neoSpriteSolid, default as neoSpriteSolidSvg } from './neo-solid.js';
 export { neoSprite, default as neoSpriteSvg } from './neo.js';
+export { neoSpriteRegular-duo, default as neoSpriteRegular-duoSvg } from './neo-regular-duo.js';
 export { minaSprite, default as minaSpriteSvg } from './mina.js';
 export { minaSpriteSolid, default as minaSpriteSolidSvg } from './mina-solid.js';
 export { bruSprite, default as bruSpriteSvg } from './bru.js';

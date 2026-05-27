@@ -13,8 +13,8 @@ const iconCollections = {
 };
 
 const defaultVariants = {
-  core: 'light',
-  neo: 'light',
+  core: 'regular',
+  neo: 'regular',
   mina: 'light',
   bru: 'solid',
   lan: 'light'

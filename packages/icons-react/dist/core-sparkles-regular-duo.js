@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const CoreSparklesRegular-duo = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 576 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"m167.5 256 51.7 25.8c3.8 1.9 7.4 4 10.9 6.4.2.2.5.3.7.5.5.4 1 .7 1.6 1.1 2.1 1.5 4.1 3.1 6.1 4.8 9.8 8.3 17.8 18.6 23.6 30.2 8.6 17.2 17.2 34.4 25.8 51.7 8.6-17.2 17.2-34.4 25.8-51.7 9.3-18.6 24.4-33.7 42.9-42.9l51.6-25.8-51.6-25.8c-11.6-5.8-21.9-13.9-30.2-23.6-1.7-2-3.2-4-4.8-6.1-.4-.5-.7-1-1.1-1.6q-3.9-5.55-6.9-11.7c-8.6-17.2-17.2-34.4-25.8-51.7L262 187.3c-9.3 18.6-24.4 33.6-42.9 42.9z","opacity":".4"}), React.createElement('path', {"fill":"currentColor","d":"M508 420h68v56h-68v68h-56v-68h-68v-56h68v-68h56zM316.6 49.7l54.5 108.9c3.1 6.2 8.1 11.2 14.3 14.3L551.6 256l-166.2 83.1c-6.2 3.1-11.2 8.1-14.3 14.3L288 519.6l-83.1-166.2c-3.1-6.2-8.1-11.2-14.3-14.3L24.4 256l166.2-83.1c6.2-3.1 11.2-8.1 14.3-14.3L288-7.6l28.6 57.2zm-54.4 137.5c-9.3 18.6-24.4 33.6-42.9 42.9l-51.7 25.8 51.7 25.8c18.6 9.3 33.6 24.4 42.9 42.9l25.8 51.7 25.8-51.7c9.3-18.6 24.4-33.6 42.9-42.9l51.7-25.8-51.7-25.8c-18.6-9.3-33.6-24.4-42.9-42.9L288 135.5zM124 36h68v56h-68v68H68V92H0V36h68v-68h56z"})
+);
+
+export default CoreSparklesRegular-duo;

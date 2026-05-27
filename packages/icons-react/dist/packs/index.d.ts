@@ -1,7 +1,15 @@
+export { ZCoreSolid } from './core-solid.js';
+export type { ZCoreSolidProps } from './core-solid.js';
 export { ZCore } from './core.js';
 export type { ZCoreProps } from './core.js';
+export { ZCoreRegular-duo } from './core-regular-duo.js';
+export type { ZCoreRegular-duoProps } from './core-regular-duo.js';
+export { ZNeoSolid } from './neo-solid.js';
+export type { ZNeoSolidProps } from './neo-solid.js';
 export { ZNeo } from './neo.js';
 export type { ZNeoProps } from './neo.js';
+export { ZNeoRegular-duo } from './neo-regular-duo.js';
+export type { ZNeoRegular-duoProps } from './neo-regular-duo.js';
 export { ZMina } from './mina.js';
 export type { ZMinaProps } from './mina.js';
 export { ZMinaSolid } from './mina-solid.js';

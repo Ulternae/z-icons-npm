@@ -1,0 +1,8 @@
+import React from 'react';
+
+export interface NeoEyeSolidProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+  size?: string | number;
+}
+
+export declare const NeoEyeSolid: React.FC<NeoEyeSolidProps>;
+export default NeoEyeSolid;

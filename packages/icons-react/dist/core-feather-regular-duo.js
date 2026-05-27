@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const CoreFeatherRegular-duo = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 512 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M128 186.5v152.2l68-68V118.5zM173.3 384h152.2l68-68H241.3zM252 74.8v139.9l77.4-77.4 45.3 45.3-77.4 77.4h139.9c.4-1 .9-2 1.3-3 4.7-11.6 7.8-23.8 9-36.4 0-.1 0-.3.1-.7 0-.2 0-.5.1-.9 0-.3 0-.5.1-.7 0-.4 0-.7.1-.9 0-.4 0-.7.1-.8v-24.8c0-17.7-3.6-34.5-10.1-49.8-1.6-3.8-3.4-7.6-5.4-11.2-1-1.8-2-3.6-3.1-5.4-5.3-8.8-11.7-16.9-19-24.1-23.2-23.2-55.2-37.5-90.5-37.5h-16.5c-17.9 0-35.4 3.8-51.5 10.8z","opacity":".4"}), React.createElement('path', {"fill":"currentColor","d":"M303.5 64c-17.9 0-35.4 3.8-51.5 10.8v139.9l77.4-77.4 45.3 45.3-77.4 77.4h139.9c7.1-16.1 10.8-33.6 10.8-51.5V192c0-70.7-57.3-128-128-128zM196 118.5l-68 68v152.2l68-68zM241.3 316l-68 68h152.2l68-68zM64 402.7V160L167.8 56.2c36-36 84.8-56.2 135.7-56.2H320c106 0 192 86 192 192v16.5c0 50.9-20.2 99.8-56.2 135.8L352 448H109.3l-54.7 54.6-45.2-45.2z"})
+);
+
+export default CoreFeatherRegular-duo;

@@ -1,5 +1,9 @@
+export { coreIconsSolid } from './core-solid.js';
 export { coreIcons } from './core.js';
+export { coreIconsRegular-duo } from './core-regular-duo.js';
+export { neoIconsSolid } from './neo-solid.js';
 export { neoIcons } from './neo.js';
+export { neoIconsRegular-duo } from './neo-regular-duo.js';
 export { minaIcons } from './mina.js';
 export { minaIconsSolid } from './mina-solid.js';
 export { bruIcons } from './bru.js';

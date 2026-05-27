@@ -1,0 +1,2 @@
+export const CoreBellSolid = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M320.3 512h-128v-64h128zm-64-512c88.4 0 160 71.6 160 160v88.4L500.1 416H12.5l83.8-167.6V160c0-88.4 71.6-160 160-160"/></svg>';
+export default CoreBellSolid;

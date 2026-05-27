@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const CoreUserRegular-duo = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 448 512',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M64 480v32h320v-32c0-53-43-96-96-96H160c-53 0-96 43-96 96m96-352a64 64 0 1 0 128 0 64 64 0 1 0-128 0","opacity":".4"}), React.createElement('path', {"fill":"currentColor","d":"M288 320c88.4 0 160 71.6 160 160v32h-64v-32c0-53-43-96-96-96H160c-53 0-96 43-96 96v32H0v-32c0-88.4 71.6-160 160-160zm-64-64a128 128 0 1 1 0-256 128 128 0 1 1 0 256m0-192a64 64 0 1 0 0 128 64 64 0 1 0 0-128"})
+);
+
+export default CoreUserRegular-duo;

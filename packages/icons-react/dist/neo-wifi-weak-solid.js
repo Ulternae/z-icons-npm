@@ -1,0 +1,15 @@
+import React from 'react';
+
+export const NeoWifiWeakSolid = ({ size = 24, color, style, ...props }) => React.createElement(
+  'svg',
+  {
+    viewBox: '0 0 336 560',
+    width: size,
+    height: size,
+    fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
+    ...props,
+    style: { ...(color ? { color } : {}), ...style },
+  }, React.createElement('path', {"fill":"currentColor","d":"M67.3 343.4C90.2 321.5 124 308 168 308s77.8 13.5 100.7 35.3c11.2 10.7 28.9 10.2 39.6-1s10.2-28.9-1-39.6C272.2 269.3 223.7 252 168 252S63.8 269.3 28.7 302.8c-11.2 10.7-11.6 28.4-1 39.6s28.4 11.6 39.6 1M168 518c42.8 0 70-27.2 70-70s-27.2-70-70-70-70 27.2-70 70 27.2 70 70 70"})
+);
+
+export default NeoWifiWeakSolid;
