@@ -1,18 +1,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { optimize } from 'svgo';
+import { iconConfig, isFillIcon } from './icon-config.js';
 import { svgoConfig } from './svgo.config.js';
 
 const DEFAULTS = {
-  sourceRoot: 'icons',
-};
-
-const ICON_STYLES = {
-  core: { light: 'stroke' },
-  neo: { light: 'stroke' },
-  mina: { light: 'stroke', solid: 'fill' },
-  bru: { solid: 'fill' },
-  lan: { light: 'stroke' },
+  sourceRoot: iconConfig.sourceDir,
 };
 
 function parseArgs(argv) {
@@ -66,14 +59,6 @@ function getVariantDirectories(packDir) {
     .filter((entry) => entry.isDirectory())
     .map((entry) => entry.name)
     .sort((a, b) => a.localeCompare(b));
-}
-
-function getIconStyle(pack, variant) {
-  return ICON_STYLES[pack]?.[variant] ?? 'stroke';
-}
-
-function isFillIcon(pack, variant) {
-  return getIconStyle(pack, variant) === 'fill';
 }
 
 function withSvgRootAttribute(svgContent, attribute, value) {

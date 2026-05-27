@@ -2,6 +2,14 @@
 
 Estos scripts preparan los SVG fuente antes de regenerar y publicar paquetes. Funcionan con cualquier pack bajo `icons/{pack}/{variant}`.
 
+La configuracion compartida de packs, variantes por defecto y estilo de icono vive en:
+
+```txt
+scripts/icon-config.js
+```
+
+Cuando agregues un nuevo pack o una nueva variante publica, actualiza ese archivo antes de correr optimizacion o build.
+
 ## 0. Optimizar SVG fuente por pack o variante
 
 Optimiza los SVG fuente usando la configuracion de SVGO del repo.

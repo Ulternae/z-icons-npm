@@ -1,32 +1,13 @@
 import fs from 'fs';
 import path from 'path';
-
-const CONFIG = {
-  sourceDir: 'icons',
-  packagesDir: 'packages',
-  packs: ['core', 'neo', 'mina', 'bru', 'lan'],
-  variants: ['light', 'solid', 'regular', 'thin'],
-  defaultVariants: {
-    core: 'light',
-    neo: 'light',
-    mina: 'light',
-    bru: 'solid',
-    lan: 'light',
-  },
-  publicVariantSuffixes: {
-    light: 'Light',
-    solid: 'Solid',
-    regular: 'Regular',
-    thin: 'Thin',
-  },
-  iconStyles: {
-    core: { light: 'stroke' },
-    neo: { light: 'stroke' },
-    mina: { light: 'stroke', solid: 'fill' },
-    bru: { solid: 'fill' },
-    lan: { light: 'stroke' },
-  },
-};
+import {
+  getDefaultVariant,
+  getPublicVariantSuffix,
+  getVariantFileSuffix,
+  iconConfig as CONFIG,
+  isDefaultVariant,
+  isFillIcon,
+} from './icon-config.js';
 
 function ensureDir(dir) {
   fs.mkdirSync(dir, { recursive: true });
@@ -67,34 +48,6 @@ function toKebabCase(value) {
     .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
     .replace(/[\s_]+/g, '-')
     .toLowerCase();
-}
-
-function getDefaultVariant(pack) {
-  return CONFIG.defaultVariants[pack] ?? 'light';
-}
-
-function isDefaultVariant(pack, variant) {
-  return variant === getDefaultVariant(pack);
-}
-
-function getPublicVariantSuffix(pack, variant) {
-  if (isDefaultVariant(pack, variant)) {
-    return '';
-  }
-
-  return CONFIG.publicVariantSuffixes[variant] ?? capitalize(variant);
-}
-
-function getVariantFileSuffix(pack, variant) {
-  return isDefaultVariant(pack, variant) ? '' : `-${variant}`;
-}
-
-function getIconStyle(pack, variant) {
-  return CONFIG.iconStyles[pack]?.[variant] ?? 'stroke';
-}
-
-function isFillIcon(pack, variant) {
-  return getIconStyle(pack, variant) === 'fill';
 }
 
 function getPublicIconName(pack, iconName, variant) {
