@@ -152,3 +152,13 @@ Luego regenera paquetes con:
 ```bash
 pnpm run build
 ```
+
+Tambien puedes regenerar por target:
+
+```bash
+pnpm run build -- --target icons
+pnpm run build -- --target react
+pnpm run build -- --target web
+```
+
+Los targets `react` y `web` siempre regeneran primero `icons`, porque `@zcorvus/icons` es el contrato raiz que consumen los paquetes de framework.
