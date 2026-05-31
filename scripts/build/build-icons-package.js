@@ -29,6 +29,8 @@ export function buildIconsPackage(icons, packData) {
   const nameExports = [];
   const nameTypes = [];
   const spriteExports = [];
+  const getterExports = [];
+  const getterTypes = [];
   const typeUnions = [];
   const packNames = {};
 
@@ -120,12 +122,40 @@ export function buildIconsPackage(icons, packData) {
     }
   }
 
+  for (const pack of CONFIG.packs) {
+    const variants = packData[pack] ?? {};
+
+    for (const [variant, variantIcons] of Object.entries(variants)) {
+      const suffix = getPublicVariantSuffix(pack, variant);
+      const getterName = `get${capitalize(pack)}${suffix}Svg`;
+      const fileName = `${pack}${getVariantFileSuffix(pack, variant)}`;
+      const iconMapName = `${pack}${suffix}SvgMap`;
+      const iconNameType = `${capitalize(pack)}IconName`;
+      const imports = variantIcons.map((icon) => `import { ${icon.componentName} } from '../svg/${icon.publicFileName}.js';`);
+      const mapEntries = variantIcons.map((icon) => `  '${icon.name}': ${icon.componentName}`).join(',\n');
+
+      writeFile(
+        path.join(distDir, 'getters', `${fileName}.js`),
+        `${imports.join('\n')}\n\nconst ${iconMapName} = {\n${mapEntries}\n};\n\nexport function ${getterName}(name) {\n  return ${iconMapName}[name];\n}\n\nexport default ${getterName};\n`
+      );
+      writeFile(
+        path.join(distDir, 'getters', `${fileName}.d.ts`),
+        `import type { ${iconNameType} } from '../types/index.js';\n\nexport declare function ${getterName}(name: ${iconNameType}): string | undefined;\nexport default ${getterName};\n`
+      );
+
+      getterExports.push(`export { ${getterName}, default as ${getterName}Default } from './${fileName}.js';`);
+      getterTypes.push(`export { ${getterName}, default as ${getterName}Default } from './${fileName}.js';`);
+    }
+  }
+
   writeFile(path.join(distDir, 'svg', 'index.js'), `${svgExports.join('\n')}\n${packDictionaryExports.join('\n')}\n`);
   writeFile(path.join(distDir, 'svg', 'index.d.ts'), `${svgTypes.join('\n')}\n${packDictionaryTypes.join('\n')}\n`);
   writeFile(path.join(distDir, 'names', 'index.js'), `${nameExports.join('\n')}\n`);
   writeFile(path.join(distDir, 'names', 'index.d.ts'), `${nameTypes.join('\n')}\n`);
   writeFile(path.join(distDir, 'sprites', 'index.js'), `${spriteExports.join('\n')}\n`);
   writeFile(path.join(distDir, 'sprites', 'index.d.ts'), `${spriteExports.join('\n')}\n`);
+  writeFile(path.join(distDir, 'getters', 'index.js'), `${getterExports.join('\n')}\n`);
+  writeFile(path.join(distDir, 'getters', 'index.d.ts'), `${getterTypes.join('\n')}\n`);
 
   const variantUnion = createTypeUnion('IconVariant', CONFIG.variants);
   const typeContent = `${typeUnions.join('\n\n')}\n\nexport type AllIconNames = ${CONFIG.packs.map((pack) => `${capitalize(pack)}IconName`).join(' | ')};\nexport type IconPack = ${CONFIG.packs.map((pack) => `'${pack}'`).join(' | ')};\n${variantUnion}\n`;

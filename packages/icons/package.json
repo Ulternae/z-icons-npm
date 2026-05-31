@@ -38,6 +38,14 @@
       "import": "./dist/sprites/index.js"
     },
     "./sprites/*": "./dist/sprites/*",
+    "./getters": {
+      "types": "./dist/getters/index.d.ts",
+      "import": "./dist/getters/index.js"
+    },
+    "./getters/*": {
+      "types": "./dist/getters/*.d.ts",
+      "import": "./dist/getters/*.js"
+    },
     "./types": {
       "types": "./dist/types/index.d.ts",
       "import": "./dist/types/index.js"
@@ -59,6 +67,12 @@
       ],
       "sprites/*": [
         "dist/sprites/*"
+      ],
+      "getters": [
+        "dist/getters/index.d.ts"
+      ],
+      "getters/*": [
+        "dist/getters/*.d.ts"
       ],
       "types": [
         "dist/types/index.d.ts"

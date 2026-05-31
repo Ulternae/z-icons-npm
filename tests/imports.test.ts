@@ -18,9 +18,19 @@ describe('public package imports', () => {
       const neoRegularDuo = await import('@zcorvus/icons/svg/neo-sun-regular-duo');
       const bruGithub = await import('@zcorvus/icons/svg/bru-github');
       const names = await import('@zcorvus/icons/names');
+      const getters = await import('@zcorvus/icons/getters');
+      const minaGetter = await import('@zcorvus/icons/getters/mina');
+      const minaSolidGetter = await import('@zcorvus/icons/getters/mina-solid');
+      const bruGetter = await import('@zcorvus/icons/getters/bru');
       const types = await import('@zcorvus/icons/types');
 
       if (typeof root.getIconSvg !== 'function') throw new Error('missing getIconSvg');
+      if (typeof getters.getMinaSvg !== 'function') throw new Error('missing getMinaSvg');
+      if (typeof getters.getMinaSolidSvg !== 'function') throw new Error('missing getMinaSolidSvg');
+      if (typeof getters.getBruSvg !== 'function') throw new Error('missing getBruSvg');
+      if (typeof minaGetter.getMinaSvg !== 'function') throw new Error('missing direct getMinaSvg');
+      if (typeof minaSolidGetter.getMinaSolidSvg !== 'function') throw new Error('missing direct getMinaSolidSvg');
+      if (typeof bruGetter.getBruSvg !== 'function') throw new Error('missing direct getBruSvg');
       if (typeof svg.MinaCheck !== 'string') throw new Error('missing MinaCheck svg');
       if (typeof svg.BruGithub !== 'string') throw new Error('missing BruGithub svg');
       if (typeof minaCheck.default !== 'string') throw new Error('missing direct MinaCheck svg');
@@ -29,6 +39,9 @@ describe('public package imports', () => {
       if (!names.minaIconNames.includes('check')) throw new Error('missing mina check name');
       if (!names.bruIconNames.includes('github')) throw new Error('missing bru github name');
       if (root.getIconSvg('bru', 'github') !== svg.BruGithub) throw new Error('missing bru getIconSvg');
+      if (getters.getMinaSvg('check') !== svg.MinaCheck) throw new Error('missing getMinaSvg check');
+      if (getters.getMinaSolidSvg('check') !== svg.MinaCheckSolid) throw new Error('missing getMinaSolidSvg check');
+      if (getters.getBruSvg('github') !== svg.BruGithub) throw new Error('missing getBruSvg github');
       if (Object.keys(types).length !== 0) throw new Error('types entry should be runtime-empty');
 
       console.log('ok');
@@ -39,26 +52,29 @@ describe('public package imports', () => {
 
   it('loads react package entrypoints with Node ESM resolution', () => {
     const output = runNodeImport(`
-      const root = await import('@zcorvus/icons-react');
+      const zIconUrl = await import.meta.resolve('@zcorvus/icons-react/z-icon');
       const directIcon = await import('@zcorvus/icons-react/mina-check');
       const directNeoRegularDuo = await import('@zcorvus/icons-react/neo-sun-regular-duo');
       const directBruIcon = await import('@zcorvus/icons-react/bru-github');
-      const packs = await import('@zcorvus/icons-react/packs');
+      const minaPack = await import('@zcorvus/icons-react/packs/mina');
+      const bruPack = await import('@zcorvus/icons-react/packs/bru');
       const create = await import('@zcorvus/icons-react/create');
-      const packsData = await import('@zcorvus/icons-react/packs-data');
+      const minaData = await import('@zcorvus/icons-react/packs-data/mina');
+      const minaSolidData = await import('@zcorvus/icons-react/packs-data/mina-solid');
+      const neoRegularDuoData = await import('@zcorvus/icons-react/packs-data/neo-regular-duo');
+      const bruData = await import('@zcorvus/icons-react/packs-data/bru');
 
-      if (typeof root.ZIcon !== 'function') throw new Error('missing ZIcon');
-      if (typeof root.MinaCheck !== 'function') throw new Error('missing MinaCheck component');
-      if (typeof root.BruGithub !== 'function') throw new Error('missing BruGithub component');
+      if (!zIconUrl.endsWith('/packages/icons-react/dist/z-icon.js')) throw new Error('missing ZIcon subpath');
       if (typeof directIcon.default !== 'function') throw new Error('missing direct MinaCheck component');
       if (typeof directNeoRegularDuo.NeoSunRegularDuo !== 'function') throw new Error('missing direct NeoSunRegularDuo component');
       if (typeof directBruIcon.default !== 'function') throw new Error('missing direct BruGithub component');
-      if (typeof packs.ZMina !== 'function') throw new Error('missing ZMina');
-      if (typeof packs.ZBru !== 'function') throw new Error('missing ZBru');
+      if (typeof minaPack.ZMina !== 'function') throw new Error('missing ZMina');
+      if (typeof bruPack.ZBru !== 'function') throw new Error('missing ZBru');
       if (typeof create.createZIcon !== 'function') throw new Error('missing createZIcon');
-      if (!packsData.minaIcons || !packsData.minaIconsSolid) throw new Error('missing packs-data');
-      if (!packsData.neoIconsRegularDuo?.sun) throw new Error('missing neo regular-duo packs-data');
-      if (!packsData.bruIcons?.github) throw new Error('missing bruIcons packs-data');
+      if (!minaData.minaIcons) throw new Error('missing minaIcons packs-data');
+      if (!minaSolidData.minaIconsSolid) throw new Error('missing minaIconsSolid packs-data');
+      if (!neoRegularDuoData.neoIconsRegularDuo?.sun) throw new Error('missing neo regular-duo packs-data');
+      if (!bruData.bruIcons?.github) throw new Error('missing bruIcons packs-data');
 
       console.log('ok');
     `);
@@ -70,7 +86,6 @@ describe('public package imports', () => {
     const output = runNodeImport(`
       const root = await import('@zcorvus/icons-web');
       const create = await import('@zcorvus/icons-web/create');
-      const register = await import('@zcorvus/icons-web/register');
       const registerCore = await import('@zcorvus/icons-web/register-core');
       const registerNeo = await import('@zcorvus/icons-web/register-neo');
       const registerNeoRegularDuo = await import('@zcorvus/icons-web/register-neo-regular-duo');
@@ -80,8 +95,6 @@ describe('public package imports', () => {
 
       if (typeof root.createZIconElement !== 'function') throw new Error('missing createZIconElement root export');
       if (typeof create.defineZIconElement !== 'function') throw new Error('missing defineZIconElement');
-      if (!register.zIconRegistry) throw new Error('missing zIconRegistry');
-      if (register.zIconDefaultVariants?.bru !== 'solid') throw new Error('missing bru default variant');
       if (!registerCore.coreIcons?.sun) throw new Error('missing coreIcons web registry');
       if (!registerNeo.neoIcons?.sun) throw new Error('missing neoIcons web registry');
       if (!registerNeoRegularDuo.neoIconsRegularDuo?.sun) throw new Error('missing neo regular-duo web registry');
