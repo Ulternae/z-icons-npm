@@ -12,6 +12,7 @@
     "check": "pnpm run build && pnpm run typecheck && pnpm run test",
     "prepublishOnly": "pnpm run build",
     "optimize:icons": "node scripts/optimize-icons.js",
+    "viewbox:icons": "node scripts/fix-viewbox-icons.js",
     "duplicates": "node scripts/find-duplicate-icons.js",
     "dedupe": "node scripts/remove-duplicate-icons.js",
     "sync:variants": "node scripts/sync-variant-icons.js",
