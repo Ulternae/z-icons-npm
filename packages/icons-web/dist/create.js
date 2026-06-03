@@ -62,6 +62,13 @@ function getSpriteSymbolId(type, name, variant, defaultVariant = 'light') {
   return `${type}-${variant === defaultVariant ? name : `${name}-${variant}`}`;
 }
 
+function escapeAttribute(value) {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;');
+}
+
 function toCssSize(value) {
   if (value === null || value === undefined || value === '') {
     return undefined;
@@ -78,32 +85,32 @@ function applyPresentation(svg, host) {
   return svg.replace(/<svg\\b([^>]*)>/, (_, attrs) => {
     const extraAttrs = [
       size ? ` width="${size}" height="${size}"` : '',
-      color ? ` style="color: ${color};"` : '',
-      className ? ` class="${className}"` : '',
+      color ? ` style="color: ${escapeAttribute(color)};"` : '',
+      className ? ` class="${escapeAttribute(className)}"` : '',
       host.hasAttribute('aria-hidden') ? ' aria-hidden="true"' : '',
-      host.getAttribute('aria-label') ? ` aria-label="${host.getAttribute('aria-label')}"` : '',
-      host.getAttribute('role') ? ` role="${host.getAttribute('role')}"` : '',
+      host.getAttribute('aria-label') ? ` aria-label="${escapeAttribute(host.getAttribute('aria-label'))}"` : '',
+      host.getAttribute('role') ? ` role="${escapeAttribute(host.getAttribute('role'))}"` : '',
     ].join('');
 
     return `<svg${attrs}${extraAttrs}>`;
   });
 }
 
-function buildUseSvg(symbolId, host) {
+function buildUseSvg(symbolId, host, href = `#${symbolId}`) {
   const size = toCssSize(host.getAttribute('size'));
   const color = host.getAttribute('color');
   const className = host.getAttribute('svg-class');
   const attrs = [
     'viewBox="0 0 24 24"',
     size ? `width="${size}" height="${size}"` : '',
-    color ? `style="color: ${color};"` : '',
-    className ? `class="${className}"` : '',
+    color ? `style="color: ${escapeAttribute(color)};"` : '',
+    className ? `class="${escapeAttribute(className)}"` : '',
     host.hasAttribute('aria-hidden') ? 'aria-hidden="true"' : '',
-    host.getAttribute('aria-label') ? `aria-label="${host.getAttribute('aria-label')}"` : '',
-    host.getAttribute('role') ? `role="${host.getAttribute('role')}"` : '',
+    host.getAttribute('aria-label') ? `aria-label="${escapeAttribute(host.getAttribute('aria-label'))}"` : '',
+    host.getAttribute('role') ? `role="${escapeAttribute(host.getAttribute('role'))}"` : '',
   ].filter(Boolean).join(' ');
 
-  return `<svg ${attrs}><use href="#${symbolId}"></use></svg>`;
+  return `<svg ${attrs}><use href="${escapeAttribute(href)}"></use></svg>`;
 }
 
 export function injectZIconSprite(spriteId, sprite) {
@@ -139,8 +146,11 @@ export function createZIconElement(registry, options = {}) {
   const fixedType = config.type;
   const fixedVariant = config.variant;
   const spriteMode = config.mode === 'sprite';
+  const spriteOnlyMode = config.mode === 'sprite-only';
+  const externalMode = config.mode === 'external';
   const spriteId = config.spriteId;
   const sprite = config.sprite;
+  const symbolDefaultVariant = config.symbolDefaultVariant ?? config.defaultVariant;
 
   return class ZIconElement extends HTMLElement {
     static observedAttributes = [
@@ -150,13 +160,14 @@ export function createZIconElement(registry, options = {}) {
       'size',
       'color',
       'svg-class',
+      'sprite-url',
       'aria-hidden',
       'aria-label',
       'role',
     ];
 
     connectedCallback() {
-      if (spriteMode && spriteId && sprite) {
+      if ((spriteMode || spriteOnlyMode) && spriteId && sprite) {
         injectZIconSprite(spriteId, sprite);
       }
 
@@ -177,6 +188,27 @@ export function createZIconElement(registry, options = {}) {
         return;
       }
 
+      if (spriteOnlyMode) {
+        const symbolId = getSpriteSymbolId(type, name, variant, symbolDefaultVariant);
+
+        this.innerHTML = buildUseSvg(symbolId, this);
+        return;
+      }
+
+      if (externalMode) {
+        const spriteUrl = this.getAttribute('sprite-url') ?? config.spriteUrl;
+
+        if (!spriteUrl) {
+          this.innerHTML = '';
+          return;
+        }
+
+        const symbolId = getSpriteSymbolId(type, name, variant, symbolDefaultVariant);
+
+        this.innerHTML = buildUseSvg(symbolId, this, `${spriteUrl}#${symbolId}`);
+        return;
+      }
+
       const svg = resolveSvg(
         normalizedRegistry,
         type,
@@ -188,7 +220,7 @@ export function createZIconElement(registry, options = {}) {
 
       if (svg) {
         if (spriteMode) {
-          this.innerHTML = buildUseSvg(getSpriteSymbolId(type, name, variant, config.defaultVariant), this);
+          this.innerHTML = buildUseSvg(getSpriteSymbolId(type, name, variant, symbolDefaultVariant), this);
           return;
         }
 

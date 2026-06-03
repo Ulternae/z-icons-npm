@@ -15,9 +15,11 @@ export interface CreateZIconElementOptions {
   fallbackIcon?: string;
   inputVariant?: IconVariant | string;
   missing?: MissingIconBehavior;
-  mode?: 'inline' | 'sprite';
+  mode?: 'inline' | 'sprite' | 'sprite-only' | 'external';
   sprite?: string;
   spriteId?: string;
+  spriteUrl?: string;
+  symbolDefaultVariant?: IconVariant | string;
   type?: IconPack | string;
   variant?: IconVariant | string;
 }
