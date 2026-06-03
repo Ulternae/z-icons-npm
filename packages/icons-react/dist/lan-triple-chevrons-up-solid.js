@@ -3,7 +3,7 @@ import React from 'react';
 export const LanTripleChevronsUpSolid = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 320 512',
+    viewBox: '0 -31.988 320.449 575.963',
     width: size,
     height: size,
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,

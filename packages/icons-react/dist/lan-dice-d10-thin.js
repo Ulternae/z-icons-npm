@@ -3,7 +3,7 @@ import React from 'react';
 export const LanDiceD10Thin = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 512 512',
+    viewBox: '-3.557 -14.55 519.834 546.625',
     width: size,
     height: size,
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,

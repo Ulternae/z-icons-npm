@@ -3,7 +3,7 @@ import React from 'react';
 export const LanSpiderBlackWidowSolid = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 512 512',
+    viewBox: '-0.095 -32.086 512.095 584.153',
     width: size,
     height: size,
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,

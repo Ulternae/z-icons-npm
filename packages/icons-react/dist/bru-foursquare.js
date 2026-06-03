@@ -3,7 +3,7 @@ import React from 'react';
 export const BruFoursquare = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 368 512',
+    viewBox: '0 0 368.021 514.951',
     width: size,
     height: size,
     fill: 'currentColor',

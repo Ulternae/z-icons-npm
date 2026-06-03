@@ -3,7 +3,7 @@ import React from 'react';
 export const LanDoveSolid = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 512 512',
+    viewBox: '0 -17.627 512.027 529.627',
     width: size,
     height: size,
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,

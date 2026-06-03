@@ -3,7 +3,7 @@ import React from 'react';
 export const LanFaceShakingThin = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 512 512',
+    viewBox: '-0.97 -30.259 514.841 572.518',
     width: size,
     height: size,
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,

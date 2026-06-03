@@ -3,7 +3,7 @@ import React from 'react';
 export const LanFireRegular = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 448 512',
+    viewBox: '0 -31.997 448 543.997',
     width: size,
     height: size,
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,

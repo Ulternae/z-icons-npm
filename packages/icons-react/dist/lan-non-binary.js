@@ -3,7 +3,7 @@ import React from 'react';
 export const LanNonBinary = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 384 512',
+    viewBox: '0 -32.3 384 544.3',
     width: size,
     height: size,
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,

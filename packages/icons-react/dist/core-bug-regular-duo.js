@@ -3,7 +3,7 @@ import React from 'react';
 export const CoreBugRegularDuo = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 448 512',
+    viewBox: '0 -17.8 448 529.8',
     width: size,
     height: size,
     fill: 'currentColor',

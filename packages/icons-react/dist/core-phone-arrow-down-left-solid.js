@@ -3,7 +3,7 @@ import React from 'react';
 export const CorePhoneArrowDownLeftSolid = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 512 512',
+    viewBox: '-0.104 -7.6 519.704 519.904',
     width: size,
     height: size,
     fill: 'currentColor',

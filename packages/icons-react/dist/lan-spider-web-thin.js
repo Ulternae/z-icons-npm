@@ -3,7 +3,7 @@ import React from 'react';
 export const LanSpiderWebThin = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 576 512',
+    viewBox: '-2.75 -0.6 584 513.158',
     width: size,
     height: size,
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,

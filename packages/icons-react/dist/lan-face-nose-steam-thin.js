@@ -3,7 +3,7 @@ import React from 'react';
 export const LanFaceNoseSteamThin = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 576 512',
+    viewBox: '0 0 576 552.385',
     width: size,
     height: size,
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,

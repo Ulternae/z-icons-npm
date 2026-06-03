@@ -3,7 +3,7 @@ import React from 'react';
 export const LanBlindsThin = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 448 512',
+    viewBox: '-2.5 0 450.7 512',
     width: size,
     height: size,
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,

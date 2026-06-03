@@ -3,7 +3,7 @@ import React from 'react';
 export const LanPeopleRoofSolid = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 576 512',
+    viewBox: '0 -15.975 576 527.975',
     width: size,
     height: size,
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,

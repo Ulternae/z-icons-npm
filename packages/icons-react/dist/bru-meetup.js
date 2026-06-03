@@ -3,7 +3,7 @@ import React from 'react';
 export const BruMeetup = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 512 512',
+    viewBox: '-0.066 -0.015 527.664 512.015',
     width: size,
     height: size,
     fill: 'currentColor',

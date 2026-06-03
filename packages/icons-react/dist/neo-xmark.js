@@ -3,7 +3,7 @@ import React from 'react';
 export const NeoXmark = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 504 560',
+    viewBox: '-1.952 0 508.705 560',
     width: size,
     height: size,
     fill: 'currentColor',

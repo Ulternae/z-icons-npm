@@ -3,7 +3,7 @@ import React from 'react';
 export const LanChampagneGlassSolid = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 256 512',
+    viewBox: '-2.971 -32 262.221 576',
     width: size,
     height: size,
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,

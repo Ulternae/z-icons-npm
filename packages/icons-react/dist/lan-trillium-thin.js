@@ -3,7 +3,7 @@ import React from 'react';
 export const LanTrilliumThin = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 448 512',
+    viewBox: '-5.596 -3.098 459.21 515.098',
     width: size,
     height: size,
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,

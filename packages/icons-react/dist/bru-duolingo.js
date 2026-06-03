@@ -3,7 +3,7 @@ import React from 'react';
 export const BruDuolingo = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 576 512',
+    viewBox: '-7.549 -32.016 588.427 566.592',
     width: size,
     height: size,
     fill: 'currentColor',

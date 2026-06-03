@@ -3,7 +3,7 @@ import React from 'react';
 export const LanTripleChevronsDownRegular = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 320 512',
+    viewBox: '-0.013 -24.05 320.013 568.018',
     width: size,
     height: size,
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,

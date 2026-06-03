@@ -3,7 +3,7 @@ import React from 'react';
 export const NeoBombRegularDuo = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 616 560',
+    viewBox: '0 -27.975 616.475 587.975',
     width: size,
     height: size,
     fill: 'currentColor',

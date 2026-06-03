@@ -3,7 +3,7 @@ import React from 'react';
 export const LanLongArrowAltUpSolid = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 320 512',
+    viewBox: '-0.052 -31.975 320.13 575.975',
     width: size,
     height: size,
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,

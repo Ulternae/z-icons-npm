@@ -3,7 +3,7 @@ import React from 'react';
 export const LanMoneyBillTransferRegular = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 640 512',
+    viewBox: '0 -7.925 640 527.838',
     width: size,
     height: size,
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,

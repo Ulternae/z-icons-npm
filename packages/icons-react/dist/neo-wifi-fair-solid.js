@@ -3,7 +3,7 @@ import React from 'react';
 export const NeoWifiFairSolid = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 448 560',
+    viewBox: '-3.983 0 456.006 560',
     width: size,
     height: size,
     fill: 'currentColor',

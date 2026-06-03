@@ -3,7 +3,7 @@ import React from 'react';
 export const LanClarinetSolid = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 640 512',
+    viewBox: '0 -31.968 640 575.943',
     width: size,
     height: size,
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,

@@ -3,7 +3,7 @@ import React from 'react';
 export const BruEleventy = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 640 512',
+    viewBox: '0 0 640 546.6',
     width: size,
     height: size,
     fill: 'currentColor',

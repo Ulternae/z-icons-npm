@@ -3,7 +3,7 @@ import React from 'react';
 export const NeoTvRetroRegularDuo = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 504 560',
+    viewBox: '0 -28.019 504.1 588.019',
     width: size,
     height: size,
     fill: 'currentColor',

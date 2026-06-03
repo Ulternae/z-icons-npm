@@ -3,7 +3,7 @@ import React from 'react';
 export const BruSolana = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 512 512',
+    viewBox: '-1.016 0 514.348 512',
     width: size,
     height: size,
     fill: 'currentColor',

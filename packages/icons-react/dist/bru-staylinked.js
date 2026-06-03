@@ -3,7 +3,7 @@ import React from 'react';
 export const BruStaylinked = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 440 512',
+    viewBox: '-0.023 0 440.023 513.498',
     width: size,
     height: size,
     fill: 'currentColor',

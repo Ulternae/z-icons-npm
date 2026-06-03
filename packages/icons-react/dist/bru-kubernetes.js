@@ -3,7 +3,7 @@ import React from 'react';
 export const BruKubernetes = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 512 512',
+    viewBox: '-7.433 -1.345 527.633 513.345',
     width: size,
     height: size,
     fill: 'currentColor',

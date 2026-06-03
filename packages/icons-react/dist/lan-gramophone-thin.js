@@ -3,7 +3,7 @@ import React from 'react';
 export const LanGramophoneThin = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 384 512',
+    viewBox: '0 -28.222 384 540.222',
     width: size,
     height: size,
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,

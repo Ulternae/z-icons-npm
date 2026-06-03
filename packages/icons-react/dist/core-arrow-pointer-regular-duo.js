@@ -3,7 +3,7 @@ import React from 'react';
 export const CoreArrowPointerRegularDuo = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 512 512',
+    viewBox: '-4 -4.3 516.3 516.4',
     width: size,
     height: size,
     fill: 'currentColor',

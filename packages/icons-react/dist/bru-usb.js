@@ -3,7 +3,7 @@ import React from 'react';
 export const BruUsb = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 640 512',
+    viewBox: '0 0 641.5 512',
     width: size,
     height: size,
     fill: 'currentColor',

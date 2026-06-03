@@ -3,7 +3,7 @@ import React from 'react';
 export const LanMonumentThin = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 320 512',
+    viewBox: '0 -32.025 320 544.025',
     width: size,
     height: size,
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,

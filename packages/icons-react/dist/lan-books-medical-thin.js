@@ -3,7 +3,7 @@ import React from 'react';
 export const LanBooksMedicalThin = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 640 512',
+    viewBox: '0 -1.263 640 545.263',
     width: size,
     height: size,
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,

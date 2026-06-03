@@ -3,7 +3,7 @@ import React from 'react';
 export const CorePlaneUpRegularDuo = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 576 512',
+    viewBox: '0 -64 576 640',
     width: size,
     height: size,
     fill: 'currentColor',

@@ -3,7 +3,7 @@ import React from 'react';
 export const CoreBellRingRegularDuo = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 576 512',
+    viewBox: '0 -30.6 576 542.6',
     width: size,
     height: size,
     fill: 'currentColor',

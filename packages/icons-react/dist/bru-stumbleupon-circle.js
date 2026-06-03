@@ -3,7 +3,7 @@ import React from 'react';
 export const BruStumbleuponCircle = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 496 512',
+    viewBox: '0 0 504 512',
     width: size,
     height: size,
     fill: 'currentColor',

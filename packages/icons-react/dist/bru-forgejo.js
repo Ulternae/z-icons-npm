@@ -3,7 +3,7 @@ import React from 'react';
 export const BruForgejo = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 320 512',
+    viewBox: '-3 0 326.2 512',
     width: size,
     height: size,
     fill: 'currentColor',

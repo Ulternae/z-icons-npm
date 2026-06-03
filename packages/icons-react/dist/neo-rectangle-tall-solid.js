@@ -3,7 +3,7 @@ import React from 'react';
 export const NeoRectangleTallSolid = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 392 560',
+    viewBox: '0 -56 392 672.15',
     width: size,
     height: size,
     fill: 'currentColor',

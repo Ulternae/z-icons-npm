@@ -3,7 +3,7 @@ import React from 'react';
 export const CoreShieldHalved = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 448 512',
+    viewBox: '0 -1.8 448 517.6',
     width: size,
     height: size,
     fill: 'currentColor',

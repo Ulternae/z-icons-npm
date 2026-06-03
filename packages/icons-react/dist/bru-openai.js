@@ -3,7 +3,7 @@ import React from 'react';
 export const BruOpenai = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 512 512',
+    viewBox: '-1.7 -0.6 516.5 512.6',
     width: size,
     height: size,
     fill: 'currentColor',

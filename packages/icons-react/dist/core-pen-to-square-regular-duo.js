@@ -3,7 +3,7 @@ import React from 'react';
 export const CorePenToSquareRegularDuo = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 512 512',
+    viewBox: '0 -35.85 516.25 547.85',
     width: size,
     height: size,
     fill: 'currentColor',

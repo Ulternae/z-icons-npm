@@ -3,7 +3,7 @@ import React from 'react';
 export const CoreSkullCrossbones = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 512 512',
+    viewBox: '0 -32 512 584.5',
     width: size,
     height: size,
     fill: 'currentColor',

@@ -3,7 +3,7 @@ import React from 'react';
 export const CoreLayerGroupRegularDuo = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 576 512',
+    viewBox: '0 -28.25 576 568.4',
     width: size,
     height: size,
     fill: 'currentColor',

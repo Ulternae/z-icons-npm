@@ -3,7 +3,7 @@ import React from 'react';
 export const CoreKey = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 512 512',
+    viewBox: '0 -0.1 512.5 534.6',
     width: size,
     height: size,
     fill: 'currentColor',

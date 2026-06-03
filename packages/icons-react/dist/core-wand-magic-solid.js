@@ -3,7 +3,7 @@ import React from 'react';
 export const CoreWandMagicSolid = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 576 512',
+    viewBox: '0 -29.3 576 544.05',
     width: size,
     height: size,
     fill: 'currentColor',

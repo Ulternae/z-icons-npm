@@ -3,7 +3,7 @@ import React from 'react';
 export const BruThreema = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 384 512',
+    viewBox: '-6.8 0 398.3 512',
     width: size,
     height: size,
     fill: 'currentColor',

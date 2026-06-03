@@ -3,7 +3,7 @@ import React from 'react';
 export const CoreAlarmClock = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 640 512',
+    viewBox: '0 -45.2 640 557.2',
     width: size,
     height: size,
     fill: 'currentColor',

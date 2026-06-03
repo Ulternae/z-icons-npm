@@ -3,7 +3,7 @@ import React from 'react';
 export const LanFrenchFriesSolid = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 384 512',
+    viewBox: '-0.014 -25.812 384.029 537.812',
     width: size,
     height: size,
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,

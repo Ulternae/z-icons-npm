@@ -3,7 +3,7 @@ import React from 'react';
 export const LanArrowsUpDownThin = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 256 512',
+    viewBox: '-0.025 -31.9 256.025 575.925',
     width: size,
     height: size,
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,

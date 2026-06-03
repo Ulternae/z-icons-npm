@@ -3,7 +3,7 @@ import React from 'react';
 export const NeoPaperclipSolid = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 448 560',
+    viewBox: '-0.109 -28 448.109 616',
     width: size,
     height: size,
     fill: 'currentColor',

@@ -3,7 +3,7 @@ import React from 'react';
 export const CoreShieldHalvedRegularDuo = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 448 512',
+    viewBox: '0 -1.7 448 517.5',
     width: size,
     height: size,
     fill: 'currentColor',

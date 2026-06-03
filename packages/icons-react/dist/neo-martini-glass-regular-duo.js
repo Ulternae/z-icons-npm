@@ -3,7 +3,7 @@ import React from 'react';
 export const NeoMartiniGlassRegularDuo = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 504 560',
+    viewBox: '0 -28.031 504 588.031',
     width: size,
     height: size,
     fill: 'currentColor',

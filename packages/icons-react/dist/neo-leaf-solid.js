@@ -3,7 +3,7 @@ import React from 'react';
 export const NeoLeafSolid = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 560 560',
+    viewBox: '0 0 560 587.94',
     width: size,
     height: size,
     fill: 'currentColor',

@@ -1,2 +1,2 @@
-export const LanArrowDownLong = '<svg viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M148.7 539.3c6.2 6.2 16.4 6.2 22.6 0l144-144c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L176 489.4V-16c0-8.8-7.2-16-16-16s-16 7.2-16 16v505.4L27.3 372.7c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6z"/></svg>';
+export const LanArrowDownLong = '<svg viewBox="0 -32 320 575.95" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M148.7 539.3c6.2 6.2 16.4 6.2 22.6 0l144-144c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L176 489.4V-16c0-8.8-7.2-16-16-16s-16 7.2-16 16v505.4L27.3 372.7c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6z"/></svg>';
 export default LanArrowDownLong;

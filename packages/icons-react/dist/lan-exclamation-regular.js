@@ -3,7 +3,7 @@ import React from 'react';
 export const LanExclamationRegular = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 64 512',
+    viewBox: '-4.028 0 72.752 512',
     width: size,
     height: size,
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,

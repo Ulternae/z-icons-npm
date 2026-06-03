@@ -3,7 +3,7 @@ import React from 'react';
 export const NeoAlarmClockRegularDuo = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 616 560',
+    viewBox: '-3.002 -3.102 622.205 563.102',
     width: size,
     height: size,
     fill: 'currentColor',

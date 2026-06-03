@@ -3,7 +3,7 @@ import React from 'react';
 export const BruObsidian = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 384 512',
+    viewBox: '-2.022 0 388.071 512',
     width: size,
     height: size,
     fill: 'currentColor',

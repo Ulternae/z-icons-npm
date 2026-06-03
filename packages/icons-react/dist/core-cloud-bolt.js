@@ -3,7 +3,7 @@ import React from 'react';
 export const CoreCloudBolt = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 576 512',
+    viewBox: '0 -32.1 576 578.7',
     width: size,
     height: size,
     fill: 'currentColor',

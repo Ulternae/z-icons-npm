@@ -3,7 +3,7 @@ import React from 'react';
 export const CoreCloudMoonSolid = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 640 512',
+    viewBox: '0 -64.1 640 608.1',
     width: size,
     height: size,
     fill: 'currentColor',

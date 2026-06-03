@@ -3,7 +3,7 @@ import React from 'react';
 export const CoreFill = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 576 512',
+    viewBox: '0 -29.2 576 569.2',
     width: size,
     height: size,
     fill: 'currentColor',

@@ -3,7 +3,7 @@ import React from 'react';
 export const NeoStarHalfRegularDuo = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 616 560',
+    viewBox: '0 -21.9 616 581.9',
     width: size,
     height: size,
     fill: 'currentColor',

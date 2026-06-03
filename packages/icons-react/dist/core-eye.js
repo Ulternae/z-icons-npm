@@ -3,7 +3,7 @@ import React from 'react';
 export const CoreEye = ({ size = 24, color, style, ...props }) => React.createElement(
   'svg',
   {
-    viewBox: '0 0 576 512',
+    viewBox: '-2.5 0 581.4 512',
     width: size,
     height: size,
     fill: 'currentColor',
