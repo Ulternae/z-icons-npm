@@ -935,15 +935,6 @@ const found = results.filter((result) => result.status === 'found' || result.sta
 const skipped = results.filter((result) => result.status === 'skipped');
 const written = results.filter((result) => result.status === 'written');
 
-console.log('\nIcon viewBox audit completed.\n');
-console.log(`Pack: ${args.pack}`);
-console.log(`Variant: ${args.variant ?? 'all'}`);
-console.log(`Icon: ${args.icon ?? 'all'}`);
-console.log(`Scanned SVGs: ${results.length}`);
-console.log(`Out-of-bounds SVGs: ${found.length}`);
-console.log(`Written SVGs: ${written.length}`);
-console.log(`Dry run: ${args.write ? 'no' : 'yes'}`);
-
 if (found.length > 0) {
   console.log('\nAffected SVGs:\n');
 
@@ -958,5 +949,15 @@ if (found.length > 0) {
 if (skipped.length > 0) {
   console.log(`\nSkipped SVGs: ${skipped.length}`);
 }
+
+console.log('\nIcon viewBox audit completed.\n');
+console.log(`Pack: ${args.pack}`);
+console.log(`Variant: ${args.variant ?? 'all'}`);
+console.log(`Icon: ${args.icon ?? 'all'}`);
+console.log(`Scanned SVGs: ${results.length}`);
+console.log(`Out-of-bounds SVGs: ${found.length}`);
+console.log(`Written SVGs: ${written.length}`);
+console.log(`Dry run: ${args.write ? 'no' : 'yes'}`);
+
 
 console.log('');
