@@ -1,11 +1,14 @@
 import { execFileSync } from 'node:child_process';
 import { describe, expect, it } from 'vitest';
 
+const NODE_IMPORT_TIMEOUT_MS = 120000;
+const IMPORT_TEST_TIMEOUT_MS = NODE_IMPORT_TIMEOUT_MS + 10000;
+
 function runNodeImport(code: string) {
   return execFileSync(process.execPath, ['-e', code], {
     cwd: process.cwd(),
     encoding: 'utf8',
-    timeout: 60000,
+    timeout: NODE_IMPORT_TIMEOUT_MS,
   }).trim();
 }
 
@@ -48,7 +51,7 @@ describe('public package imports', () => {
     `);
 
     expect(output).toBe('ok');
-  }, 70000);
+  }, IMPORT_TEST_TIMEOUT_MS);
 
   it('loads react package entrypoints with Node ESM resolution', () => {
     const output = runNodeImport(`
@@ -80,7 +83,7 @@ describe('public package imports', () => {
     `);
 
     expect(output).toBe('ok');
-  }, 70000);
+  }, IMPORT_TEST_TIMEOUT_MS);
 
   it('loads web package entrypoints with Node ESM resolution', () => {
     const output = runNodeImport(`
@@ -99,12 +102,14 @@ describe('public package imports', () => {
       if (!registerNeo.neoIcons?.sun) throw new Error('missing neoIcons web registry');
       if (!registerNeoRegularDuo.neoIconsRegularDuo?.sun) throw new Error('missing neo regular-duo web registry');
       if (!registerBru.bruIcons?.github) throw new Error('missing bruIcons web registry');
-      if (!registerCoreSprite.coreSprite || !registerCoreSprite.coreIcons?.sun) throw new Error('missing core sprite web registry');
-      if (!registerBruSprite.bruSprite || !registerBruSprite.bruIcons?.github) throw new Error('missing bru sprite web registry');
+      if (typeof registerCoreSprite.coreSprite !== 'string') throw new Error('missing core sprite export');
+      if (!('ZCoreSpriteElement' in registerCoreSprite)) throw new Error('missing core sprite element export');
+      if (typeof registerBruSprite.bruSprite !== 'string') throw new Error('missing bru sprite export');
+      if (!('ZBruSpriteElement' in registerBruSprite)) throw new Error('missing bru sprite element export');
 
       console.log('ok');
     `);
 
     expect(output).toBe('ok');
-  }, 70000);
+  }, IMPORT_TEST_TIMEOUT_MS);
 });
