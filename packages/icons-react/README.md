@@ -46,11 +46,12 @@ import MinaCheck from '@zcorvus/icons-react/mina-check';
 Use pack wrappers when the icon name is dynamic but the pack is known.
 
 ```tsx
-import { ZCore, ZMina, ZMinaSolid, ZNeo } from '@zcorvus/icons-react/packs';
+import { ZCore, ZCoreSprite, ZMina, ZMinaSolid, ZNeo } from '@zcorvus/icons-react/packs';
 
 export function Icons() {
   return (
     <>
+      <ZCoreSprite />
       <ZCore name="sun" />
       <ZNeo name="sun" />
       <ZMina name="search" />
@@ -60,7 +61,9 @@ export function Icons() {
 }
 ```
 
-Pack wrappers load the selected pack/variant dictionary, so individual icon components are still the most optimized option.
+Pack wrappers render lightweight SVG sprite references. In client-only React apps you can omit the sprite component and the wrapper will inject the sprite after mount. In SSR frameworks such as Next.js, render the matching `Z...Sprite` component once in the page or layout to avoid a short icon flash during hydration.
+
+Individual icon components are still the most optimized option when the icon name is static.
 
 ## Dynamic Icon
 
@@ -75,6 +78,8 @@ export function DynamicIcon() {
 ```
 
 `ZIcon` prioritizes ergonomics and can include all supported packs. Prefer individual components or pack wrappers when bundle size is critical.
+
+`ZIcon` also renders sprite references. For SSR without icon flash, include the specific pack sprite components for the packs and variants used on the page.
 
 ## Custom Dynamic Icons
 

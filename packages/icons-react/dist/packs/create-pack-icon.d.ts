@@ -7,7 +7,27 @@ export interface PackIconProps<TName extends string> extends Omit<React.SVGProps
   size?: string | number;
 }
 
+export interface ZIconSpriteProps extends Omit<React.SVGProps<SVGSVGElement>, 'children' | 'dangerouslySetInnerHTML'> {}
+
+export declare function getSpriteSymbolId(
+  type: string,
+  name: string,
+  variant: string,
+  defaultVariant?: string
+): string;
+
+export declare function injectZIconSprite(spriteId: string, sprite: string): Element | undefined;
+export declare function useZIconSprite(spriteId: string, sprite: string): void;
+export declare function ZIconSprite(props: ZIconSpriteProps & { spriteId: string; sprite: string }): React.ReactElement;
+export declare function createSpriteComponent(spriteId: string, sprite: string): React.FC<ZIconSpriteProps>;
+
 export declare function createPackIcon<TName extends string>(
-  iconMap: Record<string, Record<string, React.FC<Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> & { size?: string | number }>>>,
-  defaultVariant?: IconVariant
+  options: {
+    pack: string;
+    variant: IconVariant | string;
+    defaultVariant?: IconVariant | string;
+    spriteId: string;
+    sprite: string;
+    viewBoxes: Record<TName, string>;
+  }
 ): React.FC<PackIconProps<TName>>;

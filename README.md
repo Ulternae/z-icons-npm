@@ -48,11 +48,12 @@ import { MinaSearch, MinaSearchSolid, CoreSun, NeoSun } from '@zcorvus/icons-rea
 Use pack wrappers when the icon name is dynamic and you want to avoid loading unrelated packs.
 
 ```tsx
-import { ZMina, ZMinaSolid, ZCore, ZNeo } from '@zcorvus/icons-react/packs';
+import { ZMina, ZMinaSolid, ZCore, ZCoreSprite, ZNeo } from '@zcorvus/icons-react/packs';
 
 export function SearchActions() {
   return (
     <>
+      <ZCoreSprite />
       <ZMina name="search" />
       <ZMinaSolid name="search" />
       <ZCore name="sun" />
@@ -61,6 +62,8 @@ export function SearchActions() {
   );
 }
 ```
+
+Pack wrappers render sprite references. Client-only React apps can rely on automatic client-side sprite injection. For SSR/Next.js without icon flash, render the matching `Z...Sprite` component once in the page or layout.
 
 Use `ZIcon` only when both the pack and icon name are dynamic. This entry prioritizes ergonomics and can include all supported packs.
 

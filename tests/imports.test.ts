@@ -60,6 +60,7 @@ describe('public package imports', () => {
       const directNeoRegularDuo = await import('@zcorvus/icons-react/neo-sun-regular-duo');
       const directBruIcon = await import('@zcorvus/icons-react/bru-github');
       const minaPack = await import('@zcorvus/icons-react/packs/mina');
+      const corePack = await import('@zcorvus/icons-react/packs/core');
       const bruPack = await import('@zcorvus/icons-react/packs/bru');
       const create = await import('@zcorvus/icons-react/create');
       const minaData = await import('@zcorvus/icons-react/packs-data/mina');
@@ -72,12 +73,33 @@ describe('public package imports', () => {
       if (typeof directNeoRegularDuo.NeoSunRegularDuo !== 'function') throw new Error('missing direct NeoSunRegularDuo component');
       if (typeof directBruIcon.default !== 'function') throw new Error('missing direct BruGithub component');
       if (typeof minaPack.ZMina !== 'function') throw new Error('missing ZMina');
+      if (typeof corePack.ZCoreSprite !== 'function') throw new Error('missing ZCoreSprite');
       if (typeof bruPack.ZBru !== 'function') throw new Error('missing ZBru');
       if (typeof create.createZIcon !== 'function') throw new Error('missing createZIcon');
       if (!minaData.minaIcons) throw new Error('missing minaIcons packs-data');
       if (!minaSolidData.minaIconsSolid) throw new Error('missing minaIconsSolid packs-data');
       if (!neoRegularDuoData.neoIconsRegularDuo?.sun) throw new Error('missing neo regular-duo packs-data');
       if (!bruData.bruIcons?.github) throw new Error('missing bruIcons packs-data');
+
+      console.log('ok');
+    `);
+
+    expect(output).toBe('ok');
+  }, IMPORT_TEST_TIMEOUT_MS);
+
+  it('keeps react dynamic wrappers sprite-based', () => {
+    const output = runNodeImport(`
+      const fs = await import('node:fs');
+      const path = await import('node:path');
+
+      const corePack = fs.readFileSync(path.join(process.cwd(), 'packages/icons-react/dist/packs/core.js'), 'utf8');
+      const zIcon = fs.readFileSync(path.join(process.cwd(), 'packages/icons-react/dist/z-icon.js'), 'utf8');
+
+      if (!corePack.includes("from '@zcorvus/icons/sprites/core.js'")) throw new Error('ZCore should import the core sprite');
+      if (!corePack.includes('ZCoreSprite')) throw new Error('ZCoreSprite should be generated');
+      if (corePack.includes("from '../core-sun.js'")) throw new Error('ZCore should not import individual icon components');
+      if (!zIcon.includes("import('@zcorvus/icons/sprites/core.js')")) throw new Error('ZIcon should lazy-load sprites');
+      if (zIcon.includes("from './packs/core.js'")) throw new Error('ZIcon should not import pack wrappers');
 
       console.log('ok');
     `);
