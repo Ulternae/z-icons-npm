@@ -26,6 +26,7 @@ Use `@zcorvus/icons-react` for React components.
 
 ```tsx
 import { MinaCheck, MinaCheckSolid } from '@zcorvus/icons-react';
+import type { MinaIconName } from '@zcorvus/icons-react/types';
 
 export function StatusIcon() {
   return (
@@ -36,6 +37,8 @@ export function StatusIcon() {
   );
 }
 ```
+
+Use `@zcorvus/icons-react/types` when React code needs icon-name unions such as `MinaIconName`.
 
 The component format is `{Pack}{IconName}` for the default `light` variant and `{Pack}{IconName}{Variant}` for other variants.
 
@@ -63,7 +66,7 @@ export function SearchActions() {
 }
 ```
 
-Pack wrappers render sprite references. Client-only React apps can rely on automatic client-side sprite injection. For SSR/Next.js without icon flash, render the matching `Z...Sprite` component once in the page or layout.
+Pack wrappers render sprite references. Client-only React apps can rely on automatic client-side sprite injection. For React Server Components in Next.js, render the matching `Z...Sprite` component once inside `<body>` in the page or layout.
 
 Use `ZIcon` only when both the pack and icon name are dynamic. This entry prioritizes ergonomics and can include all supported packs.
 

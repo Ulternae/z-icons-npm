@@ -57,6 +57,8 @@ const HIDDEN_SPRITE_STYLE = {
   height: 0,
   overflow: 'hidden',
 };
+const scheduledSpriteIds = new Set();
+const scheduledSpriteLoadIds = new Set();
 
 function getSpriteBody(sprite) {
   const match = sprite.match(/<svg[^>]*>([\\s\\S]*?)<\\/svg>/);
@@ -95,10 +97,46 @@ export function injectZIconSprite(spriteId, sprite) {
   return element;
 }
 
-export function useZIconSprite(spriteId, sprite) {
-  React.useEffect(() => {
+function scheduleClientTask(task) {
+  if (typeof queueMicrotask === 'function') {
+    queueMicrotask(task);
+    return;
+  }
+
+  Promise.resolve().then(task);
+}
+
+export function scheduleZIconSprite(spriteId, sprite) {
+  if (typeof document === 'undefined' || scheduledSpriteIds.has(spriteId)) {
+    return;
+  }
+
+  if (document.querySelector(\`[\${SPRITE_ATTR}="\${spriteId}"]\`)) {
+    return;
+  }
+
+  scheduledSpriteIds.add(spriteId);
+  scheduleClientTask(() => {
     injectZIconSprite(spriteId, sprite);
-  }, [spriteId, sprite]);
+    scheduledSpriteIds.delete(spriteId);
+  });
+}
+
+export function scheduleZIconSpriteLoad(loadId, loadSprite) {
+  if (typeof document === 'undefined' || scheduledSpriteLoadIds.has(loadId)) {
+    return;
+  }
+
+  scheduledSpriteLoadIds.add(loadId);
+  scheduleClientTask(() => {
+    loadSprite()
+      .then(({ spriteId, sprite }) => {
+        injectZIconSprite(spriteId, sprite);
+      })
+      .finally(() => {
+        scheduledSpriteLoadIds.delete(loadId);
+      });
+  });
 }
 
 export function ZIconSprite({ spriteId, sprite, ...props }) {
@@ -120,13 +158,13 @@ export function createSpriteComponent(spriteId, sprite) {
 
 export function createPackIcon({ pack, variant, defaultVariant = 'light', spriteId, sprite, viewBoxes }) {
   return function ZPackIcon({ name, variant: _variant, size = 24, color, style, ...props }) {
-    useZIconSprite(spriteId, sprite);
-
     const viewBox = viewBoxes[name];
 
     if (!viewBox) {
       return null;
     }
+
+    scheduleZIconSprite(spriteId, sprite);
 
     return React.createElement(
       'svg',
@@ -164,7 +202,11 @@ export declare function getSpriteSymbolId(
 ): string;
 
 export declare function injectZIconSprite(spriteId: string, sprite: string): Element | undefined;
-export declare function useZIconSprite(spriteId: string, sprite: string): void;
+export declare function scheduleZIconSprite(spriteId: string, sprite: string): void;
+export declare function scheduleZIconSpriteLoad(
+  loadId: string,
+  loadSprite: () => Promise<{ spriteId: string; sprite: string }>
+): void;
 export declare function ZIconSprite(props: ZIconSpriteProps & { spriteId: string; sprite: string }): React.ReactElement;
 export declare function createSpriteComponent(spriteId: string, sprite: string): React.FC<ZIconSpriteProps>;
 
@@ -349,12 +391,30 @@ export declare function createZIcon<const TRegistry extends FlatIconRegistry>(
 `;
 }
 
+function createReactTypeExports() {
+  return `export type {
+  AllIconNames,
+  BruIconName,
+  CoreIconName,
+  IconPack,
+  IconVariant,
+  LanIconName,
+  MinaIconName,
+  NeoIconName,
+} from '@zcorvus/icons/types';
+`;
+}
+
 export function buildReactPackage(icons, packData) {
   const distDir = path.join(CONFIG.packagesDir, 'icons-react', 'dist');
   startOutputTracking(distDir);
 
   const rootExports = [`export { ZIcon } from './z-icon.js';`];
-  const rootTypes = [`export { ZIcon } from './z-icon.js';`, `export type { ZIconProps } from './z-icon.js';`];
+  const rootTypes = [
+    `export { ZIcon } from './z-icon.js';`,
+    `export type { ZIconProps } from './z-icon.js';`,
+    `export type { AllIconNames, BruIconName, CoreIconName, IconPack, IconVariant, LanIconName, MinaIconName, NeoIconName } from './types/index.js';`,
+  ];
   const zIconViewBoxImports = [];
   const zIconSpriteLoaders = [];
   const zIconViewBoxMaps = [];
@@ -440,6 +500,8 @@ export function buildReactPackage(icons, packData) {
   writeFile(path.join(distDir, 'packs', 'index.d.ts'), `${packIndexTypes.join('\n')}\n`);
   writeFile(path.join(distDir, 'packs-data', 'index.js'), `${packsDataExports.join('\n')}\n`);
   writeFile(path.join(distDir, 'packs-data', 'index.d.ts'), `${packsDataTypes.join('\n')}\n`);
+  writeFile(path.join(distDir, 'types', 'index.js'), 'export {};\n');
+  writeFile(path.join(distDir, 'types', 'index.d.ts'), createReactTypeExports());
   writeFile(path.join(distDir, 'create.js'), createZIconRuntime());
   writeFile(path.join(distDir, 'create.d.ts'), createZIconRuntimeTypes());
 
@@ -462,7 +524,7 @@ export function buildReactPackage(icons, packData) {
 
   writeFile(
     path.join(distDir, 'z-icon.js'),
-    `import React from 'react';\nimport { getSpriteSymbolId, injectZIconSprite } from './packs/create-pack-icon.js';\n${zIconViewBoxImports.join('\n')}\n\nconst viewBoxes = {\n${zIconViewBoxes}\n};\n\nconst spriteLoaders = {\n${zIconLoaderMap}\n};\n\nconst defaultVariants = {\n${zIconDefaultVariants}\n};\n\nfunction useSpriteLoader(loader) {\n  React.useEffect(() => {\n    if (!loader) {\n      return undefined;\n    }\n\n    let active = true;\n\n    loader().then(({ spriteId, sprite }) => {\n      if (active) {\n        injectZIconSprite(spriteId, sprite);\n      }\n    });\n\n    return () => {\n      active = false;\n    };\n  }, [loader]);\n}\n\nexport function ZIcon({ type, name, variant, size = 24, color, style, ...props }) {\n  const resolvedVariant = variant ?? defaultVariants[type] ?? 'light';\n  const viewBox = viewBoxes[type]?.[resolvedVariant]?.[name];\n  const loader = spriteLoaders[type]?.[resolvedVariant];\n\n  useSpriteLoader(loader);\n\n  if (!viewBox) {\n    return null;\n  }\n\n  return React.createElement(\n    'svg',\n    {\n      viewBox,\n      width: size,\n      height: size,\n      ...props,\n      style: { ...(color ? { color } : {}), ...style },\n    },\n    React.createElement('use', { href: \`#\${getSpriteSymbolId(type, name, resolvedVariant, defaultVariants[type])}\` })\n  );\n}\n`
+    `import React from 'react';\nimport { getSpriteSymbolId, scheduleZIconSpriteLoad } from './packs/create-pack-icon.js';\n${zIconViewBoxImports.join('\n')}\n\nconst viewBoxes = {\n${zIconViewBoxes}\n};\n\nconst spriteLoaders = {\n${zIconLoaderMap}\n};\n\nconst defaultVariants = {\n${zIconDefaultVariants}\n};\n\nexport function ZIcon({ type, name, variant, size = 24, color, style, ...props }) {\n  const resolvedVariant = variant ?? defaultVariants[type] ?? 'light';\n  const viewBox = viewBoxes[type]?.[resolvedVariant]?.[name];\n  const loader = spriteLoaders[type]?.[resolvedVariant];\n\n  if (!viewBox || !loader) {\n    return null;\n  }\n\n  scheduleZIconSpriteLoad(\`\${type}:\${resolvedVariant}\`, loader);\n\n  return React.createElement(\n    'svg',\n    {\n      viewBox,\n      width: size,\n      height: size,\n      ...props,\n      style: { ...(color ? { color } : {}), ...style },\n    },\n    React.createElement('use', { href: \`#\${getSpriteSymbolId(type, name, resolvedVariant, defaultVariants[type])}\` })\n  );\n}\n`
   );
   writeFile(
     path.join(distDir, 'z-icon.d.ts'),

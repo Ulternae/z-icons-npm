@@ -17,7 +17,11 @@ export declare function getSpriteSymbolId(
 ): string;
 
 export declare function injectZIconSprite(spriteId: string, sprite: string): Element | undefined;
-export declare function useZIconSprite(spriteId: string, sprite: string): void;
+export declare function scheduleZIconSprite(spriteId: string, sprite: string): void;
+export declare function scheduleZIconSpriteLoad(
+  loadId: string,
+  loadSprite: () => Promise<{ spriteId: string; sprite: string }>
+): void;
 export declare function ZIconSprite(props: ZIconSpriteProps & { spriteId: string; sprite: string }): React.ReactElement;
 export declare function createSpriteComponent(spriteId: string, sprite: string): React.FC<ZIconSpriteProps>;
 

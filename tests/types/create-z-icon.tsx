@@ -4,9 +4,15 @@ import { CoreSun } from '@zcorvus/icons-react/core-sun';
 import { MinaCheck } from '@zcorvus/icons-react/mina-check';
 import { MinaCheckSolid } from '@zcorvus/icons-react/mina-check-solid';
 import { MinaX } from '@zcorvus/icons-react/mina-x';
+import type { IconPack, MinaIconName as RootMinaIconName } from '@zcorvus/icons-react';
 import { coreIcons } from '@zcorvus/icons-react/packs-data/core';
 import { minaIcons } from '@zcorvus/icons-react/packs-data/mina';
 import { minaIconsSolid } from '@zcorvus/icons-react/packs-data/mina-solid';
+import type { MinaIconName } from '@zcorvus/icons-react/types';
+
+const typedMinaName: MinaIconName = 'check';
+const typedRootMinaName: RootMinaIconName = typedMinaName;
+const typedPack: IconPack = 'mina';
 
 const ManualIcon = createZIcon({
   mina: {

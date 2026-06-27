@@ -63,6 +63,7 @@ describe('public package imports', () => {
       const corePack = await import('@zcorvus/icons-react/packs/core');
       const bruPack = await import('@zcorvus/icons-react/packs/bru');
       const create = await import('@zcorvus/icons-react/create');
+      const reactTypes = await import('@zcorvus/icons-react/types');
       const minaData = await import('@zcorvus/icons-react/packs-data/mina');
       const minaSolidData = await import('@zcorvus/icons-react/packs-data/mina-solid');
       const neoRegularDuoData = await import('@zcorvus/icons-react/packs-data/neo-regular-duo');
@@ -76,6 +77,7 @@ describe('public package imports', () => {
       if (typeof corePack.ZCoreSprite !== 'function') throw new Error('missing ZCoreSprite');
       if (typeof bruPack.ZBru !== 'function') throw new Error('missing ZBru');
       if (typeof create.createZIcon !== 'function') throw new Error('missing createZIcon');
+      if (Object.keys(reactTypes).length !== 0) throw new Error('react types entry should be runtime-empty');
       if (!minaData.minaIcons) throw new Error('missing minaIcons packs-data');
       if (!minaSolidData.minaIconsSolid) throw new Error('missing minaIconsSolid packs-data');
       if (!neoRegularDuoData.neoIconsRegularDuo?.sun) throw new Error('missing neo regular-duo packs-data');
@@ -100,6 +102,8 @@ describe('public package imports', () => {
       if (corePack.includes("from '../core-sun.js'")) throw new Error('ZCore should not import individual icon components');
       if (!zIcon.includes("import('@zcorvus/icons/sprites/core.js')")) throw new Error('ZIcon should lazy-load sprites');
       if (zIcon.includes("from './packs/core.js'")) throw new Error('ZIcon should not import pack wrappers');
+      if (corePack.includes('useEffect')) throw new Error('pack wrappers should be server-component safe');
+      if (zIcon.includes('useEffect')) throw new Error('ZIcon should be server-component safe');
 
       console.log('ok');
     `);

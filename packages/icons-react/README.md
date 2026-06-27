@@ -10,7 +10,7 @@ Browse all available icons at [icons.zcorvus.com](https://icons.zcorvus.com/).
 pnpm add @zcorvus/icons-react
 ```
 
-`@zcorvus/icons-react` installs `@zcorvus/icons` as a normal dependency. Install `@zcorvus/icons` directly only when your app also imports raw SVG strings, icon names, or icon types from the core package.
+`@zcorvus/icons-react` installs `@zcorvus/icons` as a normal dependency. Install `@zcorvus/icons` directly only when your app also imports raw SVG strings or runtime icon name arrays from the core package.
 
 ## Individual Icons
 
@@ -61,7 +61,20 @@ export function Icons() {
 }
 ```
 
-Pack wrappers render lightweight SVG sprite references. In client-only React apps you can omit the sprite component and the wrapper will inject the sprite after mount. In SSR frameworks such as Next.js, render the matching `Z...Sprite` component once in the page or layout to avoid a short icon flash during hydration.
+Pack wrappers render lightweight SVG sprite references. In client-only React apps you can omit the sprite component and the wrapper will inject the sprite in the browser. In React Server Components, render the matching `Z...Sprite` component once inside `<body>` so the server HTML includes the referenced symbols.
+
+```tsx
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <body>
+        <ZCoreSprite />
+        {children}
+      </body>
+    </html>
+  );
+}
+```
 
 Individual icon components are still the most optimized option when the icon name is static.
 
@@ -79,7 +92,7 @@ export function DynamicIcon() {
 
 `ZIcon` prioritizes ergonomics and can include all supported packs. Prefer individual components or pack wrappers when bundle size is critical.
 
-`ZIcon` also renders sprite references. For SSR without icon flash, include the specific pack sprite components for the packs and variants used on the page.
+`ZIcon` also renders sprite references. In React Server Components, include the specific pack sprite components for the packs and variants used on the page, inside `<body>`.
 
 ## Custom Dynamic Icons
 
@@ -157,10 +170,16 @@ const AppIcon = createZIcon(registry, {
 
 ## Core Types
 
-Icon name types live in the framework-agnostic core package:
+Icon name types are available from the React package:
 
 ```ts
-import type { MinaIconName, AllIconNames } from '@zcorvus/icons/types';
+import type { MinaIconName, AllIconNames } from '@zcorvus/icons-react/types';
+```
+
+They are also re-exported from the root package for type-only imports:
+
+```ts
+import type { MinaIconName } from '@zcorvus/icons-react';
 ```
 
 ## Migration

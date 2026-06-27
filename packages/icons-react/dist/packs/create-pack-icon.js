@@ -7,6 +7,8 @@ const HIDDEN_SPRITE_STYLE = {
   height: 0,
   overflow: 'hidden',
 };
+const scheduledSpriteIds = new Set();
+const scheduledSpriteLoadIds = new Set();
 
 function getSpriteBody(sprite) {
   const match = sprite.match(/<svg[^>]*>([\s\S]*?)<\/svg>/);
@@ -45,10 +47,46 @@ export function injectZIconSprite(spriteId, sprite) {
   return element;
 }
 
-export function useZIconSprite(spriteId, sprite) {
-  React.useEffect(() => {
+function scheduleClientTask(task) {
+  if (typeof queueMicrotask === 'function') {
+    queueMicrotask(task);
+    return;
+  }
+
+  Promise.resolve().then(task);
+}
+
+export function scheduleZIconSprite(spriteId, sprite) {
+  if (typeof document === 'undefined' || scheduledSpriteIds.has(spriteId)) {
+    return;
+  }
+
+  if (document.querySelector(`[${SPRITE_ATTR}="${spriteId}"]`)) {
+    return;
+  }
+
+  scheduledSpriteIds.add(spriteId);
+  scheduleClientTask(() => {
     injectZIconSprite(spriteId, sprite);
-  }, [spriteId, sprite]);
+    scheduledSpriteIds.delete(spriteId);
+  });
+}
+
+export function scheduleZIconSpriteLoad(loadId, loadSprite) {
+  if (typeof document === 'undefined' || scheduledSpriteLoadIds.has(loadId)) {
+    return;
+  }
+
+  scheduledSpriteLoadIds.add(loadId);
+  scheduleClientTask(() => {
+    loadSprite()
+      .then(({ spriteId, sprite }) => {
+        injectZIconSprite(spriteId, sprite);
+      })
+      .finally(() => {
+        scheduledSpriteLoadIds.delete(loadId);
+      });
+  });
 }
 
 export function ZIconSprite({ spriteId, sprite, ...props }) {
@@ -70,13 +108,13 @@ export function createSpriteComponent(spriteId, sprite) {
 
 export function createPackIcon({ pack, variant, defaultVariant = 'light', spriteId, sprite, viewBoxes }) {
   return function ZPackIcon({ name, variant: _variant, size = 24, color, style, ...props }) {
-    useZIconSprite(spriteId, sprite);
-
     const viewBox = viewBoxes[name];
 
     if (!viewBox) {
       return null;
     }
+
+    scheduleZIconSprite(spriteId, sprite);
 
     return React.createElement(
       'svg',

@@ -1,5 +1,6 @@
 export { ZIcon } from './z-icon.js';
 export type { ZIconProps } from './z-icon.js';
+export type { AllIconNames, BruIconName, CoreIconName, IconPack, IconVariant, LanIconName, MinaIconName, NeoIconName } from './types/index.js';
 export { CoreAirplaySolid } from './core-airplay-solid.js';
 export type { CoreAirplaySolidProps } from './core-airplay-solid.js';
 export { CoreAlarmClockSolid } from './core-alarm-clock-solid.js';

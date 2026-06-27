@@ -1,5 +1,5 @@
 import React from 'react';
-import { getSpriteSymbolId, injectZIconSprite } from './packs/create-pack-icon.js';
+import { getSpriteSymbolId, scheduleZIconSpriteLoad } from './packs/create-pack-icon.js';
 import { coreSolidViewBoxes } from './viewboxes/core-solid.js';
 import { coreRegularViewBoxes } from './viewboxes/core.js';
 import { coreRegularDuoViewBoxes } from './viewboxes/core-regular-duo.js';
@@ -74,36 +74,16 @@ const defaultVariants = {
   lan: 'light'
 };
 
-function useSpriteLoader(loader) {
-  React.useEffect(() => {
-    if (!loader) {
-      return undefined;
-    }
-
-    let active = true;
-
-    loader().then(({ spriteId, sprite }) => {
-      if (active) {
-        injectZIconSprite(spriteId, sprite);
-      }
-    });
-
-    return () => {
-      active = false;
-    };
-  }, [loader]);
-}
-
 export function ZIcon({ type, name, variant, size = 24, color, style, ...props }) {
   const resolvedVariant = variant ?? defaultVariants[type] ?? 'light';
   const viewBox = viewBoxes[type]?.[resolvedVariant]?.[name];
   const loader = spriteLoaders[type]?.[resolvedVariant];
 
-  useSpriteLoader(loader);
-
-  if (!viewBox) {
+  if (!viewBox || !loader) {
     return null;
   }
+
+  scheduleZIconSpriteLoad(`${type}:${resolvedVariant}`, loader);
 
   return React.createElement(
     'svg',
