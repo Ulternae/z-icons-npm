@@ -21,6 +21,9 @@
   "devDependencies": {
     "@types/node": "^25.6.2",
     "@types/react": "^18.3.27",
+    "@zcorvus/core-react": "workspace:*",
+    "@zcorvus/core-regular-duo-react": "workspace:*",
+    "@zcorvus/core-solid-react": "workspace:*",
     "@zcorvus/icons": "workspace:*",
     "@zcorvus/icons-react": "workspace:*",
     "@zcorvus/icons-web": "workspace:*",

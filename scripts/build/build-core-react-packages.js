@@ -1,0 +1,322 @@
+import path from 'path';
+import { getDefaultVariant, getPublicVariantSuffix, getVariantFileSuffix, iconConfig as CONFIG } from '../icon-config.js';
+import { ensureDir, finishOutputTracking, startOutputTracking, writeFile } from './fs-utils.js';
+import { capitalize, toPascalCase } from './naming.js';
+import { createSvgSprite, escapeJsString, parseSvg } from './svg-utils.js';
+
+const CORE_REACT_PACKAGES = [
+  {
+    variant: 'regular',
+    packageName: '@zcorvus/core-react',
+    packageDir: 'core-react',
+  },
+  {
+    variant: 'solid',
+    packageName: '@zcorvus/core-solid-react',
+    packageDir: 'core-solid-react',
+  },
+  {
+    variant: 'regular-duo',
+    packageName: '@zcorvus/core-regular-duo-react',
+    packageDir: 'core-regular-duo-react',
+  },
+];
+
+const PACKAGE_VERSION = '0.1.0';
+
+function createPackageJson(packageName) {
+  return `${JSON.stringify(
+    {
+      name: packageName,
+      version: PACKAGE_VERSION,
+      description: 'Standalone React components for ZCorvus Core icons.',
+      author: 'Ulqernesh Karvenae',
+      license: 'UNLICENSED',
+      type: 'module',
+      main: './dist/index.js',
+      types: './dist/index.d.ts',
+      files: ['dist', 'README.md'],
+      sideEffects: false,
+      private: false,
+      publishConfig: {
+        access: 'public',
+      },
+      exports: {
+        '.': {
+          types: './dist/index.d.ts',
+          import: './dist/index.js',
+        },
+        './types': {
+          types: './dist/types/index.d.ts',
+          import: './dist/types/index.js',
+        },
+        './sprite': {
+          types: './dist/sprite.d.ts',
+          import: './dist/sprite.js',
+        },
+      },
+      typesVersions: {
+        '*': {
+          types: ['dist/types/index.d.ts'],
+          sprite: ['dist/sprite.d.ts'],
+          '*': ['dist/index.d.ts'],
+        },
+      },
+      peerDependencies: {
+        react: '^18.0.0 || ^19.0.0',
+        'react-dom': '^18.0.0 || ^19.0.0',
+      },
+      peerDependenciesMeta: {
+        'react-dom': {
+          optional: true,
+        },
+      },
+    },
+    null,
+    2
+  )}\n`;
+}
+
+function createReadme(packageName, componentName, spriteName) {
+  return `# ${packageName}\n\nStandalone React package for one ZCorvus Core icon variant.\n\n\`\`\`tsx\nimport { ${componentName}, ${spriteName} } from '${packageName}';\n\nexport function Example() {\n  return (\n    <>\n      <${spriteName} />\n      <${componentName} name=\"crown\" />\n    </>\n  );\n}\n\`\`\`\n`;
+}
+
+function createTypeUnion(typeName, values) {
+  return `export type ${typeName} = ${values.map((value) => `'${value}'`).join(' | ')};\n`;
+}
+
+function createRuntime() {
+  return `import React from 'react';
+
+const SPRITE_ATTR = 'data-zcorvus-react-sprite';
+const HIDDEN_SPRITE_STYLE = {
+  position: 'absolute',
+  width: 0,
+  height: 0,
+  overflow: 'hidden',
+};
+const scheduledSpriteIds = new Set();
+
+function getSpriteBody(sprite) {
+  const match = sprite.match(/<svg[^>]*>([\\s\\S]*?)<\\/svg>/);
+
+  return match ? match[1].trim() : sprite;
+}
+
+function scheduleClientTask(callback) {
+  if (typeof queueMicrotask === 'function') {
+    queueMicrotask(callback);
+    return;
+  }
+
+  Promise.resolve().then(callback);
+}
+
+export function getSpriteSymbolId(name, variant, defaultVariant = 'regular') {
+  return \`core-\${variant === defaultVariant ? name : \`\${name}-\${variant}\`}\`;
+}
+
+export function injectZCoreSprite(spriteId, sprite) {
+  if (typeof document === 'undefined') {
+    return undefined;
+  }
+
+  const existing = document.querySelector(\`[\${SPRITE_ATTR}="\${spriteId}"]\`);
+
+  if (existing) {
+    return existing;
+  }
+
+  const template = document.createElement('template');
+  template.innerHTML = sprite.trim();
+  const element = template.content.firstElementChild;
+
+  if (!element) {
+    return undefined;
+  }
+
+  element.setAttribute('aria-hidden', 'true');
+  element.setAttribute(SPRITE_ATTR, spriteId);
+  element.setAttribute('style', 'position:absolute;width:0;height:0;overflow:hidden');
+  document.body.prepend(element);
+
+  return element;
+}
+
+export function scheduleZCoreSprite(spriteId, sprite) {
+  if (typeof document === 'undefined' || scheduledSpriteIds.has(spriteId)) {
+    return;
+  }
+
+  if (document.querySelector(\`[\${SPRITE_ATTR}="\${spriteId}"]\`)) {
+    return;
+  }
+
+  scheduledSpriteIds.add(spriteId);
+  scheduleClientTask(() => {
+    injectZCoreSprite(spriteId, sprite);
+    scheduledSpriteIds.delete(spriteId);
+  });
+}
+
+export function createSpriteComponent(spriteId, sprite) {
+  return function ZCorePackSprite(props) {
+    return React.createElement('svg', {
+      ...props,
+      xmlns: 'http://www.w3.org/2000/svg',
+      'aria-hidden': props['aria-hidden'] ?? true,
+      [SPRITE_ATTR]: spriteId,
+      style: { ...HIDDEN_SPRITE_STYLE, ...props.style },
+      dangerouslySetInnerHTML: { __html: getSpriteBody(sprite) },
+    });
+  };
+}
+
+export function createCoreIcon({ variant, defaultVariant = 'regular', spriteId, sprite, viewBoxes }) {
+  return function ZCorePackIcon({ name, size = 24, color, style, ...props }) {
+    const viewBox = viewBoxes[name];
+
+    if (!viewBox) {
+      return null;
+    }
+
+    scheduleZCoreSprite(spriteId, sprite);
+
+    return React.createElement(
+      'svg',
+      {
+        viewBox,
+        width: size,
+        height: size,
+        ...props,
+        style: { ...(color ? { color } : {}), ...style },
+      },
+      React.createElement('use', { href: \`#\${getSpriteSymbolId(name, variant, defaultVariant)}\` })
+    );
+  };
+}
+`;
+}
+
+function createRuntimeTypes() {
+  return `import React from 'react';
+
+export interface CoreIconProps<TName extends string> extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+  name: TName;
+  size?: string | number;
+}
+
+export interface ZCoreSpriteProps extends Omit<React.SVGProps<SVGSVGElement>, 'children' | 'dangerouslySetInnerHTML'> {}
+
+export declare function getSpriteSymbolId(name: string, variant: string, defaultVariant?: string): string;
+export declare function injectZCoreSprite(spriteId: string, sprite: string): Element | undefined;
+export declare function scheduleZCoreSprite(spriteId: string, sprite: string): void;
+export declare function createSpriteComponent(spriteId: string, sprite: string): React.FC<ZCoreSpriteProps>;
+
+export declare function createCoreIcon<TName extends string>(
+  options: {
+    variant: string;
+    defaultVariant?: string;
+    spriteId: string;
+    sprite: string;
+    viewBoxes: Record<TName, string>;
+  }
+): React.FC<CoreIconProps<TName>>;
+`;
+}
+
+function createIndexJs({ componentName, spriteComponentName, spriteExportName, viewBoxesName, variant, spriteId }) {
+  return `import { createCoreIcon, createSpriteComponent } from './runtime.js';
+import { ${spriteExportName} } from './sprite.js';
+import { ${viewBoxesName} } from './viewboxes.js';
+
+export { ${spriteExportName} } from './sprite.js';
+export { ${viewBoxesName} } from './viewboxes.js';
+
+export const ${spriteComponentName} = createSpriteComponent('${spriteId}', ${spriteExportName});
+export const ${componentName} = createCoreIcon({
+  variant: '${variant}',
+  defaultVariant: '${getDefaultVariant('core')}',
+  spriteId: '${spriteId}',
+  sprite: ${spriteExportName},
+  viewBoxes: ${viewBoxesName},
+});
+
+export default ${componentName};
+`;
+}
+
+function createIndexTypes({ componentName, spriteComponentName, spriteExportName, viewBoxesName, iconNameType }) {
+  return `import React from 'react';
+import type { CoreIconProps, ZCoreSpriteProps } from './runtime.js';
+export type { ${iconNameType} } from './types/index.js';
+export { ${spriteExportName} } from './sprite.js';
+export { ${viewBoxesName} } from './viewboxes.js';
+
+export declare const ${spriteComponentName}: React.FC<ZCoreSpriteProps>;
+export type ${componentName}Props = CoreIconProps<${iconNameType}>;
+export declare const ${componentName}: React.FC<${componentName}Props>;
+export default ${componentName};
+`;
+}
+
+export function buildCoreReactPackages(packData) {
+  const coreVariants = packData.core ?? {};
+
+  for (const packageConfig of CORE_REACT_PACKAGES) {
+    const variantIcons = coreVariants[packageConfig.variant] ?? [];
+
+    if (variantIcons.length === 0) {
+      continue;
+    }
+
+    const suffix = getPublicVariantSuffix('core', packageConfig.variant);
+    const fileName = `core${getVariantFileSuffix('core', packageConfig.variant)}`;
+    const packageDir = path.join(CONFIG.packagesDir, packageConfig.packageDir);
+    const distDir = path.join(packageDir, 'dist');
+    const componentName = `ZCore${suffix}`;
+    const spriteComponentName = `${componentName}Sprite`;
+    const spriteExportName = `coreSprite${suffix}`;
+    const viewBoxesName = `core${toPascalCase(packageConfig.variant)}ViewBoxes`;
+    const iconNameType = suffix ? `Core${suffix}IconName` : 'CoreIconName';
+    const sprite = createSvgSprite('core', packageConfig.variant, variantIcons);
+    const iconNames = variantIcons.map((icon) => icon.name).sort((a, b) => a.localeCompare(b));
+    const viewBoxEntries = variantIcons.map((icon) => `  '${icon.name}': '${parseSvg(icon.svg).viewBox}'`).join(',\n');
+
+    ensureDir(packageDir);
+    writeFile(path.join(packageDir, 'package.json'), createPackageJson(packageConfig.packageName));
+    writeFile(path.join(packageDir, 'README.md'), createReadme(packageConfig.packageName, componentName, spriteComponentName));
+
+    startOutputTracking(distDir);
+    writeFile(path.join(distDir, 'runtime.js'), createRuntime());
+    writeFile(path.join(distDir, 'runtime.d.ts'), createRuntimeTypes());
+    writeFile(path.join(distDir, 'sprite.js'), `export const ${spriteExportName} = '${escapeJsString(sprite)}';\nexport default ${spriteExportName};\n`);
+    writeFile(path.join(distDir, 'sprite.d.ts'), `export declare const ${spriteExportName}: string;\nexport default ${spriteExportName};\n`);
+    writeFile(path.join(distDir, 'viewboxes.js'), `export const ${viewBoxesName} = {\n${viewBoxEntries}\n};\n`);
+    writeFile(path.join(distDir, 'viewboxes.d.ts'), `import type { ${iconNameType} } from './types/index.js';\n\nexport declare const ${viewBoxesName}: Record<${iconNameType}, string>;\n`);
+    writeFile(path.join(distDir, 'types', 'index.js'), 'export {};\n');
+    writeFile(path.join(distDir, 'types', 'index.d.ts'), createTypeUnion(iconNameType, iconNames));
+    writeFile(
+      path.join(distDir, 'index.js'),
+      createIndexJs({
+        componentName,
+        spriteComponentName,
+        spriteExportName,
+        viewBoxesName,
+        variant: packageConfig.variant,
+        spriteId: fileName,
+      })
+    );
+    writeFile(
+      path.join(distDir, 'index.d.ts'),
+      createIndexTypes({
+        componentName,
+        spriteComponentName,
+        spriteExportName,
+        viewBoxesName,
+        iconNameType,
+      })
+    );
+    finishOutputTracking();
+  }
+}

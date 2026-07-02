@@ -4,11 +4,12 @@ import { iconConfig as CONFIG } from '../icon-config.js';
 import { getPublicFileName, getPublicIconName } from './naming.js';
 import { normalizeSvgForIconStyle } from './svg-utils.js';
 
-export function collectIcons() {
+export function collectIcons(options = {}) {
   const icons = [];
   const packData = {};
+  const packs = options.packs ?? CONFIG.packs;
 
-  for (const pack of CONFIG.packs) {
+  for (const pack of packs) {
     packData[pack] = {};
 
     for (const variant of CONFIG.variants) {

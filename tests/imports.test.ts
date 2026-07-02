@@ -111,6 +111,39 @@ describe('public package imports', () => {
     expect(output).toBe('ok');
   }, IMPORT_TEST_TIMEOUT_MS);
 
+  it('loads standalone core React packages with Node ESM resolution', () => {
+    const output = runNodeImport(`
+      const fs = await import('node:fs');
+      const path = await import('node:path');
+      const core = await import('@zcorvus/core-react');
+      const coreSolid = await import('@zcorvus/core-solid-react');
+      const coreRegularDuo = await import('@zcorvus/core-regular-duo-react');
+      const coreTypes = await import('@zcorvus/core-react/types');
+      const coreSprite = await import('@zcorvus/core-react/sprite');
+
+      const packageDirs = ['core-react', 'core-solid-react', 'core-regular-duo-react'];
+      for (const packageDir of packageDirs) {
+        const pkg = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'packages', packageDir, 'package.json'), 'utf8'));
+        if (pkg.dependencies?.['@zcorvus/icons']) throw new Error(packageDir + ' should not depend on @zcorvus/icons');
+        if (pkg.dependencies?.['@zcorvus/icons-react']) throw new Error(packageDir + ' should not depend on @zcorvus/icons-react');
+      }
+
+      if (typeof core.ZCore !== 'function') throw new Error('missing standalone ZCore');
+      if (typeof core.ZCoreSprite !== 'function') throw new Error('missing standalone ZCoreSprite');
+      if (typeof coreSolid.ZCoreSolid !== 'function') throw new Error('missing standalone ZCoreSolid');
+      if (typeof coreSolid.ZCoreSolidSprite !== 'function') throw new Error('missing standalone ZCoreSolidSprite');
+      if (typeof coreRegularDuo.ZCoreRegularDuo !== 'function') throw new Error('missing standalone ZCoreRegularDuo');
+      if (typeof coreRegularDuo.ZCoreRegularDuoSprite !== 'function') throw new Error('missing standalone ZCoreRegularDuoSprite');
+      if (!core.coreRegularViewBoxes.crown) throw new Error('missing standalone core viewBoxes');
+      if (Object.keys(coreTypes).length !== 0) throw new Error('standalone core types entry should be runtime-empty');
+      if (typeof coreSprite.coreSprite !== 'string') throw new Error('missing standalone core sprite');
+
+      console.log('ok');
+    `);
+
+    expect(output).toBe('ok');
+  }, IMPORT_TEST_TIMEOUT_MS);
+
   it('loads web package entrypoints with Node ESM resolution', () => {
     const output = runNodeImport(`
       const root = await import('@zcorvus/icons-web');

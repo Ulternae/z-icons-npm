@@ -1,14 +1,16 @@
 import { iconConfig as CONFIG } from './icon-config.js';
 import { buildIconsPackage } from './build/build-icons-package.js';
+import { buildCoreReactPackages } from './build/build-core-react-packages.js';
 import { buildReactPackage } from './build/build-react-package.js';
 import { buildWebPackage } from './build/build-web-package.js';
 import { collectIcons } from './build/collect-icons.js';
 
 const TARGETS = {
-  all: ['icons', 'react', 'web'],
+  all: ['icons', 'react', 'web', 'core-react'],
   icons: ['icons'],
   react: ['icons', 'react'],
   web: ['icons', 'web'],
+  'core-react': ['core-react'],
 };
 
 function parseArgs(argv) {
@@ -55,6 +57,11 @@ function buildTarget(target, icons, packData) {
     return;
   }
 
+  if (target === 'core-react') {
+    buildCoreReactPackages(packData);
+    return;
+  }
+
   if (target === 'web') {
     buildWebPackage(icons, packData);
     return;
@@ -77,7 +84,8 @@ function main() {
 
   console.log(`\nStarting ZCorvus icons build: ${targets.join(', ')}\n`);
 
-  const { icons, packData } = collectIcons();
+  const collectOptions = args.target === 'core-react' ? { packs: ['core'] } : undefined;
+  const { icons, packData } = collectIcons(collectOptions);
 
   for (const target of targets) {
     buildTarget(target, icons, packData);
