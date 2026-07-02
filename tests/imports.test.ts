@@ -115,6 +115,8 @@ describe('public package imports', () => {
     const output = runNodeImport(`
       const fs = await import('node:fs');
       const path = await import('node:path');
+      const React = await import('react');
+      const { renderToString } = await import('react-dom/server');
       const core = await import('@zcorvus/core-react');
       const coreSolid = await import('@zcorvus/core-solid-react');
       const coreRegularDuo = await import('@zcorvus/core-regular-duo-react');
@@ -130,13 +132,19 @@ describe('public package imports', () => {
 
       if (typeof core.ZCore !== 'function') throw new Error('missing standalone ZCore');
       if (typeof core.ZCoreSprite !== 'function') throw new Error('missing standalone ZCoreSprite');
+      if (typeof core.CoreAngleDown !== 'function') throw new Error('missing standalone CoreAngleDown');
       if (typeof coreSolid.ZCoreSolid !== 'function') throw new Error('missing standalone ZCoreSolid');
       if (typeof coreSolid.ZCoreSolidSprite !== 'function') throw new Error('missing standalone ZCoreSolidSprite');
+      if (typeof coreSolid.CoreAngleDownSolid !== 'function') throw new Error('missing standalone CoreAngleDownSolid');
       if (typeof coreRegularDuo.ZCoreRegularDuo !== 'function') throw new Error('missing standalone ZCoreRegularDuo');
       if (typeof coreRegularDuo.ZCoreRegularDuoSprite !== 'function') throw new Error('missing standalone ZCoreRegularDuoSprite');
+      if (typeof coreRegularDuo.CoreAngleDownRegularDuo !== 'function') throw new Error('missing standalone CoreAngleDownRegularDuo');
       if (!core.coreRegularViewBoxes.crown) throw new Error('missing standalone core viewBoxes');
       if (Object.keys(coreTypes).length !== 0) throw new Error('standalone core types entry should be runtime-empty');
       if (typeof coreSprite.coreSprite !== 'string') throw new Error('missing standalone core sprite');
+      const html = renderToString(React.createElement(core.CoreAngleDown));
+      if (!html.includes('<svg')) throw new Error('standalone CoreAngleDown should render an svg');
+      if (html.includes('<use')) throw new Error('standalone CoreAngleDown should render inline svg content');
 
       console.log('ok');
     `);

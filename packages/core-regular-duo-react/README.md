@@ -3,11 +3,12 @@
 Standalone React package for one ZCorvus Core icon variant.
 
 ```tsx
-import { ZCoreRegularDuo, ZCoreRegularDuoSprite } from '@zcorvus/core-regular-duo-react';
+import { CoreAirplayRegularDuo, ZCoreRegularDuo, ZCoreRegularDuoSprite } from '@zcorvus/core-regular-duo-react';
 
 export function Example() {
   return (
     <>
+      <CoreAirplayRegularDuo />
       <ZCoreRegularDuoSprite />
       <ZCoreRegularDuo name="crown" />
     </>

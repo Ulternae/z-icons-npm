@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function CorePenSlash({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 -45.3 640 602.5',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement('path', {"fill":"currentColor","d":"m621.5 512-45.2 45.2L19 0l45.3-45.3zM211 282.5l-82.8 82.7v82.7H211l82.7-82.7 45.2 45.3L237.4 512H64.2V338.8l101.5-101.5 45.3 45.3zM453.8 0c67.7 0 122.5 54.9 122.5 122.5 0 32.5-12.9 63.7-35.9 86.6l-65.6 65.6-45.3-45.3 65.6-65.6c11-11 17.1-25.9 17.1-41.4 0-32.3-26.2-58.5-58.5-58.5-15.5 0-30.4 6.2-41.4 17.1l-65.6 65.6-45.2-45.2 65.6-65.6c23-23 54.1-35.9 86.6-35.9z"})
+  );
+}
+
+export default CorePenSlash;

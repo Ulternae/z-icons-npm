@@ -1,0 +1,8 @@
+import React from 'react';
+
+export interface CoreVideoRegularDuoProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+  size?: string | number;
+}
+
+export declare function CoreVideoRegularDuo(props: CoreVideoRegularDuoProps): React.ReactElement;
+export default CoreVideoRegularDuo;

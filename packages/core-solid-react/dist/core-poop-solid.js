@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function CorePoopSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement('path', {"fill":"currentColor","d":"M176 96h8l8.5-6.8c20.2-16.1 33-39.7 35.6-65.4L230.4.4c3.2-.3 6.4-.4 9.6-.4 56.8 0 103.7 42.2 111 97 54.8 7.3 97 54.2 97 111 0 21-5.8 40.6-15.8 57.4 46.8 19 79.8 65 79.8 118.6 0 70.7-57.3 128-128 128H128C57.3 512 0 454.7 0 384c0-53.6 33-99.6 79.8-118.6 14.9-6.1 31.2-9.4 48.2-9.4h48v-48h-48c-22.3 0-43.7 4.2-63.4 11.8-.4-3.9-.6-7.8-.6-11.8 0-61.9 50.1-112 112-112"})
+  );
+}
+
+export default CorePoopSolid;

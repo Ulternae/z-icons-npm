@@ -3,11 +3,12 @@
 Standalone React package for one ZCorvus Core icon variant.
 
 ```tsx
-import { ZCore, ZCoreSprite } from '@zcorvus/core-react';
+import { CoreAirplay, ZCore, ZCoreSprite } from '@zcorvus/core-react';
 
 export function Example() {
   return (
     <>
+      <CoreAirplay />
       <ZCoreSprite />
       <ZCore name="crown" />
     </>

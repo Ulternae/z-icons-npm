@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function CoreCompress({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement('path', {"fill":"currentColor","d":"M160 32V0H96v96H0v64h128c17.7 0 32-14.3 32-32zM32 352H0v64h96v96h64V384c0-17.7-14.3-32-32-32zM416 32V0h-64v128c0 17.7 14.3 32 32 32h128V96h-96zm-32 320c-17.7 0-32 14.3-32 32v128h64v-96h96v-64z"})
+  );
+}
+
+export default CoreCompress;

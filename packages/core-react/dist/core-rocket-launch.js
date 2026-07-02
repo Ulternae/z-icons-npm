@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function CoreRocketLaunch({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 576 534.7',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement('path', {"fill":"currentColor","d":"m236.8 480.6-54.1 54.1-45.2-45.2 54.1-54.1 45.2 45.3zm-64-64-86.1 86.1-45.2-45.2 86.1-86.1 45.2 45.3zm371.3-269.3c0 51-17.4 99.5-48 138.4V352c0 79.5-64.5 144-144 144h-29.2L48.2 221.2V192c0-79.5 64.4-144 144-144h66.3c38.8-30.6 87.4-48 138.3-48h147.3zm-220.4 259 25.7 25.7h2.7c44.2 0 80-35.8 80-80v-10.7zm-214.9-53.7-54.1 54.1-45.2-45.2 54.1-54.1 45.2 45.3zM396.8 64c-52.7 0-101.8 25.9-131.5 68.9l-5.7 8.8L184.4 267l92.7 92.7 125.3-75.2c48.2-28.9 77.7-81 77.7-137.2V64zm-28.7 160a48 48 0 1 1 0-96 48 48 0 1 1 0 96m-176-112c-44.2 0-80 35.8-80 80v2.8l25.7 25.7 65-108.4h-10.7z"})
+  );
+}
+
+export default CoreRocketLaunch;

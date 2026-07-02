@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function CoreArrowUpFromBracket({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement('path', {"fill":"currentColor","d":"M64 416c0 17.7 14.3 32 32 32h256c17.7 0 32-14.3 32-32v-96h64v96c0 53-43 96-96 96H96c-53 0-96-43-96-96v-96h64zM203.8 7.2c12.6-10.3 31.1-9.5 42.8 2.2L397.2 160l-45.3 45.3-96-96V352h-64V109.3l-96 96L50.7 160 201.3 9.4l2.4-2.2z"})
+  );
+}
+
+export default CoreArrowUpFromBracket;

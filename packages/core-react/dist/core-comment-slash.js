@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function CoreCommentSlash({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 -45.2 640 602.5',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement('path', {"fill":"currentColor","d":"m621.5 512-45.2 45.3L19 0l45.3-45.2zM137.2 208.7c-5.8 15.3-8.9 31.3-8.9 47.3 0 31.9 11.3 62.3 32.2 88.3L177 365c-1.8 15.9-4.1 36.8-7 62.6l68.8-17.2 15-3.7 15.1 3.5c16.4 3.8 33.6 5.9 51.4 5.9q11.85 0 23.1-1.2l54.6 54.6c-24.5 6.8-50.6 10.6-77.7 10.6-22.8 0-44.9-2.7-65.9-7.6L96.3 512l14.1-127.7C81.3 348 64.2 303.7 64.2 256c0-34.3 8.8-66.7 24.5-95.8l48.4 48.4zM320.3 32c141.4 0 256 100.3 256 224 0 34.3-8.8 66.7-24.5 95.7l-48.4-48.4c5.8-15.3 8.9-31.3 8.9-47.3 0-80.6-77.7-160-192-160-7.9 0-15.6.4-23.1 1.1l-54.7-54.6C267 35.7 293.2 32 320.3 32"})
+  );
+}
+
+export default CoreCommentSlash;

@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function CorePlaneUpSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 -64 576 640.2',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement('path', {"fill":"currentColor","d":"M224 0c0-35.3 28.7-64 64-64s64 28.5 64 63.9v111.7l197.2 140.9c16.8 12 26.8 31.4 26.8 52.1v112.1c-7.3-3.1-82-35.1-224-96v111.5l64 64v48c0 17.7-14.3 32-32 32l-96-32-96 32c-17.7 0-32-14.3-32-32v-48l64-64V320.7C81.9 381.4 7.3 413.4 0 416.5v-112c0-20.7 10-40.1 26.8-52.1L224 111.5z"})
+  );
+}
+
+export default CorePlaneUpSolid;

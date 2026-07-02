@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function CoreCircleArrowLeftRegularDuo({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement('path', {"fill":"currentColor","d":"M64 256a192 192 0 1 0 384 0 192 192 0 1 0-384 0m76.2-19.8 112-112 39.6 39.6-64.2 64.2H384v56H227.6l64.2 64.2-39.6 39.6-112-112c-10.9-10.9-10.9-28.7 0-39.6","opacity":".4"}), React.createElement('path', {"fill":"currentColor","d":"M256 512a256 256 0 1 1 0-512 256 256 0 1 1 0 512m0-448a192 192 0 1 0 0 384 192 192 0 1 0 0-384m35.8 99.8L227.6 228H384v56H227.6l64.2 64.2-39.6 39.6-112-112c-10.9-10.9-10.9-28.7 0-39.6l112-112z"})
+  );
+}
+
+export default CoreCircleArrowLeftRegularDuo;

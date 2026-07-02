@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function CoreRectangleCode({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 640 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement('path', {"fill":"currentColor","d":"M544 32c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H160c-33.1 0-60.4-25.2-63.7-57.5L96 416V288h64v128h384V96H384V32zM135.6 64c-9.1 9.1-30.4 30.5-64 64 33.5 33.5 54.8 54.9 64 64L96 231.6l-19.8-19.8-64-64c-10.9-10.9-10.9-28.7 0-39.6l64-64L96 24.4zm108.2-19.8 64 64c10.9 10.9 10.9 28.7 0 39.6l-64 64-19.8 19.8-39.6-39.6c9.1-9.1 30.4-30.5 64-64-33.5-33.5-54.8-54.9-64-64L224 24.4z"})
+  );
+}
+
+export default CoreRectangleCode;

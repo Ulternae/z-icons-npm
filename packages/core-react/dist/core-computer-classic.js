@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function CoreComputerClassic({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement('path', {"fill":"currentColor","d":"M448 0c35.3 0 64 28.7 64 64v332.6l-.2 4.7c-.8 11-4.4 21.6-10.6 30.8L467 483.5l-2.3 3.2c-11.2 14.8-28.4 24-46.9 25.1l-4 .1H98.3c-21.4 0-41.4-10.7-53.2-28.5l-34.3-51.3C4.6 422.9 1 412.3.2 401.3l-.2-4.7V64C0 28.7 28.7 0 64 0zM64 396.6 98.2 448h315.5l34.2-51.4V64h-384v332.6zM416 380H288v-56h128zm0-92H96V96h320zm-264-56h208v-80H152z"})
+  );
+}
+
+export default CoreComputerClassic;

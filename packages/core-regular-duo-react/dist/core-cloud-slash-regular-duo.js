@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function CoreCloudSlashRegularDuo({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 -45.2 640 602.5',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement('path', {"fill":"currentColor","d":"M96.3 320c0 53 43 96 96 96h152.2L158.6 230.1c-36.4 13.6-62.4 48.7-62.4 89.9zM298.2 98.2l243.5 243.5c1.6-7 2.6-14.2 2.6-21.7 0-49.1-36.9-89.7-84.6-95.3l-25.4-3-2.6-25.5C425.8 139.9 378.2 96 320.3 96c-7.6 0-14.9.8-22.1 2.2","opacity":".4"}), React.createElement('path', {"fill":"currentColor","d":"m621.5 512-45.2 45.3L19 0l45.3-45.2zM158.6 230.1c-36.4 13.6-62.4 48.7-62.4 89.9 0 53 43 96 96 96h152.2l64 64H192.2c-88.4 0-160-71.6-160-160 0-58.6 31.5-109.8 78.6-137.7zM320.3 32c82.7 0 151.9 57 170.8 133.8 67.6 18.7 117.2 80.6 117.2 154.2 0 25.7-6.1 49.9-16.8 71.4l-49.7-49.7c1.6-7 2.6-14.2 2.6-21.7 0-49.1-36.9-89.7-84.6-95.3l-25.4-3-2.6-25.5C425.9 139.9 378.3 96 320.4 96c-7.6 0-14.9.8-22.1 2.2l-50.7-50.6c22.1-10 46.7-15.6 72.6-15.6z"})
+  );
+}
+
+export default CoreCloudSlashRegularDuo;

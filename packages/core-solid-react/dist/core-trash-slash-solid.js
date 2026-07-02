@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function CoreTrashSlashSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 -45.2 640 602.5',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement('path', {"fill":"currentColor","d":"m621.5 512-45.2 45.3L19 0l45.3-45.2zm-181 0H192.3c-33.1 0-60.4-25.2-63.7-57.5l-.3-6.5V199.8zM390.8.3c32.3 3.3 57.5 30.5 57.5 63.7v32h96v64h-32v152.2L296.1 96h88.2V64H264.1l-49-49c11.1-9.4 25.5-15 41.2-15h128z"})
+  );
+}
+
+export default CoreTrashSlashSolid;

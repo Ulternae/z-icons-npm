@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function CorePenSlashRegularDuo({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 -45.3 640 602.5',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement('path', {"fill":"currentColor","d":"m128.3 365.3 82.8-82.7-22.6-22.6 128 128-22.6-22.6-82.7 82.8h-82.8v-82.8zm218.4-218.6 65.6-65.6c11-11 25.9-17.1 41.4-17.1 32.3 0 58.5 26.2 58.5 58.5 0 15.5-6.2 30.4-17.1 41.4l-65.6 65.6-82.7-82.7z","opacity":".4"}), React.createElement('path', {"fill":"currentColor","d":"m621.5 512-45.2 45.2L19 0l45.3-45.3zM211 282.5l-82.8 82.7V448H211l82.7-82.8 45.2 45.3L237.4 512H64.2V338.7l101.5-101.5zM453.8 0c67.7 0 122.5 54.8 122.5 122.5 0 32.5-12.9 63.7-35.9 86.6l-65.6 65.6-45.3-45.2 65.6-65.6c11-11 17.1-25.9 17.1-41.4 0-32.3-26.2-58.5-58.5-58.5-15.5 0-30.4 6.2-41.4 17.1l-65.6 65.6-45.2-45.3 65.6-65.6c23-23 54.1-35.9 86.6-35.9z"})
+  );
+}
+
+export default CorePenSlashRegularDuo;
