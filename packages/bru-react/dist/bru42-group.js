@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function Bru42Group({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 640 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement('path', {"d":"M320 96v320a160.02 160.02 0 0 0 113.138-46.862 160.02 160.02 0 0 0 34.683-174.367 160 160 0 0 0-86.591-86.592A160 160 0 0 0 320 96M0 256l160.002 160 160.001-160L160.002 96zm480 0a160 160 0 0 0 160 160V96a160 160 0 0 0-160 160"})
+  );
+}
+
+export default Bru42Group;

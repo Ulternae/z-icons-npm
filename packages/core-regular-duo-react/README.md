@@ -10,7 +10,7 @@ export function Example() {
     <>
       <CoreAirplayRegularDuo />
       <ZCoreRegularDuoSprite />
-      <ZCoreRegularDuo name="crown" />
+      <ZCoreRegularDuo name="airplay" />
     </>
   );
 }

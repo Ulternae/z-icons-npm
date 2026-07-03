@@ -120,10 +120,11 @@ describe('public package imports', () => {
       const core = await import('@zcorvus/core-react');
       const coreSolid = await import('@zcorvus/core-solid-react');
       const coreRegularDuo = await import('@zcorvus/core-regular-duo-react');
+      const bru = await import('@zcorvus/bru-react');
       const coreTypes = await import('@zcorvus/core-react/types');
       const coreSprite = await import('@zcorvus/core-react/sprite');
 
-      const packageDirs = ['core-react', 'core-solid-react', 'core-regular-duo-react'];
+      const packageDirs = ['core-react', 'core-solid-react', 'core-regular-duo-react', 'bru-react'];
       for (const packageDir of packageDirs) {
         const pkg = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'packages', packageDir, 'package.json'), 'utf8'));
         if (pkg.dependencies?.['@zcorvus/icons']) throw new Error(packageDir + ' should not depend on @zcorvus/icons');
@@ -139,12 +140,19 @@ describe('public package imports', () => {
       if (typeof coreRegularDuo.ZCoreRegularDuo !== 'function') throw new Error('missing standalone ZCoreRegularDuo');
       if (typeof coreRegularDuo.ZCoreRegularDuoSprite !== 'function') throw new Error('missing standalone ZCoreRegularDuoSprite');
       if (typeof coreRegularDuo.CoreAngleDownRegularDuo !== 'function') throw new Error('missing standalone CoreAngleDownRegularDuo');
+      if (typeof bru.ZBru !== 'function') throw new Error('missing standalone ZBru');
+      if (typeof bru.ZBruSprite !== 'function') throw new Error('missing standalone ZBruSprite');
+      if (typeof bru.BruGithub !== 'function') throw new Error('missing standalone BruGithub');
       if (!core.coreRegularViewBoxes.crown) throw new Error('missing standalone core viewBoxes');
+      if (!bru.bruSolidViewBoxes.github) throw new Error('missing standalone bru viewBoxes');
       if (Object.keys(coreTypes).length !== 0) throw new Error('standalone core types entry should be runtime-empty');
       if (typeof coreSprite.coreSprite !== 'string') throw new Error('missing standalone core sprite');
       const html = renderToString(React.createElement(core.CoreAngleDown));
       if (!html.includes('<svg')) throw new Error('standalone CoreAngleDown should render an svg');
       if (html.includes('<use')) throw new Error('standalone CoreAngleDown should render inline svg content');
+      const bruHtml = renderToString(React.createElement(bru.BruGithub));
+      if (!bruHtml.includes('<svg')) throw new Error('standalone BruGithub should render an svg');
+      if (bruHtml.includes('<use')) throw new Error('standalone BruGithub should render inline svg content');
 
       console.log('ok');
     `);

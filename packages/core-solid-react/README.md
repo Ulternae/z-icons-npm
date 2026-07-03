@@ -10,7 +10,7 @@ export function Example() {
     <>
       <CoreAirplaySolid />
       <ZCoreSolidSprite />
-      <ZCoreSolid name="crown" />
+      <ZCoreSolid name="airplay" />
     </>
   );
 }

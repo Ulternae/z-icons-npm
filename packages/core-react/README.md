@@ -10,7 +10,7 @@ export function Example() {
     <>
       <CoreAirplay />
       <ZCoreSprite />
-      <ZCore name="crown" />
+      <ZCore name="airplay" />
     </>
   );
 }

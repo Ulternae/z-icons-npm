@@ -1,4 +1,4 @@
-import { createCoreIcon, createSpriteComponent } from './runtime.js';
+import { createPackIcon, createSpriteComponent } from './runtime.js';
 import { coreSprite } from './sprite.js';
 import { coreRegularViewBoxes } from './viewboxes.js';
 
@@ -6,7 +6,8 @@ export { coreSprite } from './sprite.js';
 export { coreRegularViewBoxes } from './viewboxes.js';
 
 export const ZCoreSprite = createSpriteComponent('core', coreSprite);
-export const ZCore = createCoreIcon({
+export const ZCore = createPackIcon({
+  pack: 'core',
   variant: 'regular',
   defaultVariant: 'regular',
   spriteId: 'core',

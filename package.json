@@ -21,6 +21,7 @@
   "devDependencies": {
     "@types/node": "^25.6.2",
     "@types/react": "^18.3.27",
+    "@zcorvus/bru-react": "workspace:*",
     "@zcorvus/core-react": "workspace:*",
     "@zcorvus/core-regular-duo-react": "workspace:*",
     "@zcorvus/core-solid-react": "workspace:*",

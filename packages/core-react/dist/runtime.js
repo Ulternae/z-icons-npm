@@ -24,11 +24,11 @@ function scheduleClientTask(callback) {
   Promise.resolve().then(callback);
 }
 
-export function getSpriteSymbolId(name, variant, defaultVariant = 'regular') {
-  return `core-${variant === defaultVariant ? name : `${name}-${variant}`}`;
+export function getSpriteSymbolId(pack, name, variant, defaultVariant) {
+  return `${pack}-${variant === defaultVariant ? name : `${name}-${variant}`}`;
 }
 
-export function injectZCoreSprite(spriteId, sprite) {
+export function injectZSprite(spriteId, sprite) {
   if (typeof document === 'undefined') {
     return undefined;
   }
@@ -55,7 +55,7 @@ export function injectZCoreSprite(spriteId, sprite) {
   return element;
 }
 
-export function scheduleZCoreSprite(spriteId, sprite) {
+export function scheduleZSprite(spriteId, sprite) {
   if (typeof document === 'undefined' || scheduledSpriteIds.has(spriteId)) {
     return;
   }
@@ -66,13 +66,13 @@ export function scheduleZCoreSprite(spriteId, sprite) {
 
   scheduledSpriteIds.add(spriteId);
   scheduleClientTask(() => {
-    injectZCoreSprite(spriteId, sprite);
+    injectZSprite(spriteId, sprite);
     scheduledSpriteIds.delete(spriteId);
   });
 }
 
 export function createSpriteComponent(spriteId, sprite) {
-  return function ZCorePackSprite(props) {
+  return function ZPackSprite(props) {
     return React.createElement('svg', {
       ...props,
       xmlns: 'http://www.w3.org/2000/svg',
@@ -84,15 +84,15 @@ export function createSpriteComponent(spriteId, sprite) {
   };
 }
 
-export function createCoreIcon({ variant, defaultVariant = 'regular', spriteId, sprite, viewBoxes }) {
-  return function ZCorePackIcon({ name, size = 24, color, style, ...props }) {
+export function createPackIcon({ pack, variant, defaultVariant, spriteId, sprite, viewBoxes }) {
+  return function ZPackIcon({ name, size = 24, color, style, ...props }) {
     const viewBox = viewBoxes[name];
 
     if (!viewBox) {
       return null;
     }
 
-    scheduleZCoreSprite(spriteId, sprite);
+    scheduleZSprite(spriteId, sprite);
 
     return React.createElement(
       'svg',
@@ -103,7 +103,7 @@ export function createCoreIcon({ variant, defaultVariant = 'regular', spriteId, 
         ...props,
         style: { ...(color ? { color } : {}), ...style },
       },
-      React.createElement('use', { href: `#${getSpriteSymbolId(name, variant, defaultVariant)}` })
+      React.createElement('use', { href: `#${getSpriteSymbolId(pack, name, variant, defaultVariant)}` })
     );
   };
 }

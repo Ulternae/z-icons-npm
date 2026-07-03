@@ -1,35 +1,44 @@
 import path from 'path';
 import { getDefaultVariant, getPublicVariantSuffix, getVariantFileSuffix, iconConfig as CONFIG } from '../icon-config.js';
 import { ensureDir, finishOutputTracking, startOutputTracking, writeFile } from './fs-utils.js';
-import { toPascalCase } from './naming.js';
+import { capitalize, toPascalCase } from './naming.js';
 import { createSvgSprite, escapeJsString, parseSvg } from './svg-utils.js';
 
-const CORE_REACT_PACKAGES = [
+const STANDALONE_REACT_PACKAGES = [
   {
+    pack: 'core',
     variant: 'regular',
     packageName: '@zcorvus/core-react',
     packageDir: 'core-react',
   },
   {
+    pack: 'core',
     variant: 'solid',
     packageName: '@zcorvus/core-solid-react',
     packageDir: 'core-solid-react',
   },
   {
+    pack: 'core',
     variant: 'regular-duo',
     packageName: '@zcorvus/core-regular-duo-react',
     packageDir: 'core-regular-duo-react',
+  },
+  {
+    pack: 'bru',
+    variant: 'solid',
+    packageName: '@zcorvus/bru-react',
+    packageDir: 'bru-react',
   },
 ];
 
 const PACKAGE_VERSION = '0.1.0';
 
-function createPackageJson(packageName) {
+function createPackageJson(packageName, packName) {
   return `${JSON.stringify(
     {
       name: packageName,
       version: PACKAGE_VERSION,
-      description: 'Standalone React components for ZCorvus Core icons.',
+      description: `Standalone React components for ZCorvus ${capitalize(packName)} icons.`,
       author: 'Ulqernesh Karvenae',
       license: 'UNLICENSED',
       type: 'module',
@@ -77,8 +86,8 @@ function createPackageJson(packageName) {
   )}\n`;
 }
 
-function createReadme(packageName, componentName, spriteName, sampleIconName) {
-  return `# ${packageName}\n\nStandalone React package for one ZCorvus Core icon variant.\n\n\`\`\`tsx\nimport { ${sampleIconName}, ${componentName}, ${spriteName} } from '${packageName}';\n\nexport function Example() {\n  return (\n    <>\n      <${sampleIconName} />\n      <${spriteName} />\n      <${componentName} name=\"crown\" />\n    </>\n  );\n}\n\`\`\`\n`;
+function createReadme(packageName, packName, componentName, spriteName, sampleIcon) {
+  return `# ${packageName}\n\nStandalone React package for one ZCorvus ${capitalize(packName)} icon variant.\n\n\`\`\`tsx\nimport { ${sampleIcon.componentName}, ${componentName}, ${spriteName} } from '${packageName}';\n\nexport function Example() {\n  return (\n    <>\n      <${sampleIcon.componentName} />\n      <${spriteName} />\n      <${componentName} name=\"${sampleIcon.name}\" />\n    </>\n  );\n}\n\`\`\`\n`;
 }
 
 function createTypeUnion(typeName, values) {
@@ -112,11 +121,11 @@ function scheduleClientTask(callback) {
   Promise.resolve().then(callback);
 }
 
-export function getSpriteSymbolId(name, variant, defaultVariant = 'regular') {
-  return \`core-\${variant === defaultVariant ? name : \`\${name}-\${variant}\`}\`;
+export function getSpriteSymbolId(pack, name, variant, defaultVariant) {
+  return \`\${pack}-\${variant === defaultVariant ? name : \`\${name}-\${variant}\`}\`;
 }
 
-export function injectZCoreSprite(spriteId, sprite) {
+export function injectZSprite(spriteId, sprite) {
   if (typeof document === 'undefined') {
     return undefined;
   }
@@ -143,7 +152,7 @@ export function injectZCoreSprite(spriteId, sprite) {
   return element;
 }
 
-export function scheduleZCoreSprite(spriteId, sprite) {
+export function scheduleZSprite(spriteId, sprite) {
   if (typeof document === 'undefined' || scheduledSpriteIds.has(spriteId)) {
     return;
   }
@@ -154,13 +163,13 @@ export function scheduleZCoreSprite(spriteId, sprite) {
 
   scheduledSpriteIds.add(spriteId);
   scheduleClientTask(() => {
-    injectZCoreSprite(spriteId, sprite);
+    injectZSprite(spriteId, sprite);
     scheduledSpriteIds.delete(spriteId);
   });
 }
 
 export function createSpriteComponent(spriteId, sprite) {
-  return function ZCorePackSprite(props) {
+  return function ZPackSprite(props) {
     return React.createElement('svg', {
       ...props,
       xmlns: 'http://www.w3.org/2000/svg',
@@ -172,15 +181,15 @@ export function createSpriteComponent(spriteId, sprite) {
   };
 }
 
-export function createCoreIcon({ variant, defaultVariant = 'regular', spriteId, sprite, viewBoxes }) {
-  return function ZCorePackIcon({ name, size = 24, color, style, ...props }) {
+export function createPackIcon({ pack, variant, defaultVariant, spriteId, sprite, viewBoxes }) {
+  return function ZPackIcon({ name, size = 24, color, style, ...props }) {
     const viewBox = viewBoxes[name];
 
     if (!viewBox) {
       return null;
     }
 
-    scheduleZCoreSprite(spriteId, sprite);
+    scheduleZSprite(spriteId, sprite);
 
     return React.createElement(
       'svg',
@@ -191,7 +200,7 @@ export function createCoreIcon({ variant, defaultVariant = 'regular', spriteId, 
         ...props,
         style: { ...(color ? { color } : {}), ...style },
       },
-      React.createElement('use', { href: \`#\${getSpriteSymbolId(name, variant, defaultVariant)}\` })
+      React.createElement('use', { href: \`#\${getSpriteSymbolId(pack, name, variant, defaultVariant)}\` })
     );
   };
 }
@@ -201,27 +210,28 @@ export function createCoreIcon({ variant, defaultVariant = 'regular', spriteId, 
 function createRuntimeTypes() {
   return `import React from 'react';
 
-export interface CoreIconProps<TName extends string> extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+export interface PackIconProps<TName extends string> extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   name: TName;
   size?: string | number;
 }
 
-export interface ZCoreSpriteProps extends Omit<React.SVGProps<SVGSVGElement>, 'children' | 'dangerouslySetInnerHTML'> {}
+export interface ZIconSpriteProps extends Omit<React.SVGProps<SVGSVGElement>, 'children' | 'dangerouslySetInnerHTML'> {}
 
-export declare function getSpriteSymbolId(name: string, variant: string, defaultVariant?: string): string;
-export declare function injectZCoreSprite(spriteId: string, sprite: string): Element | undefined;
-export declare function scheduleZCoreSprite(spriteId: string, sprite: string): void;
-export declare function createSpriteComponent(spriteId: string, sprite: string): React.FC<ZCoreSpriteProps>;
+export declare function getSpriteSymbolId(pack: string, name: string, variant: string, defaultVariant: string): string;
+export declare function injectZSprite(spriteId: string, sprite: string): Element | undefined;
+export declare function scheduleZSprite(spriteId: string, sprite: string): void;
+export declare function createSpriteComponent(spriteId: string, sprite: string): React.FC<ZIconSpriteProps>;
 
-export declare function createCoreIcon<TName extends string>(
+export declare function createPackIcon<TName extends string>(
   options: {
+    pack: string;
     variant: string;
-    defaultVariant?: string;
+    defaultVariant: string;
     spriteId: string;
     sprite: string;
     viewBoxes: Record<TName, string>;
   }
-): React.FC<CoreIconProps<TName>>;
+): React.FC<PackIconProps<TName>>;
 `;
 }
 
@@ -261,8 +271,8 @@ export default ${componentName};
 `;
 }
 
-function createIndexJs({ componentName, spriteComponentName, spriteExportName, viewBoxesName, variant, spriteId, iconExports }) {
-  return `import { createCoreIcon, createSpriteComponent } from './runtime.js';
+function createIndexJs({ pack, componentName, spriteComponentName, spriteExportName, viewBoxesName, variant, spriteId, iconExports }) {
+  return `import { createPackIcon, createSpriteComponent } from './runtime.js';
 import { ${spriteExportName} } from './sprite.js';
 import { ${viewBoxesName} } from './viewboxes.js';
 
@@ -270,9 +280,10 @@ export { ${spriteExportName} } from './sprite.js';
 export { ${viewBoxesName} } from './viewboxes.js';
 
 export const ${spriteComponentName} = createSpriteComponent('${spriteId}', ${spriteExportName});
-export const ${componentName} = createCoreIcon({
+export const ${componentName} = createPackIcon({
+  pack: '${pack}',
   variant: '${variant}',
-  defaultVariant: '${getDefaultVariant('core')}',
+  defaultVariant: '${getDefaultVariant(pack)}',
   spriteId: '${spriteId}',
   sprite: ${spriteExportName},
   viewBoxes: ${viewBoxesName},
@@ -285,47 +296,47 @@ ${iconExports.join('\n')}
 
 function createIndexTypes({ componentName, spriteComponentName, spriteExportName, viewBoxesName, iconNameType, iconTypeExports }) {
   return `import React from 'react';
-import type { CoreIconProps, ZCoreSpriteProps } from './runtime.js';
+import type { PackIconProps, ZIconSpriteProps } from './runtime.js';
 export type { ${iconNameType} } from './types/index.js';
 export { ${spriteExportName} } from './sprite.js';
 export { ${viewBoxesName} } from './viewboxes.js';
 
-export declare const ${spriteComponentName}: React.FC<ZCoreSpriteProps>;
-export type ${componentName}Props = CoreIconProps<${iconNameType}>;
+export declare const ${spriteComponentName}: React.FC<ZIconSpriteProps>;
+export type ${componentName}Props = PackIconProps<${iconNameType}>;
 export declare const ${componentName}: React.FC<${componentName}Props>;
 export default ${componentName};
 ${iconTypeExports.join('\n')}
 `;
 }
 
-export function buildCoreReactPackages(packData) {
-  const coreVariants = packData.core ?? {};
-
-  for (const packageConfig of CORE_REACT_PACKAGES) {
-    const variantIcons = coreVariants[packageConfig.variant] ?? [];
+export function buildStandaloneReactPackages(packData, packages = STANDALONE_REACT_PACKAGES) {
+  for (const packageConfig of packages) {
+    const variantIcons = packData[packageConfig.pack]?.[packageConfig.variant] ?? [];
 
     if (variantIcons.length === 0) {
       continue;
     }
 
-    const suffix = getPublicVariantSuffix('core', packageConfig.variant);
-    const fileName = `core${getVariantFileSuffix('core', packageConfig.variant)}`;
+    const packName = packageConfig.pack;
+    const packPascalName = toPascalCase(packName);
+    const suffix = getPublicVariantSuffix(packName, packageConfig.variant);
+    const fileName = `${packName}${getVariantFileSuffix(packName, packageConfig.variant)}`;
     const packageDir = path.join(CONFIG.packagesDir, packageConfig.packageDir);
     const distDir = path.join(packageDir, 'dist');
-    const componentName = `ZCore${suffix}`;
+    const componentName = `Z${packPascalName}${suffix}`;
     const spriteComponentName = `${componentName}Sprite`;
-    const spriteExportName = `coreSprite${suffix}`;
-    const viewBoxesName = `core${toPascalCase(packageConfig.variant)}ViewBoxes`;
-    const iconNameType = suffix ? `Core${suffix}IconName` : 'CoreIconName';
-    const sprite = createSvgSprite('core', packageConfig.variant, variantIcons);
+    const spriteExportName = `${packName}Sprite${suffix}`;
+    const viewBoxesName = `${packName}${toPascalCase(packageConfig.variant)}ViewBoxes`;
+    const iconNameType = suffix ? `${packPascalName}${suffix}IconName` : `${packPascalName}IconName`;
+    const sprite = createSvgSprite(packName, packageConfig.variant, variantIcons);
     const iconNames = variantIcons.map((icon) => icon.name).sort((a, b) => a.localeCompare(b));
     const viewBoxEntries = variantIcons.map((icon) => `  '${icon.name}': '${parseSvg(icon.svg).viewBox}'`).join(',\n');
     const iconExports = [];
     const iconTypeExports = [];
 
     ensureDir(packageDir);
-    writeFile(path.join(packageDir, 'package.json'), createPackageJson(packageConfig.packageName));
-    writeFile(path.join(packageDir, 'README.md'), createReadme(packageConfig.packageName, componentName, spriteComponentName, variantIcons[0].componentName));
+    writeFile(path.join(packageDir, 'package.json'), createPackageJson(packageConfig.packageName, packName));
+    writeFile(path.join(packageDir, 'README.md'), createReadme(packageConfig.packageName, packName, componentName, spriteComponentName, variantIcons[0]));
 
     startOutputTracking(distDir);
     for (const icon of variantIcons) {
@@ -347,6 +358,7 @@ export function buildCoreReactPackages(packData) {
     writeFile(
       path.join(distDir, 'index.js'),
       createIndexJs({
+        pack: packName,
         componentName,
         spriteComponentName,
         spriteExportName,
