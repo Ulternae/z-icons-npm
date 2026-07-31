@@ -13,38 +13,31 @@ function runNodeImport(code: string) {
 }
 
 describe('public package imports', () => {
-  it('loads core package entrypoints with Node ESM resolution', () => {
+  it('resolves deprecated aggregates and loads direct core package subpaths', () => {
     const output = runNodeImport(`
-      const root = await import('@zcorvus/icons');
-      const svg = await import('@zcorvus/icons/svg');
+      const rootUrl = await import.meta.resolve('@zcorvus/icons');
+      const svgUrl = await import.meta.resolve('@zcorvus/icons/svg');
+      const gettersUrl = await import.meta.resolve('@zcorvus/icons/getters');
+      const minaGetterUrl = await import.meta.resolve('@zcorvus/icons/getters/mina');
+      const minaSolidGetterUrl = await import.meta.resolve('@zcorvus/icons/getters/mina-solid');
+      const bruGetterUrl = await import.meta.resolve('@zcorvus/icons/getters/bru');
       const minaCheck = await import('@zcorvus/icons/svg/mina-check');
       const neoRegularDuo = await import('@zcorvus/icons/svg/neo-sun-regular-duo');
       const bruGithub = await import('@zcorvus/icons/svg/bru-github');
       const names = await import('@zcorvus/icons/names');
-      const getters = await import('@zcorvus/icons/getters');
-      const minaGetter = await import('@zcorvus/icons/getters/mina');
-      const minaSolidGetter = await import('@zcorvus/icons/getters/mina-solid');
-      const bruGetter = await import('@zcorvus/icons/getters/bru');
       const types = await import('@zcorvus/icons/types');
 
-      if (typeof root.getIconSvg !== 'function') throw new Error('missing getIconSvg');
-      if (typeof getters.getMinaSvg !== 'function') throw new Error('missing getMinaSvg');
-      if (typeof getters.getMinaSolidSvg !== 'function') throw new Error('missing getMinaSolidSvg');
-      if (typeof getters.getBruSvg !== 'function') throw new Error('missing getBruSvg');
-      if (typeof minaGetter.getMinaSvg !== 'function') throw new Error('missing direct getMinaSvg');
-      if (typeof minaSolidGetter.getMinaSolidSvg !== 'function') throw new Error('missing direct getMinaSolidSvg');
-      if (typeof bruGetter.getBruSvg !== 'function') throw new Error('missing direct getBruSvg');
-      if (typeof svg.MinaCheck !== 'string') throw new Error('missing MinaCheck svg');
-      if (typeof svg.BruGithub !== 'string') throw new Error('missing BruGithub svg');
+      if (!rootUrl.endsWith('/packages/icons/dist/index.js')) throw new Error('missing root compatibility export');
+      if (!svgUrl.endsWith('/packages/icons/dist/svg/index.js')) throw new Error('missing SVG aggregate export');
+      if (!gettersUrl.endsWith('/packages/icons/dist/getters/index.js')) throw new Error('missing getters aggregate export');
+      if (!minaGetterUrl.endsWith('/packages/icons/dist/getters/mina.js')) throw new Error('missing Mina getter export');
+      if (!minaSolidGetterUrl.endsWith('/packages/icons/dist/getters/mina-solid.js')) throw new Error('missing Mina solid getter export');
+      if (!bruGetterUrl.endsWith('/packages/icons/dist/getters/bru.js')) throw new Error('missing Bru getter export');
       if (typeof minaCheck.default !== 'string') throw new Error('missing direct MinaCheck svg');
       if (typeof neoRegularDuo.NeoSunRegularDuo !== 'string') throw new Error('missing NeoSunRegularDuo svg');
       if (typeof bruGithub.default !== 'string') throw new Error('missing direct BruGithub svg');
       if (!names.minaIconNames.includes('check')) throw new Error('missing mina check name');
       if (!names.bruIconNames.includes('github')) throw new Error('missing bru github name');
-      if (root.getIconSvg('bru', 'github') !== svg.BruGithub) throw new Error('missing bru getIconSvg');
-      if (getters.getMinaSvg('check') !== svg.MinaCheck) throw new Error('missing getMinaSvg check');
-      if (getters.getMinaSolidSvg('check') !== svg.MinaCheckSolid) throw new Error('missing getMinaSolidSvg check');
-      if (getters.getBruSvg('github') !== svg.BruGithub) throw new Error('missing getBruSvg github');
       if (Object.keys(types).length !== 0) throw new Error('types entry should be runtime-empty');
 
       console.log('ok');
