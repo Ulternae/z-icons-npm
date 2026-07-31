@@ -9,7 +9,7 @@ export const BruBitbucket = ({ size = 24, color, style, ...props }) => React.cre
     fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M22.2 32A16 16 0 0 0 6 47.8a26 26 0 0 0 .2 2.8l67.9 412.1a21.77 21.77 0 0 0 21.3 18.2h325.7a16 16 0 0 0 16-13.4L505 50.7a16 16 0 0 0-13.2-18.3 25 25 0 0 0-2.8-.2zm285.9 297.8h-104l-28.1-147h157.3z"})
+  }, React.createElement("path", {"d":"M22.2 32A16 16 0 0 0 6 47.8a26 26 0 0 0 .2 2.8l67.9 412.1a21.77 21.77 0 0 0 21.3 18.2h325.7a16 16 0 0 0 16-13.4L505 50.7a16 16 0 0 0-13.2-18.3 25 25 0 0 0-2.8-.2zm285.9 297.8h-104l-28.1-147h157.3z"})
 );
 
 export default BruBitbucket;

@@ -10,7 +10,7 @@ export function CoreMinusRegularDuo({ size = 24, color, style, ...props }) {
       fill: 'currentColor',
       ...props,
       style: { ...(color ? { color } : {}), ...style },
-    }, React.createElement('path', {"fill":"currentColor","d":"M445.6 288H2.5v-64h443.1z"})
+    }, React.createElement("path", {"fill":"currentColor","d":"M445.6 288H2.5v-64h443.1z"})
   );
 }
 

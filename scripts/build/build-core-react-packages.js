@@ -1,6 +1,6 @@
 import path from 'path';
 import { getDefaultVariant, getPublicVariantSuffix, getVariantFileSuffix, iconConfig as CONFIG } from '../icon-config.js';
-import { ensureDir, finishOutputTracking, startOutputTracking, writeFile } from './fs-utils.js';
+import { createOutputWriter } from './fs-utils.js';
 import { capitalize, toPascalCase } from './naming.js';
 import { createSvgSprite, escapeJsString, parseSvg } from './svg-utils.js';
 
@@ -30,65 +30,6 @@ const STANDALONE_REACT_PACKAGES = [
     packageDir: 'bru-react',
   },
 ];
-
-const PACKAGE_VERSION = '0.1.0';
-
-function createPackageJson(packageName, packName) {
-  return `${JSON.stringify(
-    {
-      name: packageName,
-      version: PACKAGE_VERSION,
-      description: `Standalone React components for ZCorvus ${capitalize(packName)} icons.`,
-      author: 'Ulqernesh Karvenae',
-      license: 'UNLICENSED',
-      type: 'module',
-      main: './dist/index.js',
-      types: './dist/index.d.ts',
-      files: ['dist', 'README.md'],
-      sideEffects: false,
-      private: false,
-      publishConfig: {
-        access: 'public',
-      },
-      exports: {
-        '.': {
-          types: './dist/index.d.ts',
-          import: './dist/index.js',
-        },
-        './types': {
-          types: './dist/types/index.d.ts',
-          import: './dist/types/index.js',
-        },
-        './sprite': {
-          types: './dist/sprite.d.ts',
-          import: './dist/sprite.js',
-        },
-      },
-      typesVersions: {
-        '*': {
-          types: ['dist/types/index.d.ts'],
-          sprite: ['dist/sprite.d.ts'],
-          '*': ['dist/index.d.ts'],
-        },
-      },
-      peerDependencies: {
-        react: '^18.0.0 || ^19.0.0',
-        'react-dom': '^18.0.0 || ^19.0.0',
-      },
-      peerDependenciesMeta: {
-        'react-dom': {
-          optional: true,
-        },
-      },
-    },
-    null,
-    2
-  )}\n`;
-}
-
-function createReadme(packageName, packName, componentName, spriteName, sampleIcon) {
-  return `# ${packageName}\n\nStandalone React package for one ZCorvus ${capitalize(packName)} icon variant.\n\n\`\`\`tsx\nimport { ${sampleIcon.componentName}, ${componentName}, ${spriteName} } from '${packageName}';\n\nexport function Example() {\n  return (\n    <>\n      <${sampleIcon.componentName} />\n      <${spriteName} />\n      <${componentName} name=\"${sampleIcon.name}\" />\n    </>\n  );\n}\n\`\`\`\n`;
-}
 
 function createTypeUnion(typeName, values) {
   return `export type ${typeName} = ${values.map((value) => `'${value}'`).join(' | ')};\n`;
@@ -235,8 +176,8 @@ export declare function createPackIcon<TName extends string>(
 `;
 }
 
-function createReactComponent(svgContent, componentName) {
-  const { viewBox, children } = parseSvg(svgContent);
+function createReactComponent(svgContent, componentName, sourceFile) {
+  const { viewBox, children } = parseSvg(svgContent, sourceFile);
   const childrenCode = children.length > 0 ? `, ${children.join(', ')}` : '';
 
   return `import React from 'react';
@@ -310,6 +251,8 @@ ${iconTypeExports.join('\n')}
 }
 
 export function buildStandaloneReactPackages(packData, packages = STANDALONE_REACT_PACKAGES) {
+  const results = [];
+
   for (const packageConfig of packages) {
     const variantIcons = packData[packageConfig.pack]?.[packageConfig.variant] ?? [];
 
@@ -330,17 +273,18 @@ export function buildStandaloneReactPackages(packData, packages = STANDALONE_REA
     const iconNameType = suffix ? `${packPascalName}${suffix}IconName` : `${packPascalName}IconName`;
     const sprite = createSvgSprite(packName, packageConfig.variant, variantIcons);
     const iconNames = variantIcons.map((icon) => icon.name).sort((a, b) => a.localeCompare(b));
-    const viewBoxEntries = variantIcons.map((icon) => `  '${icon.name}': '${parseSvg(icon.svg).viewBox}'`).join(',\n');
+    const viewBoxEntries = variantIcons
+      .map((icon) => `  '${icon.name}': '${parseSvg(icon.svg, icon.sourceFile).viewBox}'`)
+      .join(',\n');
     const iconExports = [];
     const iconTypeExports = [];
 
-    ensureDir(packageDir);
-    writeFile(path.join(packageDir, 'package.json'), createPackageJson(packageConfig.packageName, packName));
-    writeFile(path.join(packageDir, 'README.md'), createReadme(packageConfig.packageName, packName, componentName, spriteComponentName, variantIcons[0]));
-
-    startOutputTracking(distDir);
+    const { writeFile, finish } = createOutputWriter(distDir);
     for (const icon of variantIcons) {
-      writeFile(path.join(distDir, `${icon.publicFileName}.js`), createReactComponent(icon.svg, icon.componentName));
+      writeFile(
+        path.join(distDir, `${icon.publicFileName}.js`),
+        createReactComponent(icon.svg, icon.componentName, icon.sourceFile)
+      );
       writeFile(path.join(distDir, `${icon.publicFileName}.d.ts`), createReactComponentTypes(icon.componentName));
       iconExports.push(`export { ${icon.componentName} } from './${icon.publicFileName}.js';`);
       iconTypeExports.push(`export { ${icon.componentName} } from './${icon.publicFileName}.js';`);
@@ -379,6 +323,8 @@ export function buildStandaloneReactPackages(packData, packages = STANDALONE_REA
         iconTypeExports,
       })
     );
-    finishOutputTracking();
+    results.push({ packageName: packageConfig.packageName, ...finish() });
   }
+
+  return results;
 }

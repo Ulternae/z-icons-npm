@@ -11,19 +11,26 @@ export type IconRegistry = Record<string, IconPackMap>;
 export type FlatIconRegistry = Record<string, IconVariantMap>;
 export type MissingIconBehavior = 'null' | 'warn' | 'error';
 
+type IconSvgProps = Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> & {
+  size?: string | number;
+};
 type RegistryPackName<TRegistry> = Extract<keyof TRegistry, string>;
-type RegistryVariantName<TRegistry> = TRegistry extends Record<string, infer TPack>
-  ? Extract<keyof TPack, string>
-  : string;
-type RegistryIconName<TRegistry> = TRegistry extends Record<string, infer TPack>
-  ? TPack extends Record<string, infer TVariant>
-    ? Extract<keyof TVariant, string>
-    : string
-  : string;
+type RegistryVariantName<
+  TRegistry extends IconRegistry,
+  TPack extends RegistryPackName<TRegistry>,
+> = Extract<keyof TRegistry[TPack], string>;
+type RegistryIconName<
+  TRegistry extends IconRegistry,
+  TPack extends RegistryPackName<TRegistry>,
+  TVariant extends RegistryVariantName<TRegistry, TPack>,
+> = Extract<keyof TRegistry[TPack][TVariant], string>;
+type RegistryPackIconName<
+  TRegistry extends IconRegistry,
+  TPack extends RegistryPackName<TRegistry>,
+> = {
+  [TVariant in RegistryVariantName<TRegistry, TPack>]: RegistryIconName<TRegistry, TPack, TVariant>;
+}[RegistryVariantName<TRegistry, TPack>];
 type FlatPackName<TRegistry> = Extract<keyof TRegistry, string>;
-type FlatIconName<TRegistry> = TRegistry extends Record<string, infer TPack>
-  ? Extract<keyof TPack, string>
-  : string;
 
 export interface CreateZIconOptions {
   defaultVariant?: IconVariant | string;
@@ -35,19 +42,29 @@ export interface CreateZIconOptions {
   missing?: MissingIconBehavior;
 }
 
-export type CreatedZIconProps<TRegistry> = Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> & {
-  type: RegistryPackName<TRegistry>;
-  name: RegistryIconName<TRegistry>;
-  variant?: RegistryVariantName<TRegistry> | IconVariant | string;
-  size?: string | number;
-};
+export type CreatedZIconProps<TRegistry extends IconRegistry> = {
+  [TPack in RegistryPackName<TRegistry>]:
+    | (IconSvgProps & {
+        type: TPack;
+        variant?: undefined;
+        name: RegistryPackIconName<TRegistry, TPack>;
+      })
+    | {
+        [TVariant in RegistryVariantName<TRegistry, TPack>]: IconSvgProps & {
+          type: TPack;
+          variant: TVariant;
+          name: RegistryIconName<TRegistry, TPack, TVariant>;
+        };
+      }[RegistryVariantName<TRegistry, TPack>];
+}[RegistryPackName<TRegistry>];
 
-export type CreatedFlatZIconProps<TRegistry> = Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> & {
-  type: FlatPackName<TRegistry>;
-  name: FlatIconName<TRegistry>;
-  variant?: IconVariant | string;
-  size?: string | number;
-};
+export type CreatedFlatZIconProps<TRegistry extends FlatIconRegistry> = {
+  [TPack in FlatPackName<TRegistry>]: IconSvgProps & {
+    type: TPack;
+    name: Extract<keyof TRegistry[TPack], string>;
+    variant?: IconVariant | string;
+  };
+}[FlatPackName<TRegistry>];
 
 export declare function createZIcon<const TRegistry extends IconRegistry>(
   registry: TRegistry,

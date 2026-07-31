@@ -9,7 +9,7 @@ export const MinaTelephoneOut = ({ size = 24, color, style, ...props }) => React
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M15.6 14.522c-2.395 2.52-8.504-3.534-6.1-6.064 1.468-1.545-.19-3.31-1.108-4.609-1.723-2.435-5.504.927-5.39 3.066.363 6.746 7.66 14.74 14.726 14.042 2.21-.218 4.75-4.21 2.215-5.669-1.268-.73-3.009-2.17-4.343-.767M15 7.5 19.5 3M16 3h3.5v3.5"})
+  }, React.createElement("path", {"d":"M15.6 14.522c-2.395 2.52-8.504-3.534-6.1-6.064 1.468-1.545-.19-3.31-1.108-4.609-1.723-2.435-5.504.927-5.39 3.066.363 6.746 7.66 14.74 14.726 14.042 2.21-.218 4.75-4.21 2.215-5.669-1.268-.73-3.009-2.17-4.343-.767M15 7.5 19.5 3M16 3h3.5v3.5"})
 );
 
 export default MinaTelephoneOut;

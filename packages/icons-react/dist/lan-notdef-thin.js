@@ -9,7 +9,7 @@ export const LanNotdefThin = ({ size = 24, color, style, ...props }) => React.cr
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M32 16q-2.85 0-5.4.9L192 242.5 357.4 16.9q-2.55-.9-5.4-.9zm335.8 13.7L201.9 256l165.9 226.3c.1-.7.2-1.5.2-2.3V32c0-.8-.1-1.5-.2-2.3M182.1 256 16.2 29.7c-.1.7-.2 1.5-.2 2.3v448c0 .8.1 1.5.2 2.3zM26.6 495.1q2.55.9 5.4.9h320q2.85 0 5.4-.9L192 269.5zM0 32C0 14.3 14.3 0 32 0h320c17.7 0 32 14.3 32 32v448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M32 16q-2.85 0-5.4.9L192 242.5 357.4 16.9q-2.55-.9-5.4-.9zm335.8 13.7L201.9 256l165.9 226.3c.1-.7.2-1.5.2-2.3V32c0-.8-.1-1.5-.2-2.3M182.1 256 16.2 29.7c-.1.7-.2 1.5-.2 2.3v448c0 .8.1 1.5.2 2.3zM26.6 495.1q2.55.9 5.4.9h320q2.85 0 5.4-.9L192 269.5zM0 32C0 14.3 14.3 0 32 0h320c17.7 0 32 14.3 32 32v448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32z"})
 );
 
 export default LanNotdefThin;

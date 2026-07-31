@@ -9,7 +9,7 @@ export const MinaClockHand = ({ size = 24, color, style, ...props }) => React.cr
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M12.147 3v9l6 3"})
+  }, React.createElement("path", {"d":"M12.147 3v9l6 3"})
 );
 
 export default MinaClockHand;

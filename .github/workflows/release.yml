@@ -1,0 +1,65 @@
+name: Release package
+
+on:
+  workflow_dispatch:
+    inputs:
+      package:
+        description: Public package directory to publish
+        required: true
+        type: choice
+        options:
+          - icons
+          - icons-react
+          - icons-web
+          - bru-react
+          - core-react
+          - core-solid-react
+          - core-regular-duo-react
+      dist-tag:
+        description: npm distribution tag
+        required: true
+        default: latest
+        type: string
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: npm-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment: npm
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
+        with:
+          version: 11.0.9
+
+      - name: Setup Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+          cache: pnpm
+
+      - name: Install current npm CLI
+        run: npm install --global npm@latest
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Verify source, generated output and tarballs
+        run: pnpm run release:check
+
+      - name: Publish selected package with trusted publishing
+        run: npm publish --tag "${{ inputs.dist-tag }}"
+        working-directory: packages/${{ inputs.package }}

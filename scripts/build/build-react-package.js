@@ -6,12 +6,12 @@ import {
   iconConfig as CONFIG,
   isFillIcon,
 } from '../icon-config.js';
-import { finishOutputTracking, startOutputTracking, writeFile } from './fs-utils.js';
-import { capitalize, toPascalCase } from './naming.js';
+import { createOutputWriter } from './fs-utils.js';
+import { capitalize, getVariantIconNameType, toPascalCase } from './naming.js';
 import { parseSvg } from './svg-utils.js';
 
-function createReactComponent(svgContent, componentName, pack, variant) {
-  const { viewBox, children } = parseSvg(svgContent);
+function createReactComponent(svgContent, componentName, pack, variant, sourceFile) {
+  const { viewBox, children } = parseSvg(svgContent, sourceFile);
   const childrenCode = children.length > 0 ? `, ${children.join(', ')}` : '';
   const variantProps = isFillIcon(pack, variant)
     ? "fill: 'currentColor'"
@@ -184,11 +184,9 @@ export function createPackIcon({ pack, variant, defaultVariant = 'light', sprite
 
 function createPackIconRuntimeTypes() {
   return `import React from 'react';
-import type { IconVariant } from '@zcorvus/icons/types';
 
 export interface PackIconProps<TName extends string> extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   name: TName;
-  variant?: IconVariant;
   size?: string | number;
 }
 
@@ -213,8 +211,8 @@ export declare function createSpriteComponent(spriteId: string, sprite: string):
 export declare function createPackIcon<TName extends string>(
   options: {
     pack: string;
-    variant: IconVariant | string;
-    defaultVariant?: IconVariant | string;
+    variant: string;
+    defaultVariant?: string;
     spriteId: string;
     sprite: string;
     viewBoxes: Record<TName, string>;
@@ -327,7 +325,7 @@ export function createZIcon(registry, options = {}) {
 `;
 }
 
-function createZIconRuntimeTypes() {
+export function createZIconRuntimeTypes() {
   return `import React from 'react';
 import type { IconPack, IconVariant } from '@zcorvus/icons/types';
 
@@ -341,19 +339,26 @@ export type IconRegistry = Record<string, IconPackMap>;
 export type FlatIconRegistry = Record<string, IconVariantMap>;
 export type MissingIconBehavior = 'null' | 'warn' | 'error';
 
+type IconSvgProps = Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> & {
+  size?: string | number;
+};
 type RegistryPackName<TRegistry> = Extract<keyof TRegistry, string>;
-type RegistryVariantName<TRegistry> = TRegistry extends Record<string, infer TPack>
-  ? Extract<keyof TPack, string>
-  : string;
-type RegistryIconName<TRegistry> = TRegistry extends Record<string, infer TPack>
-  ? TPack extends Record<string, infer TVariant>
-    ? Extract<keyof TVariant, string>
-    : string
-  : string;
+type RegistryVariantName<
+  TRegistry extends IconRegistry,
+  TPack extends RegistryPackName<TRegistry>,
+> = Extract<keyof TRegistry[TPack], string>;
+type RegistryIconName<
+  TRegistry extends IconRegistry,
+  TPack extends RegistryPackName<TRegistry>,
+  TVariant extends RegistryVariantName<TRegistry, TPack>,
+> = Extract<keyof TRegistry[TPack][TVariant], string>;
+type RegistryPackIconName<
+  TRegistry extends IconRegistry,
+  TPack extends RegistryPackName<TRegistry>,
+> = {
+  [TVariant in RegistryVariantName<TRegistry, TPack>]: RegistryIconName<TRegistry, TPack, TVariant>;
+}[RegistryVariantName<TRegistry, TPack>];
 type FlatPackName<TRegistry> = Extract<keyof TRegistry, string>;
-type FlatIconName<TRegistry> = TRegistry extends Record<string, infer TPack>
-  ? Extract<keyof TPack, string>
-  : string;
 
 export interface CreateZIconOptions {
   defaultVariant?: IconVariant | string;
@@ -365,19 +370,29 @@ export interface CreateZIconOptions {
   missing?: MissingIconBehavior;
 }
 
-export type CreatedZIconProps<TRegistry> = Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> & {
-  type: RegistryPackName<TRegistry>;
-  name: RegistryIconName<TRegistry>;
-  variant?: RegistryVariantName<TRegistry> | IconVariant | string;
-  size?: string | number;
-};
+export type CreatedZIconProps<TRegistry extends IconRegistry> = {
+  [TPack in RegistryPackName<TRegistry>]:
+    | (IconSvgProps & {
+        type: TPack;
+        variant?: undefined;
+        name: RegistryPackIconName<TRegistry, TPack>;
+      })
+    | {
+        [TVariant in RegistryVariantName<TRegistry, TPack>]: IconSvgProps & {
+          type: TPack;
+          variant: TVariant;
+          name: RegistryIconName<TRegistry, TPack, TVariant>;
+        };
+      }[RegistryVariantName<TRegistry, TPack>];
+}[RegistryPackName<TRegistry>];
 
-export type CreatedFlatZIconProps<TRegistry> = Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> & {
-  type: FlatPackName<TRegistry>;
-  name: FlatIconName<TRegistry>;
-  variant?: IconVariant | string;
-  size?: string | number;
-};
+export type CreatedFlatZIconProps<TRegistry extends FlatIconRegistry> = {
+  [TPack in FlatPackName<TRegistry>]: IconSvgProps & {
+    type: TPack;
+    name: Extract<keyof TRegistry[TPack], string>;
+    variant?: IconVariant | string;
+  };
+}[FlatPackName<TRegistry>];
 
 export declare function createZIcon<const TRegistry extends IconRegistry>(
   registry: TRegistry,
@@ -392,28 +407,37 @@ export declare function createZIcon<const TRegistry extends FlatIconRegistry>(
 }
 
 function createReactTypeExports() {
-  return `export type {
-  AllIconNames,
-  BruIconName,
-  CoreIconName,
-  IconPack,
-  IconVariant,
-  LanIconName,
-  MinaIconName,
-  NeoIconName,
-} from '@zcorvus/icons/types';
-`;
+  return `export type * from '@zcorvus/icons/types';\n`;
+}
+
+export function createZIconTypes(packData) {
+  const imports = [];
+  const selections = [];
+
+  for (const pack of CONFIG.packs) {
+    for (const [variant] of Object.entries(packData[pack] ?? {})) {
+      const iconNameType = getVariantIconNameType(pack, variant);
+      const variantProperty = variant === getDefaultVariant(pack)
+        ? `variant?: '${variant}'`
+        : `variant: '${variant}'`;
+
+      imports.push(iconNameType);
+      selections.push(`  | { type: '${pack}'; ${variantProperty}; name: ${iconNameType} }`);
+    }
+  }
+
+  return `import React from 'react';\nimport type { ${imports.join(', ')} } from '@zcorvus/icons/types';\n\ntype ZIconSelection =\n${selections.join('\n')};\n\n/** @deprecated Prefer pack-specific wrappers such as ZMina, ZLan, ZCore, ZNeo or ZBru. */\nexport type ZIconProps = Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> & ZIconSelection & {\n  size?: string | number;\n};\n\n/** @deprecated Prefer pack-specific wrappers such as ZMina, ZLan, ZCore, ZNeo or ZBru. */\nexport declare function ZIcon(props: ZIconProps): React.ReactElement | null;\n`;
 }
 
 export function buildReactPackage(icons, packData) {
   const distDir = path.join(CONFIG.packagesDir, 'icons-react', 'dist');
-  startOutputTracking(distDir);
+  const { writeFile, finish } = createOutputWriter(distDir);
 
   const rootExports = [`export { ZIcon } from './z-icon.js';`];
   const rootTypes = [
     `export { ZIcon } from './z-icon.js';`,
     `export type { ZIconProps } from './z-icon.js';`,
-    `export type { AllIconNames, BruIconName, CoreIconName, IconPack, IconVariant, LanIconName, MinaIconName, NeoIconName } from './types/index.js';`,
+    `export type * from './types/index.js';`,
   ];
   const zIconViewBoxImports = [];
   const zIconSpriteLoaders = [];
@@ -424,7 +448,10 @@ export function buildReactPackage(icons, packData) {
   const packsDataTypes = [];
 
   for (const icon of icons) {
-    writeFile(path.join(distDir, `${icon.publicFileName}.js`), createReactComponent(icon.svg, icon.componentName, icon.pack, icon.variant));
+    writeFile(
+      path.join(distDir, `${icon.publicFileName}.js`),
+      createReactComponent(icon.svg, icon.componentName, icon.pack, icon.variant, icon.sourceFile)
+    );
     writeFile(path.join(distDir, `${icon.publicFileName}.d.ts`), createReactComponentTypes(icon.componentName));
 
     rootExports.push(`export { ${icon.componentName} } from './${icon.publicFileName}.js';`);
@@ -446,7 +473,9 @@ export function buildReactPackage(icons, packData) {
       const fileName = `${pack}${getVariantFileSuffix(pack, variant)}`;
       const spriteName = `${pack}Sprite${suffix}`;
       const spriteId = fileName;
-      const viewBoxEntries = variantIcons.map((icon) => `  '${icon.name}': '${parseSvg(icon.svg).viewBox}'`).join(',\n');
+      const viewBoxEntries = variantIcons
+        .map((icon) => `  '${icon.name}': '${parseSvg(icon.svg, icon.sourceFile).viewBox}'`)
+        .join(',\n');
 
       writeFile(
         path.join(distDir, 'viewboxes', `${fileName}.js`),
@@ -463,7 +492,7 @@ export function buildReactPackage(icons, packData) {
       );
       writeFile(
         path.join(distDir, 'packs', `${fileName}.d.ts`),
-        `import React from 'react';\nimport type { ${capitalize(pack)}IconName } from '@zcorvus/icons/types';\nimport type { PackIconProps, ZIconSpriteProps } from './create-pack-icon.js';\n\nexport declare const ${viewBoxesName}: Record<${capitalize(pack)}IconName, string>;\nexport declare const ${spriteWrapperName}: React.FC<ZIconSpriteProps>;\nexport type ${wrapperName}Props = PackIconProps<${capitalize(pack)}IconName>;\nexport declare const ${wrapperName}: React.FC<${wrapperName}Props>;\nexport default ${wrapperName};\n`
+        `import React from 'react';\nimport type { ${getVariantIconNameType(pack, variant)} } from '@zcorvus/icons/types';\nimport type { PackIconProps, ZIconSpriteProps } from './create-pack-icon.js';\n\nexport declare const ${viewBoxesName}: Record<${getVariantIconNameType(pack, variant)}, string>;\nexport declare const ${spriteWrapperName}: React.FC<ZIconSpriteProps>;\nexport type ${wrapperName}Props = PackIconProps<${getVariantIconNameType(pack, variant)}>;\nexport declare const ${wrapperName}: React.FC<${wrapperName}Props>;\nexport default ${wrapperName};\n`
       );
 
       packIndexExports.push(`export { ${wrapperName}, ${spriteWrapperName} } from './${fileName}.js';`);
@@ -528,10 +557,10 @@ export function buildReactPackage(icons, packData) {
   );
   writeFile(
     path.join(distDir, 'z-icon.d.ts'),
-    `import React from 'react';\nimport type { AllIconNames, IconPack, IconVariant } from '@zcorvus/icons/types';\n\nexport interface ZIconProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {\n  type: IconPack;\n  name: AllIconNames;\n  variant?: IconVariant;\n  size?: string | number;\n}\n\nexport declare function ZIcon(props: ZIconProps): React.ReactElement | null;\n`
+    createZIconTypes(packData)
   );
 
   writeFile(path.join(distDir, 'index.js'), `${rootExports.join('\n')}\n`);
   writeFile(path.join(distDir, 'index.d.ts'), `${rootTypes.join('\n')}\n`);
-  finishOutputTracking();
+  return finish();
 }

@@ -9,7 +9,7 @@ export const MinaColumns = ({ size = 24, color, style, ...props }) => React.crea
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M17.5 3a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm-8 0a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"})
+  }, React.createElement("path", {"d":"M17.5 3a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm-8 0a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"})
 );
 
 export default MinaColumns;

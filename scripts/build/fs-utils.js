@@ -1,8 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 
-let activeOutput = undefined;
-
 export function ensureDir(dir) {
   fs.mkdirSync(dir, { recursive: true });
 }
@@ -11,7 +9,7 @@ export function cleanDir(dir) {
   const resolvedDir = path.resolve(dir);
   const resolvedCwd = process.cwd();
 
-  if (resolvedDir === resolvedCwd || !resolvedDir.startsWith(resolvedCwd)) {
+  if (resolvedDir === resolvedCwd || !isInsideDir(resolvedDir, resolvedCwd)) {
     throw new Error(`Refusing to clean unsafe path: ${resolvedDir}`);
   }
 
@@ -19,59 +17,14 @@ export function cleanDir(dir) {
   ensureDir(resolvedDir);
 }
 
-export function writeFile(filePath, content) {
-  ensureDir(path.dirname(filePath));
-
-  const resolvedFile = path.resolve(filePath);
-
-  if (activeOutput && isInsideDir(resolvedFile, activeOutput.root)) {
-    activeOutput.files.add(resolvedFile);
-  }
-
-  if (fs.existsSync(resolvedFile) && fs.readFileSync(resolvedFile, 'utf8') === content) {
-    return;
-  }
-
-  fs.writeFileSync(resolvedFile, content, 'utf8');
-}
-
-export function startOutputTracking(rootDir) {
-  const root = path.resolve(rootDir);
-  const resolvedCwd = process.cwd();
-
-  if (root === resolvedCwd || !isInsideDir(root, resolvedCwd)) {
-    throw new Error(`Refusing to track unsafe output path: ${root}`);
-  }
-
-  ensureDir(root);
-  activeOutput = {
-    root,
-    files: new Set(),
-  };
-}
-
-export function finishOutputTracking() {
-  if (!activeOutput) {
-    return;
-  }
-
-  const { root, files } = activeOutput;
-  const existingFiles = listFiles(root);
-
-  for (const file of existingFiles) {
-    if (!files.has(file)) {
-      fs.rmSync(file, { force: true });
-    }
-  }
-
-  removeEmptyDirs(root);
-  activeOutput = undefined;
-}
-
-function isInsideDir(target, dir) {
+export function isInsideDir(target, dir) {
   const relative = path.relative(dir, target);
 
   return relative === '' || (!relative.startsWith('..') && !path.isAbsolute(relative));
+}
+
+function normalizeText(value) {
+  return value.replace(/\r\n/g, '\n');
 }
 
 function listFiles(dir) {
@@ -97,18 +50,99 @@ function listFiles(dir) {
   return files;
 }
 
-function removeEmptyDirs(dir) {
+function removeEmptyDirs(dir, root) {
   if (!fs.existsSync(dir)) {
     return;
   }
 
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     if (entry.isDirectory()) {
-      removeEmptyDirs(path.join(dir, entry.name));
+      removeEmptyDirs(path.join(dir, entry.name), root);
     }
   }
 
-  if (dir !== activeOutput?.root && fs.readdirSync(dir).length === 0) {
+  if (dir !== root && fs.readdirSync(dir).length === 0) {
     fs.rmdirSync(dir);
   }
+}
+
+export function createOutputWriter(rootDir) {
+  const root = path.resolve(rootDir);
+  const resolvedCwd = process.cwd();
+
+  if (root === resolvedCwd || !isInsideDir(root, resolvedCwd)) {
+    throw new Error(`Refusing to track unsafe output path: ${root}`);
+  }
+
+  ensureDir(root);
+
+  const files = new Set();
+  const ensuredDirs = new Set([root]);
+  const stats = {
+    written: 0,
+    unchanged: 0,
+    removed: 0,
+  };
+  let finished = false;
+
+  function ensureOutputDir(dir) {
+    const resolvedDir = path.resolve(dir);
+
+    if (ensuredDirs.has(resolvedDir)) {
+      return;
+    }
+
+    ensureDir(resolvedDir);
+    ensuredDirs.add(resolvedDir);
+  }
+
+  function writeFile(filePath, content) {
+    if (finished) {
+      throw new Error(`Cannot write after output tracking finished: ${filePath}`);
+    }
+
+    const resolvedFile = path.resolve(filePath);
+
+    if (!isInsideDir(resolvedFile, root)) {
+      throw new Error(`Refusing to write outside output root: ${resolvedFile}`);
+    }
+
+    files.add(resolvedFile);
+    ensureOutputDir(path.dirname(resolvedFile));
+
+    if (
+      fs.existsSync(resolvedFile) &&
+      normalizeText(fs.readFileSync(resolvedFile, 'utf8')) === normalizeText(content)
+    ) {
+      stats.unchanged += 1;
+      return false;
+    }
+
+    fs.writeFileSync(resolvedFile, content, 'utf8');
+    stats.written += 1;
+    return true;
+  }
+
+  function finish() {
+    if (finished) {
+      return { ...stats };
+    }
+
+    for (const file of listFiles(root)) {
+      if (!files.has(file)) {
+        fs.rmSync(file, { force: true });
+        stats.removed += 1;
+      }
+    }
+
+    removeEmptyDirs(root, root);
+    finished = true;
+    return { ...stats };
+  }
+
+  return {
+    root,
+    writeFile,
+    finish,
+  };
 }

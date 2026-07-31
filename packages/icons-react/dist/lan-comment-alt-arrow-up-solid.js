@@ -9,7 +9,7 @@ export const LanCommentAltArrowUpSolid = ({ size = 24, color, style, ...props })
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M0 128v224c0 53 43 96 96 96h32v72c0 13.3 10.7 24 24 24 5.2 0 10.2-1.7 14.4-4.8l115.2-86.4c4.2-3.1 9.2-4.8 14.4-4.8h120c53 0 96-43 96-96V128c0-53-43-96-96-96H96C43 32 0 75 0 128m273 15 72 72c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-31-31V320c0 13.3-10.7 24-24 24s-24-10.7-24-24V217.9l-31 31c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l72-72c9.4-9.4 24.6-9.4 33.9 0z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M0 128v224c0 53 43 96 96 96h32v72c0 13.3 10.7 24 24 24 5.2 0 10.2-1.7 14.4-4.8l115.2-86.4c4.2-3.1 9.2-4.8 14.4-4.8h120c53 0 96-43 96-96V128c0-53-43-96-96-96H96C43 32 0 75 0 128m273 15 72 72c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-31-31V320c0 13.3-10.7 24-24 24s-24-10.7-24-24V217.9l-31 31c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l72-72c9.4-9.4 24.6-9.4 33.9 0z"})
 );
 
 export default LanCommentAltArrowUpSolid;

@@ -10,7 +10,7 @@ export function CoreHeartHalfSolid({ size = 24, color, style, ...props }) {
       fill: 'currentColor',
       ...props,
       style: { ...(color ? { color } : {}), ...style },
-    }, React.createElement('path', {"fill":"currentColor","d":"M65.8 77.8c61.1-61.1 160.2-61.1 221.2 0l1.4 1.4v442.5L65.8 299.1C4.7 238 4.7 138.9 65.8 77.8"})
+    }, React.createElement("path", {"fill":"currentColor","d":"M65.8 77.8c61.1-61.1 160.2-61.1 221.2 0l1.4 1.4v442.5L65.8 299.1C4.7 238 4.7 138.9 65.8 77.8"})
   );
 }
 

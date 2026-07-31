@@ -9,7 +9,7 @@ export const LanLightCeilingRegular = ({ size = 24, color, style, ...props }) =>
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M256.2 0c13.3 0 24 10.7 24 24v137.1c119.6 11.1 215.3 104.5 230 223 2.2 17.5-12.4 31.9-30 31.9H374.9c-19 46.9-65 80-118.7 80s-99.7-33.1-118.7-80H32.2c-17.7 0-32.2-14.4-30-31.9 14.7-118.5 110.5-211.8 230-223V24c0-13.3 10.7-24 24-24m-64 416c14.6 19.4 37.8 32 64 32s49.4-12.6 64-32zm266.5-48C437 276.3 354.6 208 256.2 208S75.5 276.3 53.8 368z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M256.2 0c13.3 0 24 10.7 24 24v137.1c119.6 11.1 215.3 104.5 230 223 2.2 17.5-12.4 31.9-30 31.9H374.9c-19 46.9-65 80-118.7 80s-99.7-33.1-118.7-80H32.2c-17.7 0-32.2-14.4-30-31.9 14.7-118.5 110.5-211.8 230-223V24c0-13.3 10.7-24 24-24m-64 416c14.6 19.4 37.8 32 64 32s49.4-12.6 64-32zm266.5-48C437 276.3 354.6 208 256.2 208S75.5 276.3 53.8 368z"})
 );
 
 export default LanLightCeilingRegular;

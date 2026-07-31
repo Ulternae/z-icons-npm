@@ -9,7 +9,7 @@ export const MinaLetterMCircleSolid = ({ size = 24, color, style, ...props }) =>
     fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12M9.6 7.55A.75.75 0 0 0 8.25 8v8a.75.75 0 0 0 1.5 0v-5.75l1.65 2.2a.75.75 0 0 0 1.2 0l1.65-2.2V16a.75.75 0 0 0 1.5 0V8a.75.75 0 0 0-1.35-.45l-2.4 3.2z"})
+  }, React.createElement("path", {"d":"M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12M9.6 7.55A.75.75 0 0 0 8.25 8v8a.75.75 0 0 0 1.5 0v-5.75l1.65 2.2a.75.75 0 0 0 1.2 0l1.65-2.2V16a.75.75 0 0 0 1.5 0V8a.75.75 0 0 0-1.35-.45l-2.4 3.2z"})
 );
 
 export default MinaLetterMCircleSolid;

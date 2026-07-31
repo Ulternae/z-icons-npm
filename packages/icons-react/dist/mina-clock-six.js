@@ -9,7 +9,7 @@ export const MinaClockSix = ({ size = 24, color, style, ...props }) => React.cre
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M12 6v10.5m9-4.5a9 9 0 1 1-18 0 9 9 0 0 1 18 0"})
+  }, React.createElement("path", {"d":"M12 6v10.5m9-4.5a9 9 0 1 1-18 0 9 9 0 0 1 18 0"})
 );
 
 export default MinaClockSix;

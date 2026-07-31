@@ -9,7 +9,7 @@ export const LanCircleNotchRegular = ({ size = 24, color, style, ...props }) => 
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M223.2 25c3.2 12.9-4.6 25.9-17.5 29.1C115.1 76.6 48 158.5 48 256c0 114.9 93.1 208 208 208s208-93.1 208-208c0-97.5-67.1-179.4-157.7-201.9-12.9-3.2-20.7-16.2-17.5-29.1S305 4.3 317.9 7.5C429.4 35.2 512 135.9 512 256c0 141.4-114.6 256-256 256S0 397.4 0 256C0 135.9 82.6 35.2 194.1 7.5 207 4.3 220 12.2 223.2 25"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M223.2 25c3.2 12.9-4.6 25.9-17.5 29.1C115.1 76.6 48 158.5 48 256c0 114.9 93.1 208 208 208s208-93.1 208-208c0-97.5-67.1-179.4-157.7-201.9-12.9-3.2-20.7-16.2-17.5-29.1S305 4.3 317.9 7.5C429.4 35.2 512 135.9 512 256c0 141.4-114.6 256-256 256S0 397.4 0 256C0 135.9 82.6 35.2 194.1 7.5 207 4.3 220 12.2 223.2 25"})
 );
 
 export default LanCircleNotchRegular;

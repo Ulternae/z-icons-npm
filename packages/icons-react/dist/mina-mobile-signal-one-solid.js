@@ -9,7 +9,7 @@ export const MinaMobileSignalOneSolid = ({ size = 24, color, style, ...props }) 
     fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M3 19.25a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1a.75.75 0 0 1 .75-.75"})
+  }, React.createElement("path", {"d":"M3 19.25a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1a.75.75 0 0 1 .75-.75"})
 );
 
 export default MinaMobileSignalOneSolid;

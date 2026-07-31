@@ -9,7 +9,7 @@ export const LanBanRegular = ({ size = 24, color, style, ...props }) => React.cr
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M385.1 419.1 92.9 126.9C64.8 162.4 48 207.2 48 256c0 114.9 93.1 208 208 208 48.8 0 93.7-16.8 129.1-44.9m33.9-33.9c28.1-35.5 44.9-80.3 44.9-129.1 0-114.9-93.1-208-208-208-48.8 0-93.7 16.8-129.1 44.9l292.3 292.1zM0 256a256 256 0 1 1 512 0 256 256 0 1 1-512 0"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M385.1 419.1 92.9 126.9C64.8 162.4 48 207.2 48 256c0 114.9 93.1 208 208 208 48.8 0 93.7-16.8 129.1-44.9m33.9-33.9c28.1-35.5 44.9-80.3 44.9-129.1 0-114.9-93.1-208-208-208-48.8 0-93.7 16.8-129.1 44.9l292.3 292.1zM0 256a256 256 0 1 1 512 0 256 256 0 1 1-512 0"})
 );
 
 export default LanBanRegular;

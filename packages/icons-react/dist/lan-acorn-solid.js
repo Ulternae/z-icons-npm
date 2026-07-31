@@ -9,7 +9,7 @@ export const LanAcornSolid = ({ size = 24, color, style, ...props }) => React.cr
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M399.6 240c-4.1 78.1-39 189.3-165.5 236.4-6.5 2.4-13.7 2.4-20.2 0C87.4 429.2 52.5 318.1 48.4 240h351.1zM228.8 9.6c8-10.6 23-12.8 33.6-4.8s12.7 23 4.8 33.6l-4.8 6.4c-4.4 5.9-7.9 12.4-10.3 19.2H352c53 0 96 43 96 96 0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32 0-53 43-96 96-96h106.4c3.6-17.3 10.9-33.7 21.6-48z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M399.6 240c-4.1 78.1-39 189.3-165.5 236.4-6.5 2.4-13.7 2.4-20.2 0C87.4 429.2 52.5 318.1 48.4 240h351.1zM228.8 9.6c8-10.6 23-12.8 33.6-4.8s12.7 23 4.8 33.6l-4.8 6.4c-4.4 5.9-7.9 12.4-10.3 19.2H352c53 0 96 43 96 96 0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32 0-53 43-96 96-96h106.4c3.6-17.3 10.9-33.7 21.6-48z"})
 );
 
 export default LanAcornSolid;

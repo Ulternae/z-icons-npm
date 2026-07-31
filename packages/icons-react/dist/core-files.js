@@ -9,7 +9,7 @@ export const CoreFiles = ({ size = 24, color, style, ...props }) => React.create
     fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M416 352V122.5L325.5 32H192v320zM192-32h160L480 96v256c0 35.3-28.7 64-64 64H192c-35.3 0-64-28.7-64-64V32c0-35.3 28.7-64 64-64M64 128v352h288v64H64c-35.3 0-64-28.7-64-64V96h64z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M416 352V122.5L325.5 32H192v320zM192-32h160L480 96v256c0 35.3-28.7 64-64 64H192c-35.3 0-64-28.7-64-64V32c0-35.3 28.7-64 64-64M64 128v352h288v64H64c-35.3 0-64-28.7-64-64V96h64z"})
 );
 
 export default CoreFiles;

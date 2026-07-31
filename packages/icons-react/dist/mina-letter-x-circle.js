@@ -9,7 +9,7 @@ export const MinaLetterXCircle = ({ size = 24, color, style, ...props }) => Reac
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0M9 8l6 8m-6 0 6-8"})
+  }, React.createElement("path", {"d":"M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0M9 8l6 8m-6 0 6-8"})
 );
 
 export default MinaLetterXCircle;

@@ -9,7 +9,7 @@ export const MinaAlarmPlus = ({ size = 24, color, style, ...props }) => React.cr
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M3 5.231 6.15 3M21 5.231 17.85 3M20 13a8 8 0 1 1-16 0 8 8 0 0 1 16 0M9.5 13h5M12 10.5v5"})
+  }, React.createElement("path", {"d":"M3 5.231 6.15 3M21 5.231 17.85 3M20 13a8 8 0 1 1-16 0 8 8 0 0 1 16 0M9.5 13h5M12 10.5v5"})
 );
 
 export default MinaAlarmPlus;

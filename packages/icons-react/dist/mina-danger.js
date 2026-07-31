@@ -9,7 +9,7 @@ export const MinaDanger = ({ size = 24, color, style, ...props }) => React.creat
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M12 19v-.5M12 5v10"})
+  }, React.createElement("path", {"d":"M12 19v-.5M12 5v10"})
 );
 
 export default MinaDanger;

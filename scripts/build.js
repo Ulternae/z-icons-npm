@@ -49,23 +49,19 @@ function resolveTargets(target) {
 
 function buildTarget(target, icons, packData) {
   if (target === 'icons') {
-    buildIconsPackage(icons, packData);
-    return;
+    return buildIconsPackage(icons, packData);
   }
 
   if (target === 'react') {
-    buildReactPackage(icons, packData);
-    return;
+    return buildReactPackage(icons, packData);
   }
 
   if (target === 'standalone-react') {
-    buildStandaloneReactPackages(packData);
-    return;
+    return buildStandaloneReactPackages(packData);
   }
 
   if (target === 'web') {
-    buildWebPackage(icons, packData);
-    return;
+    return buildWebPackage(icons, packData);
   }
 
   throw new Error(`Unhandled build target "${target}".`);
@@ -79,6 +75,17 @@ function printPackSummary(packData) {
   }
 }
 
+function printBuildStats(target, result) {
+  const entries = Array.isArray(result) ? result : [{ target, ...result }];
+
+  for (const entry of entries) {
+    const label = entry.packageName ?? entry.target;
+    console.log(
+      `Output ${label}: ${entry.written} written, ${entry.unchanged} unchanged, ${entry.removed} removed`
+    );
+  }
+}
+
 function main() {
   const args = parseArgs(process.argv.slice(2));
   const targets = resolveTargets(args.target);
@@ -89,7 +96,7 @@ function main() {
   const { icons, packData } = collectIcons(collectOptions);
 
   for (const target of targets) {
-    buildTarget(target, icons, packData);
+    printBuildStats(target, buildTarget(target, icons, packData));
   }
 
   printPackSummary(packData);

@@ -9,7 +9,7 @@ export const LanArrowLeftToDottedLine = ({ size = 24, color, style, ...props }) 
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M24 64a24 24 0 1 0 0 48 24 24 0 1 0 0-48m108.7 180.7c-6.2 6.2-6.2 16.4 0 22.6l144 144c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L182.6 272H496c8.8 0 16-7.2 16-16s-7.2-16-16-16H182.6l116.7-116.7c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0zM0 200a24 24 0 1 0 48 0 24 24 0 1 0-48 0m24 88a24 24 0 1 0 0 48 24 24 0 1 0 0-48M0 424a24 24 0 1 0 48 0 24 24 0 1 0-48 0"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M24 64a24 24 0 1 0 0 48 24 24 0 1 0 0-48m108.7 180.7c-6.2 6.2-6.2 16.4 0 22.6l144 144c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L182.6 272H496c8.8 0 16-7.2 16-16s-7.2-16-16-16H182.6l116.7-116.7c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0zM0 200a24 24 0 1 0 48 0 24 24 0 1 0-48 0m24 88a24 24 0 1 0 0 48 24 24 0 1 0 0-48M0 424a24 24 0 1 0 48 0 24 24 0 1 0-48 0"})
 );
 
 export default LanArrowLeftToDottedLine;

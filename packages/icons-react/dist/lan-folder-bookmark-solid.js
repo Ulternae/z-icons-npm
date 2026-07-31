@@ -9,7 +9,7 @@ export const LanFolderBookmarkSolid = ({ size = 24, color, style, ...props }) =>
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M448 448H64c-35.3 0-64-28.7-64-64V96c0-35.3 28.7-64 64-64h138.7c13.8 0 27.3 4.5 38.4 12.8l38.4 28.8c5.5 4.2 12.3 6.4 19.2 6.4H448c35.3 0 64 28.7 64 64v240c0 35.3-28.7 64-64 64M288 168v150.5c0 9.7 7.8 17.5 17.5 17.5 4.2 0 8.2-1.5 11.4-4.2L368 288l51.1 43.8c3.2 2.7 7.2 4.2 11.4 4.2 9.7 0 17.5-7.8 17.5-17.5V168c0-13.3-10.7-24-24-24H312c-13.3 0-24 10.7-24 24"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M448 448H64c-35.3 0-64-28.7-64-64V96c0-35.3 28.7-64 64-64h138.7c13.8 0 27.3 4.5 38.4 12.8l38.4 28.8c5.5 4.2 12.3 6.4 19.2 6.4H448c35.3 0 64 28.7 64 64v240c0 35.3-28.7 64-64 64M288 168v150.5c0 9.7 7.8 17.5 17.5 17.5 4.2 0 8.2-1.5 11.4-4.2L368 288l51.1 43.8c3.2 2.7 7.2 4.2 11.4 4.2 9.7 0 17.5-7.8 17.5-17.5V168c0-13.3-10.7-24-24-24H312c-13.3 0-24 10.7-24 24"})
 );
 
 export default LanFolderBookmarkSolid;

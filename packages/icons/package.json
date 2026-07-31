@@ -4,7 +4,19 @@
   "description": "Framework-agnostic SVG icon library for ZCorvus.",
   "author": "Ulqernesh Karvenae",
   "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ulternae/z-icons-npm.git",
+    "directory": "packages/icons"
+  },
+  "homepage": "https://icons.zcorvus.com/",
+  "bugs": {
+    "url": "https://github.com/Ulternae/z-icons-npm/issues"
+  },
   "type": "module",
+  "scripts": {
+    "prepack": "node ../../scripts/verify-package-ready.js ."
+  },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
@@ -14,7 +26,8 @@
   "sideEffects": false,
   "private": false,
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "exports": {
     ".": {

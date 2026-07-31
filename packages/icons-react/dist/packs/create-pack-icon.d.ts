@@ -1,9 +1,7 @@
 import React from 'react';
-import type { IconVariant } from '@zcorvus/icons/types';
 
 export interface PackIconProps<TName extends string> extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
   name: TName;
-  variant?: IconVariant;
   size?: string | number;
 }
 
@@ -28,8 +26,8 @@ export declare function createSpriteComponent(spriteId: string, sprite: string):
 export declare function createPackIcon<TName extends string>(
   options: {
     pack: string;
-    variant: IconVariant | string;
-    defaultVariant?: IconVariant | string;
+    variant: string;
+    defaultVariant?: string;
     spriteId: string;
     sprite: string;
     viewBoxes: Record<TName, string>;

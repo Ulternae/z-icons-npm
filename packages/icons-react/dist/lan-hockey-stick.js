@@ -9,7 +9,7 @@ export const LanHockeyStick = ({ size = 24, color, style, ...props }) => React.c
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M481.7-22c3.3-8.2 12.7-12.1 20.8-8.8s12.1 12.7 8.8 20.8L327.6 442.2c-17.1 42.2-58.2 69.8-103.7 69.8H80.5c-26.5 0-48-21.5-48-48v-96c0-26.5 21.5-48 48-48h262.2L481.6-22zM160.5 480h63.4c32.5 0 61.9-19.7 74.1-49.9l31.8-78.1H160.5zm-80-128c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16h48V352z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M481.7-22c3.3-8.2 12.7-12.1 20.8-8.8s12.1 12.7 8.8 20.8L327.6 442.2c-17.1 42.2-58.2 69.8-103.7 69.8H80.5c-26.5 0-48-21.5-48-48v-96c0-26.5 21.5-48 48-48h262.2L481.6-22zM160.5 480h63.4c32.5 0 61.9-19.7 74.1-49.9l31.8-78.1H160.5zm-80-128c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16h48V352z"})
 );
 
 export default LanHockeyStick;

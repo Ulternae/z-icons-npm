@@ -9,7 +9,7 @@ export const LanPercentSolid = ({ size = 24, color, style, ...props }) => React.
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M192 128a96 96 0 1 0-192 0 96 96 0 1 0 192 0m256 256a96 96 0 1 0-192 0 96 96 0 1 0 192 0m-9.4-297.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-384 384c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M192 128a96 96 0 1 0-192 0 96 96 0 1 0 192 0m256 256a96 96 0 1 0-192 0 96 96 0 1 0 192 0m-9.4-297.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-384 384c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"})
 );
 
 export default LanPercentSolid;

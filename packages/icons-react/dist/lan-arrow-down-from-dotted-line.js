@@ -9,7 +9,7 @@ export const LanArrowDownFromDottedLine = ({ size = 24, color, style, ...props }
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M180.7 507.3c6.2 6.2 16.4 6.2 22.6 0l144-144c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L208 457.4V144c0-8.8-7.2-16-16-16s-16 7.2-16 16v313.4L59.3 340.7c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6zM0 24a24 24 0 1 0 48 0 24 24 0 1 0-48 0m136 24a24 24 0 1 0 0-48 24 24 0 1 0 0 48m88-24a24 24 0 1 0 48 0 24 24 0 1 0-48 0m136 24a24 24 0 1 0 0-48 24 24 0 1 0 0 48"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M180.7 507.3c6.2 6.2 16.4 6.2 22.6 0l144-144c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L208 457.4V144c0-8.8-7.2-16-16-16s-16 7.2-16 16v313.4L59.3 340.7c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6zM0 24a24 24 0 1 0 48 0 24 24 0 1 0-48 0m136 24a24 24 0 1 0 0-48 24 24 0 1 0 0 48m88-24a24 24 0 1 0 48 0 24 24 0 1 0-48 0m136 24a24 24 0 1 0 0-48 24 24 0 1 0 0 48"})
 );
 
 export default LanArrowDownFromDottedLine;

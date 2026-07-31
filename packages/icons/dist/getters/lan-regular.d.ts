@@ -1,4 +1,4 @@
-import type { LanIconName } from '../types/index.js';
+import type { LanRegularIconName } from '../types/index.js';
 
-export declare function getLanRegularSvg(name: LanIconName): string | undefined;
+export declare function getLanRegularSvg(name: LanRegularIconName): string | undefined;
 export default getLanRegularSvg;

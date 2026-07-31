@@ -9,7 +9,7 @@ export const LanStairsRegular = ({ size = 24, color, style, ...props }) => React
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M384 56c0-13.3 10.7-24 24-24h144c13.3 0 24 10.7 24 24s-10.7 24-24 24H432v120c0 13.3-10.7 24-24 24H304v104c0 13.3-10.7 24-24 24H176v104c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24s10.7-24 24-24h104V328c0-13.3 10.7-24 24-24h104V200c0-13.3 10.7-24 24-24h104z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M384 56c0-13.3 10.7-24 24-24h144c13.3 0 24 10.7 24 24s-10.7 24-24 24H432v120c0 13.3-10.7 24-24 24H304v104c0 13.3-10.7 24-24 24H176v104c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24s10.7-24 24-24h104V328c0-13.3 10.7-24 24-24h104V200c0-13.3 10.7-24 24-24h104z"})
 );
 
 export default LanStairsRegular;

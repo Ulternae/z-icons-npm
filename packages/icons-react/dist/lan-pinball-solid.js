@@ -9,7 +9,7 @@ export const LanPinballSolid = ({ size = 24, color, style, ...props }) => React.
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M352 224a96 96 0 1 0 0-192 96 96 0 1 0 0 192m22.1 254.4c14.9 4.8 30.7-1.8 37.9-15 7.4-13.5 4.2-30.8-8.4-40.6l-246-208.3C117 180.4 56.4 185.7 22.4 226.3S-6.3 327.5 34.3 361.6c9.2 7.7 19.9 13.8 32 17.7zM64 288a32 32 0 1 1 64 0 32 32 0 1 1-64 0"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M352 224a96 96 0 1 0 0-192 96 96 0 1 0 0 192m22.1 254.4c14.9 4.8 30.7-1.8 37.9-15 7.4-13.5 4.2-30.8-8.4-40.6l-246-208.3C117 180.4 56.4 185.7 22.4 226.3S-6.3 327.5 34.3 361.6c9.2 7.7 19.9 13.8 32 17.7zM64 288a32 32 0 1 1 64 0 32 32 0 1 1-64 0"})
 );
 
 export default LanPinballSolid;

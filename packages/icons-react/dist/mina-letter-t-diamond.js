@@ -9,7 +9,7 @@ export const MinaLetterTDiamond = ({ size = 24, color, style, ...props }) => Rea
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M9 8.25h3m0 0h3m-3 0v8m-9.293-5.955a2.41 2.41 0 0 0 0 3.41l7.588 7.588a2.41 2.41 0 0 0 3.41 0l7.588-7.588a2.41 2.41 0 0 0 0-3.41l-7.588-7.588a2.41 2.41 0 0 0-3.41 0z"})
+  }, React.createElement("path", {"d":"M9 8.25h3m0 0h3m-3 0v8m-9.293-5.955a2.41 2.41 0 0 0 0 3.41l7.588 7.588a2.41 2.41 0 0 0 3.41 0l7.588-7.588a2.41 2.41 0 0 0 0-3.41l-7.588-7.588a2.41 2.41 0 0 0-3.41 0z"})
 );
 
 export default MinaLetterTDiamond;

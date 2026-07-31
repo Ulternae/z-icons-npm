@@ -9,7 +9,7 @@ export const MinaChevronUp = ({ size = 24, color, style, ...props }) => React.cr
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"m18 15-6-6-6 6"})
+  }, React.createElement("path", {"d":"m18 15-6-6-6 6"})
 );
 
 export default MinaChevronUp;

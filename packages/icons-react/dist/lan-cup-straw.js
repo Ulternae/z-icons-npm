@@ -9,7 +9,7 @@ export const LanCupStraw = ({ size = 24, color, style, ...props }) => React.crea
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M232.6-16c-21.7 0-40.8 14.6-46.4 35.6L165.8 96H16c-8.8 0-16 7.2-16 16s7.2 16 16 16h16l28.3 340c2.1 24.9 22.9 44 47.8 44h167.7c25 0 45.8-19.1 47.8-44l28.3-340h16c8.8 0 16-7.2 16-16s-7.2-16-16-16h-169l18.2-68.1c1.9-7 8.2-11.9 15.5-11.9H272c8.8 0 16-7.2 16-16s-7.2-16-16-16zM64.1 128h255.8l-28.1 337.3c-.7 8.3-7.6 14.7-15.9 14.7H108.2c-8.3 0-15.3-6.4-15.9-14.7z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M232.6-16c-21.7 0-40.8 14.6-46.4 35.6L165.8 96H16c-8.8 0-16 7.2-16 16s7.2 16 16 16h16l28.3 340c2.1 24.9 22.9 44 47.8 44h167.7c25 0 45.8-19.1 47.8-44l28.3-340h16c8.8 0 16-7.2 16-16s-7.2-16-16-16h-169l18.2-68.1c1.9-7 8.2-11.9 15.5-11.9H272c8.8 0 16-7.2 16-16s-7.2-16-16-16zM64.1 128h255.8l-28.1 337.3c-.7 8.3-7.6 14.7-15.9 14.7H108.2c-8.3 0-15.3-6.4-15.9-14.7z"})
 );
 
 export default LanCupStraw;

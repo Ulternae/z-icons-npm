@@ -9,7 +9,7 @@ export const LanMagnifyingGlass = ({ size = 24, color, style, ...props }) => Rea
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M384 208a176 176 0 1 0-352 0 176 176 0 1 0 352 0m-40.7 158c-36.3 31.2-83.6 50-135.3 50C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208c0 51.7-18.8 99-50 135.3l141.3 141.4c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M384 208a176 176 0 1 0-352 0 176 176 0 1 0 352 0m-40.7 158c-36.3 31.2-83.6 50-135.3 50C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208c0 51.7-18.8 99-50 135.3l141.3 141.4c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0z"})
 );
 
 export default LanMagnifyingGlass;

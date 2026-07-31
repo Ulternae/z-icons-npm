@@ -9,7 +9,7 @@ export const LanSquareUserSolid = ({ size = 24, color, style, ...props }) => Rea
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm282 333.3c17.4 23.5-5.3 50.7-34.5 50.7h-175c-29.2 0-51.9-27.2-34.5-50.7 20.4-27.5 53.1-45.3 90-45.3h64c36.9 0 69.6 17.8 90 45.3M224 128a72 72 0 1 1 0 144 72 72 0 1 1 0-144"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm282 333.3c17.4 23.5-5.3 50.7-34.5 50.7h-175c-29.2 0-51.9-27.2-34.5-50.7 20.4-27.5 53.1-45.3 90-45.3h64c36.9 0 69.6 17.8 90 45.3M224 128a72 72 0 1 1 0 144 72 72 0 1 1 0-144"})
 );
 
 export default LanSquareUserSolid;

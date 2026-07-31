@@ -9,7 +9,7 @@ export const MinaChartPieOne = ({ size = 24, color, style, ...props }) => React.
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9h-9m0 9a9 9 0 1 1 0-18m0 18v-9m0-9v9"})
+  }, React.createElement("path", {"d":"M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9h-9m0 9a9 9 0 1 1 0-18m0 18v-9m0-9v9"})
 );
 
 export default MinaChartPieOne;

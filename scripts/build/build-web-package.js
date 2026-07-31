@@ -5,7 +5,7 @@ import {
   getVariantFileSuffix,
   iconConfig as CONFIG,
 } from '../icon-config.js';
-import { finishOutputTracking, startOutputTracking, writeFile } from './fs-utils.js';
+import { createOutputWriter } from './fs-utils.js';
 import { capitalize } from './naming.js';
 
 function createWebElementRuntime() {
@@ -312,7 +312,7 @@ export declare function injectZIconSprite(spriteId: string, sprite: string): Ele
 
 export function buildWebPackage(icons, packData) {
   const distDir = path.join(CONFIG.packagesDir, 'icons-web', 'dist');
-  startOutputTracking(distDir);
+  const { writeFile, finish } = createOutputWriter(distDir);
 
   writeFile(path.join(distDir, 'create.js'), createWebElementRuntime());
   writeFile(path.join(distDir, 'create.d.ts'), createWebElementTypes());
@@ -389,5 +389,5 @@ export function buildWebPackage(icons, packData) {
 
   writeFile(path.join(distDir, 'index.js'), `${rootExports.filter((line) => !line.startsWith('export type')).join('\n')}\n`);
   writeFile(path.join(distDir, 'index.d.ts'), `${rootExports.join('\n')}\n`);
-  finishOutputTracking();
+  return finish();
 }

@@ -9,7 +9,7 @@ export const LanTurnDownLeft = ({ size = 24, color, style, ...props }) => React.
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c9.2 9.2 22.9 11.9 34.9 6.9S192 396.9 192 384v-64h160c88.4 0 160-71.6 160-160V96c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v64c0 17.7-14.3 32-32 32H192v-64c0-12.9-7.8-24.6-19.8-29.6s-25.7-2.2-34.9 6.9l-128 128zM32 256l128-128v80c0 8.8 7.2 16 16 16h176c35.3 0 64-28.7 64-64V96h64v64c0 70.7-57.3 128-128 128H176c-8.8 0-16 7.2-16 16v80z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c9.2 9.2 22.9 11.9 34.9 6.9S192 396.9 192 384v-64h160c88.4 0 160-71.6 160-160V96c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v64c0 17.7-14.3 32-32 32H192v-64c0-12.9-7.8-24.6-19.8-29.6s-25.7-2.2-34.9 6.9l-128 128zM32 256l128-128v80c0 8.8 7.2 16 16 16h176c35.3 0 64-28.7 64-64V96h64v64c0 70.7-57.3 128-128 128H176c-8.8 0-16 7.2-16 16v80z"})
 );
 
 export default LanTurnDownLeft;

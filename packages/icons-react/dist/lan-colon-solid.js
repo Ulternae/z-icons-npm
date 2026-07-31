@@ -9,7 +9,7 @@ export const LanColonSolid = ({ size = 24, color, style, ...props }) => React.cr
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M64 192a64 64 0 1 0 0-128 64 64 0 1 0 0 128m0 256c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M64 192a64 64 0 1 0 0-128 64 64 0 1 0 0 128m0 256c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64"})
 );
 
 export default LanColonSolid;

@@ -9,7 +9,7 @@ export const LanComputerMouseSolid = ({ size = 24, color, style, ...props }) => 
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M0 192h168V0h-8C71.6 0 0 71.6 0 160zm0 48v112c0 88.4 71.6 160 160 160h64c88.4 0 160-71.6 160-160V240zm384-48v-32C384 71.6 312.4 0 224 0h-8v192z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M0 192h168V0h-8C71.6 0 0 71.6 0 160zm0 48v112c0 88.4 71.6 160 160 160h64c88.4 0 160-71.6 160-160V240zm384-48v-32C384 71.6 312.4 0 224 0h-8v192z"})
 );
 
 export default LanComputerMouseSolid;

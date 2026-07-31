@@ -9,7 +9,7 @@ export const LanClockTwoThirtyThin = ({ size = 24, color, style, ...props }) => 
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M16 256a240 240 0 1 0 480 0 240 240 0 1 0-480 0m496 0a256 256 0 1 1-512 0 256 256 0 1 1 512 0M248 408V256c0-2.7 1.3-5.2 3.6-6.7l96-64c3.7-2.5 8.6-1.5 11.1 2.2s1.5 8.6-2.2 11.1L264 260.3V408c0 4.4-3.6 8-8 8s-8-3.6-8-8"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M16 256a240 240 0 1 0 480 0 240 240 0 1 0-480 0m496 0a256 256 0 1 1-512 0 256 256 0 1 1 512 0M248 408V256c0-2.7 1.3-5.2 3.6-6.7l96-64c3.7-2.5 8.6-1.5 11.1 2.2s1.5 8.6-2.2 11.1L264 260.3V408c0 4.4-3.6 8-8 8s-8-3.6-8-8"})
 );
 
 export default LanClockTwoThirtyThin;

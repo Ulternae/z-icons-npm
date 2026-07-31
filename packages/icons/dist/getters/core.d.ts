@@ -1,4 +1,4 @@
-import type { CoreIconName } from '../types/index.js';
+import type { CoreRegularIconName } from '../types/index.js';
 
-export declare function getCoreSvg(name: CoreIconName): string | undefined;
+export declare function getCoreSvg(name: CoreRegularIconName): string | undefined;
 export default getCoreSvg;

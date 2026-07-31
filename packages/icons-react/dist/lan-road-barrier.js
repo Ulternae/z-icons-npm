@@ -9,7 +9,7 @@ export const LanRoadBarrier = ({ size = 24, color, style, ...props }) => React.c
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M16 32c8.8 0 16 7.2 16 16v32h576V48c0-8.8 7.2-16 16-16s16 7.2 16 16v416c0 8.8-7.2 16-16 16s-16-7.2-16-16V304H32v160c0 8.8-7.2 16-16 16s-16-7.2-16-16V48c0-8.8 7.2-16 16-16m592 240V112h-38.1l-80 160zm-576 0h38.1l80-160H32zm374.1-160h-92.2l-80 160h92.2zm35.8 0-80 160h92.2l80-160zm-256 0-80 160h92.2l80-160z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M16 32c8.8 0 16 7.2 16 16v32h576V48c0-8.8 7.2-16 16-16s16 7.2 16 16v416c0 8.8-7.2 16-16 16s-16-7.2-16-16V304H32v160c0 8.8-7.2 16-16 16s-16-7.2-16-16V48c0-8.8 7.2-16 16-16m592 240V112h-38.1l-80 160zm-576 0h38.1l80-160H32zm374.1-160h-92.2l-80 160h92.2zm35.8 0-80 160h92.2l80-160zm-256 0-80 160h92.2l80-160z"})
 );
 
 export default LanRoadBarrier;

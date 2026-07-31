@@ -9,7 +9,7 @@ export const LanToggleOffSolid = ({ size = 24, color, style, ...props }) => Reac
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M384 128c70.7 0 128 57.3 128 128s-57.3 128-128 128H192c-70.7 0-128-57.3-128-128s57.3-128 128-128zm192 128c0-106-86-192-192-192H192C86 64 0 150 0 256s86 192 192 192h192c106 0 192-86 192-192m-384 80a80 80 0 1 0 0-160 80 80 0 1 0 0 160"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M384 128c70.7 0 128 57.3 128 128s-57.3 128-128 128H192c-70.7 0-128-57.3-128-128s57.3-128 128-128zm192 128c0-106-86-192-192-192H192C86 64 0 150 0 256s86 192 192 192h192c106 0 192-86 192-192m-384 80a80 80 0 1 0 0-160 80 80 0 1 0 0 160"})
 );
 
 export default LanToggleOffSolid;

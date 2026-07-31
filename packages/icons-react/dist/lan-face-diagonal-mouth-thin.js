@@ -9,7 +9,7 @@ export const LanFaceDiagonalMouthThin = ({ size = 24, color, style, ...props }) 
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M496 256a240 240 0 1 0-480 0 240 240 0 1 0 480 0M0 256a256 256 0 1 1 512 0 256 256 0 1 1-512 0m370.2 55.7-224 64c-4.2 1.2-8.7-1.2-9.9-5.5s1.2-8.7 5.5-9.9l224-64c4.2-1.2 8.7 1.2 9.9 5.5s-1.2 8.7-5.5 9.9M160 208a16 16 0 1 1 32 0 16 16 0 1 1-32 0m176-16a16 16 0 1 1 0 32 16 16 0 1 1 0-32"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M496 256a240 240 0 1 0-480 0 240 240 0 1 0 480 0M0 256a256 256 0 1 1 512 0 256 256 0 1 1-512 0m370.2 55.7-224 64c-4.2 1.2-8.7-1.2-9.9-5.5s1.2-8.7 5.5-9.9l224-64c4.2-1.2 8.7 1.2 9.9 5.5s-1.2 8.7-5.5 9.9M160 208a16 16 0 1 1 32 0 16 16 0 1 1-32 0m176-16a16 16 0 1 1 0 32 16 16 0 1 1 0-32"})
 );
 
 export default LanFaceDiagonalMouthThin;

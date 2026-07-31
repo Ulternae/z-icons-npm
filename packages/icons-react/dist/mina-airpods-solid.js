@@ -9,7 +9,7 @@ export const MinaAirpodsSolid = ({ size = 24, color, style, ...props }) => React
     fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M6.5 3.75a4.25 4.25 0 0 0-.25 8.493V18a2.25 2.25 0 0 0 4.5 0V8A4.25 4.25 0 0 0 6.5 3.75m11 0A4.25 4.25 0 0 0 13.25 8v10a2.25 2.25 0 0 0 4.5 0v-5.757a4.25 4.25 0 0 0-.25-8.493"})
+  }, React.createElement("path", {"d":"M6.5 3.75a4.25 4.25 0 0 0-.25 8.493V18a2.25 2.25 0 0 0 4.5 0V8A4.25 4.25 0 0 0 6.5 3.75m11 0A4.25 4.25 0 0 0 13.25 8v10a2.25 2.25 0 0 0 4.5 0v-5.757a4.25 4.25 0 0 0-.25-8.493"})
 );
 
 export default MinaAirpodsSolid;

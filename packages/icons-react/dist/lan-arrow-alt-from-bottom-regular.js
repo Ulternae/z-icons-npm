@@ -9,7 +9,7 @@ export const LanArrowAltFromBottomRegular = ({ size = 24, color, style, ...props
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M209 7c-9.4-9.4-24.6-9.4-33.9 0L31 151c-6.9 6.9-8.9 17.2-5.2 26.2S38.3 192 48 192h64v144c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V192h64c9.7 0 18.5-5.8 22.2-14.8s1.7-19.3-5.2-26.2zm15 249v80h-64V168c0-13.3-10.7-24-24-24h-30.1L192 57.9l86.1 86.1H248c-13.3 0-24 10.7-24 24zM0 488c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24s-10.7-24-24-24H24c-13.3 0-24 10.7-24 24"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M209 7c-9.4-9.4-24.6-9.4-33.9 0L31 151c-6.9 6.9-8.9 17.2-5.2 26.2S38.3 192 48 192h64v144c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V192h64c9.7 0 18.5-5.8 22.2-14.8s1.7-19.3-5.2-26.2zm15 249v80h-64V168c0-13.3-10.7-24-24-24h-30.1L192 57.9l86.1 86.1H248c-13.3 0-24 10.7-24 24zM0 488c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24s-10.7-24-24-24H24c-13.3 0-24 10.7-24 24"})
 );
 
 export default LanArrowAltFromBottomRegular;

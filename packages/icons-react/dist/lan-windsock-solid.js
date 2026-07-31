@@ -9,7 +9,7 @@ export const LanWindsockSolid = ({ size = 24, color, style, ...props }) => React
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M64 32C64 14.3 49.7 0 32 0S0 14.3 0 32v448c0 17.7 14.3 32 32 32s32-14.3 32-32V320h64v8.6c0 20.3 18.7 35.5 38.5 31.3l41.5-8.6V64.6L166.5 56C146.6 51.9 128 67 128 87.3v8.6H64v-64zm64 112v128H64V144zm128-69.3v266.7l112-23.3v-220L256 74.8zm230.5 218.6c14.8-3.1 25.5-16.2 25.5-31.3V154c0-15.2-10.6-28.2-25.5-31.3L416 108v200z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M64 32C64 14.3 49.7 0 32 0S0 14.3 0 32v448c0 17.7 14.3 32 32 32s32-14.3 32-32V320h64v8.6c0 20.3 18.7 35.5 38.5 31.3l41.5-8.6V64.6L166.5 56C146.6 51.9 128 67 128 87.3v8.6H64v-64zm64 112v128H64V144zm128-69.3v266.7l112-23.3v-220L256 74.8zm230.5 218.6c14.8-3.1 25.5-16.2 25.5-31.3V154c0-15.2-10.6-28.2-25.5-31.3L416 108v200z"})
 );
 
 export default LanWindsockSolid;

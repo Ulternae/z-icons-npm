@@ -9,7 +9,7 @@ export const LanH1 = ({ size = 24, color, style, ...props }) => React.createElem
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M32 80c0-8.8-7.2-16-16-16S0 71.2 0 80v352c0 8.8 7.2 16 16 16s16-7.2 16-16V272h192v160c0 8.8 7.2 16 16 16s16-7.2 16-16V80c0-8.8-7.2-16-16-16s-16 7.2-16 16v160H32zm400 0c0-5.5-2.9-10.7-7.6-13.6s-10.6-3.2-15.6-.7l-80 40c-7.9 4-11.1 13.6-7.2 21.5s13.6 11.1 21.5 7.2l56.8-28.4v310.1h-64c-8.8 0-16 7.2-16 16s7.2 16 16 16h160c8.8 0 16-7.2 16-16s-7.2-16-16-16h-64v-336z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M32 80c0-8.8-7.2-16-16-16S0 71.2 0 80v352c0 8.8 7.2 16 16 16s16-7.2 16-16V272h192v160c0 8.8 7.2 16 16 16s16-7.2 16-16V80c0-8.8-7.2-16-16-16s-16 7.2-16 16v160H32zm400 0c0-5.5-2.9-10.7-7.6-13.6s-10.6-3.2-15.6-.7l-80 40c-7.9 4-11.1 13.6-7.2 21.5s13.6 11.1 21.5 7.2l56.8-28.4v310.1h-64c-8.8 0-16 7.2-16 16s7.2 16 16 16h160c8.8 0 16-7.2 16-16s-7.2-16-16-16h-64v-336z"})
 );
 
 export default LanH1;

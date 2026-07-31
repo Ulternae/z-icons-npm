@@ -10,7 +10,7 @@ export function CoreMugSaucerSolid({ size = 24, color, style, ...props }) {
       fill: 'currentColor',
       ...props,
       style: { ...(color ? { color } : {}), ...style },
-    }, React.createElement('path', {"fill":"currentColor","d":"M96 32H64v224c0 70.7 57.3 128 128 128h128c70.7 0 128-57.3 128-128h16c61.9 0 112-50.1 112-112S525.9 32 464 32zm352 64h16c26.5 0 48 21.5 48 48s-21.5 48-48 48h-16zm-32 416c53 0 96-43 96-96h-64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32H0c0 53 43 96 96 96z"})
+    }, React.createElement("path", {"fill":"currentColor","d":"M96 32H64v224c0 70.7 57.3 128 128 128h128c70.7 0 128-57.3 128-128h16c61.9 0 112-50.1 112-112S525.9 32 464 32zm352 64h16c26.5 0 48 21.5 48 48s-21.5 48-48 48h-16zm-32 416c53 0 96-43 96-96h-64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32H0c0 53 43 96 96 96z"})
   );
 }
 

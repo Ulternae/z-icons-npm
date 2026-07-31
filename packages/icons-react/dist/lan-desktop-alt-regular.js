@@ -9,7 +9,7 @@ export const LanDesktopAltRegular = ({ size = 24, color, style, ...props }) => R
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M448 80c8.8 0 16 7.2 16 16v176H48V96c0-8.8 7.2-16 16-16zm16 240v32c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16v-32zM64 32C28.7 32 0 60.7 0 96v256c0 35.3 28.7 64 64 64h115.7l-8 48H120c-13.3 0-24 10.7-24 24s10.7 24 24 24h272c13.3 0 24-10.7 24-24s-10.7-24-24-24h-51.7l-8-48H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm156.3 432 8-48h55.3l8 48z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M448 80c8.8 0 16 7.2 16 16v176H48V96c0-8.8 7.2-16 16-16zm16 240v32c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16v-32zM64 32C28.7 32 0 60.7 0 96v256c0 35.3 28.7 64 64 64h115.7l-8 48H120c-13.3 0-24 10.7-24 24s10.7 24 24 24h272c13.3 0 24-10.7 24-24s-10.7-24-24-24h-51.7l-8-48H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm156.3 432 8-48h55.3l8 48z"})
 );
 
 export default LanDesktopAltRegular;

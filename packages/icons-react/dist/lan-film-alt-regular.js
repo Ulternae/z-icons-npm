@@ -9,7 +9,7 @@ export const LanFilmAltRegular = ({ size = 24, color, style, ...props }) => Reac
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M160 432h128V80H160zM112 80H64c-8.8 0-16 7.2-16 16v32h64zm0 96H48v56h64zm0 104H48v56h64zm0 104H48v32c0 8.8 7.2 16 16 16h48zM336 80v48h64V96c0-8.8-7.2-16-16-16zm64 96h-64v56h64zm0 104h-64v56h64zm0 104h-64v48h48c8.8 0 16-7.2 16-16zM64 32h320c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96c0-35.3 28.7-64 64-64"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M160 432h128V80H160zM112 80H64c-8.8 0-16 7.2-16 16v32h64zm0 96H48v56h64zm0 104H48v56h64zm0 104H48v32c0 8.8 7.2 16 16 16h48zM336 80v48h64V96c0-8.8-7.2-16-16-16zm64 96h-64v56h64zm0 104h-64v56h64zm0 104h-64v48h48c8.8 0 16-7.2 16-16zM64 32h320c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96c0-35.3 28.7-64 64-64"})
 );
 
 export default LanFilmAltRegular;

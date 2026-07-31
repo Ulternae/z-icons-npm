@@ -9,7 +9,7 @@ export const LanHandHoldingSolid = ({ size = 24, color, style, ...props }) => Re
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"m66.7 384 42.5-42.5c24-24 56.6-37.5 90.5-37.5H352c17.7 0 32 14.3 32 32s-14.3 32-32 32h-72c-13.3 0-24 10.7-24 24s10.7 24 24 24h112.6l119.7-88.2c17.8-13.1 42.8-9.3 55.9 8.5s9.3 42.8-8.5 55.9l-126.6 93.3c-23.4 17.2-51.6 26.5-80.7 26.5H32c-17.7 0-32-14.3-32-32v-64c0-17.7 14.3-32 32-32z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"m66.7 384 42.5-42.5c24-24 56.6-37.5 90.5-37.5H352c17.7 0 32 14.3 32 32s-14.3 32-32 32h-72c-13.3 0-24 10.7-24 24s10.7 24 24 24h112.6l119.7-88.2c17.8-13.1 42.8-9.3 55.9 8.5s9.3 42.8-8.5 55.9l-126.6 93.3c-23.4 17.2-51.6 26.5-80.7 26.5H32c-17.7 0-32-14.3-32-32v-64c0-17.7 14.3-32 32-32z"})
 );
 
 export default LanHandHoldingSolid;

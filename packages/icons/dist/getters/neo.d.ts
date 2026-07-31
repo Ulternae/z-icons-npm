@@ -1,4 +1,4 @@
-import type { NeoIconName } from '../types/index.js';
+import type { NeoRegularIconName } from '../types/index.js';
 
-export declare function getNeoSvg(name: NeoIconName): string | undefined;
+export declare function getNeoSvg(name: NeoRegularIconName): string | undefined;
 export default getNeoSvg;

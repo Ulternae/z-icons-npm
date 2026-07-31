@@ -9,7 +9,7 @@ export const MinaDangerCircle = ({ size = 24, color, style, ...props }) => React
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0m-9-4.373v5.5m0 3.246v-.5"})
+  }, React.createElement("path", {"d":"M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0m-9-4.373v5.5m0 3.246v-.5"})
 );
 
 export default MinaDangerCircle;

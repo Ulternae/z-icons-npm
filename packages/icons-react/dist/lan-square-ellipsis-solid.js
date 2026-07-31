@@ -9,7 +9,7 @@ export const LanSquareEllipsisSolid = ({ size = 24, color, style, ...props }) =>
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64zM256 256a32 32 0 1 1-64 0 32 32 0 1 1 64 0m64-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64m-160 32a32 32 0 1 1-64 0 32 32 0 1 1 64 0"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64zM256 256a32 32 0 1 1-64 0 32 32 0 1 1 64 0m64-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64m-160 32a32 32 0 1 1-64 0 32 32 0 1 1 64 0"})
 );
 
 export default LanSquareEllipsisSolid;

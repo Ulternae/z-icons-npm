@@ -9,7 +9,7 @@ export const LanGrateRegular = ({ size = 24, color, style, ...props }) => React.
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M56 32C25.1 32 0 57.1 0 88v336c0 30.9 25.1 56 56 56h336c30.9 0 56-25.1 56-56V88c0-30.9-25.1-56-56-56zm40 48v152H48V88c0-4.4 3.6-8 8-8zM48 280h48v152H56c-4.4 0-8-3.6-8-8zm96 152V280h56v152zm104 0V280h56v152zm104 0V280h48v144c0 4.4-3.6 8-8 8zm48-200h-48V80h40c4.4 0 8 3.6 8 8zM304 80v152h-56V80zm-104 0v152h-56V80z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M56 32C25.1 32 0 57.1 0 88v336c0 30.9 25.1 56 56 56h336c30.9 0 56-25.1 56-56V88c0-30.9-25.1-56-56-56zm40 48v152H48V88c0-4.4 3.6-8 8-8zM48 280h48v152H56c-4.4 0-8-3.6-8-8zm96 152V280h56v152zm104 0V280h56v152zm104 0V280h48v144c0 4.4-3.6 8-8 8zm48-200h-48V80h40c4.4 0 8 3.6 8 8zM304 80v152h-56V80zm-104 0v152h-56V80z"})
 );
 
 export default LanGrateRegular;

@@ -9,7 +9,7 @@ export const LanSeatAirlineSolid = ({ size = 24, color, style, ...props }) => Re
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M32 0c17.7 0 32 14.3 32 32v115c0 5.2.8 10.3 2.5 15.2l9.9 29.8H288c17.7 0 32 14.3 32 32s-14.3 32-32 32H97.7l14 42.1c4.4 13.1 16.6 21.9 30.4 21.9H352c17.7 0 32 14.3 32 32s-14.3 32-32 32H142.1c-41.3 0-78-26.4-91.1-65.6l-45.3-136C1.9 171 0 159.1 0 147V32C0 14.3 14.3 0 32 0m0 480c0-17.7 14.3-32 32-32h288c17.7 0 32 14.3 32 32s-14.3 32-32 32H64c-17.7 0-32-14.3-32-32"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M32 0c17.7 0 32 14.3 32 32v115c0 5.2.8 10.3 2.5 15.2l9.9 29.8H288c17.7 0 32 14.3 32 32s-14.3 32-32 32H97.7l14 42.1c4.4 13.1 16.6 21.9 30.4 21.9H352c17.7 0 32 14.3 32 32s-14.3 32-32 32H142.1c-41.3 0-78-26.4-91.1-65.6l-45.3-136C1.9 171 0 159.1 0 147V32C0 14.3 14.3 0 32 0m0 480c0-17.7 14.3-32 32-32h288c17.7 0 32 14.3 32 32s-14.3 32-32 32H64c-17.7 0-32-14.3-32-32"})
 );
 
 export default LanSeatAirlineSolid;

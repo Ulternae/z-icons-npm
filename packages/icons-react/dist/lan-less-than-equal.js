@@ -9,7 +9,7 @@ export const LanLessThanEqual = ({ size = 24, color, style, ...props }) => React
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M437.2 63.1c8.3-2.9 12.8-12 9.9-20.4s-12-12.8-20.4-9.9l-416 144C4.3 179.1 0 185.2 0 192s4.3 12.9 10.8 15.1l416 144c8.4 2.9 17.5-1.5 20.4-9.9s-1.5-17.5-9.9-20.4L64.9 192zM16 448c-8.8 0-16 7.2-16 16s7.2 16 16 16h416c8.8 0 16-7.2 16-16s-7.2-16-16-16z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M437.2 63.1c8.3-2.9 12.8-12 9.9-20.4s-12-12.8-20.4-9.9l-416 144C4.3 179.1 0 185.2 0 192s4.3 12.9 10.8 15.1l416 144c8.4 2.9 17.5-1.5 20.4-9.9s-1.5-17.5-9.9-20.4L64.9 192zM16 448c-8.8 0-16 7.2-16 16s7.2 16 16 16h416c8.8 0 16-7.2 16-16s-7.2-16-16-16z"})
 );
 
 export default LanLessThanEqual;

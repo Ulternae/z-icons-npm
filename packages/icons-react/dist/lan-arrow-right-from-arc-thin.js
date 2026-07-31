@@ -9,7 +9,7 @@ export const LanArrowRightFromArcThin = ({ size = 24, color, style, ...props }) 
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M16 256C16 123.5 123.5 16 256 16c4.4 0 8-3.6 8-8s-3.6-8-8-8C114.6 0 0 114.6 0 256s114.6 256 256 256c4.4 0 8-3.6 8-8s-3.6-8-8-8C123.5 496 16 388.5 16 256m373.7-125.7c-3.1-3.1-8.2-3.1-11.3 0s-3.1 8.2 0 11.3L484.7 248H168c-4.4 0-8 3.6-8 8s3.6 8 8 8h316.7L378.4 370.3c-3.1 3.1-3.1 8.2 0 11.3s8.2 3.1 11.3 0l120-120c1.5-1.5 2.3-3.5 2.3-5.7s-.8-4.2-2.3-5.7l-120-120z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M16 256C16 123.5 123.5 16 256 16c4.4 0 8-3.6 8-8s-3.6-8-8-8C114.6 0 0 114.6 0 256s114.6 256 256 256c4.4 0 8-3.6 8-8s-3.6-8-8-8C123.5 496 16 388.5 16 256m373.7-125.7c-3.1-3.1-8.2-3.1-11.3 0s-3.1 8.2 0 11.3L484.7 248H168c-4.4 0-8 3.6-8 8s3.6 8 8 8h316.7L378.4 370.3c-3.1 3.1-3.1 8.2 0 11.3s8.2 3.1 11.3 0l120-120c1.5-1.5 2.3-3.5 2.3-5.7s-.8-4.2-2.3-5.7l-120-120z"})
 );
 
 export default LanArrowRightFromArcThin;

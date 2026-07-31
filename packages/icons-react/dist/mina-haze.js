@@ -9,7 +9,7 @@ export const MinaHaze = ({ size = 24, color, style, ...props }) => React.createE
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M15.5 13a3.5 3.5 0 1 0-7 0M12 3.5v2M5.898 6.898l1.278 1.278M3 12.9h1.8m14.2 0h1.8m-4.176-4.724 1.278-1.278M21 17H3m18 3.5H3"})
+  }, React.createElement("path", {"d":"M15.5 13a3.5 3.5 0 1 0-7 0M12 3.5v2M5.898 6.898l1.278 1.278M3 12.9h1.8m14.2 0h1.8m-4.176-4.724 1.278-1.278M21 17H3m18 3.5H3"})
 );
 
 export default MinaHaze;

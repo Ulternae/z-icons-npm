@@ -9,7 +9,7 @@ export const MinaArrowRight = ({ size = 24, color, style, ...props }) => React.c
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M4.5 12h15m0 0-5.625-6m5.625 6-5.625 6"})
+  }, React.createElement("path", {"d":"M4.5 12h15m0 0-5.625-6m5.625 6-5.625 6"})
 );
 
 export default MinaArrowRight;

@@ -9,7 +9,7 @@ export const LanBriefcaseRegular = ({ size = 24, color, style, ...props }) => Re
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M192 56v40h128V56c0-4.4-3.6-8-8-8H200c-4.4 0-8 3.6-8 8m-48 40V56c0-30.9 25.1-56 56-56h112c30.9 0 56 25.1 56 56v40h80c35.3 0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64zM48 304v112c0 8.8 7.2 16 16 16h384c8.8 0 16-7.2 16-16V304H320v16c0 17.7-14.3 32-32 32h-64c-17.7 0-32-14.3-32-32v-16zm144-48h272v-96c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16v96z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M192 56v40h128V56c0-4.4-3.6-8-8-8H200c-4.4 0-8 3.6-8 8m-48 40V56c0-30.9 25.1-56 56-56h112c30.9 0 56 25.1 56 56v40h80c35.3 0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64zM48 304v112c0 8.8 7.2 16 16 16h384c8.8 0 16-7.2 16-16V304H320v16c0 17.7-14.3 32-32 32h-64c-17.7 0-32-14.3-32-32v-16zm144-48h272v-96c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16v96z"})
 );
 
 export default LanBriefcaseRegular;

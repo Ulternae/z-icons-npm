@@ -9,7 +9,7 @@ export const LanCheckDoubleThin = ({ size = 24, color, style, ...props }) => Rea
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M242.4 40.7c2.6-3.6 1.8-8.6-1.7-11.2s-8.6-1.9-11.2 1.7L91.1 219.8l-65.4-65.5c-3.1-3.1-8.2-3.1-11.3 0s-3.1 8.2 0 11.3l72 72c1.6 1.6 3.9 2.5 6.3 2.3s4.5-1.4 5.8-3.2l144-196zm134 130c2.6-3.6 1.8-8.6-1.7-11.2s-8.6-1.9-11.2 1.7L153.1 447.8 51.7 346.3c-3.1-3.1-8.2-3.1-11.3 0s-3.1 8.2 0 11.3l108 108c1.6 1.7 3.9 2.5 6.3 2.3s4.5-1.4 5.8-3.2l216-294z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M242.4 40.7c2.6-3.6 1.8-8.6-1.7-11.2s-8.6-1.9-11.2 1.7L91.1 219.8l-65.4-65.5c-3.1-3.1-8.2-3.1-11.3 0s-3.1 8.2 0 11.3l72 72c1.6 1.6 3.9 2.5 6.3 2.3s4.5-1.4 5.8-3.2l144-196zm134 130c2.6-3.6 1.8-8.6-1.7-11.2s-8.6-1.9-11.2 1.7L153.1 447.8 51.7 346.3c-3.1-3.1-8.2-3.1-11.3 0s-3.1 8.2 0 11.3l108 108c1.6 1.7 3.9 2.5 6.3 2.3s4.5-1.4 5.8-3.2l216-294z"})
 );
 
 export default LanCheckDoubleThin;

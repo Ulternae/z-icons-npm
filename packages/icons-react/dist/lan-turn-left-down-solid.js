@@ -9,7 +9,7 @@ export const LanTurnLeftDownSolid = ({ size = 24, color, style, ...props }) => R
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M214.6 502.6c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9S51.1 320 64 320h64V160C128 71.6 199.6 0 288 0h64c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32h-64c-17.7 0-32 14.3-32 32v160h64c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M214.6 502.6c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9S51.1 320 64 320h64V160C128 71.6 199.6 0 288 0h64c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32h-64c-17.7 0-32 14.3-32 32v160h64c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128z"})
 );
 
 export default LanTurnLeftDownSolid;

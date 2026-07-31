@@ -9,7 +9,7 @@ export const LanStoolRegular = ({ size = 24, color, style, ...props }) => React.
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M352 32c17.7 0 32 14.3 32 32v80c0 17.7-14.3 32-32 32h-33.3L344 453.8c1.2 13.2-8.6 24.9-21.8 26.1s-24.9-8.5-26.1-21.7L283.5 320h-183L87.9 458.2c-1.2 13.2-12.9 22.9-26.1 21.7S38.9 467 40.1 453.8L65.3 176H32c-17.7 0-32-14.3-32-32V64c0-16.6 12.6-30.2 28.7-31.8L32 32zM104.8 272h174.3l-8.7-96H113.5zM48 128h288V80H48z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M352 32c17.7 0 32 14.3 32 32v80c0 17.7-14.3 32-32 32h-33.3L344 453.8c1.2 13.2-8.6 24.9-21.8 26.1s-24.9-8.5-26.1-21.7L283.5 320h-183L87.9 458.2c-1.2 13.2-12.9 22.9-26.1 21.7S38.9 467 40.1 453.8L65.3 176H32c-17.7 0-32-14.3-32-32V64c0-16.6 12.6-30.2 28.7-31.8L32 32zM104.8 272h174.3l-8.7-96H113.5zM48 128h288V80H48z"})
 );
 
 export default LanStoolRegular;

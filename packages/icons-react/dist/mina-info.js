@@ -9,7 +9,7 @@ export const MinaInfo = ({ size = 24, color, style, ...props }) => React.createE
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M12 19.5v-10h-.5m0 10h1m-.5-14V5"})
+  }, React.createElement("path", {"d":"M12 19.5v-10h-.5m0 10h1m-.5-14V5"})
 );
 
 export default MinaInfo;

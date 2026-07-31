@@ -9,7 +9,7 @@ export const MinaFatCornerRightDown = ({ size = 24, color, style, ...props }) =>
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M4.077 3q4.216 3.303 4.785 5.866.569 2.564.172 4.88H4L12.214 21 20 13.747h-4.784Q15.18 9.46 12 6.46T4.077 3"})
+  }, React.createElement("path", {"d":"M4.077 3q4.216 3.303 4.785 5.866.569 2.564.172 4.88H4L12.214 21 20 13.747h-4.784Q15.18 9.46 12 6.46T4.077 3"})
 );
 
 export default MinaFatCornerRightDown;

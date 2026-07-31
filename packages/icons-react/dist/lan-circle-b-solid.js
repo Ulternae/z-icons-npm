@@ -9,7 +9,7 @@ export const LanCircleBSolid = ({ size = 24, color, style, ...props }) => React.
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512m-80-344c0-13.3 10.7-24 24-24h68c37.6 0 68 30.4 68 68 0 12.7-3.5 24.7-9.6 34.8C342 259.3 352 278.4 352 300c0 37.6-30.4 68-68 68h-84c-13.3 0-24-10.7-24-24zm112 44c0-11-9-20-20-20h-44v40h44c11 0 20-9 20-20m-64 108h60c11 0 20-9 20-20s-9-20-20-20h-60z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512m-80-344c0-13.3 10.7-24 24-24h68c37.6 0 68 30.4 68 68 0 12.7-3.5 24.7-9.6 34.8C342 259.3 352 278.4 352 300c0 37.6-30.4 68-68 68h-84c-13.3 0-24-10.7-24-24zm112 44c0-11-9-20-20-20h-44v40h44c11 0 20-9 20-20m-64 108h60c11 0 20-9 20-20s-9-20-20-20h-60z"})
 );
 
 export default LanCircleBSolid;

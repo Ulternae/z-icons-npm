@@ -1,4 +1,4 @@
-import type { MinaIconName } from '../types/index.js';
+import type { MinaLightIconName } from '../types/index.js';
 
-export declare function getMinaSvg(name: MinaIconName): string | undefined;
+export declare function getMinaSvg(name: MinaLightIconName): string | undefined;
 export default getMinaSvg;

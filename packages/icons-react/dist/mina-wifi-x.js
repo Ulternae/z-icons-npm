@@ -9,7 +9,7 @@ export const MinaWifiX = ({ size = 24, color, style, ...props }) => React.create
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M2 9.483A14.5 14.5 0 0 1 12 5.5M16 4l4 4m0-4-4 4m3 4.9c-3.866-3.867-10.134-3.867-14 0m11 3.257a5.657 5.657 0 0 0-8 0m4 3.093v-.5"})
+  }, React.createElement("path", {"d":"M2 9.483A14.5 14.5 0 0 1 12 5.5M16 4l4 4m0-4-4 4m3 4.9c-3.866-3.867-10.134-3.867-14 0m11 3.257a5.657 5.657 0 0 0-8 0m4 3.093v-.5"})
 );
 
 export default MinaWifiX;

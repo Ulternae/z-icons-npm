@@ -9,7 +9,7 @@ export const CoreEquals = ({ size = 24, color, style, ...props }) => React.creat
     fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M448 384H0v-64h448zm0-192H0v-64h448z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M448 384H0v-64h448zm0-192H0v-64h448z"})
 );
 
 export default CoreEquals;

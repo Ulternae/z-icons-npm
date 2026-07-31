@@ -9,7 +9,7 @@ export const LanRampLoadingSolid = ({ size = 24, color, style, ...props }) => Re
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M0 64C0 28.7 28.7 0 64 0h256c35.3 0 64 28.7 64 64v340.7l-53.1-106.1-10.9-21.9V64H64v212.7c-.3.5-21.6 43.2-64 128zm372.4 424.8c.8 1.5 1.2 3 1.5 4.6 1.5 9.3-5.6 18.6-15.8 18.6H25.9c-10.2 0-17.4-9.2-15.8-18.6.3-1.5.7-3.1 1.5-4.6 39.8-79.7 65-130 75.6-151.2 5.4-10.8 16.5-17.7 28.6-17.7h152.4c12.1 0 23.2 6.8 28.6 17.7q15.9 31.65 75.6 151.2"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M0 64C0 28.7 28.7 0 64 0h256c35.3 0 64 28.7 64 64v340.7l-53.1-106.1-10.9-21.9V64H64v212.7c-.3.5-21.6 43.2-64 128zm372.4 424.8c.8 1.5 1.2 3 1.5 4.6 1.5 9.3-5.6 18.6-15.8 18.6H25.9c-10.2 0-17.4-9.2-15.8-18.6.3-1.5.7-3.1 1.5-4.6 39.8-79.7 65-130 75.6-151.2 5.4-10.8 16.5-17.7 28.6-17.7h152.4c12.1 0 23.2 6.8 28.6 17.7q15.9 31.65 75.6 151.2"})
 );
 
 export default LanRampLoadingSolid;

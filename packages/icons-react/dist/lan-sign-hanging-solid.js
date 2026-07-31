@@ -9,7 +9,7 @@ export const LanSignHangingSolid = ({ size = 24, color, style, ...props }) => Re
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M96 0c17.7 0 32 14.3 32 32v32h352c17.7 0 32 14.3 32 32s-14.3 32-32 32H128v352c0 17.7-14.3 32-32 32s-32-14.3-32-32V128H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h32V32C64 14.3 78.3 0 96 0m112 176h240c17.7 0 32 14.3 32 32v144c0 17.7-14.3 32-32 32H208c-17.7 0-32-14.3-32-32V208c0-17.7 14.3-32 32-32"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M96 0c17.7 0 32 14.3 32 32v32h352c17.7 0 32 14.3 32 32s-14.3 32-32 32H128v352c0 17.7-14.3 32-32 32s-32-14.3-32-32V128H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h32V32C64 14.3 78.3 0 96 0m112 176h240c17.7 0 32 14.3 32 32v144c0 17.7-14.3 32-32 32H208c-17.7 0-32-14.3-32-32V208c0-17.7 14.3-32 32-32"})
 );
 
 export default LanSignHangingSolid;

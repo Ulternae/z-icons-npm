@@ -9,7 +9,7 @@ export const LanMapPinThin = ({ size = 24, color, style, ...props }) => React.cr
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M160 272a128 128 0 1 0 0-256 128 128 0 1 0 0 256m144-128c0 76.8-60.2 139.6-136 143.8V504c0 4.4-3.6 8-8 8s-8-3.6-8-8V287.8c-75.8-4.2-136-67-136-143.8C16 64.5 80.5 0 160 0s144 64.5 144 144m-224-8c0 4.4-3.6 8-8 8s-8-3.6-8-8c0-48.6 39.4-88 88-88 4.4 0 8 3.6 8 8s-3.6 8-8 8c-39.8 0-72 32.2-72 72"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M160 272a128 128 0 1 0 0-256 128 128 0 1 0 0 256m144-128c0 76.8-60.2 139.6-136 143.8V504c0 4.4-3.6 8-8 8s-8-3.6-8-8V287.8c-75.8-4.2-136-67-136-143.8C16 64.5 80.5 0 160 0s144 64.5 144 144m-224-8c0 4.4-3.6 8-8 8s-8-3.6-8-8c0-48.6 39.4-88 88-88 4.4 0 8 3.6 8 8s-3.6 8-8 8c-39.8 0-72 32.2-72 72"})
 );
 
 export default LanMapPinThin;

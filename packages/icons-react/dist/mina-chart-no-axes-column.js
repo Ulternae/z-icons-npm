@@ -9,7 +9,7 @@ export const MinaChartNoAxesColumn = ({ size = 24, color, style, ...props }) => 
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M18 8v13M12 3v18m-6-9v9"})
+  }, React.createElement("path", {"d":"M18 8v13M12 3v18m-6-9v9"})
 );
 
 export default MinaChartNoAxesColumn;

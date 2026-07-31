@@ -9,7 +9,7 @@ export const LanStarSharpHalfSolid = ({ size = 24, color, style, ...props }) => 
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M271.9 49.6c0-11.8-8.6-21.9-20.3-23.7s-23 5.1-26.6 16.4L182.5 176H24c-10.3 0-19.4 6.5-22.7 16.2s-.1 20.4 8 26.7l130.8 101.8-51 160c-3.2 10 .5 21 9.1 27s20.2 5.7 28.5-.7l135.9-105.7c5.8-4.5 9.3-11.5 9.3-18.9z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M271.9 49.6c0-11.8-8.6-21.9-20.3-23.7s-23 5.1-26.6 16.4L182.5 176H24c-10.3 0-19.4 6.5-22.7 16.2s-.1 20.4 8 26.7l130.8 101.8-51 160c-3.2 10 .5 21 9.1 27s20.2 5.7 28.5-.7l135.9-105.7c5.8-4.5 9.3-11.5 9.3-18.9z"})
 );
 
 export default LanStarSharpHalfSolid;

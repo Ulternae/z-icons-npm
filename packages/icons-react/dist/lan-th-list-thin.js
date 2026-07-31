@@ -9,7 +9,7 @@ export const LanThListThin = ({ size = 24, color, style, ...props }) => React.cr
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M144 48v128h288V96c0-26.5-21.5-48-48-48zm-16 0H64c-26.5 0-48 21.5-48 48v80h112zM16 192v128h112V192zm0 144v80c0 26.5 21.5 48 48 48h64V336zm128 128h240c26.5 0 48-21.5 48-48v-80H144zm288-144V192H144v128zM0 96c0-35.3 28.7-64 64-64h320c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M144 48v128h288V96c0-26.5-21.5-48-48-48zm-16 0H64c-26.5 0-48 21.5-48 48v80h112zM16 192v128h112V192zm0 144v80c0 26.5 21.5 48 48 48h64V336zm128 128h240c26.5 0 48-21.5 48-48v-80H144zm288-144V192H144v128zM0 96c0-35.3 28.7-64 64-64h320c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64z"})
 );
 
 export default LanThListThin;

@@ -9,7 +9,7 @@ export const LanMagnetThin = ({ size = 24, color, style, ...props }) => React.cr
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M40 48c-13.3 0-24 10.7-24 24v72h112V72c0-13.3-10.7-24-24-24zM16 288c0 114.9 93.1 208 208 208s208-93.1 208-208V160H320v128c0 53-43 96-96 96s-96-43-96-96V160H16zm416-144V72c0-13.3-10.7-24-24-24h-64c-13.3 0-24 10.7-24 24v72zM0 72c0-22.1 17.9-40 40-40h64c22.1 0 40 17.9 40 40v216c0 44.2 35.8 80 80 80s80-35.8 80-80V72c0-22.1 17.9-40 40-40h64c22.1 0 40 17.9 40 40v216c0 123.7-100.3 224-224 224S0 411.7 0 288z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M40 48c-13.3 0-24 10.7-24 24v72h112V72c0-13.3-10.7-24-24-24zM16 288c0 114.9 93.1 208 208 208s208-93.1 208-208V160H320v128c0 53-43 96-96 96s-96-43-96-96V160H16zm416-144V72c0-13.3-10.7-24-24-24h-64c-13.3 0-24 10.7-24 24v72zM0 72c0-22.1 17.9-40 40-40h64c22.1 0 40 17.9 40 40v216c0 44.2 35.8 80 80 80s80-35.8 80-80V72c0-22.1 17.9-40 40-40h64c22.1 0 40 17.9 40 40v216c0 123.7-100.3 224-224 224S0 411.7 0 288z"})
 );
 
 export default LanMagnetThin;

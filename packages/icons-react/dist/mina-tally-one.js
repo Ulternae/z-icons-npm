@@ -9,7 +9,7 @@ export const MinaTallyOne = ({ size = 24, color, style, ...props }) => React.cre
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M4 4v16"})
+  }, React.createElement("path", {"d":"M4 4v16"})
 );
 
 export default MinaTallyOne;

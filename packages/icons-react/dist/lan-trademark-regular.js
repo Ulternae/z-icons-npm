@@ -9,7 +9,7 @@ export const LanTrademarkRegular = ({ size = 24, color, style, ...props }) => Re
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M332.1 106.9c-5.8-8.9-16.8-12.9-27-9.9S288 109.4 288 120v272c0 13.3 10.7 24 24 24s24-10.7 24-24V200.6l91.9 140.6c4.4 6.8 12 10.9 20.1 10.9s15.7-4.1 20.1-10.9L560 200.6V392c0 13.3 10.7 24 24 24s24-10.7 24-24V120c0-10.6-7-20-17.1-23s-21.1 1-26.9 9.9L448 284.1zM24 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80v248c0 13.3 10.7 24 24 24s24-10.7 24-24V144h80c13.3 0 24-10.7 24-24s-10.7-24-24-24z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M332.1 106.9c-5.8-8.9-16.8-12.9-27-9.9S288 109.4 288 120v272c0 13.3 10.7 24 24 24s24-10.7 24-24V200.6l91.9 140.6c4.4 6.8 12 10.9 20.1 10.9s15.7-4.1 20.1-10.9L560 200.6V392c0 13.3 10.7 24 24 24s24-10.7 24-24V120c0-10.6-7-20-17.1-23s-21.1 1-26.9 9.9L448 284.1zM24 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80v248c0 13.3 10.7 24 24 24s24-10.7 24-24V144h80c13.3 0 24-10.7 24-24s-10.7-24-24-24z"})
 );
 
 export default LanTrademarkRegular;

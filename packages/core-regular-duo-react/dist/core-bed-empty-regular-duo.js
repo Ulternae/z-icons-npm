@@ -10,7 +10,7 @@ export function CoreBedEmptyRegularDuo({ size = 24, color, style, ...props }) {
       fill: 'currentColor',
       ...props,
       style: { ...(color ? { color } : {}), ...style },
-    }, React.createElement('path', {"fill":"currentColor","d":"M256 192v160h320V224c0-17.7-14.3-32-32-32z","opacity":".4"}), React.createElement('path', {"fill":"currentColor","d":"M64 32v96h480c53 0 96 43 96 96v256h-64v-64H64v64H0V32zm128 160H64v160h128zm64 160h320V224c0-17.7-14.3-32-32-32H256z"})
+    }, React.createElement("path", {"fill":"currentColor","d":"M256 192v160h320V224c0-17.7-14.3-32-32-32z","opacity":".4"}), React.createElement("path", {"fill":"currentColor","d":"M64 32v96h480c53 0 96 43 96 96v256h-64v-64H64v64H0V32zm128 160H64v160h128zm64 160h320V224c0-17.7-14.3-32-32-32H256z"})
   );
 }
 

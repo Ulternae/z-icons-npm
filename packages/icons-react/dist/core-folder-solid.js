@@ -9,7 +9,7 @@ export const CoreFolderSolid = ({ size = 24, color, style, ...props }) => React.
     fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"m224 32 64 64h160c35.3 0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96c0-35.3 28.7-64 64-64z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"m224 32 64 64h160c35.3 0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96c0-35.3 28.7-64 64-64z"})
 );
 
 export default CoreFolderSolid;

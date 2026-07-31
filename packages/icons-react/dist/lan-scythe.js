@@ -9,7 +9,7 @@ export const LanScythe = ({ size = 24, color, style, ...props }) => React.create
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"m49.2 182.8-5.4 9.2h458.6l37.3-160h-228c-108 0-208 57.4-262.5 150.8M480.1 288l14.9-64H16c-5.7 0-11-3.1-13.9-8s-2.8-11.1.1-16l19.4-33.2C81.8 63.5 192.3 0 311.8 0H560c4.9 0 9.5 2.2 12.5 6.1s4.2 8.8 3 13.6l-112 480c-2 8.6-10.6 14-19.2 11.9s-14-10.6-11.9-19.2L472.6 320H336c-8.8 0-16-7.2-16-16s7.2-16 16-16z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"m49.2 182.8-5.4 9.2h458.6l37.3-160h-228c-108 0-208 57.4-262.5 150.8M480.1 288l14.9-64H16c-5.7 0-11-3.1-13.9-8s-2.8-11.1.1-16l19.4-33.2C81.8 63.5 192.3 0 311.8 0H560c4.9 0 9.5 2.2 12.5 6.1s4.2 8.8 3 13.6l-112 480c-2 8.6-10.6 14-19.2 11.9s-14-10.6-11.9-19.2L472.6 320H336c-8.8 0-16-7.2-16-16s7.2-16 16-16z"})
 );
 
 export default LanScythe;

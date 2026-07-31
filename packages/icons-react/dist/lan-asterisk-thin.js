@@ -9,7 +9,7 @@ export const LanAsteriskThin = ({ size = 24, color, style, ...props }) => React.
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M224 0c4.4 0 8 3.6 8 8v234.2l204-117.8c3.8-2.2 8.7-.9 10.9 2.9s.9 8.7-2.9 10.9L240 256l204 117.9c3.8 2.2 5.1 7.1 2.9 10.9s-7.1 5.1-10.9 2.9L232 269.9V504c0 4.4-3.6 8-8 8s-8-3.6-8-8V269.9L12 387.7c-3.8 2.2-8.7.9-10.9-2.9s-.9-8.7 2.9-10.9L208 256 4 138.2c-3.8-2.2-5.1-7.1-2.9-10.9s7.1-5.1 10.9-2.9l204 117.8V8c0-4.4 3.6-8 8-8"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M224 0c4.4 0 8 3.6 8 8v234.2l204-117.8c3.8-2.2 8.7-.9 10.9 2.9s.9 8.7-2.9 10.9L240 256l204 117.9c3.8 2.2 5.1 7.1 2.9 10.9s-7.1 5.1-10.9 2.9L232 269.9V504c0 4.4-3.6 8-8 8s-8-3.6-8-8V269.9L12 387.7c-3.8 2.2-8.7.9-10.9-2.9s-.9-8.7 2.9-10.9L208 256 4 138.2c-3.8-2.2-5.1-7.1-2.9-10.9s7.1-5.1 10.9-2.9l204 117.8V8c0-4.4 3.6-8 8-8"})
 );
 
 export default LanAsteriskThin;

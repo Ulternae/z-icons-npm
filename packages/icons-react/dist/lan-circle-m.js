@@ -9,7 +9,7 @@ export const LanCircleM = ({ size = 24, color, style, ...props }) => React.creat
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M256 32a224 224 0 1 1 0 448 224 224 0 1 1 0-448m0 480a256 256 0 1 0 0-512 256 256 0 1 0 0 512m-67-345.3c-4-5.7-11.3-8.1-17.9-5.9S160 169 160 176v160c0 8.8 7.2 16 16 16s16-7.2 16-16V225.9l51 71.4c3 4.2 7.9 6.7 13 6.7s10-2.5 13-6.7l51-71.4V336c0 8.8 7.2 16 16 16s16-7.2 16-16V176c0-7-4.5-13.1-11.1-15.2s-13.9.2-17.9 5.9l-67 93.8z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M256 32a224 224 0 1 1 0 448 224 224 0 1 1 0-448m0 480a256 256 0 1 0 0-512 256 256 0 1 0 0 512m-67-345.3c-4-5.7-11.3-8.1-17.9-5.9S160 169 160 176v160c0 8.8 7.2 16 16 16s16-7.2 16-16V225.9l51 71.4c3 4.2 7.9 6.7 13 6.7s10-2.5 13-6.7l51-71.4V336c0 8.8 7.2 16 16 16s16-7.2 16-16V176c0-7-4.5-13.1-11.1-15.2s-13.9.2-17.9 5.9l-67 93.8z"})
 );
 
 export default LanCircleM;

@@ -9,7 +9,7 @@ export const LanCircleTrashSolid = ({ size = 24, color, style, ...props }) => Re
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512m-32-400h64c9.8 0 18.6 6 22.3 15.1l6.8 16.9h43c13.3 0 24 10.7 24 24s-10.7 24-24 24h-208c-13.3 0-24-10.7-24-24s10.7-24 24-24h43l6.8-16.9c3.5-9.1 12.3-15.1 22.1-15.1m-51.2 243.5L160 240h192l-12.8 115.5c-1.8 16.2-15.5 28.5-31.8 28.5H204.7c-16.3 0-30-12.3-31.8-28.5z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512m-32-400h64c9.8 0 18.6 6 22.3 15.1l6.8 16.9h43c13.3 0 24 10.7 24 24s-10.7 24-24 24h-208c-13.3 0-24-10.7-24-24s10.7-24 24-24h43l6.8-16.9c3.5-9.1 12.3-15.1 22.1-15.1m-51.2 243.5L160 240h192l-12.8 115.5c-1.8 16.2-15.5 28.5-31.8 28.5H204.7c-16.3 0-30-12.3-31.8-28.5z"})
 );
 
 export default LanCircleTrashSolid;

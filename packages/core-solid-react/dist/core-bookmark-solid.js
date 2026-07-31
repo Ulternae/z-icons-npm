@@ -10,7 +10,7 @@ export function CoreBookmarkSolid({ size = 24, color, style, ...props }) {
       fill: 'currentColor',
       ...props,
       style: { ...(color ? { color } : {}), ...style },
-    }, React.createElement('path', {"fill":"currentColor","d":"M0 512c32-18.7 96-56 192-112 96 56 160 93.3 192 112V64c0-35.3-28.7-64-64-64H64C28.7 0 0 28.7 0 64z"})
+    }, React.createElement("path", {"fill":"currentColor","d":"M0 512c32-18.7 96-56 192-112 96 56 160 93.3 192 112V64c0-35.3-28.7-64-64-64H64C28.7 0 0 28.7 0 64z"})
   );
 }
 

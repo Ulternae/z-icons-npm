@@ -9,7 +9,7 @@ export const LanKipSignThin = ({ size = 24, color, style, ...props }) => React.c
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M88 32c4.4 0 8 3.6 8 8v198.8L338.8 33.9c3.4-2.8 8.4-2.4 11.3 1s2.4 8.4-1 11.3L109.9 248H376c4.4 0 8 3.6 8 8s-3.6 8-8 8H109.9l239.3 201.9c3.4 2.9 3.8 7.9 1 11.3s-7.9 3.8-11.3 1L96 273.2V473c0 4.4-3.6 8-8 8s-8-3.6-8-8V264H8c-4.4 0-8-3.6-8-8s3.6-8 8-8h72V40c0-4.4 3.6-8 8-8"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M88 32c4.4 0 8 3.6 8 8v198.8L338.8 33.9c3.4-2.8 8.4-2.4 11.3 1s2.4 8.4-1 11.3L109.9 248H376c4.4 0 8 3.6 8 8s-3.6 8-8 8H109.9l239.3 201.9c3.4 2.9 3.8 7.9 1 11.3s-7.9 3.8-11.3 1L96 273.2V473c0 4.4-3.6 8-8 8s-8-3.6-8-8V264H8c-4.4 0-8-3.6-8-8s3.6-8 8-8h72V40c0-4.4 3.6-8 8-8"})
 );
 
 export default LanKipSignThin;

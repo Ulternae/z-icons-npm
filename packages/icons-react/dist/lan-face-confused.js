@@ -9,7 +9,7 @@ export const LanFaceConfused = ({ size = 24, color, style, ...props }) => React.
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M480 256a224 224 0 1 0-448 0 224 224 0 1 0 448 0M0 256a256 256 0 1 1 512 0 256 256 0 1 1-512 0m171.1 139.6-1.1.9c-6.9 5.5-17 4.4-22.5-2.5s-4.4-17 2.5-22.5l1.1-.9C205 327.5 272 304 341 304h11c8.8 0 16 7.2 16 16s-7.2 16-16 16h-11c-61.8 0-121.7 21-169.9 59.6M152 208a24 24 0 1 1 48 0 24 24 0 1 1-48 0m184-24a24 24 0 1 1 0 48 24 24 0 1 1 0-48"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M480 256a224 224 0 1 0-448 0 224 224 0 1 0 448 0M0 256a256 256 0 1 1 512 0 256 256 0 1 1-512 0m171.1 139.6-1.1.9c-6.9 5.5-17 4.4-22.5-2.5s-4.4-17 2.5-22.5l1.1-.9C205 327.5 272 304 341 304h11c8.8 0 16 7.2 16 16s-7.2 16-16 16h-11c-61.8 0-121.7 21-169.9 59.6M152 208a24 24 0 1 1 48 0 24 24 0 1 1-48 0m184-24a24 24 0 1 1 0 48 24 24 0 1 1 0-48"})
 );
 
 export default LanFaceConfused;

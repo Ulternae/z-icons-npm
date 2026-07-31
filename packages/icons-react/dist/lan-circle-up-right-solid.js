@@ -9,7 +9,7 @@ export const LanCircleUpRightSolid = ({ size = 24, color, style, ...props }) => 
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M256 0a256 256 0 1 1 0 512 256 256 0 1 1 0-512m-56 160c-9.7 0-18.5 5.8-22.2 14.8s-1.7 19.3 5.2 26.2l35 35-67 67c-9.4 9.4-9.4 24.6 0 33.9l24 24c9.4 9.4 24.6 9.4 33.9 0l67-67 35 35c6.9 6.9 17.2 8.9 26.2 5.2S352 321.7 352 312V184c0-13.3-10.7-24-24-24z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M256 0a256 256 0 1 1 0 512 256 256 0 1 1 0-512m-56 160c-9.7 0-18.5 5.8-22.2 14.8s-1.7 19.3 5.2 26.2l35 35-67 67c-9.4 9.4-9.4 24.6 0 33.9l24 24c9.4 9.4 24.6 9.4 33.9 0l67-67 35 35c6.9 6.9 17.2 8.9 26.2 5.2S352 321.7 352 312V184c0-13.3-10.7-24-24-24z"})
 );
 
 export default LanCircleUpRightSolid;

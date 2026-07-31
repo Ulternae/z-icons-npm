@@ -9,7 +9,7 @@ export const MinaChartNoAxesColumnDecreasing = ({ size = 24, color, style, ...pr
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M7 21V3m5 18V9m5 12v-5"})
+  }, React.createElement("path", {"d":"M7 21V3m5 18V9m5 12v-5"})
 );
 
 export default MinaChartNoAxesColumnDecreasing;

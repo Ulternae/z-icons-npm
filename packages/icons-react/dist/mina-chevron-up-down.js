@@ -9,7 +9,7 @@ export const MinaChevronUpDown = ({ size = 24, color, style, ...props }) => Reac
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"m8 16 4 4 4-4M8 8l4-4 4 4"})
+  }, React.createElement("path", {"d":"m8 16 4 4 4-4M8 8l4-4 4 4"})
 );
 
 export default MinaChevronUpDown;

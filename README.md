@@ -7,12 +7,13 @@ Browse all available icons at [icons.zcorvus.com](https://icons.zcorvus.com/).
 ## Packages
 
 ```bash
-pnpm add @zcorvus/icons
 pnpm add @zcorvus/icons-react
 pnpm add @zcorvus/icons-web
 ```
 
-Use `@zcorvus/icons` when you need raw SVG strings, icon names, types, or framework-agnostic helpers.
+`@zcorvus/icons` is retained as an internal compatibility/data package and is deprecated for direct application usage. Prefer pack-scoped React wrappers such as `ZMina`, `ZLan`, `ZCore`, `ZNeo`, and `ZBru`, or the corresponding Web Component registrations.
+
+For low-level integrations that still require raw SVG strings, the compatibility entrypoints remain available:
 
 ```ts
 import { MinaCheck } from '@zcorvus/icons/svg';
@@ -68,7 +69,7 @@ export function SearchActions() {
 
 Pack wrappers render sprite references. Client-only React apps can rely on automatic client-side sprite injection. For React Server Components in Next.js, render the matching `Z...Sprite` component once inside `<body>` in the page or layout.
 
-Use `ZIcon` only when both the pack and icon name are dynamic. This entry prioritizes ergonomics and can include all supported packs.
+`ZIcon` is deprecated because it needs metadata for every supported pack. Migrate to a pack-scoped wrapper whenever the pack is known.
 
 ```tsx
 import { ZIcon } from '@zcorvus/icons-react';
@@ -92,8 +93,8 @@ Use `@zcorvus/icons-web` when you need framework-agnostic custom elements.
 Use pack entries when you want to avoid loading unrelated packs.
 
 ```html
-<script type="module" src="https://cdn.jsdelivr.net/npm/@zcorvus/icons-web@0.1.1/dist/register-mina.js/+esm"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@zcorvus/icons-web@0.1.1/dist/register-mina-solid.js/+esm"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@zcorvus/icons-web/dist/register-mina.js/+esm"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@zcorvus/icons-web/dist/register-mina-solid.js/+esm"></script>
 
 <z-mina name="search"></z-mina>
 <z-mina-solid name="search"></z-mina-solid>
@@ -102,8 +103,8 @@ Use pack entries when you want to avoid loading unrelated packs.
 Use sprite entries when many icons are repeated on the same page. The script injects one hidden SVG sprite and each element renders a lightweight `<use>` reference.
 
 ```html
-<script type="module" src="https://cdn.jsdelivr.net/npm/@zcorvus/icons-web@0.1.1/dist/register-mina-sprite.js/+esm"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@zcorvus/icons-web@0.1.1/dist/register-mina-solid-sprite.js/+esm"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@zcorvus/icons-web/dist/register-mina-sprite.js/+esm"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@zcorvus/icons-web/dist/register-mina-solid-sprite.js/+esm"></script>
 
 <z-mina-sprite name="search" size="44"></z-mina-sprite>
 <z-mina-solid-sprite name="search" size="44"></z-mina-solid-sprite>

@@ -9,7 +9,7 @@ export const LanTableRowsMergePreviousThin = ({ size = 24, color, style, ...prop
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M448 96c0-35.3-28.7-64-64-64H64C30.9 32 3.6 57.2.3 89.5L0 96v320l.3 6.5c3.1 30.1 27 54.1 57.1 57.1l6.5.3h320c35.3 0 64-28.7 64-64v-320zm-16 320c0 26.5-21.5 48-48 48H64c-26.5 0-48-21.5-48-48V264h80v-16H16V96c0-26.5 21.5-48 48-48h320c26.5 0 48 21.5 48 48v152h-80v16h80zM301.7 245.7c3.1-3.1 3.1-8.2 0-11.3l-72-72-1.3-1c-3.1-2.1-7.3-1.7-10.1 1l-72 72c-3.1 3.1-3.1 8.2 0 11.3s8.2 3.1 11.3 0l58.4-58.4V344c0 4.4 3.6 8 8 8s8-3.6 8-8V187.3l58.3 58.3c3.1 3.1 8.2 3.1 11.3 0z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M448 96c0-35.3-28.7-64-64-64H64C30.9 32 3.6 57.2.3 89.5L0 96v320l.3 6.5c3.1 30.1 27 54.1 57.1 57.1l6.5.3h320c35.3 0 64-28.7 64-64v-320zm-16 320c0 26.5-21.5 48-48 48H64c-26.5 0-48-21.5-48-48V264h80v-16H16V96c0-26.5 21.5-48 48-48h320c26.5 0 48 21.5 48 48v152h-80v16h80zM301.7 245.7c3.1-3.1 3.1-8.2 0-11.3l-72-72-1.3-1c-3.1-2.1-7.3-1.7-10.1 1l-72 72c-3.1 3.1-3.1 8.2 0 11.3s8.2 3.1 11.3 0l58.4-58.4V344c0 4.4 3.6 8 8 8s8-3.6 8-8V187.3l58.3 58.3c3.1 3.1 8.2 3.1 11.3 0z"})
 );
 
 export default LanTableRowsMergePreviousThin;

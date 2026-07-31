@@ -9,7 +9,7 @@ export const MinaCornerLeftDown = ({ size = 24, color, style, ...props }) => Rea
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M10.027 19V9a4 4 0 0 1 4-4H19m-8.973 14 5.028-4.78M10.027 19 5 14.22"})
+  }, React.createElement("path", {"d":"M10.027 19V9a4 4 0 0 1 4-4H19m-8.973 14 5.028-4.78M10.027 19 5 14.22"})
 );
 
 export default MinaCornerLeftDown;

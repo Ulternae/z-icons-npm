@@ -9,7 +9,7 @@ export const MinaArrowLeftSolid = ({ size = 24, color, style, ...props }) => Rea
     fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M9.578 5.487a.75.75 0 0 1 1.06-.034v5.797H19.5a.75.75 0 0 1 0 1.5h-8.862v5.797a.75.75 0 0 1-1.06-.034l-5.625-6a.75.75 0 0 1 0-1.026z"})
+  }, React.createElement("path", {"d":"M9.578 5.487a.75.75 0 0 1 1.06-.034v5.797H19.5a.75.75 0 0 1 0 1.5h-8.862v5.797a.75.75 0 0 1-1.06-.034l-5.625-6a.75.75 0 0 1 0-1.026z"})
 );
 
 export default MinaArrowLeftSolid;

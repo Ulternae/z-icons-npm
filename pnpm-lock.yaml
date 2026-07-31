@@ -56,36 +56,24 @@ importers:
       react:
         specifier: ^18.0.0 || ^19.0.0
         version: 18.3.1
-      react-dom:
-        specifier: ^18.0.0 || ^19.0.0
-        version: 18.3.1(react@18.3.1)
 
   packages/core-react:
     dependencies:
       react:
         specifier: ^18.0.0 || ^19.0.0
         version: 18.3.1
-      react-dom:
-        specifier: ^18.0.0 || ^19.0.0
-        version: 18.3.1(react@18.3.1)
 
   packages/core-regular-duo-react:
     dependencies:
       react:
         specifier: ^18.0.0 || ^19.0.0
         version: 18.3.1
-      react-dom:
-        specifier: ^18.0.0 || ^19.0.0
-        version: 18.3.1(react@18.3.1)
 
   packages/core-solid-react:
     dependencies:
       react:
         specifier: ^18.0.0 || ^19.0.0
         version: 18.3.1
-      react-dom:
-        specifier: ^18.0.0 || ^19.0.0
-        version: 18.3.1(react@18.3.1)
 
   packages/icons: {}
 
@@ -97,9 +85,6 @@ importers:
       react:
         specifier: ^18.0.0 || ^19.0.0
         version: 18.3.1
-      react-dom:
-        specifier: ^18.0.0 || ^19.0.0
-        version: 18.3.1(react@18.3.1)
 
   packages/icons-web:
     dependencies:

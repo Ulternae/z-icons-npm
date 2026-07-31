@@ -9,7 +9,7 @@ export const LanPantsStraightRegular = ({ size = 24, color, style, ...props }) =
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M51.5 48h345.8l-3 48h-49.9c-13.3 0-24 10.7-24 24s10.7 24 24 24h46.9l-20 320H248.4V184c0-13.3-10.7-24-24-24s-24 10.7-24 24v280H77.5l-20-320h46.9c13.3 0 24-10.7 24-24s-10.7-24-24-24H54.5zM397.3 0H51.5C23.8 0 1.9 23.4 3.6 51l26 416c1.6 25.3 22.6 45 47.9 45h293.8c25.3 0 46.3-19.7 47.9-45l26-416c1.7-27.6-20.2-51-47.9-51"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M51.5 48h345.8l-3 48h-49.9c-13.3 0-24 10.7-24 24s10.7 24 24 24h46.9l-20 320H248.4V184c0-13.3-10.7-24-24-24s-24 10.7-24 24v280H77.5l-20-320h46.9c13.3 0 24-10.7 24-24s-10.7-24-24-24H54.5zM397.3 0H51.5C23.8 0 1.9 23.4 3.6 51l26 416c1.6 25.3 22.6 45 47.9 45h293.8c25.3 0 46.3-19.7 47.9-45l26-416c1.7-27.6-20.2-51-47.9-51"})
 );
 
 export default LanPantsStraightRegular;

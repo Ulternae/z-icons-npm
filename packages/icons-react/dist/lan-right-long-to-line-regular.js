@@ -9,7 +9,7 @@ export const LanRightLongToLineRegular = ({ size = 24, color, style, ...props })
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M640 120c0-13.3-10.7-24-24-24s-24 10.7-24 24v272c0 13.3 10.7 24 24 24s24-10.7 24-24zm-272 46.6 89.4 89.4-89.4 89.4V312c0-13.3-10.7-24-24-24H48v-64h296c13.3 0 24-10.7 24-24zm134.6 112c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9S319.9 115 319.9 128v48h-272c-26.5 0-48 21.5-48 48v64c0 26.5 21.5 48 48 48h272v48c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M640 120c0-13.3-10.7-24-24-24s-24 10.7-24 24v272c0 13.3 10.7 24 24 24s24-10.7 24-24zm-272 46.6 89.4 89.4-89.4 89.4V312c0-13.3-10.7-24-24-24H48v-64h296c13.3 0 24-10.7 24-24zm134.6 112c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9S319.9 115 319.9 128v48h-272c-26.5 0-48 21.5-48 48v64c0 26.5 21.5 48 48 48h272v48c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"})
 );
 
 export default LanRightLongToLineRegular;

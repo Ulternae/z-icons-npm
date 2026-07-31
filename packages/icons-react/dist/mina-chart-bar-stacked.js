@@ -9,7 +9,7 @@ export const MinaChartBarStacked = ({ size = 24, color, style, ...props }) => Re
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M21 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6V3"}), React.createElement('path', {"d":"M15.25 6h2.25A1.5 1.5 0 0 1 19 7.5v1a1.5 1.5 0 0 1-1.5 1.5h-2.25m0-4v4m0-4H8.5A1.5 1.5 0 0 0 7 7.5v1A1.5 1.5 0 0 0 8.5 10h6.75M11 13H8.5A1.5 1.5 0 0 0 7 14.5v1A1.5 1.5 0 0 0 8.5 17H11m0-4h2.5a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5H11m0-4v4"})
+  }, React.createElement("path", {"d":"M21 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6V3"}), React.createElement("path", {"d":"M15.25 6h2.25A1.5 1.5 0 0 1 19 7.5v1a1.5 1.5 0 0 1-1.5 1.5h-2.25m0-4v4m0-4H8.5A1.5 1.5 0 0 0 7 7.5v1A1.5 1.5 0 0 0 8.5 10h6.75M11 13H8.5A1.5 1.5 0 0 0 7 14.5v1A1.5 1.5 0 0 0 8.5 17H11m0-4h2.5a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5H11m0-4v4"})
 );
 
 export default MinaChartBarStacked;

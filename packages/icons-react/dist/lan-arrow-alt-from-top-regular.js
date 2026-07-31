@@ -9,7 +9,7 @@ export const LanArrowAltFromTopRegular = ({ size = 24, color, style, ...props })
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M175 505c9.4 9.4 24.6 9.4 33.9 0L353 361c6.9-6.9 8.9-17.2 5.2-26.2S345.7 320 336 320h-64V176c0-26.5-21.5-48-48-48h-64c-26.5 0-48 21.5-48 48v144H48c-9.7 0-18.5 5.8-22.2 14.8S24.2 354.1 31 361zm-15-249v-80h64v168c0 6.4 2.5 12.5 7 17s10.6 7 17 7h30.1L192 454.1 105.9 368H136c13.3 0 24-10.7 24-24zM384 24c0-13.3-10.7-24-24-24H24C10.7 0 0 10.7 0 24s10.7 24 24 24h336c13.3 0 24-10.7 24-24"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M175 505c9.4 9.4 24.6 9.4 33.9 0L353 361c6.9-6.9 8.9-17.2 5.2-26.2S345.7 320 336 320h-64V176c0-26.5-21.5-48-48-48h-64c-26.5 0-48 21.5-48 48v144H48c-9.7 0-18.5 5.8-22.2 14.8S24.2 354.1 31 361zm-15-249v-80h64v168c0 6.4 2.5 12.5 7 17s10.6 7 17 7h30.1L192 454.1 105.9 368H136c13.3 0 24-10.7 24-24zM384 24c0-13.3-10.7-24-24-24H24C10.7 0 0 10.7 0 24s10.7 24 24 24h336c13.3 0 24-10.7 24-24"})
 );
 
 export default LanArrowAltFromTopRegular;

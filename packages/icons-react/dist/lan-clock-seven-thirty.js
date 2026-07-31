@@ -9,7 +9,7 @@ export const LanClockSevenThirty = ({ size = 24, color, style, ...props }) => Re
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M32 256a224 224 0 1 0 448 0 224 224 0 1 0-448 0m480 0a256 256 0 1 1-512 0 256 256 0 1 1 512 0M240 400v-91.2l-34.7 52c-4.9 7.4-14.8 9.3-22.2 4.4s-9.3-14.8-4.4-22.2l64-96c3.9-5.9 11.2-8.5 17.9-6.4S272 248.9 272 256v144c0 8.8-7.2 16-16 16s-16-7.2-16-16"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M32 256a224 224 0 1 0 448 0 224 224 0 1 0-448 0m480 0a256 256 0 1 1-512 0 256 256 0 1 1 512 0M240 400v-91.2l-34.7 52c-4.9 7.4-14.8 9.3-22.2 4.4s-9.3-14.8-4.4-22.2l64-96c3.9-5.9 11.2-8.5 17.9-6.4S272 248.9 272 256v144c0 8.8-7.2 16-16 16s-16-7.2-16-16"})
 );
 
 export default LanClockSevenThirty;

@@ -9,7 +9,7 @@ export const MinaDotsVertical = ({ size = 24, color, style, ...props }) => React
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M12.25 12h-.5m.5-4h-.5m.5 8h-.5"})
+  }, React.createElement("path", {"d":"M12.25 12h-.5m.5-4h-.5m.5 8h-.5"})
 );
 
 export default MinaDotsVertical;

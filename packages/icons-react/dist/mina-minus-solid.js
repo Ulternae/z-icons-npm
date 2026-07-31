@@ -9,7 +9,7 @@ export const MinaMinusSolid = ({ size = 24, color, style, ...props }) => React.c
     fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M5 12a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1"})
+  }, React.createElement("path", {"d":"M5 12a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1"})
 );
 
 export default MinaMinusSolid;

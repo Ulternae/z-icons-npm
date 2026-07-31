@@ -9,7 +9,7 @@ export const BruCloudsmith = ({ size = 24, color, style, ...props }) => React.cr
     fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M512 227.6v56.9L284.4 512h-56.8L0 284.4v-56.8L227.6 0h56.9zm-256 162a133.6 133.6 0 1 0 0-267.1 133.6 133.6 0 1 0 0 267.1"})
+  }, React.createElement("path", {"d":"M512 227.6v56.9L284.4 512h-56.8L0 284.4v-56.8L227.6 0h56.9zm-256 162a133.6 133.6 0 1 0 0-267.1 133.6 133.6 0 1 0 0 267.1"})
 );
 
 export default BruCloudsmith;

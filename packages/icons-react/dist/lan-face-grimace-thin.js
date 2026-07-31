@@ -9,7 +9,7 @@ export const LanFaceGrimaceThin = ({ size = 24, color, style, ...props }) => Rea
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M256 16a240 240 0 1 0 0 480 240 240 0 1 0 0-480m256 240a256 256 0 1 1-512 0 256 256 0 1 1 512 0m-328 48c-26.5 0-48 21.5-48 48s21.5 48 48 48zm64 96v-96h-48v96zm16 0h48v-96h-48zm64-96v96c26.5 0 48-21.5 48-48s-21.5-48-48-48m-144-16h144c35.3 0 64 28.7 64 64s-28.7 64-64 64H184c-35.3 0-64-28.7-64-64s28.7-64 64-64m-8-96a16 16 0 1 1 0 32 16 16 0 1 1 0-32m144 16a16 16 0 1 1 32 0 16 16 0 1 1-32 0"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M256 16a240 240 0 1 0 0 480 240 240 0 1 0 0-480m256 240a256 256 0 1 1-512 0 256 256 0 1 1 512 0m-328 48c-26.5 0-48 21.5-48 48s21.5 48 48 48zm64 96v-96h-48v96zm16 0h48v-96h-48zm64-96v96c26.5 0 48-21.5 48-48s-21.5-48-48-48m-144-16h144c35.3 0 64 28.7 64 64s-28.7 64-64 64H184c-35.3 0-64-28.7-64-64s28.7-64 64-64m-8-96a16 16 0 1 1 0 32 16 16 0 1 1 0-32m144 16a16 16 0 1 1 32 0 16 16 0 1 1-32 0"})
 );
 
 export default LanFaceGrimaceThin;

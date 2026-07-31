@@ -5,8 +5,8 @@ import {
   getVariantFileSuffix,
   iconConfig as CONFIG,
 } from '../icon-config.js';
-import { finishOutputTracking, startOutputTracking, writeFile } from './fs-utils.js';
-import { capitalize } from './naming.js';
+import { createOutputWriter } from './fs-utils.js';
+import { capitalize, getPackIconNameType, getVariantIconNameType } from './naming.js';
 import { createSvgSprite, escapeJsString } from './svg-utils.js';
 
 function createTypeUnion(typeName, values) {
@@ -19,7 +19,7 @@ function createTypeUnion(typeName, values) {
 
 export function buildIconsPackage(icons, packData) {
   const distDir = path.join(CONFIG.packagesDir, 'icons', 'dist');
-  startOutputTracking(distDir);
+  const { writeFile, finish } = createOutputWriter(distDir);
 
   const componentNames = new Set(icons.map((icon) => icon.componentName));
   const svgExports = [];
@@ -32,6 +32,7 @@ export function buildIconsPackage(icons, packData) {
   const getterExports = [];
   const getterTypes = [];
   const typeUnions = [];
+  const variantTypeNames = [];
   const packNames = {};
 
   for (const icon of icons) {
@@ -68,6 +69,11 @@ export function buildIconsPackage(icons, packData) {
     for (const [variant, variantIcons] of Object.entries(variants)) {
       packImports.push(...variantIcons.map((icon) => `import { ${icon.componentName} } from './${icon.publicFileName}.js';`));
       variantObjects.push(`  '${variant}': {\n${variantIcons.map((icon) => `    '${icon.name}': ${icon.componentName}`).join(',\n')}\n  }`);
+
+      const variantTypeName = getVariantIconNameType(pack, variant);
+      const variantNames = variantIcons.map((icon) => icon.name).sort((a, b) => a.localeCompare(b));
+      typeUnions.push(createTypeUnion(variantTypeName, variantNames));
+      variantTypeNames.push(variantTypeName);
     }
 
     const packConst = `${pack}Icons`;
@@ -96,7 +102,7 @@ export function buildIconsPackage(icons, packData) {
 
     nameExports.push(`export { ${namesConst} } from './${pack}.js';`);
     nameTypes.push(`export { ${namesConst} } from './${pack}.js';`);
-    typeUnions.push(createTypeUnion(`${capitalize(pack)}IconName`, iconNames));
+    typeUnions.push(createTypeUnion(getPackIconNameType(pack), iconNames));
   }
 
   for (const pack of CONFIG.packs) {
@@ -130,7 +136,7 @@ export function buildIconsPackage(icons, packData) {
       const getterName = `get${capitalize(pack)}${suffix}Svg`;
       const fileName = `${pack}${getVariantFileSuffix(pack, variant)}`;
       const iconMapName = `${pack}${suffix}SvgMap`;
-      const iconNameType = `${capitalize(pack)}IconName`;
+      const iconNameType = getVariantIconNameType(pack, variant);
       const imports = variantIcons.map((icon) => `import { ${icon.componentName} } from '../svg/${icon.publicFileName}.js';`);
       const mapEntries = variantIcons.map((icon) => `  '${icon.name}': ${icon.componentName}`).join(',\n');
 
@@ -158,7 +164,15 @@ export function buildIconsPackage(icons, packData) {
   writeFile(path.join(distDir, 'getters', 'index.d.ts'), `${getterTypes.join('\n')}\n`);
 
   const variantUnion = createTypeUnion('IconVariant', CONFIG.variants);
-  const typeContent = `${typeUnions.join('\n\n')}\n\nexport type AllIconNames = ${CONFIG.packs.map((pack) => `${capitalize(pack)}IconName`).join(' | ')};\nexport type IconPack = ${CONFIG.packs.map((pack) => `'${pack}'`).join(' | ')};\n${variantUnion}\n`;
+  const iconNameMap = CONFIG.packs.map((pack) => {
+    const variants = Object.keys(packData[pack] ?? {});
+    const entries = variants
+      .map((variant) => `    '${variant}': ${getVariantIconNameType(pack, variant)};`)
+      .join('\n');
+
+    return `  '${pack}': {\n${entries}\n  };`;
+  }).join('\n');
+  const typeContent = `${typeUnions.join('\n\n')}\n\nexport type AllIconNames = ${CONFIG.packs.map((pack) => getPackIconNameType(pack)).join(' | ')};\nexport type IconPack = ${CONFIG.packs.map((pack) => `'${pack}'`).join(' | ')};\n${variantUnion}\n\nexport interface IconNameMap {\n${iconNameMap}\n}\n\nexport type IconVariantFor<TPack extends IconPack> = Extract<keyof IconNameMap[TPack], string>;\nexport type IconNameFor<\n  TPack extends IconPack,\n  TVariant extends IconVariantFor<TPack>,\n> = IconNameMap[TPack][TVariant];\n`;
 
   writeFile(path.join(distDir, 'types', 'index.js'), 'export {};\n');
   writeFile(path.join(distDir, 'types', 'index.d.ts'), typeContent);
@@ -171,8 +185,12 @@ export function buildIconsPackage(icons, packData) {
   const rootTypeExports = [
     'AllIconNames',
     ...CONFIG.packs.map((pack) => `${capitalize(pack)}IconName`),
+    ...variantTypeNames,
+    'IconNameFor',
+    'IconNameMap',
     'IconPack',
     'IconVariant',
+    'IconVariantFor',
   ].join(', ');
   const rootNameExports = CONFIG.packs.map((pack) => `${pack}IconNames`).join(', ');
   const rootSvgExports = CONFIG.packs.map((pack) => `${pack}Icons`).join(', ');
@@ -185,5 +203,5 @@ export function buildIconsPackage(icons, packData) {
     path.join(distDir, 'index.d.ts'),
     `import type { AllIconNames, IconPack, IconVariant } from './types/index.js';\nexport type { ${rootTypeExports} } from './types/index.js';\nexport { ${rootNameExports} } from './names/index.js';\nexport { ${rootSvgExports} } from './svg/index.js';\nexport declare function getIconSvg(pack: IconPack, name: AllIconNames, variant?: IconVariant): string | undefined;\n`
   );
-  finishOutputTracking();
+  return finish();
 }

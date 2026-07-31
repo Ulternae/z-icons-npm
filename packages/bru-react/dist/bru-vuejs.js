@@ -10,7 +10,7 @@ export function BruVuejs({ size = 24, color, style, ...props }) {
       fill: 'currentColor',
       ...props,
       style: { ...(color ? { color } : {}), ...style },
-    }, React.createElement('path', {"d":"M356.9 64.3H280l-56 88.6-48-88.6H0L224 448 448 64.3zm-301.2 32h53.8L224 294.5 338.4 96.3h53.8L224 384.5z"})
+    }, React.createElement("path", {"d":"M356.9 64.3H280l-56 88.6-48-88.6H0L224 448 448 64.3zm-301.2 32h53.8L224 294.5 338.4 96.3h53.8L224 384.5z"})
   );
 }
 

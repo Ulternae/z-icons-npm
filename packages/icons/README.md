@@ -2,6 +2,8 @@
 
 Framework-agnostic SVG icon package for ZCorvus icons.
 
+> Deprecated for direct application usage. This package remains as the shared data layer behind the React and Web Component adapters. Applications should prefer pack-scoped APIs such as `ZMina`, `ZLan`, `ZCore`, `ZNeo`, and `ZBru` from `@zcorvus/icons-react/packs`.
+
 Browse all available icons at [icons.zcorvus.com](https://icons.zcorvus.com/).
 
 ## Installation

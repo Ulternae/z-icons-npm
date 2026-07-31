@@ -9,7 +9,7 @@ export const LanGlassMartiniAlt = ({ size = 24, color, style, ...props }) => Rea
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M496.5 32c6.3 0 12.1 3.7 14.6 9.5s1.5 12.5-2.8 17.2l-91.8 101v.2h-.2L272.5 318.1v161.8h96c8.8 0 16 7.2 16 16s-7.2 16-16 16h-224c-8.8 0-16-7.2-16-16s7.2-16 16-16h96V318.1L96.7 159.9h-.2v-.2L4.7 58.7C.4 54.1-.7 47.3 1.9 41.5S10.2 32 16.5 32zM139.9 160l116.6 128.2L373.1 160zm-29.1-32h291.3l58.2-64H52.6z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M496.5 32c6.3 0 12.1 3.7 14.6 9.5s1.5 12.5-2.8 17.2l-91.8 101v.2h-.2L272.5 318.1v161.8h96c8.8 0 16 7.2 16 16s-7.2 16-16 16h-224c-8.8 0-16-7.2-16-16s7.2-16 16-16h96V318.1L96.7 159.9h-.2v-.2L4.7 58.7C.4 54.1-.7 47.3 1.9 41.5S10.2 32 16.5 32zM139.9 160l116.6 128.2L373.1 160zm-29.1-32h291.3l58.2-64H52.6z"})
 );
 
 export default LanGlassMartiniAlt;

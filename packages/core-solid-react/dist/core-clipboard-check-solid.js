@@ -10,7 +10,7 @@ export function CoreClipboardCheckSolid({ size = 24, color, style, ...props }) {
       fill: 'currentColor',
       ...props,
       style: { ...(color ? { color } : {}), ...style },
-    }, React.createElement('path', {"fill":"currentColor","d":"M128 128h192V32h64c35.3 0 64 28.7 64 64v352c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96c0-35.3 28.7-64 64-64h64zm64 190.1-64-64L94.1 288l81 81c9.4 9.4 24.6 9.4 33.9 0l145-145-33.9-33.9-128 128zM224-32c35.3 0 64 28.7 64 64v64H160V32c0-35.3 28.7-64 64-64"})
+    }, React.createElement("path", {"fill":"currentColor","d":"M128 128h192V32h64c35.3 0 64 28.7 64 64v352c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96c0-35.3 28.7-64 64-64h64zm64 190.1-64-64L94.1 288l81 81c9.4 9.4 24.6 9.4 33.9 0l145-145-33.9-33.9-128 128zM224-32c35.3 0 64 28.7 64 64v64H160V32c0-35.3 28.7-64 64-64"})
   );
 }
 

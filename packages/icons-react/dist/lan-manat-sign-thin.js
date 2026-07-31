@@ -9,7 +9,7 @@ export const LanManatSignThin = ({ size = 24, color, style, ...props }) => React
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M192 32c-4.4 0-8 3.6-8 8v56.2C81.7 100.4 0 184.6 0 288v184c0 4.4 3.6 8 8 8s8-3.6 8-8V288c0-94.5 74.5-171.6 168-175.8V472c0 4.4 3.6 8 8 8s8-3.6 8-8V112.2c93.5 4.2 168 81.3 168 175.8v184c0 4.4 3.6 8 8 8s8-3.6 8-8V288c0-103.4-81.7-187.6-184-191.8V40c0-4.4-3.6-8-8-8"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M192 32c-4.4 0-8 3.6-8 8v56.2C81.7 100.4 0 184.6 0 288v184c0 4.4 3.6 8 8 8s8-3.6 8-8V288c0-94.5 74.5-171.6 168-175.8V472c0 4.4 3.6 8 8 8s8-3.6 8-8V112.2c93.5 4.2 168 81.3 168 175.8v184c0 4.4 3.6 8 8 8s8-3.6 8-8V288c0-103.4-81.7-187.6-184-191.8V40c0-4.4-3.6-8-8-8"})
 );
 
 export default LanManatSignThin;

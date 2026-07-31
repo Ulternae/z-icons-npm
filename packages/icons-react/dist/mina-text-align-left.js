@@ -9,7 +9,7 @@ export const MinaTextAlignLeft = ({ size = 24, color, style, ...props }) => Reac
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M4.5 6h15m-15 4h10m-10 4h15m-15 4h10"})
+  }, React.createElement("path", {"d":"M4.5 6h15m-15 4h10m-10 4h15m-15 4h10"})
 );
 
 export default MinaTextAlignLeft;

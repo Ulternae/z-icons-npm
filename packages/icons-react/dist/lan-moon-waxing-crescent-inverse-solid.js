@@ -9,7 +9,7 @@ export const LanMoonWaxingCrescentInverseSolid = ({ size = 24, color, style, ...
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M256 0a256 256 0 1 0 0 512 256 256 0 1 0 0-512m-38.5 67.8C279.2 107.7 320 177.1 320 256s-40.8 148.2-102.5 188.1C129.9 426.3 64 348.9 64 256S129.9 85.7 217.5 67.8"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M256 0a256 256 0 1 0 0 512 256 256 0 1 0 0-512m-38.5 67.8C279.2 107.7 320 177.1 320 256s-40.8 148.2-102.5 188.1C129.9 426.3 64 348.9 64 256S129.9 85.7 217.5 67.8"})
 );
 
 export default LanMoonWaxingCrescentInverseSolid;

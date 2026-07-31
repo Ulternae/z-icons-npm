@@ -9,7 +9,7 @@ export const LanBookmarkCircle = ({ size = 24, color, style, ...props }) => Reac
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M256 32a224 224 0 1 1 0 448 224 224 0 1 1 0-448m0 480a256 256 0 1 0 0-512 256 256 0 1 0 0 512m-64-336c0-8.8 7.2-16 16-16h96c8.8 0 16 7.2 16 16v158.7l-54-43.2c-5.8-4.7-14.1-4.7-20 0l-54 43.2zm16-48c-26.5 0-48 21.5-48 48v192c0 6.2 3.5 11.8 9.1 14.4s12.1 1.9 16.9-1.9l70-56 70 56c4.8 3.8 11.4 4.6 16.9 1.9s9.1-8.3 9.1-14.4V176c0-26.5-21.5-48-48-48z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M256 32a224 224 0 1 1 0 448 224 224 0 1 1 0-448m0 480a256 256 0 1 0 0-512 256 256 0 1 0 0 512m-64-336c0-8.8 7.2-16 16-16h96c8.8 0 16 7.2 16 16v158.7l-54-43.2c-5.8-4.7-14.1-4.7-20 0l-54 43.2zm16-48c-26.5 0-48 21.5-48 48v192c0 6.2 3.5 11.8 9.1 14.4s12.1 1.9 16.9-1.9l70-56 70 56c4.8 3.8 11.4 4.6 16.9 1.9s9.1-8.3 9.1-14.4V176c0-26.5-21.5-48-48-48z"})
 );
 
 export default LanBookmarkCircle;

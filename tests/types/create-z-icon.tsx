@@ -18,6 +18,7 @@ const ManualIcon = createZIcon({
   mina: {
     light: {
       check: MinaCheck,
+      x: MinaX,
     },
     solid: {
       check: MinaCheckSolid,
@@ -32,6 +33,7 @@ const ManualIcon = createZIcon({
 
 <ManualIcon type="mina" name="check" />;
 <ManualIcon type="mina" name="check" variant="solid" className="size-4" />;
+<ManualIcon type="mina" name="x" />;
 <ManualIcon type="core" name="sun" />;
 
 // @ts-expect-error unknown pack
@@ -39,6 +41,12 @@ const ManualIcon = createZIcon({
 
 // @ts-expect-error unknown icon
 <ManualIcon type="mina" name="unknown" />;
+
+// @ts-expect-error icon is not available in the requested variant
+<ManualIcon type="mina" name="x" variant="solid" />;
+
+// @ts-expect-error icon belongs to a different pack
+<ManualIcon type="core" name="check" variant="regular" />;
 
 const PackDataIcon = createZIcon({
   mina: {

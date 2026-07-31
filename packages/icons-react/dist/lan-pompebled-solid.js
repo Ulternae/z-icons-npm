@@ -9,7 +9,7 @@ export const LanPompebledSolid = ({ size = 24, color, style, ...props }) => Reac
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M460.3 172c-46.2-33.2-117-14.1-165.1 44.3-5.9 8.6-17.2 10.6-25.6 4.5s-10.3-17.6-4.4-26.2c36.9-66.9 29-141.3-17.7-173.5C188.5-20.7 103 1.5 56.8 70.4-28.7 196.7-20.8 383.8 101 470.8c121.4 87 296.3 27.7 381.8-98.6 46.2-68.4 36.4-158.5-22.6-200.2z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M460.3 172c-46.2-33.2-117-14.1-165.1 44.3-5.9 8.6-17.2 10.6-25.6 4.5s-10.3-17.6-4.4-26.2c36.9-66.9 29-141.3-17.7-173.5C188.5-20.7 103 1.5 56.8 70.4-28.7 196.7-20.8 383.8 101 470.8c121.4 87 296.3 27.7 381.8-98.6 46.2-68.4 36.4-158.5-22.6-200.2z"})
 );
 
 export default LanPompebledSolid;

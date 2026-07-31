@@ -9,7 +9,7 @@ export const MinaArrowLongUp = ({ size = 24, color, style, ...props }) => React.
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"m8 6 4-4m0 0 4 4m-4-4v20"})
+  }, React.createElement("path", {"d":"m8 6 4-4m0 0 4 4m-4-4v20"})
 );
 
 export default MinaArrowLongUp;

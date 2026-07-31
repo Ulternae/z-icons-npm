@@ -9,7 +9,7 @@ export const LanPeaceThin = ({ size = 24, color, style, ...props }) => React.cre
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M248 495.9V273.1L76.8 415.7c42.4 47.4 103.2 77.9 171.2 80.2M66.6 403.4 248 252.3V16.1C119.2 20.4 16 126.1 16 256c0 55.6 18.9 106.7 50.6 147.4M256 512a256 256 0 1 1 0-512 256 256 0 1 1 0 512m179.2-96.3L264 273.1v222.8c68-2.2 128.8-32.7 171.2-80.2m10.2-12.3C477.1 362.7 496 311.6 496 256c0-129.9-103.2-235.6-232-239.9v236.1z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M248 495.9V273.1L76.8 415.7c42.4 47.4 103.2 77.9 171.2 80.2M66.6 403.4 248 252.3V16.1C119.2 20.4 16 126.1 16 256c0 55.6 18.9 106.7 50.6 147.4M256 512a256 256 0 1 1 0-512 256 256 0 1 1 0 512m179.2-96.3L264 273.1v222.8c68-2.2 128.8-32.7 171.2-80.2m10.2-12.3C477.1 362.7 496 311.6 496 256c0-129.9-103.2-235.6-232-239.9v236.1z"})
 );
 
 export default LanPeaceThin;

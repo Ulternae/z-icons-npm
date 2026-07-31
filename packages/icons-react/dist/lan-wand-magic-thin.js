@@ -9,7 +9,7 @@ export const LanWandMagicThin = ({ size = 24, color, style, ...props }) => React
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M410.2 23.5c9.8-9.8 26.4-9.8 36.3 0l42.3 42.3c9.8 9.8 9.8 26.4 0 36.3L365.3 225.7 286.7 147zM275.4 158.3l78.6 78.6-251.5 251.5c-9.8 9.8-26.4 9.8-36.3 0l-42.3-42.3c-9.8-9.8-9.8-26.4 0-36.3zM457.8 12.2c-16.1-16.1-42.8-16.1-58.9 0L12.6 398.5c-16.1 16.1-16.1 42.8 0 58.9l42.3 42.3c16.1 16.1 42.8 16.1 58.9 0l386.4-386.2c16.1-16.1 16.1-42.8 0-58.9z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M410.2 23.5c9.8-9.8 26.4-9.8 36.3 0l42.3 42.3c9.8 9.8 9.8 26.4 0 36.3L365.3 225.7 286.7 147zM275.4 158.3l78.6 78.6-251.5 251.5c-9.8 9.8-26.4 9.8-36.3 0l-42.3-42.3c-9.8-9.8-9.8-26.4 0-36.3zM457.8 12.2c-16.1-16.1-42.8-16.1-58.9 0L12.6 398.5c-16.1 16.1-16.1 42.8 0 58.9l42.3 42.3c16.1 16.1 42.8 16.1 58.9 0l386.4-386.2c16.1-16.1 16.1-42.8 0-58.9z"})
 );
 
 export default LanWandMagicThin;

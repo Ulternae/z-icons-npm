@@ -9,7 +9,7 @@ export const LanSpinnerThird = ({ size = 24, color, style, ...props }) => React.
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M463.9 376c7.6 4.4 17.5 1.8 21.4-6.1 17.1-34.3 26.7-73 26.7-113.9C512 120 405.9 8.8 272 .5c-8.8-.5-16 6.7-16 15.5s7.2 15.9 16 16.6C388.2 40.8 480 137.7 480 256c0 35.1-8.1 68.3-22.5 97.9-3.9 8-1.3 17.7 6.4 22.2z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M463.9 376c7.6 4.4 17.5 1.8 21.4-6.1 17.1-34.3 26.7-73 26.7-113.9C512 120 405.9 8.8 272 .5c-8.8-.5-16 6.7-16 15.5s7.2 15.9 16 16.6C388.2 40.8 480 137.7 480 256c0 35.1-8.1 68.3-22.5 97.9-3.9 8-1.3 17.7 6.4 22.2z"})
 );
 
 export default LanSpinnerThird;

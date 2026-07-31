@@ -9,7 +9,7 @@ export const LanTaurus = ({ size = 24, color, style, ...props }) => React.create
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M336-16c8.8 0 16 7.2 16 16 0 62.1-35.4 115.8-87.1 142.4C334.8 171.1 384 239.8 384 320c0 106-86 192-192 192S0 426 0 320c0-80.2 49.2-148.9 119-177.6C67.4 115.8 32 62.1 32 0c0-8.8 7.2-16 16-16S64-8.8 64 0c0 70.7 57.3 128 128 128S320 70.7 320 0c0-8.8 7.2-16 16-16M192 160a160 160 0 1 0 0 320 160 160 0 1 0 0-320"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M336-16c8.8 0 16 7.2 16 16 0 62.1-35.4 115.8-87.1 142.4C334.8 171.1 384 239.8 384 320c0 106-86 192-192 192S0 426 0 320c0-80.2 49.2-148.9 119-177.6C67.4 115.8 32 62.1 32 0c0-8.8 7.2-16 16-16S64-8.8 64 0c0 70.7 57.3 128 128 128S320 70.7 320 0c0-8.8 7.2-16 16-16M192 160a160 160 0 1 0 0 320 160 160 0 1 0 0-320"})
 );
 
 export default LanTaurus;

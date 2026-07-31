@@ -9,7 +9,7 @@ export const Lan5Solid = ({ size = 24, color, style, ...props }) => React.create
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M0 64c0-17.7 14.3-32 32-32h224c17.7 0 32 14.3 32 32s-14.3 32-32 32H64v112h120c75.1 0 136 60.9 136 136s-60.9 136-136 136H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h152c39.8 0 72-32.2 72-72s-32.2-72-72-72H32c-17.7 0-32-14.3-32-32z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M0 64c0-17.7 14.3-32 32-32h224c17.7 0 32 14.3 32 32s-14.3 32-32 32H64v112h120c75.1 0 136 60.9 136 136s-60.9 136-136 136H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h152c39.8 0 72-32.2 72-72s-32.2-72-72-72H32c-17.7 0-32-14.3-32-32z"})
 );
 
 export default Lan5Solid;

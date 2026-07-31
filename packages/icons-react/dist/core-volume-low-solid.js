@@ -9,7 +9,7 @@ export const CoreVolumeLowSolid = ({ size = 24, color, style, ...props }) => Rea
     fill: 'currentColor',
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M352 480h-53.3c-13.8 0-27.3-4.5-38.4-12.8l-111-83.2H96c-35.3 0-64-28.7-64-64V192c0-35.3 28.7-64 64-64h53.3l110.9-83.2c11.2-8.3 24.6-12.8 38.5-12.8H352zm64-343.8c53 14.1 92 62.4 92 119.8s-39 105.7-92 119.8V316c21.4-11.4 36-34 36-60s-14.6-48.6-36-60z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M352 480h-53.3c-13.8 0-27.3-4.5-38.4-12.8l-111-83.2H96c-35.3 0-64-28.7-64-64V192c0-35.3 28.7-64 64-64h53.3l110.9-83.2c11.2-8.3 24.6-12.8 38.5-12.8H352zm64-343.8c53 14.1 92 62.4 92 119.8s-39 105.7-92 119.8V316c21.4-11.4 36-34 36-60s-14.6-48.6-36-60z"})
 );
 
 export default CoreVolumeLowSolid;

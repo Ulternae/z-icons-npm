@@ -9,7 +9,7 @@ export const MinaMinus = ({ size = 24, color, style, ...props }) => React.create
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M6 12h12"})
+  }, React.createElement("path", {"d":"M6 12h12"})
 );
 
 export default MinaMinus;

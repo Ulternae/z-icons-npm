@@ -9,7 +9,7 @@ export const MinaVolumeCheck = ({ size = 24, color, style, ...props }) => React.
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M13 3v18c-3.5 0-6.1-4.58-6.1-4.58s-3.9.586-3.9-1V8.505c0-1.586 3.9-1 3.9-1S9.5 3 13 3m3.36 9.323 1.379 1.575a.3.3 0 0 0 .466-.022l2.8-3.876"})
+  }, React.createElement("path", {"d":"M13 3v18c-3.5 0-6.1-4.58-6.1-4.58s-3.9.586-3.9-1V8.505c0-1.586 3.9-1 3.9-1S9.5 3 13 3m3.36 9.323 1.379 1.575a.3.3 0 0 0 .466-.022l2.8-3.876"})
 );
 
 export default MinaVolumeCheck;

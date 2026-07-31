@@ -9,7 +9,7 @@ export const LanLessThanThin = ({ size = 24, color, style, ...props }) => React.
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M479.3 36.6c1.9 4 .1 8.8-3.9 10.6L27 256l448.4 208.8c4 1.9 5.7 6.6 3.9 10.6s-6.6 5.7-10.6 3.9l-464-216C1.8 261.9 0 259.1 0 256s1.8-5.9 4.6-7.3l464-216c4-1.9 8.8-.1 10.6 3.9z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M479.3 36.6c1.9 4 .1 8.8-3.9 10.6L27 256l448.4 208.8c4 1.9 5.7 6.6 3.9 10.6s-6.6 5.7-10.6 3.9l-464-216C1.8 261.9 0 259.1 0 256s1.8-5.9 4.6-7.3l464-216c4-1.9 8.8-.1 10.6 3.9z"})
 );
 
 export default LanLessThanThin;

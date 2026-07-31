@@ -9,7 +9,7 @@ export const MinaLetterM = ({ size = 24, color, style, ...props }) => React.crea
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M8 17V7l3.75 5 3.75-5v10"})
+  }, React.createElement("path", {"d":"M8 17V7l3.75 5 3.75-5v10"})
 );
 
 export default MinaLetterM;

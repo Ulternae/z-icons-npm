@@ -9,7 +9,7 @@ export const LanLightEmergencyRegular = ({ size = 24, color, style, ...props }) 
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M448 368c0-26.5-21.5-48-48-48V208c0-97.2-78.8-176-176-176S48 110.8 48 208v112c-26.5 0-48 21.5-48 48v64c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48zm-96-160v112H96V208c0-70.7 57.3-128 128-128s128 57.3 128 128M48 368h352v64H48zm128-168c0-22.1 17.9-40 40-40 13.3 0 24-10.7 24-24s-10.7-24-24-24c-48.6 0-88 39.4-88 88 0 13.3 10.7 24 24 24s24-10.7 24-24"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M448 368c0-26.5-21.5-48-48-48V208c0-97.2-78.8-176-176-176S48 110.8 48 208v112c-26.5 0-48 21.5-48 48v64c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48zm-96-160v112H96V208c0-70.7 57.3-128 128-128s128 57.3 128 128M48 368h352v64H48zm128-168c0-22.1 17.9-40 40-40 13.3 0 24-10.7 24-24s-10.7-24-24-24c-48.6 0-88 39.4-88 88 0 13.3 10.7 24 24 24s24-10.7 24-24"})
 );
 
 export default LanLightEmergencyRegular;

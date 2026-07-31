@@ -10,7 +10,7 @@ export function CoreForward({ size = 24, color, style, ...props }) {
       fill: 'currentColor',
       ...props,
       style: { ...(color ? { color } : {}), ...style },
-    }, React.createElement('path', {"fill":"currentColor","d":"M64 64H32v384h76.4l9.2-8.3 170.5-155V448h76.4l9.2-8.3 176-160c6.5-6.1 10.3-14.7 10.3-23.7s-3.8-17.6-10.5-23.7l-176-160-9.2-8.3h-76.4v163.3l-170.5-155-9.2-8.3H63.8zm160.4 192L96 372.8V139.2zm256 0L352 372.8V139.2z"})
+    }, React.createElement("path", {"fill":"currentColor","d":"M64 64H32v384h76.4l9.2-8.3 170.5-155V448h76.4l9.2-8.3 176-160c6.5-6.1 10.3-14.7 10.3-23.7s-3.8-17.6-10.5-23.7l-176-160-9.2-8.3h-76.4v163.3l-170.5-155-9.2-8.3H63.8zm160.4 192L96 372.8V139.2zm256 0L352 372.8V139.2z"})
   );
 }
 

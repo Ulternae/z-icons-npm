@@ -9,7 +9,7 @@ export const MinaMobileSignalTwo = ({ size = 24, color, style, ...props }) => Re
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"M3 21v-1m4.5 1v-5"})
+  }, React.createElement("path", {"d":"M3 21v-1m4.5 1v-5"})
 );
 
 export default MinaMobileSignalTwo;

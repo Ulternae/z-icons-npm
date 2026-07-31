@@ -9,7 +9,7 @@ export const LanStarSharpHalf = ({ size = 24, color, style, ...props }) => React
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"m256 77.8-49.2 120.3c-2.5 6-8.3 9.9-14.8 9.9H43.3l126 91c5.5 4 7.9 11.1 5.9 17.6l-43.7 144L256 363.7zm-8-64.9C251.2 5.1 258.8 0 267.2 0 278.7 0 288 9.3 288 20.8v350.8c0 4.9-2.3 9.6-6.2 12.6L123.1 507.6c-3.6 2.8-8.1 4.4-12.7 4.4-13.9 0-23.9-13.4-19.8-26.8l50.8-167-130.3-94.1c-6.9-5-11-13-11-21.6 0-14.7 11.9-26.6 26.6-26.6l154.6.1z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"m256 77.8-49.2 120.3c-2.5 6-8.3 9.9-14.8 9.9H43.3l126 91c5.5 4 7.9 11.1 5.9 17.6l-43.7 144L256 363.7zm-8-64.9C251.2 5.1 258.8 0 267.2 0 278.7 0 288 9.3 288 20.8v350.8c0 4.9-2.3 9.6-6.2 12.6L123.1 507.6c-3.6 2.8-8.1 4.4-12.7 4.4-13.9 0-23.9-13.4-19.8-26.8l50.8-167-130.3-94.1c-6.9-5-11-13-11-21.6 0-14.7 11.9-26.6 26.6-26.6l154.6.1z"})
 );
 
 export default LanStarSharpHalf;

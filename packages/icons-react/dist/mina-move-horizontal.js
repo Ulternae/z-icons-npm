@@ -9,7 +9,7 @@ export const MinaMoveHorizontal = ({ size = 24, color, style, ...props }) => Rea
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"d":"m18 8 4 4m0 0-4 4m4-4H2m4-4-4 4m0 0 4 4"})
+  }, React.createElement("path", {"d":"m18 8 4 4m0 0-4 4m4-4H2m4-4-4 4m0 0 4 4"})
 );
 
 export default MinaMoveHorizontal;

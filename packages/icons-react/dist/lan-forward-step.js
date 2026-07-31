@@ -9,7 +9,7 @@ export const LanForwardStep = ({ size = 24, color, style, ...props }) => React.c
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M368 32c-8.8 0-16 7.2-16 16v181.2l-10-6.6-280-184c-12.3-8.1-28-8.8-41-1.8S0 57.3 0 72v368c0 14.7 8.1 28.2 21 35.2s28.7 6.3 41-1.8l280-184 10-6.6V464c0 8.8 7.2 16 16 16s16-7.2 16-16V48c0-8.8-7.2-16-16-16M44.4 65.3l280 184 10.2 6.7-10.2 6.7-280 184c-2.5 1.6-5.6 1.8-8.2.4s-4.2-4.1-4.2-7V72c0-2.9 1.6-5.6 4.2-7s5.7-1.3 8.2.4z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M368 32c-8.8 0-16 7.2-16 16v181.2l-10-6.6-280-184c-12.3-8.1-28-8.8-41-1.8S0 57.3 0 72v368c0 14.7 8.1 28.2 21 35.2s28.7 6.3 41-1.8l280-184 10-6.6V464c0 8.8 7.2 16 16 16s16-7.2 16-16V48c0-8.8-7.2-16-16-16M44.4 65.3l280 184 10.2 6.7-10.2 6.7-280 184c-2.5 1.6-5.6 1.8-8.2.4s-4.2-4.1-4.2-7V72c0-2.9 1.6-5.6 4.2-7s5.7-1.3 8.2.4z"})
 );
 
 export default LanForwardStep;

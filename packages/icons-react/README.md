@@ -80,7 +80,7 @@ Individual icon components are still the most optimized option when the icon nam
 
 ## Dynamic Icon
 
-Use `ZIcon` when both the pack and icon name are dynamic.
+`ZIcon` is deprecated because it requires metadata for every supported pack. Prefer `ZMina`, `ZLan`, `ZCore`, `ZNeo`, or `ZBru`; keep `ZIcon` only while migrating code where the pack itself is dynamic.
 
 ```tsx
 import { ZIcon } from '@zcorvus/icons-react';
@@ -90,7 +90,7 @@ export function DynamicIcon() {
 }
 ```
 
-`ZIcon` prioritizes ergonomics and can include all supported packs. Prefer individual components or pack wrappers when bundle size is critical.
+`ZIcon` remains available for backward compatibility but can include all supported packs.
 
 `ZIcon` also renders sprite references. In React Server Components, include the specific pack sprite components for the packs and variants used on the page, inside `<body>`.
 

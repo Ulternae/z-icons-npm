@@ -27,3 +27,11 @@ export function getPublicIconName(pack, iconName, variant) {
 export function getPublicFileName(pack, iconName, variant) {
   return toKebabCase(getPublicIconName(pack, iconName, variant));
 }
+
+export function getPackIconNameType(pack) {
+  return `${capitalize(pack)}IconName`;
+}
+
+export function getVariantIconNameType(pack, variant) {
+  return `${capitalize(pack)}${toPascalCase(variant)}IconName`;
+}

@@ -10,7 +10,7 @@ export function CoreAngleDown({ size = 24, color, style, ...props }) {
       fill: 'currentColor',
       ...props,
       style: { ...(color ? { color } : {}), ...style },
-    }, React.createElement('path', {"fill":"currentColor","d":"m448.3 146.8-192 192-192-192L19.1 192l214.6 214.6c12.5 12.5 32.8 12.5 45.3 0L493.5 192z"})
+    }, React.createElement("path", {"fill":"currentColor","d":"m448.3 146.8-192 192-192-192L19.1 192l214.6 214.6c12.5 12.5 32.8 12.5 45.3 0L493.5 192z"})
   );
 }
 

@@ -9,7 +9,7 @@ export const LanYenSign = ({ size = 24, color, style, ...props }) => React.creat
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M45.3 39.1c-4.9-7.4-14.8-9.3-22.2-4.4s-9.3 14.8-4.4 22.2L172.8 288H88c-8.8 0-16 7.2-16 16s7.2 16 16 16h88v32H88c-8.8 0-16 7.2-16 16s7.2 16 16 16h88v80c0 8.8 7.2 16 16 16s16-7.2 16-16v-80h88c8.8 0 16-7.2 16-16s-7.2-16-16-16h-88v-32h88c8.8 0 16-7.2 16-16s-7.2-16-16-16h-84.8L365.3 56.9c4.9-7.4 2.9-17.3-4.4-22.2s-17.3-2.9-22.2 4.4L192 259.1z"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M45.3 39.1c-4.9-7.4-14.8-9.3-22.2-4.4s-9.3 14.8-4.4 22.2L172.8 288H88c-8.8 0-16 7.2-16 16s7.2 16 16 16h88v32H88c-8.8 0-16 7.2-16 16s7.2 16 16 16h88v80c0 8.8 7.2 16 16 16s16-7.2 16-16v-80h88c8.8 0 16-7.2 16-16s-7.2-16-16-16h-88v-32h88c8.8 0 16-7.2 16-16s-7.2-16-16-16h-84.8L365.3 56.9c4.9-7.4 2.9-17.3-4.4-22.2s-17.3-2.9-22.2 4.4L192 259.1z"})
 );
 
 export default LanYenSign;

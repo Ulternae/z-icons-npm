@@ -9,7 +9,7 @@ export const LanCircleOThin = ({ size = 24, color, style, ...props }) => React.c
     fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2,
     ...props,
     style: { ...(color ? { color } : {}), ...style },
-  }, React.createElement('path', {"fill":"currentColor","d":"M256 16a240 240 0 1 1 0 480 240 240 0 1 1 0-480m0 496a256 256 0 1 0 0-512 256 256 0 1 0 0 512m88-256a88 88 0 1 1-176 0 88 88 0 1 1 176 0m-88-104a104 104 0 1 0 0 208 104 104 0 1 0 0-208"})
+  }, React.createElement("path", {"fill":"currentColor","d":"M256 16a240 240 0 1 1 0 480 240 240 0 1 1 0-480m0 496a256 256 0 1 0 0-512 256 256 0 1 0 0 512m88-256a88 88 0 1 1-176 0 88 88 0 1 1 176 0m-88-104a104 104 0 1 0 0 208 104 104 0 1 0 0-208"})
 );
 
 export default LanCircleOThin;
