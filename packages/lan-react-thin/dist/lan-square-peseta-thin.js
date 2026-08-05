@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanSquarePesetaThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M64 48c-26.5 0-48 21.5-48 48v320c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48V96c0-26.5-21.5-48-48-48zM0 96c0-35.3 28.7-64 64-64h320c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64zm144 40c0-4.4 3.6-8 8-8h72c50.3 0 91.6 38.7 95.7 88H344c4.4 0 8 3.6 8 8s-3.6 8-8 8h-24.3c-4.1 49.3-45.3 88-95.7 88h-64v48c0 4.4-3.6 8-8 8s-8-3.6-8-8V232h-24c-4.4 0-8-3.6-8-8s3.6-8 8-8h24zm80 8h-64v72h143.6c-4-40.4-38.1-72-79.6-72m-64 160h64c41.5 0 75.6-31.6 79.6-72H160z"})
+  );
+}
+
+export default LanSquarePesetaThin;

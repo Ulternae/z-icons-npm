@@ -1,2 +1,0 @@
-export declare const MinaKeyboardBrightnessHighSolid: string;
-export default MinaKeyboardBrightnessHighSolid;

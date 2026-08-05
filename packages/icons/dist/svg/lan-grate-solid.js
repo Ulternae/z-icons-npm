@@ -1,2 +1,0 @@
-export const LanGrateSolid = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm0 64h40v136H64zm0 184h40v136H64zm88 136V280h48v136zm96 0V280h48v136zm96 0V280h40v136zm40-184h-40V96h40zM296 96v136h-48V96zm-96 0v136h-48V96z"/></svg>';
-export default LanGrateSolid;

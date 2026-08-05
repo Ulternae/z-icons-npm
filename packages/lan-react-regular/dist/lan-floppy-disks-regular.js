@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanFloppyDisksRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M160 48c-8.8 0-16 7.2-16 16v288c0 8.8 7.2 16 16 16h288c8.8 0 16-7.2 16-16V144.6c0-4.2-1.7-8.3-4.7-11.3L384 57.9V112c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V48zm80 0v48h96V48zM96 64c0-35.3 28.7-64 64-64h207.4c17 0 33.3 6.7 45.3 18.7l80.6 80.6c12 12 18.7 28.3 18.7 45.3V352c0 35.3-28.7 64-64 64H160c-35.3 0-64-28.7-64-64zm208 128a56 56 0 1 1 0 112 56 56 0 1 1 0-112M48 120v328c0 8.8 7.2 16 16 16h328c13.3 0 24 10.7 24 24s-10.7 24-24 24H64c-35.3 0-64-28.7-64-64V120c0-13.3 10.7-24 24-24s24 10.7 24 24"})
+  );
+}
+
+export default LanFloppyDisksRegular;

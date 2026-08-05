@@ -1,2 +1,0 @@
-export const LanBookmarkThin = '<svg viewBox="0 0 384 514.335" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M0 56C0 25.1 25.1 0 56 0h272c30.9 0 56 25.1 56 56v442.3c0 12.3-13.2 20-23.9 13.9l-164.2-92.8c-2.4-1.4-5.4-1.4-7.9 0L23.9 512.2c-10.7 6-23.9-1.7-23.9-13.9zm56-40c-22.1 0-40 17.9-40 40v442.3l164.2-92.8c7.3-4.1 16.3-4.1 23.6 0L368 498.3V56c0-22.1-17.9-40-40-40z"/></svg>';
-export default LanBookmarkThin;

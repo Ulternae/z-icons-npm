@@ -1,2 +1,0 @@
-export declare const LanComputerMouseScrollwheelRegular: string;
-export default LanComputerMouseScrollwheelRegular;

@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanRetweet({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 576 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M73.4 41.4c12.5-12.5 32.8-12.5 45.3 0l64 64c9.2 9.2 11.9 22.9 6.9 34.9S172.9 160 160 160h-48v224c0 35.3 28.7 64 64 64h128c8.8 0 16 7.2 16 16s-7.2 16-16 16H176c-53 0-96-43-96-96V160H32c-12.9 0-24.6-7.8-29.6-19.8s-2.2-25.7 7-34.8zM160 128 96 64l-64 64zm304 224V128c0-35.3-28.7-64-64-64H272c-8.8 0-16-7.2-16-16s7.2-16 16-16h128c53 0 96 43 96 96v224h48c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-64 64c-12.5 12.5-32.8 12.5-45.3 0l-64-64c-9.2-9.2-11.9-22.9-6.9-34.9S403.1 352 416 352zm16 96 64-64H416z"})
+  );
+}
+
+export default LanRetweet;

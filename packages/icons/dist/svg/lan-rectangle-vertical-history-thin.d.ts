@@ -1,2 +1,0 @@
-export declare const LanRectangleVerticalHistoryThin: string;
-export default LanRectangleVerticalHistoryThin;

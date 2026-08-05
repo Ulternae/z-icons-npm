@@ -1,2 +1,0 @@
-export declare const LanCommentAltExclamationRegular: string;
-export default LanCommentAltExclamationRegular;

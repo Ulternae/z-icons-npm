@@ -1,2 +1,0 @@
-export declare const LanMoonWaningGibbousInverseSolid: string;
-export default LanMoonWaningGibbousInverseSolid;

@@ -1,2 +1,0 @@
-export declare const LanCalendarCircleExclamationThin: string;
-export default LanCalendarCircleExclamationThin;

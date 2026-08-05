@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanSquareAustralThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M64 48c-26.5 0-48 21.5-48 48v320c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48V96c0-26.5-21.5-48-48-48zM0 96c0-35.3 28.7-64 64-64h320c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64zm224 51-41.2 93h82.3l-41.2-93zm14.1-10.4L283.9 240H336c4.4 0 8 3.6 8 8s-3.6 8-8 8h-45l21.3 48H336c4.4 0 8 3.6 8 8s-3.6 8-8 8h-16.6l23.3 52.5c1.9 4.3 0 9.4-4.4 11.3s-9.4 0-11.3-4.4l-26.3-59.5H147.5l-26.3 59.5c-1.9 4.3-7 6.3-11.3 4.4s-6.3-7-4.4-11.3l23.3-52.5h-16.7c-4.4 0-8-3.6-8-8s3.6-8 8-8h23.7l21.3-48h-45c-4.4 0-8-3.6-8-8s3.6-8 8-8h52.1L210 136.6c2.5-5.6 8-9.2 14.1-9.2s11.7 3.6 14.1 9.2zM175.7 256l-21.3 48h139l-21.3-48h-96.5z"})
+  );
+}
+
+export default LanSquareAustralThin;

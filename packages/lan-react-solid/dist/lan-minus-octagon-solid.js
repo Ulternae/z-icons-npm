@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanMinusOctagonSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M143.4 18.8c12-12 28.3-18.7 45.3-18.7h135.6c17 0 33.3 6.7 45.3 18.7l124 124.2c12 12 18.7 28.3 18.7 45.3v135.6c0 17-6.7 33.3-18.7 45.3l-124.1 124c-12 12-28.3 18.7-45.3 18.7H188.6c-17 0-33.3-6.7-45.3-18.7L19.2 369C7.2 357 .5 340.8.5 323.8V188.2c0-17 6.7-33.3 18.7-45.3zm25 213.2c-13.3 0-24 10.7-24 24s10.7 24 24 24h176c13.3 0 24-10.7 24-24s-10.7-24-24-24z"})
+  );
+}
+
+export default LanMinusOctagonSolid;

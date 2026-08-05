@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanHeadSideCoughSlashThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '-0.025 -32.125 576.025 575.95',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M562.3-29.8c3.1-3.1 8.2-3.1 11.3 0s3.1 8.2 0 11.3l-560 560c-3.1 3.1-8.2 3.1-11.3 0s-3.1-8.2 0-11.3l306.9-306.9-52.4-57.2c-1.1-1.3-1.9-2.8-2.1-4.5C243.6 61.7 158.8-16.1 55.9-16.1h-1.8c-2.1 0-4.2.1-6.2.1v-.1h-8c-4.4 0-8-3.6-8-8s3.6-8 8-8h16c110.2 0 201.2 82.6 214.4 189.3l50.3 54.8zM111.2 512l16-16H192c30.9 0 56-25.1 56-56v-16.6l-45-3.2 15-15 38.6 2.8c4.2.3 7.4 3.8 7.4 8v24c0 39.8-32.2 72-72 72zM128 176a16 16 0 1 1 32 0 16 16 0 1 1-32 0m368 112a16 16 0 1 1 32 0 16 16 0 1 1-32 0m-48 32a16 16 0 1 1 0 32 16 16 0 1 1 0-32m-64 48a16 16 0 1 1 0 32 16 16 0 1 1 0-32m128 0a16 16 0 1 1 0 32 16 16 0 1 1 0-32m-16 112a16 16 0 1 1 32 0 16 16 0 1 1-32 0m-48-64a16 16 0 1 1 0 32 16 16 0 1 1 0-32"})
+  );
+}
+
+export default LanHeadSideCoughSlashThin;

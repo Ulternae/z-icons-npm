@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanLightbulbExclamationSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 384 528',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M288 448c0 44.2-35.8 80-80 80h-32c-44.2 0-80-35.8-80-80v-16h192zM192 0c106 0 192 86 192 192 0 51.2-20 97.7-52.7 132.1-16.5 17.4-31.2 37.6-38.4 59.9H91.1c-7.3-22.3-21.9-42.5-38.4-59.9C20 289.7 0 243.2 0 192 0 86 86 0 192 0m0 248a32 32 0 1 0 0 64 32 32 0 1 0 0-64m0-176c-18.3 0-32.8 15.7-31.2 34l7.3 88c1 12.4 11.4 22 23.9 22s22.9-9.6 23.9-22l7.3-88c1.5-18.3-12.9-34-31.3-34z"})
+  );
+}
+
+export default LanLightbulbExclamationSolid;

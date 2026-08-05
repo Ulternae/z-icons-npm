@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanBlender({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M0 48C0 21.5 21.5 0 48 0h72v.1c.8-.1 1.5-.1 2.3-.1h315.8c21.1 0 36.4 20.1 30.9 40.4l-77.9 285.5c14.8 8.2 24.9 23.9 24.9 42.1v96c0 26.5-21.5 48-48 48H144c-26.5 0-48-21.5-48-48v-96c0-19.9 12.1-37 29.4-44.3l-9-99.7H48c-26.5 0-48-21.5-48-48zm48-16c-8.8 0-16 7.2-16 16v128c0 8.8 7.2 16 16 16h65.5L99 32H48.1zm96 320c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16h224c8.8 0 16-7.2 16-16v-96c0-8.8-7.2-16-16-16zm241.7-128H312c-8.8 0-16-7.2-16-16s7.2-16 16-16h82.5l17.5-64h-99.9c-8.8 0-16-7.2-16-16s7.2-16 16-16h108.6l17.5-64H131.1l26.2 288h202.3l26.2-96zM256 392a24 24 0 1 1 0 48 24 24 0 1 1 0-48"})
+  );
+}
+
+export default LanBlender;

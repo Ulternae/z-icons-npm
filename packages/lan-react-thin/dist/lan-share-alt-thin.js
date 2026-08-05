@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanShareAltThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M450.7 96a66.7 66.7 0 1 0-133.3 0 66.7 66.7 0 1 0 133.3 0m13.3 0c0 44.2-35.8 80-80 80-27.2 0-51.3-13.6-65.7-34.3l-148.8 82.6c4.2 9.7 6.5 20.4 6.5 31.7s-2.3 22-6.5 31.7l148.8 82.7c14.5-20.8 38.5-34.3 65.7-34.3 44.2 0 80 35.8 80 80s-35.8 80-80 80-80-35.8-80-80c0-11.3 2.3-22 6.5-31.7l-148.8-82.7C147.2 322.5 123.2 336 96 336c-44.2 0-80-35.8-80-80s35.8-80 80-80c27.2 0 51.3 13.6 65.7 34.3l148.8-82.7c-4.2-9.7-6.5-20.4-6.5-31.7 0-44.2 35.8-80 80-80s80 35.8 80 80zM162.7 256a66.7 66.7 0 1 0-133.3 0 66.7 66.7 0 1 0 133.3 0M384 482.7a66.7 66.7 0 1 0 0-133.3 66.7 66.7 0 1 0 0 133.3"})
+  );
+}
+
+export default LanShareAltThin;

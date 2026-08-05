@@ -1,2 +1,0 @@
-export declare const LanAssistiveListeningSystemsThin: string;
-export default LanAssistiveListeningSystemsThin;

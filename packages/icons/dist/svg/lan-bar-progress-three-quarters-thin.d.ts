@@ -1,2 +1,0 @@
-export declare const LanBarProgressThreeQuartersThin: string;
-export default LanBarProgressThreeQuartersThin;

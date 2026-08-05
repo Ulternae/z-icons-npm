@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanSubscriptRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 576 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M88 64c-13.3 0-24 10.7-24 24s10.7 24 24 24h27.2l96 144-96 144H88c-13.3 0-24 10.7-24 24s10.7 24 24 24h40c8 0 15.5-4 20-10.7l92-138 92 138c4.5 6.7 12 10.7 20 10.7h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-27.2l-96-144 96-144H392c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40c-8 0-15.5 4-20 10.7l-92 138-92-138C143.5 68 136 64 128 64zm448 248c0-8-3.9-15.4-10.5-19.9s-15-5.4-22.4-2.4l-40 16c-12.3 4.9-18.3 18.9-13.4 31.2s18.9 18.3 31.2 13.4l7.1-2.8v116.6h-16c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24h-16v-152z"})
+  );
+}
+
+export default LanSubscriptRegular;

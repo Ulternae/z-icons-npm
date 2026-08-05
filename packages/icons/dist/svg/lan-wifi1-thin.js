@@ -1,2 +1,0 @@
-export const LanWifi1Thin = '<svg viewBox="0 0 128 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M64 464c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32m0 16c26.5 0 48-21.5 48-48s-21.5-48-48-48-48 21.5-48 48 21.5 48 48 48"/></svg>';
-export default LanWifi1Thin;

@@ -1,2 +1,0 @@
-export const LanCloseThin = '<svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M381.7 77.7c3.1-3.1 3.1-8.2 0-11.3s-8.2-3.1-11.3 0L192 244.7 13.7 66.3c-3.1-3.1-8.2-3.1-11.3 0s-3.1 8.2 0 11.3L180.7 256 2.3 434.3c-3.1 3.1-3.1 8.2 0 11.3s8.2 3.1 11.3 0L192 267.3l178.3 178.4c3.1 3.1 8.2 3.1 11.3 0s3.1-8.2 0-11.3L203.3 256z"/></svg>';
-export default LanCloseThin;

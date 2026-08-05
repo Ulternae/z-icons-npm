@@ -89,18 +89,15 @@ Use `createZIconElement` when you only want a small icon registry.
 
 ```ts
 import { createZIconElement } from '@zcorvus/icons-web/create';
-import { MinaSearch, CoreSun } from '@zcorvus/icons/svg';
+import { minaIcons } from '@zcorvus/icons-web/data/mina';
+import { coreIcons } from '@zcorvus/icons-web/data/core';
 
 const AppIcon = createZIconElement({
   mina: {
-    light: {
-      search: MinaSearch,
-    },
+    light: minaIcons,
   },
   core: {
-    light: {
-      sun: CoreSun,
-    },
+    regular: coreIcons,
   },
 });
 

@@ -1,2 +1,0 @@
-export const LanCircle5Thin = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M256 16a240 240 0 1 1 0 480 240 240 0 1 1 0-480m0 496a256 256 0 1 0 0-512 256 256 0 1 0 0 512m48-352H200c-4.4 0-8 3.6-8 8v80c0 4.4 3.6 8 8 8h72c22.1 0 40 17.9 40 40s-17.9 40-40 40h-72c-4.4 0-8 3.6-8 8s3.6 8 8 8h72c30.9 0 56-25.1 56-56s-25.1-56-56-56h-64v-64h96c4.4 0 8-3.6 8-8s-3.6-8-8-8"/></svg>';
-export default LanCircle5Thin;

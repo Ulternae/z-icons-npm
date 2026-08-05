@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function NeoShirtSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 560 560',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M56 28C25.1 28 0 53.1 0 84v63.8c0 24.1 15.4 45.5 38.3 53.1L84 216.2V360c0 30.6 1.5 56.9 6.3 79 4.8 22.4 13.4 42.2 28.9 57.8s35.4 24.1 57.8 28.9c22.1 4.8 48.5 6.3 79 6.3h48c30.6 0 56.9-1.5 79-6.3 22.4-4.8 42.2-13.4 57.8-28.9s24.1-35.4 28.9-57.8c4.8-22.1 6.3-48.5 6.3-79V216.2l45.7-15.2c22.9-7.6 38.3-29 38.3-53.1V84c0-30.9-25.1-56-56-56H377.3C363 28 351 38.8 349.5 53c-2.1 19.8-9.9 34-20.6 43.2-10.8 9.4-26.8 15.7-48.9 15.7s-38.1-6.4-48.9-15.7C220.4 87 212.7 72.8 210.6 53 209 38.8 197 28 182.7 28z"})
+  );
+}
+
+export default NeoShirtSolid;

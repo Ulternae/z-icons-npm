@@ -1,2 +1,0 @@
-export declare const NeoArrowRightArrowLeftRegularDuo: string;
-export default NeoArrowRightArrowLeftRegularDuo;

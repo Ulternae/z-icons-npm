@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanSquareFlorin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M64 64c-17.7 0-32 14.3-32 32v320c0 17.7 14.3 32 32 32h320c17.7 0 32-14.3 32-32V96c0-17.7-14.3-32-32-32zM0 96c0-35.3 28.7-64 64-64h320c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64zm247.8 63.9c8.3-19.3 27.3-31.9 48.3-31.9H320c8.8 0 16 7.2 16 16s-7.2 16-16 16h-23.9c-8.2 0-15.7 4.9-18.9 12.5L255.1 224H304c8.8 0 16 7.2 16 16s-7.2 16-16 16h-62.6l-41.2 96.1c-8.3 19.3-27.3 31.9-48.3 31.9H128c-8.8 0-16-7.2-16-16s7.2-16 16-16h23.9c8.2 0 15.7-4.9 18.9-12.5l35.8-83.5H144c-8.8 0-16-7.2-16-16s7.2-16 16-16h76.3z"})
+  );
+}
+
+export default LanSquareFlorin;

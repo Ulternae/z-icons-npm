@@ -1,2 +1,0 @@
-export const CoreTrashRegularDuo = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill="currentColor" d="M96 160h256v288H96z" opacity=".4"/><path fill="currentColor" d="M96 64c0-35.3 28.7-64 64-64h128c35.3 0 64 28.7 64 64v32h96v64h-32v288c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V160H0V96h96zm64 32h128V64H160zm192 64H96v288h256z"/></svg>';
-export default CoreTrashRegularDuo;

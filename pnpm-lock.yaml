@@ -20,21 +20,30 @@ importers:
       '@zcorvus/core-react':
         specifier: workspace:*
         version: link:packages/core-react
-      '@zcorvus/core-regular-duo-react':
-        specifier: workspace:*
-        version: link:packages/core-regular-duo-react
-      '@zcorvus/core-solid-react':
-        specifier: workspace:*
-        version: link:packages/core-solid-react
-      '@zcorvus/icons':
-        specifier: workspace:*
-        version: link:packages/icons
       '@zcorvus/icons-react':
         specifier: workspace:*
         version: link:packages/icons-react
       '@zcorvus/icons-web':
         specifier: workspace:*
         version: link:packages/icons-web
+      '@zcorvus/lan-react-light':
+        specifier: workspace:*
+        version: link:packages/lan-react-light
+      '@zcorvus/lan-react-regular':
+        specifier: workspace:*
+        version: link:packages/lan-react-regular
+      '@zcorvus/lan-react-solid':
+        specifier: workspace:*
+        version: link:packages/lan-react-solid
+      '@zcorvus/lan-react-thin':
+        specifier: workspace:*
+        version: link:packages/lan-react-thin
+      '@zcorvus/mina-react':
+        specifier: workspace:*
+        version: link:packages/mina-react
+      '@zcorvus/neo-react':
+        specifier: workspace:*
+        version: link:packages/neo-react
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -63,20 +72,6 @@ importers:
         specifier: ^18.0.0 || ^19.0.0
         version: 18.3.1
 
-  packages/core-regular-duo-react:
-    dependencies:
-      react:
-        specifier: ^18.0.0 || ^19.0.0
-        version: 18.3.1
-
-  packages/core-solid-react:
-    dependencies:
-      react:
-        specifier: ^18.0.0 || ^19.0.0
-        version: 18.3.1
-
-  packages/icons: {}
-
   packages/icons-react:
     dependencies:
       react:
@@ -84,6 +79,42 @@ importers:
         version: 18.3.1
 
   packages/icons-web: {}
+
+  packages/lan-react-light:
+    dependencies:
+      react:
+        specifier: ^18.0.0 || ^19.0.0
+        version: 18.3.1
+
+  packages/lan-react-regular:
+    dependencies:
+      react:
+        specifier: ^18.0.0 || ^19.0.0
+        version: 18.3.1
+
+  packages/lan-react-solid:
+    dependencies:
+      react:
+        specifier: ^18.0.0 || ^19.0.0
+        version: 18.3.1
+
+  packages/lan-react-thin:
+    dependencies:
+      react:
+        specifier: ^18.0.0 || ^19.0.0
+        version: 18.3.1
+
+  packages/mina-react:
+    dependencies:
+      react:
+        specifier: ^18.0.0 || ^19.0.0
+        version: 18.3.1
+
+  packages/neo-react:
+    dependencies:
+      react:
+        specifier: ^18.0.0 || ^19.0.0
+        version: 18.3.1
 
 packages:
 

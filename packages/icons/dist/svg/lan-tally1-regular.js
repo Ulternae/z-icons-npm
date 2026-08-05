@@ -1,2 +1,0 @@
-export const LanTally1Regular = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M32 40c13.3 0 24 10.7 24 24v384c0 13.3-10.7 24-24 24S8 461.3 8 448V64c0-13.3 10.7-24 24-24"/></svg>';
-export default LanTally1Regular;

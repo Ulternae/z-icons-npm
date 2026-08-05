@@ -1,2 +1,0 @@
-export declare const MinaChartNoAxesColumnIncreasing: string;
-export default MinaChartNoAxesColumnIncreasing;

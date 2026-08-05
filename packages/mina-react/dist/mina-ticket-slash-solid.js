@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function MinaTicketSlashSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 24 24',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"d":"M5 4.25A2.75 2.75 0 0 0 2.25 7v3c0 .414.336.75.75.75a1.25 1.25 0 1 1 0 2.5.75.75 0 0 0-.75.75v3c0 1 .534 1.876 1.332 2.357L2.47 20.47a.75.75 0 1 0 1.06 1.06l1.78-1.78H19A2.75 2.75 0 0 0 21.75 17v-3a.75.75 0 0 0-.75-.75 1.25 1.25 0 1 1 0-2.5.75.75 0 0 0 .75-.75V7c0-1-.534-1.876-1.332-2.357L21.53 3.53a.75.75 0 0 0-1.06-1.06l-1.78 1.78zm7 3a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-1.5 0V8a.75.75 0 0 1 .75-.75m0 7.5a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-1.5 0v-.5a.75.75 0 0 1 .75-.75"})
+  );
+}
+
+export default MinaTicketSlashSolid;

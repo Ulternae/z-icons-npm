@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanEllipsisVAltSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 128 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M80 432c0 8.8-7.2 16-16 16s-16-7.2-16-16 7.2-16 16-16 16 7.2 16 16m48 0c0-35.3-28.7-64-64-64S0 396.7 0 432s28.7 64 64 64 64-28.7 64-64M80 256c0 8.8-7.2 16-16 16s-16-7.2-16-16 7.2-16 16-16 16 7.2 16 16m48 0c0-35.3-28.7-64-64-64S0 220.7 0 256s28.7 64 64 64 64-28.7 64-64M64 96a16 16 0 1 1 0-32 16 16 0 1 1 0 32m0-80a64 64 0 1 0 0 128 64 64 0 1 0 0-128"})
+  );
+}
+
+export default LanEllipsisVAltSolid;

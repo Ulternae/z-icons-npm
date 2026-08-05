@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanFileMusicRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 384 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M64 48h112v88c0 39.8 32.2 72 72 72h88v240c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16m160 19.9 92.1 92.1H248c-13.3 0-24-10.7-24-24zM64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V186.5c0-17-6.7-33.3-18.7-45.3L242.7 18.7C230.7 6.7 214.5 0 197.5 0zm192 240h-40c-13.3 0-24 10.7-24 24v57.8c-5.1-1.2-10.5-1.8-16-1.8-35.3 0-64 25.1-64 56s28.7 56 64 56 64-25.1 64-56c0-1.3-.1-2.6-.2-3.9l.2.1V288h16c13.3 0 24-10.7 24-24s-10.7-24-24-24"})
+  );
+}
+
+export default LanFileMusicRegular;

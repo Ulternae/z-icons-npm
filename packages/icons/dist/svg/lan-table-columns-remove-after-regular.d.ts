@@ -1,2 +1,0 @@
-export declare const LanTableColumnsRemoveAfterRegular: string;
-export default LanTableColumnsRemoveAfterRegular;

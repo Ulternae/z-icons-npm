@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanUserCheckRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 640 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M304.3 304c97.2 0 176 78.8 176 176v8c0 13.3-10.7 24-24 24s-24-10.7-24-24v-8c0-70.7-57.3-128-128-128h-96c-70.7 0-128 57.3-128 128v8c0 13.3-10.7 24-24 24s-24-10.7-24-24v-8c0-97.2 78.8-176 176-176zm281.4-198.1c7.8-10.7 22.8-13.1 33.5-5.3s13.1 22.8 5.3 33.5L522.1 274.9c-4.2 5.7-10.7 9.4-17.7 9.8s-14-2.2-18.9-7.3l-46.4-48c-9.2-9.5-9-24.7.6-33.9 9.5-9.2 24.7-8.9 33.9.6l26.5 27.4 85.6-117.7zM256.3 256a128 128 0 1 1 0-256 128 128 0 1 1 0 256m0-208a80 80 0 1 0 0 160 80 80 0 1 0 0-160"})
+  );
+}
+
+export default LanUserCheckRegular;

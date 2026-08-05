@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanWallBrickRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M144 80v48h160V80zm-48 48V80H64c-8.8 0-16 7.2-16 16v32zm-48 48v56h152v-56zm0 160h48v-56H48zm0 48v32c0 8.8 7.2 16 16 16h136v-48zm96-48h160v-56H144zm208 0h48v-56h-48zm48 48H248v48h136c8.8 0 16-7.2 16-16zm0-208H248v56h152zm0-48V96c0-8.8-7.2-16-16-16h-32v48zM0 96c0-35.3 28.7-64 64-64h320c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64z"})
+  );
+}
+
+export default LanWallBrickRegular;

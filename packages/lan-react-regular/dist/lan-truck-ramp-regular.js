@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanTruckRampRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 576 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M320 96c0-35.3 28.7-64 64-64h192v48H384c-8.8 0-16 7.2-16 16v272h52.1c16.1-19.5 40.6-32 67.9-32 48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88c0-2.7.1-5.4.4-8h-52.8L31 511c-12.8 3.8-26.2-3.4-30-16.1s3.4-26.1 16.1-29.9L320 374.1zm168 368a40 40 0 1 0 0-80 40 40 0 1 0 0 80"})
+  );
+}
+
+export default LanTruckRampRegular;

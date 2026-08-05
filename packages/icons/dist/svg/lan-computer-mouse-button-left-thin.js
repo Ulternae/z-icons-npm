@@ -1,2 +1,0 @@
-export const LanComputerMouseButtonLeftThin = '<svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16 192h128c22.1 0 40-17.9 40-40V16h-24C80.5 16 16 80.5 16 160zM184 0h40c88.4 0 160 71.6 160 160v192c0 88.4-71.6 160-160 160h-64C71.6 512 0 440.4 0 352V160C0 71.6 71.6 0 160 0zM16 208v144c0 79.5 64.5 144 144 144h64c79.5 0 144-64.5 144-144V160c0-79.5-64.5-144-144-144h-24v136c0 30.9-25.1 56-56 56z"/></svg>';
-export default LanComputerMouseButtonLeftThin;

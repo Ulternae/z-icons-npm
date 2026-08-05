@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanCourtSportRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 640 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M64 80c-8.8 0-16 7.2-16 16v32h16c35.3 0 64 28.7 64 64v128c0 35.3-28.7 64-64 64H48v32c0 8.8 7.2 16 16 16h232v-66.6c-50.3-11-88-55.8-88-109.4s37.7-98.4 88-109.4V80zm280 285.4V432h232c8.8 0 16-7.2 16-16v-32h-16c-35.3 0-64-28.7-64-64V192c0-35.3 28.7-64 64-64h16V96c0-8.8-7.2-16-16-16H344v66.6c50.3 11 88 55.8 88 109.4s-37.7 98.4-88 109.4m0-168.8v118.7c23.5-9.5 40-32.5 40-59.3s-16.5-49.9-40-59.3zm-48 0c-23.5 9.5-40 32.5-40 59.3s16.5 49.9 40 59.3V196.5zM48 176v160h16c8.8 0 16-7.2 16-16V192c0-8.8-7.2-16-16-16zm528 160h16V176h-16c-8.8 0-16 7.2-16 16v128c0 8.8 7.2 16 16 16M0 96c0-35.3 28.7-64 64-64h512c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64z"})
+  );
+}
+
+export default LanCourtSportRegular;

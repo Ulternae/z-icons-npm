@@ -1,2 +1,0 @@
-export declare const LanUserPoliceTieHairLongRegular: string;
-export default LanUserPoliceTieHairLongRegular;

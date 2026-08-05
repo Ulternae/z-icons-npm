@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanIndianRupeeSignRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 320 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M0 56c0-13.3 10.7-24 24-24h272c13.3 0 24 10.7 24 24s-10.7 24-24 24h-84.7c17.7 19.8 30.1 44.6 34.7 72h50c13.3 0 24 10.7 24 24s-10.7 24-24 24h-50c-11.4 68.1-70.7 120-142 120h-5.1L262 436.5c10.8 7.7 13.3 22.7 5.6 33.5s-22.7 13.3-33.5 5.6l-224-160c-8.5-6.1-12.1-17-9-26.9S13.6 272 24 272h80c44.7 0 82.3-30.6 93-72H24c-13.3 0-24-10.7-24-24s10.7-24 24-24h173c-10.7-41.4-48.2-72-93-72H24C10.7 80 0 69.3 0 56"})
+  );
+}
+
+export default LanIndianRupeeSignRegular;

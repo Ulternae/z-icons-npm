@@ -1,2 +1,0 @@
-export const LanCircleHalfStrokeThin = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M264 495.9V16.2c128.8 4.2 232 110 232 239.9S392.8 491.6 264 495.9m-16 0C119.2 491.6 16 385.9 16 256S119.2 20.4 248 16.1v479.7zm8 16.1a256 256 0 1 0 0-512 256 256 0 1 0 0 512"/></svg>';
-export default LanCircleHalfStrokeThin;

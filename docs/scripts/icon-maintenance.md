@@ -161,4 +161,4 @@ pnpm run build -- --target react
 pnpm run build -- --target web
 ```
 
-Desde la version 0.2, los targets `react` y `web` generan localmente sus tipos, datos SVG y sprites. `@zcorvus/icons` se mantiene solo como paquete de compatibilidad y ya no es una dependencia de los adaptadores.
+Desde la version 0.2, los targets `react` y `web` generan localmente sus tipos, datos SVG y sprites. El paquete legado `@zcorvus/icons` ya no se genera ni forma parte del workspace.

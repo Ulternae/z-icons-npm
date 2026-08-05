@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanChopsticks({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 640 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M403.2 98.6C423.8 72 417.6 35.5 392 14.7c-26.1-21.2-62.9-18.3-83.8 8.7l-.3.4L6.2 462.4c-10 13.4-7.7 32.4 5.5 42.9 13.3 10.6 32.5 8.3 43-4.8L402.9 99zM43.6 464.5 333.8 42.7c10-12.7 25.9-13 38.1-3.1s16.1 26.2 6.3 39.1zm575-293.9c26-22.1 27.2-59.1 5.1-84.4-21.8-25-58.6-29.6-84.4-7.7l-.3.3L138.5 458c-12.7 11.1-14.1 30.4-3 43.3 11 12.8 30.3 14.3 43.2 3.7l439.6-334.1zm-444 297.3 385.8-365.2c12.5-10.4 28.9-7.2 39.3 4.7s10.9 28-1.4 38.6L174.6 468z"})
+  );
+}
+
+export default LanChopsticks;

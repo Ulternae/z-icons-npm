@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanBangladeshiTakaSignThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 384 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M41 32.1c-4.4-.5-8.4 2.6-8.9 6.9s2.6 8.4 6.9 8.9l7.9 1C75 52.4 96 76.3 96 104.5V192H40c-4.4 0-8 3.6-8 8s3.6 8 8 8h56v200c0 39.8 32.2 72 72 72h16c110.5 0 200-89.5 200-200v-16c0-39.8-32.2-72-72-72h-48c-4.4 0-8 3.6-8 8s3.6 8 8 8h48c30.9 0 56 25.1 56 56v16c0 101.6-82.4 184-184 184h-16c-30.9 0-56-25.1-56-56V208h72c4.4 0 8-3.6 8-8s-3.6-8-8-8h-72v-87.5c0-36.3-27-66.9-63.1-71.4z"})
+  );
+}
+
+export default LanBangladeshiTakaSignThin;

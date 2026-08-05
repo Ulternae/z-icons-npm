@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanChampagneGlassSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '-2.971 -32 262.221 576',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M33.9-10.6C38.4-23.4 50.5-32 64.1-32h128c13.6 0 25.7 8.6 30.2 21.4 19.3 55.1 39.9 139.6 36.6 212-1.7 36.1-9.4 73.3-30.1 102.2-16.4 22.9-39.5 38.6-68.7 45V480h32c17.7 0 32 14.3 32 32s-14.3 32-32 32h-128c-17.7 0-32-14.3-32-32s14.3-32 32-32h32V348.6c-29.1-6.4-52.2-22-68.6-45C6.8 274.8-1 237.6-2.6 201.5-6 129 14.6 44.6 33.9-10.6M65.5 128h125.3c-4.8-33.5-13-67.2-21.8-96H87.3c-8.9 28.8-17 62.5-21.8 96"})
+  );
+}
+
+export default LanChampagneGlassSolid;

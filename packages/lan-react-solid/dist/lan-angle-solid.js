@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanAngleSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M252.6 78.3c7.9-15.8 1.5-35-14.3-42.9s-35-1.5-42.9 14.3l-192 384c-5 9.9-4.4 21.7 1.4 31.1S20.9 480 32 480h384c17.7 0 32-14.3 32-32s-14.3-32-32-32H83.8zm94.9 232.4c-5.6-12.8-21.3-17-33.2-9.7-10.7 6.6-14.4 20.3-9.5 31.9q7.2 16.95 12.3 35.1h49.6c-4.7-19.8-11.2-39-19.2-57.3m-91.4-56c8.2 9.5 22.1 12.3 32.8 5.6 11.9-7.4 15.1-23.4 6.1-34.1-12.7-15.1-26.7-29-41.8-41.7L231 228.9c8.9 8.1 17.3 16.7 25.1 25.8"})
+  );
+}
+
+export default LanAngleSolid;

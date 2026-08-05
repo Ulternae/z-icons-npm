@@ -1,2 +1,0 @@
-export declare const CoreMagnifyingGlassPlusRegularDuo: string;
-export default CoreMagnifyingGlassPlusRegularDuo;

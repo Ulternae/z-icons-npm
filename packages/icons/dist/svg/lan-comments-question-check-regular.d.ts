@@ -1,2 +1,0 @@
-export declare const LanCommentsQuestionCheckRegular: string;
-export default LanCommentsQuestionCheckRegular;

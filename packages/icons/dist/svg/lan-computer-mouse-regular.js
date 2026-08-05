@@ -1,2 +1,0 @@
-export const LanComputerMouseRegular = '<svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M192 224H48v128c0 61.9 50.1 112 112 112h64c61.9 0 112-50.1 112-112V224zm192-48v176c0 88.4-71.6 160-160 160h-64C71.6 512 0 440.4 0 352V160C0 71.6 71.6 0 160 0h64c88.4 0 160 71.6 160 160zM216 48v128h120v-16c0-61.9-50.1-112-112-112zm-48 0h-8C98.1 48 48 98.1 48 160v16h120z"/></svg>';
-export default LanComputerMouseRegular;

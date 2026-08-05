@@ -1,2 +1,0 @@
-export declare const LanAlbumCollectionCircleUserRegular: string;
-export default LanAlbumCollectionCircleUserRegular;

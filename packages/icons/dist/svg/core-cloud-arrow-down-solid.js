@@ -1,2 +1,0 @@
-export const CoreCloudArrowDownSolid = '<svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill="currentColor" d="M288 32c82.7 0 151.9 57 170.8 133.8C526.4 184.5 576 246.4 576 320c0 88.4-71.6 160-160 160H160C71.6 480 0 408.4 0 320c0-73.5 49.6-135.4 117.1-154.2C136 89 205.3 32 288 32m-24 128v174.1l-72-72-33.9 33.9 113 113c9.4 9.4 24.6 9.4 33.9 0l113-113-33.9-33.9-72 72V160h-48z"/></svg>';
-export default CoreCloudArrowDownSolid;

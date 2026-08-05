@@ -1,2 +1,0 @@
-export declare const LanLocationCrosshairsSlashRegular: string;
-export default LanLocationCrosshairsSlashRegular;

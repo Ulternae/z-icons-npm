@@ -1,2 +1,0 @@
-export declare const LanTrashCanArrowTurnLeftRegular: string;
-export default LanTrashCanArrowTurnLeftRegular;

@@ -1,2 +1,0 @@
-export declare const LanHouseFloodWaterCircleArrowRightRegular: string;
-export default LanHouseFloodWaterCircleArrowRightRegular;

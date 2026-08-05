@@ -8,13 +8,16 @@ on:
         required: true
         type: choice
         options:
-          - icons
           - icons-react
           - icons-web
           - bru-react
           - core-react
-          - core-solid-react
-          - core-regular-duo-react
+          - neo-react
+          - mina-react
+          - lan-react-light
+          - lan-react-regular
+          - lan-react-solid
+          - lan-react-thin
       dist-tag:
         description: npm distribution tag
         required: true
@@ -32,7 +35,7 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     environment: npm
 
     steps:

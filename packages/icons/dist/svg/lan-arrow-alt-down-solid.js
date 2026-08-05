@@ -1,2 +1,0 @@
-export const LanArrowAltDownSolid = '<svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M214.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-160-160c-9.2-9.2-11.9-22.9-6.9-34.9S19.1 256 32 256h96V80c0-26.5 21.5-48 48-48h32c26.5 0 48 21.5 48 48v176h96c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-160 160z"/></svg>';
-export default LanArrowAltDownSolid;

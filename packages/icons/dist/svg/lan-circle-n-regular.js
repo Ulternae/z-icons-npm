@@ -1,2 +1,0 @@
-export const LanCircleNRegular = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416m0 464a256 256 0 1 0 0-512 256 256 0 1 0 0 512m-53.4-359.2c-6.4-7.9-17.1-10.8-26.6-7.4s-16 12.5-16 22.6v176c0 13.3 10.7 24 24 24s24-10.7 24-24V235.2l101.4 124c6.4 7.9 17.1 10.8 26.6 7.4s16-12.5 16-22.6V168c0-13.3-10.7-24-24-24s-24 10.7-24 24v108.8z"/></svg>';
-export default LanCircleNRegular;

@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function MinaCigaretteOff({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 24 24',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"d":"M3 10c0-1.5 2-3.5 2-5m1.5 5c0-1.5 2-3.5 2-5m7.5 8v4M3 14v2a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1m0 7L21 3"})
+  );
+}
+
+export default MinaCigaretteOff;

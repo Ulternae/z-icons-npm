@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanBookFontSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M96 512h320c17.7 0 32-14.3 32-32s-14.3-32-32-32v-66.7c18.6-6.6 32-24.4 32-45.3V48c0-26.5-21.5-48-48-48H96C43 0 0 43 0 96v320c0 53 43 96 96 96m-32-96c0-17.7 14.3-32 32-32h256v64H96c-17.7 0-32-14.3-32-32M245.5 93.3l63.8 127.6c.2.3.3.6.4.9l23.8 47.5c5.9 11.9 1.1 26.3-10.7 32.2s-26.3 1.1-32.2-10.7l-17.4-34.7h-98.3l-17.4 34.7c-5.9 11.9-20.3 16.7-32.2 10.7s-16.7-20.3-10.7-32.2l23.8-47.5c.1-.3.3-.6.4-.9l63.7-127.6C206.6 85.1 214.9 80 224 80s17.4 5.1 21.5 13.3m3.7 114.7L224 157.7 198.8 208h50.3z"})
+  );
+}
+
+export default LanBookFontSolid;

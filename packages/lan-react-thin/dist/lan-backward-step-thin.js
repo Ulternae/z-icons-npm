@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanBackwardStepThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 384 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"m322 473.4-280-184-26-17.1V472c0 4.4-3.6 8-8 8s-8-3.6-8-8V40c0-4.4 3.6-8 8-8s8 3.6 8 8v199.7l26-17.1 280-184c12.3-8.1 28-8.8 41-1.8s21 20.5 21 35.2v368c0 14.7-8.1 28.2-21 35.2s-28.7 6.3-41-1.8M20.3 256l30.5 20.1 280 184c7.4 4.8 16.8 5.3 24.6 1.1S368 448.8 368 440V72c0-8.8-4.8-16.9-12.6-21.1s-17.2-3.8-24.6 1.1l-280 184-30.5 20.1z"})
+  );
+}
+
+export default LanBackwardStepThin;

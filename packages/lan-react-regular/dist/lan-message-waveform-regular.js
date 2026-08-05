@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanMessageWaveformRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 640 544',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M160 80c-26.5 0-48 21.5-48 48v224c0 26.5 21.5 48 48 48h56c13.3 0 24 10.7 24 24v49.7l64-45.2V472c0 4.9.5 9.7 1.4 14.3l-75.6 53.3c-7.3 5.2-16.9 5.8-24.9 1.7S192 529 192 520v-72h-32c-53 0-96-43-96-96V128c0-53 43-96 96-96h320c53 0 96 43 96 96v156.1c-11.4-7.7-25.2-12.1-40-12.1-2.7 0-5.4.2-8 .4V128c0-26.5-21.5-48-48-48zm320 232v208c0 13.3-10.7 24-24 24s-24-10.7-24-24V312c0-13.3 10.7-24 24-24s24 10.7 24 24m80 32v144c0 13.3-10.7 24-24 24s-24-10.7-24-24V344c0-13.3 10.7-24 24-24s24 10.7 24 24m-160 16v112c0 13.3-10.7 24-24 24s-24-10.7-24-24V360c0-13.3 10.7-24 24-24s24 10.7 24 24m240 32v48c0 13.3-10.7 24-24 24s-24-10.7-24-24v-48c0-13.3 10.7-24 24-24s24 10.7 24 24"})
+  );
+}
+
+export default LanMessageWaveformRegular;

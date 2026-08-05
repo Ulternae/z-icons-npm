@@ -1,2 +1,0 @@
-export declare const LanComputerMouseButtonRightSolid: string;
-export default LanComputerMouseButtonRightSolid;

@@ -1,2 +1,0 @@
-export const CoreVolumeXmarkSolid = '<svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill="currentColor" d="M320 480h-53.3c-13.8 0-27.3-4.5-38.4-12.8l-111-83.2H64c-35.3 0-64-28.7-64-64V192c0-35.3 28.7-64 64-64h53.3l110.9-83.2c11.2-8.3 24.6-12.8 38.5-12.8H320zm239.7-264.1L503.6 272l56.1 56.1-39.6 39.6-56.1-56.1-56.1 56.1-39.6-39.6 56.1-56.1-56.1-56.1 39.6-39.6 56.1 56.1 56.1-56.1z"/></svg>';
-export default CoreVolumeXmarkSolid;

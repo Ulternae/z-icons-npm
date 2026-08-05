@@ -1,2 +1,0 @@
-export const LanGenderlessRegular = '<svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M192 112a144 144 0 1 1 0 288 144 144 0 1 1 0-288m0 336a192 192 0 1 0 0-384 192 192 0 1 0 0 384"/></svg>';
-export default LanGenderlessRegular;

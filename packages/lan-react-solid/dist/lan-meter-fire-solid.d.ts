@@ -1,0 +1,8 @@
+import React from 'react';
+
+export interface LanMeterFireSolidProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+  size?: string | number;
+}
+
+export declare function LanMeterFireSolid(props: LanMeterFireSolidProps): React.ReactElement;
+export default LanMeterFireSolid;

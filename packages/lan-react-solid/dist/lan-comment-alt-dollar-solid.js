@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanCommentAltDollarSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 544',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M0 128v224c0 53 43 96 96 96h32v72c0 13.3 10.7 24 24 24 5.2 0 10.2-1.7 14.4-4.8l115.2-86.4c4.2-3.1 9.2-4.8 14.4-4.8h120c53 0 96-43 96-96V128c0-53-43-96-96-96H96C43 32 0 75 0 128m260 0c11 0 20 9 20 20v4h8c11 0 20 9 20 20s-9 20-20 20h-47.5c-6.9 0-12.5 5.6-12.5 12.5 0 6.1 4.4 11.3 10.4 12.3l41.7 7c25.3 4.2 43.9 26.1 43.9 51.8 0 26.1-19 47.7-44 51.8v4.7c0 11-9 20-20 20s-20-9-20-20v-4h-24c-11 0-20-9-20-20s9-20 20-20h55.5c6.9 0 12.5-5.6 12.5-12.5 0-6.1-4.4-11.3-10.4-12.3l-41.7-7c-25.3-4.2-43.9-26.1-43.9-51.8 0-28.8 23.2-52.2 52-52.5v-4c0-11 9-20 20-20"})
+  );
+}
+
+export default LanCommentAltDollarSolid;

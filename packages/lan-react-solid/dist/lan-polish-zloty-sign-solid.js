@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanPolishZlotySignSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M352 32c17.7 0 32 14.3 32 32v130.4l23.6-8.8c12.4-4.7 26.2 1.6 30.9 14s-1.6 26.2-14 30.9L384 245.6V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V269.6l-23.6 8.8c-12.4 4.7-26.2-1.6-30.9-14s1.6-26.2 14-30.9l40.5-15.1V64c0-17.7 14.3-32 32-32M32 192h160c12 0 23 6.7 28.5 17.4s4.6 23.5-2.4 33.2L94.2 416H192c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-12 0-23-6.7-28.5-17.4S-1 439.2 6 429.4L129.8 256H32c-17.7 0-32-14.3-32-32s14.3-32 32-32"})
+  );
+}
+
+export default LanPolishZlotySignSolid;

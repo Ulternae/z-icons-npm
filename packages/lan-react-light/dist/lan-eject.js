@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanEject({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M224 64c-4.5 0-8.8 1.9-11.8 5.2l-176 192c-4.3 4.7-5.4 11.4-2.9 17.3S41.7 288 48 288h352c6.3 0 12.1-3.8 14.6-9.6s1.4-12.6-2.9-17.3l-176-192c-3-3.3-7.3-5.2-11.8-5.2zm0-32c13.5 0 26.3 5.6 35.4 15.6l176 192c12.9 14 16.2 34.3 8.6 51.8S419 320 400 320H48c-19 0-36.3-11.2-43.9-28.7s-4.3-37.7 8.6-51.8l176-192c9-9.9 21.8-15.5 35.3-15.5M56 400c-13.3 0-24 10.7-24 24s10.7 24 24 24h336c13.3 0 24-10.7 24-24s-10.7-24-24-24zM0 424c0-30.9 25.1-56 56-56h336c30.9 0 56 25.1 56 56s-25.1 56-56 56H56c-30.9 0-56-25.1-56-56"})
+  );
+}
+
+export default LanEject;

@@ -1,2 +1,0 @@
-export const LanLampFloor = '<svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M96 32 32 192h320L288 32zM66.3 20.1C71.1 8 82.9 0 96 0h192c13.1 0 24.9 8 29.7 20.1l64 160c3.9 9.9 2.7 21-3.2 29.8S362.6 224 352 224H208v256h96c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16s7.2-16 16-16h96V224H32c-10.6 0-20.5-5.3-26.5-14.1s-7.2-20-3.2-29.8z"/></svg>';
-export default LanLampFloor;

@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanTableCellsRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M312 80v88h88V96c0-8.8-7.2-16-16-16zm-48 0h-80v88h80zm-128 0H64c-8.8 0-16 7.2-16 16v72h88zM0 216V96c0-35.3 28.7-64 64-64h320c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64zm48 80h88v-80H48zm0 48v72c0 8.8 7.2 16 16 16h72v-88zm136 88h80v-88h-80zm128 0h72c8.8 0 16-7.2 16-16v-72h-88zm88-136v-80h-88v80zm-216 0h80v-80h-80z"})
+  );
+}
+
+export default LanTableCellsRegular;

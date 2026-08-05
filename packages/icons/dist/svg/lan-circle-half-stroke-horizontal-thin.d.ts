@@ -1,2 +1,0 @@
-export declare const LanCircleHalfStrokeHorizontalThin: string;
-export default LanCircleHalfStrokeHorizontalThin;

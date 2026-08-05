@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanFileMedicalAlt({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M256 32H128c-17.7 0-32 14.3-32 32v256h48c5 0 9.8 2.4 12.8 6.4l32.5 43.3 52.4-104.8c2.7-5.4 8.2-8.8 14.3-8.8s11.6 3.4 14.3 8.8l27.6 55.2H352c8.8 0 16 7.2 16 16s-7.2 16-16 16h-64c-6.1 0-11.6-3.4-14.3-8.8L256 307.9l-49.7 99.4c-2.5 5-7.4 8.3-12.9 8.8s-10.9-1.9-14.2-6.3L136 352H16c-8.8 0-16-7.2-16-16s7.2-16 16-16h48V64c0-35.3 28.7-64 64-64h133.5c17 0 33.3 6.7 45.3 18.7l122.5 122.6c12 12 18.7 28.3 18.7 45.3V448c0 35.3-28.7 64-64 64H128c-35.3 0-64-28.7-64-64v-48h32v48c0 17.7 14.3 32 32 32h256c17.7 0 32-14.3 32-32V192h-96c-35.3 0-64-28.7-64-64zm146.7 128L288 45.3V128c0 17.7 14.3 32 32 32z"})
+  );
+}
+
+export default LanFileMedicalAlt;

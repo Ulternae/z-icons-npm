@@ -1,2 +1,0 @@
-export const LanCameraWebRegular = '<svg viewBox="0 0 448 528" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M48 224a176 176 0 1 1 352 0 176 176 0 1 1-352 0m200 222.7C360.4 434.8 448 339.6 448 224 448 100.3 347.7 0 224 0S0 100.3 0 224c0 115.6 87.6 210.8 200 222.7V480h-80c-13.3 0-24 10.7-24 24s10.7 24 24 24h208c13.3 0 24-10.7 24-24s-10.7-24-24-24h-80zM144 224a80 80 0 1 1 160 0 80 80 0 1 1-160 0m208 0a128 128 0 1 0-256 0 128 128 0 1 0 256 0"/></svg>';
-export default LanCameraWebRegular;

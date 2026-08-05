@@ -1,2 +1,0 @@
-export declare const LanArrowUpFromGroundWaterRegular: string;
-export default LanArrowUpFromGroundWaterRegular;

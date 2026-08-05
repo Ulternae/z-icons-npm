@@ -1,2 +1,0 @@
-export declare const LanHandsAmericanSignLanguageInterpretingThin: string;
-export default LanHandsAmericanSignLanguageInterpretingThin;

@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanShirtTankTop({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 384 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M96 16c0-8.8-7.2-16-16-16S64 7.2 64 16c0 134.3-29.3 192.6-45.6 214.6C9.5 242.5 0 259.2 0 278.2V456c0 30.9 25.1 56 56 56h272c30.9 0 56-25.1 56-56V278.2c0-19-9.5-35.7-18.4-47.6-16.3-22-45.6-80.2-45.6-214.6 0-8.8-7.2-16-16-16s-16 7.2-16 16v48c0 53-43 96-96 96s-96-43-96-96zm-9.5 120.5C109.6 170 148.2 192 192 192s82.4-22 105.5-55.5c10.7 59.8 28.4 94.1 42.4 113.1 7.6 10.2 12.1 20 12.1 28.6V456c0 13.3-10.7 24-24 24H56c-13.3 0-24-10.7-24-24V278.2c0-8.6 4.6-18.4 12.1-28.6 14-19 31.7-53.3 42.4-113.1"})
+  );
+}
+
+export default LanShirtTankTop;

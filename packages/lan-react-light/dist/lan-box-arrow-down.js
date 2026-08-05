@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanBoxArrowDown({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M416 160H32v256c0 17.7 14.3 32 32 32h320c17.7 0 32-14.3 32-32zm-208-32V48h-95.1c-10.3 0-20 5-26 13.4L39.3 128zm200.7 0-47.6-66.6c-6-8.4-15.7-13.4-26-13.4H240v80zM0 148.5c0-13.3 4.2-26.3 11.9-37.2l49-68.5C72.9 26 92.3 16 112.9 16H335c20.7 0 40.1 10 52.1 26.8l48.9 68.5c7.8 10.9 11.9 23.9 11.9 37.2L448 416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64zm212.7 246.8-72-72c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l44.7 44.7V224c0-8.8 7.2-16 16-16s16 7.2 16 16v121.4l44.7-44.7c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6l-72 72c-6.2 6.2-16.4 6.2-22.6 0"})
+  );
+}
+
+export default LanBoxArrowDown;

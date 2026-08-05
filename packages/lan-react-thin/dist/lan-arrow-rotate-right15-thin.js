@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanArrowRotateRight15Thin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M504 0c4.4 0 8 3.6 8 8v144c0 3.2-1.9 6.2-4.9 7.4s-6.4.5-8.7-1.8l-70.5-70.4C382.3 41.6 320.5 16 256 16 123.5 16 16 123.5 16 256s107.5 240 240 240c96.5 0 179.8-57 217.9-139.2 1.9-4 6.6-5.7 10.6-3.9s5.7 6.6 3.9 10.6C447.8 451.2 359 512 256 512 114.6 512 0 397.4 0 256S114.6 0 256 0c68.7 0 134.6 27.3 183.2 75.9l56.8 56.8V8c0-4.4 3.6-8 8-8M180.4 160.8c2.5-1.2 5.4-1.1 7.8.3s3.8 4 3.8 6.8v176c0 4.4-3.6 8-8 8s-8-3.6-8-8V180.8L139.6 199c-3.9 2-8.7.4-10.7-3.6s-.4-8.7 3.6-10.7l48-24zM352 160c4.4 0 8 3.6 8 8s-3.6 8-8 8h-96v64h56c30.9 0 56 25.1 56 56s-25.1 56-56 56h-64c-4.4 0-8-3.6-8-8s3.6-8 8-8h64c22.1 0 40-17.9 40-40s-17.9-40-40-40h-64c-4.4 0-8-3.6-8-8v-80c0-4.4 3.6-8 8-8z"})
+  );
+}
+
+export default LanArrowRotateRight15Thin;

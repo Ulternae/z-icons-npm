@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanChessPawnAltThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 320 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M160 32c53 0 96 43 96 96 0 24.6-9.3 47-24.5 64h.5c4.4 0 8 3.6 8 8s-3.6 8-8 8h-6.7L240 384l56.2 70.3c5 6.3 7.8 14.1 7.8 22.2 0 19.6-15.9 35.5-35.5 35.5h-217C31.9 512 16 496.1 16 476.5c0-8.1 2.7-15.9 7.8-22.2L80 384l14.7-176H88c-4.4 0-8-3.6-8-8s3.6-8 8-8h.5C73.3 175 64 152.6 64 128c0-53 43-96 96-96m72 368H88v-.4l-51.7 64.7c-2.8 3.5-4.3 7.8-4.3 12.2 0 10.8 8.7 19.5 19.5 19.5h216.9c9.4 0 17.3-6.7 19.1-15.6l.4-3.9c0-3.3-.8-6.6-2.4-9.4l-1.8-2.7-51.7-64.7v.4zM96.1 384H224l-14.7-176h-98.6L96 384zM160 48c-44.2 0-80 35.8-80 80 0 26.2 12.7 49.4 32.2 64h95.7c19.5-14.6 32.2-37.8 32.2-64 0-44.2-35.8-80-80-80z"})
+  );
+}
+
+export default LanChessPawnAltThin;

@@ -48,6 +48,14 @@
     "./register-*": {
       "types": "./dist/register-*.d.ts",
       "import": "./dist/register-*.js"
+    },
+    "./data/*": {
+      "types": "./dist/data/*.d.ts",
+      "import": "./dist/data/*.js"
+    },
+    "./sprites/*": {
+      "types": "./dist/sprites/*.d.ts",
+      "import": "./dist/sprites/*.js"
     }
   },
   "typesVersions": {
@@ -60,6 +68,12 @@
       ],
       "register-*": [
         "dist/register-*.d.ts"
+      ],
+      "data/*": [
+        "dist/data/*.d.ts"
+      ],
+      "sprites/*": [
+        "dist/sprites/*.d.ts"
       ]
     }
   }

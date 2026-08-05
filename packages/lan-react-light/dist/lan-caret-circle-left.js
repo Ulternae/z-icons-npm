@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanCaretCircleLeft({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M32 256a224 224 0 1 1 448 0 224 224 0 1 1-448 0m480 0a256 256 0 1 0-512 0 256 256 0 1 0 512 0m-352 0c0 9.6 4 18.7 11 25.2l102.8 95.5c5.1 4.7 11.8 7.3 18.7 7.3 15.2 0 27.5-12.3 27.5-27.5v-201c0-15.2-12.3-27.5-27.5-27.5-6.9 0-13.6 2.6-18.7 7.3L171 230.8c-7 6.5-11 15.6-11 25.2m32.7 1.7c-.5-.4-.7-1.1-.7-1.7s.3-1.3.7-1.7l95.3-88.4v180.3l-95.3-88.4z"})
+  );
+}
+
+export default LanCaretCircleLeft;

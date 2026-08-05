@@ -1,2 +1,0 @@
-export const CoreLocationArrowSolid = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill="currentColor" d="M468.3 2.2c11.8-4.6 25.3-1.8 34.3 7.2s11.8 22.5 7.2 34.3l-176 448-8 20.3H224V288H0V186.2l20.3-8z"/></svg>';
-export default CoreLocationArrowSolid;

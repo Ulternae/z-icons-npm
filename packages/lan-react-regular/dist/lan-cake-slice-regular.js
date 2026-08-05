@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanCakeSliceRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M464 304v40H48v-40zM48 416v-24h416v24c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16M296 32c-7.2 0-14.2 2.4-19.8 6.9l-264 208C4.5 252.9 0 262.2 0 272v144c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V256c0-74.3-32.8-130.8-76.1-168.2C393.6 51.2 340.3 32 296 32"})
+  );
+}
+
+export default LanCakeSliceRegular;

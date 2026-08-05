@@ -1,22 +1,21 @@
 import { iconConfig as CONFIG } from './icon-config.js';
-import { buildIconsPackage } from './build/build-icons-package.js';
 import { buildStandaloneReactPackages } from './build/build-core-react-packages.js';
 import { buildReactPackage } from './build/build-react-package.js';
 import { buildWebPackage } from './build/build-web-package.js';
 import { collectIcons } from './build/collect-icons.js';
 
 const TARGETS = {
-  all: ['icons', 'react', 'web', 'standalone-react'],
-  icons: ['icons'],
+  all: ['react', 'web', 'standalone-react'],
   react: ['react'],
   web: ['web'],
-  'core-react': ['standalone-react'],
+  'pack-react': ['standalone-react'],
   'standalone-react': ['standalone-react'],
 };
 
 function parseArgs(argv) {
   const args = {
     target: 'all',
+    pack: undefined,
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -31,6 +30,17 @@ function parseArgs(argv) {
 
     if (arg.startsWith('--target=')) {
       args.target = arg.slice('--target='.length);
+      continue;
+    }
+
+    if (arg === '--pack' && next) {
+      args.pack = next;
+      index += 1;
+      continue;
+    }
+
+    if (arg.startsWith('--pack=')) {
+      args.pack = arg.slice('--pack='.length);
     }
   }
 
@@ -48,10 +58,6 @@ function resolveTargets(target) {
 }
 
 function buildTarget(target, icons, packData) {
-  if (target === 'icons') {
-    return buildIconsPackage(icons, packData);
-  }
-
   if (target === 'react') {
     return buildReactPackage(icons, packData);
   }
@@ -88,11 +94,20 @@ function printBuildStats(target, result) {
 
 function main() {
   const args = parseArgs(process.argv.slice(2));
-  const targets = resolveTargets(args.target);
+  const effectiveTarget = args.pack && args.target === 'react' ? 'pack-react' : args.target;
+  const targets = resolveTargets(effectiveTarget);
+
+  if (args.pack && !CONFIG.packs.includes(args.pack)) {
+    throw new Error(`Unknown icon pack "${args.pack}". Expected one of: ${CONFIG.packs.join(', ')}`);
+  }
+
+  if (args.pack && !['react', 'pack-react', 'standalone-react'].includes(args.target)) {
+    throw new Error('--pack can only be used with a React package target.');
+  }
 
   console.log(`\nStarting ZCorvus icons build: ${targets.join(', ')}\n`);
 
-  const collectOptions = args.target === 'core-react' || args.target === 'standalone-react' ? { packs: ['core', 'bru'] } : undefined;
+  const collectOptions = args.pack ? { packs: [args.pack] } : undefined;
   const { icons, packData } = collectIcons(collectOptions);
 
   for (const target of targets) {

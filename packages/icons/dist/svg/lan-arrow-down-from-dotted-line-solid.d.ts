@@ -1,2 +1,0 @@
-export declare const LanArrowDownFromDottedLineSolid: string;
-export default LanArrowDownFromDottedLineSolid;

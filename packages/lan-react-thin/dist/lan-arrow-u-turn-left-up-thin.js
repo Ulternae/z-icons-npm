@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanArrowUTurnLeftUpThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 576 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"m18.8 138.3 136-136c3.1-3.1 8.2-3.1 11.3 0l136 136c3.1 3.1 3.1 8.2 0 11.3s-8.2 3.1-11.3 0L168.5 27.3V332c0 90.6 73.4 164 164 164s164-73.4 164-164V72c.4-4.3 3.3-8 8-8s7.6 3.7 8 8v260c0 99.4-80.6 180-180 180s-180-80.6-180-180V27.3L30.2 149.6c-3.1 3.1-8.2 3.1-11.3 0s-3.1-8.2 0-11.3z"})
+  );
+}
+
+export default LanArrowUTurnLeftUpThin;

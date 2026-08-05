@@ -1,2 +1,0 @@
-export const CoreCompassSolid = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill="currentColor" d="M256 512a256 256 0 1 1 0-512 256 256 0 1 1 0 512m-23.5-332.1c-27 4.5-48.1 25.7-52.6 52.6L160 352l119.5-19.9c27-4.5 48.1-25.7 52.6-52.6L352 160z"/></svg>';
-export default CoreCompassSolid;

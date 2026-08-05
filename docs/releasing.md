@@ -8,7 +8,22 @@ Releases are intentionally manual. The GitHub `Release package` workflow validat
 2. Create a protected GitHub environment named `npm` and require maintainer approval.
 3. Decide and apply the project and icon-pack licenses. Packages currently remain `UNLICENSED` and the package check prints a warning until that decision is made.
 
-`@zcorvus/icons` is a deprecated compatibility API. Starting with version 0.2, the React and Web adapters are self-contained and can be released without publishing a matching `@zcorvus/icons` version. Applications should use pack-scoped wrappers such as `ZMina`, `ZLan`, `ZCore`, `ZNeo`, and `ZBru`.
+`@zcorvus/icons` is no longer built or published from version 0.2 onward. Existing npm versions should be deprecated with migration guidance rather than unpublished. `@zcorvus/core-solid-react` and `@zcorvus/core-regular-duo-react` are replaced by the combined `@zcorvus/core-react` package.
+
+The public package matrix is:
+
+```txt
+@zcorvus/icons-react
+@zcorvus/icons-web
+@zcorvus/core-react
+@zcorvus/neo-react
+@zcorvus/mina-react
+@zcorvus/bru-react
+@zcorvus/lan-react-light
+@zcorvus/lan-react-regular
+@zcorvus/lan-react-solid
+@zcorvus/lan-react-thin
+```
 
 ## Release procedure
 

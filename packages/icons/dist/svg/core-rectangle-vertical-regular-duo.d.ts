@@ -1,2 +1,0 @@
-export declare const CoreRectangleVerticalRegularDuo: string;
-export default CoreRectangleVerticalRegularDuo;

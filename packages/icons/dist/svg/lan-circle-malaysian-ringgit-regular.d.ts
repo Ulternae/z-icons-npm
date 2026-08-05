@@ -1,2 +1,0 @@
-export declare const LanCircleMalaysianRinggitRegular: string;
-export default LanCircleMalaysianRinggitRegular;

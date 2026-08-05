@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanSiren({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"m145.5 320 14.6-145.6c.9-8.8 8.7-15.2 17.5-14.3s15.2 8.7 14.3 17.5L177.7 320H375L343.8 91.7C341.7 75.8 328.1 64 312.1 64H135.9c-16 0-29.5 11.8-31.7 27.7L73 320zm14.3 32H48c-8.8 0-16 7.2-16 16v64c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16v-64c0-8.8-7.2-16-16-16H159.9zM375.5 87.4l31.8 233.2c23 3.5 40.6 23.4 40.6 47.4v64c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48v-64c0-24 17.6-43.9 40.7-47.4L72.5 87.4C76.8 55.6 103.9 32 135.9 32h176.3c32 0 59.1 23.6 63.4 55.4z"})
+  );
+}
+
+export default LanSiren;

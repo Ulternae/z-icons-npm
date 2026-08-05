@@ -1,2 +1,0 @@
-export declare const LanMoonWaxingCrescentInverseRegular: string;
-export default LanMoonWaxingCrescentInverseRegular;

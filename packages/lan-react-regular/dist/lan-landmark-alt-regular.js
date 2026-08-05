@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanLandmarkAltRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M256 0c13.3 0 24 10.7 24 24v9.5c89.5 11.1 159.9 83.9 167.3 174.5h8.7c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8v112h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H56c-13.3 0-24-10.7-24-24s10.7-24 24-24h8V256h-8c-13.3 0-24-10.7-24-24s10.7-24 24-24h8.7C72.1 117.4 142.5 44.6 232 33.5V24c0-13.3 10.7-24 24-24M112.9 208h286.2c-8-72-69-128-143.1-128s-135.2 56-143.1 128m-.9 48v112h64V256zm112 0v112h64V256zm112 0v112h64V256zM24 464h464c13.3 0 24 10.7 24 24s-10.7 24-24 24H24c-13.3 0-24-10.7-24-24s10.7-24 24-24"})
+  );
+}
+
+export default LanLandmarkAltRegular;

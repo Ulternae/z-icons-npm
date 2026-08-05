@@ -1,2 +1,0 @@
-export declare const CoreArrowRightToBracketRegularDuo: string;
-export default CoreArrowRightToBracketRegularDuo;

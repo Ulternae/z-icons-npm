@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanBedAltSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M32 96c0-35.3 28.7-64 64-64h320c35.3 0 64 28.7 64 64v95c-14.7-7.3-30.9-12.2-48-14.1V160c0-17.7-14.3-32-32-32h-96c-17.7 0-32 14.3-32 32v16h-32v-16c0-17.7-14.3-32-32-32h-96c-17.7 0-32 14.3-32 32v16.9c-17.1 1.9-33.3 6.8-48 14.1zM0 320c0-53 43-96 96-96h320c53 0 96 43 96 96v128c0 17.7-14.3 32-32 32s-32-14.3-32-32v-32H64v32c0 17.7-14.3 32-32 32S0 465.7 0 448z"})
+  );
+}
+
+export default LanBedAltSolid;

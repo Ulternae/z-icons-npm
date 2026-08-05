@@ -1,0 +1,8 @@
+import React from 'react';
+
+export interface LanHoodCloakSolidProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+  size?: string | number;
+}
+
+export declare function LanHoodCloakSolid(props: LanHoodCloakSolidProps): React.ReactElement;
+export default LanHoodCloakSolid;

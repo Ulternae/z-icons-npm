@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanVialCircleCheckRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 544',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M32 24C32 10.7 42.7 0 56 0h240c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8v177.4c-17.6 8.1-33.8 18.7-48 31.5V240H112v160c0 35.3 28.7 64 64 64 3.6 0 7.2-.3 10.6-.9 5.5 15.7 12.9 30.5 22 44-10.3 3.1-21.3 4.8-32.7 4.8-61.9 0-112-50.1-112-112v-352h-8C42.7 48 32 37.3 32 24m80 24v144h128V48zm112 352a144 144 0 1 1 288 0 144 144 0 1 1-288 0m201.4-60.9c-7.1-5.2-17.2-3.6-22.4 3.5l-53 72.9-26.8-26.8c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6l40 40c3.3 3.3 7.9 5 12.6 4.6s8.9-2.8 11.7-6.5l64-88c5.2-7.1 3.6-17.2-3.5-22.3"})
+  );
+}
+
+export default LanVialCircleCheckRegular;

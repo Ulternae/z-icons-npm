@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanHourglass1Regular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 384 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M0 488c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24s-10.7-24-24-24h-8v-19c0-40.3-16-79-44.5-107.5L226 256l81.5-81.5C336 146 352 107.3 352 67V48h8c13.3 0 24-10.7 24-24S373.3 0 360 0H24C10.7 0 0 10.7 0 24s10.7 24 24 24h8v19c0 40.3 16 79 44.5 107.5L158 256l-81.5 81.5C48 366 32 404.7 32 445v19h-8c-13.3 0-24 10.7-24 24m113.9-344H270l-78.1 78.1-78.1-78.1zM84.1 96C81.4 86.7 80 76.9 80 67V48h224v19c0 9.9-1.4 19.7-4.1 29zm189.4 275.5C293 391 304 417.4 304 445v19H80v-19c0-27.6 11-54 30.5-73.5L192 290z"})
+  );
+}
+
+export default LanHourglass1Regular;

@@ -1,2 +1,0 @@
-export declare const LanToiletPaperUnderSlashRegular: string;
-export default LanToiletPaperUnderSlashRegular;

@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanMagnifyingGlassChartRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M208 48a160 160 0 1 1 0 320 160 160 0 1 1 0-320m0 368c48.8 0 93.7-16.8 129.1-44.9L471 505c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-133.8-134C399.2 301.7 416 256.8 416 208 416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208M104 216v48c0 13.3 10.7 24 24 24s24-10.7 24-24v-48c0-13.3-10.7-24-24-24s-24 10.7-24 24m80-96v144c0 13.3 10.7 24 24 24s24-10.7 24-24V120c0-13.3-10.7-24-24-24s-24 10.7-24 24m80 64v80c0 13.3 10.7 24 24 24s24-10.7 24-24v-80c0-13.3-10.7-24-24-24s-24 10.7-24 24"})
+  );
+}
+
+export default LanMagnifyingGlassChartRegular;

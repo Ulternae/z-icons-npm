@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanCommentsAltRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 -32 576 575.963',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M48 40v192c0 13.3 10.7 24 24 24h32c13.3 0 24 10.7 24 24v31.3l54.6-42c11.2-8.6 24.9-13.3 39-13.3H312c13.3 0 24-10.7 24-24V40c0-13.3-10.7-24-24-24H72c-13.3 0-24 10.7-24 24m24-72h240c39.8 0 72 32.2 72 72v192c0 39.8-32.2 72-72 72h-90.4c-3.5 0-7 1.2-9.8 3.3L118.6 379c-7.2 5.6-17 6.5-25.2 2.5S80 369.1 80 360v-56h-8c-39.8 0-72-32.2-72-72V40C0 .2 32.2-32 72-32m168 384v40c0 13.3 10.7 24 24 24h90.4c14.1 0 27.8 4.7 39 13.3l54.6 42V440c0-13.3 10.7-24 24-24h32c13.3 0 24-10.7 24-24V200c0-13.3-10.7-24-24-24h-72v-48h72c39.8 0 72 32.2 72 72v192c0 39.8-32.2 72-72 72h-8v56c0 9.1-5.2 17.5-13.4 21.5s-18 3.1-25.2-2.5l-93.2-71.7c-2.8-2.2-6.2-3.3-9.8-3.3H264c-39.8 0-72-32.2-72-72v-8.9l40.5-31.1z"})
+  );
+}
+
+export default LanCommentsAltRegular;

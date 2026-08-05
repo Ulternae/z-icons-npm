@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanHandLoveSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M160 0c17.7 0 32 14.3 32 32v256c0 35.3 28.7 64 64 64 19.1 0 36.3-8.4 48-21.7 11.7 13.3 28.9 21.7 48 21.7 35.3 0 64-28.7 64-64V96c0-17.7 14.3-32 32-32s32 14.3 32 32v240c0 97.2-78.8 176-176 176h-19.2c-59.6 0-116.9-22.9-160-64L12.4 341c-16-15.2-16.6-40.6-1.4-56.6s40.6-16.6 56.6-1.4l60.5 57.6c0-1.5-.1-3.1-.1-4.6V32c0-17.7 14.3-32 32-32m64 192c0-17.7 14.3-32 32-32s32 14.3 32 32v96c0 17.7-14.3 32-32 32s-32-14.3-32-32zm128 0c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32s-32-14.3-32-32v-64c0-17.7 14.3-32 32-32"})
+  );
+}
+
+export default LanHandLoveSolid;

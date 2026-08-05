@@ -1,2 +1,0 @@
-export declare const MinaChevronDownRightCircleSolid: string;
-export default MinaChevronDownRightCircleSolid;

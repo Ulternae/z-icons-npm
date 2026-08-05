@@ -1,2 +1,0 @@
-export declare const LanRectangleHistoryCircleUserThin: string;
-export default LanRectangleHistoryCircleUserThin;

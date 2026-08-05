@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanArrowUTurnUpRightSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 -15.975 512.488 527.975',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M505.3 148.2c10.3-12.6 9.5-31.1-2.2-42.8l-112-112c-12.5-12.5-32.8-12.5-45.2 0s-12.5 32.8 0 45.2L403.2 96H192.5C89.8 96 5.9 176.7.8 278.1L.5 288c0 106 86 192 192 192h224l3.3-.2c16.1-1.6 28.7-15.3 28.7-31.8s-12.6-30.2-28.7-31.8l-3.3-.2h-224c-70.7 0-128-57.3-128-128l.2-6.6C68.1 213.8 124 160 192.5 160h210.7l-57.4 57.4-2.2 2.4c-10.2 12.6-9.5 31.1 2.2 42.8s30.2 12.4 42.8 2.2l2.4-2.2 112-112 2.2-2.4z"})
+  );
+}
+
+export default LanArrowUTurnUpRightSolid;

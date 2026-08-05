@@ -1,2 +1,0 @@
-export declare const LanObjectsAlignCenterHorizontalRegular: string;
-export default LanObjectsAlignCenterHorizontalRegular;

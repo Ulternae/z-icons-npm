@@ -6,6 +6,7 @@ export { bruSprite } from './sprite.js';
 export { bruSolidViewBoxes } from './viewboxes.js';
 
 export const ZBruSprite = createSpriteComponent('bru', bruSprite);
+
 export const ZBru = createPackIcon({
   pack: 'bru',
   variant: 'solid',

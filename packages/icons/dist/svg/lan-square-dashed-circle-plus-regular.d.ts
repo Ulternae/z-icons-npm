@@ -1,2 +1,0 @@
-export declare const LanSquareDashedCirclePlusRegular: string;
-export default LanSquareDashedCirclePlusRegular;

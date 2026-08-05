@@ -1,2 +1,0 @@
-export const LanOverline = '<svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16 32C7.2 32 0 24.8 0 16S7.2 0 16 0h352c8.8 0 16 7.2 16 16s-7.2 16-16 16zm336 288a160 160 0 1 0-320 0 160 160 0 1 0 320 0M0 320a192 192 0 1 1 384 0 192 192 0 1 1-384 0"/></svg>';
-export default LanOverline;

@@ -1,2 +1,0 @@
-export const LanSquareUSolid = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm112 136v104c0 26.5 21.5 48 48 48s48-21.5 48-48V168c0-13.3 10.7-24 24-24s24 10.7 24 24v104c0 53-43 96-96 96s-96-43-96-96V168c0-13.3 10.7-24 24-24s24 10.7 24 24"/></svg>';
-export default LanSquareUSolid;

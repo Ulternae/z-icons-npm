@@ -1,2 +1,0 @@
-export declare const LanHouseMedicalCircleExclamationThin: string;
-export default LanHouseMedicalCircleExclamationThin;

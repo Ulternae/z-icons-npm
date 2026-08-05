@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanHouseCrackRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M240 6.1c9.1-8.2 22.9-8.2 32 0l232 208c9.9 8.8 10.7 24 1.8 33.9s-24 10.7-33.9 1.8l-8-7.2v205.3c0 35.3-28.7 64-64 64h-288c-35.3 0-64-28.7-64-64V242.6l-8 7.2c-9.9 8.8-25 8-33.9-1.8s-8-25 1.8-33.9zm16 50.1L96 199.7V448c0 8.8 7.2 16 16 16h85.9l-30.3-48.1c-4.4-6.9-2.8-16 3.6-21.1l84.8-67.3-58.1-76.1c-11.3-14.8 7.4-33.6 22.3-22.5l115.2 86.2c8.4 6.3 8.6 18.8.4 25.3L256 403.8l37.9 60.2H400c8.8 0 16-7.2 16-16V199.7L256 56.3z"})
+  );
+}
+
+export default LanHouseCrackRegular;

@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanUpFromBracketRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M241 7c-9.4-9.4-24.6-9.4-33.9 0L63 151c-6.9 6.9-8.9 17.2-5.2 26.2S70.3 192 80 192h64v112c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V192h64c9.7 0 18.5-5.8 22.2-14.8s1.7-19.3-5.2-26.2zm-73 137h-30.1L224 57.9l86.1 86.1H280c-13.3 0-24 10.7-24 24v136h-64V168c0-13.3-10.7-24-24-24M48 344c0-13.3-10.7-24-24-24S0 330.7 0 344v72c0 53 43 96 96 96h256c53 0 96-43 96-96v-72c0-13.3-10.7-24-24-24s-24 10.7-24 24v72c0 26.5-21.5 48-48 48H96c-26.5 0-48-21.5-48-48z"})
+  );
+}
+
+export default LanUpFromBracketRegular;

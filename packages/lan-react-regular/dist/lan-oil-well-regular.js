@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanOilWellRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 576 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M523.4 228.2c4.6 17.1-5.6 34.6-22.6 39.2L442.8 51c17.1-4.6 34.6 5.6 39.2 22.6l41.4 154.5zm5-167c-11.4-42.7-55.3-68-98-56.6l-15.5 4.2C397.8 13.4 387.7 31 392.3 48l26.6 99.2-113.1 29.3-11-32.3c-3.3-9.7-12.4-16.2-22.7-16.2s-19.4 6.5-22.7 16.2l-17.7 51.5L96 230.9V184c0-13.3-10.7-24-24-24s-24 10.7-24 24v280H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h528c13.3 0 24-10.7 24-24s-10.7-24-24-24H403.9l-67.3-197.1L290 279l24.9 73H229l21.4-62.8-55.6 14.4-54.7 160.3H96V280.4l335.3-86.9 27.3 101.7c4.6 17.1 22.1 27.2 39.2 22.6l15.5-4.1c42.7-11.4 68-55.3 56.6-98L528.3 61.3zM331.3 400l21.9 64H190.8l21.9-64z"})
+  );
+}
+
+export default LanOilWellRegular;

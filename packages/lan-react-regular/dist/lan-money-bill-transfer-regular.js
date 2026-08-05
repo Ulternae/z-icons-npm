@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanMoneyBillTransferRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 -7.925 640 527.838',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"m31 105 72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-31-31h67.7c.8.9 1.5 1.8 2.3 2.7 0-.9.1-1.8.1-2.7h288c0 35.3 28.7 64 64 64v104.4c15.7 1.7 30.9 8.6 42.9 20.6l5.1 5.1V128c0-35.3-28.7-64-64-64H106l31-31c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-34-.1L31 71c-9.4 9.4-9.4 24.6 0 33.9zm33 100.8V384c0 35.3 28.7 64 64 64h406.1l-31 31c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l72-72c9.4-9.4 9.4-24.6 0-33.9l-72-72c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l31 31h-67.7c-.8-.9-1.5-1.8-2.3-2.7 0 .9-.1 1.8-.1 2.7H176c0-35.3-28.7-64-64-64V231.5c-15.7-1.7-30.9-8.6-42.9-20.6zM416 256a96 96 0 1 0-192 0 96 96 0 1 0 192 0"})
+  );
+}
+
+export default LanMoneyBillTransferRegular;

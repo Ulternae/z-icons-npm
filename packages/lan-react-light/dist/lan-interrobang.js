@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanInterrobang({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 320 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M160 32C89.3 32 32 89.3 32 160c0 8.8-7.2 16-16 16s-16-7.2-16-16C0 71.6 71.6 0 160 0s160 71.6 160 160c0 66.9-41.1 124.2-99.3 148.1-26.1 10.7-44.7 30.6-44.7 51.9v24c0 8.8-7.2 16-16 16s-16-7.2-16-16V144c0-8.8 7.2-16 16-16s16 7.2 16 16v153.9c10.1-8.3 21.5-14.9 32.5-19.4 46.6-19.1 79.5-65 79.5-118.5 0-70.7-57.3-128-128-128m24 456c0 13.3-10.7 24-24 24s-24-10.7-24-24 10.7-24 24-24 24 10.7 24 24"})
+  );
+}
+
+export default LanInterrobang;

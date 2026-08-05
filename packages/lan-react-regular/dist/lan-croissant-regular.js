@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanCroissantRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M256 48c48.8 0 93.7 16.8 129.1 44.9l-83.9 83.9-46-128.8zm163.1 78.9c11.8 14.9 21.6 31.4 29 49.1H370zM321.9 224h138.8c25.3 0 46.7-24.5 37.4-51.4C463.5 72.2 368.2 0 256 0 114.6 0 0 114.6 0 256c0 112.2 72.2 207.5 172.6 242.1 26.9 9.3 51.4-12.1 51.4-37.4V321.9l3.9-3.9 8.7 3.7c15 6.4 32.5 3.1 44-8.5l33.2-33.2c10.9-10.9 14.6-27.2 9.4-41.7l-4.1-11.5 2.9-2.9zm-141.5 73.7-87.5 87.4C64.8 349.6 48 304.7 48 256c0-5 .2-9.9.5-14.8l131.8 56.5zm-53.5 121.4L176 370v78.1c-17.8-7.4-34.3-17.2-49.1-29M57.7 192.9C79.5 124.4 135.9 71.2 206.4 54l69.9 195.8-25.8 25.8L57.7 193z"})
+  );
+}
+
+export default LanCroissantRegular;

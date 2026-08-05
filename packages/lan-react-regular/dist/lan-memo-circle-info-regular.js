@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanMemoCircleInfoRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 576 544',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M96 48h256c8.8 0 16 7.2 16 16v154.9c15.2-5.4 31.3-8.9 48-10.3V64c0-35.3-28.7-64-64-64H96C60.7 0 32 28.7 32 64v384c0 35.3 28.7 64 64 64h180c-10.5-14.6-19-30.7-25.1-48H96c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16m32 104c0 13.3 10.7 24 24 24h144c13.3 0 24-10.7 24-24s-10.7-24-24-24H152c-13.3 0-24 10.7-24 24m0 96c0 13.3 10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24h-80c-13.3 0-24 10.7-24 24m0 96c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24h-48c-13.3 0-24 10.7-24 24m304 200a144 144 0 1 0 0-288 144 144 0 1 0 0 288m0-228a20 20 0 1 1 0 40 20 20 0 1 1 0-40m-32 84c0-8.8 7.2-16 16-16h16c8.8 0 16 7.2 16 16v48c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16s7.2-16 16-16v-32c-8.8 0-16-7.2-16-16"})
+  );
+}
+
+export default LanMemoCircleInfoRegular;

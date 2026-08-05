@@ -1,2 +1,0 @@
-export declare const LanFaceShakingHorizontalRegular: string;
-export default LanFaceShakingHorizontalRegular;

@@ -1,2 +1,0 @@
-export declare const LanBuildingCircleArrowRightSolid: string;
-export default LanBuildingCircleArrowRightSolid;

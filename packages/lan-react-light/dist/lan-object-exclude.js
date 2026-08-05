@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanObjectExclude({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M64 32h224c17.7 0 32 14.3 32 32v48h32V64c0-35.3-28.7-64-64-64H64C28.7 0 0 28.7 0 64v224c0 35.3 28.7 64 64 64h48v-32H64c-17.7 0-32-14.3-32-32V64c0-17.7 14.3-32 32-32m160 128c-35.3 0-64 28.7-64 64h32c0-17.7 14.3-32 32-32h32v-32zm-64 112v80h48v-32h-16v-48zm96 80h32c35.3 0 64-28.7 64-64h-32c0 17.7-14.3 32-32 32h-32zm96-160v-32h-48v32h16v48h32zM160 400v48c0 35.3 28.7 64 64 64h224c35.3 0 64-28.7 64-64V224c0-35.3-28.7-64-64-64h-48v32h48c17.7 0 32 14.3 32 32v224c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32v-48z"})
+  );
+}
+
+export default LanObjectExclude;

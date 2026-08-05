@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanSquareCediThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M64 48c-26.5 0-48 21.5-48 48v320c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48V96c0-26.5-21.5-48-48-48zM0 96c0-35.3 28.7-64 64-64h320c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64zm232 8v23.5c32 1.3 61 14.4 82.8 35 3.4 3.2 3.6 8.7.3 12.1s-8.7 3.6-12.1.3c-18.7-17.7-43.5-28.9-71-30.3v222.6c27.4-1.3 52.3-12.6 71-30.3 3.4-3.3 8.9-3.1 12.1.3s3.1 8.9-.3 12.1c-21.8 20.6-50.8 33.6-82.8 35v23.5c0 4.4-3.6 8-8 8s-8-3.6-8-8v-23.9C149.9 378.8 97.9 323.5 97.9 256s52-122.8 118.1-128.1V104c0-4.4 3.6-8 8-8s8 3.6 8 8M115.1 256c0 58 44.3 105.6 100.9 110.9V145c-56.6 5.4-100.9 53-100.9 111"})
+  );
+}
+
+export default LanSquareCediThin;

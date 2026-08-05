@@ -1,2 +1,0 @@
-export declare const LanMagnifyingGlassArrowRightSolid: string;
-export default LanMagnifyingGlassArrowRightSolid;

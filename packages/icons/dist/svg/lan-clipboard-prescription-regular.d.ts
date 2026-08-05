@@ -1,2 +1,0 @@
-export declare const LanClipboardPrescriptionRegular: string;
-export default LanClipboardPrescriptionRegular;

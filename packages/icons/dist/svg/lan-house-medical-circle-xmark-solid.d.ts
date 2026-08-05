@@ -1,2 +1,0 @@
-export declare const LanHouseMedicalCircleXmarkSolid: string;
-export default LanHouseMedicalCircleXmarkSolid;

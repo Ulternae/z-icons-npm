@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanLaptopSlashRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 -31.95 640 576.1',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M73-24.9c-9.4-9.4-24.6-9.4-33.9 0S29.7-.3 39 9.1l528 528c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-29-29c39.7-14.1 68.1-52 68.1-96.5 0-14.1-11.5-25.6-25.6-25.6H449.8l-272-272H512c8.8 0 16 7.2 16 16v208h48v-208c0-35.3-28.7-64-64-64L129.8 32zM497.8 400h89.3c-8.5 18.9-27.5 32-49.6 32h-7.8l-32-32zm-103.6 32H102.4c-22.1 0-41.1-13.1-49.6-32h309.4l-48-48H25.6C11.5 352 0 363.5 0 377.6 0 434.2 45.8 480 102.4 480h339.8zM112 149.8l-48-48V304h48z"})
+  );
+}
+
+export default LanLaptopSlashRegular;

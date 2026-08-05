@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanMalaysianRinggitSignSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 576 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M288 416c0 17.7 14.3 32 32 32s32-14.3 32-32V205.9l53 83.3c5.9 9.2 16.1 14.8 27 14.8s21.1-5.6 27-14.8l53-83.3V416c0 17.7 14.3 32 32 32s32-14.3 32-32V96c0-14.2-9.4-26.7-23.1-30.7s-28.3 1.5-35.9 13.5l-85 133.6-85-133.6c-7.6-12-22.3-17.5-35.9-13.5S288 81.8 288 96zM0 96v320c0 17.7 14.3 32 32 32s32-14.3 32-32v-96h57.8L162 427.2c6.2 16.5 24.7 24.9 41.2 18.7s24.9-24.6 18.7-41.2l-36.8-98.2c42-21 70.9-64.4 70.9-114.6 0-70.7-57.3-128-128-128L32 64C14.3 64 0 78.3 0 96m64 160V128h64c35.3 0 64 28.7 64 64s-28.7 64-64 64z"})
+  );
+}
+
+export default LanMalaysianRinggitSignSolid;

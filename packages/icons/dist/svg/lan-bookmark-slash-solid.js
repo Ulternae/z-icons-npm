@@ -1,2 +1,0 @@
-export const LanBookmarkSlashSolid = '<svg viewBox="0 -31.95 576 576.1" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M41-24.9c-9.4-9.4-24.6-9.4-33.9 0S-2.3-.3 7 9.1l528 528c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-89-89V64c0-35.3-28.7-64-64-64H160c-25.5 0-47.5 14.9-57.8 36.4zm55 190.7V480c0 11.5 6.2 22.2 16.2 27.8s22.3 5.5 32.2-.4l143.5-86.1 1.3.8 37-25.9L95.8 165.8z"/></svg>';
-export default LanBookmarkSlashSolid;

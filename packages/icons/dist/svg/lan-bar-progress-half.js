@@ -1,2 +1,0 @@
-export const LanBarProgressHalf = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M448 128c17.7 0 32 14.3 32 32v192c0 17.7-14.3 32-32 32H272V128zm-241.4 0H240v81.4L65.4 384H64c-17.7 0-32-14.3-32-32v-49.4zm-45.3 0L32 257.4V160c0-17.7 14.3-32 32-32h97.4zm-50.7 256L240 254.6V384zM64 96c-35.3 0-64 28.7-64 64v192c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64z"/></svg>';
-export default LanBarProgressHalf;

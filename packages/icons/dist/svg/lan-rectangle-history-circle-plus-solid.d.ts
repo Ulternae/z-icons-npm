@@ -1,2 +1,0 @@
-export declare const LanRectangleHistoryCirclePlusSolid: string;
-export default LanRectangleHistoryCirclePlusSolid;

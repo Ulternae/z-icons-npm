@@ -1,2 +1,0 @@
-export declare const LanGameConsoleHandheldCrankThin: string;
-export default LanGameConsoleHandheldCrankThin;

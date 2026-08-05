@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanFileMedicalRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 384 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M176 48H64c-8.8 0-16 7.2-16 16v384c0 8.8 7.2 16 16 16h256c8.8 0 16-7.2 16-16V208h-88c-39.8 0-72-32.2-72-72zm140.1 112L224 67.9V136c0 13.3 10.7 24 24 24zM0 64C0 28.7 28.7 0 64 0h133.5c17 0 33.3 6.7 45.3 18.7l122.5 122.6c12 12 18.7 28.3 18.7 45.3V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64zm180 192c-8.8 0-16 7.2-16 16v36h-36c-8.8 0-16 7.2-16 16v24c0 8.8 7.2 16 16 16h36v36c0 8.8 7.2 16 16 16h24c8.8 0 16-7.2 16-16v-36h36c8.8 0 16-7.2 16-16v-24c0-8.8-7.2-16-16-16h-36v-36c0-8.8-7.2-16-16-16z"})
+  );
+}
+
+export default LanFileMedicalRegular;

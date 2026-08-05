@@ -1,2 +1,0 @@
-export declare const LanArrowRightFromBracketRegular: string;
-export default LanArrowRightFromBracketRegular;

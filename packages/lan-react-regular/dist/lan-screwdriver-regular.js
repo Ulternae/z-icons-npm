@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanScrewdriverRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 -11.376 576 535.501',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M485.2-8.7c6.3-4.2 14.8-3.4 20.2 2l45.4 45.4c5.4 5.4 6.2 13.8 2 20.2l-79.2 118.9c-5.9 8.9-15.9 14.2-26.6 14.2h-60.9l-83.2 83.2c19.7 34.5 14.8 79.3-14.7 108.8L162.1 510.1c-18.7 18.7-49.1 18.7-67.9 0l-60.1-60.2c-18.7-18.7-18.7-49.1 0-67.9l126-126c29.5-29.5 74.2-34.4 108.8-14.7l83.2-83.2V97.2c0-10.7 5.3-20.7 14.2-26.6zM438.4 144l59.9-89.9-8.3-8.3-89.9 59.9V144zM68 416l60.1 60.1L254.2 350c16.6-16.6 16.6-43.5 0-60.1s-43.5-16.6-60.1 0z"})
+  );
+}
+
+export default LanScrewdriverRegular;

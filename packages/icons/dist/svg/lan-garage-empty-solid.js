@@ -1,2 +1,0 @@
-export const LanGarageEmptySolid = '<svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M0 142.1V480c0 17.7 14.3 32 32 32s32-14.3 32-32V224c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32v256c0 17.7 14.3 32 32 32s32-14.3 32-32V142.1c0-27.5-17.6-52-43.8-60.7l-229-76.3c-9.9-3.3-20.5-3.3-30.4 0l-229 76.3C17.6 90.1 0 114.6 0 142.1"/></svg>';
-export default LanGarageEmptySolid;

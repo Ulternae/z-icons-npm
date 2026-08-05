@@ -1,2 +1,0 @@
-export const LanBallPileSolid = '<svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M288 160a80 80 0 1 0 0-160 80 80 0 1 0 0 160M176 328a80 80 0 1 0 0-160 80 80 0 1 0 0 160m-16 104a80 80 0 1 0-160 0 80 80 0 1 0 160 0m128 80a80 80 0 1 0 0-160 80 80 0 1 0 0 160m288-80a80 80 0 1 0-160 0 80 80 0 1 0 160 0M400 328a80 80 0 1 0 0-160 80 80 0 1 0 0 160"/></svg>';
-export default LanBallPileSolid;

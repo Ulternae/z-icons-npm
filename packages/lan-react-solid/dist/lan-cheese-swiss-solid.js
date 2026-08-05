@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanCheeseSwissSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M311.5 304c6.8 0 12.6 4.4 16.3 10.1 8.5 13.2 23.4 21.9 40.2 21.9s31.7-8.7 40.2-21.9c3.7-5.7 9.5-10.1 16.3-10.1H512v112c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V304zM176 336a48 48 0 1 0 0 96 48 48 0 1 0 0-96M303.8 32c115 0 208.2 93.2 208.2 208.2V256H0c0-20 10-38.7 26.6-49.8l92.5-61.7c7.8-5.2 18.4-2.3 25.5 3.8 8.4 7.2 19.4 11.6 31.3 11.6 26.5 0 48-21.5 48-48 0-5.2-.8-10.2-2.3-14.9-2.9-8.9-1.6-19.7 6.1-25l47.2-31.4c8.6-5.7 18.6-8.7 28.9-8.8z"})
+  );
+}
+
+export default LanCheeseSwissSolid;

@@ -1,2 +1,0 @@
-export const LanCodeCommitRegular = '<svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M288 368a112 112 0 1 0 0-224 112 112 0 1 0 0 224m158.2-88c-11.6 77-78 136-158.2 136s-146.6-59-158.2-136H24c-13.3 0-24-10.7-24-24s10.7-24 24-24h105.8c11.6-77 78-136 158.2-136s146.6 59 158.2 136H552c13.3 0 24 10.7 24 24s-10.7 24-24 24z"/></svg>';
-export default LanCodeCommitRegular;

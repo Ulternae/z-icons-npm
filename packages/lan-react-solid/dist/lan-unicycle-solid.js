@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanUnicycleSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 384 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M96 0c17.7 0 32 14.3 32 32 0 8.8 7.2 16 16 16h112c17.7 0 32 14.3 32 32s-14.3 32-32 32h-32v50.9c81.9 15 144 86.8 144 173.1 0 97.2-78.8 176-176 176S16 433.2 16 336c0-86.3 62.1-158 144-173.1V112h-16c-44.2 0-80-35.8-80-80C64 14.3 78.3 0 96 0m64 228.6c-46.3 13.8-80 56.6-80 107.4 0 61.9 50.1 112 112 112s112-50.1 112-112c0-50.7-33.7-93.6-80-107.4V336c0 17.7-14.3 32-32 32s-32-14.3-32-32z"})
+  );
+}
+
+export default LanUnicycleSolid;

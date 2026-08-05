@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanBriefsSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M48 64C21.5 64 0 85.5 0 112h512c0-26.5-21.5-48-48-48zm288 96H176v37.9c0 42.6-12.6 84.3-36.3 119.8l-17.8 26.7c13.9 16.3 24.5 35.4 31 56.3C160.7 426 181.5 448 208 448h96c26.5 0 47.3-22 55.1-47.3 6.5-20.9 17.1-40 31-56.3l-17.8-26.7A215.76 215.76 0 0 1 336 197.9zm48 0v37.9c0 33.2 9.8 65.6 28.2 93.2l14.4 21.6c11.8-7.4 24.5-13.4 38.1-17.6C490 287.3 512 266.5 512 240v-80zM0 160v80c0 26.5 22 47.3 47.3 55.1 13.6 4.2 26.3 10.1 38.1 17.6l14.4-21.6c18.4-27.6 28.2-60 28.2-93.2V160z"})
+  );
+}
+
+export default LanBriefsSolid;

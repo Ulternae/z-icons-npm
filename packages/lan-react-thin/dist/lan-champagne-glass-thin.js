@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanChampagneGlassThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '-0.004 -32.4 256.609 576.4',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M43-26.9c1.2-3.3 4.3-5.5 7.8-5.5h155c3.5 0 6.6 2.2 7.8 5.5 22.8 61.8 46.4 155 42.6 233.3-1.9 39.1-10.7 75.6-30.9 102.4-19.3 25.6-48.4 41.6-89 43.4V528h80c4.4 0 8 3.6 8 8s-3.6 8-8 8h-176c-4.4 0-8-3.6-8-8s3.6-8 8-8h80V352.2c-40.7-1.8-69.7-17.8-89-43.4C11.1 282 2.3 245.5.4 206.4-3.4 128.1 20.3 34.9 43-26.9M19.2 144c-2.2 21.1-3.1 41.9-2.1 61.6 1.8 37.5 10.2 70.1 27.6 93.1 17 22.6 43.4 36.9 83.7 36.9s66.7-14.4 83.7-36.9c17.3-23 25.7-55.6 27.6-93.1 1-19.7.1-40.5-2.1-61.6zm1.9-16h214.4c-7-51.6-21.2-103.5-35.6-143.6H56.7C42.4 24.5 28.1 76.4 21.2 128z"})
+  );
+}
+
+export default LanChampagneGlassThin;

@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanBroccoliSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M0 256c0 53 43 96 96 96h320c53 0 96-43 96-96 0-45.5-31.6-83.6-74.1-93.5 6.4-10 10.1-21.8 10.1-34.5 0-35.3-28.7-64-64-64-12.7 0-24.6 3.7-34.5 10.1C339.6 31.6 301.5 0 256 0s-83.6 31.6-93.5 74.1C152.5 67.7 140.7 64 128 64c-35.3 0-64 28.7-64 64 0 12.7 3.7 24.6 10.1 34.5C31.6 172.4 0 210.5 0 256m192.2 234.3c5 12.8 17.1 21.7 30.9 21.7H289c13.8 0 25.9-8.9 30.9-21.7 14.1-36.3 31-67 45.6-90.3H272l-8.8 17.7c-2.9 5.9-11.4 5.9-14.3 0l-8.8-17.7h-93.5c14.7 23.2 31.6 54 45.6 90.3"})
+  );
+}
+
+export default LanBroccoliSolid;

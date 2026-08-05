@@ -1,2 +1,0 @@
-export const LanBarProgressQuarterThin = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M448 112c26.5 0 48 21.5 48 48v192c0 26.5-21.5 48-48 48H160V112zm-384 0h80v68.7l-128 128V160c0-26.5 21.5-48 48-48M16 331.3l128-128V400H64c-26.5 0-48-21.5-48-48zM64 96c-35.3 0-64 28.7-64 64v192c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64z"/></svg>';
-export default LanBarProgressQuarterThin;

@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanSquarePesetaSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm80 112c0-13.3 10.7-24 24-24h64c52 0 95.1 38.2 102.8 88h9.2c8.8 0 16 7.2 16 16s-7.2 16-16 16h-9.2c-7.7 49.8-50.8 88-102.8 88h-40v40c0 13.3-10.7 24-24 24s-24-10.7-24-24V240h-8c-8.8 0-16-7.2-16-16s7.2-16 16-16h8zm88 24h-40v40h93.7c-6.9-23.1-28.3-40-53.7-40m-40 112h40c25.4 0 46.8-16.9 53.7-40H192z"})
+  );
+}
+
+export default LanSquarePesetaSolid;

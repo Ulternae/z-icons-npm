@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanMarsAndVenusRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 -48 512 592',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M376-48c-13.3 0-24 10.7-24 24s10.7 24 24 24h38.1l-67.7 67.7C316.9 45.3 280 32 240.1 32c-97.2 0-176 78.8-176 176 0 89.1 66.2 162.7 152.1 174.4 0 .5-.1 1.1-.1 1.6v48h-48c-13.3 0-24 10.7-24 24s10.7 24 24 24h48v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40h48c13.3 0 24-10.7 24-24s-10.7-24-24-24h-48v-48c0-.5 0-1.1-.1-1.6 85.9-11.7 152.1-85.3 152.1-174.4 0-39.9-13.3-76.8-35.7-106.3L448 33.9V72c0 13.3 10.7 24 24 24s24-10.7 24-24v-96c0-13.3-10.7-24-24-24zM240 80a128 128 0 1 1 0 256 128 128 0 1 1 0-256"})
+  );
+}
+
+export default LanMarsAndVenusRegular;

@@ -1,2 +1,0 @@
-export const LanEllipsisHRegular = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M448 256a48 48 0 1 1-96 0 48 48 0 1 1 96 0m-176 0a48 48 0 1 1-96 0 48 48 0 1 1 96 0M48 304a48 48 0 1 1 0-96 48 48 0 1 1 0 96"/></svg>';
-export default LanEllipsisHRegular;

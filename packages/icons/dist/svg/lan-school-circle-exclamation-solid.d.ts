@@ -1,2 +1,0 @@
-export declare const LanSchoolCircleExclamationSolid: string;
-export default LanSchoolCircleExclamationSolid;

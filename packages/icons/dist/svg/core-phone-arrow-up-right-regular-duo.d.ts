@@ -1,2 +1,0 @@
-export declare const CorePhoneArrowUpRightRegularDuo: string;
-export default CorePhoneArrowUpRightRegularDuo;

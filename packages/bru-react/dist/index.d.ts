@@ -1,5 +1,6 @@
 import React from 'react';
 import type { PackIconProps, ZIconSpriteProps } from './runtime.js';
+import type { BruIconName } from './types/index.js';
 export type { BruIconName } from './types/index.js';
 export { bruSprite } from './sprite.js';
 export { bruSolidViewBoxes } from './viewboxes.js';

@@ -1,2 +1,0 @@
-export declare const LanPersonWaterArmsRaisedRegular: string;
-export default LanPersonWaterArmsRaisedRegular;

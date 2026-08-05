@@ -1,0 +1,8 @@
+import React from 'react';
+
+export interface LanFaceThinkingRegularProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+  size?: string | number;
+}
+
+export declare function LanFaceThinkingRegular(props: LanFaceThinkingRegularProps): React.ReactElement;
+export default LanFaceThinkingRegular;

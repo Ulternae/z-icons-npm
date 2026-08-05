@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanCapsules({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 576 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M64 112c0-44.2 35.8-80 80-80s80 35.8 80 80v128H64zm0 288V274.7h160V400c0 44.2-35.8 80-80 80s-80-35.8-80-80M32 112v288c0 61.9 50.1 112 112 112s112-50.1 112-112V294.2l116.3 169.5c35.5 51.7 105.3 64.3 156 28.1s63-107.5 27.5-159.2L427.3 145.3C391.8 93.6 322 81 271.3 117.2c-5.6 4-10.7 8.4-15.3 13.1V112C256 50.1 205.9 0 144 0S32 50.1 32 112m224 108.1v-18.3c2.5-22.8 14.2-44.5 33.9-58.6 35.9-25.7 85.5-17 111 20.1l57.7 84.2-132.3 92.6-56.1-81.8c-8.1-11.8-12.7-24.9-14.2-38.3zm88.4 146.5L476.7 274l52.7 76.8c25.7 37.5 16.6 89.1-19.7 115.1-35.9 25.7-85.5 17-111-20.1l-54.2-79.1z"})
+  );
+}
+
+export default LanCapsules;

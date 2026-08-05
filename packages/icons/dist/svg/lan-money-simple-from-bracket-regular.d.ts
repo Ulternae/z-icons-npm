@@ -1,2 +1,0 @@
-export declare const LanMoneySimpleFromBracketRegular: string;
-export default LanMoneySimpleFromBracketRegular;

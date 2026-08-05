@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanCodeMergeThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M72 16a56 56 0 1 1 0 112 56 56 0 1 1 0-112m8.2 127.5C116.1 139.4 144 109 144 72c0-39.8-32.2-72-72-72S0 32.2 0 72c0 37.1 28 67.6 64 71.6v224.9c-36 4-64 34.5-64 71.6 0 39.8 32.2 72 72 72s72-32.2 72-72c0-37.1-28-67.6-64-71.6V200.1c22.9 42.8 68 71.9 120 71.9h104.4c4 36 34.5 64 71.6 64 39.8 0 72-32.2 72-72s-32.2-72-72-72c-37.1 0-67.6 28-71.6 64H200c-63.7 0-115.9-49.7-119.8-112.5M72 384a56 56 0 1 1 0 112 56 56 0 1 1 0-112m248-120a56 56 0 1 1 112 0 56 56 0 1 1-112 0"})
+  );
+}
+
+export default LanCodeMergeThin;

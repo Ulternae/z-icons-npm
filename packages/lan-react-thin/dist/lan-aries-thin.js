@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanAriesThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M416.5 0c24.6 0 49.1 9.4 67.9 28.1 37.5 37.5 37.5 98.3 0 135.7l-25.8 25.8c-3.1 3.1-8.2 3.1-11.3 0s-3.1-8.2 0-11.3l25.8-25.8c31.2-31.2 31.2-81.9 0-113.1C457.5 23.8 437 16 416.5 16c-42.2 0-78.1 30.6-84.8 72.2l-67.3 417c-.6 3.9-4 6.7-7.9 6.7s-7.3-2.8-7.9-6.7l-67.2-417C174.6 46.6 138.7 16 96.5 16 76 16 55.6 23.8 39.9 39.4c-31.2 31.3-31.2 81.9 0 113.2l25.8 25.8c3.1 3.1 3.1 8.2 0 11.3s-8.2 3.1-11.3 0l-25.8-25.8c-37.5-37.5-37.5-98.3 0-135.8C47.4 9.4 71.9 0 96.5 0c50 0 92.7 36.3 100.6 85.7l59.4 368 59.4-368C323.8 36.3 366.5 0 416.5 0"})
+  );
+}
+
+export default LanAriesThin;

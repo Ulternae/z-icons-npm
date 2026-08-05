@@ -1,2 +1,0 @@
-export declare const LanMoonLastQuarterInverseRegular: string;
-export default LanMoonLastQuarterInverseRegular;

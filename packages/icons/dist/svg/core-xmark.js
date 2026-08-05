@@ -1,2 +1,0 @@
-export const CoreXmark = '<svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill="currentColor" d="m365.5 128-128 128 128 128-45.2 45.2-128-128-128 128L19 384l128-128L19 128l45.3-45.2 128 128 128-128z"/></svg>';
-export default CoreXmark;

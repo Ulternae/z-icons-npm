@@ -1,2 +1,0 @@
-export declare const LanArrowDownTriangleSquareRegular: string;
-export default LanArrowDownTriangleSquareRegular;

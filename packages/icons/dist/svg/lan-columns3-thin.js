@@ -1,2 +1,0 @@
-export const LanColumns3Thin = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M304 48v416h80c26.5 0 48-21.5 48-48V96c0-26.5-21.5-48-48-48zm-16 0H160v416h128zM144 464V48H64c-26.5 0-48 21.5-48 48v320c0 26.5 21.5 48 48 48zM0 96c0-35.3 28.7-64 64-64h320c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64z"/></svg>';
-export default LanColumns3Thin;

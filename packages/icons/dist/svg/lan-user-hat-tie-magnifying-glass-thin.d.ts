@@ -1,2 +1,0 @@
-export declare const LanUserHatTieMagnifyingGlassThin: string;
-export default LanUserHatTieMagnifyingGlassThin;

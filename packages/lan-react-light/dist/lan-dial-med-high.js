@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanDialMedHigh({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 576 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M288 56a24 24 0 1 0 0-48 24 24 0 1 0 0 48m11.3 243.3 89.8-89.8c39.1 50.2 35.5 122.9-10.6 169-50 50-131 50-181 0s-50-131 0-181c46.2-46.2 118.8-49.7 169-10.6l-89.8 89.8c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0m101.8-124.4a160 160 0 1 0-226.2 226.2 160 160 0 1 0 226.2-226.2M568 288a24 24 0 1 0-48 0 24 24 0 1 0 48 0M32 312a24 24 0 1 0 0-48 24 24 0 1 0 0 48m88-216a24 24 0 1 0-48 0 24 24 0 1 0 48 0m360 24a24 24 0 1 0 0-48 24 24 0 1 0 0 48M120 480a24 24 0 1 0-48 0 24 24 0 1 0 48 0m360 24a24 24 0 1 0 0-48 24 24 0 1 0 0 48"})
+  );
+}
+
+export default LanDialMedHigh;

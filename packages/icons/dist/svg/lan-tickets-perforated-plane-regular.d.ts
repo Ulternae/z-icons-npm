@@ -1,2 +1,0 @@
-export declare const LanTicketsPerforatedPlaneRegular: string;
-export default LanTicketsPerforatedPlaneRegular;

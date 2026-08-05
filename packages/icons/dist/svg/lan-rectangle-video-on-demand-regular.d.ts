@@ -1,2 +1,0 @@
-export declare const LanRectangleVideoOnDemandRegular: string;
-export default LanRectangleVideoOnDemandRegular;

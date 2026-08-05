@@ -1,2 +1,0 @@
-export declare const LanSensorTriangleExclamationRegular: string;
-export default LanSensorTriangleExclamationRegular;

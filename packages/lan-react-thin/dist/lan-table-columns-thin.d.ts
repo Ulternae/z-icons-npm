@@ -1,0 +1,8 @@
+import React from 'react';
+
+export interface LanTableColumnsThinProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+  size?: string | number;
+}
+
+export declare function LanTableColumnsThin(props: LanTableColumnsThinProps): React.ReactElement;
+export default LanTableColumnsThin;

@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanPeopleDressSimpleRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M192.1 64a64 64 0 1 0-128 0 64 64 0 1 0 128 0m.4 272H63.7l29-101.3c4.5-15.8 19-26.7 35.4-26.7s30.9 10.9 35.4 26.7zm-64.4-176c-37.9 0-71.2 25.1-81.6 61.5L11.8 343.2C5.9 363.7 21.3 384 42.5 384h21.6v104c0 13.3 10.7 24 24 24s24-10.7 24-24V384h32v104c0 13.3 10.7 24 24 24s24-10.7 24-24V384h21.6c21.3 0 36.6-20.3 30.8-40.8l-34.8-121.7C199.3 185.1 166 160 128.1 160m320-96a64 64 0 1 0-128 0 64 64 0 1 0 128 0m.4 272H319.8l28.9-101.3c4.5-15.8 19-26.7 35.4-26.7s30.9 10.9 35.4 26.7zm-64.4-176c-37.9 0-71.2 25.1-81.6 61.5l-34.7 121.7c-5.8 20.4 9.5 40.8 30.8 40.8h21.6v104c0 13.3 10.7 24 24 24s24-10.7 24-24V384h32v104c0 13.3 10.7 24 24 24s24-10.7 24-24V384h21.6c21.3 0 36.6-20.3 30.8-40.8l-34.9-121.7C455.3 185.1 422 160 384.1 160"})
+  );
+}
+
+export default LanPeopleDressSimpleRegular;

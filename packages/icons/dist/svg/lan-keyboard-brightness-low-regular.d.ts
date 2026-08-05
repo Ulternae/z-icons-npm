@@ -1,2 +1,0 @@
-export declare const LanKeyboardBrightnessLowRegular: string;
-export default LanKeyboardBrightnessLowRegular;

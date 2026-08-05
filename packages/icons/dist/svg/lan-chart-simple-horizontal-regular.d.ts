@@ -1,2 +1,0 @@
-export declare const LanChartSimpleHorizontalRegular: string;
-export default LanChartSimpleHorizontalRegular;

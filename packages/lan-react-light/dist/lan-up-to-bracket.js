@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanUpToBracket({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M385 311 241 167c-9.4-9.4-24.6-9.4-33.9 0L63 311c-6.9 6.9-8.9 17.2-5.2 26.2S70.3 352 80 352h80v112c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V352h80c9.7 0 18.5-5.8 22.2-14.8s1.7-19.3-5.2-26.2m-285.7 9L224 195.3 348.7 320H272c-8.8 0-16 7.2-16 16v128c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16V336c0-8.8-7.2-16-16-16zM32 176V96c0-35.3 28.7-64 64-64h256c35.3 0 64 28.7 64 64v80c0 8.8 7.2 16 16 16s16-7.2 16-16V96c0-53-43-96-96-96H96C43 0 0 43 0 96v80c0 8.8 7.2 16 16 16s16-7.2 16-16"})
+  );
+}
+
+export default LanUpToBracket;

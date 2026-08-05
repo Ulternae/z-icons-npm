@@ -1,2 +1,0 @@
-export declare const CoreBatteryThreeQuartersRegularDuo: string;
-export default CoreBatteryThreeQuartersRegularDuo;

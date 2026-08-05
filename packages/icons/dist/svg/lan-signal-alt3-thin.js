@@ -1,2 +1,0 @@
-export const LanSignalAlt3Thin = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M304 136c0-4.4-3.6-8-8-8s-8 3.6-8 8v336c0 4.4 3.6 8 8 8s8-3.6 8-8zM152 256c-4.4 0-8 3.6-8 8v208c0 4.4 3.6 8 8 8s8-3.6 8-8V264c0-4.4-3.6-8-8-8M8 384c-4.4 0-8 3.6-8 8v80c0 4.4 3.6 8 8 8s8-3.6 8-8v-80c0-4.4-3.6-8-8-8"/></svg>';
-export default LanSignalAlt3Thin;

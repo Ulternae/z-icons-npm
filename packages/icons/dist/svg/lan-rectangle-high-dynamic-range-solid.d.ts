@@ -1,2 +1,0 @@
-export declare const LanRectangleHighDynamicRangeSolid: string;
-export default LanRectangleHighDynamicRangeSolid;

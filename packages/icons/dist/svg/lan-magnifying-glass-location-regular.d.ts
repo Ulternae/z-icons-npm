@@ -1,2 +1,0 @@
-export declare const LanMagnifyingGlassLocationRegular: string;
-export default LanMagnifyingGlassLocationRegular;

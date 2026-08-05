@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanMelonSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M256 512c-38.5 0-75-8.5-107.7-23.7 67.1-5.8 149.8-48.2 220.8-119.2s113.4-153.7 119.2-220.8C503.5 181 512 217.5 512 256c0 141.4-114.6 256-256 256M23.7 363.7C8.5 331 0 294.5 0 256 0 114.6 114.6 0 256 0c38.5 0 75 8.5 107.7 23.7-67.1 5.8-149.8 48.1-220.8 119.2S29.5 296.6 23.7 363.7m402-277.4c13.3 13.3 22.4 42.6 8.1 92.5-13.7 48.1-47.1 104.8-98.7 156.4s-108.3 84.9-156.4 98.6c-49.9 14.3-79.2 5.2-92.5-8.1s-22.4-42.6-8.1-92.5c13.7-48.1 47.1-104.8 98.7-156.4s108.3-84.9 156.4-98.6c49.9-14.3 79.2-5.2 92.5 8.1"})
+  );
+}
+
+export default LanMelonSolid;

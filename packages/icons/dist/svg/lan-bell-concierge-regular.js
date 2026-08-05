@@ -1,2 +1,0 @@
-export const LanBellConciergeRegular = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M216 64c-13.3 0-24 10.7-24 24s10.7 24 24 24h16v33.3C124.8 156.7 40.2 243.7 32.6 352h48.2c8.1-89.7 83.5-160 175.3-160s167.2 70.3 175.3 160h48.2c-7.8-108.3-92.4-195.3-199.6-206.7V112h16c13.3 0 24-10.7 24-24s-10.7-24-24-24zM24 400c-13.3 0-24 10.7-24 24s10.7 24 24 24h464c13.3 0 24-10.7 24-24s-10.7-24-24-24z"/></svg>';
-export default LanBellConciergeRegular;

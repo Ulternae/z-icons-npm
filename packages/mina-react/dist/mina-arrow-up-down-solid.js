@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function MinaArrowUpDownSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 24 24',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"d":"M7.5 18.25a.75.75 0 0 0 .75-.75v-6.97h3.28a.75.75 0 0 0 0-1.06l-3.5-3.5a.75.75 0 0 0-1.06 0l-3.5 3.5a.75.75 0 0 0 0 1.06h3.28v6.97c0 .414.336.75.75.75m9-12.5a.75.75 0 0 1 .75.75v6.97h3.28a.75.75 0 0 1 0 1.06l-3.5 3.5a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 0 1 0-1.06h3.28V6.5a.75.75 0 0 1 .75-.75"})
+  );
+}
+
+export default MinaArrowUpDownSolid;

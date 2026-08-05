@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanCircleCentSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512m24-392v10.2c24.5 4.6 46.5 16.3 63.9 32.7 9.6 9.1 10.1 24.3 1 33.9s-24.3 10.1-33.9 1c-14.3-13.5-33.6-21.8-54.9-21.8-44.2 0-80 35.8-80 80s35.8 80 80 80c21.3 0 40.6-8.3 54.9-21.8 9.6-9.1 24.8-8.7 33.9 1s8.7 24.8-1 33.9c-17.4 16.4-39.4 28-63.9 32.7V392c0 13.3-10.7 24-24 24s-24-10.7-24-24v-10.2c-59.2-11.3-104-63.3-104-125.8s44.8-114.5 104-125.8V120c0-13.3 10.7-24 24-24s24 10.7 24 24"})
+  );
+}
+
+export default LanCircleCentSolid;

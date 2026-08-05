@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanCaravanAltSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 640 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M96 32c-35.3 0-64 28.7-64 64v256c0 35.3 28.7 64 64 64h40.4c-.2 2.6-.4 5.3-.4 8 0 48.6 39.4 88 88 88s88-39.4 88-88c0-2.7-.1-5.4-.4-8H608c17.7 0 32-14.3 32-32s-14.3-32-32-32h-64V160c0-70.7-57.3-128-128-128zm32 128c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32h-64c-17.7 0-32-14.3-32-32zm224-32h64c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32h-64c-17.7 0-32-14.3-32-32v-64c0-17.7 14.3-32 32-32M184 424a40 40 0 1 1 80 0 40 40 0 1 1-80 0"})
+  );
+}
+
+export default LanCaravanAltSolid;

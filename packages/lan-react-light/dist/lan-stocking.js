@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanStocking({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 384 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M96 32v48h256V32zm-32 0C64 14.3 78.3 0 96 0h256c17.7 0 32 14.3 32 32v48c0 17.7-14.3 32-32 32v203.5c0 42.8-21.4 82.8-57 106.5l-104.1 69.4c-20.1 13.4-43.8 20.6-68.1 20.6C55 512 0 457 0 389.2V387c0-41.8 20.9-80.9 55.7-104.1l26.1-17.4c8.9-5.9 14.2-15.9 14.2-26.6V112c-17.7 0-32-14.3-32-32zm64 80v126.9c0 21.4-10.7 41.4-28.5 53.3l-26.1 17.3C47.6 326.8 32 355.8 32 386.9v2.2c0 50.2 40.7 90.8 90.8 90.8 17.9 0 35.5-5.3 50.4-15.3l104.1-69.4c26.7-17.6 42.7-47.6 42.7-79.7V112z"})
+  );
+}
+
+export default LanStocking;

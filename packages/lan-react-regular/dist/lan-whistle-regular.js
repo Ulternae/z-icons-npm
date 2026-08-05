@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanWhistleRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 640 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M584 64c30.9 0 56 25.1 56 56v62.7l-.2 4.8c-1.9 22.3-17 41.4-38.3 48.4l-4.7 1.3-181.1 42.6C411.7 391 320.3 480 208 480 93.1 480 0 386.9 0 272S93.1 64 208 64zm-376 48c-88.4 0-160 71.6-160 160s71.6 160 160 160 160-71.6 160-160c0-3-.2-6.2-.4-9.8-.7-11.7 7.1-22.1 18.5-24.8l199.8-47 2.5-1c1.5-1 2.6-2.4 3.2-4.1l.5-2.7v-62.7c0-4.4-3.6-8-8-8h-136v24c0 13.3-10.7 24-24 24s-24-10.7-24-24v-24h-192zm0 240a80 80 0 1 1 0-160 80 80 0 1 1 0 160m0-112a32 32 0 1 0 0 64 32 32 0 1 0 0-64"})
+  );
+}
+
+export default LanWhistleRegular;

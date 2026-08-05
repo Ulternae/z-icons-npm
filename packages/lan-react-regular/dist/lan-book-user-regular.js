@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanBookUserRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M0 88C0 39.4 39.4 0 88 0h288c39.8 0 72 32.2 72 72v256c0 25-12.7 47-32 59.9V464h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H80c-44.2 0-80-35.8-80-80zm48 344c0 17.7 14.3 32 32 32h288v-64H80c-17.7 0-32 14.3-32 32m0-73.3c9.8-4.3 20.6-6.7 32-6.7h296c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H88c-22.1 0-40 17.9-40 40zM176 160a48 48 0 1 1 96 0 48 48 0 1 1-96 0m-19 136c-14.8 0-26.2-13.7-18-26 11.9-18 32.4-30 55.7-30h58.7c23.3 0 43.7 11.9 55.7 30 8.1 12.3-3.2 26-18 26h-134z"})
+  );
+}
+
+export default LanBookUserRegular;

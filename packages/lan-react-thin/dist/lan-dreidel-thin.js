@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanDreidelThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M499.6 1.3c3.1-2 7.3-1.7 10.1 1s3.1 7 1 10.1l-1 1.2-160 160 80.4 80.4c18.7 18.7 18.7 49.1 0 67.9L290.8 461.2l-4.7 4.2c-9.8 8-21.7 12.9-34.3 14.2l-6.3.3H80c-26.5 0-48-21.5-48-48V266.4c0-14.9 5.2-29.2 14.5-40.6l4.3-4.7L190.1 81.8c18.7-18.7 49.1-18.7 67.9 0l80.4 80.4 160-160 1.3-1zM62.1 232.6c-9 9-14.1 21.2-14.1 33.9V432c0 17.7 14.3 32 32 32h165.5c12.7 0 24.9-5.1 33.9-14.1l79.6-79.6L141.7 153zM246.6 93.2c-11.7-11.7-30.2-12.4-42.8-2.2l-2.4 2.2-48.4 48.4L370.4 359l48.4-48.4 2.2-2.4c9.6-11.7 9.6-28.6 0-40.4l-2.2-2.4L246.7 93.3z"})
+  );
+}
+
+export default LanDreidelThin;

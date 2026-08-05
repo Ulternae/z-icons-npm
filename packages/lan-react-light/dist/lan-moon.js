@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanMoon({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M256 32c9.5 0 18.9.6 28 1.7C223.9 72 184 139.3 184 216c0 117.2 96.4 212.8 210.7 215.9C356.5 462 308.4 480 256 480 132.3 480 32 379.7 32 256S132.3 32 256 32m0-32C114.6 0 0 114.6 0 256s114.6 256 256 256c68.8 0 131.3-27.2 177.3-71.4 7.3-7 9.4-17.9 5.3-27.1s-13.7-14.9-23.8-14.1C309.4 407.8 216 322.1 216 216c0-72.1 41.5-134.6 102.1-164.8 9.1-4.5 14.3-14.3 13.1-24.4s-8.6-18.3-18.5-20.5C294.4 2.2 275.4 0 256 0"})
+  );
+}
+
+export default LanMoon;

@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanAcorn({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M244.7 4.7c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6l-3.9 3.9c-9.2 9.2-16 20.5-19.8 32.8h108.3l4.9.1c50.9 2.6 91.2 44.5 91.2 95.9v32l-.2 3.3c-1.5 15.1-13.5 27-28.6 28.6l-3.3.2h-16l-.4 15.2c-3.8 78.1-38.6 189.9-165.5 237.3l-5 1.4c-3.4.6-6.9.6-10.3 0l-5-1.4C87 429.1 52.2 317.3 48.4 239.2L48 224H32l-3.3-.2c-15.1-1.5-27-13.5-28.6-28.6L0 192v-32c0-51.4 40.3-93.3 91.1-95.9L96 64h114.6c4.5-20.8 14.9-40.1 30.2-55.4zM80.3 237.8C83.8 308.7 114.9 404.7 224 446c116.4-44 144-150.4 144-222H80zM96 96c-35.3 0-64 28.7-64 64v32h384v-32c0-35.3-28.7-64-64-64z"})
+  );
+}
+
+export default LanAcorn;

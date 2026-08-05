@@ -1,2 +1,0 @@
-export const LanPopsicleSolid = '<svg viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M160 0C71.6 0 0 71.6 0 160v176c0 26.5 21.5 48 48 48h80v96c0 17.7 14.3 32 32 32s32-14.3 32-32v-96h80c26.5 0 48-21.5 48-48V160C320 71.6 248.4 0 160 0"/></svg>';
-export default LanPopsicleSolid;

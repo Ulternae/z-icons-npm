@@ -1,2 +1,0 @@
-export declare const LanArrowDownLeftAndArrowUpRightToCenter: string;
-export default LanArrowDownLeftAndArrowUpRightToCenter;

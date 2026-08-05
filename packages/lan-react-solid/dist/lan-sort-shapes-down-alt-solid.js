@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanSortShapesDownAltSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"m230.6 390.6-80 80c-12.5 12.5-32.8 12.5-45.3 0l-80-80c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L96 370.7V64c0-17.7 14.3-32 32-32s32 14.3 32 32v306.7l25.4-25.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3zM288 72c0-22.1 17.9-40 40-40h112c22.1 0 40 17.9 40 40v112c0 22.1-17.9 40-40 40H328c-22.1 0-40-17.9-40-40zm123.1 231 80 128c6.2 9.9 6.5 22.3.9 32.5S475.6 480 464 480H304c-11.6 0-22.3-6.3-28-16.5s-5.3-22.6.9-32.5l80-128c5.8-9.4 16.1-15 27.1-15s21.3 5.7 27.1 15"})
+  );
+}
+
+export default LanSortShapesDownAltSolid;

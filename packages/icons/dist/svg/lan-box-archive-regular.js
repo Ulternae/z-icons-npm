@@ -1,2 +1,0 @@
-export const LanBoxArchiveRegular = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M464 80v64H48V80zM0 144c0 20.9 13.4 38.7 32 45.3V416c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V189.3c18.6-6.6 32-24.4 32-45.3V80c0-26.5-21.5-48-48-48H48C21.5 32 0 53.5 0 80zm80 272V192h352v224c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16m104-176c-13.3 0-24 10.7-24 24s10.7 24 24 24h144c13.3 0 24-10.7 24-24s-10.7-24-24-24z"/></svg>';
-export default LanBoxArchiveRegular;

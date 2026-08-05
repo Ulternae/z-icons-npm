@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanBookCopyThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 576 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M224 56c0-30.9 25.1-56 56-56h256c22.1 0 40 17.9 40 40v208c0 19.4-13.7 35.5-32 39.2V368h24c4.4 0 8 3.6 8 8s-3.6 8-8 8H280c-30.9 0-56-25.1-56-56zm56 232c-22.1 0-40 17.9-40 40s17.9 40 40 40h248v-80zm-40 .8c10.2-10.4 24.3-16.8 40-16.8h256c13.3 0 24-10.7 24-24V40c0-13.3-10.7-24-24-24H280c-22.1 0-40 17.9-40 40zM56 128h120v16H56c-22.1 0-40 17.9-40 40v232.8C26.2 406.4 40.3 400 56 400h149c5.8 6.1 12.4 11.5 19.6 16H56c-22.1 0-40 17.9-40 40s17.9 40 40 40h248v-64h16v64h24c4.4 0 8 3.6 8 8s-3.6 8-8 8H56c-30.9 0-56-25.1-56-56V184c0-30.9 25.1-56 56-56"})
+  );
+}
+
+export default LanBookCopyThin;

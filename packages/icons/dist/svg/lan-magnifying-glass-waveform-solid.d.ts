@@ -1,2 +1,0 @@
-export declare const LanMagnifyingGlassWaveformSolid: string;
-export default LanMagnifyingGlassWaveformSolid;

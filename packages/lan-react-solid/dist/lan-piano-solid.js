@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanPianoSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M0 192v256c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V327.6c0-24.2-13.7-46.4-35.4-57.2l-58.4-29.2c-21-10.6-34.2-32-34.2-55.5C384 83.2 300.8 0 198.3 0H192C86 0 0 86 0 192m416 160h32v96H64v-96h32v48c0 8.8 7.2 16 16 16s16-7.2 16-16v-48h32v48c0 8.8 7.2 16 16 16s16-7.2 16-16v-48h32v48c0 8.8 7.2 16 16 16s16-7.2 16-16v-48h64v48c0 8.8 7.2 16 16 16s16-7.2 16-16v-48h32v48c0 8.8 7.2 16 16 16s16-7.2 16-16z"})
+  );
+}
+
+export default LanPianoSolid;

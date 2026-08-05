@@ -1,0 +1,26 @@
+{
+  "name": "@zcorvus/lan-react-light",
+  "version": "0.2.0",
+  "description": "Standalone React components for ZCorvus Lan light icons.",
+  "author": "Ulqernesh Karvenae",
+  "license": "UNLICENSED",
+  "repository": { "type": "git", "url": "git+https://github.com/Ulternae/z-icons-npm.git", "directory": "packages/lan-react-light" },
+  "homepage": "https://icons.zcorvus.com/",
+  "bugs": { "url": "https://github.com/Ulternae/z-icons-npm/issues" },
+  "type": "module",
+  "scripts": { "prepack": "node ../../scripts/verify-package-ready.js ." },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist", "README.md"],
+  "sideEffects": false,
+  "private": false,
+  "publishConfig": { "access": "public", "provenance": true },
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
+    "./types": { "types": "./dist/types/index.d.ts", "import": "./dist/types/index.js" },
+    "./sprite": { "types": "./dist/sprite.d.ts", "import": "./dist/sprite.js" },
+    "./*": { "types": "./dist/*.d.ts", "import": "./dist/*.js" }
+  },
+  "typesVersions": { "*": { "types": ["dist/types/index.d.ts"], "*": ["dist/*.d.ts"] } },
+  "peerDependencies": { "react": "^18.0.0 || ^19.0.0" }
+}

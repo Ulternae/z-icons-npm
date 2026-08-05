@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanCirclePeso({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M480 256a224 224 0 1 0-448 0 224 224 0 1 0 448 0M0 256a256 256 0 1 1 512 0 256 256 0 1 1-512 0m192-128c-8.8 0-16 7.2-16 16v40h-16c-8.8 0-16 7.2-16 16s7.2 16 16 16h16v16h-16c-8.8 0-16 7.2-16 16s7.2 16 16 16h16v104c0 8.8 7.2 16 16 16s16-7.2 16-16v-48h48c38.7 0 72.1-23 87.3-56H368c8.8 0 16-7.2 16-16s-7.2-16-16-16h-16.3c.2-2.6.3-5.3.3-8s-.1-5.4-.3-8H368c8.8 0 16-7.2 16-16s-7.2-16-16-16h-24.7c-15.2-33-48.5-56-87.3-56zm114 56h-98v-24h48c20.2 0 38.2 9.4 50 24m-98 32h111.5c.3 2.6.5 5.3.5 8s-.2 5.4-.5 8H208zm98 48c-11.7 14.6-29.7 24-50 24h-48v-24z"})
+  );
+}
+
+export default LanCirclePeso;

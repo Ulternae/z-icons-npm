@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanCardSpadeRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 384 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M320 0c35.3 0 64 28.7 64 64v384c0 35.3-28.7 64-64 64H64l-6.5-.3C25.2 508.4 0 481.1 0 448V64C0 28.7 28.7 0 64 0zM64 48c-8.8 0-16 7.2-16 16v384c0 8.8 7.2 16 16 16h256c8.8 0 16-7.2 16-16V64c0-8.8-7.2-16-16-16zm160 304c13.3 0 24 10.7 24 24s-10.7 24-24 24h-64c-13.2 0-24-10.8-24-24s10.8-24 24-24zm-49-210.8c9.4-9.4 24.6-9.4 34 0l82.3 82.3c21.9 21.9 21.9 57.3 0 79.2s-57.3 21.9-79.2 0l-3.2-3.2c-9.4-9.4-24.6-9.4-34 0l-3.2 3.2c-21.9 21.9-57.3 21.9-79.2 0s-21.9-57.4 0-79.2z"})
+  );
+}
+
+export default LanCardSpadeRegular;

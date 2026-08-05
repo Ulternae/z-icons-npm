@@ -1,2 +1,0 @@
-export const NeoLocationDotSolid = '<svg viewBox="0 0 448 560" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill="currentColor" d="M61.3 61.3C101.5 21.1 158.1 0 224 0s122.5 21.1 162.7 61.3S448 158.1 448 224c0 72.8-28.3 139.3-61.1 192.1-32.9 53-71.4 94.3-94.8 117-18.8 18.3-43.6 26.9-68.1 26.9s-49.4-8.6-68.1-26.9c-23.4-22.7-62-64-94.8-117C28.3 363.3 0 296.8 0 224c0-65.9 21.1-122.5 61.3-162.7M224 294a70 70 0 1 0 0-140 70 70 0 1 0 0 140"/></svg>';
-export default NeoLocationDotSolid;

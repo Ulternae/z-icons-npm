@@ -1,2 +1,0 @@
-export declare const LanCircleThreeQuartersStrokeSolid: string;
-export default LanCircleThreeQuartersStrokeSolid;

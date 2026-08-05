@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanLinesLeaningRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 384 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M190.6 64.1c4.5-12.5-2-26.2-14.5-30.7s-26.2 2-30.7 14.5l-144 400c-4.5 12.5 2 26.2 14.5 30.7s26.2-2 30.7-14.5zm78.1-31.7c-13-2.6-25.6 5.8-28.2 18.8l-80 400c-2.6 13 5.8 25.6 18.8 28.2s25.6-5.8 28.2-18.8l80-400c2.6-13-5.8-25.6-18.8-28.2M360 32c-13.3 0-24 10.7-24 24v400c0 13.3 10.7 24 24 24s24-10.7 24-24V56c0-13.3-10.7-24-24-24"})
+  );
+}
+
+export default LanLinesLeaningRegular;

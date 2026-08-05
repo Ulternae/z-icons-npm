@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanMoneyBillsThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 576 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M472 48c0 48.6 39.4 88 88 88v144c-48.6 0-88 39.4-88 88H200c0-48.6-39.4-88-88-88V136c48.6 0 88-39.4 88-88zm88 248v24c0 26.5-21.5 48-48 48h-24c0-39.8 32.2-72 72-72m-448 24v-24c39.8 0 72 32.2 72 72h-24c-26.5 0-48-21.5-48-48M488 48h24c26.5 0 48 21.5 48 48v24c-39.8 0-72-32.2-72-72m-328 0h24c0 39.8-32.2 72-72 72V96c0-26.5 21.5-48 48-48m0-16c-35.3 0-64 28.7-64 64v224c0 35.3 28.7 64 64 64h352c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm176 96a80 80 0 1 1 0 160 80 80 0 1 1 0-160m0 176a96 96 0 1 0 0-192 96 96 0 1 0 0 192M16 136c0-4.4-3.6-8-8-8s-8 3.6-8 8v288c0 30.9 25.1 56 56 56h416c4.4 0 8-3.6 8-8s-3.6-8-8-8H56c-22.1 0-40-17.9-40-40z"})
+  );
+}
+
+export default LanMoneyBillsThin;

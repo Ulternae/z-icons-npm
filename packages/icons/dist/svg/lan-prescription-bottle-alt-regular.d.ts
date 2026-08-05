@@ -1,2 +1,0 @@
-export declare const LanPrescriptionBottleAltRegular: string;
-export default LanPrescriptionBottleAltRegular;

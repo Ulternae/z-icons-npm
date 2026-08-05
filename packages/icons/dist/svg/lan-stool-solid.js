@@ -1,2 +1,0 @@
-export const LanStoolSolid = '<svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M352 32c17.7 0 32 14.3 32 32v32c0 17.7-14.3 32-32 32h-28.9l28.8 317.1c1.6 17.6-11.4 33.2-29 34.8s-33.2-11.4-34.8-29L276.2 320H107.8L95.9 450.9c-1.6 17.6-17.2 30.6-34.8 29s-30.6-17.2-29-34.8L60.9 128H32c-17.7 0-32-14.3-32-32V64c0-17.7 14.3-32 32-32zM113.6 256h156.8l-11.6-128H125.2z"/></svg>';
-export default LanStoolSolid;

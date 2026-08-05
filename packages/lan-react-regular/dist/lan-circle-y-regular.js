@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanCircleYRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416m0 464a256 256 0 1 0 0-512 256 256 0 1 0 0 512m-69.7-359.5c-8.6-10.1-23.7-11.4-33.8-2.8s-11.4 23.7-2.8 33.8l82.3 97.3V344c0 13.3 10.7 24 24 24s24-10.7 24-24v-63.2l82.3-97.3c8.6-10.1 7.3-25.3-2.8-33.8s-25.3-7.3-33.8 2.8L256 234.8z"})
+  );
+}
+
+export default LanCircleYRegular;

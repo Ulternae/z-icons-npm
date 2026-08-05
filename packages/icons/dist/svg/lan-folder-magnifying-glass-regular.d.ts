@@ -1,2 +1,0 @@
-export declare const LanFolderMagnifyingGlassRegular: string;
-export default LanFolderMagnifyingGlassRegular;

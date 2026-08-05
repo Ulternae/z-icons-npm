@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanCircleBookOpen({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M480 256a224 224 0 1 0-448 0 224 224 0 1 0 448 0M0 256a256 256 0 1 1 512 0 256 256 0 1 1-512 0m272-52.2v136.8c30.3-13.2 62.9-20.2 96-20.6V176c-27.5.4-54.6 7.1-79.3 19.4zm-32 136.8V203.8l-16.7-8.4c-24.7-12.3-51.8-19-79.3-19.4v144c33.1.4 65.7 7.4 96 20.6M256 176l18.4-9.2c30-15 63.1-22.8 96.6-22.8h2c14.9 0 27 12.1 27 27v154c0 14.9-12.1 27-27 27h-2c-33.5 0-66.6 7.8-96.6 22.8l-10.3 5.2c-5.1 2.5-11 2.5-16.1 0l-10.3-5.2c-30-15-63.1-22.8-96.6-22.8h-2c-14.9 0-27-12.1-27-27V171c0-14.9 12.1-27 27-27h2c33.5 0 66.6 7.8 96.6 22.8z"})
+  );
+}
+
+export default LanCircleBookOpen;

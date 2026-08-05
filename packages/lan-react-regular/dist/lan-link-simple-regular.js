@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanLinkSimpleRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 576 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M0 256C0 150 86 64 192 64h40c13.3 0 24 10.7 24 24s-10.7 24-24 24h-40c-79.5 0-144 64.5-144 144s64.5 144 144 144h40c13.3 0 24 10.7 24 24s-10.7 24-24 24h-40C86 448 0 362 0 256m160 0c0-13.3 10.7-24 24-24h208c13.3 0 24 10.7 24 24s-10.7 24-24 24H184c-13.3 0-24-10.7-24-24M384 64c106 0 192 86 192 192s-86 192-192 192h-40c-13.3 0-24-10.7-24-24s10.7-24 24-24h40c79.5 0 144-64.5 144-144s-64.5-144-144-144h-40c-13.3 0-24-10.7-24-24s10.7-24 24-24z"})
+  );
+}
+
+export default LanLinkSimpleRegular;

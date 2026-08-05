@@ -1,2 +1,0 @@
-export const LanTableDiningSolid = '<svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M544.1 416c0 17.7-14.3 32-32 32s-32-14.3-32-32V288h-384v128c0 17.7-14.3 32-32 32s-32-14.3-32-32V208h512zm-23-352c13.8 0 26 8.8 30.3 21.9l10.7 32c6.9 20.7-8.5 42.1-30.3 42.1H44.5c-21.8 0-37.2-21.4-30.3-42.1l10.7-32C29.2 72.8 41.4 64 55.2 64z"/></svg>';
-export default LanTableDiningSolid;

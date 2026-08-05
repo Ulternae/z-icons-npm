@@ -1,2 +1,0 @@
-export const LanGrateThin = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M344 48v200h88V96c0-26.5-21.5-48-48-48zm-16 0h-96v200h96zm-112 0h-96v200h96zm-112 0H64c-26.5 0-48 21.5-48 48v152h88zM16 264v152c0 26.5 21.5 48 48 48h40V264zm104 200h96V264h-96zm112 0h96V264h-96zm112 0h40c26.5 0 48-21.5 48-48V264h-88zM0 96c0-35.3 28.7-64 64-64h320c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64z"/></svg>';
-export default LanGrateThin;

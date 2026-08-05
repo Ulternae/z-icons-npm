@@ -1,2 +1,0 @@
-export declare const LanHandHoldingCircleDollarSolid: string;
-export default LanHandHoldingCircleDollarSolid;

@@ -1,2 +1,0 @@
-export const LanArrowUTurnRightUpThin = '<svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="m557.7 138.3-136-136c-3.1-3.1-8.2-3.1-11.3 0l-136 136c-3.1 3.1-3.1 8.2 0 11.3s8.2 3.1 11.3 0L408 27.3V332c0 90.6-73.4 164-164 164S80 422.6 80 332V72c-.4-4.3-3.3-8-8-8s-7.6 3.7-8 8v260c0 99.4 80.6 180 180 180s180-80.6 180-180V27.3l122.3 122.3c3.1 3.1 8.2 3.1 11.3 0s3.1-8.2 0-11.3z"/></svg>';
-export default LanArrowUTurnRightUpThin;

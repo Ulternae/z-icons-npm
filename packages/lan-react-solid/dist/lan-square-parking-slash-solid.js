@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanSquareParkingSlashSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 -31.95 576 576.1',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M41-24.9c-9.4-9.4-24.6-9.4-33.9 0S-2.3-.3 7 9.1l528 528c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-62.1-62.1c3.3-7.7 5.1-16.2 5.1-25.1V96c0-35.3-28.7-64-64-64H128c-8.9 0-17.4 1.8-25.1 5.1l-62-62zm163.7 163.7c7.2-6.7 16.8-10.8 27.3-10.8h72c53 0 96 43 96 96 0 30.1-13.9 57-35.6 74.6l-46-46c10.4-5.3 17.6-16.1 17.6-28.6 0-17.7-14.3-32-32-32h-46.2l-53.2-53.2zM192 288v-26.2l-128-128V416c0 35.3 28.7 64 64 64h282.2L256 325.8V352c0 17.7-14.3 32-32 32s-32-14.3-32-32z"})
+  );
+}
+
+export default LanSquareParkingSlashSolid;

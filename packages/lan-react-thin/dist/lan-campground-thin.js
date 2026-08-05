@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanCampgroundThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M325.2 26c3.3 2.9 3.7 7.9.8 11.3l-59.4 68.5L504.2 380c5 5.8 7.8 13.3 7.8 21v55c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24v-55c0-7.7 2.8-15.1 7.8-21l237.6-274.2L186 37.2c-2.9-3.3-2.5-8.4.8-11.3s8.4-2.5 11.3.8l58 66.9 58-66.9c2.9-3.3 7.9-3.7 11.3-.8zM19.9 390.5c-2.5 2.9-3.9 6.6-3.9 10.5v55c0 4.4 3.6 8 8 8h93.5l4.3-5.2 128-152c1.5-1.8 3.8-2.8 6.1-2.8s4.6 1 6.1 2.8l128 152 4.3 5.2h93.5c4.4 0 8-3.6 8-8v-55c0-3.8-1.4-7.6-3.9-10.5L256 118.1zM138.5 464h235L256 324.4z"})
+  );
+}
+
+export default LanCampgroundThin;

@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanJ({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 320 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M304 32c8.8 0 16 7.2 16 16v272c0 88.4-71.6 160-160 160S0 408.4 0 320v-48c0-8.8 7.2-16 16-16s16 7.2 16 16v48c0 70.7 57.3 128 128 128s128-57.3 128-128V48c0-8.8 7.2-16 16-16"})
+  );
+}
+
+export default LanJ;

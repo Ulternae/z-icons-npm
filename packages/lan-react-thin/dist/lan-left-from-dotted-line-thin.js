@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanLeftFromDottedLineThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"m18.3 250.3 144-144c2.3-2.3 5.7-3 8.7-1.7s4.9 4.2 4.9 7.4v88c0 4.4 3.6 8 8 8h152c17.7 0 32 14.3 32 32v32c0 17.7-14.3 32-32 32h-152c-4.4 0-8 3.6-8 8v88c0 3.2-1.9 6.2-4.9 7.4s-6.4.6-8.7-1.7l-144-144c-3.1-3.1-3.1-8.2 0-11.3zM256 320h80c26.5 0 48-21.5 48-48v-32c0-26.5-21.5-48-48-48H192v-80c0-9.7-5.8-18.5-14.8-22.2S157.9 88.2 151 95L7 239c-9.4 9.4-9.4 24.6 0 33.9L151 417c6.9 6.9 17.2 8.9 26.2 5.2S192 409.7 192 400v-80zM496 64a16 16 0 1 0 0 32 16 16 0 1 0 0-32m0 88a16 16 0 1 0 0 32 16 16 0 1 0 0-32m-16 104a16 16 0 1 0 32 0 16 16 0 1 0-32 0m16 72a16 16 0 1 0 0 32 16 16 0 1 0 0-32m-16 104a16 16 0 1 0 32 0 16 16 0 1 0-32 0"})
+  );
+}
+
+export default LanLeftFromDottedLineThin;

@@ -1,2 +1,0 @@
-export const CoreForwardStep = '<svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill="currentColor" d="M32 64H0v384h76.4l9.2-8.3 176-160c6.6-6.1 10.4-14.7 10.4-23.7s-3.8-17.6-10.5-23.7l-176-160-9.1-8.3zm160.4 192L64 372.8V139.2zM384 64h-64v384h64z"/></svg>';
-export default CoreForwardStep;

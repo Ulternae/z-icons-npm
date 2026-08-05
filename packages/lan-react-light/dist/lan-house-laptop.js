@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanHouseLaptop({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 -24 640 568',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M244.9-19.5c6.2-6 16-6 22.2 0l224 216c6.4 6.1 6.5 16.3.4 22.6s-16.3 6.5-22.6.4L448 199.4V256h-32v-87.5L256 14.2 96 168.5V384c0 17.7 14.3 32 32 32h112v32H128c-35.3 0-64-28.7-64-64V199.4l-20.9 20.1c-6.4 6.1-16.5 5.9-22.6-.4s-5.9-16.5.4-22.6zM320 216v40h-16c-5.5 0-10.9.7-16 2v-42c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h29.7c-9.4 8.3-16.4 19.4-19.7 32h-10c-22.1 0-40-17.9-40-40v-48c0-22.1 17.9-40 40-40h48c22.1 0 40 17.9 40 40m224 120H320v176h224zm-256 0c0-17.7 14.3-32 32-32h224c17.7 0 32 14.3 32 32v176h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H256c-8.8 0-16-7.2-16-16s7.2-16 16-16h32z"})
+  );
+}
+
+export default LanHouseLaptop;

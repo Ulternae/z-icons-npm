@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanListTreeRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M48 48C21.5 48 0 69.5 0 96c0 17.8 9.7 33.3 24 41.6V384c0 30.9 25.1 56 56 56h54.4c8.3 14.3 23.8 24 41.6 24 26.5 0 48-21.5 48-48s-21.5-48-48-48c-17.8 0-33.3 9.7-41.6 24H80c-4.4 0-8-3.6-8-8V280h62.4c8.3 14.3 23.8 24 41.6 24 26.5 0 48-21.5 48-48s-21.5-48-48-48c-17.8 0-33.3 9.7-41.6 24H72v-94.4c14.3-8.3 24-23.8 24-41.6 0-26.5-21.5-48-48-48m112 48c0 13.3 10.7 24 24 24h304c13.3 0 24-10.7 24-24s-10.7-24-24-24H184c-13.3 0-24 10.7-24 24m128 160c0 13.3 10.7 24 24 24h176c13.3 0 24-10.7 24-24s-10.7-24-24-24H312c-13.3 0-24 10.7-24 24m0 160c0 13.3 10.7 24 24 24h176c13.3 0 24-10.7 24-24s-10.7-24-24-24H312c-13.3 0-24 10.7-24 24"})
+  );
+}
+
+export default LanListTreeRegular;

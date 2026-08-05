@@ -1,2 +1,0 @@
-export const LanEurozoneSignThin = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M0 72c0-4.4 3.6-8 8-8h200c4.4 0 8 3.6 8 8s-3.6 8-8 8H16v168h176c4.4 0 8 3.6 8 8s-3.6 8-8 8H16v176h192c4.4 0 8 3.6 8 8s-3.6 8-8 8H8c-4.4 0-8-3.6-8-8zm280 0c0-4.4 3.6-8 8-8h216c2.9 0 5.5 1.5 6.9 4s1.4 5.5 0 8L301.8 440H504c4.4 0 8 3.6 8 8s-3.6 8-8 8H288c-2.9 0-5.5-1.5-6.9-4s-1.4-5.5 0-8L490.2 80H288c-4.4 0-8-3.6-8-8"/></svg>';
-export default LanEurozoneSignThin;

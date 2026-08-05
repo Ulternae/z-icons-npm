@@ -1,2 +1,0 @@
-export declare const LanArrowUpRightFromSquareRegular: string;
-export default LanArrowUpRightFromSquareRegular;

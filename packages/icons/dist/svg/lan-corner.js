@@ -1,2 +1,0 @@
-export const LanCorner = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M0 176c0-8.8 7.2-16 16-16h432c35.3 0 64 28.7 64 64v144c0 8.8-7.2 16-16 16s-16-7.2-16-16V224c0-17.7-14.3-32-32-32H16c-8.8 0-16-7.2-16-16"/></svg>';
-export default LanCorner;

@@ -1,2 +1,0 @@
-export declare const LanBuildingMagnifyingGlassSolid: string;
-export default LanBuildingMagnifyingGlassSolid;

@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanLibraRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M488 400c13.3 0 24 10.7 24 24s-10.7 24-24 24H24c-13.3 0-24-10.7-24-24s10.7-24 24-24zM256 32c97.2 0 176 78.8 176 176 0 16.6-2.4 32.7-6.7 48H488c13.3 0 24 10.7 24 24s-10.7 24-24 24h-98.1c-8.4 0-16.3-4.4-20.6-11.7s-4.5-16.3-.5-23.7c9.7-18 15.2-38.6 15.2-60.6 0-70.7-57.3-128-128-128s-128 57.3-128 128c0 22 5.5 42.6 15.2 60.6 4 7.4 3.8 16.4-.5 23.7S130.5 304 122.1 304H24c-13.3 0-24-10.7-24-24s10.7-24 24-24h62.7c-4.3-15.3-6.7-31.4-6.7-48 0-97.2 78.8-176 176-176"})
+  );
+}
+
+export default LanLibraRegular;

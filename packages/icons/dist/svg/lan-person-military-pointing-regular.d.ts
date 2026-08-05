@@ -1,2 +1,0 @@
-export declare const LanPersonMilitaryPointingRegular: string;
-export default LanPersonMilitaryPointingRegular;

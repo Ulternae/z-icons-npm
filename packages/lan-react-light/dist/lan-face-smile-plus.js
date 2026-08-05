@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanFaceSmilePlus({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 -56 640 568',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M560-40c0-8.8-7.2-16-16-16s-16 7.2-16 16v56h-56c-8.8 0-16 7.2-16 16s7.2 16 16 16h56v56c0 8.8 7.2 16 16 16s16-7.2 16-16V48h56c8.8 0 16-7.2 16-16s-7.2-16-16-16h-56zM240 64a208 208 0 1 1 0 416 208 208 0 1 1 0-416m0 448a240 240 0 1 0 0-480 240 240 0 1 0 0 480m-97.3-188.9c-5.7-6.7-15.8-7.5-22.6-1.8s-7.5 15.8-1.8 22.6c29.3 34.3 73 56.1 121.7 56.1s92.4-21.8 121.7-56.1c5.7-6.7 5-16.8-1.8-22.6s-16.8-5-22.6 1.8C313.8 350.6 279 368 240 368s-73.8-17.4-97.3-44.9M184 224a24 24 0 1 0-48 0 24 24 0 1 0 48 0m136 24a24 24 0 1 0 0-48 24 24 0 1 0 0 48"})
+  );
+}
+
+export default LanFaceSmilePlus;

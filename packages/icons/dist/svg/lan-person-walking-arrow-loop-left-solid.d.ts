@@ -1,2 +1,0 @@
-export declare const LanPersonWalkingArrowLoopLeftSolid: string;
-export default LanPersonWalkingArrowLoopLeftSolid;

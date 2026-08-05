@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanTrashCanListThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 -16 640 528',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M173.7 0h132.6c9.8 0 18.6 6 22.3 15.1L348.2 64H131.8l19.6-48.9C155 6 163.9 0 173.7 0m-37.2 9.1L114.6 64H40c-4.4 0-8 3.6-8 8s3.6 8 8 8h400c4.4 0 8-3.6 8-8s-3.6-8-8-8h-74.6L343.5 9.1C337.4-6 322.7-16 306.3-16H173.7c-16.4 0-31.1 10-37.1 25.1zM488 128c-4.4 0-8 3.6-8 8s3.6 8 8 8h144c4.4 0 8-3.6 8-8s-3.6-8-8-8zm0 128c-4.4 0-8 3.6-8 8s3.6 8 8 8h112c4.4 0 8-3.6 8-8s-3.6-8-8-8zm-8 136c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8s-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8M64 128v320c0 35.3 28.7 64 64 64h224c35.3 0 64-28.7 64-64V128h-16v320c0 26.5-21.5 48-48 48H128c-26.5 0-48-21.5-48-48V128zm128 72c0-4.4-3.6-8-8-8s-8 3.6-8 8v208c0 4.4 3.6 8 8 8s8-3.6 8-8zm112 0c0-4.4-3.6-8-8-8s-8 3.6-8 8v208c0 4.4 3.6 8 8 8s8-3.6 8-8z"})
+  );
+}
+
+export default LanTrashCanListThin;

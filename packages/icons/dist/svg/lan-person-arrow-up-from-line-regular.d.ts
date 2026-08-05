@@ -1,2 +1,0 @@
-export declare const LanPersonArrowUpFromLineRegular: string;
-export default LanPersonArrowUpFromLineRegular;

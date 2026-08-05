@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanCircleBitcoin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M256 32a224 224 0 1 1 0 448 224 224 0 1 1 0-448m0 480a256 256 0 1 0 0-512 256 256 0 1 0 0 512M224 96c-8.8 0-16 7.2-16 16v16h-18.3c-15.4 0-27.9 12.5-27.9 27.9v197.7c0 16.8 13.6 30.4 30.4 30.4h15.9v16c0 8.8 7.2 16 16 16s16-7.2 16-16v-16h16v16c0 8.8 7.2 16 16 16s16-7.2 16-16v-16h14.2c39.8 0 72-32.2 72-72 0-26.9-14.7-50.3-36.5-62.7 12.1-12.9 19.5-30.2 19.5-49.3 0-38.8-30.8-70.5-69.3-71.9V112c0-8.8-7.2-16-16-16s-16 7.2-16 16v16h-16v-16c0-8.8-7.2-16-16-16m78.2 256H193.7v-80h108.5c22.1 0 40 17.9 40 40s-17.9 40-40 40M272 160h13.3c22.1 0 40 17.9 40 40s-17.9 40-40 40h-91.5v-80z"})
+  );
+}
+
+export default LanCircleBitcoin;

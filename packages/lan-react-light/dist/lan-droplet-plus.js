@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanDropletPlus({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 -16 384 528',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M192.2-16c10 0 19.3 4.5 25.2 12.5C253.8 45.9 384 228.8 384 320c0 106-86 192-192 192S0 426 0 320C0 228.8 130.2 45.9 166.6-3.5c5.2-7 12.9-11.3 21.5-12.3l3.7-.2zm-.2 32c-18.1 24.6-58.7 81.3-94.8 142.7-18.2 31-34.8 62.6-46.8 91.5-12.3 29.6-18.5 53.4-18.5 69.8 0 88.4 71.6 160 160 160s160-71.6 160-160c0-16.4-6.2-40.2-18.5-69.8-12-28.9-28.6-60.5-46.8-91.5C250.6 97.2 210 40.6 191.9 16zm0 216c8.8 0 16 7.2 16 16v56h56c8.8 0 16 7.2 16 16s-7.2 16-16 16h-56v56l-.3 3.2c-1.5 7.3-8 12.8-15.7 12.8s-14.2-5.5-15.7-12.8l-.3-3.2v-56h-56c-8.8 0-16-7.2-16-16s7.2-16 16-16h56v-56c0-8.8 7.2-16 16-16"})
+  );
+}
+
+export default LanDropletPlus;

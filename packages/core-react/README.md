@@ -1,16 +1,24 @@
 # @zcorvus/core-react
 
-Standalone React package for one ZCorvus Core icon variant.
+Standalone React package for the regular, solid, and regular-duo ZCorvus Core variants.
 
 ```tsx
-import { CoreAirplay, ZCore, ZCoreSprite } from '@zcorvus/core-react';
+import {
+  CoreAirplay,
+  CoreAirplaySolid,
+  CoreAirplayRegularDuo,
+  ZCore,
+  ZCoreSolid,
+} from '@zcorvus/core-react';
 
 export function Example() {
   return (
     <>
       <CoreAirplay />
-      <ZCoreSprite />
       <ZCore name="airplay" />
+      <ZCoreSolid name="airplay" />
+      <CoreAirplaySolid />
+      <CoreAirplayRegularDuo />
     </>
   );
 }

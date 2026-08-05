@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanEngineWarningSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 640 544',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M432 56c0 13.3-10.7 24-24 24h-64v48h72c35.3 0 64 28.7 64 64v16.7c-98.6 8.1-176 90.7-176 191.3 0 16.6 2.1 32.7 6 48h-19.8c-21.4 0-41.4-10.7-53.3-28.5L213.3 384H176c-26.5 0-48-21.5-48-48v-56H96v80c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24s24 10.7 24 24v80h32v-56c0-26.5 21.5-48 48-48h120V80h-64c-13.3 0-24-10.7-24-24s10.7-24 24-24h176c13.3 0 24 10.7 24 24m96 154.7V184c0-13.3 10.7-24 24-24s24 10.7 24 24v41.4c-15.1-6.9-31.2-11.9-48-14.8zM496 256a144 144 0 1 1 0 288 144 144 0 1 1 0-288m0 228a20 20 0 1 0 0-40 20 20 0 1 0 0 40m0-180c-8.8 0-16 7.2-16 16v80c0 8.8 7.2 16 16 16s16-7.2 16-16v-80c0-8.8-7.2-16-16-16"})
+  );
+}
+
+export default LanEngineWarningSolid;

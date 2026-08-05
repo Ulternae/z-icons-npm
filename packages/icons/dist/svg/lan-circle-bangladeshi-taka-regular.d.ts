@@ -1,2 +1,0 @@
-export declare const LanCircleBangladeshiTakaRegular: string;
-export default LanCircleBangladeshiTakaRegular;

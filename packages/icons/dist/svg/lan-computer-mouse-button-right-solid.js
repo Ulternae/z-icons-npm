@@ -1,2 +1,0 @@
-export const LanComputerMouseButtonRightSolid = '<svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M168 168V0h-8C71.6 0 0 71.6 0 160v192c0 88.4 71.6 160 160 160h64c88.4 0 160-71.6 160-160V240H240c-39.8 0-72-32.2-72-72m216 24v-32C384 71.6 312.4 0 224 0h-8v168c0 13.3 10.7 24 24 24z"/></svg>';
-export default LanComputerMouseButtonRightSolid;

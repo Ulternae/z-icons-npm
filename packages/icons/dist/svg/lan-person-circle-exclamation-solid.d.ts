@@ -1,2 +1,0 @@
-export declare const LanPersonCircleExclamationSolid: string;
-export default LanPersonCircleExclamationSolid;

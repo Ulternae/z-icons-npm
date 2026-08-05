@@ -1,2 +1,0 @@
-export declare const LanGameConsoleHandheldCrankRegular: string;
-export default LanGameConsoleHandheldCrankRegular;

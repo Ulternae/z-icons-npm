@@ -13,39 +13,6 @@ function runNodeImport(code: string) {
 }
 
 describe('public package imports', () => {
-  it('resolves deprecated aggregates and loads direct core package subpaths', () => {
-    const output = runNodeImport(`
-      const rootUrl = await import.meta.resolve('@zcorvus/icons');
-      const svgUrl = await import.meta.resolve('@zcorvus/icons/svg');
-      const gettersUrl = await import.meta.resolve('@zcorvus/icons/getters');
-      const minaGetterUrl = await import.meta.resolve('@zcorvus/icons/getters/mina');
-      const minaSolidGetterUrl = await import.meta.resolve('@zcorvus/icons/getters/mina-solid');
-      const bruGetterUrl = await import.meta.resolve('@zcorvus/icons/getters/bru');
-      const minaCheck = await import('@zcorvus/icons/svg/mina-check');
-      const neoRegularDuo = await import('@zcorvus/icons/svg/neo-sun-regular-duo');
-      const bruGithub = await import('@zcorvus/icons/svg/bru-github');
-      const names = await import('@zcorvus/icons/names');
-      const types = await import('@zcorvus/icons/types');
-
-      if (!rootUrl.endsWith('/packages/icons/dist/index.js')) throw new Error('missing root compatibility export');
-      if (!svgUrl.endsWith('/packages/icons/dist/svg/index.js')) throw new Error('missing SVG aggregate export');
-      if (!gettersUrl.endsWith('/packages/icons/dist/getters/index.js')) throw new Error('missing getters aggregate export');
-      if (!minaGetterUrl.endsWith('/packages/icons/dist/getters/mina.js')) throw new Error('missing Mina getter export');
-      if (!minaSolidGetterUrl.endsWith('/packages/icons/dist/getters/mina-solid.js')) throw new Error('missing Mina solid getter export');
-      if (!bruGetterUrl.endsWith('/packages/icons/dist/getters/bru.js')) throw new Error('missing Bru getter export');
-      if (typeof minaCheck.default !== 'string') throw new Error('missing direct MinaCheck svg');
-      if (typeof neoRegularDuo.NeoSunRegularDuo !== 'string') throw new Error('missing NeoSunRegularDuo svg');
-      if (typeof bruGithub.default !== 'string') throw new Error('missing direct BruGithub svg');
-      if (!names.minaIconNames.includes('check')) throw new Error('missing mina check name');
-      if (!names.bruIconNames.includes('github')) throw new Error('missing bru github name');
-      if (Object.keys(types).length !== 0) throw new Error('types entry should be runtime-empty');
-
-      console.log('ok');
-    `);
-
-    expect(output).toBe('ok');
-  }, IMPORT_TEST_TIMEOUT_MS);
-
   it('loads react package entrypoints with Node ESM resolution', () => {
     const output = runNodeImport(`
       const fs = await import('node:fs');
@@ -112,20 +79,26 @@ describe('public package imports', () => {
     expect(output).toBe('ok');
   }, IMPORT_TEST_TIMEOUT_MS);
 
-  it('loads standalone core React packages with Node ESM resolution', () => {
+  it('loads combined pack-scoped React packages with Node ESM resolution', () => {
     const output = runNodeImport(`
       const fs = await import('node:fs');
       const path = await import('node:path');
       const React = await import('react');
       const { renderToString } = await import('react-dom/server');
       const core = await import('@zcorvus/core-react');
-      const coreSolid = await import('@zcorvus/core-solid-react');
-      const coreRegularDuo = await import('@zcorvus/core-regular-duo-react');
+      const neo = await import('@zcorvus/neo-react');
+      const mina = await import('@zcorvus/mina-react');
       const bru = await import('@zcorvus/bru-react');
       const coreTypes = await import('@zcorvus/core-react/types');
       const coreSprite = await import('@zcorvus/core-react/sprite');
+      const coreSolidSprite = await import('@zcorvus/core-react/sprite-solid');
 
-      const packageDirs = ['core-react', 'core-solid-react', 'core-regular-duo-react', 'bru-react'];
+      const packageDirs = [
+        'core-react',
+        'neo-react',
+        'mina-react',
+        'bru-react',
+      ];
       for (const packageDir of packageDirs) {
         const pkg = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'packages', packageDir, 'package.json'), 'utf8'));
         if (pkg.version !== '0.2.0') throw new Error(packageDir + ' should be version 0.2.0');
@@ -136,25 +109,57 @@ describe('public package imports', () => {
       if (typeof core.ZCore !== 'function') throw new Error('missing standalone ZCore');
       if (typeof core.ZCoreSprite !== 'function') throw new Error('missing standalone ZCoreSprite');
       if (typeof core.CoreAngleDown !== 'function') throw new Error('missing standalone CoreAngleDown');
-      if (typeof coreSolid.ZCoreSolid !== 'function') throw new Error('missing standalone ZCoreSolid');
-      if (typeof coreSolid.ZCoreSolidSprite !== 'function') throw new Error('missing standalone ZCoreSolidSprite');
-      if (typeof coreSolid.CoreAngleDownSolid !== 'function') throw new Error('missing standalone CoreAngleDownSolid');
-      if (typeof coreRegularDuo.ZCoreRegularDuo !== 'function') throw new Error('missing standalone ZCoreRegularDuo');
-      if (typeof coreRegularDuo.ZCoreRegularDuoSprite !== 'function') throw new Error('missing standalone ZCoreRegularDuoSprite');
-      if (typeof coreRegularDuo.CoreAngleDownRegularDuo !== 'function') throw new Error('missing standalone CoreAngleDownRegularDuo');
+      if (typeof core.ZCoreSolid !== 'function') throw new Error('missing standalone ZCoreSolid');
+      if (typeof core.ZCoreSolidSprite !== 'function') throw new Error('missing standalone ZCoreSolidSprite');
+      if (typeof core.CoreAngleDownSolid !== 'function') throw new Error('missing standalone CoreAngleDownSolid');
+      if (typeof core.ZCoreRegularDuo !== 'function') throw new Error('missing standalone ZCoreRegularDuo');
+      if (typeof core.CoreAngleDownRegularDuo !== 'function') throw new Error('missing standalone CoreAngleDownRegularDuo');
+      if (typeof neo.NeoSunSolid !== 'function') throw new Error('missing standalone NeoSunSolid');
+      if (typeof neo.NeoSunRegularDuo !== 'function') throw new Error('missing standalone NeoSunRegularDuo');
+      if (typeof mina.MinaCheck !== 'function') throw new Error('missing standalone MinaCheck');
+      if (typeof mina.MinaCheckSolid !== 'function') throw new Error('missing standalone MinaCheckSolid');
       if (typeof bru.ZBru !== 'function') throw new Error('missing standalone ZBru');
       if (typeof bru.ZBruSprite !== 'function') throw new Error('missing standalone ZBruSprite');
       if (typeof bru.BruGithub !== 'function') throw new Error('missing standalone BruGithub');
       if (!core.coreRegularViewBoxes.crown) throw new Error('missing standalone core viewBoxes');
+      if (!core.coreSolidViewBoxes.crown) throw new Error('missing standalone solid core viewBoxes');
       if (!bru.bruSolidViewBoxes.github) throw new Error('missing standalone bru viewBoxes');
       if (Object.keys(coreTypes).length !== 0) throw new Error('standalone core types entry should be runtime-empty');
       if (typeof coreSprite.coreSprite !== 'string') throw new Error('missing standalone core sprite');
+      if (typeof coreSolidSprite.coreSpriteSolid !== 'string') throw new Error('missing standalone solid core sprite');
       const html = renderToString(React.createElement(core.CoreAngleDown));
       if (!html.includes('<svg')) throw new Error('standalone CoreAngleDown should render an svg');
       if (html.includes('<use')) throw new Error('standalone CoreAngleDown should render inline svg content');
       const bruHtml = renderToString(React.createElement(bru.BruGithub));
       if (!bruHtml.includes('<svg')) throw new Error('standalone BruGithub should render an svg');
       if (bruHtml.includes('<use')) throw new Error('standalone BruGithub should render inline svg content');
+
+      console.log('ok');
+    `);
+
+    expect(output).toBe('ok');
+  }, IMPORT_TEST_TIMEOUT_MS);
+
+  it('loads split Lan packages without aggregating every root entrypoint', () => {
+    const output = runNodeImport(`
+      const fs = await import('node:fs');
+      const path = await import('node:path');
+      const lanLight = await import('@zcorvus/lan-react-light');
+      const lanRegular = await import('@zcorvus/lan-react-regular/lan-check-regular');
+      const lanSolid = await import('@zcorvus/lan-react-solid/lan-check-solid');
+      const lanThin = await import('@zcorvus/lan-react-thin/lan-check-thin');
+
+      for (const packageDir of ['lan-react-light', 'lan-react-regular', 'lan-react-solid', 'lan-react-thin']) {
+        const pkg = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'packages', packageDir, 'package.json'), 'utf8'));
+        if (pkg.version !== '0.2.0') throw new Error(packageDir + ' should be version 0.2.0');
+        if (pkg.dependencies?.['@zcorvus/icons']) throw new Error(packageDir + ' should be self-contained');
+        if (pkg.dependencies?.['@zcorvus/icons-react']) throw new Error(packageDir + ' should not depend on icons-react');
+      }
+
+      if (typeof lanLight.LanCheck !== 'function') throw new Error('missing standalone LanCheck');
+      if (typeof lanRegular.LanCheckRegular !== 'function') throw new Error('missing standalone LanCheckRegular');
+      if (typeof lanSolid.LanCheckSolid !== 'function') throw new Error('missing standalone LanCheckSolid');
+      if (typeof lanThin.LanCheckThin !== 'function') throw new Error('missing standalone LanCheckThin');
 
       console.log('ok');
     `);

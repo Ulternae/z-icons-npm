@@ -1,0 +1,8 @@
+import React from 'react';
+
+export interface LanHouseSignalProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+  size?: string | number;
+}
+
+export declare function LanHouseSignal(props: LanHouseSignalProps): React.ReactElement;
+export default LanHouseSignal;

@@ -1,2 +1,0 @@
-export declare const LanHexagonVerticalNftSlantedThin: string;
-export default LanHexagonVerticalNftSlantedThin;

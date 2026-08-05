@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanSquareBoltSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm64.6 240c-9.2 0-16.6-7.4-16.6-16.6 0-4.7 2-9.2 5.5-12.4l141.2-126.3c3.4-3 7.8-4.7 12.4-4.7 12.4 0 21.3 12 17.8 23.9L257.7 240h61.8c9.2 0 16.6 7.4 16.6 16.6 0 4.7-2 9.2-5.5 12.4L189.3 395.3c-3.4 3-7.8 4.7-12.4 4.7-12.4 0-21.3-12-17.8-23.9L190.3 272h-61.8z"})
+  );
+}
+
+export default LanSquareBoltSolid;

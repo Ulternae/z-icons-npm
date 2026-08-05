@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanMobileSlash({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '-0.027 -31.927 576.053 576.022',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M4.7-27.2c5.5-5.5 13.9-6.2 20.1-2.1l2.5 2.1 85 85c2.9-30.3 27-54.3 57.2-57.4l6.5-.3h224l6.5.3C438.8 3.6 464 30.9 464 64v345.5l107.3 107.3 2.1 2.5c4.1 6.2 3.4 14.7-2.1 20.1s-13.9 6.2-20.1 2.1l-2.5-2.1-544-544-2.1-2.5c-4.1-6.2-3.4-14.7 2.1-20.1M144 202.5V448c0 17.7 14.3 32 32 32h224c6.1 0 11.8-1.8 16.7-4.8l22.9 22.9c-9.3 7.4-20.7 12.2-33.1 13.5l-6.5.3H176l-6.5-.3c-32.3-3.2-57.5-30.5-57.5-63.6V170.5zM320 400c8.8 0 16 7.2 16 16s-7.2 16-16 16h-64c-8.8 0-16-7.2-16-16s7.2-16 16-16zM176 32c-17.7 0-32 14.3-32 32v25.5l288 288V64c0-17.7-14.3-32-32-32z"})
+  );
+}
+
+export default LanMobileSlash;

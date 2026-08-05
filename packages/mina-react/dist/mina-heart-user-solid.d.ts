@@ -1,0 +1,8 @@
+import React from 'react';
+
+export interface MinaHeartUserSolidProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+  size?: string | number;
+}
+
+export declare function MinaHeartUserSolid(props: MinaHeartUserSolidProps): React.ReactElement;
+export default MinaHeartUserSolid;

@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanSlidersHSquareSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M384 480c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64zm0-144c0 13.3-10.7 24-24 24h-40v32c0 13.3-10.7 24-24 24s-24-10.7-24-24v-32H88c-13.3 0-24-10.7-24-24s10.7-24 24-24h184v-32c0-13.3 10.7-24 24-24s24 10.7 24 24v32h40c13.3 0 24 10.7 24 24m-24-184c13.3 0 24 10.7 24 24s-10.7 24-24 24H176v32c0 13.3-10.7 24-24 24s-24-10.7-24-24v-32H88c-13.3 0-24-10.7-24-24s10.7-24 24-24h40v-32c0-13.3 10.7-24 24-24s24 10.7 24 24v32z"})
+  );
+}
+
+export default LanSlidersHSquareSolid;

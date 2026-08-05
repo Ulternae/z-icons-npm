@@ -1,2 +1,0 @@
-export const LanMoonWaxingGibbousInverseSolid = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M256 0a256 256 0 1 0 0 512 256 256 0 1 0 0-512m0 64c13.2 0 26 1.3 38.5 3.8C232.8 107.7 192 177.1 192 256s40.8 148.2 102.5 188.1c-12.4 2.5-25.3 3.9-38.5 3.9-106 0-192-86-192-192S150 64 256 64"/></svg>';
-export default LanMoonWaxingGibbousInverseSolid;

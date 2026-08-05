@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanSpiralThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M133 .7c3.4-1.5 7.5-.5 9.8 2.7 2.2 3.2 1.9 7.4-.7 10.1l-1.2 1.1C65.3 68.2 16 156.3 16 256c0 132.6 107.5 240 240 240s240-107.4 240-240c0-101.6-82.4-184-184-184s-184 82.4-184 184c0 70.7 57.3 128 128 128s128-57.3 128-128c0-39.8-32.2-72-72-72s-72 32.2-72 72c0 4.4-3.6 8-8 8s-8-3.6-8-8c0-48.6 39.4-88 88-88s88 39.4 88 88c0 79.5-64.5 144-144 144s-144-64.5-144-144c0-110.5 89.5-200 200-200s200 89.5 200 200c0 141.4-114.6 256-256 256S0 397.4 0 256C0 150.9 52 58 131.6 1.4z"})
+  );
+}
+
+export default LanSpiralThin;

@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanSortUpThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 384 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M176 22.6c4.2-4.2 10-6.6 16-6.6s11.8 2.4 16 6.6l154.7 154.8c3.4 3.4 5.3 7.9 5.3 12.7 0 9.9-8 17.9-17.9 17.9H33.9C24 208 16 200 16 190.1c0-4.8 1.9-9.3 5.3-12.7zm-11.3-11.3L9.9 166.1c-6.4 6.4-9.9 15-9.9 24C0 208.8 15.2 224 33.9 224H350c18.7 0 33.9-15.2 33.9-33.9 0-9-3.6-17.6-9.9-24L219.3 11.3C212.1 4.1 202.2 0 192 0s-20.1 4.1-27.3 11.3"})
+  );
+}
+
+export default LanSortUpThin;

@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanSwapArrowsRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 576 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M7 145c-9.4-9.4-9.4-24.6 0-33.9L79 39c9.4-9.4 24.6-9.4 33.9 0l72 72c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-31-31V360c0 39.8 32.2 72 72 72s72-32.2 72-72V152c0-66.3 53.7-120 120-120s120 53.7 120 120v246.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V152c0-39.8-32.2-72-72-72s-72 32.2-72 72v208c0 66.3-53.7 120-120 120S72 426.3 72 360V113.9l-31 31c-9.4 9.4-24.6 9.4-33.9 0z"})
+  );
+}
+
+export default LanSwapArrowsRegular;

@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanBusSchool({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M320 32c35.3 0 64 28.7 64 64v16H64V96c0-35.3 28.7-64 64-64zM128 0C75 0 32 43 32 96v152.4C12.4 266 0 291.6 0 320v64c0 23.7 12.9 44.4 32 55.4V496c0 8.8 7.2 16 16 16s16-7.2 16-16v-48h320v48c0 8.8 7.2 16 16 16s16-7.2 16-16v-56.6c19.1-11.1 32-31.7 32-55.4v-64c0-28.4-12.4-54-32-71.6V96c0-53-43-96-96-96zm256 144v85.5c-10-3.5-20.8-5.5-32-5.5H240v-80zM64 229.5V144h144v80H96c-11.2 0-22 1.9-32 5.5M240 256h112c35.3 0 64 28.7 64 64v64c0 17.7-14.3 32-32 32H64c-17.7 0-32-14.3-32-32v-64c0-35.3 28.7-64 64-64zM112 360a24 24 0 1 0 0-48 24 24 0 1 0 0 48m248-24a24 24 0 1 0-48 0 24 24 0 1 0 48 0"})
+  );
+}
+
+export default LanBusSchool;

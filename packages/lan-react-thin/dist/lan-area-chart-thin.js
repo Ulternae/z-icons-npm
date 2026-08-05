@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanAreaChartThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M16 40c0-4.4-3.6-8-8-8s-8 3.6-8 8v360c0 44.2 35.8 80 80 80h424c4.4 0 8-3.6 8-8s-3.6-8-8-8H80c-35.3 0-64-28.7-64-64zm301 152.1c2.9 3.2 7.1 5.1 11.4 5.2s8.6-1.6 11.7-4.7l46.3-46.3c3.1-3.1 8.2-3.1 11.3 0l64 64c1.5 1.5 2.3 3.5 2.3 5.7v144c0 4.4-3.6 8-8 8H120c-4.4 0-8-3.6-8-8V250.9c0-2 .8-3.9 2.1-5.4l120-130.9c1.5-1.7 3.7-2.6 5.9-2.6s4.4.9 5.9 2.6zM480 216c0-6.4-2.5-12.5-7-17l-64-64c-9.4-9.4-24.6-9.4-33.9 0l-46.3 46.3-10.8-11.8-60.2-65.7c-4.5-5-11-7.8-17.7-7.8s-13.1 2.8-17.7 7.8l-120 130.9c-4.1 4.4-6.3 10.2-6.3 16.2L96 360c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24z"})
+  );
+}
+
+export default LanAreaChartThin;

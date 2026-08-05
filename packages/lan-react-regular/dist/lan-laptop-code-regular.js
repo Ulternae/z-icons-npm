@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanLaptopCodeRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 640 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M128 80h384c8.8 0 16 7.2 16 16v208h48V96c0-35.3-28.7-64-64-64H128c-35.3 0-64 28.7-64 64v208h48V96c0-8.8 7.2-16 16-16M52.8 400h534.4c-8.5 18.9-27.5 32-49.6 32H102.4c-22.1 0-41.1-13.1-49.6-32m-27.2-48C11.5 352 0 363.5 0 377.6 0 434.2 45.8 480 102.4 480h435.2c56.6 0 102.4-45.8 102.4-102.4 0-14.1-11.5-25.6-25.6-25.6zM281 169c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-48 48c-9.4 9.4-9.4 24.6 0 33.9l48 48c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-31-31 31-31zm112-34c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l31 31-31 31c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l48-48c9.4-9.4 9.4-24.6 0-33.9l-48-48z"})
+  );
+}
+
+export default LanLaptopCodeRegular;

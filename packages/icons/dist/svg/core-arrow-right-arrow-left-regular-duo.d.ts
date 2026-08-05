@@ -1,2 +1,0 @@
-export declare const CoreArrowRightArrowLeftRegularDuo: string;
-export default CoreArrowRightArrowLeftRegularDuo;

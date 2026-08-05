@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanBracketRoundThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 192 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M159.2 36.4c2 4 .4 8.8-3.6 10.7-23.1 11.5-58.2 36.1-87.4 71.7S16 200.7 16 255.9s23 101.6 52.2 137.2c29.2 35.7 64.3 60.2 87.4 71.7 4 2 5.6 6.8 3.6 10.7s-6.8 5.6-10.7 3.6c-25-12.4-61.9-38.3-92.7-75.8C25 365.7 0 315.9 0 256s25-109.7 55.8-147.3c30.8-37.5 67.7-63.4 92.6-75.9 4-2 8.8-.4 10.7 3.6z"})
+  );
+}
+
+export default LanBracketRoundThin;

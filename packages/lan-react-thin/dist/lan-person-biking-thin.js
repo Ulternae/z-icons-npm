@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanPersonBikingThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 576 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M360 16a40 40 0 1 1 0 80 40 40 0 1 1 0-80m0 96a56 56 0 1 0 0-112 56 56 0 1 0 0 112M16 400a96 96 0 1 1 192 0 96 96 0 1 1-192 0m208 0a112 112 0 1 0-224 0 112 112 0 1 0 224 0m144 0a96 96 0 1 1 192 0 96 96 0 1 1-192 0m208 0a112 112 0 1 0-224 0 112 112 0 1 0 224 0M272.6 150.6c8.9-7.1 21.6-7 30.4.3l75.9 63.3c1.4 1.2 3.2 1.9 5.1 1.9h64c4.4 0 8-3.6 8-8s-3.6-8-8-8h-61.1l-73.7-61.4c-14.6-12.2-35.8-12.4-50.6-.5l-52.2 41.7c-26.9 21.5-23 63.6 7.4 79.8l62.2 33.1V416c0 4.4 3.6 8 8 8s8-3.6 8-8V288c0-3-1.6-5.7-4.2-7.1l-66.4-35.4c-20.3-10.8-22.9-38.9-4.9-53.2l52.2-41.7z"})
+  );
+}
+
+export default LanPersonBikingThin;

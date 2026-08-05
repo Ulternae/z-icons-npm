@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanSignalSlash({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 -31.85 576 575.9',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M27.3-27.2c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6l544 544c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L512 457.5V48c0-8.8-7.2-16-16-16s-16 7.2-16 16v377.5l-72-72V144c0-8.8-7.2-16-16-16s-16 7.2-16 16v177.5zM272 464c0 8.8 7.2 16 16 16s16-7.2 16-16V362.5l-32-32zm-88-144c-8.8 0-16 7.2-16 16v128c0 8.8 7.2 16 16 16s16-7.2 16-16V336c0-8.8-7.2-16-16-16M80 384c-8.8 0-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16v-64c0-8.8-7.2-16-16-16"})
+  );
+}
+
+export default LanSignalSlash;

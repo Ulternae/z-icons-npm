@@ -1,2 +1,0 @@
-export const LanBoothCurtainSolid = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M64 0C28.7 0 0 28.7 0 64v416c0 17.7 14.3 32 32 32s32-14.3 32-32V64h32v336c0 26.5 21.5 48 48 48s48-21.5 48-48c0 26.5 21.5 48 48 48s48-21.5 48-48c0 26.5 21.5 48 48 48s48-21.5 48-48v80c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-35.3-28.7-64-64-64z"/></svg>';
-export default LanBoothCurtainSolid;

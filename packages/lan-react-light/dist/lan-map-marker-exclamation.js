@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanMapMarkerExclamation({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 384 515',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M192 0c106 0 192 84.4 192 188.6 0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.4 12.8-43.3 0C120.1 450.8 0 307.9 0 188.6 0 84.4 86 0 192 0m0 32c-88.9 0-160 70.6-160 156.6 0 50.3 25.9 109.4 61.4 165.6 34 53.8 73.9 100.4 98.6 127.4 24.6-26.9 64.6-73.6 98.6-127.4C326.1 298 352 238.9 352 188.6 352 102.7 280.9 32 192 32m0 320a24 24 0 1 1 0-48 24 24 0 1 1 0 48m0-256c13.5 0 24.3 11.4 23.5 24.9l-7.6 136c-.5 8.5-7.5 15.1-16 15.1s-15.5-6.6-16-15.1l-7.6-136c-.8-13.5 10-24.9 23.5-24.9z"})
+  );
+}
+
+export default LanMapMarkerExclamation;

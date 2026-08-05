@@ -1,2 +1,0 @@
-export declare const LanFloppyDiskCircleXmarkRegular: string;
-export default LanFloppyDiskCircleXmarkRegular;

@@ -1,2 +1,0 @@
-export declare const LanChartPieSimpleCircleCurrency: string;
-export default LanChartPieSimpleCircleCurrency;

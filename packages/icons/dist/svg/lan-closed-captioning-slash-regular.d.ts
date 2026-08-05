@@ -1,2 +1,0 @@
-export declare const LanClosedCaptioningSlashRegular: string;
-export default LanClosedCaptioningSlashRegular;

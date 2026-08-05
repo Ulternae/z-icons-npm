@@ -1,2 +1,0 @@
-export const LanDownRightSolid = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M384 448H112c-12.9 0-24.6-7.8-29.6-19.8s-2.2-25.7 6.9-34.9l78.1-78.1L30 177.8c-18.7-18.7-18.7-49.1 0-67.9l48-48c18.7-18.7 49.1-18.7 67.9 0l137.4 137.4 78.1-78.1c9.2-9.2 22.9-11.9 34.9-6.9S416 131.1 416 144v272c0 17.7-14.3 32-32 32"/></svg>';
-export default LanDownRightSolid;

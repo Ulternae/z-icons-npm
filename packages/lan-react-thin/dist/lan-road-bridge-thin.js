@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanRoadBridgeThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 576 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M192 32H8c-4.4 0-8 3.6-8 8s3.6 8 8 8h48v96H8c-4.4 0-8 3.6-8 8v104c0 3.3 2.1 6.3 5.2 7.5l12.1 4.5C45.4 278.6 64 305.4 64 335.4V456c0 13.3 10.7 24 24 24h64c13.3 0 24-10.7 24-24v-88c0-38.7 27.5-71 64-78.4v-16.3c-45.4 7.6-80 47.1-80 94.7v88c0 4.4-3.6 8-8 8H88c-4.4 0-8-3.6-8-8V335.4c0-36.7-22.8-69.5-57.1-82.4l-6.9-2.6v-90.5h224v-16h-40v-96h40v-16h-48zm-8 16v96H72V48zm344 0c17.7 0 32 14.3 32 32v352c0 17.7-14.3 32-32 32h-88v-72c0-4.4-3.6-8-8-8s-8 3.6-8 8v72h-88c-17.7 0-32-14.3-32-32V80c0-17.7 14.3-32 32-32h88v72c0 4.4 3.6 8 8 8s8-3.6 8-8V48zm0-16H336c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h192c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48m-96 176c-4.4 0-8 3.6-8 8v80c0 4.4 3.6 8 8 8s8-3.6 8-8v-80c0-4.4-3.6-8-8-8"})
+  );
+}
+
+export default LanRoadBridgeThin;

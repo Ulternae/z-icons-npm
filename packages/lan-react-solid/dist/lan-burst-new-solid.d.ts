@@ -1,0 +1,8 @@
+import React from 'react';
+
+export interface LanBurstNewSolidProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+  size?: string | number;
+}
+
+export declare function LanBurstNewSolid(props: LanBurstNewSolidProps): React.ReactElement;
+export default LanBurstNewSolid;

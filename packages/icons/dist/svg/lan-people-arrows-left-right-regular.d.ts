@@ -1,2 +1,0 @@
-export declare const LanPeopleArrowsLeftRightRegular: string;
-export default LanPeopleArrowsLeftRightRegular;

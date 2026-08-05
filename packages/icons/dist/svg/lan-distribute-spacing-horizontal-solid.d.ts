@@ -1,2 +1,0 @@
-export declare const LanDistributeSpacingHorizontalSolid: string;
-export default LanDistributeSpacingHorizontalSolid;

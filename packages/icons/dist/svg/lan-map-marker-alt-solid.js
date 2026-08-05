@@ -1,2 +1,0 @@
-export const LanMapMarkerAltSolid = '<svg viewBox="-0.1 0 384.1 515" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M0 188.6C0 84.4 86 0 192 0s192 84.4 192 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0C120.1 450.9-.1 307.9-.1 188.6zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128"/></svg>';
-export default LanMapMarkerAltSolid;

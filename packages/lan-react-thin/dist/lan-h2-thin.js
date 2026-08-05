@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanH2Thin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 576 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M48 72c0-4.4-3.6-8-8-8s-8 3.6-8 8v368c0 4.4 3.6 8 8 8s8-3.6 8-8V264h192v176c0 4.4 3.6 8 8 8s8-3.6 8-8V72c0-4.4-3.6-8-8-8s-8 3.6-8 8v176H48zm296-8c-4.4 0-8 3.6-8 8s3.6 8 8 8h123.6c37.8 0 68.4 30.6 68.4 68.4 0 24.2-12.8 46.6-33.6 58.9l-115.7 68.6c-41.3 24.5-66.7 69-66.7 117V440c0 4.4 3.6 8 8 8h208c4.4 0 8-3.6 8-8s-3.6-8-8-8H336v-39.1c0-42.4 22.4-81.6 58.8-103.2l115.8-68.6c25.7-15.2 41.4-42.8 41.4-72.6 0-46.6-37.8-84.4-84.4-84.4z"})
+  );
+}
+
+export default LanH2Thin;

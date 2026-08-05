@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanRupiahSign({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 544',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M0 48c0-8.8 7.2-16 16-16h96c79.5 0 144 64.5 144 144 0 60.9-37.9 113-91.3 134.1l42.7 149.5c2.4 8.5-2.5 17.4-11 19.8s-17.4-2.5-19.8-11l-42.9-150c-7.1 1.1-14.4 1.6-21.8 1.6h-80v144c0 8.8-7.2 16-16 16S0 472.8 0 464zm32 240h80c61.9 0 112-50.1 112-112S173.9 64 112 64H32zm288-16v144h80c44.2 0 80-35.8 80-80s-35.8-80-80-80h-64c-8.8 0-16 7.2-16 16m16-48h64c61.9 0 112 50.1 112 112s-50.1 112-112 112h-80v80c0 8.8-7.2 16-16 16s-16-7.2-16-16V272c0-26.5 21.5-48 48-48"})
+  );
+}
+
+export default LanRupiahSign;

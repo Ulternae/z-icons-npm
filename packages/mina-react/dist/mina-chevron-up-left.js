@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function MinaChevronUpLeft({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 24 24',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"d":"M7.879 16.364V7.879h8.485"})
+  );
+}
+
+export default MinaChevronUpLeft;

@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanBoxTissue({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M103 64h161.9l17.4 52.2C291 142.3 315.5 160 343 160h62.5l-45.7 160H154.2zm161.9-32H103c-20.2 0-35.3 18.5-31.3 38.3l51.2 256c3 15 16.1 25.7 31.4 25.7h205.6c14.3 0 26.8-9.5 30.8-23.2l45.7-160c5.8-20.4-9.5-40.8-30.8-40.8h-62.5c-13.8 0-26-8.8-30.4-21.9l-17.4-52.2C290.9 40.8 278.7 32 264.9 32M59.8 256H48c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48h-2.6l-9.1 32h11.8c8.8 0 16 7.2 16 16v128c0 8.8-7.2 16-16 16H48c-8.8 0-16-7.2-16-16V304c0-8.8 7.2-16 16-16h18.2z"})
+  );
+}
+
+export default LanBoxTissue;

@@ -1,2 +1,0 @@
-export declare const LanHouseMedicalCircleCheckRegular: string;
-export default LanHouseMedicalCircleCheckRegular;

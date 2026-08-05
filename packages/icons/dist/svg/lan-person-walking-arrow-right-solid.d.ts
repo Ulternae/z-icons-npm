@@ -1,2 +1,0 @@
-export declare const LanPersonWalkingArrowRightSolid: string;
-export default LanPersonWalkingArrowRightSolid;

@@ -1,2 +1,0 @@
-export declare const LanAssistiveListeningSystemsRegular: string;
-export default LanAssistiveListeningSystemsRegular;

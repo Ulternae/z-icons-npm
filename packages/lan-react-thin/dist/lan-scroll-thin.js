@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanScrollThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 576 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M16 96c0-26.5 21.5-48 48-48s48 21.5 48 48v80H32c-8.8 0-16-7.2-16-16zm90.3-48H360c39.8 0 72 32.2 72 72v200H264c-22.1 0-40 17.9-40 40v56c0 26.5-21.5 48-48 48s-48-21.5-48-48V96c0-19.1-8.4-36.3-21.7-48M448 320V120c0-48.6-39.4-88-88-88H64C28.7 32 0 60.7 0 96v64c0 17.7 14.3 32 32 32h80v224c0 35.3 28.7 64 64 64h280c48.6 0 88-39.4 88-88v-32c0-22.1-17.9-40-40-40zm8 144H218.3c13.3-11.7 21.7-28.9 21.7-48v-56c0-13.3 10.7-24 24-24h240c13.3 0 24 10.7 24 24v32c0 39.8-32.2 72-72 72"})
+  );
+}
+
+export default LanScrollThin;

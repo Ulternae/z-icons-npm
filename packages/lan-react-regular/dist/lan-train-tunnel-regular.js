@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanTrainTunnelRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M48 256c0-114.9 93.1-208 208-208s208 93.1 208 208v232c0 13.3 10.7 24 24 24s24-10.7 24-24V256C512 114.6 397.4 0 256 0S0 114.6 0 256v232c0 13.3 10.7 24 24 24s24-10.7 24-24zm304-48v48H160v-48c0-17.7 14.3-32 32-32h128c17.7 0 32 14.3 32 32M160 368v-64h192v64c0 17.7-14.3 32-32 32H192c-17.7 0-32-14.3-32-32m32-240c-44.2 0-80 35.8-80 80v160c0 27.7 14.1 52.2 35.5 66.5L111 471c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l57-57H310l57 57c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-36.5-36.5c21.5-14.3 35.6-38.8 35.6-66.5V208c0-44.2-35.8-80-80-80zm96 224a32 32 0 1 0-64 0 32 32 0 1 0 64 0"})
+  );
+}
+
+export default LanTrainTunnelRegular;

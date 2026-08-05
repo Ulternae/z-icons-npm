@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanPesoSign({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 448 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M96 48c0-8.8 7.2-16 16-16h112c71.6 0 132.3 47.1 152.7 112H416c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32.8c.9 9 1.5 23.1-1 40H416c8.8 0 16 7.2 16 16s-7.2 16-16 16h-42.1c-22.7 60.7-81.2 104-149.9 104h-96v112c0 8.8-7.2 16-16 16s-16-7.2-16-16V248H64c-8.8 0-16-7.2-16-16s7.2-16 16-16h32v-40H64c-8.8 0-16-7.2-16-16s7.2-16 16-16h32zm32 200v72h96c50.6 0 94.4-29.4 115.1-72zm221.8-32c3.2-16.8 2.4-31.1 1.3-40h-223v40h221.8zM224 64h-96v80h214.7c-19-46.9-65-80-118.7-80"})
+  );
+}
+
+export default LanPesoSign;

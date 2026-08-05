@@ -1,2 +1,0 @@
-export const Lan1 = '<svg viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16 32C7.2 32 0 39.2 0 48s7.2 16 16 16h96v384H16c-8.8 0-16 7.2-16 16s7.2 16 16 16h224c8.8 0 16-7.2 16-16s-7.2-16-16-16h-96V48c0-8.8-7.2-16-16-16z"/></svg>';
-export default Lan1;

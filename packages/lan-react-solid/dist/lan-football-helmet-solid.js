@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanFootballHelmetSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M256 0c119.6 0 219.9 82 248.1 192.8 4.3 17.1-8.3 33.2-25.8 35.4l-127.1 15.9L379 336h77c30.9 0 56 25.1 56 56v73.8c0 25.5-20.7 46.2-46.2 46.2-49.7 0-93.5-32.5-107.9-80l-14.5-48h-41.3c1.2 5 1.9 10.1 1.9 15.3 0 35.7-29 64.7-64.7 64.7h-1.9c-8.8 0-17.5-1.7-25.7-5.1L44.9 389.4c-6.4-2.7-11.8-7.4-15.1-13.5C10.8 340.1 0 299.3 0 256 0 114.6 114.6 0 256 0m147.9 418.1c8.1 26.7 32.4 45.1 60.1 45.8V392c0-4.4-3.6-8-8-8h-62.4zM160 288a32 32 0 1 0 0 64 32 32 0 1 0 0-64m121.1-35.1c-14.3 1.8-25.1 14-25.1 28.4 0 4.4 1 8.8 3 12.8l21 42h48.8l-26-85.9-21.8 2.7z"})
+  );
+}
+
+export default LanFootballHelmetSolid;

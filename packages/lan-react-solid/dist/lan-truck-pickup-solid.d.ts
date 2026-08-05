@@ -1,0 +1,8 @@
+import React from 'react';
+
+export interface LanTruckPickupSolidProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
+  size?: string | number;
+}
+
+export declare function LanTruckPickupSolid(props: LanTruckPickupSolidProps): React.ReactElement;
+export default LanTruckPickupSolid;

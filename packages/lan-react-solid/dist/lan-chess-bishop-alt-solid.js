@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanChessBishopAltSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 320 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"m96 288-15.2-13C54.9 252.8 40 220.4 40 186.3c0-27.3 9.6-53.8 27.1-74.8L120 48h-8c-13.3 0-24-10.7-24-24S98.7 0 112 0h96c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8l31.8 38.2L167 151c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l61-61c11.7 18.6 18 40.2 18 62.3 0 34.1-14.9 66.5-40.8 88.7l-15.2 13 16 96 56.2 70.3c5 6.3 7.8 14.1 7.8 22.2 0 19.6-15.9 35.5-35.5 35.5l-216.9.1C31.9 512 16 496.1 16 476.5c0-8.1 2.7-15.9 7.8-22.2L80 384z"})
+  );
+}
+
+export default LanChessBishopAltSolid;

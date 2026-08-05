@@ -1,2 +1,0 @@
-export declare const MinaChevronDoubleDownRightSolid: string;
-export default MinaChevronDoubleDownRightSolid;

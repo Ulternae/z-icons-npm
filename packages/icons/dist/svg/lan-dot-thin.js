@@ -1,2 +1,0 @@
-export const LanDotThin = '<svg viewBox="0 0 128 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M64 192c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64m0 16c-26.5 0-48 21.5-48 48s21.5 48 48 48 48-21.5 48-48-21.5-48-48-48"/></svg>';
-export default LanDotThin;

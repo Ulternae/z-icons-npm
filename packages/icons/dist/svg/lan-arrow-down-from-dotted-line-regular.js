@@ -1,2 +1,0 @@
-export const LanArrowDownFromDottedLineRegular = '<svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M175 505c9.4 9.4 24.6 9.4 33.9 0L345 369c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-95 95V152c0-13.3-10.7-24-24-24s-24 10.7-24 24v278.1l-95-95c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9zM0 32a32 32 0 1 0 64 0 32 32 0 1 0-64 0m138.7 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64m74.7-32a32 32 0 1 0 64 0 32 32 0 1 0-64 0M352 64a32 32 0 1 0 0-64 32 32 0 1 0 0 64"/></svg>';
-export default LanArrowDownFromDottedLineRegular;

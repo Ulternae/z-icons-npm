@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanPhoneCircleDownRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '-2.646 -2.646 517.292 517.292',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M403.1 403.1a208 208 0 1 1-294.2-294.2 208 208 0 1 1 294.2 294.2M75 75a256 256 0 1 0 362 362A256 256 0 1 0 75 75m321.9 236.1 1.4-2.5c16.6-29.1 14-70.7-18.7-92-75-48.8-172.3-48.8-247.3 0-32.7 21.3-35.3 62.9-18.7 92l1.4 2.5c5.1 8.9 15.9 12.6 25.3 8.7l48.7-20.1c8.3-3.4 13.3-11.9 12.5-20.8l-1.9-19.4c36.5-12 76.3-11.4 112.4 1.9l-1.6 17.6c-.9 8.9 4.2 17.4 12.5 20.8l48.7 20.1c9.4 3.9 20.3.2 25.3-8.7z"})
+  );
+}
+
+export default LanPhoneCircleDownRegular;

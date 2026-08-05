@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanUserMicrophone({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 576 544',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M320 128a96 96 0 1 0-192 0 96 96 0 1 0 192 0m-224 0a128 128 0 1 1 256 0 128 128 0 1 1-256 0M32 480v16c0 8.8-7.2 16-16 16s-16-7.2-16-16v-16c0-97.2 78.8-176 176-176h96c13.9 0 27.5 1.6 40.5 4.7-13.5 5.3-24.8 15.1-32 27.6-2.8-.2-5.7-.2-8.6-.2h-96C96.5 336 32 400.5 32 480m352-192c0-35.3 28.7-64 64-64s64 28.7 64 64v96c0 35.3-28.7 64-64 64s-64-28.7-64-64zm64-32c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32v-96c0-17.7-14.3-32-32-32m-112 96c8.8 0 16 7.2 16 16v16c0 53 43 96 96 96s96-43 96-96v-16c0-8.8 7.2-16 16-16s16 7.2 16 16v16c0 65.3-48.9 119.1-112 127v17c0 8.8-7.2 16-16 16s-16-7.2-16-16v-17c-63.1-7.9-112-61.7-112-127v-16c0-8.8 7.2-16 16-16"})
+  );
+}
+
+export default LanUserMicrophone;

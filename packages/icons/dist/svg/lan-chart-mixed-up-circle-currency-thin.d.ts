@@ -1,2 +1,0 @@
-export declare const LanChartMixedUpCircleCurrencyThin: string;
-export default LanChartMixedUpCircleCurrencyThin;

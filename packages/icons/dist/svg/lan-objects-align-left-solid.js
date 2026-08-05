@@ -1,2 +1,0 @@
-export const LanObjectsAlignLeftSolid = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M0 32v448c0 17.7 14.3 32 32 32s32-14.3 32-32V32C64 14.3 49.7 0 32 0S0 14.3 0 32m176 32c-26.5 0-48 21.5-48 48v64c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-64c0-26.5-21.5-48-48-48zm0 224c-26.5 0-48 21.5-48 48v64c0 26.5 21.5 48 48 48h160c26.5 0 48-21.5 48-48v-64c0-26.5-21.5-48-48-48z"/></svg>';
-export default LanObjectsAlignLeftSolid;

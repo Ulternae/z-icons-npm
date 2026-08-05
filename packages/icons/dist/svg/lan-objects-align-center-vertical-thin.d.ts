@@ -1,2 +1,0 @@
-export declare const LanObjectsAlignCenterVerticalThin: string;
-export default LanObjectsAlignCenterVerticalThin;

@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanCube({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 -11.05 512 534.1',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M240.3 25.2 64.5 126.8l191.8 110.7 191.9-110.7L272.3 25.2c-9.9-5.7-22.1-5.7-32 0M48.5 154.5v203c0 11.4 6.1 22 16 27.7l175.8 101.5V265.2L48.5 154.4zm223.8 332.3 175.9-101.6c9.9-5.7 16-16.3 16-27.7v-203L272.4 265.3v221.5zm-48-489.3c19.8-11.4 44.2-11.4 64 0L464.2 99c19.8 11.4 32 32.6 32 55.4v203c0 22.9-12.2 44-32 55.4L288.3 514.5a64.16 64.16 0 0 1-64 0L48.5 413c-19.8-11.4-32-32.6-32-55.4v-203c0-22.9 12.2-44 32-55.4z"})
+  );
+}
+
+export default LanCube;

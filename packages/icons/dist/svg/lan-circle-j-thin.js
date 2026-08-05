@@ -1,2 +1,0 @@
-export const LanCircleJThin = '<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M256 16a240 240 0 1 1 0 480 240 240 0 1 1 0-480m0 496a256 256 0 1 0 0-512 256 256 0 1 0 0 512m64-344c0-4.4-3.6-8-8-8s-8 3.6-8 8v112c0 30.9-25.1 56-56 56s-56-25.1-56-56v-16c0-4.4-3.6-8-8-8s-8 3.6-8 8v16c0 39.8 32.2 72 72 72s72-32.2 72-72z"/></svg>';
-export default LanCircleJThin;

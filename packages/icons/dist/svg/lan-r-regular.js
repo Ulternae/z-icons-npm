@@ -1,2 +1,0 @@
-export const LanRRegular = '<svg viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M24 32C10.7 32 0 42.7 0 56v400c0 13.3 10.7 24 24 24s24-10.7 24-24V304h109.9l118.5 165.9c7.7 10.8 22.7 13.3 33.5 5.6s13.3-22.7 5.6-33.5l-101-141.4C274.9 286.7 320 232.6 320 168c0-75.1-60.9-136-136-136zm152 224H48V80h136c48.6 0 88 39.4 88 88s-39.4 88-88 88z"/></svg>';
-export default LanRRegular;

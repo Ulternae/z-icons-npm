@@ -1,2 +1,0 @@
-export declare const LanDistributeSpacingVerticalThin: string;
-export default LanDistributeSpacingVerticalThin;

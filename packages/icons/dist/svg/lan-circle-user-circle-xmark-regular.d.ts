@@ -1,2 +1,0 @@
-export declare const LanCircleUserCircleXmarkRegular: string;
-export default LanCircleUserCircleXmarkRegular;

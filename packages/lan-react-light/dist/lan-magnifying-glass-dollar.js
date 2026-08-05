@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanMagnifyingGlassDollar({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M208 32a176 176 0 1 1 0 352 176 176 0 1 1 0-352m0 384c51.7 0 99-18.8 135.3-50l141.4 141.3c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L366 343.3c31.2-36.3 50-83.6 50-135.3C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208m0-312c-8.8 0-16 7.2-16 16v8h-1.7c-25.6 0-46.3 20.7-46.3 46.3 0 22.6 16.4 42 38.7 45.7l45.3 7.6c6.9 1.2 12 7.1 12 14.1 0 7.9-6.4 14.3-14.3 14.3H168c-8.8 0-16 7.2-16 16s7.2 16 16 16h24v8c0 8.8 7.2 16 16 16s16-7.2 16-16v-8h1.7c25.6 0 46.3-20.7 46.3-46.3 0-22.6-16.4-42-38.7-45.7l-45.3-7.6c-6.9-1.2-12-7.1-12-14.1 0-7.9 6.4-14.3 14.3-14.3H240c8.8 0 16-7.2 16-16s-7.2-16-16-16h-16v-8c0-8.8-7.2-16-16-16"})
+  );
+}
+
+export default LanMagnifyingGlassDollar;

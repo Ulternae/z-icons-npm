@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanSeatThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 384 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M128 16c-26.5 0-48 21.5-48 48v192h224V64c0-26.5-21.5-48-48-48zM64 256V64c0-35.3 28.7-64 64-64h128c35.3 0 64 28.7 64 64v192h16c26.5 0 48 21.5 48 48v48c0 20.9-13.4 38.7-32 45.3V504c0 4.4-3.6 8-8 8s-8-3.6-8-8V400H48v104c0 4.4-3.6 8-8 8s-8-3.6-8-8V397.3C13.4 390.7 0 372.9 0 352v-48c0-26.5 21.5-48 48-48zm256 16H48c-17.7 0-32 14.3-32 32v48c0 17.7 14.3 32 32 32h288c17.7 0 32-14.3 32-32v-48c0-17.7-14.3-32-32-32z"})
+  );
+}
+
+export default LanSeatThin;

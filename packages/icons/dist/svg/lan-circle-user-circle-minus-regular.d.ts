@@ -1,2 +1,0 @@
-export declare const LanCircleUserCircleMinusRegular: string;
-export default LanCircleUserCircleMinusRegular;

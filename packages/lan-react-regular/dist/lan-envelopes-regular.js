@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanEnvelopesRegular({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 576 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M160 80h352c8.8 0 16 7.2 16 16 0 2.7-1.2 5.2-3.4 6.9l-164 127.6c-14.4 11.2-34.7 11.2-49.1 0L147.4 102.9c-2.1-1.7-3.4-4.2-3.4-6.9 0-8.8 7.2-16 16-16m368 81.1V320c0 8.8-7.2 16-16 16H160c-8.8 0-16-7.2-16-16V161.1l138 107.3c31.8 24.7 76.3 24.7 108.1 0zM96 96v224c0 35.3 28.7 64 64 64h352c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H160c-35.3 0-64 28.7-64 64m-72 32c-13.3 0-24 10.7-24 24v264c0 35.3 28.7 64 64 64h392c13.3 0 24-10.7 24-24s-10.7-24-24-24H64c-8.8 0-16-7.2-16-16V152c0-13.3-10.7-24-24-24"})
+  );
+}
+
+export default LanEnvelopesRegular;

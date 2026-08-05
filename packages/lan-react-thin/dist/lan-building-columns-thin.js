@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanBuildingColumnsThin({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 512 512',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M264.7 18.5c-5.3-3.4-12-3.4-17.3 0l-224 144c-6 3.8-8.7 11.2-6.7 18S24.9 192 32 192h448c7.1 0 13.4-4.7 15.4-11.5s-.7-14.1-6.7-18zM238.7 5c10.5-6.8 24.1-6.8 34.6 0l224 144c11.9 7.7 17.4 22.3 13.4 35.9s-16.5 23-30.7 23h-32v208h24c4.4 0 8 3.6 8 8s-3.6 8-8 8L40 432c-4.4 0-8-3.6-8-8s3.6-8 8-8h24V208H32c-14.2 0-26.7-9.4-30.7-23s1.5-28.3 13.4-35.9l224-144zM328 208v208h104V208zM200 416h112V208H200zM80 208v208h104V208zM8 496h496c4.4 0 8 3.6 8 8s-3.6 8-8 8H8c-4.4 0-8-3.6-8-8s3.6-8 8-8M256 80a40 40 0 1 1 0 80 40 40 0 1 1 0-80m24 40a24 24 0 1 0-48 0 24 24 0 1 0 48 0"})
+  );
+}
+
+export default LanBuildingColumnsThin;

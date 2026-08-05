@@ -1,0 +1,17 @@
+import React from 'react';
+
+export function LanFileZipSolid({ size = 24, color, style, ...props }) {
+  return React.createElement(
+    'svg',
+    {
+      viewBox: '0 0 640 548.1',
+      width: size,
+      height: size,
+      fill: 'currentColor',
+      ...props,
+      style: { ...(color ? { color } : {}), ...style },
+    }, React.createElement("path", {"fill":"currentColor","d":"M128 0C92.7 0 64 28.7 64 64v384c0 35.3 28.7 64 64 64h144V400c0-35.3 28.7-64 64-64h112V170.5c0-17-6.7-33.3-18.7-45.3L322.7 18.7C310.7 6.7 294.5 0 277.5 0zm261.5 176H296c-13.3 0-24-10.7-24-24V58.5zM336 380c-11 0-20 9-20 20s9 20 20 20h31.6l-49.5 99.1c-3.1 6.2-2.8 13.6.9 19.5s10.1 9.5 17 9.5h64c11 0 20-9 20-20s-9-20-20-20h-31.6l49.5-99.1c3.1-6.2 2.8-13.6-.9-19.5s-10.1-9.5-17-9.5zm148 20c0-11-9-20-20-20s-20 9-20 20v128c0 11 9 20 20 20s20-9 20-20zm24 0v128c0 11 9 20 20 20s20-9 20-20v-28h12c33.1 0 60-26.9 60-60s-26.9-60-60-60h-32c-11 0-20 9-20 20m40 60v-40h12c11 0 20 9 20 20s-9 20-20 20z"})
+  );
+}
+
+export default LanFileZipSolid;

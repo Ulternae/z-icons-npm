@@ -4,31 +4,37 @@ import { createOutputWriter } from './fs-utils.js';
 import { capitalize, toPascalCase } from './naming.js';
 import { createSvgSprite, escapeJsString, parseSvg } from './svg-utils.js';
 
-const STANDALONE_REACT_PACKAGES = [
+export const STANDALONE_REACT_PACKAGES = [
   {
     pack: 'core',
-    variant: 'regular',
+    variants: ['regular', 'solid', 'regular-duo'],
     packageName: '@zcorvus/core-react',
     packageDir: 'core-react',
   },
   {
-    pack: 'core',
-    variant: 'solid',
-    packageName: '@zcorvus/core-solid-react',
-    packageDir: 'core-solid-react',
+    pack: 'neo',
+    variants: ['regular', 'solid', 'regular-duo'],
+    packageName: '@zcorvus/neo-react',
+    packageDir: 'neo-react',
   },
   {
-    pack: 'core',
-    variant: 'regular-duo',
-    packageName: '@zcorvus/core-regular-duo-react',
-    packageDir: 'core-regular-duo-react',
+    pack: 'mina',
+    variants: ['light', 'solid'],
+    packageName: '@zcorvus/mina-react',
+    packageDir: 'mina-react',
   },
   {
     pack: 'bru',
-    variant: 'solid',
+    variants: ['solid'],
     packageName: '@zcorvus/bru-react',
     packageDir: 'bru-react',
   },
+  ...['light', 'regular', 'solid', 'thin'].map((variant) => ({
+    pack: 'lan',
+    variants: [variant],
+    packageName: `@zcorvus/lan-react-${variant}`,
+    packageDir: `lan-react-${variant}`,
+  })),
 ];
 
 function createTypeUnion(typeName, values) {
@@ -212,40 +218,59 @@ export default ${componentName};
 `;
 }
 
-function createIndexJs({ pack, componentName, spriteComponentName, spriteExportName, viewBoxesName, variant, spriteId, iconExports }) {
-  return `import { createPackIcon, createSpriteComponent } from './runtime.js';
-import { ${spriteExportName} } from './sprite.js';
-import { ${viewBoxesName} } from './viewboxes.js';
-
-export { ${spriteExportName} } from './sprite.js';
-export { ${viewBoxesName} } from './viewboxes.js';
-
-export const ${spriteComponentName} = createSpriteComponent('${spriteId}', ${spriteExportName});
-export const ${componentName} = createPackIcon({
+function createIndexJs({ pack, variants, defaultComponentName, iconExports }) {
+  const imports = variants.flatMap((variant) => [
+    `import { ${variant.spriteExportName} } from './${variant.spriteFileName}.js';`,
+    `import { ${variant.viewBoxesName} } from './${variant.viewBoxesFileName}.js';`,
+  ]);
+  const assetExports = variants.flatMap((variant) => [
+    `export { ${variant.spriteExportName} } from './${variant.spriteFileName}.js';`,
+    `export { ${variant.viewBoxesName} } from './${variant.viewBoxesFileName}.js';`,
+  ]);
+  const componentDeclarations = variants.flatMap((variant) => [
+    `export const ${variant.spriteComponentName} = createSpriteComponent('${variant.spriteId}', ${variant.spriteExportName});`,
+    `export const ${variant.componentName} = createPackIcon({
   pack: '${pack}',
-  variant: '${variant}',
+  variant: '${variant.variant}',
   defaultVariant: '${getDefaultVariant(pack)}',
-  spriteId: '${spriteId}',
-  sprite: ${spriteExportName},
-  viewBoxes: ${viewBoxesName},
-});
+  spriteId: '${variant.spriteId}',
+  sprite: ${variant.spriteExportName},
+  viewBoxes: ${variant.viewBoxesName},
+});`,
+  ]);
 
-export default ${componentName};
+  return `import { createPackIcon, createSpriteComponent } from './runtime.js';
+${imports.join('\n')}
+
+${assetExports.join('\n')}
+
+${componentDeclarations.join('\n\n')}
+
+export default ${defaultComponentName};
 ${iconExports.join('\n')}
 `;
 }
 
-function createIndexTypes({ componentName, spriteComponentName, spriteExportName, viewBoxesName, iconNameType, iconTypeExports }) {
+function createIndexTypes({ variants, defaultComponentName, iconTypeExports }) {
+  const typeNames = variants.map((variant) => variant.iconNameType).join(', ');
+  const assetExports = variants.flatMap((variant) => [
+    `export { ${variant.spriteExportName} } from './${variant.spriteFileName}.js';`,
+    `export { ${variant.viewBoxesName} } from './${variant.viewBoxesFileName}.js';`,
+  ]);
+  const componentDeclarations = variants.flatMap((variant) => [
+    `export declare const ${variant.spriteComponentName}: React.FC<ZIconSpriteProps>;`,
+    `export type ${variant.componentName}Props = PackIconProps<${variant.iconNameType}>;`,
+    `export declare const ${variant.componentName}: React.FC<${variant.componentName}Props>;`,
+  ]);
+
   return `import React from 'react';
 import type { PackIconProps, ZIconSpriteProps } from './runtime.js';
-export type { ${iconNameType} } from './types/index.js';
-export { ${spriteExportName} } from './sprite.js';
-export { ${viewBoxesName} } from './viewboxes.js';
+import type { ${typeNames} } from './types/index.js';
+export type { ${typeNames} } from './types/index.js';
+${assetExports.join('\n')}
 
-export declare const ${spriteComponentName}: React.FC<ZIconSpriteProps>;
-export type ${componentName}Props = PackIconProps<${iconNameType}>;
-export declare const ${componentName}: React.FC<${componentName}Props>;
-export default ${componentName};
+${componentDeclarations.join('\n')}
+export default ${defaultComponentName};
 ${iconTypeExports.join('\n')}
 `;
 }
@@ -254,72 +279,102 @@ export function buildStandaloneReactPackages(packData, packages = STANDALONE_REA
   const results = [];
 
   for (const packageConfig of packages) {
-    const variantIcons = packData[packageConfig.pack]?.[packageConfig.variant] ?? [];
+    const availableVariants = packageConfig.variants.filter(
+      (variant) => (packData[packageConfig.pack]?.[variant]?.length ?? 0) > 0
+    );
 
-    if (variantIcons.length === 0) {
+    if (availableVariants.length === 0) {
       continue;
     }
 
     const packName = packageConfig.pack;
     const packPascalName = toPascalCase(packName);
-    const suffix = getPublicVariantSuffix(packName, packageConfig.variant);
-    const fileName = `${packName}${getVariantFileSuffix(packName, packageConfig.variant)}`;
     const packageDir = path.join(CONFIG.packagesDir, packageConfig.packageDir);
     const distDir = path.join(packageDir, 'dist');
-    const componentName = `Z${packPascalName}${suffix}`;
-    const spriteComponentName = `${componentName}Sprite`;
-    const spriteExportName = `${packName}Sprite${suffix}`;
-    const viewBoxesName = `${packName}${toPascalCase(packageConfig.variant)}ViewBoxes`;
-    const iconNameType = suffix ? `${packPascalName}${suffix}IconName` : `${packPascalName}IconName`;
-    const sprite = createSvgSprite(packName, packageConfig.variant, variantIcons);
-    const iconNames = variantIcons.map((icon) => icon.name).sort((a, b) => a.localeCompare(b));
-    const viewBoxEntries = variantIcons
-      .map((icon) => `  '${icon.name}': '${parseSvg(icon.svg, icon.sourceFile).viewBox}'`)
-      .join(',\n');
     const iconExports = [];
     const iconTypeExports = [];
+    const typeDefinitions = [];
+    const variants = [];
 
     const { writeFile, finish } = createOutputWriter(distDir);
-    for (const icon of variantIcons) {
-      writeFile(
-        path.join(distDir, `${icon.publicFileName}.js`),
-        createReactComponent(icon.svg, icon.componentName, icon.sourceFile)
-      );
-      writeFile(path.join(distDir, `${icon.publicFileName}.d.ts`), createReactComponentTypes(icon.componentName));
-      iconExports.push(`export { ${icon.componentName} } from './${icon.publicFileName}.js';`);
-      iconTypeExports.push(`export { ${icon.componentName} } from './${icon.publicFileName}.js';`);
-      iconTypeExports.push(`export type { ${icon.componentName}Props } from './${icon.publicFileName}.js';`);
-    }
+    for (const variant of availableVariants) {
+      const variantIcons = packData[packName][variant];
+      const suffix = getPublicVariantSuffix(packName, variant);
+      const spriteId = `${packName}${getVariantFileSuffix(packName, variant)}`;
+      const componentName = `Z${packPascalName}${suffix}`;
+      const spriteComponentName = `${componentName}Sprite`;
+      const spriteExportName = `${packName}Sprite${suffix}`;
+      const viewBoxesName = `${packName}${toPascalCase(variant)}ViewBoxes`;
+      const iconNameType = suffix ? `${packPascalName}${suffix}IconName` : `${packPascalName}IconName`;
+      const assetSuffix = availableVariants.length === 1 ? '' : getVariantFileSuffix(packName, variant);
+      const spriteFileName = `sprite${assetSuffix}`;
+      const viewBoxesFileName = `viewboxes${assetSuffix}`;
+      const sprite = createSvgSprite(packName, variant, variantIcons);
+      const iconNames = variantIcons.map((icon) => icon.name).sort((a, b) => a.localeCompare(b));
+      const viewBoxEntries = variantIcons
+        .map((icon) => `  '${icon.name}': '${parseSvg(icon.svg, icon.sourceFile).viewBox}'`)
+        .join(',\n');
 
-    writeFile(path.join(distDir, 'runtime.js'), createRuntime());
-    writeFile(path.join(distDir, 'runtime.d.ts'), createRuntimeTypes());
-    writeFile(path.join(distDir, 'sprite.js'), `export const ${spriteExportName} = '${escapeJsString(sprite)}';\nexport default ${spriteExportName};\n`);
-    writeFile(path.join(distDir, 'sprite.d.ts'), `export declare const ${spriteExportName}: string;\nexport default ${spriteExportName};\n`);
-    writeFile(path.join(distDir, 'viewboxes.js'), `export const ${viewBoxesName} = {\n${viewBoxEntries}\n};\n`);
-    writeFile(path.join(distDir, 'viewboxes.d.ts'), `import type { ${iconNameType} } from './types/index.js';\n\nexport declare const ${viewBoxesName}: Record<${iconNameType}, string>;\n`);
-    writeFile(path.join(distDir, 'types', 'index.js'), 'export {};\n');
-    writeFile(path.join(distDir, 'types', 'index.d.ts'), createTypeUnion(iconNameType, iconNames));
-    writeFile(
-      path.join(distDir, 'index.js'),
-      createIndexJs({
-        pack: packName,
+      for (const icon of variantIcons) {
+        writeFile(
+          path.join(distDir, `${icon.publicFileName}.js`),
+          createReactComponent(icon.svg, icon.componentName, icon.sourceFile)
+        );
+        writeFile(path.join(distDir, `${icon.publicFileName}.d.ts`), createReactComponentTypes(icon.componentName));
+        iconExports.push(`export { ${icon.componentName} } from './${icon.publicFileName}.js';`);
+        iconTypeExports.push(`export { ${icon.componentName} } from './${icon.publicFileName}.js';`);
+        iconTypeExports.push(`export type { ${icon.componentName}Props } from './${icon.publicFileName}.js';`);
+      }
+
+      writeFile(
+        path.join(distDir, `${spriteFileName}.js`),
+        `export const ${spriteExportName} = '${escapeJsString(sprite)}';\nexport default ${spriteExportName};\n`
+      );
+      writeFile(
+        path.join(distDir, `${spriteFileName}.d.ts`),
+        `export declare const ${spriteExportName}: string;\nexport default ${spriteExportName};\n`
+      );
+      writeFile(
+        path.join(distDir, `${viewBoxesFileName}.js`),
+        `export const ${viewBoxesName} = {\n${viewBoxEntries}\n};\n`
+      );
+      writeFile(
+        path.join(distDir, `${viewBoxesFileName}.d.ts`),
+        `import type { ${iconNameType} } from './types/index.js';\n\nexport declare const ${viewBoxesName}: Record<${iconNameType}, string>;\n`
+      );
+      typeDefinitions.push(createTypeUnion(iconNameType, iconNames));
+      variants.push({
+        variant,
         componentName,
         spriteComponentName,
         spriteExportName,
         viewBoxesName,
-        variant: packageConfig.variant,
-        spriteId: fileName,
+        iconNameType,
+        spriteId,
+        spriteFileName,
+        viewBoxesFileName,
+      });
+    }
+
+    writeFile(path.join(distDir, 'runtime.js'), createRuntime());
+    writeFile(path.join(distDir, 'runtime.d.ts'), createRuntimeTypes());
+    writeFile(path.join(distDir, 'types', 'index.js'), 'export {};\n');
+    writeFile(path.join(distDir, 'types', 'index.d.ts'), typeDefinitions.join('\n'));
+    const defaultVariant = variants.find((variant) => variant.variant === getDefaultVariant(packName)) ?? variants[0];
+    writeFile(
+      path.join(distDir, 'index.js'),
+      createIndexJs({
+        pack: packName,
+        variants,
+        defaultComponentName: defaultVariant.componentName,
         iconExports,
       })
     );
     writeFile(
       path.join(distDir, 'index.d.ts'),
       createIndexTypes({
-        componentName,
-        spriteComponentName,
-        spriteExportName,
-        viewBoxesName,
-        iconNameType,
+        variants,
+        defaultComponentName: defaultVariant.componentName,
         iconTypeExports,
       })
     );
