@@ -1,5 +1,5 @@
 import React from 'react';
-import type { NeoRegularDuoIconName } from '@zcorvus/icons/types';
+import type { NeoRegularDuoIconName } from '../types/index.js';
 import type { PackIconProps, ZIconSpriteProps } from './create-pack-icon.js';
 
 export declare const neoRegularDuoViewBoxes: Record<NeoRegularDuoIconName, string>;

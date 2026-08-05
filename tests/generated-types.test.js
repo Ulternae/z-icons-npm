@@ -6,6 +6,7 @@ import {
   createZIconRuntimeTypes,
   createZIconTypes,
 } from '../scripts/build/build-react-package.js';
+import { createIconTypeDefinitions } from '../scripts/build/icon-types.js';
 
 function getSyntaxErrors(source) {
   const sourceFile = ts.createSourceFile(
@@ -21,13 +22,16 @@ function getSyntaxErrors(source) {
   );
 }
 
-function getSemanticErrors(source) {
+function getSemanticErrors(source, typeDefinitions) {
   const directory = fs.mkdtempSync(path.join(process.cwd(), '.tmp-output-writer-types-'));
-  const fileName = path.join(directory, 'generated-types.ts');
+  const fileName = path.join(directory, 'create.d.ts');
+  const typeFileName = path.join(directory, 'types', 'index.d.ts');
 
   try {
+    fs.mkdirSync(path.dirname(typeFileName), { recursive: true });
     fs.writeFileSync(fileName, source);
-    const program = ts.createProgram([fileName], {
+    fs.writeFileSync(typeFileName, typeDefinitions);
+    const program = ts.createProgram([fileName, typeFileName], {
       esModuleInterop: true,
       jsx: ts.JsxEmit.React,
       module: ts.ModuleKind.ESNext,
@@ -39,7 +43,7 @@ function getSemanticErrors(source) {
     });
 
     return ts.getPreEmitDiagnostics(program).filter(
-      (diagnostic) => !diagnostic.file || path.resolve(diagnostic.file.fileName) === path.resolve(fileName)
+      (diagnostic) => !diagnostic.file || path.resolve(diagnostic.file.fileName).startsWith(path.resolve(directory))
     );
   } finally {
     fs.rmSync(directory, { recursive: true, force: true });
@@ -51,7 +55,7 @@ describe('generated React types', () => {
     const source = createZIconRuntimeTypes();
 
     expect(getSyntaxErrors(source)).toEqual([]);
-    expect(getSemanticErrors(source)).toEqual([]);
+    expect(getSemanticErrors(source, createIconTypeDefinitions({}))).toEqual([]);
     expect(source).toContain('RegistryIconName<TRegistry, TPack, TVariant>');
     expect(source).toContain('variant: TVariant');
   }, 15000);

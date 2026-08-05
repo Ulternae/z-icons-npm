@@ -42,27 +42,27 @@ const viewBoxes = {
 
 const spriteLoaders = {
   core: {
-    'solid': () => import('@zcorvus/icons/sprites/core-solid.js').then((module) => ({ spriteId: 'core-solid', sprite: module.coreSpriteSolid })),
-    'regular': () => import('@zcorvus/icons/sprites/core.js').then((module) => ({ spriteId: 'core', sprite: module.coreSprite })),
-    'regular-duo': () => import('@zcorvus/icons/sprites/core-regular-duo.js').then((module) => ({ spriteId: 'core-regular-duo', sprite: module.coreSpriteRegularDuo }))
+    'solid': () => import('./sprites/core-solid.js').then((module) => ({ spriteId: 'core-solid', sprite: module.coreSpriteSolid })),
+    'regular': () => import('./sprites/core.js').then((module) => ({ spriteId: 'core', sprite: module.coreSprite })),
+    'regular-duo': () => import('./sprites/core-regular-duo.js').then((module) => ({ spriteId: 'core-regular-duo', sprite: module.coreSpriteRegularDuo }))
   },
   neo: {
-    'solid': () => import('@zcorvus/icons/sprites/neo-solid.js').then((module) => ({ spriteId: 'neo-solid', sprite: module.neoSpriteSolid })),
-    'regular': () => import('@zcorvus/icons/sprites/neo.js').then((module) => ({ spriteId: 'neo', sprite: module.neoSprite })),
-    'regular-duo': () => import('@zcorvus/icons/sprites/neo-regular-duo.js').then((module) => ({ spriteId: 'neo-regular-duo', sprite: module.neoSpriteRegularDuo }))
+    'solid': () => import('./sprites/neo-solid.js').then((module) => ({ spriteId: 'neo-solid', sprite: module.neoSpriteSolid })),
+    'regular': () => import('./sprites/neo.js').then((module) => ({ spriteId: 'neo', sprite: module.neoSprite })),
+    'regular-duo': () => import('./sprites/neo-regular-duo.js').then((module) => ({ spriteId: 'neo-regular-duo', sprite: module.neoSpriteRegularDuo }))
   },
   mina: {
-    'light': () => import('@zcorvus/icons/sprites/mina.js').then((module) => ({ spriteId: 'mina', sprite: module.minaSprite })),
-    'solid': () => import('@zcorvus/icons/sprites/mina-solid.js').then((module) => ({ spriteId: 'mina-solid', sprite: module.minaSpriteSolid }))
+    'light': () => import('./sprites/mina.js').then((module) => ({ spriteId: 'mina', sprite: module.minaSprite })),
+    'solid': () => import('./sprites/mina-solid.js').then((module) => ({ spriteId: 'mina-solid', sprite: module.minaSpriteSolid }))
   },
   bru: {
-    'solid': () => import('@zcorvus/icons/sprites/bru.js').then((module) => ({ spriteId: 'bru', sprite: module.bruSprite }))
+    'solid': () => import('./sprites/bru.js').then((module) => ({ spriteId: 'bru', sprite: module.bruSprite }))
   },
   lan: {
-    'light': () => import('@zcorvus/icons/sprites/lan.js').then((module) => ({ spriteId: 'lan', sprite: module.lanSprite })),
-    'solid': () => import('@zcorvus/icons/sprites/lan-solid.js').then((module) => ({ spriteId: 'lan-solid', sprite: module.lanSpriteSolid })),
-    'regular': () => import('@zcorvus/icons/sprites/lan-regular.js').then((module) => ({ spriteId: 'lan-regular', sprite: module.lanSpriteRegular })),
-    'thin': () => import('@zcorvus/icons/sprites/lan-thin.js').then((module) => ({ spriteId: 'lan-thin', sprite: module.lanSpriteThin }))
+    'light': () => import('./sprites/lan.js').then((module) => ({ spriteId: 'lan', sprite: module.lanSprite })),
+    'solid': () => import('./sprites/lan-solid.js').then((module) => ({ spriteId: 'lan-solid', sprite: module.lanSpriteSolid })),
+    'regular': () => import('./sprites/lan-regular.js').then((module) => ({ spriteId: 'lan-regular', sprite: module.lanSpriteRegular })),
+    'thin': () => import('./sprites/lan-thin.js').then((module) => ({ spriteId: 'lan-thin', sprite: module.lanSpriteThin }))
   }
 };
 

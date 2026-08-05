@@ -1,5 +1,5 @@
 import React from 'react';
-import type { NeoRegularIconName } from '@zcorvus/icons/types';
+import type { NeoRegularIconName } from '../types/index.js';
 import type { PackIconProps, ZIconSpriteProps } from './create-pack-icon.js';
 
 export declare const neoRegularViewBoxes: Record<NeoRegularIconName, string>;

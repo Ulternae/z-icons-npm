@@ -1,4 +1,4 @@
-import { neoSpriteSolid } from '@zcorvus/icons/sprites/neo-solid.js';
+import { neoSpriteSolid } from '../sprites/neo-solid.js';
 import { neoSolidViewBoxes } from '../viewboxes/neo-solid.js';
 import { createPackIcon, createSpriteComponent } from './create-pack-icon.js';
 

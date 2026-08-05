@@ -1,4 +1,4 @@
-import { minaSprite } from '@zcorvus/icons/sprites/mina.js';
+import { minaSprite } from '../sprites/mina.js';
 import { minaLightViewBoxes } from '../viewboxes/mina.js';
 import { createPackIcon, createSpriteComponent } from './create-pack-icon.js';
 

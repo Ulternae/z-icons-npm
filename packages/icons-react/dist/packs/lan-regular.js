@@ -1,4 +1,4 @@
-import { lanSpriteRegular } from '@zcorvus/icons/sprites/lan-regular.js';
+import { lanSpriteRegular } from '../sprites/lan-regular.js';
 import { lanRegularViewBoxes } from '../viewboxes/lan-regular.js';
 import { createPackIcon, createSpriteComponent } from './create-pack-icon.js';
 

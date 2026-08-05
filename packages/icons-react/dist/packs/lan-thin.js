@@ -1,4 +1,4 @@
-import { lanSpriteThin } from '@zcorvus/icons/sprites/lan-thin.js';
+import { lanSpriteThin } from '../sprites/lan-thin.js';
 import { lanThinViewBoxes } from '../viewboxes/lan-thin.js';
 import { createPackIcon, createSpriteComponent } from './create-pack-icon.js';
 

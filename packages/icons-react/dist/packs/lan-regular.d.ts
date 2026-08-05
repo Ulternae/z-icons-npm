@@ -1,5 +1,5 @@
 import React from 'react';
-import type { LanRegularIconName } from '@zcorvus/icons/types';
+import type { LanRegularIconName } from '../types/index.js';
 import type { PackIconProps, ZIconSpriteProps } from './create-pack-icon.js';
 
 export declare const lanRegularViewBoxes: Record<LanRegularIconName, string>;

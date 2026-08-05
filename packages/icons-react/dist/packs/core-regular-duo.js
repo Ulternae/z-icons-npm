@@ -1,4 +1,4 @@
-import { coreSpriteRegularDuo } from '@zcorvus/icons/sprites/core-regular-duo.js';
+import { coreSpriteRegularDuo } from '../sprites/core-regular-duo.js';
 import { coreRegularDuoViewBoxes } from '../viewboxes/core-regular-duo.js';
 import { createPackIcon, createSpriteComponent } from './create-pack-icon.js';
 

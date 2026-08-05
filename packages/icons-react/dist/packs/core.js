@@ -1,4 +1,4 @@
-import { coreSprite } from '@zcorvus/icons/sprites/core.js';
+import { coreSprite } from '../sprites/core.js';
 import { coreRegularViewBoxes } from '../viewboxes/core.js';
 import { createPackIcon, createSpriteComponent } from './create-pack-icon.js';
 

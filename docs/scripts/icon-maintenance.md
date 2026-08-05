@@ -161,4 +161,4 @@ pnpm run build -- --target react
 pnpm run build -- --target web
 ```
 
-Los targets `react` y `web` siempre regeneran primero `icons`, porque `@zcorvus/icons` es el contrato raiz que consumen los paquetes de framework.
+Desde la version 0.2, los targets `react` y `web` generan localmente sus tipos, datos SVG y sprites. `@zcorvus/icons` se mantiene solo como paquete de compatibilidad y ya no es una dependencia de los adaptadores.

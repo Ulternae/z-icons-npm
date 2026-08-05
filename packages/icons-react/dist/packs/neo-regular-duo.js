@@ -1,4 +1,4 @@
-import { neoSpriteRegularDuo } from '@zcorvus/icons/sprites/neo-regular-duo.js';
+import { neoSpriteRegularDuo } from '../sprites/neo-regular-duo.js';
 import { neoRegularDuoViewBoxes } from '../viewboxes/neo-regular-duo.js';
 import { createPackIcon, createSpriteComponent } from './create-pack-icon.js';
 

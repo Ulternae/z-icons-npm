@@ -1,5 +1,5 @@
 import React from 'react';
-import type { IconPack, IconVariant } from '@zcorvus/icons/types';
+import type { IconPack, IconVariant } from './types/index.js';
 
 export type IconComponent = React.FC<Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> & {
   size?: string | number;

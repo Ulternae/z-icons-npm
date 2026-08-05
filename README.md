@@ -11,7 +11,7 @@ pnpm add @zcorvus/icons-react
 pnpm add @zcorvus/icons-web
 ```
 
-`@zcorvus/icons` is retained as an internal compatibility/data package and is deprecated for direct application usage. Prefer pack-scoped React wrappers such as `ZMina`, `ZLan`, `ZCore`, `ZNeo`, and `ZBru`, or the corresponding Web Component registrations.
+`@zcorvus/icons` is retained only as a legacy compatibility/data package and is deprecated for direct application usage. Since version 0.2, the React and Web packages are self-contained. Prefer pack-scoped React wrappers such as `ZMina`, `ZLan`, `ZCore`, `ZNeo`, and `ZBru`, or the corresponding Web Component registrations.
 
 For low-level integrations that still require raw SVG strings, the compatibility entrypoints remain available:
 

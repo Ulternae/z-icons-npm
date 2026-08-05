@@ -1,2 +1,2 @@
-export { lanSpriteRegular } from '@zcorvus/icons/sprites/lan-regular.js';
+export { lanSpriteRegular } from './sprites/lan-regular.js';
 export declare const ZLanRegularSpriteElement: CustomElementConstructor | undefined;

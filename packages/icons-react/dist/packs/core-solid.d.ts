@@ -1,5 +1,5 @@
 import React from 'react';
-import type { CoreSolidIconName } from '@zcorvus/icons/types';
+import type { CoreSolidIconName } from '../types/index.js';
 import type { PackIconProps, ZIconSpriteProps } from './create-pack-icon.js';
 
 export declare const coreSolidViewBoxes: Record<CoreSolidIconName, string>;

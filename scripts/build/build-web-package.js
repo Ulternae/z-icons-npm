@@ -6,7 +6,9 @@ import {
   iconConfig as CONFIG,
 } from '../icon-config.js';
 import { createOutputWriter } from './fs-utils.js';
+import { createIconTypeDefinitions } from './icon-types.js';
 import { capitalize } from './naming.js';
+import { createSvgSprite, escapeJsString } from './svg-utils.js';
 
 function createWebElementRuntime() {
   return `const DEFAULT_OPTIONS = {
@@ -269,7 +271,7 @@ export function defineZIconElement(tagName, registry, options = {}) {
 }
 
 function createWebElementTypes() {
-  return `import type { IconPack, IconVariant } from '@zcorvus/icons/types';
+  return `import type { IconPack, IconVariant } from './types/index.js';
 
 export type SvgVariantMap = Record<string, string>;
 export type SvgPackMap = Record<string, SvgVariantMap>;
@@ -316,14 +318,63 @@ export function buildWebPackage(icons, packData) {
 
   writeFile(path.join(distDir, 'create.js'), createWebElementRuntime());
   writeFile(path.join(distDir, 'create.d.ts'), createWebElementTypes());
+  writeFile(path.join(distDir, 'types', 'index.js'), 'export {};\n');
+  writeFile(path.join(distDir, 'types', 'index.d.ts'), createIconTypeDefinitions(packData));
 
-  const rootImports = CONFIG.packs.map((pack) => `import { ${pack}Icons } from '@zcorvus/icons/svg';`).join('\n');
-  const rootRegistry = CONFIG.packs.map((pack) => `  ${pack}: ${pack}Icons`).join(',\n');
+  const rootImports = [];
+  const rootRegistry = [];
   const rootDefaultVariants = CONFIG.packs.map((pack) => `  ${pack}: '${getDefaultVariant(pack)}'`).join(',\n');
+
+  for (const pack of CONFIG.packs) {
+    const variants = packData[pack] ?? {};
+    const variantImports = [];
+    const variantEntries = [];
+
+    for (const [variant, variantIcons] of Object.entries(variants)) {
+      const suffix = getPublicVariantSuffix(pack, variant);
+      const registryName = `${pack}Icons${suffix}`;
+      const fileName = `${pack}${getVariantFileSuffix(pack, variant)}`;
+      const registry = `export const ${registryName} = {\n${variantIcons.map((icon) => `  '${icon.name}': '${escapeJsString(icon.svg)}'`).join(',\n')}\n};\n`;
+
+      writeFile(path.join(distDir, 'data', `${fileName}.js`), registry);
+      writeFile(
+        path.join(distDir, 'data', `${fileName}.d.ts`),
+        `export declare const ${registryName}: {\n${variantIcons.map((icon) => `  readonly '${icon.name}': string;`).join('\n')}\n};\n`
+      );
+
+      const spriteName = `${pack}Sprite${suffix}`;
+      const sprite = createSvgSprite(pack, variant, variantIcons);
+      writeFile(
+        path.join(distDir, 'sprites', `${fileName}.js`),
+        `export const ${spriteName} = '${escapeJsString(sprite)}';\nexport default ${spriteName};\n`
+      );
+      writeFile(
+        path.join(distDir, 'sprites', `${fileName}.d.ts`),
+        `export declare const ${spriteName}: string;\nexport default ${spriteName};\n`
+      );
+      writeFile(path.join(distDir, 'sprites', `${fileName}.svg`), sprite);
+
+      variantImports.push(`import { ${registryName} } from './${fileName}.js';`);
+      variantEntries.push(`  '${variant}': ${registryName}`);
+    }
+
+    const packRegistryName = `${pack}IconSet`;
+    const packRegistryFileName = `${pack}-all`;
+    writeFile(
+      path.join(distDir, 'data', `${packRegistryFileName}.js`),
+      `${variantImports.join('\n')}\n\nexport const ${packRegistryName} = {\n${variantEntries.join(',\n')}\n};\n`
+    );
+    writeFile(
+      path.join(distDir, 'data', `${packRegistryFileName}.d.ts`),
+      `export declare const ${packRegistryName}: Record<string, Record<string, string>>;\n`
+    );
+    rootImports.push(`import { ${packRegistryName} } from './data/${packRegistryFileName}.js';`);
+    rootRegistry.push(`  ${pack}: ${packRegistryName}`);
+  }
 
   writeFile(
     path.join(distDir, 'register.js'),
-    `import { defineZIconElement } from './create.js';\n${rootImports}\n\nexport const zIconRegistry = {\n${rootRegistry}\n};\n\nexport const zIconDefaultVariants = {\n${rootDefaultVariants}\n};\n\nexport const ZIconElement = defineZIconElement('z-icon', zIconRegistry, { defaultVariant: 'light', defaultVariants: zIconDefaultVariants });\n`
+    `import { defineZIconElement } from './create.js';\n${rootImports.join('\n')}\n\nexport const zIconRegistry = {\n${rootRegistry.join(',\n')}\n};\n\nexport const zIconDefaultVariants = {\n${rootDefaultVariants}\n};\n\nexport const ZIconElement = defineZIconElement('z-icon', zIconRegistry, { defaultVariant: 'light', defaultVariants: zIconDefaultVariants });\n`
   );
   writeFile(
     path.join(distDir, 'register.d.ts'),
@@ -344,13 +395,11 @@ export function buildWebPackage(icons, packData) {
       const fileName = `register-${pack}${variantFileSuffix}`;
       const tagName = `z-${pack}${variantFileSuffix}`;
       const registryName = `${pack}Icons${suffix}`;
-      const imports = variantIcons.map((icon) => `import { ${icon.componentName} } from '@zcorvus/icons/svg/${icon.publicFileName}';`);
-      const map = `export const ${registryName} = {\n${variantIcons.map((icon) => `  '${icon.name}': ${icon.componentName}`).join(',\n')}\n};`;
       const elementName = `Z${capitalize(pack)}${suffix}Element`;
 
       writeFile(
         path.join(distDir, `${fileName}.js`),
-        `import { defineZIconElement } from './create.js';\n${imports.join('\n')}\n\n${map};\n\nexport const ${elementName} = defineZIconElement('${tagName}', { ${pack}: { '${variant}': ${registryName} } }, { type: '${pack}', variant: '${variant}', defaultVariant: '${variant}' });\n`
+        `import { defineZIconElement } from './create.js';\nimport { ${registryName} } from './data/${pack}${variantFileSuffix}.js';\n\nexport { ${registryName} } from './data/${pack}${variantFileSuffix}.js';\nexport const ${elementName} = defineZIconElement('${tagName}', { ${pack}: { '${variant}': ${registryName} } }, { type: '${pack}', variant: '${variant}', defaultVariant: '${variant}' });\n`
       );
       writeFile(
         path.join(distDir, `${fileName}.d.ts`),
@@ -365,11 +414,11 @@ export function buildWebPackage(icons, packData) {
 
       writeFile(
         path.join(distDir, `${spriteFileName}.js`),
-        `import { defineZIconElement } from './create.js';\nimport { ${spriteName} } from '@zcorvus/icons/sprites/${spriteAssetFileName}.js';\n\nexport { ${spriteName} } from '@zcorvus/icons/sprites/${spriteAssetFileName}.js';\nexport const ${spriteElementName} = defineZIconElement('${spriteTagName}', {}, { type: '${pack}', variant: '${variant}', defaultVariant: '${variant}', symbolDefaultVariant: '${getDefaultVariant(pack)}', mode: 'sprite-only', spriteId: '${pack}${variantFileSuffix}', sprite: ${spriteName} });\n`
+        `import { defineZIconElement } from './create.js';\nimport { ${spriteName} } from './sprites/${spriteAssetFileName}.js';\n\nexport { ${spriteName} } from './sprites/${spriteAssetFileName}.js';\nexport const ${spriteElementName} = defineZIconElement('${spriteTagName}', {}, { type: '${pack}', variant: '${variant}', defaultVariant: '${variant}', symbolDefaultVariant: '${getDefaultVariant(pack)}', mode: 'sprite-only', spriteId: '${pack}${variantFileSuffix}', sprite: ${spriteName} });\n`
       );
       writeFile(
         path.join(distDir, `${spriteFileName}.d.ts`),
-        `export { ${spriteName} } from '@zcorvus/icons/sprites/${spriteAssetFileName}.js';\nexport declare const ${spriteElementName}: CustomElementConstructor | undefined;\n`
+        `export { ${spriteName} } from './sprites/${spriteAssetFileName}.js';\nexport declare const ${spriteElementName}: CustomElementConstructor | undefined;\n`
       );
 
       const externalFileName = `register-${pack}${variantFileSuffix}-external`;

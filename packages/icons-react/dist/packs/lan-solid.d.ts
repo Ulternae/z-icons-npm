@@ -1,5 +1,5 @@
 import React from 'react';
-import type { LanSolidIconName } from '@zcorvus/icons/types';
+import type { LanSolidIconName } from '../types/index.js';
 import type { PackIconProps, ZIconSpriteProps } from './create-pack-icon.js';
 
 export declare const lanSolidViewBoxes: Record<LanSolidIconName, string>;

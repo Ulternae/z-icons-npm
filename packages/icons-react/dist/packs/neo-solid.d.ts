@@ -1,5 +1,5 @@
 import React from 'react';
-import type { NeoSolidIconName } from '@zcorvus/icons/types';
+import type { NeoSolidIconName } from '../types/index.js';
 import type { PackIconProps, ZIconSpriteProps } from './create-pack-icon.js';
 
 export declare const neoSolidViewBoxes: Record<NeoSolidIconName, string>;

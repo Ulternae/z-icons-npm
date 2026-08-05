@@ -1,4 +1,4 @@
-import type { IconPack, IconVariant } from '@zcorvus/icons/types';
+import type { IconPack, IconVariant } from './types/index.js';
 
 export type SvgVariantMap = Record<string, string>;
 export type SvgPackMap = Record<string, SvgVariantMap>;

@@ -10,7 +10,7 @@ Browse all available icons at [icons.zcorvus.com](https://icons.zcorvus.com/).
 pnpm add @zcorvus/icons-react
 ```
 
-`@zcorvus/icons-react` installs `@zcorvus/icons` as a normal dependency. Install `@zcorvus/icons` directly only when your app also imports raw SVG strings or runtime icon name arrays from the core package.
+Since version 0.2, `@zcorvus/icons-react` is self-contained and no longer installs `@zcorvus/icons`. Its components, pack maps, types, and sprites are generated inside the React package.
 
 ## Individual Icons
 

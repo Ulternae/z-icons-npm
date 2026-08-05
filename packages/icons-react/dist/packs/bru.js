@@ -1,4 +1,4 @@
-import { bruSprite } from '@zcorvus/icons/sprites/bru.js';
+import { bruSprite } from '../sprites/bru.js';
 import { bruSolidViewBoxes } from '../viewboxes/bru.js';
 import { createPackIcon, createSpriteComponent } from './create-pack-icon.js';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import type { LanThinIconName } from '@zcorvus/icons/types';
+import type { LanThinIconName } from '../types/index.js';
 import type { PackIconProps, ZIconSpriteProps } from './create-pack-icon.js';
 
 export declare const lanThinViewBoxes: Record<LanThinIconName, string>;

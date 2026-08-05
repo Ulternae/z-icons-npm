@@ -1,5 +1,5 @@
 import React from 'react';
-import type { CoreSolidIconName, CoreRegularIconName, CoreRegularDuoIconName, NeoSolidIconName, NeoRegularIconName, NeoRegularDuoIconName, MinaLightIconName, MinaSolidIconName, BruSolidIconName, LanLightIconName, LanSolidIconName, LanRegularIconName, LanThinIconName } from '@zcorvus/icons/types';
+import type { CoreSolidIconName, CoreRegularIconName, CoreRegularDuoIconName, NeoSolidIconName, NeoRegularIconName, NeoRegularDuoIconName, MinaLightIconName, MinaSolidIconName, BruSolidIconName, LanLightIconName, LanSolidIconName, LanRegularIconName, LanThinIconName } from './types/index.js';
 
 type ZIconSelection =
   | { type: 'core'; variant: 'solid'; name: CoreSolidIconName }

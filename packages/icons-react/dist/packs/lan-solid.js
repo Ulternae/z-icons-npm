@@ -1,4 +1,4 @@
-import { lanSpriteSolid } from '@zcorvus/icons/sprites/lan-solid.js';
+import { lanSpriteSolid } from '../sprites/lan-solid.js';
 import { lanSolidViewBoxes } from '../viewboxes/lan-solid.js';
 import { createPackIcon, createSpriteComponent } from './create-pack-icon.js';
 

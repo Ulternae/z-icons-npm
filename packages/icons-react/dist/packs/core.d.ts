@@ -1,5 +1,5 @@
 import React from 'react';
-import type { CoreRegularIconName } from '@zcorvus/icons/types';
+import type { CoreRegularIconName } from '../types/index.js';
 import type { PackIconProps, ZIconSpriteProps } from './create-pack-icon.js';
 
 export declare const coreRegularViewBoxes: Record<CoreRegularIconName, string>;

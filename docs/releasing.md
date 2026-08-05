@@ -8,11 +8,11 @@ Releases are intentionally manual. The GitHub `Release package` workflow validat
 2. Create a protected GitHub environment named `npm` and require maintainer approval.
 3. Decide and apply the project and icon-pack licenses. Packages currently remain `UNLICENSED` and the package check prints a warning until that decision is made.
 
-`@zcorvus/icons` is a deprecated direct application API, but it remains the data dependency behind the adapters and may still need compatible releases. Applications should use pack-scoped wrappers such as `ZMina`, `ZLan`, `ZCore`, `ZNeo`, and `ZBru`.
+`@zcorvus/icons` is a deprecated compatibility API. Starting with version 0.2, the React and Web adapters are self-contained and can be released without publishing a matching `@zcorvus/icons` version. Applications should use pack-scoped wrappers such as `ZMina`, `ZLan`, `ZCore`, `ZNeo`, and `ZBru`.
 
 ## Release procedure
 
-1. Update the selected package version and any internal dependency ranges in the same pull request.
+1. Update the selected package version in the same pull request.
 2. Run `pnpm run check:fast` locally.
 3. Let CI run the full build, typecheck, tests, generated-output check, and tarball validation.
 4. Merge the pull request.

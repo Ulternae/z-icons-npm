@@ -1,5 +1,5 @@
 import React from 'react';
-import type { LanLightIconName } from '@zcorvus/icons/types';
+import type { LanLightIconName } from '../types/index.js';
 import type { PackIconProps, ZIconSpriteProps } from './create-pack-icon.js';
 
 export declare const lanLightViewBoxes: Record<LanLightIconName, string>;

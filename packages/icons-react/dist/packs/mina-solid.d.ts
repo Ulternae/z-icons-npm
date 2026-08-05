@@ -1,5 +1,5 @@
 import React from 'react';
-import type { MinaSolidIconName } from '@zcorvus/icons/types';
+import type { MinaSolidIconName } from '../types/index.js';
 import type { PackIconProps, ZIconSpriteProps } from './create-pack-icon.js';
 
 export declare const minaSolidViewBoxes: Record<MinaSolidIconName, string>;

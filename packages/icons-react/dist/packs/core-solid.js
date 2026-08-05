@@ -1,4 +1,4 @@
-import { coreSpriteSolid } from '@zcorvus/icons/sprites/core-solid.js';
+import { coreSpriteSolid } from '../sprites/core-solid.js';
 import { coreSolidViewBoxes } from '../viewboxes/core-solid.js';
 import { createPackIcon, createSpriteComponent } from './create-pack-icon.js';
 

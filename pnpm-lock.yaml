@@ -79,18 +79,11 @@ importers:
 
   packages/icons-react:
     dependencies:
-      '@zcorvus/icons':
-        specifier: ^0.1.9
-        version: 0.1.9
       react:
         specifier: ^18.0.0 || ^19.0.0
         version: 18.3.1
 
-  packages/icons-web:
-    dependencies:
-      '@zcorvus/icons':
-        specifier: ^0.1.9
-        version: 0.1.9
+  packages/icons-web: {}
 
 packages:
 
@@ -269,9 +262,6 @@ packages:
 
   '@vitest/utils@4.1.6':
     resolution: {integrity: sha512-FxIY+U81R3LGKCxaHHFRQ5+g6/iRgGLmeHWdp2Amj4ljQRrEIWHmZyDfDYBRZlpyqA7qKxtS9DD1dhk8RnRIVQ==}
-
-  '@zcorvus/icons@0.1.9':
-    resolution: {integrity: sha512-SLQuNaA6NHDAt842vUR1FDUEU/9RyHWJr0chCTtwlHE9FPxmBBxFmzPKVztILQ3H4RKWlP0ere8MIhYivwjv9A==}
 
   assertion-error@2.0.1:
     resolution: {integrity: sha512-Izi8RQcffqCeNVgFigKli1ssklIbpHnCYc6AknXGYoB6grJqyeby7jv12JUQgmTAnIDnbck1uxksT4dzN3PWBA==}
@@ -772,8 +762,6 @@ snapshots:
       '@vitest/pretty-format': 4.1.6
       convert-source-map: 2.0.0
       tinyrainbow: 3.1.0
-
-  '@zcorvus/icons@0.1.9': {}
 
   assertion-error@2.0.1: {}
 

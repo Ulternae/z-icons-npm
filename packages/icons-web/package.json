@@ -1,6 +1,6 @@
 {
   "name": "@zcorvus/icons-web",
-  "version": "0.1.10",
+  "version": "0.2.0",
   "description": "Web Components for ZCorvus icons.",
   "author": "Ulqernesh Karvenae",
   "license": "UNLICENSED",
@@ -62,8 +62,5 @@
         "dist/register-*.d.ts"
       ]
     }
-  },
-  "dependencies": {
-    "@zcorvus/icons": "^0.1.9"
   }
 }

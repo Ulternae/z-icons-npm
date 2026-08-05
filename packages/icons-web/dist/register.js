@@ -1,16 +1,16 @@
 import { defineZIconElement } from './create.js';
-import { coreIcons } from '@zcorvus/icons/svg';
-import { neoIcons } from '@zcorvus/icons/svg';
-import { minaIcons } from '@zcorvus/icons/svg';
-import { bruIcons } from '@zcorvus/icons/svg';
-import { lanIcons } from '@zcorvus/icons/svg';
+import { coreIconSet } from './data/core-all.js';
+import { neoIconSet } from './data/neo-all.js';
+import { minaIconSet } from './data/mina-all.js';
+import { bruIconSet } from './data/bru-all.js';
+import { lanIconSet } from './data/lan-all.js';
 
 export const zIconRegistry = {
-  core: coreIcons,
-  neo: neoIcons,
-  mina: minaIcons,
-  bru: bruIcons,
-  lan: lanIcons
+  core: coreIconSet,
+  neo: neoIconSet,
+  mina: minaIconSet,
+  bru: bruIconSet,
+  lan: lanIconSet
 };
 
 export const zIconDefaultVariants = {

@@ -48,6 +48,8 @@ describe('public package imports', () => {
 
   it('loads react package entrypoints with Node ESM resolution', () => {
     const output = runNodeImport(`
+      const fs = await import('node:fs');
+      const path = await import('node:path');
       const zIconUrl = await import.meta.resolve('@zcorvus/icons-react/z-icon');
       const directIcon = await import('@zcorvus/icons-react/mina-check');
       const directNeoRegularDuo = await import('@zcorvus/icons-react/neo-sun-regular-duo');
@@ -61,6 +63,10 @@ describe('public package imports', () => {
       const minaSolidData = await import('@zcorvus/icons-react/packs-data/mina-solid');
       const neoRegularDuoData = await import('@zcorvus/icons-react/packs-data/neo-regular-duo');
       const bruData = await import('@zcorvus/icons-react/packs-data/bru');
+      const reactPackage = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'packages/icons-react/package.json'), 'utf8'));
+
+      if (reactPackage.version !== '0.2.0') throw new Error('icons-react should be version 0.2.0');
+      if (reactPackage.dependencies?.['@zcorvus/icons']) throw new Error('icons-react should be self-contained');
 
       if (!zIconUrl.endsWith('/packages/icons-react/dist/z-icon.js')) throw new Error('missing ZIcon subpath');
       if (typeof directIcon.default !== 'function') throw new Error('missing direct MinaCheck component');
@@ -90,10 +96,12 @@ describe('public package imports', () => {
       const corePack = fs.readFileSync(path.join(process.cwd(), 'packages/icons-react/dist/packs/core.js'), 'utf8');
       const zIcon = fs.readFileSync(path.join(process.cwd(), 'packages/icons-react/dist/z-icon.js'), 'utf8');
 
-      if (!corePack.includes("from '@zcorvus/icons/sprites/core.js'")) throw new Error('ZCore should import the core sprite');
+      if (!corePack.includes("from '../sprites/core.js'")) throw new Error('ZCore should import its local core sprite');
       if (!corePack.includes('ZCoreSprite')) throw new Error('ZCoreSprite should be generated');
       if (corePack.includes("from '../core-sun.js'")) throw new Error('ZCore should not import individual icon components');
-      if (!zIcon.includes("import('@zcorvus/icons/sprites/core.js')")) throw new Error('ZIcon should lazy-load sprites');
+      if (!zIcon.includes("import('./sprites/core.js')")) throw new Error('ZIcon should lazy-load local sprites');
+      if (corePack.includes('@zcorvus/icons')) throw new Error('pack wrappers should not import @zcorvus/icons');
+      if (zIcon.includes('@zcorvus/icons')) throw new Error('ZIcon should not import @zcorvus/icons');
       if (zIcon.includes("from './packs/core.js'")) throw new Error('ZIcon should not import pack wrappers');
       if (corePack.includes('useEffect')) throw new Error('pack wrappers should be server-component safe');
       if (zIcon.includes('useEffect')) throw new Error('ZIcon should be server-component safe');
@@ -120,6 +128,7 @@ describe('public package imports', () => {
       const packageDirs = ['core-react', 'core-solid-react', 'core-regular-duo-react', 'bru-react'];
       for (const packageDir of packageDirs) {
         const pkg = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'packages', packageDir, 'package.json'), 'utf8'));
+        if (pkg.version !== '0.2.0') throw new Error(packageDir + ' should be version 0.2.0');
         if (pkg.dependencies?.['@zcorvus/icons']) throw new Error(packageDir + ' should not depend on @zcorvus/icons');
         if (pkg.dependencies?.['@zcorvus/icons-react']) throw new Error(packageDir + ' should not depend on @zcorvus/icons-react');
       }
@@ -163,6 +172,12 @@ describe('public package imports', () => {
       const registerBru = await import('@zcorvus/icons-web/register-bru');
       const registerCoreSprite = await import('@zcorvus/icons-web/register-core-sprite');
       const registerBruSprite = await import('@zcorvus/icons-web/register-bru-sprite');
+      const fs = await import('node:fs');
+      const path = await import('node:path');
+      const webPackage = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'packages/icons-web/package.json'), 'utf8'));
+
+      if (webPackage.version !== '0.2.0') throw new Error('icons-web should be version 0.2.0');
+      if (webPackage.dependencies?.['@zcorvus/icons']) throw new Error('icons-web should be self-contained');
 
       if (typeof root.createZIconElement !== 'function') throw new Error('missing createZIconElement root export');
       if (typeof create.defineZIconElement !== 'function') throw new Error('missing defineZIconElement');

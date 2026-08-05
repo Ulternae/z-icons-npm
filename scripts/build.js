@@ -8,8 +8,8 @@ import { collectIcons } from './build/collect-icons.js';
 const TARGETS = {
   all: ['icons', 'react', 'web', 'standalone-react'],
   icons: ['icons'],
-  react: ['icons', 'react'],
-  web: ['icons', 'web'],
+  react: ['react'],
+  web: ['web'],
   'core-react': ['standalone-react'],
   'standalone-react': ['standalone-react'],
 };

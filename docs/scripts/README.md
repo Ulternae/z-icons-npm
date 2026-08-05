@@ -38,13 +38,13 @@ pnpm run check
 Targets disponibles:
 
 ```txt
-all    -> icons + react + web
+all    -> icons + react + web + standalone-react
 icons  -> icons
-react  -> icons + react
-web    -> icons + web
+react  -> react
+web    -> web
 ```
 
-`@zcorvus/icons` es la dependencia raiz. Por eso los targets `react` y `web` regeneran primero `icons`, evitando que tipos, SVG raw, sprites y wrappers queden desalineados.
+Desde la version 0.2, React y Web generan sus propios tipos, datos SVG y sprites. Los targets `react` y `web` ya no regeneran ni dependen de `@zcorvus/icons`.
 
 ## Release
 

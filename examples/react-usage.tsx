@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CoreSun, MinaCheck, MinaCheckSolid, ZIcon } from '@zcorvus/icons-react';
 import { ZCore, ZMina, ZMinaSolid } from '@zcorvus/icons-react/packs';
-import type { CoreIconName } from '@zcorvus/icons/types';
+import type { CoreIconName } from '@zcorvus/icons-react/types';
 
 export function IndividualIconsExample() {
   return (
