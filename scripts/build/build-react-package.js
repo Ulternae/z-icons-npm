@@ -6,6 +6,7 @@ import {
   iconConfig as CONFIG,
   isFillIcon,
 } from '../icon-config.js';
+import { syncPackageLicenseFiles } from '../license-files.js';
 import { createOutputWriter } from './fs-utils.js';
 import { createIconTypeDefinitions } from './icon-types.js';
 import { capitalize, getVariantIconNameType, toPascalCase } from './naming.js';
@@ -427,7 +428,9 @@ export function createZIconTypes(packData) {
 }
 
 export function buildReactPackage(icons, packData) {
-  const distDir = path.join(CONFIG.packagesDir, 'icons-react', 'dist');
+  const packageDir = path.join(CONFIG.packagesDir, 'icons-react');
+  syncPackageLicenseFiles(packageDir);
+  const distDir = path.join(packageDir, 'dist');
   const { writeFile, finish } = createOutputWriter(distDir);
 
   const rootExports = [`export { ZIcon } from './z-icon.js';`];

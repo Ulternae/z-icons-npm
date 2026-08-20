@@ -173,3 +173,10 @@ This version intentionally replaces the previous `@zcorvus/z-icons` API.
 | `<z-icon>` from `@zcorvus/z-icons` | `@zcorvus/icons-web/register` |
 
 Future framework adapters follow the `{pack}-{framework}` convention and `{pack}-{framework}-{variant}` only when a pack must be split, for example `@zcorvus/core-vue` and `@zcorvus/lan-vue-solid`.
+
+## License
+
+ZCorvus code and original icon artwork are available under the [MIT License](./LICENSE).
+The Mina pack contains artwork from [Myna UI Icons](https://github.com/praveenjuge/mynaui-icons)
+by Praveen Juge, also under MIT. Its original copyright and license are preserved in
+[THIRD_PARTY_LICENSES.md](./THIRD_PARTY_LICENSES.md).

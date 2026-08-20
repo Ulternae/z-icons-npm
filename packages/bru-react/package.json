@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "description": "Standalone React components for ZCorvus Bru icons.",
   "author": "Ulqernesh Karvenae",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ulternae/z-icons-npm.git",
@@ -21,7 +21,8 @@
   "types": "./dist/index.d.ts",
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "sideEffects": false,
   "private": false,

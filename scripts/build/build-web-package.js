@@ -1,4 +1,5 @@
 import path from 'path';
+import { syncPackageLicenseFiles } from '../license-files.js';
 import {
   getDefaultVariant,
   getPublicVariantSuffix,
@@ -313,7 +314,9 @@ export declare function injectZIconSprite(spriteId: string, sprite: string): Ele
 }
 
 export function buildWebPackage(icons, packData) {
-  const distDir = path.join(CONFIG.packagesDir, 'icons-web', 'dist');
+  const packageDir = path.join(CONFIG.packagesDir, 'icons-web');
+  syncPackageLicenseFiles(packageDir);
+  const distDir = path.join(packageDir, 'dist');
   const { writeFile, finish } = createOutputWriter(distDir);
 
   writeFile(path.join(distDir, 'create.js'), createWebElementRuntime());

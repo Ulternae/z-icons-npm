@@ -1,5 +1,6 @@
 import path from 'path';
 import { getDefaultVariant, getPublicVariantSuffix, getVariantFileSuffix, iconConfig as CONFIG } from '../icon-config.js';
+import { syncPackageLicenseFiles } from '../license-files.js';
 import { createOutputWriter } from './fs-utils.js';
 import { capitalize, toPascalCase } from './naming.js';
 import { createSvgSprite, escapeJsString, parseSvg } from './svg-utils.js';
@@ -290,6 +291,7 @@ export function buildStandaloneReactPackages(packData, packages = STANDALONE_REA
     const packName = packageConfig.pack;
     const packPascalName = toPascalCase(packName);
     const packageDir = path.join(CONFIG.packagesDir, packageConfig.packageDir);
+    syncPackageLicenseFiles(packageDir);
     const distDir = path.join(packageDir, 'dist');
     const iconExports = [];
     const iconTypeExports = [];

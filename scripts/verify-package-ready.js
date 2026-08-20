@@ -1,6 +1,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
+import {
+  getCanonicalLicenseText,
+  getCanonicalThirdPartyLicenseText,
+  packageIncludesMynaIcons,
+} from './license-files.js';
 
 const workspaceRoot = path.resolve(import.meta.dirname, '..');
 const packagesRoot = path.join(workspaceRoot, 'packages');
@@ -72,8 +77,26 @@ for (const [name, range] of Object.entries(packageJson.dependencies ?? {})) {
   }
 }
 
-if (packageJson.license === 'UNLICENSED') {
-  console.warn(`[package-check] ${packageJson.name} remains UNLICENSED; confirm this before public release.`);
+if (packageJson.license !== 'MIT') {
+  fail(`${packageJson.name} must declare the MIT license.`);
+}
+
+const packageLicensePath = path.join(packageDir, 'LICENSE');
+
+if (!packageJson.files?.includes('LICENSE') || !fs.existsSync(packageLicensePath)) {
+  fail(`${packageJson.name} must publish its LICENSE file.`);
+} else if (fs.readFileSync(packageLicensePath, 'utf8') !== getCanonicalLicenseText()) {
+  fail(`${packageJson.name} has a stale LICENSE file. Run pnpm run licenses:sync.`);
+}
+
+if (packageIncludesMynaIcons(packageJson.name)) {
+  const thirdPartyLicensesPath = path.join(packageDir, 'THIRD_PARTY_LICENSES.md');
+
+  if (!packageJson.files?.includes('THIRD_PARTY_LICENSES.md') || !fs.existsSync(thirdPartyLicensesPath)) {
+    fail(`${packageJson.name} must publish the Myna UI attribution in THIRD_PARTY_LICENSES.md.`);
+  } else if (fs.readFileSync(thirdPartyLicensesPath, 'utf8') !== getCanonicalThirdPartyLicenseText()) {
+    fail(`${packageJson.name} has stale third-party notices. Run pnpm run licenses:sync.`);
+  }
 }
 
 if (process.exitCode !== 1) {

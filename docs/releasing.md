@@ -6,7 +6,7 @@ Releases are intentionally manual. The GitHub `Release package` workflow validat
 
 1. Create an npm trusted publisher for each public package that points to `.github/workflows/release.yml`.
 2. Create a protected GitHub environment named `npm` and require maintainer approval.
-3. Decide and apply the project and icon-pack licenses. Packages currently remain `UNLICENSED` and the package check prints a warning until that decision is made.
+3. Confirm that `pnpm run licenses:sync` reports every package as up to date. All packages are MIT licensed; packages containing Mina icons also publish the original Myna UI Icons MIT notice.
 
 `@zcorvus/icons` is no longer built or published from version 0.2 onward. Existing npm versions should be deprecated with migration guidance rather than unpublished. `@zcorvus/core-solid-react` and `@zcorvus/core-regular-duo-react` are replaced by the combined `@zcorvus/core-react` package.
 
