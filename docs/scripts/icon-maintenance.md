@@ -153,12 +153,4 @@ Luego regenera paquetes con:
 pnpm run build
 ```
 
-Tambien puedes regenerar por target:
-
-```bash
-pnpm run build -- --target icons
-pnpm run build -- --target react
-pnpm run build -- --target web
-```
-
-Desde la version 0.2, los targets `react` y `web` generan localmente sus tipos, datos SVG y sprites. El paquete legado `@zcorvus/icons` ya no se genera ni forma parte del workspace.
+El build v3 regenera siempre `@zcorvus/icons` y `@zcorvus/icons-react` desde el mismo catálogo SVG.

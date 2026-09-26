@@ -5,17 +5,21 @@ import { spawnSync } from 'node:child_process';
 
 const workspaceRoot = path.resolve(import.meta.dirname, '..');
 const packagesRoot = path.join(workspaceRoot, 'packages');
-const npmCommand = process.platform === 'win32' ? 'npm.cmd' : 'npm';
-const packageDirs = fs
-  .readdirSync(packagesRoot, { withFileTypes: true })
-  .filter((entry) => entry.isDirectory() && fs.existsSync(path.join(packagesRoot, entry.name, 'package.json')))
-  .map((entry) => path.join(packagesRoot, entry.name))
-  .sort((left, right) => left.localeCompare(right));
+const packageDirs = ['icons', 'icons-react'].map((name) => path.join(packagesRoot, name));
 
 for (const packageDir of packageDirs) {
-  const result = spawnSync(npmCommand, ['pack', '--dry-run'], {
+  const verify = spawnSync(process.execPath, [path.join(workspaceRoot, 'scripts/verify-package-ready.js'), '.'], {
     cwd: packageDir,
     stdio: 'inherit',
+  });
+  if (verify.error) throw verify.error;
+  if (verify.status !== 0) process.exit(verify.status ?? 1);
+
+  const result = spawnSync('npm pack --dry-run --ignore-scripts --json', {
+    cwd: packageDir,
+    shell: true,
+    encoding: 'utf8',
+    maxBuffer: 64 * 1024 * 1024,
   });
 
   if (result.error) {
@@ -23,6 +27,9 @@ for (const packageDir of packageDirs) {
   }
 
   if (result.status !== 0) {
+    process.stderr.write(result.stderr || result.stdout);
     process.exit(result.status ?? 1);
   }
+  const [tarball] = JSON.parse(result.stdout);
+  console.log(`[pack-check] ${tarball.name}@${tarball.version}: ${tarball.entryCount} files, ${tarball.size} compressed bytes, ${tarball.unpackedSize} unpacked bytes`);
 }

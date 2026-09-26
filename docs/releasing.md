@@ -6,31 +6,23 @@ Releases are intentionally manual. The GitHub `Release package` workflow validat
 
 1. Create an npm trusted publisher for each public package that points to `.github/workflows/release.yml`.
 2. Create a protected GitHub environment named `npm` and require maintainer approval.
-3. Confirm that `pnpm run licenses:sync` reports every package as up to date. All packages are MIT licensed; packages containing Mina icons also publish the original Myna UI Icons MIT notice.
+3. Confirm that `pnpm run licenses:sync` reports both packages as up to date. Both are MIT licensed and publish the original Myna UI Icons MIT notice.
 
-`@zcorvus/icons` is no longer built or published from version 0.2 onward. Existing npm versions should be deprecated with migration guidance rather than unpublished. `@zcorvus/core-solid-react` and `@zcorvus/core-regular-duo-react` are replaced by the combined `@zcorvus/core-react` package.
+The v3 release matrix is:
 
-The public package matrix is:
-
-```txt
+```text
+@zcorvus/icons
 @zcorvus/icons-react
-@zcorvus/icons-web
-@zcorvus/core-react
-@zcorvus/neo-react
-@zcorvus/mina-react
-@zcorvus/bru-react
-@zcorvus/lan-react-light
-@zcorvus/lan-react-regular
-@zcorvus/lan-react-solid
-@zcorvus/lan-react-thin
 ```
+
+The legacy pack packages and `@zcorvus/icons-web` are no longer built from this repository. Removing their source directories does not unpublish previously released npm versions; any published versions should receive migration guidance rather than being unpublished.
 
 ## Release procedure
 
-1. Update the selected package version in the same pull request.
+1. Update the selected package version in the same pull request. Keep both on the same v3 prerelease version when releasing them together.
 2. Run `pnpm run check:fast` locally.
 3. Let CI run the full build, typecheck, tests, generated-output check, and tarball validation.
 4. Merge the pull request.
-5. Manually run `Release package`, select the package and npm dist-tag, and approve the `npm` environment deployment.
+5. Manually run `Release package`, select `icons` or `icons-react` and the npm dist-tag (`beta` by default), and approve the `npm` environment deployment.
 
 The workflow has no long-lived npm token. npm derives a short-lived credential from GitHub OIDC and publishes provenance when the repository and package configuration support it.

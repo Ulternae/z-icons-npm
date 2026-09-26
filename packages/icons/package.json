@@ -1,0 +1,22 @@
+{
+  "name": "@zcorvus/icons",
+  "version": "3.0.0-beta.1",
+  "description": "Framework-agnostic ZCorvus icon definitions, SVG rendering, and Web Component support.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": ["dist", "README.md", "LICENSE", "THIRD_PARTY_LICENSES.md"],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
+    "./web": { "types": "./dist/web.d.ts", "import": "./dist/web.js" },
+    "./data/*": { "types": "./dist/data/icon.d.ts", "import": "./dist/data/*.js" },
+    "./packs-data/*": { "types": "./dist/packs-data/*.d.ts", "import": "./dist/packs-data/*.js" }
+  },
+  "scripts": { "prepack": "node ../../scripts/verify-package-ready.js ." },
+  "publishConfig": { "access": "public", "provenance": true },
+  "repository": { "type": "git", "url": "git+https://github.com/Ulternae/z-icons-npm.git", "directory": "packages/icons" },
+  "homepage": "https://icons.zcorvus.com/",
+  "bugs": { "url": "https://github.com/Ulternae/z-icons-npm/issues" }
+}

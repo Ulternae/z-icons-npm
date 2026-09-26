@@ -1,182 +1,65 @@
-# ZCorvus Icons
+# ZCorvus Icons v3
 
-ZCorvus icon packages for React and framework-agnostic Web Components.
+Two packages are generated from the same SVG sources:
 
-Browse all available icons at [icons.zcorvus.com](https://icons.zcorvus.com/).
-
-## Packages
-
-| Package | Contents |
+| Package | Use |
 | --- | --- |
-| `@zcorvus/icons-react` | Complete React compatibility package |
-| `@zcorvus/icons-web` | Web Components, raw data maps, and sprites |
-| `@zcorvus/core-react` | Core regular, solid, and regular-duo |
-| `@zcorvus/neo-react` | Neo regular, solid, and regular-duo |
-| `@zcorvus/mina-react` | Mina light and solid |
-| `@zcorvus/bru-react` | Bru solid |
-| `@zcorvus/lan-react-light` | Lan light |
-| `@zcorvus/lan-react-regular` | Lan regular |
-| `@zcorvus/lan-react-solid` | Lan solid |
-| `@zcorvus/lan-react-thin` | Lan thin |
+| `@zcorvus/icons` | Framework-independent definitions, server-side SVG strings, and an explicit Web Component registry |
+| `@zcorvus/icons-react` | React components with pack-scoped autocomplete and a dynamic subset registry |
 
-`@zcorvus/icons` was removed from the workspace in version 0.2. React and Web packages are self-contained.
+The v3 beta starts fresh: this repository builds and releases only the two v3 packages. Removing the old pack packages and `@zcorvus/icons-web` from this workspace does not unpublish any previously released npm versions. No v3 package has a runtime dependency on the other.
 
-For low-level integrations that require raw SVG strings, use the Web data exports:
+## React
+
+```tsx
+import { MinaCheck, MinaCheckSolid } from '@zcorvus/icons-react/mina';
+
+export function Status() {
+  return <><MinaCheck size={20} aria-label="Ready" /><MinaCheckSolid className="text-green-600" /></>;
+}
+```
+
+The pack entry provides component-name autocomplete. To import one module directly, use `@zcorvus/icons-react/mina/mina-check`. The default variant omits a suffix; other variants append `Solid`, `Regular`, `RegularDuo`, `Light`, or `Thin` as appropriate. The package root exports `createZIcon` only, so importing it never loads a catalog.
+
+For dynamic names, choose the icons available in this screen:
+
+```tsx
+import { createZIcon } from '@zcorvus/icons-react';
+import { MinaCheck, MinaX } from '@zcorvus/icons-react/mina';
+
+const StatusIcon = createZIcon({ mina: { light: { check: MinaCheck, x: MinaX } } });
+
+<StatusIcon pack="mina" name="check" size={20} />;
+```
+
+TypeScript autocompletes `pack`, `variant`, and `name` from this registry. `StatusIcon.has(pack, name, variant?)` is available for values from an API. An entire pack can be opted into with `@zcorvus/icons-react/packs-data/mina`; other variants have paths such as `@zcorvus/icons-react/packs-data/mina/solid`. Full pack maps load that pack's icons, so use them only when users can choose any name.
+
+## Framework-independent usage
 
 ```ts
-import { minaIcons } from '@zcorvus/icons-web/data/mina';
+import { renderSvg } from '@zcorvus/icons';
+import check from '@zcorvus/icons/data/mina/mina-check';
 
-const minaCheckSvg = minaIcons.check;
+const html = renderSvg(check, { size: 20, ariaLabel: 'Ready' });
 ```
 
-For new React applications, prefer the smallest pack-scoped package that covers the required icons:
+`renderSvg` works in Node, edge runtimes, or a browser. It takes generated, trusted definitions and escapes supplied attributes. A missing label makes the SVG decorative.
 
-```tsx
-import { CoreAngleDown, CoreAngleUp } from '@zcorvus/core-react';
-```
-
-Use `@zcorvus/icons-react` for React components.
-
-```tsx
-import { MinaCheck, MinaCheckSolid } from '@zcorvus/icons-react';
-import type { MinaIconName } from '@zcorvus/icons-react/types';
-
-export function StatusIcon() {
-  return (
-    <>
-      <MinaCheck className="size-4" />
-      <MinaCheckSolid size={16} />
-    </>
-  );
-}
-```
-
-Use `@zcorvus/icons-react/types` when React code needs icon-name unions such as `MinaIconName`.
-
-The component format is `{Pack}{IconName}` for the default `light` variant and `{Pack}{IconName}{Variant}` for other variants.
-
-```tsx
-import { MinaSearch, MinaSearchSolid, CoreSun, NeoSun } from '@zcorvus/icons-react';
-```
-
-## React Pack Wrappers
-
-Use pack wrappers when the icon name is dynamic and you want to avoid loading unrelated packs.
-
-```tsx
-import { ZMina, ZMinaSolid, ZCore, ZCoreSprite, ZNeo } from '@zcorvus/icons-react/packs';
-
-export function SearchActions() {
-  return (
-    <>
-      <ZCoreSprite />
-      <ZMina name="search" />
-      <ZMinaSolid name="search" />
-      <ZCore name="sun" />
-      <ZNeo name="sun" />
-    </>
-  );
-}
-```
-
-Pack wrappers render sprite references. Client-only React apps can rely on automatic client-side sprite injection. For React Server Components in Next.js, render the matching `Z...Sprite` component once inside `<body>` in the page or layout.
-
-`ZIcon` is deprecated because it needs metadata for every supported pack. Migrate to a pack-scoped wrapper whenever the pack is known.
-
-```tsx
-import { ZIcon } from '@zcorvus/icons-react';
-
-export function DynamicIcon() {
-  return <ZIcon type="mina" name="search" variant="solid" />;
-}
-```
-
-## Web Components
-
-Use `@zcorvus/icons-web` when you need framework-agnostic custom elements.
-
-```html
-<script type="module" src="https://cdn.jsdelivr.net/npm/@zcorvus/icons-web/register"></script>
-
-<z-icon type="mina" name="search"></z-icon>
-<z-icon type="mina" name="search" variant="solid"></z-icon>
-```
-
-Use pack entries when you want to avoid loading unrelated packs.
-
-```html
-<script type="module" src="https://cdn.jsdelivr.net/npm/@zcorvus/icons-web/dist/register-mina.js/+esm"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@zcorvus/icons-web/dist/register-mina-solid.js/+esm"></script>
-
-<z-mina name="search"></z-mina>
-<z-mina-solid name="search"></z-mina-solid>
-```
-
-Use sprite entries when many icons are repeated on the same page. The script injects one hidden SVG sprite and each element renders a lightweight `<use>` reference.
-
-```html
-<script type="module" src="https://cdn.jsdelivr.net/npm/@zcorvus/icons-web/dist/register-mina-sprite.js/+esm"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@zcorvus/icons-web/dist/register-mina-solid-sprite.js/+esm"></script>
-
-<z-mina-sprite name="search" size="44"></z-mina-sprite>
-<z-mina-solid-sprite name="search" size="44"></z-mina-solid-sprite>
-```
-
-External sprite files are generated by the core package. Use this path only when the sprite is served from the same origin as the page; browsers block cross-origin `<use>` references in many cases.
-
-```html
-<svg width="44" height="44" aria-hidden="true">
-  <use href="/sprites/mina.svg#mina-search"></use>
-</svg>
-```
-
-For CDN usage, prefer `@zcorvus/icons-web/register-*-sprite`, because it injects the sprite inline.
-
-For the smallest dynamic registry, create your own element.
+For browser components, register an explicit set once:
 
 ```ts
-import { createZIconElement } from '@zcorvus/icons-web/create';
-import { minaIcons } from '@zcorvus/icons-web/data/mina';
-import { coreIcons } from '@zcorvus/icons-web/data/core';
+import { defineZIcon } from '@zcorvus/icons/web';
+import check from '@zcorvus/icons/data/mina/mina-check';
 
-customElements.define(
-  'app-icon',
-  createZIconElement({
-    mina: {
-      light: {
-        search: minaIcons.search,
-      },
-    },
-    core: {
-      light: {
-        sun: coreIcons.sun,
-      },
-    },
-  })
-);
+defineZIcon({ mina: { light: { check } } });
 ```
 
 ```html
-<app-icon type="mina" name="search"></app-icon>
+<z-icon pack="mina" name="check" size="20" aria-label="Ready"></z-icon>
 ```
 
-## Migration
+Whole-pack maps are available at `@zcorvus/icons/packs-data/mina`, with variant paths under `/packs-data/mina/solid` etc. There is no implicit global icon registry.
 
-This version intentionally replaces the previous `@zcorvus/z-icons` API.
+## Development
 
-| Old import | New import |
-| --- | --- |
-| `@zcorvus/z-icons/react/icons` | `@zcorvus/icons-react` |
-| `@zcorvus/z-icons/react/icons/mina-check` | `@zcorvus/icons-react/mina-check` |
-| `@zcorvus/z-icons/react/mina` | `@zcorvus/icons-react/packs` |
-| `@zcorvus/z-icons/icons` | `@zcorvus/icons-web/data/*` or a pack-scoped React package |
-| `<z-icon>` from `@zcorvus/z-icons` | `@zcorvus/icons-web/register` |
-
-Future framework adapters follow the `{pack}-{framework}` convention and `{pack}-{framework}-{variant}` only when a pack must be split, for example `@zcorvus/core-vue` and `@zcorvus/lan-vue-solid`.
-
-## License
-
-ZCorvus code and original icon artwork are available under the [MIT License](./LICENSE).
-The Mina pack contains artwork from [Myna UI Icons](https://github.com/praveenjuge/mynaui-icons)
-by Praveen Juge, also under MIT. Its original copyright and license are preserved in
-[THIRD_PARTY_LICENSES.md](./THIRD_PARTY_LICENSES.md).
+`pnpm run build` generates the two package `dist` trees from `icons/`. `pnpm run check` builds, typechecks, tests, and checks package exports. `pnpm run pack:check` inspects both tarballs. Publishing is a separate manual GitHub Action, defaulting to the `beta` npm tag.

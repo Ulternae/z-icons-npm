@@ -8,20 +8,12 @@ on:
         required: true
         type: choice
         options:
+          - icons
           - icons-react
-          - icons-web
-          - bru-react
-          - core-react
-          - neo-react
-          - mina-react
-          - lan-react-light
-          - lan-react-regular
-          - lan-react-solid
-          - lan-react-thin
       dist-tag:
         description: npm distribution tag
         required: true
-        default: latest
+        default: beta
         type: string
 
 permissions:
@@ -64,5 +56,7 @@ jobs:
         run: pnpm run release:check
 
       - name: Publish selected package with trusted publishing
-        run: npm publish --tag "${{ inputs.dist-tag }}"
+        run: npm publish --tag "$DIST_TAG"
+        env:
+          DIST_TAG: ${{ inputs.dist-tag }}
         working-directory: packages/${{ inputs.package }}

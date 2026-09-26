@@ -1,8 +1,0 @@
-import React from 'react';
-
-export interface BruIntercomProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
-  size?: string | number;
-}
-
-export declare const BruIntercom: React.FC<BruIntercomProps>;
-export default BruIntercom;

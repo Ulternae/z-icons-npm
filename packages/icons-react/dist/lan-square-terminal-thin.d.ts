@@ -1,8 +1,0 @@
-import React from 'react';
-
-export interface LanSquareTerminalThinProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
-  size?: string | number;
-}
-
-export declare const LanSquareTerminalThin: React.FC<LanSquareTerminalThinProps>;
-export default LanSquareTerminalThin;

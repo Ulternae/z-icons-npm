@@ -7,9 +7,8 @@ const licenseSource = path.join(workspaceRoot, 'LICENSE');
 const thirdPartyLicenseSource = path.join(workspaceRoot, 'THIRD_PARTY_LICENSES.md');
 
 export const MYNA_UI_PACKAGE_NAMES = new Set([
+  '@zcorvus/icons',
   '@zcorvus/icons-react',
-  '@zcorvus/icons-web',
-  '@zcorvus/mina-react',
 ]);
 
 export function packageIncludesMynaIcons(packageName) {
@@ -67,8 +66,5 @@ export function syncPackageLicenseFiles(packageDir) {
 }
 
 export function syncAllPackageLicenseFiles() {
-  return fs
-    .readdirSync(packagesRoot, { withFileTypes: true })
-    .filter((entry) => entry.isDirectory() && fs.existsSync(path.join(packagesRoot, entry.name, 'package.json')))
-    .map((entry) => syncPackageLicenseFiles(path.join(packagesRoot, entry.name)));
+  return ['icons', 'icons-react'].map((name) => syncPackageLicenseFiles(path.join(packagesRoot, name)));
 }

@@ -1,28 +1,8 @@
 import { optimize } from 'svgo';
-import { isDefaultVariant, isFillIcon } from '../icon-config.js';
+import { isFillIcon } from '../icon-config.js';
 
 const DISALLOWED_ELEMENTS = new Set(['foreignObject', 'iframe', 'object', 'embed', 'script', 'style']);
-const PRESENTATION_ATTRIBUTES = [
-  'fill',
-  'stroke',
-  'stroke-width',
-  'stroke-linecap',
-  'stroke-linejoin',
-  'stroke-miterlimit',
-  'stroke-dasharray',
-  'stroke-dashoffset',
-  'fill-rule',
-  'clip-rule',
-];
 const parsedSvgCache = new Map();
-
-export function escapeJsString(value) {
-  return value
-    .replace(/\\/g, '\\\\')
-    .replace(/'/g, "\\'")
-    .replace(/\r/g, '\\r')
-    .replace(/\n/g, '\\n');
-}
 
 function getSvgElement(svgContent) {
   let root;
@@ -176,16 +156,12 @@ export function parseSvg(svgContent, sourceFile) {
 
     const children = svg.children.map(toReactNode).filter(Boolean);
     const innerContent = svg.children.map(serializeNode).join('').trim();
-    const presentationAttributes = PRESENTATION_ATTRIBUTES
-      .filter((name) => svg.attributes[name] !== undefined)
-      .map((name) => `${name}="${escapeXml(svg.attributes[name])}"`)
-      .join(' ');
-
     const parsed = {
       viewBox: svg.attributes.viewBox ?? '0 0 24 24',
+      rootAttributes: { ...svg.attributes },
+      reactRootProps: toReactProps(svg.attributes),
       children,
       innerContent,
-      presentationAttributes,
     };
 
     parsedSvgCache.set(svgContent, parsed);
@@ -218,15 +194,4 @@ export function normalizeSvgForIconStyle(svgContent, pack, variant) {
   }
 
   return withSvgRootAttribute(svgContent, 'fill', 'currentColor');
-}
-
-export function createSvgSprite(pack, variant, variantIcons) {
-  const symbols = variantIcons.map((icon) => {
-    const { viewBox, innerContent, presentationAttributes } = parseSvg(icon.svg, icon.sourceFile);
-    const id = `${pack}-${isDefaultVariant(pack, variant) ? icon.name : `${icon.name}-${variant}`}`;
-
-    return `  <symbol id="${id}" viewBox="${viewBox}"${presentationAttributes ? ` ${presentationAttributes}` : ''}>\n    ${innerContent}\n  </symbol>`;
-  });
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" style="display:none">\n${symbols.join('\n')}\n</svg>\n`;
 }

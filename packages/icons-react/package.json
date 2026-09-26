@@ -1,6 +1,6 @@
 {
   "name": "@zcorvus/icons-react",
-  "version": "0.2.0",
+  "version": "3.0.0-beta.1",
   "description": "React components for ZCorvus icons.",
   "author": "Ulqernesh Karvenae",
   "license": "MIT",
@@ -36,59 +36,17 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./packs": {
-      "types": "./dist/packs/index.d.ts",
-      "import": "./dist/packs/index.js"
-    },
-    "./create": {
-      "types": "./dist/create.d.ts",
-      "import": "./dist/create.js"
-    },
-    "./types": {
-      "types": "./dist/types/index.d.ts",
-      "import": "./dist/types/index.js"
-    },
-    "./packs-data": {
-      "types": "./dist/packs-data/index.d.ts",
-      "import": "./dist/packs-data/index.js"
-    },
-    "./sprites": {
-      "types": "./dist/sprites/index.d.ts",
-      "import": "./dist/sprites/index.js"
-    },
-    "./sprites/*": {
-      "types": "./dist/sprites/*.d.ts",
-      "import": "./dist/sprites/*.js"
-    },
-    "./*": {
-      "types": "./dist/*.d.ts",
-      "import": "./dist/*.js"
-    }
-  },
-  "typesVersions": {
-    "*": {
-      "packs": [
-        "dist/packs/index.d.ts"
-      ],
-      "create": [
-        "dist/create.d.ts"
-      ],
-      "types": [
-        "dist/types/index.d.ts"
-      ],
-      "packs-data": [
-        "dist/packs-data/index.d.ts"
-      ],
-      "sprites": [
-        "dist/sprites/index.d.ts"
-      ],
-      "sprites/*": [
-        "dist/sprites/*.d.ts"
-      ],
-      "*": [
-        "dist/*.d.ts"
-      ]
-    }
+    "./core": { "types": "./dist/react/core.d.ts", "import": "./dist/react/core.js" },
+    "./neo": { "types": "./dist/react/neo.d.ts", "import": "./dist/react/neo.js" },
+    "./mina": { "types": "./dist/react/mina.d.ts", "import": "./dist/react/mina.js" },
+    "./bru": { "types": "./dist/react/bru.d.ts", "import": "./dist/react/bru.js" },
+    "./lan": { "types": "./dist/react/lan.d.ts", "import": "./dist/react/lan.js" },
+    "./packs-data/*": { "types": "./dist/packs-data/*.d.ts", "import": "./dist/packs-data/*.js" },
+    "./core/*": { "types": "./dist/react/icon.d.ts", "import": "./dist/react/core/*.js" },
+    "./neo/*": { "types": "./dist/react/icon.d.ts", "import": "./dist/react/neo/*.js" },
+    "./mina/*": { "types": "./dist/react/icon.d.ts", "import": "./dist/react/mina/*.js" },
+    "./bru/*": { "types": "./dist/react/icon.d.ts", "import": "./dist/react/bru/*.js" },
+    "./lan/*": { "types": "./dist/react/icon.d.ts", "import": "./dist/react/lan/*.js" }
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0"

@@ -1,8 +1,0 @@
-import React from 'react';
-
-export interface LanArrowsUpToLineProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
-  size?: string | number;
-}
-
-export declare function LanArrowsUpToLine(props: LanArrowsUpToLineProps): React.ReactElement;
-export default LanArrowsUpToLine;

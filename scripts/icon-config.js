@@ -1,6 +1,5 @@
 export const iconConfig = {
   sourceDir: 'icons',
-  packagesDir: 'packages',
   packs: ['core', 'neo', 'mina', 'bru', 'lan'],
   variants: ['light', 'solid', 'regular', 'regular-duo', 'thin'],
   defaultVariants: {
@@ -52,10 +51,6 @@ export function getPublicVariantSuffix(pack, variant) {
   }
 
   return iconConfig.publicVariantSuffixes[variant] ?? toPascalCase(variant);
-}
-
-export function getVariantFileSuffix(pack, variant) {
-  return isDefaultVariant(pack, variant) ? '' : `-${variant}`;
 }
 
 export function getIconStyle(pack, variant) {

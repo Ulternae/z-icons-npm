@@ -1,8 +1,0 @@
-import React from 'react';
-
-export interface LanUniformMartialArtsSolidProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
-  size?: string | number;
-}
-
-export declare function LanUniformMartialArtsSolid(props: LanUniformMartialArtsSolidProps): React.ReactElement;
-export default LanUniformMartialArtsSolid;

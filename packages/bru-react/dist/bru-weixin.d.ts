@@ -1,8 +1,0 @@
-import React from 'react';
-
-export interface BruWeixinProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
-  size?: string | number;
-}
-
-export declare function BruWeixin(props: BruWeixinProps): React.ReactElement;
-export default BruWeixin;

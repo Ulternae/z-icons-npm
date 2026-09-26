@@ -1,8 +1,0 @@
-import React from 'react';
-
-export interface CoreFolderSolidProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
-  size?: string | number;
-}
-
-export declare const CoreFolderSolid: React.FC<CoreFolderSolidProps>;
-export default CoreFolderSolid;

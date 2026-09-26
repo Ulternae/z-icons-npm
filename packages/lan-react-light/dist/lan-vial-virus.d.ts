@@ -1,8 +1,0 @@
-import React from 'react';
-
-export interface LanVialVirusProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
-  size?: string | number;
-}
-
-export declare function LanVialVirus(props: LanVialVirusProps): React.ReactElement;
-export default LanVialVirus;

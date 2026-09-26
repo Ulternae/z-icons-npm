@@ -12,5 +12,5 @@
     "isolatedModules": true,
     "noEmit": true
   },
-  "include": ["packages/**/*.d.ts", "examples/**/*.tsx", "tests/**/*.ts", "tests/**/*.tsx"]
+  "include": ["tests/v3-types.tsx"]
 }

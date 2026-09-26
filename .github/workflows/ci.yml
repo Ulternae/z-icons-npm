@@ -42,5 +42,5 @@ jobs:
       - name: Build, typecheck and test
         run: pnpm run check
 
-      - name: Validate every public package tarball
+      - name: Validate v3 public package tarballs
         run: pnpm run pack:check

@@ -1,8 +1,0 @@
-import React from 'react';
-
-export interface LanFlaskRoundPoisonSolidProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
-  size?: string | number;
-}
-
-export declare function LanFlaskRoundPoisonSolid(props: LanFlaskRoundPoisonSolidProps): React.ReactElement;
-export default LanFlaskRoundPoisonSolid;

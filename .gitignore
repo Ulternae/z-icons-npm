@@ -1,2 +1,5 @@
 node_modules
+packages/icons/dist/
+packages/icons-react/dist/
+metadata/
 .tmp-output-writer-*

@@ -1,8 +1,0 @@
-import React from 'react';
-
-export interface LanOliveBranchThinProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
-  size?: string | number;
-}
-
-export declare const LanOliveBranchThin: React.FC<LanOliveBranchThinProps>;
-export default LanOliveBranchThin;

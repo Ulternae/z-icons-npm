@@ -1,8 +1,0 @@
-import React from 'react';
-
-export interface LanUtilityPoleDoubleThinProps extends Omit<React.SVGProps<SVGSVGElement>, 'height' | 'width'> {
-  size?: string | number;
-}
-
-export declare function LanUtilityPoleDoubleThin(props: LanUtilityPoleDoubleThinProps): React.ReactElement;
-export default LanUtilityPoleDoubleThin;
