@@ -19,7 +19,7 @@ write(core, 'data/icon.d.ts', 'import type { IconDefinition } from "../index.js"
 write(core, 'web.js', source('packages/icons/src/web.js'));
 write(core, 'web.d.ts', 'import type { IconDefinition } from "./index.js";\nexport type IconRegistry = Record<string, Record<string, Record<string, IconDefinition>>>;\nexport declare function defineZIcon(icons: IconRegistry): void;\n');
 write(react, 'index.js', source('packages/icons-react/src/create.js'));
-write(react, 'index.d.ts', `${declaration}\nexport type IconRegistry = Record<string, Record<string, Record<string, IconComponent>>>;\ntype Defaults = typeof import("./defaults.js").defaultVariants;\ntype Selection<R extends IconRegistry> = { [P in keyof R & keyof Defaults]: { [V in keyof R[P] & string]: { [N in keyof R[P][V] & string]: { pack: P; name: N } & (V extends Defaults[P] ? { variant?: V } : { variant: V }) }[keyof R[P][V] & string] }[keyof R[P] & string] }[keyof R & keyof Defaults];\nexport declare function createZIcon<const R extends IconRegistry>(registry: R): React.ComponentType<Selection<R> & IconProps> & { has(pack: string, name: string, variant?: string): boolean };\n`);
+write(react, 'index.d.ts', `${declaration}\nexport type IconRegistry = Record<string, Record<string, Record<string, IconComponent>>>;\ntype Defaults = typeof import("./defaults.js").defaultVariants;\ntype Selection<R extends IconRegistry> = { [P in keyof R & keyof Defaults]: { [V in keyof R[P] & string]: { pack: P; name: keyof R[P][V] & string } & (V extends Defaults[P] ? { variant?: V } : { variant: V }) }[keyof R[P] & string] }[keyof R & keyof Defaults];\nexport declare function createZIcon<const R extends IconRegistry>(registry: R): React.ComponentType<Selection<R> & IconProps> & { has(pack: string, name: string, variant?: string): boolean };\n`);
 write(react, 'react/icon.d.ts', `${declaration}declare const icon: IconComponent;\nexport default icon;\n`);
 const defaults = `export const defaultVariants = ${JSON.stringify(config.defaultVariants)};\n`;
 const defaultTypes = `export declare const defaultVariants: ${JSON.stringify(config.defaultVariants).replace(/"([^" ]+)":/g, 'readonly $1:')};\n`;
@@ -52,6 +52,10 @@ for (const pack of config.packs) {
   }
   write(react, `react/${pack}.js`, names.join('\n') + '\n');
   write(react, `react/${pack}.d.ts`, declarations.join('\n') + '\n');
+  const iconNames = [...new Set(Object.values(packData[pack]).flat().map((icon) => icon.name))];
+  const namesExport = `${pack}IconNames`;
+  write(core, `names/${pack}.js`, `export const ${namesExport} = Object.freeze(${JSON.stringify(iconNames)});\n`);
+  write(core, `names/${pack}.d.ts`, `export declare const ${namesExport}: readonly [${iconNames.map((name) => JSON.stringify(name)).join(', ')}];\n`);
   for (const [variant, variantIcons] of Object.entries(packData[pack])) {
     const imports = variantIcons.map((icon, index) => `import i${index} from '../../react/${pack}/${icon.publicFileName}.js';`).join('\n');
     const entries = variantIcons.map((icon, index) => `${JSON.stringify(icon.name)}:i${index}`).join(',');

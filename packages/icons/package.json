@@ -11,6 +11,7 @@
   "exports": {
     ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
     "./web": { "types": "./dist/web.d.ts", "import": "./dist/web.js" },
+    "./names/*": { "types": "./dist/names/*.d.ts", "import": "./dist/names/*.js" },
     "./data/*": { "types": "./dist/data/icon.d.ts", "import": "./dist/data/*.js" },
     "./packs-data/*": { "types": "./dist/packs-data/*.d.ts", "import": "./dist/packs-data/*.js" }
   },
