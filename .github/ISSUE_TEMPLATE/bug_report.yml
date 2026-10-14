@@ -1,0 +1,46 @@
+name: Bug report
+description: Report a reproducible problem with the icon packages or generator.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For vulnerabilities, follow SECURITY.md. Do not include credentials or sensitive data here.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - "@zcorvus/icons"
+        - "@zcorvus/icons-react"
+        - SVG source or generator
+        - Documentation
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Package version or source commit
+      placeholder: "3.0.0-beta.1"
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include runtime, framework, browser, package manager, and bundler versions where relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Include the exact import path and the steps or example that reproduce the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true

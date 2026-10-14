@@ -25,4 +25,8 @@ The legacy pack packages and `@zcorvus/icons-web` are no longer built from this 
 4. Merge the pull request.
 5. Manually run `Release package`, select `icons` or `icons-react` and the npm dist-tag (`beta` by default), and approve the `npm` environment deployment.
 
+After both packages are available in the registry, update [CHANGELOG.md](../CHANGELOG.md) and create a GitHub release tied to the source commit that produced those packages. Mark beta versions as prereleases. npm publication and a GitHub release are separate actions.
+
+For the already published `3.0.0-beta.1` packages, [prepared GitHub release notes](releases/3.0.0-beta.1.md) are available. Creating that GitHub prerelease does not require republishing the same npm version.
+
 The workflow has no long-lived npm token. npm derives a short-lived credential from GitHub OIDC and publishes provenance when the repository and package configuration support it.

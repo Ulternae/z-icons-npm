@@ -1,0 +1,27 @@
+name: Feature request
+description: Propose an icon, public API improvement, or maintenance workflow.
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      description: Describe the concrete problem and who would benefit.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Include an example API or import path if applicable.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: textarea
+    id: artwork
+    attributes:
+      label: Artwork source and license
+      description: For icon requests, link the original source and explain its license or ownership.
